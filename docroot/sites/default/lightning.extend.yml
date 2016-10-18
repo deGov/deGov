@@ -6,10 +6,11 @@
 # of this key will disable the Lightning Select Extensions form. If you want to
 # allow users to choose which Lightning Extensions should be enabled during
 # installation, comment out the following lines.
-lightning_extensions:
-  - lightning_workflow
-  - lightning_layout
-  - lightning_media
+# Example:
+#lightning_extensions:
+#  - lightning_workflow
+#  - lightning_layout
+#  - lightning_media
 
 # List of additional modules to enable after Lightning is installed.
 modules:
