@@ -1,0 +1,8 @@
+
+degov_welcome.default_controller_hello:
+  path: '/degov_welcome'
+  defaults:
+    _controller: '\Drupal\degov_welcome\Controller\DefaultController::welcome'
+    _title: 'Welcome Controller'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains degov_welcome.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function degov_welcome_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the degov_welcome module.
+    case 'help.page.degov_welcome':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Welcome to deGov') . '</p>';
+      return $output;
+
+    default:
+  }
+}
