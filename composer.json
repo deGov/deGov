@@ -20,7 +20,15 @@
         "composer/installers": "^1.0",
         "drupal-composer/drupal-scaffold": "^2.0.0",
         "cweagans/composer-patches": "1.5.0",
-        "drupal/lightning": "^8.1.0"
+        "drupal/lightning": "^8.1.0",
+        "drupal/bootstrap": "8.*",
+        "drupal/eu_cookie_compliance": "8.*",
+        "drupal/simple_sitemap": "8.*",
+        "drupal/simple_gmap": "8.*",
+        "drupal/easy_breadcrumb": "8.*",
+        "drupal/piwik": "8.*",
+        "drupal/open_readspeaker": "8.*",
+        "drupal/twitter_block": "8.*"
     },
     "repositories": [
         {
