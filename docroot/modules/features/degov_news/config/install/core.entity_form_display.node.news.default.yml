@@ -3,8 +3,8 @@ status: true
 dependencies:
   config:
     - field.field.node.news.body
-    - field.field.node.news.field_date
-    - field.field.node.news.field_image
+    - field.field.node.news.field_news_date
+    - field.field.node.news.field_news_image
     - node.type.news
   module:
     - datetime
@@ -19,7 +19,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 8
+    weight: 10
     settings:
       rows: 9
       summary_rows: 3
@@ -30,14 +30,14 @@ content:
     weight: 2
     settings: {  }
     third_party_settings: {  }
-  field_date:
-    weight: 6
+  field_news_date:
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
-  field_image:
+  field_news_image:
     type: entity_browser_file
-    weight: 7
+    weight: 9
     settings:
       entity_browser: image_browser
       field_widget_edit: true

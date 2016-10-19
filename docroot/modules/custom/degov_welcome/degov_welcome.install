@@ -12,7 +12,12 @@ use Drupal\node\Entity\NodeType;
  */
 
 function degov_welcome_install() {
-  // Enable and set acmebootstrap as default theme
+  // Enable and set degov as default theme
   \Drupal::service('theme_installer')->install(array('degov'), TRUE);
   \Drupal::configFactory()->getEditable('system.theme')->set('default', 'degov')->save(TRUE);
+
+  // Set 'news' as default frontpage
+  \Drupal::config('system.site')
+    ->set('page.front', 'news')
+    ->save();
 }

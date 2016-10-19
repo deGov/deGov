@@ -3,8 +3,8 @@ status: true
 dependencies:
   config:
     - field.field.node.news.body
-    - field.field.node.news.field_date
-    - field.field.node.news.field_image
+    - field.field.node.news.field_news_date
+    - field.field.node.news.field_news_image
     - image.style.large
     - node.type.news
   module:
@@ -27,19 +27,19 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 3
+    weight: 5
     settings: {  }
     third_party_settings: {  }
-  field_date:
-    weight: 1
+  field_news_date:
+    weight: 2
     label: hidden
     settings:
       format_type: medium
       timezone_override: ''
     third_party_settings: {  }
     type: datetime_default
-  field_image:
-    weight: 2
+  field_news_image:
+    weight: 3
     label: hidden
     settings:
       image_style: large
