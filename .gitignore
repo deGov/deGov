@@ -10,24 +10,3 @@
 
 # Ignore Composer-managed dependencies.
 vendor/
-/docroot/sites/default/settings.php
-/docroot/sites/development.services.yml
-/docroot/sites/example.settings.local.php
-/docroot/sites/example.sites.php
-/docroot/vendor/
-/docroot/.eslintignore
-/docroot/web.config
-/docroot/.eslintrc
-/docroot/.editorconfig
-/docroot/autoload.php
-/docroot/index.php
-/docroot/.gitattributes
-/docroot/robots.txt
-/docroot/update.php
-/docroot/.csslintrc
-/docroot/.htaccess
-/docroot/composer.json
-/composer.lock
-/docroot/sites/default/default.services.yml
-/npm-debug.log
-/drupal_list.info.txt
