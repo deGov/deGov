@@ -1,0 +1,16 @@
+name: 'deGov - News'
+type: module
+core: 8.x
+dependencies:
+  - datetime
+  - entity_browser
+  - field
+  - image
+  - menu_ui
+  - node
+  - panelizer
+  - path
+  - text
+  - user
+  - views
+  - workbench_moderation
