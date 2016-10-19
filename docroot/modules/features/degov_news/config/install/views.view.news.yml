@@ -172,13 +172,14 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  block_1:
-    display_plugin: block
-    id: block_1
-    display_title: Block
-    position: 1
+  page_1:
+    display_plugin: page
+    id: page_1
+    display_title: Page
+    position: 2
     display_options:
       display_extenders: {  }
+      path: news
     cache_metadata:
       max-age: -1
       contexts:
