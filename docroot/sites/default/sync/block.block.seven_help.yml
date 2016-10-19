@@ -1,0 +1,22 @@
+uuid: 7cf65db0-ee2b-486c-8c85-d93c2e135530
+langcode: de
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - seven
+_core:
+  default_config_hash: VkTX9-sU-VNFbQhQ_qcn6JwBpp81Nbu0lzsBsEE259o
+id: seven_help
+theme: seven
+region: help
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Hilfe
+  provider: help
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,10 @@
+uuid: cec3ed84-673b-429a-88a1-f09e53c06f95
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: HtZgSbbcrtHAeiKKJGFMFmMcUKZLPumzYJce2-GFqQ8
+id: needs_review
+label: 'Überprüfung erforderlich'
+published: false
+default_revision: false

@@ -1,0 +1,22 @@
+uuid: 52ae540c-fc1a-4f5e-9ce2-eceb05b2b4f1
+langcode: de
+status: true
+dependencies:
+  theme:
+    - seven
+_core:
+  default_config_hash: DIhfo3vqMBmJ5dgZj7bocULh6Kv2WB5yKrtfzB2EFEM
+id: seven_secondary_local_tasks
+theme: seven
+region: pre_content
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Sekundäre Reiter'
+  provider: core
+  label_display: '0'
+  primary: false
+  secondary: true
+visibility: {  }

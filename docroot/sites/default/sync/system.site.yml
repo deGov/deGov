@@ -1,0 +1,14 @@
+uuid: a58f96ca-6031-4ce6-8376-83a2798726bc
+name: Drupal
+mail: jakobs@dreizwo.de
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: de
+default_langcode: de
+_core:
+  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo

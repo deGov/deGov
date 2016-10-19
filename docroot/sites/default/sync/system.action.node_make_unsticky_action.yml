@@ -1,0 +1,13 @@
+uuid: b535185c-7f1f-4f24-a368-f939c7c1767e
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: lDM9mvIGAu8Sw8rt-uCO4Sr7yX5VPrDPxYcawkbKd6k
+id: node_make_unsticky_action
+label: 'Hervorhebung zurücknehmen'
+type: node
+plugin: node_make_unsticky_action
+configuration: {  }

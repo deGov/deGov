@@ -21,7 +21,6 @@ modules:
   - simple_gmap
   - simple_sitemap
   - filter
-  - features
   - degov_eu_cookie_compliance
   - degov_pathauto
 

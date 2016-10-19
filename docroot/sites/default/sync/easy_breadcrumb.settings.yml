@@ -1,0 +1,7 @@
+include_home_segment: true
+home_segment_title: Home
+include_title_segment: true
+language_path_prefix_as_segment: false
+_core:
+  default_config_hash: 3jAdehcNx4uO4L0m3G6YlWmkulstfN_jVKigkEtDB6E
+langcode: de

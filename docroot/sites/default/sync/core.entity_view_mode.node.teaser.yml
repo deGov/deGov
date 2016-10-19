@@ -1,0 +1,12 @@
+uuid: e823dac8-b052-4057-ae2e-68436115c4eb
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: Mz9qWr1kUYK0mjRAGDsr5XS6PvtZ24en_7ndt-pyWe4
+id: node.teaser
+label: Anrisstext
+targetEntityType: node
+cache: true

@@ -1,0 +1,24 @@
+uuid: 9f286bbb-49d6-48ea-a214-e8861ffb86f1
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.landing_page
+_core:
+  default_config_hash: sINXyumN_S2iXs9E2NQjABvTlNIXt092LbucYWrt5MY
+id: node.landing_page.promote
+field_name: promote
+entity_type: node
+bundle: landing_page
+label: 'Auf der Startseite'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

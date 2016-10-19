@@ -1,0 +1,30 @@
+cancel_confirm:
+  body: "[user:display-name],\n\nEine Anfrage zur Löschung Ihres Benutzerkontos auf [site:name] wurde gestellt.\n\nSie können Ihr Konto auf [site:url-brief] jetzt durch Klick auf den folgenden Link löschen oder diesen alternativ in Ihren Browser kopieren:\n\n[user:cancel-url]\n\nHINWEIS: Die Löschung Ihres Benutzerkontos kann nicht rückgängig gemacht werden und ist endgültig.\n\nDer Link ist einen Tag lang gültig und läuft automatisch aus, falls Sie ihn nicht verwenden.\n\nViele Grüße\nDas Team von [site:name]"
+  subject: 'Antrag auf Löschung von Benutzerkonto [user:name] auf [site:name]'
+password_reset:
+  body: "[user:display-name],\n\neine Anfrage zum Zurücksetzen des Passworts für Ihr Benutzerkonto auf [site:name] wurde gestellt.\n\nSie können sich jetzt mit einem Klick auf folgenden Link anmelden oder diesen alternativ in Ihren Browser kopieren:\n\n[user:one-time-login-url]\n\nDieser Link kann nur einmal verwendet werden und leitet Sie zu einer Seite, auf der Sie ein neues Passwort festlegen können. Er ist einen Tag lang gültig und läuft automatisch aus, falls Sie ihn nicht verwenden.\n\nViele Grüße\nDas Team von [site:name]"
+  subject: 'Neue Login-Daten für Benutzerkonto [user:name] auf [site:name]'
+register_admin_created:
+  body: "[user:display-name],\n\nEin Administrator der Website [site:name] hat für Sie ein Benutzerkonto angelegt. Sie können sich jetzt mit einem Klick auf den folgenden Link anmelden oder diesen alternativ in Ihren Browser kopieren:\n\n[user:one-time-login-url]\n\nDieser Link kann nur einmal verwendet werden und leitet Sie zu einer Seite, auf der Sie ein neues Passwort vergeben können.\n\nNachdem Sie Ihr Passwort festgelegt haben, können Sie sich zukünftig auf [site:login-url] mit den folgenden Zugangsdaten anmelden:\n\nBenutzername: [user:name]\nPasswort: Ihr Passwort\n\nViele Grüße\nDas Team von [site:name]"
+  subject: 'Ein Administrator hat für Sie auf [site:name] ein Benutzerkonto angelegt'
+register_no_approval_required:
+  body: "[user:display-name],\n\nvielen Dank für die Registrierung auf [site:name]. Sie können sich jetzt mit einem Klick auf den folgenden Link anmelden oder diesen alternativ in Ihren Browser kopieren:\n\n[user:one-time-login-url]\n\nDieser Link kann nur einmal verwendet werden und leitet Sie auf eine Seite, auf der Sie Ihr Passwort festlegen können.\n\nNachdem Sie Ihr Passwort festgelegt haben, können Sie sich zukünftig mit folgenden Zugangsdaten bei [site:login-url] anmelden:\n\nBenutzername: [user:name]\nPasswort: Ihr Passwort\n\nViele Grüße\nDas Team von [site:name]"
+  subject: 'Account details for [user:display-name] at [site:name]'
+register_pending_approval:
+  body: "[user:display-name],\n\nvielen Dank für die Registrierung auf [site:name]. Ihr Antrag für ein Benutzerkonto wird aktuell geprüft. Sobald eine Freigabe erfolgt ist, erhalten Sie eine weitere E-Mail mit Informationen zum Login, Setzen Ihres Passwortes sowie weitere Details.\n\nViele Grüße\nDas Team von [site:name]"
+  subject: 'Account details for [user:display-name] at [site:name] (pending admin approval)'
+register_pending_approval_admin:
+  body: "[user:display-name] has applied for an account.\n\n[user:edit-url]"
+  subject: 'Account details for [user:display-name] at [site:name] (pending admin approval)'
+status_activated:
+  body: "[user:display-name],\n\nIhr Benutzerkonto auf der Website [site:name] wurde aktiviert. \n\nSie können sich jetzt mit einem Klick auf den folgenden Link anmelden oder diesen alternativ in Ihren Browser kopieren:\n\n[user:one-time-login-url]\n\nDieser Link kann nur einmal verwendet werden und leitet Sie zu einer Seite, auf der Sie ein neues Passwort vergeben können.\n\nNachdem Sie Ihr Passwort festgelegt haben, können Sie sich zukünftig auf [site:login-url] mit den folgenden Zugangsdaten anmelden:\n\nBenutzername: [user:name]\nPasswort: Ihr Passwort\n\nViele Grüße\nDas Team von [site:name]"
+  subject: 'Account details for [user:display-name] at [site:name] (approved)'
+status_blocked:
+  body: "[user:display-name],\n\nYour account on [site:name] has been blocked.\n\n--  [site:name] team"
+  subject: 'Details für Benutzerkonto [user:name] auf [site:name] (gesperrt)'
+status_canceled:
+  body: "[user:display-name],\n\nIhr Benutzerkonto auf [site:name] wurde gelöscht.\n\nViele Grüße\nDas Team von [site:name]"
+  subject: 'Account details for [user:display-name] at [site:name] (canceled)'
+langcode: de
+_core:
+  default_config_hash: m4J3ROov32OEquRYGLbx3SpdDGuqx9l_zJtNvihqdCg
