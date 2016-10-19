@@ -13,3 +13,8 @@
 
 # Disable the CDN provider so compiled LESS source files can be used.
 cdn_provider: ''
+
+# Add degov logo
+logo:
+  path: 'themes/custom/degov/img/logo-degov.jpg'
+  use_default: false
