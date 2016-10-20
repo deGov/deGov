@@ -3,7 +3,10 @@ type: module
 core: 8.x
 dependencies:
   - datetime
+  - entity_browser
   - field
+  - file
+  - image
   - menu_ui
   - node
   - panelizer
