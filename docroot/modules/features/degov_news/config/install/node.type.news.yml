@@ -5,12 +5,11 @@ dependencies:
     - menu_ui
 third_party_settings:
   menu_ui:
-    available_menus:
-      - main
-    parent: 'main:'
+    available_menus: {  }
+    parent: ''
 name: News
 type: news
-description: 'A content type for news and press releases.'
+description: 'Content type for news and press releases.'
 help: ''
 new_revision: true
 preview_mode: 1
