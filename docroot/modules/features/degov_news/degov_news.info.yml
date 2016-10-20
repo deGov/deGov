@@ -8,4 +8,5 @@ dependencies:
   - path
   - text
   - user
+  - views
   - workbench_moderation
