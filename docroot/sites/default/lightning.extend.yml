@@ -14,7 +14,6 @@
 
 # List of additional modules to enable after Lightning is installed.
 modules:
-  - degov_welcome
   - easy_breadcrumb
   - eu_cookie_compliance
   - pathauto
@@ -22,10 +21,9 @@ modules:
   - simple_sitemap
   - filter
   - features
+  - degov_welcome
   - degov_eu_cookie_compliance
   - degov_pathauto
-  - degov_news
-  - degov_events
 
 # A system path to redirect to once installation is complete.
 redirect:
