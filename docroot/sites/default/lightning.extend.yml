@@ -26,6 +26,7 @@ modules:
   - degov_pathauto
   - degov_news
   - degov_events
+  - degov_demo
 
 # A system path to redirect to once installation is complete.
 redirect:

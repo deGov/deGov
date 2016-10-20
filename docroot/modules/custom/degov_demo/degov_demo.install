@@ -1,0 +1,123 @@
+<?php
+
+use Drupal\node\Entity\Node;
+use Symfony\Component\Yaml\Yaml;
+
+/**
+ * Implements hook_install().
+ *
+ * Create demo content, when module installs
+ *
+ * @see system_install()
+ */
+
+function degov_demo_install() {
+
+  // Load assets
+  $modulePath = sprintf('modules/custom/degov_demo/assets', \Drupal::root());
+  $moduleRealPath = \Drupal::service('file_system')->realpath($modulePath);
+  $assets = file_get_contents($moduleRealPath . '/degov_demo.assets.yml');
+  $assets = Yaml::parse($assets);
+
+  // Create events
+  foreach ($assets['events'] as $event) {
+    // Create node
+    $node = Node::create([
+      'type' => 'events',
+      'uid' => 1,
+      'revision' => 0,
+      'status' => TRUE,
+      'promote' => 0,
+      'created' => time(),
+      'langcode' => 'en',
+      'title' => $event['title'],
+    ]);
+    // Set body field
+    if (isset($event['body'])) {
+      $node->set('body', [
+        'value' => $event['body'],
+        'format' => 'rich_text'
+      ]);
+    }
+    // Set image field
+    if (isset($event['img'])) {
+      $img = FALSE;
+      $destination = 'public://images';
+      file_prepare_directory($destination, FILE_CREATE_DIRECTORY);
+      $img_source = sprintf($moduleRealPath . '/' . $event['img'], \Drupal::root());
+      if (is_readable($img_source)) {
+        $data = file_get_contents($img_source);
+        $img = file_save_data($data, $destination . '/' . $event['img'], FILE_EXISTS_REPLACE);
+      }
+      if ($img) {
+        $node->field_events_image->setValue([
+          'target_id' => $img->id(),
+          'alt' => $event['alt'],
+          'title' => $event['alt'],
+        ]);
+        //$node->get('field_events_image')->appendItem($img);
+      }
+    }
+    // Set date field
+    if(isset($event['date'])) {
+      $node->set('field_events_date', $event['date']);
+    }
+    // Set deadline field
+    if(isset($event['deadline'])) {
+      $node->set('field_events_deadline', $event['deadline']);
+    }
+    // Save the node and add alias
+    $node->save();
+    $source = '/node/' . $node->get('nid')->value;
+    \Drupal::service('path.alias_storage')->save($source, $event['path'], 'en');
+  }
+
+  // Create news
+  foreach ($assets['news'] as $news) {
+    // Create the node
+    $node = Node::create([
+      'type' => 'news',
+      'uid' => 1,
+      'revision' => 0,
+      'status' => TRUE,
+      'promote' => 0,
+      'created' => time(),
+      'langcode' => 'en',
+      'title' => $news['title'],
+    ]);
+    // Create body
+    if(isset($news['body'])) {
+      $node->set('body', [
+        'value' => $news['body'],
+        'format' => 'rich_text'
+      ]);
+    }
+    // Create image
+    if(isset($news['img'])) {
+      $img = FALSE;
+      $destination = 'public://images';
+      file_prepare_directory($destination, FILE_CREATE_DIRECTORY);
+      $img_source = sprintf($modulePath . '/' . $news['img'], \Drupal::root());
+      if (is_readable($img_source)) {
+        $data = file_get_contents($img_source);
+        $img = file_save_data($data, $destination . '/' . $news['img'], FILE_EXISTS_REPLACE);
+      }
+      if ($img) {
+        $node->field_news_image->setValue([
+          'target_id' => $img->id(),
+          'alt' => $news['alt'],
+          'title' => $news['alt'],
+        ]);
+        //$node->get('field_news_image')->appendItem($img);
+      }
+    }
+    // Set date field
+    if(isset($news['date'])) {
+      $node->set('field_news_date', $news['date']);
+    }
+    // Save the node and add alias
+    $node->save();
+    $source = '/node/' . $node->get('nid')->value;
+    \Drupal::service('path.alias_storage')->save($source, $news['path'], 'en');
+  }
+}

@@ -1,0 +1,57 @@
+# This files contains the content, that is imported.
+
+# Images are taken from FreeImages.com
+#
+# FreeImages.com/Benito LeGrande -> environment-1236246-639x852.jpg // World
+# FreeImages.com/renato cardoso  -> recycle-1-1311872-639x467.jpg // Waste
+# FreeImages.com/Christian Wagner -> ind-energy-1309345-639x416.jpg // Wind
+# FreeImages.com/Adriaan van Os -> red-and-blue-bikes-1559806-639x426.jpg // Bike
+# FreeImages.com/uros milic -> office-building-1233319-639x1062.jpg // Office
+
+# News
+news:
+ -
+  title: "Environment friendly"
+  date: "2016-01-01"
+  body: "<p>Environment frienly is great.</p>"
+  img: "environment-1236246-639x852.jpg"
+  alt: "FreeImages.com/Benito LeGrande"
+  path: "/news/environment-friends"
+ -
+  title: "Recycling"
+  date: "2016-02-01"
+  body: "<p>Recycling is great.</p>"
+  img: "recycle-1-1311872-639x467.jpg"
+  alt: "FreeImages.com/renato cardoso"
+  path: "/news/recycling"
+ -
+  title: "Wind energy"
+  date: "2016-03-01"
+  body: "<p>Wind energy is great.</p>"
+  img: "wind-energy-1309345-639x416.jpg"
+  alt: "FreeImages.com/Christian Wagner"
+  path: "/news/wind-energy"
+
+# Events
+events:
+ -
+  title: "Public event in our office"
+  date: "2016-01-15"
+  deadline: "2016-01-10"
+  body: "<p>Public events are great.</p>"
+  img: "office-building-1233319-639x1062.jpg"
+  alt: "FreeImages.com/uros milic"
+  path: "/events/public-event"
+ -
+  title: "Bycicle event"
+  date: "2016-02-15"
+  body: "<p>Bycicle events are great.</p>"
+  img: "red-and-blue-bikes-1559806-639x426.jpg"
+  alt: "FreeImages.com/Adriaan van Os"
+  path: "/events/bycicle-event"
+ -
+  title: "Christmas event"
+  date: "2016-12-15"
+  deadline: "2016-12-10"
+  body: "<p>Christmas events are great.</p>"
+  path: "/events/christmas"
