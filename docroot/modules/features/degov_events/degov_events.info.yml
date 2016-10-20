@@ -2,6 +2,7 @@ name: 'deGov - Events'
 type: module
 core: 8.x
 dependencies:
+  - block
   - datetime
   - entity_browser
   - field
@@ -11,6 +12,8 @@ dependencies:
   - node
   - panelizer
   - path
+  - system
   - text
   - user
+  - views
   - workbench_moderation
