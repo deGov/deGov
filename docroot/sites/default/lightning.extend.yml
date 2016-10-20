@@ -24,6 +24,7 @@ modules:
   - degov_welcome
   - degov_eu_cookie_compliance
   - degov_pathauto
+  - degov_news
 
 # A system path to redirect to once installation is complete.
 redirect:
