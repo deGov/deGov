@@ -2,9 +2,11 @@ name: 'deGov - News'
 type: module
 core: 8.x
 dependencies:
+  - datetime
   - field
   - menu_ui
   - node
+  - panelizer
   - path
   - text
   - user
