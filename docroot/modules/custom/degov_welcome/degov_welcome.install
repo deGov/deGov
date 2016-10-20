@@ -17,5 +17,5 @@ function degov_welcome_install() {
   \Drupal::configFactory()->getEditable('system.theme')->set('default', 'degov')->save(TRUE);
 
   // Set 'news' as default frontpage
-  \Drupal::configFactory()->getEditable('system.site')->set('page.front', 'news')->save(TRUE);
+  \Drupal::configFactory()->getEditable('system.site')->set('page.front', '/news')->save(TRUE);
 }
