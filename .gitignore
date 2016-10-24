@@ -10,3 +10,9 @@
 
 # Ignore Composer-managed dependencies.
 vendor/
+
+#IDE files
+.idea
+
+# OS Files
+.DS_Store
