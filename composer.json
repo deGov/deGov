@@ -28,7 +28,9 @@
         "drupal/easy_breadcrumb": "8.*",
         "drupal/piwik": "8.*",
         "drupal/open_readspeaker": "8.*",
-        "drupal/twitter_block": "8.*"
+        "drupal/twitter_block": "8.*",
+        "drupal/entity_reference_revisions": "8.*",
+        "drupal/paragraphs": "8.*"
     },
     "repositories": [
         {

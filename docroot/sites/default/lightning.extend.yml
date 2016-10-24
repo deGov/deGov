@@ -27,6 +27,9 @@ modules:
   - degov_news
   - degov_events
   - degov_demo
+  - entity_reference_revisions
+  - paragraphs
+
 
 # A system path to redirect to once installation is complete.
 redirect:
