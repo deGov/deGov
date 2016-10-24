@@ -29,6 +29,7 @@ modules:
   - degov_demo
   - entity_reference_revisions
   - paragraphs
+  - color_field
 
 
 # A system path to redirect to once installation is complete.
