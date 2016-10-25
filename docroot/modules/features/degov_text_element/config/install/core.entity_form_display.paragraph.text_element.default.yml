@@ -2,7 +2,7 @@ langcode: de
 status: true
 dependencies:
   config:
-    - field.field.paragraph.text_element.field_text_element_alignment
+    - field.field.paragraph.text_element.field_text_element_align
     - field.field.paragraph.text_element.field_text_element_text
     - field.field.paragraph.text_element.field_text_element_title
     - paragraphs.paragraphs_type.text_element
@@ -14,7 +14,7 @@ targetEntityType: paragraph
 bundle: text_element
 mode: default
 content:
-  field_text_element_alignment:
+  field_text_element_align:
     weight: 8
     settings: {  }
     third_party_settings: {  }
