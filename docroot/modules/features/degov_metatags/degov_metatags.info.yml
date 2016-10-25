@@ -1,0 +1,5 @@
+name: 'deGov - Metatags'
+type: module
+core: 8.x
+dependencies:
+  - metatag

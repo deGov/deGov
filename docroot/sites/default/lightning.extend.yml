@@ -40,6 +40,7 @@ modules:
   - degov_gallery_element
   - degov_downloads_element
   - degov_image_element
+  - degov_metatags
 
 # A system path to redirect to once installation is complete.
 redirect:
