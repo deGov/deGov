@@ -19,13 +19,13 @@ mode: default
 content:
   field_contact_element_email:
     weight: 4
-    label: inline
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: email_mailto
   field_contact_element_fax:
     weight: 3
-    label: inline
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -35,32 +35,33 @@ content:
     label: hidden
     settings:
       link: true
+      view_mode: default
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
   field_contact_element_name:
     weight: 0
-    label: inline
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_contact_element_phone:
     weight: 2
-    label: inline
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_contact_element_position:
     weight: 1
-    label: inline
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_contact_element_website:
     weight: 5
-    label: inline
+    label: hidden
     settings:
       trim_length: 120
       url_only: false
