@@ -1,0 +1,33 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.section_page.field_section_page_contents
+    - field.field.node.section_page.field_section_page_image
+    - field.field.node.section_page.field_section_page_subtitle
+    - field.field.node.section_page.field_section_page_tags
+    - field.field.node.section_page.field_section_page_teaser_image
+    - field.field.node.section_page.field_section_page_teaser_stitle
+    - field.field.node.section_page.field_section_page_teaser_text
+    - field.field.node.section_page.field_section_page_teaser_title
+    - node.type.section_page
+  module:
+    - user
+id: node.section_page.teaser
+targetEntityType: node
+bundle: section_page
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden:
+  field_section_page_contents: true
+  field_section_page_image: true
+  field_section_page_subtitle: true
+  field_section_page_tags: true
+  field_section_page_teaser_image: true
+  field_section_page_teaser_stitle: true
+  field_section_page_teaser_text: true
+  field_section_page_teaser_title: true
+  langcode: true

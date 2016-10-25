@@ -48,6 +48,7 @@ modules:
   - degov_image_element
   - degov_metatags
   - degov_password_policy
+  - degov_section_page
   - sitemap
   - degov_sitemap
 
