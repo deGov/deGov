@@ -33,7 +33,7 @@
         "drupal/paragraphs": "8.*",
         "drupal/admin_toolbar": "^8.1",
         "drupal/password_policy": "dev-3.x",
-        "drupal/sitemap": "8.*",
+        "drupal/sitemap": "1.x-dev",
         "drupal/shariff": "1.x-dev"
     },
     "repositories": {
