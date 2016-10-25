@@ -31,6 +31,12 @@ modules:
   - paragraphs
   - admin_toolbar
   - admin_toolbar_tools
+  - password_policy
+  - password_policy_length
+  - password_policy_characters
+  - password_policy_character_types
+  - password_policy_history
+  - password_policy_username
   - degov_address_element
   - degov_image_text_element
   - degov_text_element
@@ -41,6 +47,7 @@ modules:
   - degov_downloads_element
   - degov_image_element
   - degov_metatags
+  - degov_password_policy
 
 # A system path to redirect to once installation is complete.
 redirect:
