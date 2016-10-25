@@ -32,15 +32,28 @@
         "drupal/entity_reference_revisions": "8.*",
         "drupal/paragraphs": "8.*",
         "drupal/admin_toolbar": "^8.1",
-        "drupal/password_policy": "8.3.x-dev"
-        "drupal/sitemap": "8.*"
+        "drupal/password_policy": "dev-3.x",
+        "drupal/sitemap": "8.*",
+        "drupal/shariff": "1.x-dev"
     },
-    "repositories": [
-        {
+    "repositories": {
+        "drupal": {
             "type": "composer",
-            "url": "https://packagist.drupal-composer.org"
+            "url": "https://packages.drupal.org/8"
+        },
+        "shariff": {
+            "type": "package",
+            "package": {
+                "name": "heiseonline/shariff",
+                "version": "master",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/heiseonline/shariff/archive/master.zip",
+                    "type": "zip"
+                }
+            }
         }
-    ],
+    },
     "scripts": {
       "post-install-cmd": [
         "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
@@ -63,6 +76,9 @@
         "installer-paths": {
             "docroot/core": [
                 "drupal/core"
+            ],
+            "docroot/libraries/{$name}": [
+                "type:drupal-library"
             ],
             "docroot/modules/contrib/{$name}": [
                 "type:drupal-module"

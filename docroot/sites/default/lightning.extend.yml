@@ -50,7 +50,8 @@ modules:
   - degov_password_policy
   - sitemap
   - degov_sitemap
-
+  - shariff
+  - degov_shariff_social_share
 # A system path to redirect to once installation is complete.
 redirect:
   path: 'degov_welcome'
