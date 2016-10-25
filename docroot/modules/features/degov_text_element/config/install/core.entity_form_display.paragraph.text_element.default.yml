@@ -1,0 +1,39 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text_element.field_text_element_alignment
+    - field.field.paragraph.text_element.field_text_element_text
+    - field.field.paragraph.text_element.field_text_element_title
+    - paragraphs.paragraphs_type.text_element
+  module:
+    - text
+    - workbench_moderation
+id: paragraph.text_element.default
+targetEntityType: paragraph
+bundle: text_element
+mode: default
+content:
+  field_text_element_alignment:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_text_element_text:
+    weight: 7
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+  field_text_element_title:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+hidden:
+  created: true
+  status: true
+  uid: true

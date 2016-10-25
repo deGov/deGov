@@ -1,0 +1,11 @@
+name: 'deGov - Paragraphs - Download-Liste'
+description: 'Provides Download-Liste paragraphs type and related configuration.'
+type: module
+core: 8.x
+dependencies:
+  - entity_browser
+  - field
+  - lightning_media_document
+  - media_entity
+  - paragraphs
+  - workbench_moderation

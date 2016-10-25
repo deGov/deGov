@@ -31,7 +31,6 @@
         "drupal/twitter_block": "8.*",
         "drupal/entity_reference_revisions": "8.*",
         "drupal/paragraphs": "8.*",
-        "drupal/color_field": "8.*",
         "drupal/admin_toolbar": "^8.1"
     },
     "repositories": [

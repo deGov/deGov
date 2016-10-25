@@ -1,0 +1,22 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_contact_element_website
+    - paragraphs.paragraphs_type.contact_element
+  module:
+    - link
+id: paragraph.contact_element.field_contact_element_website
+field_name: field_contact_element_website
+entity_type: paragraph
+bundle: contact_element
+label: Website
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

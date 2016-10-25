@@ -1,0 +1,25 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_element.field_image_element_media
+    - paragraphs.paragraphs_type.image_element
+  module:
+    - workbench_moderation
+id: paragraph.image_element.default
+targetEntityType: paragraph
+bundle: image_element
+mode: default
+content:
+  field_image_element_media:
+    weight: 6
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+hidden:
+  created: true
+  status: true
+  uid: true

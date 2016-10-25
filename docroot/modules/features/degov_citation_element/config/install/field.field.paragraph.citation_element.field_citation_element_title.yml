@@ -1,0 +1,18 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_citation_element_title
+    - paragraphs.paragraphs_type.citation_element
+id: paragraph.citation_element.field_citation_element_title
+field_name: field_citation_element_title
+entity_type: paragraph
+bundle: citation_element
+label: Titel
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,39 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_text_element.field_image_text_element_alignme
+    - field.field.paragraph.image_text_element.field_image_text_element_image
+    - field.field.paragraph.image_text_element.field_image_text_element_text
+    - paragraphs.paragraphs_type.image_text_element
+  module:
+    - options
+    - text
+id: paragraph.image_text_element.default
+targetEntityType: paragraph
+bundle: image_text_element
+mode: default
+content:
+  field_image_text_element_alignme:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_image_text_element_image:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+  field_image_text_element_text:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+hidden:
+  created: true
+  uid: true

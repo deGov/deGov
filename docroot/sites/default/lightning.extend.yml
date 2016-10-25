@@ -29,10 +29,17 @@ modules:
   - degov_demo
   - entity_reference_revisions
   - paragraphs
-  - color_field
   - admin_toolbar
   - admin_toolbar_tools
-
+  - degov_address_element
+  - degov_image_text_element
+  - degov_text_element
+  - degov_citation_element
+  - degov_links_element
+  - degov_contact_element
+  - degov_gallery_element
+  - degov_downloads_element
+  - degov_image_element
 
 # A system path to redirect to once installation is complete.
 redirect:

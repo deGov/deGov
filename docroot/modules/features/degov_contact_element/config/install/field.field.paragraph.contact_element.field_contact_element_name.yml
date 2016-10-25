@@ -1,0 +1,18 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_contact_element_name
+    - paragraphs.paragraphs_type.contact_element
+id: paragraph.contact_element.field_contact_element_name
+field_name: field_contact_element_name
+entity_type: paragraph
+bundle: contact_element
+label: Name
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

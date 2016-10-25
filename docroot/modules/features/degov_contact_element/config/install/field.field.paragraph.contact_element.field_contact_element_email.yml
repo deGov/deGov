@@ -1,0 +1,18 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_contact_element_email
+    - paragraphs.paragraphs_type.contact_element
+id: paragraph.contact_element.field_contact_element_email
+field_name: field_contact_element_email
+entity_type: paragraph
+bundle: contact_element
+label: E-Mail
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

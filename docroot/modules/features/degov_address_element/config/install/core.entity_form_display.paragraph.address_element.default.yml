@@ -1,0 +1,64 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.address_element.field_address_element_city
+    - field.field.paragraph.address_element.field_address_element_company
+    - field.field.paragraph.address_element.field_address_element_country
+    - field.field.paragraph.address_element.field_address_element_state
+    - field.field.paragraph.address_element.field_address_element_street
+    - field.field.paragraph.address_element.field_address_element_zip
+    - paragraphs.paragraphs_type.address_element
+  module:
+    - workbench_moderation
+id: paragraph.address_element.default
+targetEntityType: paragraph
+bundle: address_element
+mode: default
+content:
+  field_address_element_city:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_address_element_company:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_address_element_country:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_address_element_state:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_address_element_street:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_address_element_zip:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+hidden:
+  created: true
+  status: true
+  uid: true

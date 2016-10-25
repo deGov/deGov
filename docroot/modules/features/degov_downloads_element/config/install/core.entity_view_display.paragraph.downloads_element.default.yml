@@ -1,0 +1,30 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.downloads_element.field_downloads_element_files
+    - field.field.paragraph.downloads_element.field_downloads_element_title
+    - paragraphs.paragraphs_type.downloads_element
+id: paragraph.downloads_element.default
+targetEntityType: paragraph
+bundle: downloads_element
+mode: default
+content:
+  field_downloads_element_files:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+  field_downloads_element_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+hidden:
+  created: true
+  uid: true

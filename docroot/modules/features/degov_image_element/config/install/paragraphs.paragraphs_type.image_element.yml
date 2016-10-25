@@ -1,0 +1,5 @@
+langcode: de
+status: true
+dependencies: {  }
+id: image_element
+label: Bild

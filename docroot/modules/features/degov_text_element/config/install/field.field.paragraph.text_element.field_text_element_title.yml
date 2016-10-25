@@ -1,0 +1,18 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_element_title
+    - paragraphs.paragraphs_type.text_element
+id: paragraph.text_element.field_text_element_title
+field_name: field_text_element_title
+entity_type: paragraph
+bundle: text_element
+label: Titel
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
