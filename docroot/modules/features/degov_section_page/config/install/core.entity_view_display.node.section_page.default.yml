@@ -49,35 +49,11 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-  field_section_page_teaser_image:
-    weight: 5
-    label: hidden
-    settings:
-      link: true
-      view_mode: default
-    third_party_settings: {  }
-    type: entity_reference_entity_view
-  field_section_page_teaser_stitle:
-    weight: 4
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-  field_section_page_teaser_text:
-    weight: 6
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: basic_string
-  field_section_page_teaser_title:
-    weight: 3
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
 hidden:
   field_section_page_tags: true
+  field_section_page_teaser_image: true
+  field_section_page_teaser_stitle: true
+  field_section_page_teaser_text: true
+  field_section_page_teaser_title: true
   langcode: true
   links: true

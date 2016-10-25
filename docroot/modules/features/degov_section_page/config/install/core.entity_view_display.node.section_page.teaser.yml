@@ -13,21 +13,51 @@ dependencies:
     - field.field.node.section_page.field_section_page_teaser_title
     - node.type.section_page
   module:
+    - panelizer
     - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.section_page.teaser
 targetEntityType: node
 bundle: section_page
 mode: teaser
 content:
-  links:
-    weight: 100
+  field_section_page_teaser_image:
+    type: entity_reference_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+  field_section_page_teaser_stitle:
+    type: string
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_section_page_teaser_text:
+    type: basic_string
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_section_page_teaser_title:
+    type: string
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
 hidden:
   field_section_page_contents: true
   field_section_page_image: true
   field_section_page_subtitle: true
   field_section_page_tags: true
-  field_section_page_teaser_image: true
-  field_section_page_teaser_stitle: true
-  field_section_page_teaser_text: true
-  field_section_page_teaser_title: true
   langcode: true
+  links: true
