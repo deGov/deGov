@@ -30,6 +30,8 @@ modules:
   - entity_reference_revisions
   - paragraphs
   - color_field
+  - admin_toolbar
+  - admin_toolbar_tools
 
 
 # A system path to redirect to once installation is complete.
