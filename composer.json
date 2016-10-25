@@ -53,7 +53,7 @@
                 }
             }
         }
-    },
+    ],
     "scripts": {
       "post-install-cmd": [
         "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
@@ -76,9 +76,6 @@
         "installer-paths": {
             "docroot/core": [
                 "drupal/core"
-            ],
-            "docroot/libraries/{$name}": [
-                "type:drupal-library"
             ],
             "docroot/modules/contrib/{$name}": [
                 "type:drupal-module"

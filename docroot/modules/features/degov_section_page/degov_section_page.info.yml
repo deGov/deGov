@@ -1,0 +1,15 @@
+name: 'deGov - Bereichsseite'
+type: module
+core: 8.x
+dependencies:
+  - entity_reference_revisions
+  - field
+  - language
+  - lightning_media_image
+  - menu_ui
+  - node
+  - panelizer
+  - paragraphs
+  - path
+  - user
+  - workbench_moderation
