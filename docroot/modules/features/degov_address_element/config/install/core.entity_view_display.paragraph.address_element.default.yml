@@ -16,42 +16,42 @@ mode: default
 content:
   field_address_element_city:
     weight: 3
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_address_element_company:
     weight: 0
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_address_element_country:
     weight: 5
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_address_element_state:
     weight: 4
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_address_element_street:
     weight: 1
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_address_element_zip:
     weight: 2
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
