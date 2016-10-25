@@ -2,12 +2,12 @@ langcode: de
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_image_text_element_alignme
+    - field.storage.paragraph.field_image_text_element_align
     - paragraphs.paragraphs_type.image_text_element
   module:
     - options
-id: paragraph.image_text_element.field_image_text_element_alignme
-field_name: field_image_text_element_alignme
+id: paragraph.image_text_element.field_image_text_element_align
+field_name: field_image_text_element_align
 entity_type: paragraph
 bundle: image_text_element
 label: Ausrichtung

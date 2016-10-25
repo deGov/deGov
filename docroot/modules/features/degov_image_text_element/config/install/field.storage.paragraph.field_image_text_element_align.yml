@@ -4,8 +4,8 @@ dependencies:
   module:
     - options
     - paragraphs
-id: paragraph.field_image_text_element_alignme
-field_name: field_image_text_element_alignme
+id: paragraph.field_image_text_element_align
+field_name: field_image_text_element_align
 entity_type: paragraph
 type: list_string
 settings:

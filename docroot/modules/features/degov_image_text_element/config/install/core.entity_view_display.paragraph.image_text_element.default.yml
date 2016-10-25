@@ -2,7 +2,7 @@ langcode: de
 status: true
 dependencies:
   config:
-    - field.field.paragraph.image_text_element.field_image_text_element_alignme
+    - field.field.paragraph.image_text_element.field_image_text_element_align
     - field.field.paragraph.image_text_element.field_image_text_element_image
     - field.field.paragraph.image_text_element.field_image_text_element_text
     - paragraphs.paragraphs_type.image_text_element
@@ -14,12 +14,12 @@ targetEntityType: paragraph
 bundle: image_text_element
 mode: default
 content:
-  field_image_text_element_alignme:
-    weight: 2
+  field_image_text_element_align:
+    weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    type: list_key
   field_image_text_element_image:
     weight: 0
     label: hidden
