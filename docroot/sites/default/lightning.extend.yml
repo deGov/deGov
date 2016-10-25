@@ -49,6 +49,8 @@ modules:
   - degov_metatags
   - degov_password_policy
   - degov_section_page
+  - sitemap
+  - degov_sitemap
 
 # A system path to redirect to once installation is complete.
 redirect:
