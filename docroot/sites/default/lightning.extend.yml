@@ -48,6 +48,7 @@ modules:
   - degov_password_policy
   - degov_section_page
   - degov_article_page
+  - degov_home_page
   - sitemap
   - degov_sitemap
   - shariff
