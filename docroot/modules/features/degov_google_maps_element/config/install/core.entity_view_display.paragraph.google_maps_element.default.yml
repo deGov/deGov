@@ -1,0 +1,33 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.google_maps_element.field_google_map_element_address
+    - paragraphs.paragraphs_type.google_maps_element
+  module:
+    - simple_gmap
+id: paragraph.google_maps_element.default
+targetEntityType: paragraph
+bundle: google_maps_element
+mode: default
+content:
+  field_google_map_element_address:
+    weight: 0
+    label: hidden
+    settings:
+      include_map: '1'
+      iframe_width: '350'
+      iframe_height: '350'
+      link_text: 'Große Karte anzeigen'
+      zoom_level: '14'
+      information_bubble: '1'
+      map_type: m
+      langcode: de
+      include_static_map: 0
+      include_link: 0
+      include_text: 0
+    third_party_settings: {  }
+    type: simple_gmap
+hidden:
+  created: true
+  uid: true

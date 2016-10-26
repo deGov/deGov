@@ -1,0 +1,9 @@
+name: 'deGov - Paragraphs - Google Maps'
+description: 'Provides Google Maps paragraphs type and related configuration.'
+type: module
+core: 8.x
+dependencies:
+  - field
+  - paragraphs
+  - simple_gmap
+  - workbench_moderation
