@@ -1,0 +1,5 @@
+name: 'deGov - Schlagwörter'
+type: module
+core: 8.x
+dependencies:
+  - taxonomy
