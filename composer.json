@@ -77,6 +77,9 @@
             "docroot/core": [
                 "drupal/core"
             ],
+            "docroot/libraries/{$name}": [
+                "type:drupal-library"
+            ],
             "docroot/modules/contrib/{$name}": [
                 "type:drupal-module"
             ],
