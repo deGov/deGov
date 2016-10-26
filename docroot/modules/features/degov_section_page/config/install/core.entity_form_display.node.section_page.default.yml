@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.section_page.field_section_page_teaser_title
     - node.type.section_page
   module:
+    - entity_browser
     - paragraphs
     - path
     - workbench_moderation
@@ -38,11 +39,15 @@ content:
   field_section_page_image:
     weight: 2
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      entity_browser: media_browser
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      open: false
+      field_widget_display_settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: entity_browser_entity_reference
   field_section_page_subtitle:
     weight: 1
     settings:
@@ -61,11 +66,15 @@ content:
   field_section_page_teaser_image:
     weight: 6
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      entity_browser: media_browser
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      open: false
+      field_widget_display_settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: entity_browser_entity_reference
   field_section_page_teaser_stitle:
     weight: 5
     settings:
