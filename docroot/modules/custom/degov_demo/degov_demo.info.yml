@@ -1,6 +1,0 @@
-name: deGov Demo
-type: module
-description: Add demo content to deGov
-core: 8.x
-package: deGov
-
