@@ -32,9 +32,9 @@
         "drupal/entity_reference_revisions": "8.*",
         "drupal/paragraphs": "8.*",
         "drupal/admin_toolbar": "^8.1",
-        "drupal/password_policy": "8.*",
-        "drupal/sitemap": "8.*",
-        "drupal/shariff": "8.*"
+        "drupal/password_policy": "8.x-3.x-dev",
+        "drupal/sitemap": "8.x-1.x-dev",
+        "drupal/shariff": "8.x-1.x-dev"
     },
     "repositories": {
         "drupal": {
