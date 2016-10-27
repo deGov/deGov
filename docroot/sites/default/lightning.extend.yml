@@ -51,6 +51,7 @@ modules:
   - degov_article_page
   - degov_home_page
   - degov_next_page
+  - degov_event_page
   - sitemap
   - degov_sitemap
   - shariff
