@@ -1,0 +1,18 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_next_page_stitle
+    - node.type.next_page
+id: node.next_page.field_next_page_stitle
+field_name: field_next_page_stitle
+entity_type: node
+bundle: next_page
+label: Untertitel
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
