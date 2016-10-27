@@ -19,3 +19,4 @@ hidden:
   field_next_page_contents: true
   field_next_page_stitle: true
   langcode: true
+  shariff_field: true
