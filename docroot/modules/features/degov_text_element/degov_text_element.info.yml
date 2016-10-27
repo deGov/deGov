@@ -3,6 +3,7 @@ description: 'Provides Text paragraphs type and related configuration.'
 type: module
 core: 8.x
 dependencies:
+  - color_field
   - field
   - options
   - paragraphs

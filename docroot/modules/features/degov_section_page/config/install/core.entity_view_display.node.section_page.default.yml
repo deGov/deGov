@@ -2,6 +2,7 @@ langcode: de
 status: true
 dependencies:
   config:
+    - field.field.node.section_page.field_section_page_color
     - field.field.node.section_page.field_section_page_contents
     - field.field.node.section_page.field_section_page_image
     - field.field.node.section_page.field_section_page_subtitle
@@ -12,6 +13,7 @@ dependencies:
     - field.field.node.section_page.field_section_page_teaser_title
     - node.type.section_page
   module:
+    - color_field
     - entity_reference_revisions
     - panelizer
     - user
@@ -26,6 +28,14 @@ targetEntityType: node
 bundle: section_page
 mode: default
 content:
+  field_section_page_color:
+    weight: 3
+    label: hidden
+    settings:
+      opacity: '1'
+      format: hex
+    third_party_settings: {  }
+    type: color_field_formatter_text
   field_section_page_contents:
     type: entity_reference_revisions_entity_view
     weight: 2
@@ -57,3 +67,4 @@ hidden:
   field_section_page_teaser_title: true
   langcode: true
   links: true
+  shariff_field: true

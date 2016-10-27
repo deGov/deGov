@@ -7,11 +7,13 @@ dependencies:
     - field.field.node.article_page.field_article_page_section
     - field.field.node.article_page.field_article_page_subtitle
     - field.field.node.article_page.field_article_page_tags
+    - field.field.node.article_page.field_article_page_teaser_color
     - field.field.node.article_page.field_article_page_teaser_image
     - field.field.node.article_page.field_article_page_teaser_stitle
     - field.field.node.article_page.field_article_page_teaser_title
     - node.type.article_page
   module:
+    - color_field
     - datetime
     - entity_browser
     - paragraphs
@@ -24,7 +26,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 11
+    weight: 12
     settings: {  }
     third_party_settings: {  }
   field_article_page_contents:
@@ -58,17 +60,22 @@ content:
     third_party_settings: {  }
     type: string_textfield
   field_article_page_tags:
-    weight: 8
+    weight: 9
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
-  field_article_page_teaser_image:
+  field_article_page_teaser_color:
     weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+  field_article_page_teaser_image:
+    weight: 8
     settings:
-      entity_browser: media_browser
+      entity_browser: image_browser
       field_widget_display: rendered_entity
       field_widget_edit: true
       field_widget_remove: true
@@ -94,25 +101,25 @@ content:
     type: string_textfield
   langcode:
     type: language_select
-    weight: 9
+    weight: 10
     settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 14
+    weight: 15
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 12
+    weight: 13
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 13
+    weight: 14
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -123,7 +130,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 10
+    weight: 11
     settings:
       match_operator: CONTAINS
       size: 60

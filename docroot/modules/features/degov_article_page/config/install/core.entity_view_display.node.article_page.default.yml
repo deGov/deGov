@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.article_page.field_article_page_section
     - field.field.node.article_page.field_article_page_subtitle
     - field.field.node.article_page.field_article_page_tags
+    - field.field.node.article_page.field_article_page_teaser_color
     - field.field.node.article_page.field_article_page_teaser_image
     - field.field.node.article_page.field_article_page_teaser_stitle
     - field.field.node.article_page.field_article_page_teaser_title
@@ -53,8 +54,10 @@ content:
 hidden:
   field_article_page_section: true
   field_article_page_tags: true
+  field_article_page_teaser_color: true
   field_article_page_teaser_image: true
   field_article_page_teaser_stitle: true
   field_article_page_teaser_title: true
   langcode: true
   links: true
+  shariff_field: true

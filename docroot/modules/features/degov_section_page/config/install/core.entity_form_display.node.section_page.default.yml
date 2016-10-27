@@ -2,6 +2,7 @@ langcode: de
 status: true
 dependencies:
   config:
+    - field.field.node.section_page.field_section_page_color
     - field.field.node.section_page.field_section_page_contents
     - field.field.node.section_page.field_section_page_image
     - field.field.node.section_page.field_section_page_subtitle
@@ -12,6 +13,7 @@ dependencies:
     - field.field.node.section_page.field_section_page_teaser_title
     - node.type.section_page
   module:
+    - color_field
     - entity_browser
     - paragraphs
     - path
@@ -23,12 +25,17 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 11
+    weight: 12
     settings: {  }
     third_party_settings: {  }
+  field_section_page_color:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
   field_section_page_contents:
     type: entity_reference_paragraphs
-    weight: 3
+    weight: 4
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -37,15 +44,16 @@ content:
       form_display_mode: default
     third_party_settings: {  }
   field_section_page_image:
-    weight: 2
+    weight: 3
     settings:
       entity_browser: media_browser
       field_widget_display: rendered_entity
       field_widget_edit: true
       field_widget_remove: true
       selection_mode: selection_append
+      field_widget_display_settings:
+        view_mode: embedded
       open: false
-      field_widget_display_settings: {  }
     third_party_settings: {  }
     type: entity_browser_entity_reference
   field_section_page_subtitle:
@@ -56,7 +64,7 @@ content:
     third_party_settings: {  }
     type: string_textfield
   field_section_page_tags:
-    weight: 8
+    weight: 9
     settings:
       match_operator: CONTAINS
       size: 60
@@ -64,33 +72,29 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
   field_section_page_teaser_image:
-    weight: 6
+    weight: 7
     settings:
-      entity_browser: media_browser
-      field_widget_display: rendered_entity
-      field_widget_edit: true
-      field_widget_remove: true
-      selection_mode: selection_append
-      open: false
-      field_widget_display_settings: {  }
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: entity_browser_entity_reference
+    type: entity_reference_autocomplete
   field_section_page_teaser_stitle:
-    weight: 5
+    weight: 6
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
   field_section_page_teaser_text:
-    weight: 7
+    weight: 8
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
   field_section_page_teaser_title:
-    weight: 4
+    weight: 5
     settings:
       size: 60
       placeholder: ''
@@ -98,25 +102,25 @@ content:
     type: string_textfield
   langcode:
     type: language_select
-    weight: 9
+    weight: 10
     settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 14
+    weight: 15
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 12
+    weight: 13
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 13
+    weight: 14
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -127,7 +131,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 10
+    weight: 11
     settings:
       match_operator: CONTAINS
       size: 60

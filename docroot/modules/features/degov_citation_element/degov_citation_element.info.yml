@@ -3,6 +3,7 @@ description: 'Provides Zitat paragraphs type and related configuration.'
 type: module
 core: 8.x
 dependencies:
+  - color_field
   - entity_browser
   - field
   - lightning_media_image

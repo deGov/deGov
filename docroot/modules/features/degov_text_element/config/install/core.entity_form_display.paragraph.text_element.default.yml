@@ -3,10 +3,12 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.text_element.field_text_element_align
+    - field.field.paragraph.text_element.field_text_element_color
     - field.field.paragraph.text_element.field_text_element_text
     - field.field.paragraph.text_element.field_text_element_title
     - paragraphs.paragraphs_type.text_element
   module:
+    - color_field
     - text
     - workbench_moderation
 id: paragraph.text_element.default
@@ -19,6 +21,11 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+  field_text_element_color:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
   field_text_element_text:
     weight: 7
     settings:

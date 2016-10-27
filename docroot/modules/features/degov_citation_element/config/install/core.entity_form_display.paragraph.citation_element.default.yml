@@ -2,12 +2,14 @@ langcode: de
 status: true
 dependencies:
   config:
+    - field.field.paragraph.citation_element.field_citation_element_color
     - field.field.paragraph.citation_element.field_citation_element_image
     - field.field.paragraph.citation_element.field_citation_element_link
     - field.field.paragraph.citation_element.field_citation_element_text
     - field.field.paragraph.citation_element.field_citation_element_title
     - paragraphs.paragraphs_type.citation_element
   module:
+    - color_field
     - entity_browser
     - link
     - workbench_moderation
@@ -16,6 +18,13 @@ targetEntityType: paragraph
 bundle: citation_element
 mode: default
 content:
+  field_citation_element_color:
+    weight: 10
+    settings:
+      placeholder_color: ''
+      placeholder_opacity: ''
+    third_party_settings: {  }
+    type: color_field_widget_default
   field_citation_element_image:
     weight: 8
     settings:

@@ -8,11 +8,13 @@ dependencies:
     - field.field.node.article_page.field_article_page_section
     - field.field.node.article_page.field_article_page_subtitle
     - field.field.node.article_page.field_article_page_tags
+    - field.field.node.article_page.field_article_page_teaser_color
     - field.field.node.article_page.field_article_page_teaser_image
     - field.field.node.article_page.field_article_page_teaser_stitle
     - field.field.node.article_page.field_article_page_teaser_title
     - node.type.article_page
   module:
+    - color_field
     - panelizer
     - user
 third_party_settings:
@@ -26,9 +28,17 @@ targetEntityType: node
 bundle: article_page
 mode: teaser
 content:
+  field_article_page_teaser_color:
+    type: color_field_formatter_text
+    weight: 2
+    label: hidden
+    settings:
+      opacity: '1'
+      format: hex
+    third_party_settings: {  }
   field_article_page_teaser_image:
     type: entity_reference_entity_view
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       view_mode: default
@@ -56,3 +66,4 @@ hidden:
   field_article_page_tags: true
   langcode: true
   links: true
+  shariff_field: true
