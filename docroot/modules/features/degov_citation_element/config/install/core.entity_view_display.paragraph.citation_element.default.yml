@@ -9,21 +9,12 @@ dependencies:
     - field.field.paragraph.citation_element.field_citation_element_title
     - paragraphs.paragraphs_type.citation_element
   module:
-    - color_field
     - link
 id: paragraph.citation_element.default
 targetEntityType: paragraph
 bundle: citation_element
 mode: default
 content:
-  field_citation_element_color:
-    weight: 4
-    label: above
-    settings:
-      format: hex
-      opacity: '1'
-    third_party_settings: {  }
-    type: color_field_formatter_text
   field_citation_element_image:
     weight: 1
     label: hidden
@@ -58,4 +49,5 @@ content:
     type: string
 hidden:
   created: true
+  field_citation_element_color: true
   uid: true

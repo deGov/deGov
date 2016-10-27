@@ -8,7 +8,6 @@ dependencies:
     - field.field.paragraph.text_element.field_text_element_title
     - paragraphs.paragraphs_type.text_element
   module:
-    - color_field
     - options
     - text
 id: paragraph.text_element.default
@@ -22,14 +21,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_key
-  field_text_element_color:
-    weight: 3
-    label: hidden
-    settings:
-      format: hex
-      opacity: '1'
-    third_party_settings: {  }
-    type: color_field_formatter_text
   field_text_element_text:
     weight: 1
     label: hidden
@@ -45,4 +36,5 @@ content:
     type: string
 hidden:
   created: true
+  field_text_element_color: true
   uid: true
