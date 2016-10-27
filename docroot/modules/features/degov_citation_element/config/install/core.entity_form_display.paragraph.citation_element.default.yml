@@ -20,11 +20,9 @@ mode: default
 content:
   field_citation_element_color:
     weight: 10
-    settings:
-      placeholder_color: ''
-      placeholder_opacity: ''
+    settings: {  }
     third_party_settings: {  }
-    type: color_field_widget_default
+    type: color_field_widget_html5
   field_citation_element_image:
     weight: 8
     settings:

@@ -1,0 +1,10 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.event_page
+id: node.event_page
+target_entity_type_id: node
+target_bundle: event_page
+default_langcode: site_default
+language_alterable: false

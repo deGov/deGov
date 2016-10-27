@@ -1,0 +1,27 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_page_section
+    - node.type.event_page
+    - node.type.section_page
+id: node.event_page.field_event_page_section
+field_name: field_event_page_section
+entity_type: node
+bundle: event_page
+label: Bereich
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      section_page: section_page
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

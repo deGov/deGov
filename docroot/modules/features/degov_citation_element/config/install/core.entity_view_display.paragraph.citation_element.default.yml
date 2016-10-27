@@ -17,13 +17,13 @@ bundle: citation_element
 mode: default
 content:
   field_citation_element_color:
-    weight: 4
-    label: above
-    settings:
-      format: hex
-      opacity: '1'
-    third_party_settings: {  }
     type: color_field_formatter_text
+    weight: 4
+    label: hidden
+    settings:
+      opacity: '1'
+      format: hex
+    third_party_settings: {  }
   field_citation_element_image:
     weight: 1
     label: hidden
