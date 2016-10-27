@@ -24,8 +24,8 @@ content:
     weight: 103
     label: hidden
     settings:
-      link: true
-      view_mode: default
+      view_mode: teaser
+      link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
   field_home_page_image:
@@ -40,8 +40,8 @@ content:
     weight: 102
     label: hidden
     settings:
-      link: true
-      view_mode: default
+      view_mode: teaser
+      link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
   links:
@@ -50,3 +50,4 @@ content:
     third_party_settings: {  }
 hidden:
   langcode: true
+  shariff_field: true
