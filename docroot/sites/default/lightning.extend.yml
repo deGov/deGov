@@ -62,6 +62,7 @@ modules:
   - degov_search404
   - elasticsearch_connector
   - elasticsearch_connector_views
+  - degov_demo
 # A system path to redirect to once installation is complete.
 redirect:
   path: 'degov_welcome'
