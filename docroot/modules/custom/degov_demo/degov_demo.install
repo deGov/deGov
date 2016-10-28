@@ -1,6 +1,5 @@
 <?php
 
-use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\node\Entity\Node;
 use Symfony\Component\Yaml\Yaml;
 use Drupal\taxonomy\Entity\Term;
