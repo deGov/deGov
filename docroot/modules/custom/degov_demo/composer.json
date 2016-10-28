@@ -1,0 +1,9 @@
+{
+  "name": "drupal/degov_demo",
+  "type": "drupal-module",
+  "description": "Demo content for deGov",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "minimum-stability": "dev",
+  "require": { }
+}

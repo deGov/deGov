@@ -1,0 +1,76 @@
+# This files contains the content, that is imported.
+
+# Adresse
+address_element:
+ -
+  field_address_element_state: "NRW"
+  field_address_element_company: "publicplan GmbH"
+  field_address_element_country: "Deutschland"
+  field_address_element_city: "Düsseldorf"
+  field_address_element_zip: "40213"
+  field_address_element_street: "Bilker Str. 29"
+
+# Bild
+image_element:
+ -
+  field_image_element_media: null
+
+# Bild Text
+image_text_element:
+ -
+  field_image_text_element_align: "left"
+  field_image_text_element_image: null
+  field_image_text_element_text: "Bild Text Paragraph Beispiel Content. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi consequuntur nemo, corrupti ut tempora autem dolorum a et odit impedit nisi officia vitae, facere repudiandae possimus quas porro esse voluptate."
+
+# Download Liste
+downloads_element:
+ -
+  field_downloads_element_files: null
+  field_downloads_element_title: "Download-Liste Beispiel. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero dolor reiciendis id voluptates quas, ipsa culpa. Quo nihil, fugiat, impedit, perspiciatis illo voluptas minus iusto repellat explicabo tempore non officiis!"
+
+# Gallerie
+gallery_element:
+ -
+  field_gallery_element_images: null
+  field_gallery_element_text: "Gallerie - Element Beispiel. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis dignissimos quam mollitia nihil obcaecati. Obcaecati aliquam labore tempore nam aliquid ipsum quas modi nesciunt, sunt, voluptatum cumque cupiditate possimus. Voluptates."
+  field_gallery_element_title: "Gallerie - Element Beispiel"
+  field_element_type: "gallery"
+
+# Google Maps
+google_maps_element:
+ -
+  field_google_map_element_address: "Bilker Str. 29, 40213 Düsseldorf"
+
+# Kontakt
+contact_element:
+ -
+  field_contact_element_image: null
+  field_contact_element_email: "info@publicplan.de"
+  field_contact_element_fax: "+49 (0)30 6098980-89"
+  field_contact_element_name: "publicplan GmbH"
+  field_contact_element_position: "Software Developer"
+  field_contact_element_phone: "+49 (0)30 6098980-80"
+  field_contact_element_website: "https://www.publicplan.de"
+
+# Link-Liste
+links_element:
+ -
+  field_links_element_links: null
+  field_links_element_title: "Beispiel einer Link Element-Liste."
+
+# Text
+text_element:
+ -
+  field_text_element_align: "left"
+  field_text_element_color: "#2980b9"
+  field_text_element_text: "Beispiel eines Text Element Paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum nam, facere quia dignissimos delectus officiis rem placeat autem voluptate. Repellat ipsum necessitatibus blanditiis quis dignissimos explicabo neque, numquam modi repellendus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et magni totam labore officia corporis quasi enim! Tempore labore dignissimos vitae voluptatum, debitis mollitia voluptas omnis neque. Ex modi explicabo, nisi."
+  field_text_element_title: "Beispiel eines Text Element Paragraph"
+
+# Zitat
+citation_element:
+ -
+  field_citation_element_image: null
+  field_citation_element_color: "#e67e22"
+  field_citation_element_link: null
+  field_citation_element_text: "Beispiel eines Zitates. Lorem ipsum dolor sit amet, consectetur adipisicing elit. At ipsam necessitatibus fugit ipsum, laboriosam perferendis perspiciatis earum iste. Deserunt unde consectetur enim deleniti debitis a beatae inventore aliquid eius eum."
+  field_citation_element_title: "Beispiel eines Zitates"
