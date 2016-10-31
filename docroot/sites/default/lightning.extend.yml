@@ -63,6 +63,8 @@ modules:
   - elasticsearch_connector
   - elasticsearch_connector_views
   - degov_demo
+  - twitter_block
+  - degov_twitter_block
 # A system path to redirect to once installation is complete.
 redirect:
   path: 'degov_welcome'
