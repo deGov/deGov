@@ -51,6 +51,10 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+  shariff_field:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   field_article_page_section: true
   field_article_page_tags: true
@@ -60,4 +64,3 @@ hidden:
   field_article_page_teaser_title: true
   langcode: true
   links: true
-  shariff_field: true

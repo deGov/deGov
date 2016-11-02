@@ -75,7 +75,7 @@ content:
   field_article_page_teaser_image:
     weight: 8
     settings:
-      entity_browser: image_browser
+      entity_browser: media_browser
       field_widget_display: rendered_entity
       field_widget_edit: true
       field_widget_remove: true
