@@ -39,9 +39,11 @@ function degov_welcome_block_view_alter(array &$build, \Drupal\Core\Block\BlockP
  * Implements hook_block_poweredby_prerender().
  * Override the content of the "powered by Drupal" block
  * @param $build
+ *
+ * @return array $build
  */
 function degov_welcome_block_poweredby_prerender(array $build) {
-  $build['content']['#markup'] = '<span>' . t('Powered by <a href=":poweredby">DeGov</a>', array(':poweredby' => 'https://www.degov.de')) . '</span>';
+  $build['content']['#markup'] = '<span>' . t('Powered by <a href=":poweredby">DeGov</a>', array(':poweredby' => 'http://www.degov.org')) . '</span>';
   return $build;
 }
 
