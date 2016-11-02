@@ -1,4 +1,4 @@
-name: 'deGov - Artikel'
+name: 'deGov - Inhaltsseite'
 type: module
 core: 8.x
 dependencies:
@@ -19,4 +19,6 @@ dependencies:
   - path
   - taxonomy
   - user
+  - views
+  - views_infinite_scroll
   - workbench_moderation
