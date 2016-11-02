@@ -18,3 +18,7 @@ cdn_provider: ''
 logo:
   path: 'themes/custom/degov/img/logo-degov.jpg'
   use_default: false
+
+favicon:
+  path: 'themes/custom/degov/img/favicon.ico'
+  use_default: false
