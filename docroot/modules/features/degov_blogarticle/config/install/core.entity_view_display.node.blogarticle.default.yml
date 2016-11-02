@@ -1,0 +1,66 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.blogarticle.field_blogarticle_datetime
+    - field.field.node.blogarticle.field_blogarticle_image
+    - field.field.node.blogarticle.field_blogarticle_subtitle
+    - field.field.node.blogarticle.field_blogarticle_tags
+    - field.field.node.blogarticle.field_blogarticle_text
+    - node.type.blogarticle
+  module:
+    - datetime
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.blogarticle.default
+targetEntityType: node
+bundle: blogarticle
+mode: default
+content:
+  field_blogarticle_datetime:
+    weight: 2
+    label: hidden
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+  field_blogarticle_image:
+    weight: 3
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+  field_blogarticle_subtitle:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_blogarticle_text:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  links:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+  shariff_field:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_blogarticle_tags: true
+  langcode: true
