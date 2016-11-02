@@ -1,0 +1,18 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_image_subtitle
+    - media_entity.bundle.image
+id: media.image.field_image_subtitle
+field_name: field_image_subtitle
+entity_type: media
+bundle: image
+label: Bildunterschrift
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
