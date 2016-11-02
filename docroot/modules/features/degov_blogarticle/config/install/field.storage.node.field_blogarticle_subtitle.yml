@@ -3,8 +3,8 @@ status: true
 dependencies:
   module:
     - node
-id: node.field_article_page_teaser_stitle
-field_name: field_article_page_teaser_stitle
+id: node.field_blogarticle_subtitle
+field_name: field_blogarticle_subtitle
 entity_type: node
 type: string
 settings:

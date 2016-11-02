@@ -2,9 +2,9 @@ langcode: de
 status: true
 dependencies:
   config:
-    - node.type.article_page
-id: node.article_page
+    - node.type.blogarticle
+id: node.blogarticle
 target_entity_type_id: node
-target_bundle: article_page
+target_bundle: blogarticle
 default_langcode: site_default
 language_alterable: false

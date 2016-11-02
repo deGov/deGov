@@ -15,7 +15,7 @@ settings:
   id: twitter_block
   label: 'Twitter block'
   provider: twitter_block
-  label_display: visible
+  label_display: '0'
   widget_id: '793100883903021056'
   theme: ''
   link_color: ''

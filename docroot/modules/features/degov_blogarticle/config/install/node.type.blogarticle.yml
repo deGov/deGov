@@ -5,11 +5,10 @@ dependencies:
     - menu_ui
 third_party_settings:
   menu_ui:
-    available_menus:
-      - main
-    parent: 'main:'
-name: Inhaltsseite
-type: article_page
+    available_menus: {  }
+    parent: ''
+name: 'Blogartikel / Pressemitteilung'
+type: blogarticle
 description: ''
 help: ''
 new_revision: true

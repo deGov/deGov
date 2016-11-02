@@ -2,14 +2,14 @@ langcode: de
 status: true
 dependencies:
   config:
-    - field.storage.node.field_article_page_teaser_image
+    - field.storage.node.field_blogarticle_image
     - media_entity.bundle.image
-    - node.type.article_page
-id: node.article_page.field_article_page_teaser_image
-field_name: field_article_page_teaser_image
+    - node.type.blogarticle
+id: node.blogarticle.field_blogarticle_image
+field_name: field_blogarticle_image
 entity_type: node
-bundle: article_page
-label: 'Teaser: Bild'
+bundle: blogarticle
+label: Bild
 description: ''
 required: false
 translatable: false
@@ -22,6 +22,6 @@ settings:
       image: image
     sort:
       field: _none
-    auto_create: false
+    auto_create: true
     auto_create_bundle: ''
 field_type: entity_reference

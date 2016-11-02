@@ -1,0 +1,28 @@
+langcode: de
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.blogarticle.field_blogarticle_datetime
+    - field.field.node.blogarticle.field_blogarticle_image
+    - field.field.node.blogarticle.field_blogarticle_subtitle
+    - field.field.node.blogarticle.field_blogarticle_tags
+    - field.field.node.blogarticle.field_blogarticle_text
+    - node.type.blogarticle
+  module:
+    - user
+id: node.blogarticle.teaser
+targetEntityType: node
+bundle: blogarticle
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden:
+  field_blogarticle_datetime: true
+  field_blogarticle_image: true
+  field_blogarticle_subtitle: true
+  field_blogarticle_tags: true
+  field_blogarticle_text: true
+  langcode: true
+  shariff_field: true

@@ -2,13 +2,13 @@ langcode: de
 status: true
 dependencies:
   config:
-    - field.storage.node.field_article_page_tags
-    - node.type.article_page
-    - taxonomy.vocabulary.tags
-id: node.article_page.field_article_page_tags
-field_name: field_article_page_tags
+    - field.storage.node.field_blogarticle_tags
+    - node.type.blogarticle
+    - taxonomy.vocabulary.tax_blog
+id: node.blogarticle.field_blogarticle_tags
+field_name: field_blogarticle_tags
 entity_type: node
-bundle: article_page
+bundle: blogarticle
 label: Schlagwörter
 description: ''
 required: false
@@ -19,7 +19,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      tags: tags
+      tax_blog: tax_blog
     sort:
       field: _none
     auto_create: true

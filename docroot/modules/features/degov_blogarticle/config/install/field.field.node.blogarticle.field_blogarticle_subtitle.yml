@@ -2,12 +2,12 @@ langcode: de
 status: true
 dependencies:
   config:
-    - field.storage.node.field_article_page_subtitle
-    - node.type.article_page
-id: node.article_page.field_article_page_subtitle
-field_name: field_article_page_subtitle
+    - field.storage.node.field_blogarticle_subtitle
+    - node.type.blogarticle
+id: node.blogarticle.field_blogarticle_subtitle
+field_name: field_blogarticle_subtitle
 entity_type: node
-bundle: article_page
+bundle: blogarticle
 label: Untertitel
 description: ''
 required: false
