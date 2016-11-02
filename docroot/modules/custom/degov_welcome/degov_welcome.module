@@ -53,7 +53,7 @@ function degov_welcome_page_attachments_alter(array &$attachments) {
 // Change Generator META tag.
   foreach ($attachments['#attached']['html_head'] as $key => $attachment) {
     if (isset($attachment[1])) {
-      if ($attachment[1] == 'system_meta_generator') {
+      if ($attachment[1] === 'system_meta_generator') {
         // The Element 0 contains all info.
         // The Element 1 contains the type of meta tag.
         $attachments['#attached']['html_head'][$key][0] = array(
