@@ -2,6 +2,7 @@ langcode: de
 status: true
 dependencies:
   module:
+    - system
     - twitter_block
   theme:
     - degov
@@ -32,4 +33,9 @@ settings:
   tweet_limit: ''
   related: ''
   polite: polite
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/1
+    negate: false
+    context_mapping: {  }
