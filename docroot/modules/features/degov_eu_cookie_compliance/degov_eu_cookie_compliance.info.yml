@@ -1,3 +1,5 @@
 name: 'deGov - EU cookie compliance'
 type: module
 core: 8.x
+dependencies:
+  - user
