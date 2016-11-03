@@ -1,0 +1,28 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_recent_articles_elem_view
+    - paragraphs.paragraphs_type.recent_articles_element
+    - views.view.article_list
+  module:
+    - viewsreference
+id: paragraph.recent_articles_element.field_recent_articles_elem_view
+field_name: field_recent_articles_elem_view
+entity_type: paragraph
+bundle: recent_articles_element
+label: 'Aktuelle Artikel'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    display_id: entity_reference_1
+    argument: ''
+    title: 0
+    target_uuid: cabe1216-278f-426c-8a3c-6574425b1d68
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings: {  }
+field_type: viewsreference

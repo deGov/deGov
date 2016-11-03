@@ -1,0 +1,23 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.recent_articles_element.field_recent_articles_elem_view
+    - paragraphs.paragraphs_type.recent_articles_element
+  module:
+    - viewsreference
+id: paragraph.recent_articles_element.default
+targetEntityType: paragraph
+bundle: recent_articles_element
+mode: default
+content:
+  field_recent_articles_elem_view:
+    weight: 0
+    label: hidden
+    settings:
+      render_view: true
+    third_party_settings: {  }
+    type: viewsreference_formatter
+hidden:
+  created: true
+  uid: true

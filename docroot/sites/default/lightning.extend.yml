@@ -68,6 +68,8 @@ modules:
   - degov_tax_blog
   - degov_blogarticle
   - degov_media_image
+  - viewsreference
+  - degov_recent_articles_element
 # A system path to redirect to once installation is complete.
 redirect:
   path: 'degov_welcome'

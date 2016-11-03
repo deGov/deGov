@@ -1,0 +1,15 @@
+name: 'deGov - Paragraphs - Aktuelle Artikel'
+description: 'Provides a Paragraph type to show the last 10 published articles rendered through a view and embedded into a field.'
+type: module
+core: 8.x
+dependencies:
+  - degov_article_page
+  - entity_reference_revisions
+  - field
+  - node
+  - paragraphs
+  - user
+  - views
+  - views_infinite_scroll
+  - viewsreference
+  - workbench_moderation
