@@ -1,5 +1,6 @@
 <?php
-use Drupal\node\Entity\NodeType;
+
+use Drupal\block\Entity\Block;
 
 /**
  * Implements hook_install().
@@ -16,6 +17,57 @@ function degov_welcome_install() {
   \Drupal::service('theme_installer')->install(array('degov'), TRUE);
   \Drupal::configFactory()->getEditable('system.theme')->set('default', 'degov')->save(TRUE);
 
-  // Set 'news' as default frontpage
-  \Drupal::configFactory()->getEditable('system.site')->set('page.front', '/node')->save(TRUE);
+  // Set first node as default frontpage
+  \Drupal::configFactory()->getEditable('system.site')->set('page.front', '/node/1')->save(TRUE);
+
+  // Place some blocks in the correct regions
+
+  // Page intro
+  $block = Block::load('degov_account_menu');
+  $block->setRegion('page_intro');
+  $block->save();
+
+  // Navigation
+  $block = Block::load('degov_branding');
+  $block->setRegion('navigation');
+  $block->save();
+  $block = Block::load('degov_main_menu');
+  $block->setRegion('navigation');
+  $block->save();
+
+  // Top bar
+  $block = Block::load('degov_breadcrumbs');
+  $block->setRegion('header');
+  $block->save();
+
+  // Highlighted
+  $block = Block::load('degov_messages');
+  $block->setRegion('highlighted');
+  $block->save();
+
+  // Content
+  $block = Block::load('degov_help');
+  $block->setRegion('content');
+  $block->save();
+  $block = Block::load('degov_page_title');
+  $block->setRegion('content');
+  $block->save();
+  $block = Block::load('degov_local_actions');
+  $block->setRegion('content');
+  $block->save();
+  $block = Block::load('degov_local_tasks');
+  $block->setRegion('content');
+  $block->save();
+  $block = Block::load('degov_content');
+  $block->setRegion('content');
+  $block->save();
+
+  // Footer
+  $block = Block::load('degov_footer');
+  $block->setRegion('footer');
+  $block->save();
+  $block = Block::load('degov_powered');
+  $block->setRegion('footer');
+  $block->save();
+
 }
