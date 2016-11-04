@@ -30,9 +30,14 @@ function degov_welcome_install() {
   // Navigation
   $block = Block::load('degov_branding');
   $block->setRegion('navigation');
+  $block->setWeight(0);
   $block->save();
+  // For menu blocks set the depth
   $block = Block::load('degov_main_menu');
   $block->setRegion('navigation');
+  $block->setWeight(1);
+  $menu_plugin = $block->getPlugin();
+  $menu_plugin->setConfigurationValue('depth', 2);
   $block->save();
 
   // Top bar
@@ -48,26 +53,34 @@ function degov_welcome_install() {
   // Content
   $block = Block::load('degov_help');
   $block->setRegion('content');
+  $block->setWeight(0);
   $block->save();
   $block = Block::load('degov_page_title');
   $block->setRegion('content');
+  $block->setWeight(1);
   $block->save();
   $block = Block::load('degov_local_actions');
   $block->setRegion('content');
+  $block->setWeight(2);
   $block->save();
   $block = Block::load('degov_local_tasks');
   $block->setRegion('content');
+  $block->setWeight(3);
   $block->save();
   $block = Block::load('degov_content');
   $block->setRegion('content');
+  $block->setWeight(4);
   $block->save();
 
   // Footer
-  $block = Block::load('degov_footer');
-  $block->setRegion('footer');
-  $block->save();
   $block = Block::load('degov_powered');
   $block->setRegion('footer');
+  $block->setWeight(0);
   $block->save();
+  $block = Block::load('degov_footer');
+  $block->setRegion('footer');
+  $block->setWeight(1);
+  $block->save();
+
 
 }
