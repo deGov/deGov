@@ -7,7 +7,12 @@ $bootstrap-sass-asset-helper: false;
 // Variables
 // --------------------------------------------------
 //== Colors
-//
+//##Colorguide
+$color-gray: #838e98;
+$color-blue: #004473;
+$color-red: #ab0033;
+$color-yellow: #ffc72a;
+$color-green: #00945f;
 //## Gray and brand colors for use across Bootstrap.
 $gray-base: #000000;
 $gray-darker: lighten($gray-base, 13.5%); // #222
@@ -15,11 +20,11 @@ $gray-dark: lighten($gray-base, 20%); // #333
 $gray: lighten($gray-base, 33.5%); // #555
 $gray-light: lighten($gray-base, 46.7%); // #777
 $gray-lighter: lighten($gray-base, 93.5%); // #eee
-$brand-primary: #004473; // #337ab7
-$brand-success: #838e98;
-$brand-info: #5bc0de;
-$brand-warning: #ffc72a;
-$brand-danger: #ab0033;
+$brand-primary: $color-blue;
+$brand-success: $color-green;
+$brand-info: $color-gray;
+$brand-warning: $color-yellow;
+$brand-danger: $color-red;
 
 //== Scaffolding
 //
@@ -48,7 +53,7 @@ $font-family-serif: Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
 $font-family-base: $font-family-sans-serif;
-$font-size-base: 14px;
+$font-size-base: 18px;
 $font-size-large: ceil(($font-size-base * 1.25)); // ~18px
 $font-size-small: ceil(($font-size-base * 0.85)); // ~12px
 $font-size-h1: floor(($font-size-base * 2.6)); // ~36px
@@ -421,7 +426,7 @@ $nav-disabled-link-hover-color: $gray-light;
 //== Tabs
 $nav-tabs-border-color: #dddddd;
 $nav-tabs-link-hover-border-color: $gray-lighter;
-$nav-tabs-active-link-hover-bg: $body-bg;
+$nav-tabs-active-link-hover-bg: $gray-lighter;
 $nav-tabs-active-link-hover-color: $gray;
 $nav-tabs-active-link-hover-border-color: #dddddd;
 $nav-tabs-justified-link-border-color: #dddddd;

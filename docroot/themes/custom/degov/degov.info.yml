@@ -7,6 +7,7 @@ description: 'Example theme for the deGov distribution. Depends on Bootstrap the
 package: 'Bootstrap'
 
 regions:
+  page_intro: 'Page intro'
   navigation: 'Navigation'
   navigation_collapsible: 'Navigation (Collapsible)'
   header: 'Top Bar'
@@ -16,6 +17,7 @@ regions:
   sidebar_first: 'Primary'
   sidebar_second: 'Secondary'
   footer: 'Footer'
+  page_outro: 'Page outro'
   page_top: 'Page top'
   page_bottom: 'Page bottom'
 

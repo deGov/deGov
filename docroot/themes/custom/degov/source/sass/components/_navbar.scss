@@ -1,0 +1,14 @@
+// Style for navbar layout
+
+.navbar.container {
+  max-width: $screen-phone;
+	@include larger-than($screen-tablet) {
+	  max-width: $screen-tablet;
+	}
+	@include larger-than($screen-desktop) {
+	  max-width: $screen-desktop;
+	}
+	@include larger-than($screen-lg-desktop) {
+	  max-width: $screen-lg-desktop;
+	}
+}
