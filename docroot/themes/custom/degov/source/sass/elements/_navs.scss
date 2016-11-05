@@ -9,17 +9,16 @@
 	}
 	.name {
 		color: $navbar-default-brand-color;
-    &:hover,
-    &:focus {
-      color: $navbar-default-link-hover-color;
-      background-color: $navbar-default-brand-hover-bg;
-      text-decoration: none;
-    }
-	}
-	.nav {
-		a {
-			padding-left: 0;
+		&:hover,
+		&:focus {
+		  color: $navbar-default-link-hover-color;
+		  background-color: $navbar-default-brand-hover-bg;
+		  text-decoration: none;
 		}
+	}
+	.dropdown-menu > li  > a {
+		line-height: $line-height-computed * 2;
+		padding: 0 $grid-gutter-width;
 	}
 }
 
