@@ -1,13 +1,13 @@
 // Reduce spacing below page header
 .page-header {
-	padding: ($line-height-computed / 2) 0;
+	padding: $vertical-gutter-width 0;
   margin: 0;
   &:after {
     content: '';
     display: block;
-    height: 4px;
+    height: $title-underline-height;
     width: 40px;
     background: $color-blue;
-    margin-top: ($line-height-computed / 2);
+    margin-top: ($vertical-gutter-width / 2);
 	}
 }

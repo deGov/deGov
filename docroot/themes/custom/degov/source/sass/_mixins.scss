@@ -37,7 +37,7 @@
   color: transparent;
   display: inline-block;
   &:before {
-    @include fa-icon;
+    //@include fa-icon;
     vertical-align: middle;
     color: $text-color;
     font-size: $font-size-base;
@@ -53,7 +53,7 @@
   display: inline-block;
   vertical-align: baseline;
   &:before {
-    @include fa-icon;
+    //@include fa-icon;
     margin-right: $margin;
     vertical-align: baseline;
     content: $char;
@@ -67,7 +67,7 @@
   display: inline-block;
   vertical-align: baseline;
   &:after {
-    @include fa-icon;
+    //@include fa-icon;
     margin-left: $margin;
     vertical-align: baseline;
     content: $char;
@@ -243,4 +243,11 @@
   &:nth-child(14) {
     @include post-landscape;
   }
+}
+
+@mixin content-box($color: $color-blue) {
+  margin: $vertical-gutter-width 0;
+  padding: $vertical-gutter-width $grid-gutter-width;
+  background-color: $color-white;
+  border-top: $title-underline-height solid $color;
 }

@@ -1,6 +1,6 @@
 // Give some space to paragraph fields
 .paragraph {
-	padding: ($line-height-computed / 2) 0;
+	@include content-box();
 }
 
 // Paragraph layout for Image-Text

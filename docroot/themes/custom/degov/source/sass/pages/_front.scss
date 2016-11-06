@@ -1,0 +1,12 @@
+// Set width for home_page_image
+.home-page-image {
+  background-color: $gray-light;
+  @include container-fixed();
+  width: 100%;
+  @include larger-than(1600px) {
+    width: 1600px;
+  }
+  img {
+    @include container-fixed();
+  }
+}

@@ -8,6 +8,7 @@ $bootstrap-sass-asset-helper: false;
 // --------------------------------------------------
 //== Colors
 //##Colorguide
+$color-white: #ffffff;
 $color-gray: #838e98;
 $color-blue: #004473;
 $color-red: #ab0033;
@@ -30,7 +31,7 @@ $brand-danger: $color-red;
 //
 //## Settings for some of the most global styles.
 //** Background color for `<body>`.
-$body-bg: #ffffff;
+$body-bg: $color-white;
 
 //** Global text color on `<body>`.
 $text-color: $gray-dark;
@@ -71,6 +72,8 @@ $headings-font-family: inherit;
 $headings-font-weight: 500;
 $headings-line-height: 1.1;
 $headings-color: inherit;
+
+$title-underline-height: 4px;
 
 //== Iconography
 //
@@ -355,6 +358,10 @@ $container-large-desktop: (1140px + $grid-gutter-width);
 
 //** For `$screen-lg-min` and up.
 $container-lg: $container-large-desktop;
+
+
+//== Vertical spacing
+$vertical-gutter-width: $grid-gutter-width;
 
 //== Navbar
 //

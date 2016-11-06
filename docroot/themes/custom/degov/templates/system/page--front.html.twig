@@ -112,8 +112,10 @@
 {# Main #}
 {% block main %}
   <div class="main-wrapper">
-    <div role="main" class="main-container {{ container }} js-quickedit-main-content">
-      <div class="row">
+    <div role="main" class="main-container js-quickedit-main-content">
+      <div class="home-page-image">{{ home_page_image }}</div>
+      <div class="container">
+        <div class="row">
 
         {# Header #}
         {% if page.header %}
@@ -187,6 +189,7 @@
             </aside>
           {% endblock %}
         {% endif %}
+      </div>
       </div>
     </div>
   </div>

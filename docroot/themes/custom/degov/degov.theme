@@ -5,3 +5,25 @@
  *
  * Place your custom PHP code in this file.
  */
+
+// Add image field as variable to the page template for content type home_page
+function degov_preprocess_page(&$vars) {
+  if (isset($vars['node'])) {
+    $node = $vars['node'];
+    if ($node->getType() == 'home_page') {
+      $field_home_page_image = $node->get('field_home_page_image');
+      $vars['home_page_image'] = $field_home_page_image->get(0)->entity->image->get(0)->view();
+    }
+  }
+}
+
+// Remove field_home_page_image from render array
+function degov_preprocess_node(&$vars) {
+  if (isset($vars['node'])) {
+    $node = $vars['node'];
+    if ($node->getType() == 'home_page') {
+      var_dump($vars['content']);
+      unset($vars['content']['field_home_page_image']);
+    }
+  }
+}
