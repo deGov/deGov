@@ -46,3 +46,32 @@
 		}
 	}
 }
+
+// Make google maps field full width
+.field--name-field-google-map-element-address {
+	iframe {
+		width: 100%;
+	}
+}
+
+// Style link lists
+.field--name-field-links-element-links {
+	.field--item {
+		a {
+			@include icon-before('►');
+			&:hover, &:focus {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+
+// Format citation
+.field--name-field-citation-element-text {
+	margin-top: $vertical-gutter-width;
+	padding: $vertical-gutter-width $grid-gutter-width;
+	background-color: $gray-light;
+	color: $color-white;
+	font-style: italic;
+}

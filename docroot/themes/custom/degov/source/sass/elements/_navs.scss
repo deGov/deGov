@@ -7,7 +7,9 @@
 			vertical-align: inherit;
 		}
 	}
+	// Disabled for the moment
 	.name {
+		display: none;
 		color: $navbar-default-brand-color;
 		&:hover,
 		&:focus {

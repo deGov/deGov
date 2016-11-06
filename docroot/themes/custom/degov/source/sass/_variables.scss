@@ -48,7 +48,7 @@ $link-hover-decoration: underline;
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
-$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-sans-serif: 'Open Sans', sans-serif;
 $font-family-serif: Georgia, "Times New Roman", Times, serif;
 
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
@@ -373,28 +373,28 @@ $navbar-border-radius: $border-radius-base;
 $navbar-padding-horizontal: floor(($grid-gutter-width / 2));
 $navbar-padding-vertical: (($navbar-height - $line-height-computed) / 2);
 $navbar-collapse-max-height: 340px;
-$navbar-default-color: #777777;
-$navbar-default-bg: #f8f8f8;
-$navbar-default-border: darken($navbar-default-bg, 6.5%);
+$navbar-default-color: $color-blue;
+$navbar-default-bg: $gray-lighter;
+$navbar-default-border: $gray-dark;
 
 // Navbar links
-$navbar-default-link-color: #777777;
-$navbar-default-link-hover-color: #333333;
+$navbar-default-link-color: $color-blue;
+$navbar-default-link-hover-color: $gray-darker;
 $navbar-default-link-hover-bg: transparent;
-$navbar-default-link-active-color: #555555;
-$navbar-default-link-active-bg: darken($navbar-default-bg, 6.5%);
-$navbar-default-link-disabled-color: #cccccc;
+$navbar-default-link-active-color: $gray-darker;
+$navbar-default-link-active-bg: $navbar-default-bg;
+$navbar-default-link-disabled-color: $gray-darker;
 $navbar-default-link-disabled-bg: transparent;
 
 // Navbar brand label
 $navbar-default-brand-color: $navbar-default-link-color;
-$navbar-default-brand-hover-color: darken($navbar-default-brand-color, 10%);
+$navbar-default-brand-hover-color: $navbar-default-brand-color;
 $navbar-default-brand-hover-bg: transparent;
 
 // Navbar toggle
-$navbar-default-toggle-hover-bg: #dddddd;
-$navbar-default-toggle-icon-bar-bg: #888888;
-$navbar-default-toggle-border-color: #dddddd;
+$navbar-default-toggle-hover-bg: $gray-light;
+$navbar-default-toggle-icon-bar-bg: $gray-light;
+$navbar-default-toggle-border-color: $gray-light;
 
 //=== Inverted navbar
 // Reset inverted navbar basics

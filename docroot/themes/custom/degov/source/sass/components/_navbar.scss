@@ -1,6 +1,7 @@
 // Style for navbar layout
 
 .navbar.container {
+  margin-bottom: 0;
   max-width: $screen-phone;
 	@include larger-than($screen-tablet) {
 	  max-width: $screen-tablet;
@@ -10,5 +11,14 @@
 	}
 	@include larger-than($screen-lg-desktop) {
 	  max-width: $screen-lg-desktop;
+	}
+	// Right align navigation
+	.navbar-header {
+		width: 100%;
+		#block-degov-main-menu {
+			float: right;
+			font-size: $font-size-large;
+			font-weight: 600;
+		}
 	}
 }

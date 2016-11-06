@@ -113,8 +113,13 @@
 {% block main %}
   <div class="main-wrapper">
     <div role="main" class="main-container js-quickedit-main-content">
-      <div class="home-page-image">{{ home_page_image }}</div>
-      <div class="container">
+      <div class="home-page-wrapper">
+        <div class="home-page-image">{{ home_page_image }}</div>
+        <div class="home-page-title-wrapper">
+          <div class="home-page-title"><h1 class="page-header">{{ home_page_title }}</h1></div>
+        </div>
+      </div>
+        <div class="container">
         <div class="row">
 
         {# Header #}
