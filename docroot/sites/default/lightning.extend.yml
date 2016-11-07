@@ -70,6 +70,7 @@ modules:
   - degov_media_image
   - viewsreference
   - degov_recent_articles_element
+  - degov_vsm_nrw
 # A system path to redirect to once installation is complete.
 redirect:
   path: 'degov_welcome'
