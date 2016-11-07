@@ -1,0 +1,1408 @@
+# Areas
+-
+  key: "bund"
+  name: "Bund"
+-
+  key: "land"
+  name: "alles"
+-
+  key: "koeln"
+  name: "Köln"
+-
+  key: "coesfeld"
+  name: "Coesfeld"
+-
+  key: "krcoesfeld"
+  name: "Kreis Coesfeld"
+-
+  key: "havixbeck"
+  name: "Havixbeck"
+-
+  key: "duelmen"
+  name: "Dülmen"
+-
+  key: "luedinghausen"
+  name: "Lüdinghausen"
+-
+  key: "rheinerftkr"
+  name: "Rhein-Erft-Kreis"
+-
+  key: "dinslaken"
+  name: "Dinslaken"
+-
+  key: "krborken"
+  name: "Kreis Borken"
+-
+  key: "hochsauerlandkr"
+  name: "Hochsauerlandkreis"
+-
+  key: "krhoexter"
+  name: "Kreis Höxter"
+-
+  key: "krpaderborn"
+  name: "Kreis Paderborn"
+-
+  key: "enneperuhrkr"
+  name: "Ennepe-Ruhr-Kreis"
+-
+  key: "krkleve"
+  name: "Kreis Kleve"
+-
+  key: "kraachen"
+  name: "StädteRegion Aachen"
+-
+  key: "krdueren"
+  name: "Kreis Düren"
+-
+  key: "kreuskirchen"
+  name: "Kreis Euskirchen"
+-
+  key: "krolpe"
+  name: "Kreis Olpe"
+-
+  key: "krrecklinghausen"
+  name: "Kreis Recklinghausen"
+-
+  key: "krsiegenwittgenstein"
+  name: "Kreis Siegen-Wittgenstein"
+-
+  key: "krsoest"
+  name: "Kreis Soest"
+-
+  key: "krsteinfurt"
+  name: "Kreis Steinfurt"
+-
+  key: "krunna"
+  name: "Kreis Unna"
+-
+  key: "krviersen"
+  name: "Kreis Viersen"
+-
+  key: "krwarendorf"
+  name: "Kreis Warendorf"
+-
+  key: "krwesel"
+  name: "Kreis Wesel"
+-
+  key: "oberbergischerkr"
+  name: "Oberbergischer Kreis"
+-
+  key: "rheinkrneuss"
+  name: "Rhein-Kreis Neuss"
+-
+  key: "rheinsiegkr"
+  name: "Rhein-Sieg-Kreis"
+-
+  key: "ahaus"
+  name: "Ahaus"
+-
+  key: "ahlen"
+  name: "Ahlen"
+-
+  key: "alpen"
+  name: "Alpen"
+-
+  key: "altenbeken"
+  name: "Altenbeken"
+-
+  key: "altenberge"
+  name: "Altenberge"
+-
+  key: "hwkaachen"
+  name: "Handwerkskammer Aachen"
+-
+  key: "anroechte"
+  name: "Anröchte"
+-
+  key: "ascheberg"
+  name: "Ascheberg"
+-
+  key: "badmuenstereifel"
+  name: "Bad Münstereifel"
+-
+  key: "beckum"
+  name: "Beckum"
+-
+  key: "bedburg"
+  name: "Bedburg"
+-
+  key: "bedburghau"
+  name: "Bedburg-Hau"
+-
+  key: "beelen"
+  name: "Beelen"
+-
+  key: "bielefeld"
+  name: "Bielefeld"
+-
+  key: "billerbeck"
+  name: "Billerbeck"
+-
+  key: "blomberg"
+  name: "Blomberg"
+-
+  key: "bocholt"
+  name: "Bocholt"
+-
+  key: "bonn"
+  name: "Bonn"
+-
+  key: "borken"
+  name: "Borken"
+-
+  key: "castroprauxel"
+  name: "Castrop-Rauxel"
+-
+  key: "dormagen"
+  name: "Dormagen"
+-
+  key: "xanten"
+  name: "Xanten"
+-
+  key: "wuppertal"
+  name: "Wuppertal"
+-
+  key: "hwkowl"
+  name: "Handwerkskammer Ostwestfalen-Lippe"
+-
+  key: "hwkdortmund"
+  name: "Handwerkskammer Dortmund"
+-
+  key: "hwkkoeln"
+  name: "Handwerkskammer Köln"
+-
+  key: "witten"
+  name: "Witten"
+-
+  key: "willich"
+  name: "Willich"
+-
+  key: "wickede"
+  name: "Wickede (Ruhr)"
+-
+  key: "dortmund"
+  name: "Dortmund"
+-
+  key: "wesel"
+  name: "Wesel"
+-
+  key: "werne"
+  name: "Werne"
+-
+  key: "werdohl"
+  name: "Werdohl"
+-
+  key: "wenden"
+  name: "Wenden"
+-
+  key: "welver"
+  name: "Welver"
+-
+  key: "warendorf"
+  name: "Warendorf"
+-
+  key: "wadersloh"
+  name: "Wadersloh"
+-
+  key: "wachtendonk"
+  name: "Wachtendonk"
+-
+  key: "drensteinfurt"
+  name: "Drensteinfurt"
+-
+  key: "emsdetten"
+  name: "Emsdetten"
+-
+  key: "ennigerloh"
+  name: "Ennigerloh"
+-
+  key: "erwitte"
+  name: "Erwitte"
+-
+  key: "emmerich"
+  name: "Emmerich am Rhein"
+-
+  key: "ennepetal"
+  name: "Ennepetal"
+-
+  key: "voerde"
+  name: "Voerde (Niederrhein)"
+-
+  key: "eschweiler"
+  name: "Eschweiler"
+-
+  key: "vettweiss"
+  name: "Vettweiß"
+-
+  key: "everswinkel"
+  name: "Everswinkel"
+-
+  key: "verl"
+  name: "Verl"
+-
+  key: "geldern"
+  name: "Geldern"
+-
+  key: "velen"
+  name: "Velen"
+-
+  key: "uedem"
+  name: "Uedem"
+-
+  key: "burbach"
+  name: "Burbach"
+-
+  key: "titz"
+  name: "Titz"
+-
+  key: "brueggen"
+  name: "Brüggen"
+-
+  key: "telgte"
+  name: "Telgte"
+-
+  key: "gescher"
+  name: "Gescher"
+-
+  key: "toenisvorst"
+  name: "Tönisvorst"
+-
+  key: "geseke"
+  name: "Geseke"
+-
+  key: "gladbeck"
+  name: "Gladbeck"
+-
+  key: "sundern"
+  name: "Sundern (Sauerland)"
+-
+  key: "straelen"
+  name: "Straelen"
+-
+  key: "stadtlohn"
+  name: "Stadtlohn"
+-
+  key: "sonsbeck"
+  name: "Sonsbeck"
+-
+  key: "sendenhorst"
+  name: "Sendenhorst"
+-
+  key: "grefrath"
+  name: "Grefrath"
+-
+  key: "gummersbach"
+  name: "Gummersbach"
+-
+  key: "halternamsee"
+  name: "Haltern am See"
+-
+  key: "schwerte"
+  name: "Schwerte"
+-
+  key: "hamm"
+  name: "Hamm"
+-
+  key: "hamminkeln"
+  name: "Hamminkeln"
+-
+  key: "hoerstel"
+  name: "Hörstel"
+-
+  key: "schwalmtal"
+  name: "Schwalmtal"
+-
+  key: "schlossholtestukenbrock"
+  name: "Schloß Holte-Stukenbrock"
+-
+  key: "hoexter"
+  name: "Höxter"
+-
+  key: "schermbeck"
+  name: "Schermbeck"
+-
+  key: "huenxe"
+  name: "Hünxe"
+-
+  key: "schoeppingen"
+  name: "Schöppingen"
+-
+  key: "heek"
+  name: "Heek"
+-
+  key: "heiden"
+  name: "Heiden"
+-
+  key: "hemer"
+  name: "Hemer"
+-
+  key: "isselburg"
+  name: "Isselburg"
+-
+  key: "issum"
+  name: "Issum"
+-
+  key: "juechen"
+  name: "Jüchen"
+-
+  key: "kaarst"
+  name: "Kaarst"
+-
+  key: "kalkar"
+  name: "Kalkar"
+-
+  key: "kamen"
+  name: "Kamen"
+-
+  key: "kempen"
+  name: "Kempen"
+-
+  key: "kerken"
+  name: "Kerken"
+-
+  key: "kevelaer"
+  name: "Kevelaer"
+-
+  key: "suedlohn"
+  name: "Südlohn"
+-
+  key: "sassenberg"
+  name: "Sassenberg"
+-
+  key: "kleve"
+  name: "Kleve"
+-
+  key: "korschenbroich"
+  name: "Korschenbroich"
+-
+  key: "kranenburg"
+  name: "Kranenburg"
+-
+  key: "krefeld"
+  name: "Krefeld"
+-
+  key: "ladbergen"
+  name: "Ladbergen"
+-
+  key: "langerwehe"
+  name: "Langerwehe"
+-
+  key: "rosendahl"
+  name: "Rosendahl"
+-
+  key: "rommerskirchen"
+  name: "Rommerskirchen"
+-
+  key: "rheurdt"
+  name: "Rheurdt"
+-
+  key: "rheinberg"
+  name: "Rheinberg"
+-
+  key: "rhede"
+  name: "Rhede"
+-
+  key: "aachen"
+  name: "Aachen"
+-
+  key: "altena"
+  name: "Altena"
+-
+  key: "balve"
+  name: "Balve"
+-
+  key: "erkelenz"
+  name: "Erkelenz"
+-
+  key: "essen"
+  name: "Essen"
+-
+  key: "gangelt"
+  name: "Gangelt"
+-
+  key: "ikbaunrw"
+  name: "Ingenieurkammer-Bau Nordrhein-Westfalen"
+-
+  key: "hueckelhoven"
+  name: "Hückelhoven"
+-
+  key: "merzenich"
+  name: "Merzenich"
+-
+  key: "selfkant"
+  name: "Selfkant"
+-
+  key: "oberhausen"
+  name: "Oberhausen"
+-
+  key: "roesrath"
+  name: "Rösrath"
+-
+  key: "raesfeld"
+  name: "Raesfeld"
+-
+  key: "ostbevern"
+  name: "Ostbevern"
+-
+  key: "olpe"
+  name: "Olpe"
+-
+  key: "olfen"
+  name: "Olfen"
+-
+  key: "oelde"
+  name: "Oelde"
+-
+  key: "odenthal"
+  name: "Odenthal"
+-
+  key: "nottuln"
+  name: "Nottuln"
+-
+  key: "nordkirchen"
+  name: "Nordkirchen"
+-
+  key: "niederkruechten"
+  name: "Niederkrüchten"
+-
+  key: "niederkassel"
+  name: "Niederkassel"
+-
+  key: "neuss"
+  name: "Neuss"
+-
+  key: "neukirchenvluyn"
+  name: "Neukirchen-Vluyn"
+-
+  key: "nettetal"
+  name: "Nettetal"
+-
+  key: "monheimamrhein"
+  name: "Monheim am Rhein"
+-
+  key: "moers"
+  name: "Moers"
+-
+  key: "meinerzhagen"
+  name: "Meinerzhagen"
+-
+  key: "meerbusch"
+  name: "Meerbusch"
+-
+  key: "muenster"
+  name: "Münster"
+-
+  key: "muelheimruhr"
+  name: "Mülheim an der Ruhr"
+-
+  key: "moenchengladbach"
+  name: "Mönchengladbach"
+-
+  key: "moehnesee"
+  name: "Möhnesee"
+-
+  key: "marienmuenster"
+  name: "Marienmünster"
+-
+  key: "linnich"
+  name: "Linnich"
+-
+  key: "lindlar"
+  name: "Lindlar"
+-
+  key: "lichtenau"
+  name: "Lichtenau"
+-
+  key: "leverkusen"
+  name: "Leverkusen"
+-
+  key: "krlippe"
+  name: "Kreis Lippe"
+-
+  key: "luegde"
+  name: "Lügde"
+-
+  key: "krheinsberg"
+  name: "Kreis Heinsberg"
+-
+  key: "dorsten"
+  name: "Dorsten"
+-
+  key: "euskirchen"
+  name: "Euskirchen"
+-
+  key: "gelsenkirchen"
+  name: "Gelsenkirchen"
+-
+  key: "gronau"
+  name: "Gronau (Westf.)"
+-
+  key: "halver"
+  name: "Halver"
+-
+  key: "heimbach"
+  name: "Heimbach"
+-
+  key: "herten"
+  name: "Herten"
+-
+  key: "inden"
+  name: "Inden"
+-
+  key: "kirchlengern"
+  name: "Kirchlengern"
+-
+  key: "plettenberg"
+  name: "Plettenberg"
+-
+  key: "heinsberg"
+  name: "Heinsberg"
+-
+  key: "geilenkirchen"
+  name: "Geilenkirchen"
+-
+  key: "ense"
+  name: "Ense"
+-
+  key: "lohmar"
+  name: "Lohmar"
+-
+  key: "bruehl"
+  name: "Brühl"
+-
+  key: "alfter"
+  name: "Alfter"
+-
+  key: "boenen"
+  name: "Bönen"
+-
+  key: "eitorf"
+  name: "Eitorf"
+-
+  key: "swisttal"
+  name: "Swisttal"
+-
+  key: "aldenhoven"
+  name: "Aldenhoven"
+-
+  key: "steinhagen"
+  name: "Steinhagen"
+-
+  key: "maerkischerkr"
+  name: "Märkischer Kreis"
+-
+  key: "duesseldorf"
+  name: "Düsseldorf"
+-
+  key: "huertgenwald"
+  name: "Hürtgenwald"
+-
+  key: "krmettmann"
+  name: "Kreis Mettmann"
+-
+  key: "neuenrade"
+  name: "Neuenrade"
+-
+  key: "nideggen"
+  name: "Nideggen"
+-
+  key: "noervenich"
+  name: "Nörvenich"
+-
+  key: "vreden"
+  name: "Vreden"
+-
+  key: "ratingen"
+  name: "Ratingen"
+-
+  key: "goch"
+  name: "Goch"
+-
+  key: "hille"
+  name: "Hille"
+-
+  key: "viersen"
+  name: "Viersen"
+-
+  key: "olsberg"
+  name: "Olsberg"
+-
+  key: "weeze"
+  name: "Weeze"
+-
+  key: "solingen"
+  name: "Solingen"
+-
+  key: "rheinischbergischerkr"
+  name: "Rheinisch-Bergischer Kreis"
+-
+  key: "lippetal"
+  name: "Lippetal"
+-
+  key: "lippstadt"
+  name: "Lippstadt"
+-
+  key: "buende"
+  name: "Bünde"
+-
+  key: "krherford"
+  name: "Kreis Herford"
+-
+  key: "steinfurt"
+  name: "Steinfurt"
+-
+  key: "datteln"
+  name: "Datteln"
+-
+  key: "much"
+  name: "Much"
+-
+  key: "haan"
+  name: "Haan"
+-
+  key: "lage"
+  name: "Lage"
+-
+  key: "kommunenundkreise"
+  name: "Alle Kommunen in NRW"
+-
+  key: "unna"
+  name: "Unna"
+-
+  key: "paderborn"
+  name: "Paderborn"
+-
+  key: "pulheim"
+  name: "Pulheim"
+-
+  key: "brakel"
+  name: "Brakel"
+-
+  key: "beverungen"
+  name: "Beverungen"
+-
+  key: "luebbecke"
+  name: "Lübbecke"
+-
+  key: "rees"
+  name: "Rees"
+-
+  key: "luedenscheid"
+  name: "Lüdenscheid"
+-
+  key: "bochum"
+  name: "Bochum"
+-
+  key: "duisburg"
+  name: "Duisburg"
+-
+  key: "erftstadt"
+  name: "Erftstadt"
+-
+  key: "legden"
+  name: "Legden"
+-
+  key: "dueren"
+  name: "Düren"
+-
+  key: "selm"
+  name: "Selm"
+-
+  key: "hennef"
+  name: "Hennef (Sieg)"
+-
+  key: "kall"
+  name: "Kall"
+-
+  key: "gevelsberg"
+  name: "Gevelsberg"
+-
+  key: "dahlem"
+  name: "Dahlem"
+-
+  key: "eslohe"
+  name: "Eslohe (Sauerland)"
+-
+  key: "hattingen"
+  name: "Hattingen"
+-
+  key: "kreuzau"
+  name: "Kreuzau"
+-
+  key: "badberleburg"
+  name: "Bad Berleburg"
+-
+  key: "bestwig"
+  name: "Bestwig"
+-
+  key: "hellenthal"
+  name: "Hellenthal"
+-
+  key: "hilchenbach"
+  name: "Hilchenbach"
+-
+  key: "hopsten"
+  name: "Hopsten"
+-
+  key: "horstmar"
+  name: "Horstmar"
+-
+  key: "borgentreich"
+  name: "Borgentreich"
+-
+  key: "borgholzhausen"
+  name: "Borgholzhausen"
+-
+  key: "badwuennenberg"
+  name: "Bad Wünnenberg"
+-
+  key: "badsassendorf"
+  name: "Bad Sassendorf"
+-
+  key: "krguetersloh"
+  name: "Kreis Gütersloh"
+-
+  key: "alsdorf"
+  name: "Alsdorf"
+-
+  key: "arnsberg"
+  name: "Arnsberg"
+-
+  key: "attendorn"
+  name: "Attendorn"
+-
+  key: "augustdorf"
+  name: "Augustdorf"
+-
+  key: "baddriburg"
+  name: "Bad Driburg"
+-
+  key: "badhonnef"
+  name: "Bad Honnef"
+-
+  key: "baesweiler"
+  name: "Baesweiler"
+-
+  key: "rheine"
+  name: "Rheine"
+-
+  key: "bergkamen"
+  name: "Bergkamen"
+-
+  key: "bergischgladbach"
+  name: "Bergisch Gladbach"
+-
+  key: "koenigswinter"
+  name: "Königswinter"
+-
+  key: "blankenheim"
+  name: "Blankenheim"
+-
+  key: "borchen"
+  name: "Borchen"
+-
+  key: "drolshagen"
+  name: "Drolshagen"
+-
+  key: "wachtberg"
+  name: "Wachtberg"
+-
+  key: "vlotho"
+  name: "Vlotho"
+-
+  key: "meschede"
+  name: "Meschede"
+-
+  key: "lotte"
+  name: "Lotte"
+-
+  key: "morsbach"
+  name: "Morsbach"
+-
+  key: "laer"
+  name: "Laer"
+-
+  key: "lienen"
+  name: "Lienen"
+-
+  key: "marl"
+  name: "Marl"
+-
+  key: "marsberg"
+  name: "Marsberg"
+-
+  key: "wuelfrath"
+  name: "Wülfrath"
+-
+  key: "wuerselen"
+  name: "Würselen"
+-
+  key: "hwkmuenster"
+  name: "Handwerkskammer Münster"
+-
+  key: "versmold"
+  name: "Versmold"
+-
+  key: "frechen"
+  name: "Frechen"
+-
+  key: "freudenberg"
+  name: "Freudenberg"
+-
+  key: "finnentrop"
+  name: "Finnentrop"
+-
+  key: "wiehl"
+  name: "Wiehl"
+-
+  key: "willebadessen"
+  name: "Willebadessen"
+-
+  key: "kirchhundem"
+  name: "Kirchhundem"
+-
+  key: "niederzier"
+  name: "Niederzier"
+-
+  key: "nieheim"
+  name: "Nieheim"
+-
+  key: "nordwalde"
+  name: "Nordwalde"
+-
+  key: "nuembrecht"
+  name: "Nümbrecht"
+-
+  key: "engelskirchen"
+  name: "Engelskirchen"
+-
+  key: "loehne"
+  name: "Löhne"
+-
+  key: "ochtrup"
+  name: "Ochtrup"
+-
+  key: "overath"
+  name: "Overath"
+-
+  key: "recke"
+  name: "Recke"
+-
+  key: "krmindenluebbecke"
+  name: "Kreis Minden-Lübbecke"
+-
+  key: "badlaasphe"
+  name: "Bad Laasphe"
+-
+  key: "badlippspringe"
+  name: "Bad Lippspringe"
+-
+  key: "badoeynhausen"
+  name: "Bad Oeynhausen"
+-
+  key: "badsalzuflen"
+  name: "Bad Salzuflen"
+-
+  key: "nettersheim"
+  name: "Nettersheim"
+-
+  key: "netphen"
+  name: "Netphen"
+-
+  key: "monschau"
+  name: "Monschau"
+-
+  key: "medebach"
+  name: "Medebach"
+-
+  key: "metelen"
+  name: "Metelen"
+-
+  key: "mettingen"
+  name: "Mettingen"
+-
+  key: "neuenkirchen"
+  name: "Neuenkirchen"
+-
+  key: "neunkirchen"
+  name: "Neunkirchen"
+-
+  key: "nachrodtwiblingwerde"
+  name: "Nachrodt-Wiblingwerde"
+-
+  key: "neunkirchenseelscheid"
+  name: "Neunkirchen-Seelscheid"
+-
+  key: "roetgen"
+  name: "Roetgen"
+-
+  key: "ruppichteroth"
+  name: "Ruppichteroth"
+-
+  key: "ruethen"
+  name: "Rüthen"
+-
+  key: "saerbeck"
+  name: "Saerbeck"
+-
+  key: "salzkotten"
+  name: "Salzkotten"
+-
+  key: "wipperfuerth"
+  name: "Wipperfürth"
+-
+  key: "winterberg"
+  name: "Winterberg"
+-
+  key: "windeck"
+  name: "Windeck"
+-
+  key: "wilnsdorf"
+  name: "Wilnsdorf"
+-
+  key: "wettringen"
+  name: "Wettringen"
+-
+  key: "wesseling"
+  name: "Wesseling"
+-
+  key: "wertherwestf"
+  name: "Werther (Westf.)"
+-
+  key: "wermelskirchen"
+  name: "Wermelskirchen"
+-
+  key: "werl"
+  name: "Werl"
+-
+  key: "weilerswist"
+  name: "Weilerswist"
+-
+  key: "zuelpich"
+  name: "Zülpich"
+-
+  key: "steinheim"
+  name: "Steinheim"
+-
+  key: "greven"
+  name: "Greven"
+-
+  key: "grevenbroich"
+  name: "Grevenbroich"
+-
+  key: "hagen"
+  name: "Hagen"
+-
+  key: "heiligenhaus"
+  name: "Heiligenhaus"
+-
+  key: "herne"
+  name: "Herne"
+-
+  key: "herzogenrath"
+  name: "Herzogenrath"
+-
+  key: "herzebrockclarholz"
+  name: "Herzebrock-Clarholz"
+-
+  key: "hilden"
+  name: "Hilden"
+-
+  key: "waldbroel"
+  name: "Waldbröl"
+-
+  key: "waldfeucht"
+  name: "Waldfeucht"
+-
+  key: "waltrop"
+  name: "Waltrop"
+-
+  key: "warburg"
+  name: "Warburg"
+-
+  key: "siegburg"
+  name: "Siegburg"
+-
+  key: "siegen"
+  name: "Siegen"
+-
+  key: "simmerath"
+  name: "Simmerath"
+-
+  key: "soest"
+  name: "Soest"
+-
+  key: "spenge"
+  name: "Spenge"
+-
+  key: "leichlingenrhld"
+  name: "Leichlingen (Rheinland)"
+-
+  key: "lemgo"
+  name: "Lemgo"
+-
+  key: "lengerich"
+  name: "Lengerich"
+-
+  key: "lennestadt"
+  name: "Lennestadt"
+-
+  key: "leopoldshoehe"
+  name: "Leopoldshöhe"
+-
+  key: "warstein"
+  name: "Warstein"
+-
+  key: "wassenberg"
+  name: "Wassenberg"
+-
+  key: "wegberg"
+  name: "Wegberg"
+-
+  key: "velbert"
+  name: "Velbert"
+-
+  key: "tecklenburg"
+  name: "Tecklenburg"
+-
+  key: "troisdorf"
+  name: "Troisdorf"
+-
+  key: "uebachpalenberg"
+  name: "Übach-Palenberg"
+-
+  key: "westerkappeln"
+  name: "Westerkappeln"
+-
+  key: "schalksmuehle"
+  name: "Schalksmühle"
+-
+  key: "barntrup"
+  name: "Barntrup"
+-
+  key: "rhedawiedenbrueck"
+  name: "Rheda-Wiedenbrück"
+-
+  key: "luenen"
+  name: "Lünen"
+-
+  key: "rheinbach"
+  name: "Rheinbach"
+-
+  key: "bottrop"
+  name: "Bottrop"
+-
+  key: "reichshof"
+  name: "Reichshof"
+-
+  key: "remscheid"
+  name: "Remscheid"
+-
+  key: "rietberg"
+  name: "Rietberg"
+-
+  key: "sanktaugustin"
+  name: "Sankt Augustin"
+-
+  key: "senden"
+  name: "Senden"
+-
+  key: "kuerten"
+  name: "Kürten"
+-
+  key: "marienheide"
+  name: "Marienheide"
+-
+  key: "mechernich"
+  name: "Mechernich"
+-
+  key: "meckenheim"
+  name: "Meckenheim"
+-
+  key: "portawestfalica"
+  name: "Porta Westfalica"
+-
+  key: "stolbergrhld"
+  name: "Stolberg (Rhld.)"
+-
+  key: "recklinghausen"
+  name: "Recklinghausen"
+-
+  key: "schmallenberg"
+  name: "Schmallenberg"
+-
+  key: "schwelm"
+  name: "Schwelm"
+-
+  key: "schleiden"
+  name: "Schleiden"
+-
+  key: "schlangen"
+  name: "Schlangen"
+-
+  key: "schiederschwalenberg"
+  name: "Schieder-Schwalenberg"
+-
+  key: "froendenbergruhr"
+  name: "Fröndenberg/Ruhr"
+-
+  key: "guetersloh"
+  name: "Gütersloh"
+-
+  key: "hallewestf"
+  name: "Halle (Westf.)"
+-
+  key: "hallenberg"
+  name: "Hallenberg"
+-
+  key: "langenberg"
+  name: "Langenberg"
+-
+  key: "langenfeldrhld"
+  name: "Langenfeld (Rhld.)"
+-
+  key: "radevormwald"
+  name: "Radevormwald"
+-
+  key: "rahden"
+  name: "Rahden"
+-
+  key: "reken"
+  name: "Reken"
+-
+  key: "roedinghausen"
+  name: "Rödinghausen"
+-
+  key: "hoevelhof"
+  name: "Hövelhof"
+-
+  key: "oererkenschwick"
+  name: "Oer-Erkenschwick"
+-
+  key: "oerlinghausen"
+  name: "Oerlinghausen"
+-
+  key: "sprockhoevel"
+  name: "Sprockhövel"
+-
+  key: "preussischoldendorf"
+  name: "Preußisch Oldendorf"
+-
+  key: "kreuztal"
+  name: "Kreuztal"
+-
+  key: "juelich"
+  name: "Jülich"
+-
+  key: "iserlohn"
+  name: "Iserlohn"
+-
+  key: "ibbenbueren"
+  name: "Ibbenbüren"
+-
+  key: "hueckeswagen"
+  name: "Hückeswagen"
+-
+  key: "huellhorst"
+  name: "Hüllhorst"
+-
+  key: "wetterruhr"
+  name: "Wetter (Ruhr)"
+-
+  key: "stemwede"
+  name: "Stemwede"
+-
+  key: "petershagen"
+  name: "Petershagen"
+-
+  key: "minden"
+  name: "Minden"
+-
+  key: "mettmann"
+  name: "Mettmann"
+-
+  key: "mendensauerland"
+  name: "Menden (Sauerland)"
+-
+  key: "bornheim"
+  name: "Bornheim"
+-
+  key: "breckerfeld"
+  name: "Breckerfeld"
+-
+  key: "brilon"
+  name: "Brilon"
+-
+  key: "bueren"
+  name: "Büren"
+-
+  key: "detmold"
+  name: "Detmold"
+-
+  key: "bergneustadt"
+  name: "Bergneustadt"
+-
+  key: "burscheid"
+  name: "Burscheid"
+-
+  key: "delbrueck"
+  name: "Delbrück"
+-
+  key: "doerentrup"
+  name: "Dörentrup"
+-
+  key: "erndtebrueck"
+  name: "Erndtebrück"
+-
+  key: "erkrath"
+  name: "Erkrath"
+-
+  key: "kerpen"
+  name: "Kerpen"
+-
+  key: "kierspe"
+  name: "Kierspe"
+-
+  key: "huerth"
+  name: "Hürth"
+-
+  key: "harsewinkel"
+  name: "Harsewinkel"
+-
+  key: "herdecke"
+  name: "Herdecke"
+-
+  key: "holzwickede"
+  name: "Holzwickede"
+-
+  key: "hornbadmeinberg"
+  name: "Horn-Bad Meinberg"
+-
+  key: "bergheim"
+  name: "Bergheim"
+-
+  key: "elsdorf"
+  name: "Elsdorf"
+-
+  key: "enger"
+  name: "Enger"
+-
+  key: "espelkamp"
+  name: "Espelkamp"
+-
+  key: "extertal"
+  name: "Extertal"
+-
+  key: "herford"
+  name: "Herford"
+-
+  key: "hiddenhausen"
+  name: "Hiddenhausen"
+-
+  key: "kalletal"
+  name: "Kalletal"
+-
+  key: "herscheid"
+  name: "Herscheid"
+-
+  key: "kamplintfort"
+  name: "Kamp-Lintfort"
+-
+  key: "lwl"
+  name: "Landschaftsverband Westfalen-Lippe"
+-
+  key: "lvr"
+  name: "Landschaftsverband Rheinland"
+-
+  key: "tieraerztekammerwl"
+  name: "Tierärztekammer Westfalen-Lippe"
+-
+  key: "rakhamm"
+  name: "Rechtsanwaltskammer Hamm"
+-
+  key: "stbkduesseldorf"
+  name: "Steuerberaterkammer Düsseldorf"
+-
+  key: "stbkwl"
+  name: "Steuerberaterkammer Westfalen-Lippe"
+-
+  key: "hwkduesseldorf"
+  name: "Handwerkskammer Düsseldorf"
+-
+  key: "aknw"
+  name: "Architektenkammer Nordrhein-Westfalen"
+-
+  key: "hwksuedwestfalen"
+  name: "Handwerkskammer Südwestfalen"
+-
+  key: "stk"
+  name: "Staatskanzlei"
+-
+  key: "mbem"
+  name: "Bundesangelegenheiten, Europa und Medien"
+-
+  key: "miwf"
+  name: "Innovation, Wissenschaft und Forschung"
+-
+  key: "mais"
+  name: "Arbeit, Integration und Soziales"
+-
+  key: "mweimh"
+  name: "Wirtschaft, Energie, Industrie, Mittelstand und Handwerk"
+-
+  key: "mgepa"
+  name: "Gesundheit, Emanzipation, Pflege und Alter"
+-
+  key: "mkulnv"
+  name: "Klimaschutz, Umwelt, Landwirtschaft, Natur- und Verbraucherschutz"
+-
+  key: "fm"
+  name: "Finanzen"
+-
+  key: "mik"
+  name: "Inneres und Kommunales"
+-
+  key: "jm"
+  name: "Justiz"
+-
+  key: "mfkjks"
+  name: "Familie, Kinder, Jugend, Kultur und Sport"
+-
+  key: "mbwsv"
+  name: "Bauen, Wohnen, Stadtentwicklung und Verkehr"
+-
+  key: "msw"
+  name: "Schule und Weiterbildung"
+-
+  key: "lrh"
+  name: "Landesrechnungshof"
+-
+  key: "lt"
+  name: "Landtag"
+-
+  key: "stk_presse"
+  name: "Staatskanzlei (Presse)"
+-
+  key: "stk_mediathek"
+  name: "Staatskanzlei (Mediathek)"
+-
+  key: "mbem_presse"
+  name: "Bundesangelegenheiten, Europa und Medien (Presse)"
+-
+  key: "mbem_mediathek"
+  name: "Bundesangelegenheiten, Europa und Medien (Mediathek)"
+-
+  key: "mfkjks_mediathek"
+  name: "Familie, Kinder, Jugend, Kultur und Sport (Mediathek)"
+-
+  key: "mfkjks_presse"
+  name: "Familie, Kinder, Jugend, Kultur und Sport (Presse)"
+-
+  key: "offenedaten"
+  name: "Offene Daten (Test für landesweite Suche)"
+-
+  key: "eanrw"
+  name: "Einheitlicher Ansprechpartner NRW"
+-
+  key: "lwknw"
+  name: "Landwirtschaftskammer Nordrhein-Westfalen"
