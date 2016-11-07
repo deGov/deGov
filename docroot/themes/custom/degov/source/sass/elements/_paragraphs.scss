@@ -1,6 +1,7 @@
 // Give some space to paragraph fields
 .paragraph {
 	//@include content-box();
+	margin: $vertical-gutter-width 0;
 }
 
 // Paragraph layout for Image-Text
