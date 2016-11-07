@@ -1,0 +1,14 @@
+// Give some space to paragraph fields
+.paragraph {
+	//@include content-box();
+}
+
+// Paragraph layout for Image-Text
+.paragraph--type--image-text-element {
+	@include make-row();
+	.field--name-field-image-text-element-image,
+	.field--name-field-image-text-element-text {
+		@include make-xs-column(12);
+		@include make-sm-column(6);
+	}
+}

@@ -1,1 +1,11 @@
-
+// Styles for teasers
+.teaser {
+  > h2 {
+    a {
+      @include icon-before('→');
+      &:hover, &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+}
