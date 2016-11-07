@@ -75,3 +75,13 @@
 	color: $color-white;
 	font-style: italic;
 }
+
+// Format gallery
+.field--name-field-gallery-element-images {
+	@include make-row();
+	> .field--item {
+		@include make-xs-column(6);
+		@include make-md-column(4);
+		@include make-md-column(3);
+	}
+}
