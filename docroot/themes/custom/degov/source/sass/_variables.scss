@@ -7,7 +7,13 @@ $bootstrap-sass-asset-helper: false;
 // Variables
 // --------------------------------------------------
 //== Colors
-//
+//##Colorguide
+$color-white: #ffffff;
+$color-gray: #838e98;
+$color-blue: #004473;
+$color-red: #ab0033;
+$color-yellow: #ffc72a;
+$color-green: #00945f;
 //## Gray and brand colors for use across Bootstrap.
 $gray-base: #000000;
 $gray-darker: lighten($gray-base, 13.5%); // #222
@@ -15,17 +21,17 @@ $gray-dark: lighten($gray-base, 20%); // #333
 $gray: lighten($gray-base, 33.5%); // #555
 $gray-light: lighten($gray-base, 46.7%); // #777
 $gray-lighter: lighten($gray-base, 93.5%); // #eee
-$brand-primary: #004473; // #337ab7
-$brand-success: #838e98;
-$brand-info: #5bc0de;
-$brand-warning: #ffc72a;
-$brand-danger: #ab0033;
+$brand-primary: $color-blue;
+$brand-success: $color-green;
+$brand-info: $color-gray;
+$brand-warning: $color-yellow;
+$brand-danger: $color-red;
 
 //== Scaffolding
 //
 //## Settings for some of the most global styles.
 //** Background color for `<body>`.
-$body-bg: #ffffff;
+$body-bg: $color-white;
 
 //** Global text color on `<body>`.
 $text-color: $gray-dark;
@@ -42,13 +48,13 @@ $link-hover-decoration: underline;
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
-$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-sans-serif: 'Open Sans', sans-serif;
 $font-family-serif: Georgia, "Times New Roman", Times, serif;
 
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
 $font-family-base: $font-family-sans-serif;
-$font-size-base: 14px;
+$font-size-base: 18px;
 $font-size-large: ceil(($font-size-base * 1.25)); // ~18px
 $font-size-small: ceil(($font-size-base * 0.85)); // ~12px
 $font-size-h1: floor(($font-size-base * 2.6)); // ~36px
@@ -66,6 +72,8 @@ $headings-font-family: inherit;
 $headings-font-weight: 500;
 $headings-line-height: 1.1;
 $headings-color: inherit;
+
+$title-underline-height: 4px;
 
 //== Iconography
 //
@@ -351,6 +359,10 @@ $container-large-desktop: (1140px + $grid-gutter-width);
 //** For `$screen-lg-min` and up.
 $container-lg: $container-large-desktop;
 
+
+//== Vertical spacing
+$vertical-gutter-width: $grid-gutter-width;
+
 //== Navbar
 //
 //##
@@ -361,28 +373,28 @@ $navbar-border-radius: $border-radius-base;
 $navbar-padding-horizontal: floor(($grid-gutter-width / 2));
 $navbar-padding-vertical: (($navbar-height - $line-height-computed) / 2);
 $navbar-collapse-max-height: 340px;
-$navbar-default-color: #777777;
-$navbar-default-bg: #f8f8f8;
-$navbar-default-border: darken($navbar-default-bg, 6.5%);
+$navbar-default-color: $color-blue;
+$navbar-default-bg: $gray-lighter;
+$navbar-default-border: $gray-dark;
 
 // Navbar links
-$navbar-default-link-color: #777777;
-$navbar-default-link-hover-color: #333333;
+$navbar-default-link-color: $color-blue;
+$navbar-default-link-hover-color: $gray-darker;
 $navbar-default-link-hover-bg: transparent;
-$navbar-default-link-active-color: #555555;
-$navbar-default-link-active-bg: darken($navbar-default-bg, 6.5%);
-$navbar-default-link-disabled-color: #cccccc;
+$navbar-default-link-active-color: $gray-darker;
+$navbar-default-link-active-bg: $navbar-default-bg;
+$navbar-default-link-disabled-color: $gray-darker;
 $navbar-default-link-disabled-bg: transparent;
 
 // Navbar brand label
 $navbar-default-brand-color: $navbar-default-link-color;
-$navbar-default-brand-hover-color: darken($navbar-default-brand-color, 10%);
+$navbar-default-brand-hover-color: $navbar-default-brand-color;
 $navbar-default-brand-hover-bg: transparent;
 
 // Navbar toggle
-$navbar-default-toggle-hover-bg: #dddddd;
-$navbar-default-toggle-icon-bar-bg: #888888;
-$navbar-default-toggle-border-color: #dddddd;
+$navbar-default-toggle-hover-bg: $gray-light;
+$navbar-default-toggle-icon-bar-bg: $gray-light;
+$navbar-default-toggle-border-color: $gray-light;
 
 //=== Inverted navbar
 // Reset inverted navbar basics
@@ -421,7 +433,7 @@ $nav-disabled-link-hover-color: $gray-light;
 //== Tabs
 $nav-tabs-border-color: #dddddd;
 $nav-tabs-link-hover-border-color: $gray-lighter;
-$nav-tabs-active-link-hover-bg: $body-bg;
+$nav-tabs-active-link-hover-bg: $gray-lighter;
 $nav-tabs-active-link-hover-color: $gray;
 $nav-tabs-active-link-hover-border-color: #dddddd;
 $nav-tabs-justified-link-border-color: #dddddd;
