@@ -71,6 +71,7 @@ modules:
   - viewsreference
   - degov_recent_articles_element
   - degov_vsm_nrw
+  - degov_translation_importer
 # A system path to redirect to once installation is complete.
 redirect:
   path: 'degov_welcome'
