@@ -8,9 +8,6 @@ use Drupal\Core\Controller\ControllerBase;
 /**
  * Description of ItnrwMap, based of
  * Geocoding REST Service: Geo-kodierungsdienst für Adressen und Geonamen (GeoBasis-DE) Version 1.2 (29.07.2015)
- * See: https://publicplan.atlassian.net/browse/KITANRW-207
- * and https://publicplan.atlassian.net/wiki/pages/viewpage.action?pageId=61931577
- * and https://publicplan.atlassian.net/wiki/pages/viewpage.action?pageId=61931577
  * @author Raul Garcia
  */
 class ItnrwMapController extends ControllerBase{
