@@ -2,6 +2,7 @@ langcode: de
 status: true
 dependencies:
   config:
+    - entity_browser.browser.media_browser
     - field.field.node.blogarticle.field_blogarticle_datetime
     - field.field.node.blogarticle.field_blogarticle_image
     - field.field.node.blogarticle.field_blogarticle_subtitle
