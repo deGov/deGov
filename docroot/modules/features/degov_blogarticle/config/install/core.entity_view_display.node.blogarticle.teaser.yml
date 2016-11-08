@@ -18,6 +18,8 @@ mode: teaser
 content:
   links:
     weight: 100
+  workbench_moderation_control:
+    weight: -20
 hidden:
   field_blogarticle_datetime: true
   field_blogarticle_image: true
