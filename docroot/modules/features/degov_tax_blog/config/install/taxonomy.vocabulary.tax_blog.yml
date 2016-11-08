@@ -1,0 +1,8 @@
+langcode: de
+status: true
+dependencies: {  }
+name: Blog
+vid: tax_blog
+description: ''
+hierarchy: 0
+weight: 0

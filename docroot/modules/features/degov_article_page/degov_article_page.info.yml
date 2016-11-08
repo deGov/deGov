@@ -1,4 +1,4 @@
-name: 'deGov - Artikel'
+name: 'deGov - Inhaltsseite'
 type: module
 core: 8.x
 dependencies:
@@ -10,6 +10,7 @@ dependencies:
   - entity_reference_revisions
   - field
   - language
+  - lightning_media
   - lightning_media_image
   - media_entity
   - menu_ui
@@ -19,4 +20,6 @@ dependencies:
   - path
   - taxonomy
   - user
+  - views
+  - views_infinite_scroll
   - workbench_moderation

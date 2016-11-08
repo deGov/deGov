@@ -10,6 +10,7 @@ dependencies:
   - entity_reference_revisions
   - field
   - language
+  - lightning_media
   - lightning_media_image
   - media_entity
   - menu_ui

@@ -48,6 +48,8 @@ content:
     weight: 100
     settings: {  }
     third_party_settings: {  }
+  workbench_moderation_control:
+    weight: -20
 hidden:
   langcode: true
   shariff_field: true

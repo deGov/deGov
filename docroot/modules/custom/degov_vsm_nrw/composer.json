@@ -1,0 +1,9 @@
+{
+  "name": "drupal/degov_vsm_nrw",
+  "type": "drupal-module",
+  "description": "VSM NRW Search API for deGov",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "minimum-stability": "dev",
+  "require": { }
+}

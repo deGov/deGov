@@ -2,6 +2,7 @@ langcode: de
 status: true
 dependencies:
   config:
+    - entity_browser.browser.media_browser
     - field.field.node.section_page.field_section_page_color
     - field.field.node.section_page.field_section_page_contents
     - field.field.node.section_page.field_section_page_image

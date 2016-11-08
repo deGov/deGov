@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * Implements hook_install().
+ *
+ * Create demo content, when module installs
+ *
+ * @see system_install()
+ */
+
+function degov_vsm_nrw_install() {
+
+}

@@ -28,7 +28,7 @@
         "drupal/easy_breadcrumb": "8.*",
         "drupal/piwik": "8.*",
         "drupal/open_readspeaker": "8.*",
-        "drupal/twitter_block": "8.*",
+        "drupal/twitter_block": "8.x-3.x-dev",
         "drupal/entity_reference_revisions": "8.*",
         "drupal/paragraphs": "8.*",
         "drupal/admin_toolbar": "^8.1",
@@ -38,7 +38,8 @@
         "drupal/views_database_connector": "8.*",
         "drupal/search404": "8.x-1.x-dev",
         "drupal/color_field": "8.x-2.x-dev",
-        "drupal/elasticsearch_connector": "8.x"
+        "drupal/elasticsearch_connector": "8.x",
+        "drupal/viewsreference": "8.x"
     },
     "repositories": {
         "drupal": {

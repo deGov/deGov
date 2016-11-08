@@ -2,6 +2,7 @@ langcode: de
 status: true
 dependencies:
   config:
+    - entity_browser.browser.media_browser
     - field.field.node.article_page.field_article_page_contents
     - field.field.node.article_page.field_article_page_datetime
     - field.field.node.article_page.field_article_page_section
@@ -75,7 +76,7 @@ content:
   field_article_page_teaser_image:
     weight: 8
     settings:
-      entity_browser: image_browser
+      entity_browser: media_browser
       field_widget_display: rendered_entity
       field_widget_edit: true
       field_widget_remove: true

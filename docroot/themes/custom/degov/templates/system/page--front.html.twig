@@ -58,56 +58,7 @@
  * @see html.html.twig
  */
 #}
-{% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
-{# Page top #}
-{% if page.page_intro %}
-  <div class="page-intro-wrapper">
-    <div class="page-intro container">
-      {{ page.page_intro }}
-    </div>
-  </div>
-{% endif %}
-{# Navbar #}
-{% if page.navigation or page.navigation_collapsible %}
-  {% block navbar %}
-    {%
-      set navbar_classes = [
-        'navbar',
-        theme.settings.navbar_inverse ? 'navbar-inverse' : 'navbar-default',
-        theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : container,
-      ]
-    %}
-    <div class="header-wrapper">
-      <header{{ navbar_attributes.addClass(navbar_classes) }} id="navbar" role="banner">
-        {% if not navbar_attributes.hasClass('container') %}
-          <div class="{{ container }}">
-        {% endif %}
-        <div class="navbar-header">
-          {{ page.navigation }}
-          {# .btn-navbar is used as the toggle for collapsed navbar content #}
-          {% if page.navigation_collapsible %}
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-              <span class="sr-only">{{ 'Toggle navigation'|t }}</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-          {% endif %}
-        </div>
-
-        {# Navigation (collapsible) #}
-        {% if page.navigation_collapsible %}
-          <div id="navbar-collapse" class="navbar-collapse collapse">
-            {{ page.navigation_collapsible }}
-          </div>
-        {% endif %}
-        {% if not navbar_attributes.hasClass('container') %}
-          </div>
-        {% endif %}
-      </header>
-    </div>
-  {% endblock %}
-{% endif %}
+{% extends 'themes/custom/degov/templates/system/page.html.twig' %}
 
 {# Main #}
 {% block main %}
@@ -116,7 +67,8 @@
       <div class="home-page-wrapper">
         <div class="home-page-image">{{ home_page_image }}</div>
         <div class="home-page-title-wrapper">
-          <div class="home-page-title"><h1 class="page-header">{{ home_page_title }}</h1></div>
+          <div class="home-page-title"><h1 class="page-header">{{ page['#title'] }}</h1></div>
+
         </div>
       </div>
         <div class="container">
@@ -199,22 +151,3 @@
     </div>
   </div>
 {% endblock %}
-
-{% if page.footer %}
-  {% block footer %}
-    <div class="footer-wrapper">
-      <footer class="footer {{ container }}" role="contentinfo">
-        {{ page.footer }}
-      </footer>
-    </div>
-  {% endblock %}
-{% endif %}
-
-{% if page.page_outro %}
-  <div class="page-outro-wrapper">
-    <div class="page-outro container">
-      {{ page.page_outro }}
-    </div>
-  </div>
-{% endif %}
-

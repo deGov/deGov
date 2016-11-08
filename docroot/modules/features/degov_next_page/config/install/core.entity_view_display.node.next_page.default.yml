@@ -35,6 +35,8 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+  workbench_moderation_control:
+    weight: -20
 hidden:
   langcode: true
   links: true

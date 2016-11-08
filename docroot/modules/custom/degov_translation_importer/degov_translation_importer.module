@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ */
+
+use Drupal\Component\Utility\Unicode;
+use Drupal\Core\Block\BlockPluginInterface;
+
+/**
+ * Implements hook_help().
+ */
+function degov_translation_importer_help($route_name, \Drupal\Core\Routing\RouteMatchInterface $route_match) {
+  if ($route_name == 'help.page.degov_translation_importer') {
+    return 'Silence is Golden!';
+  }
+}
+
+function degov_translation_importer_locale_translation_projects_alter(&$projects) {
+  $projects['degov_translation_importer']['info']['interface translation server pattern'] = drupal_get_path('module', 'degov_translation_importer') . DIRECTORY_SEPARATOR . 'language_files' . DIRECTORY_SEPARATOR . 'de.po';
+}

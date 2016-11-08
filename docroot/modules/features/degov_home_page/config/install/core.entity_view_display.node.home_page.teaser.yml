@@ -16,6 +16,8 @@ mode: teaser
 content:
   links:
     weight: 100
+  workbench_moderation_control:
+    weight: -20
 hidden:
   field_home_page_contents: true
   field_home_page_image: true

@@ -60,6 +60,8 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+  workbench_moderation_control:
+    weight: -20
 hidden:
   field_event_page_contents: true
   field_event_page_datetime_begin: true

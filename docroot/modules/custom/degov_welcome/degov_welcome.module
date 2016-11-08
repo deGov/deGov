@@ -22,3 +22,53 @@ function degov_welcome_help($route_name, RouteMatchInterface $route_match) {
     default:
   }
 }
+
+
+/**
+ * Implements hook_block_view_alter().
+ * Sets our own funbction to override the content of the
+ * "powered by Drupal" block
+ */
+function degov_welcome_block_view_alter(array &$build, \Drupal\Core\Block\BlockPluginInterface $block) {
+  if ($block->getBaseId() === 'system_powered_by_block') {
+    $build['#pre_render'][] = 'degov_welcome_block_poweredby_prerender';
+  }
+}
+
+/**
+ * Implements hook_block_poweredby_prerender().
+ * Override the content of the "powered by Drupal" block
+ * @param $build
+ *
+ * @return array $build
+ */
+function degov_welcome_block_poweredby_prerender(array $build) {
+  $build['content']['#markup'] = '<span>' . t('Powered by <a href=":poweredby">DeGov</a>', array(':poweredby' => 'http://www.degov.org')) . '</span>';
+  return $build;
+}
+
+/**
+ * Implements hook_page_attachments_alter().
+ * Overrides the "Generator" meta tag.
+ */
+function degov_welcome_page_attachments_alter(array &$attachments) {
+// Change Generator META tag.
+  foreach ($attachments['#attached']['html_head'] as $key => $attachment) {
+    if (isset($attachment[1])) {
+      if ($attachment[1] === 'system_meta_generator') {
+        // The Element 0 contains all info.
+        // The Element 1 contains the type of meta tag.
+        $attachments['#attached']['html_head'][$key][0] = array(
+          '#type'       => 'html_tag',
+          '#tag'        => 'meta',
+          '#attributes' => array(
+            'name'    => 'Generator',
+            'content' => 'DeGov (https://www.degov.de)',
+          ),
+        );
+      }
+    }
+  }
+}
+
+

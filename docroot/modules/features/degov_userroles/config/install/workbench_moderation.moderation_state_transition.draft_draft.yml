@@ -1,0 +1,10 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - workbench_moderation.moderation_state.draft
+id: draft_draft
+label: 'Neuen Entwurf erstellen'
+stateFrom: draft
+stateTo: draft
+weight: -11
