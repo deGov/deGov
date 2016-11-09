@@ -43,7 +43,7 @@ function degov_welcome_block_view_alter(array &$build, \Drupal\Core\Block\BlockP
  * @return array $build
  */
 function degov_welcome_block_poweredby_prerender(array $build) {
-  $build['content']['#markup'] = '<span>' . t('Powered by <a href=":poweredby">DeGov</a>', array(':poweredby' => 'http://www.degov.org')) . '</span>';
+  $build['content']['#markup'] = '<span>' . t('Powered by <a href=":poweredby">deGov</a>', array(':poweredby' => 'http://www.degov.org')) . '</span>';
   return $build;
 }
 
@@ -63,7 +63,7 @@ function degov_welcome_page_attachments_alter(array &$attachments) {
           '#tag'        => 'meta',
           '#attributes' => array(
             'name'    => 'Generator',
-            'content' => 'DeGov (https://www.degov.de)',
+            'content' => 'deGov (https://www.degov.de)',
           ),
         );
       }
