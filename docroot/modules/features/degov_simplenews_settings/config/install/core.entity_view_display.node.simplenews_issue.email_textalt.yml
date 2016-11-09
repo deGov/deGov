@@ -1,0 +1,34 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.email_textalt
+    - field.field.node.simplenews_issue.body
+    - field.field.node.simplenews_issue.simplenews_issue
+    - node.type.simplenews_issue
+  module:
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.simplenews_issue.email_textalt
+targetEntityType: node
+bundle: simplenews_issue
+mode: email_textalt
+content:
+  body:
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    label: hidden
+hidden:
+  langcode: true
+  links: true
+  shariff_field: true
+  simplenews_issue: true

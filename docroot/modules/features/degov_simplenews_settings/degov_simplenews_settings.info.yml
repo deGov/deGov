@@ -1,0 +1,15 @@
+name: 'deGov -  Simplenews - Settings'
+description: 'Eintellungen für das Modul "simplenews"'
+type: module
+core: 8.x
+dependencies:
+  - field
+  - language
+  - menu_ui
+  - node
+  - panelizer
+  - path
+  - simplenews
+  - text
+  - user
+  - workbench_moderation

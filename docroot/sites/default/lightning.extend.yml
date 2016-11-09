@@ -74,6 +74,8 @@ modules:
   - degov_blogarticle
   - degov_userroles
   - degov_easy_breadcrumb
+  - simplenews
+  - degov_simplenews_settings
 # A system path to redirect to once installation is complete.
 redirect:
   path: 'degov_welcome'
