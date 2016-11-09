@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.section_page.field_section_page_color
     - field.field.node.section_page.field_section_page_contents
     - field.field.node.section_page.field_section_page_image
+    - field.field.node.section_page.field_section_page_section
     - field.field.node.section_page.field_section_page_subtitle
     - field.field.node.section_page.field_section_page_tags
     - field.field.node.section_page.field_section_page_teaser_image
@@ -55,10 +56,13 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+  workbench_moderation_control:
+    weight: -20
 hidden:
   field_section_page_color: true
   field_section_page_contents: true
   field_section_page_image: true
+  field_section_page_section: true
   field_section_page_subtitle: true
   field_section_page_tags: true
   langcode: true
