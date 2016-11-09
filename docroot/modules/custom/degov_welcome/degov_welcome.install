@@ -71,6 +71,10 @@ function degov_welcome_install() {
   $block->setRegion('content');
   $block->setWeight(4);
   $block->save();
+  $block = Block::load('twitterblock');
+  $block->setRegion('content');
+  $block->setWeight(5);
+  $block->save();
 
   // Footer
   $block = Block::load('degov_powered');
