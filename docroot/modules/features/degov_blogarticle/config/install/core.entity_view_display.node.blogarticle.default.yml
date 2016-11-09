@@ -7,6 +7,10 @@ dependencies:
     - field.field.node.blogarticle.field_blogarticle_section
     - field.field.node.blogarticle.field_blogarticle_subtitle
     - field.field.node.blogarticle.field_blogarticle_tags
+    - field.field.node.blogarticle.field_blogarticle_teaser_color
+    - field.field.node.blogarticle.field_blogarticle_teaser_image
+    - field.field.node.blogarticle.field_blogarticle_teaser_stitle
+    - field.field.node.blogarticle.field_blogarticle_teaser_title
     - field.field.node.blogarticle.field_blogarticle_text
     - node.type.blogarticle
   module:
@@ -41,13 +45,6 @@ content:
       view_mode: default
     third_party_settings: {  }
     type: entity_reference_entity_view
-  field_blogarticle_section:
-    weight: 7
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
   field_blogarticle_subtitle:
     weight: 2
     label: hidden
@@ -61,10 +58,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
-  links:
-    weight: 1
-    settings: {  }
-    third_party_settings: {  }
   shariff_field:
     weight: 6
     settings: {  }
@@ -74,5 +67,11 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_blogarticle_section: true
   field_blogarticle_tags: true
+  field_blogarticle_teaser_color: true
+  field_blogarticle_teaser_image: true
+  field_blogarticle_teaser_stitle: true
+  field_blogarticle_teaser_title: true
   langcode: true
+  links: true

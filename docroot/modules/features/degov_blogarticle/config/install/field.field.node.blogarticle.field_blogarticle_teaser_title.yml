@@ -1,0 +1,18 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_blogarticle_teaser_title
+    - node.type.blogarticle
+id: node.blogarticle.field_blogarticle_teaser_title
+field_name: field_blogarticle_teaser_title
+entity_type: node
+bundle: blogarticle
+label: 'Teaser: Titel'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
