@@ -3,6 +3,7 @@ type: module
 core: 8.x
 dependencies:
   - datetime
+  - degov_section_page
   - degov_tax_blog
   - entity_browser
   - field
