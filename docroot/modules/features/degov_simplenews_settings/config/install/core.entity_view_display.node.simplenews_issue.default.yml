@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.node.simplenews_issue.body
+    - field.field.node.simplenews_issue.field_simplenews_issue_artikel
     - field.field.node.simplenews_issue.simplenews_issue
     - node.type.simplenews_issue
   module:
@@ -26,6 +27,13 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
+  field_simplenews_issue_artikel:
+    weight: 1
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
   links:
     weight: 2
     settings: {  }

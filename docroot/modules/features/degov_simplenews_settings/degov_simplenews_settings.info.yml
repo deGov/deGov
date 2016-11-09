@@ -3,6 +3,7 @@ description: 'Eintellungen für das Modul "simplenews"'
 type: module
 core: 8.x
 dependencies:
+  - degov_blogarticle
   - field
   - language
   - menu_ui

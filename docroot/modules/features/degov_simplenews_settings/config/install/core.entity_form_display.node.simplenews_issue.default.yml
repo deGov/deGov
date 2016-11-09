@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.node.simplenews_issue.body
+    - field.field.node.simplenews_issue.field_simplenews_issue_artikel
     - field.field.node.simplenews_issue.simplenews_issue
     - node.type.simplenews_issue
   module:
@@ -27,6 +28,11 @@ content:
     weight: 5
     settings: {  }
     third_party_settings: {  }
+  field_simplenews_issue_artikel:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
   langcode:
     type: language_select
     weight: 1
