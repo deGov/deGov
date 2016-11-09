@@ -15,10 +15,9 @@
 	// Right align navigation
 	.navbar-header {
 		width: 100%;
-		#block-degov-main-menu {
+		nav {
 			float: right;
 			font-size: $font-size-large;
-			font-weight: 600;
 		}
 	}
 }
