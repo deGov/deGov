@@ -1,0 +1,23 @@
+langcode: de
+status: true
+dependencies:
+  module:
+    - simplenews
+  theme:
+    - degov
+id: block__newsletter_abonnement
+theme: degov
+region: footer
+weight: -4
+provider: null
+plugin: simplenews_subscription_block
+settings:
+  id: simplenews_subscription_block
+  label: 'Newsletter Abonnement'
+  provider: simplenews
+  label_display: visible
+  newsletters:
+    degov_newsletter: degov_newsletter
+  message: 'Bleiben Sie informiert - abonnieren Sie auf unseren Newsletter'
+  unique_id: degov_newsletter_abonnement
+visibility: {  }
