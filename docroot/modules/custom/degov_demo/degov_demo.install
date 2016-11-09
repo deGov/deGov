@@ -30,9 +30,13 @@ function degov_demo_install() {
     $files = glob($moduleRealPath.'/images/*.jpg');
     foreach ($files as $file) {
 
+      // Basename without Path
+      $file_basename = null;
+      $file_basename = basename($file);
+
       // Create file object
       $image_system = null;
-      $image_system = file_save_data(file_get_contents($file), 'public://'.basename($file), FILE_EXISTS_REPLACE);
+      $image_system = file_save_data(file_get_contents($file), 'public://'.$file_basename, FILE_EXISTS_REPLACE);
       if ($image_system) {
 
         // Create media object
@@ -50,7 +54,7 @@ function degov_demo_install() {
         ]);
         $image_media->save();
 
-        $files_ids[] = $image_media->id();
+        $files_ids[$file_basename] = $image_media->id();
 
       }
 
@@ -81,7 +85,8 @@ function degov_demo_install() {
               $xkey = $value;
             }
             else if (preg_match('/(\_image|\_media)$/', $field)) {
-              $insert_fields[$field][0]['target_id'] = $files_ids[array_rand($files_ids, 1)];
+              if (!empty($value)) $insert_fields[$field][0]['target_id'] = $files_ids[$value];
+              else $insert_fields[$field][0]['target_id'] = $files_ids[array_rand($files_ids, 1)];
             }
             else if (preg_match('/\_images$/', $field)) {
               $insert_fields[$field][0]['target_id'] = $files_ids[array_rand($files_ids, 1)];
@@ -96,11 +101,19 @@ function degov_demo_install() {
             else if (preg_match('/\_files$/', $field)) {
               // $insert_fields[$field]['target_id'] = null;
             }
-            else if (preg_match('/\_media$/', $field)) {
-              // $insert_fields[$field]['target_id'] = null;
-            }
             else if (preg_match('/\_links$/', $field)) {
-              // $insert_fields[$field]['target_id'] = null;
+              $insert_fields[$field][0] = array(
+                'uri' => 'http://www.mfdaos.org/link-zur-unterseite-eins',
+                'title' => 'Dies ist ein Link zur Unterseite Eins',
+              );
+              $insert_fields[$field][1] = array(
+                'uri' => 'http://www.mfdaos.org/link-zur-unterseite-zwei',
+                'title' => 'Dies ist ein Link zur Unterseite Zwei',
+              );
+              $insert_fields[$field][2] = array(
+                'uri' => 'http://www.mfdaos.org/link-zur-unterseite-drei',
+                'title' => 'Dies ist ein Link zur Unterseite Drei',
+              );
             }
             else {
               $insert_fields[$field] = $value;
@@ -218,7 +231,8 @@ function degov_demo_install() {
             $insert_fields[$page_field]['color'] = $value;
           }
           else if (preg_match('/\_image$/', $page_field)) {
-            $insert_fields[$page_field][0]['target_id'] = $files_ids[array_rand($files_ids, 1)];
+            if (!empty($value)) $insert_fields[$page_field][0]['target_id'] = $files_ids[$value];
+            else $insert_fields[$page_field][0]['target_id'] = $files_ids[array_rand($files_ids, 1)];
           }
           else if (preg_match('/\_section$/', $page_field)) {
             $insert_fields[$page_field][0]['target_id'] = $parent_page_ids[$xparent];
