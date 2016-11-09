@@ -62,8 +62,6 @@ modules:
   - elasticsearch_connector
   - elasticsearch_connector_views
   - degov_demo
-  - twitter_block
-  - degov_twitter_block
   - degov_tax_blog
   - degov_media_image
   - viewsreference
@@ -73,8 +71,6 @@ modules:
   - degov_blogarticle
   - degov_userroles
   - degov_easy_breadcrumb
-  - simplenews
-  - degov_simplenews_settings
   - degov_welcome
 # A system path to redirect to once installation is complete.
 redirect:
