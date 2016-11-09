@@ -2,7 +2,7 @@
 .teaser {
   > h2 {
     a {
-      @include icon-before('→');
+      //@include icon-before($fa-var-arrow-right);
       &:hover, &:focus {
         text-decoration: none;
       }
