@@ -3,17 +3,18 @@
 @import "../../node_modules/font-awesome/scss/font-awesome";
 @import "mixins";
 
-@import "components/content.scss";
-@import "components/footer.scss";
-@import "components/header.scss";
-@import "components/navbar.scss";
-@import "elements/blocks.scss";
-@import "elements/fields.scss";
-@import "elements/navs.scss";
-@import "elements/paragraphs.scss";
-@import "elements/type.scss";
-@import "pages/front.scss";
-@import "view-modes/full.scss";
-@import "view-modes/teaser.scss";
+@import "components/content";
+@import "components/footer";
+@import "components/header";
+@import "components/navbar";
+@import "elements/blocks";
+@import "elements/fields";
+@import "elements/navs";
+@import "elements/paragraphs";
+@import "elements/type";
+@import "pages/front";
+@import "pages/admin-screens";
+@import "view-modes/full";
+@import "view-modes/teaser";
 
-//@import "views/*.scss";
+//@import "views/*";
