@@ -2,230 +2,404 @@
 
 # Taxonomy
 taxonomy:
- - tags: [Lorem, Ipsum, Dolor, Sit, Amet, Aonsectetuer, Adipiscing, Elit, Aenean, Commodo, Ligula, Eget]
+ - tags: [Ministerium, Digital, Open Source, Wirtschaft, Verwaltung, Content Management System, Drupal, Kommunalverwaltung, Bundesverwaltung, Landesverwaltung, Highlight]
 
 # Startseite
 home_page:
  -
-  field_title: "Willkommen auf deGov"
-  field_home_page_image: "home_page/welcome-1.jpg"
+  menu_name: "main"
+  menu_title: "Startseite"
+  menu_weight: "0"
+  field_title: "Ministerium für digitale Angelegenheiten und Open Source"
+  field_home_page_image: null
   field_home_page_mainarticle: null
-  field_home_page_contents: null
   field_home_page_contents: null
 
 # Bereichsseite
 section_page:
  -
-  xkey: "S3"
-  menu_title: "Ministerium"
-  weight: "30"
-  field_title: "Bundesministerium für Wirtschaft"
-  field_section_page_image: "section_page/bm-w.jpg"
+  xkey: "S1"
+  menu_name: "main"
+  menu_title: "Aktuelles"
+  menu_weight: "10"
+  field_title: "Aktuelles"
+  field_section_page_subtitle: "Hier finden Sie aktuelle Informationen über digitale Angelegenheiten und Open Source."
+  field_section_page_image: null
   field_section_page_color: "#666"
   field_section_page_contents: null
   field_section_page_tags: null
-  field_section_page_teaser_image: "section_page/bm-w.jpg"
-  field_section_page_teaser_text: "Informationen über die Wirtschaft. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos ad nisi tenetur delectus doloribus. Officiis pariatur minima, rem. Similique, tempore quaerat doloremque temporibus facere expedita optio alias repellat sapiente iusto."
-  field_section_page_teaser_title: "Informationen über die Wirtschaft"
-  field_section_page_teaser_stitle: "Wirtschaftsinformationen"
-  field_section_page_subtitle: "weitere Wirtschaftsinformationen"
- -
-  xkey: "S1"
-  menu_title: "Aktuelles"
-  weight: "10"
-  field_title: "Auswärtiges Amt"
-  field_section_page_image: "section_page/bm-a.jpg"
-  field_section_page_color: "#424242"
-  field_section_page_contents: null
-  field_section_page_tags: null
-  field_section_page_teaser_image: "section_page/bm-a.jpg"
-  field_section_page_teaser_text: "Informationen über das Auswärtige Amt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos ad nisi tenetur delectus doloribus. Officiis pariatur minima, rem. Similique, tempore quaerat doloremque temporibus facere expedita optio alias repellat sapiente iusto."
-  field_section_page_teaser_title: "Informationen über das Auswärtige Amt"
-  field_section_page_teaser_stitle: "Auswärtige Amt Informationen"
-  field_section_page_subtitle: "weitere Informationen zum Auswärtigen Amt"
+  field_section_page_teaser_image: null
+  field_section_page_teaser_title: "Aktuelle Informationen"
+  field_section_page_teaser_text: "Aktuelle Informationen über digitale Angelegenheiten und Open Source."
+  field_section_page_teaser_stitle: "Digitale Angelegenheiten und Open Source"
+  field_section_page_section: null
  -
   xkey: "S2"
-  menu_title: "Themen"
-  weight: "20"
-  field_title: "Bundesministerium des Innern"
-  field_section_page_image: "section_page/bm-i.jpg"
-  field_section_page_color: "#474747"
+  xparent: "S1"
+  menu_name: "main"
+  menu_title: "Pressemitteilungen"
+  menu_weight: "20"
+  field_title: "Pressemitteilungen"
+  field_section_page_subtitle: "Hier finden Sie aktuelle Pressemitteilungen des Ministeriums für digitale Angelegenheiten und Open Source."
+  field_section_page_image: null
+  field_section_page_color: "#666"
   field_section_page_contents: null
   field_section_page_tags: null
-  field_section_page_teaser_image: "section_page/bm-i.jpg"
-  field_section_page_teaser_text: "Informationen über das Bundesministerium des Inneren. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos ad nisi tenetur delectus doloribus. Officiis pariatur minima, rem. Similique, tempore quaerat doloremque temporibus facere expedita optio alias repellat sapiente iusto."
-  field_section_page_teaser_title: "Informationen über das Bundesministerium des Inneren"
-  field_section_page_teaser_stitle: "Bundesministerium des Inneren Informationen"
-  field_section_page_subtitle: "weitere Informationen zum Innenministerium"
+  field_section_page_teaser_image: null
+  field_section_page_teaser_title: "Aktuelle Pressemitteilungen"
+  field_section_page_teaser_text: "Aktuelle Pressemitteilungen des Ministeriums für digitale Angelegenheiten und Open Source."
+  field_section_page_teaser_stitle: "Pressemitteilungen des Ministeriums für digitale Angelegenheiten und Open Source."
+  field_section_page_section: null
+ -
+  xkey: "S3"
+  xparent: "S1"
+  menu_name: "main"
+  menu_title: "Blog"
+  menu_weight: "30"
+  field_title: "Blog"
+  field_section_page_subtitle: "Hier finden Sie aktuelle Blogbeiträge des Ministeriums für digitale Angelegenheiten und Open Source."
+  field_section_page_image: null
+  field_section_page_color: "#666"
+  field_section_page_contents: null
+  field_section_page_tags: null
+  field_section_page_teaser_image: null
+  field_section_page_teaser_title: "Aktuelle Blogbeiträge"
+  field_section_page_teaser_text: "Aktuelle Blogbeiträge des Ministeriums für digitale Angelegenheiten und Open Source."
+  field_section_page_teaser_stitle: "Blogbeiträge des Ministeriums für digitale Angelegenheiten und Open Source."
+  field_section_page_section: null
+ -
+  xkey: "S4"
+  xparent: "S1"
+  menu_name: "main"
+  menu_title: "Interviews"
+  menu_weight: "40"
+  field_title: "Interviews"
+  field_section_page_subtitle: "Hier finden Sie aktuelle Interviews mit Gabriele Peters über digitale Angelegenheiten und Open Source."
+  field_section_page_image: null
+  field_section_page_color: "#666"
+  field_section_page_contents: null
+  field_section_page_tags: null
+  field_section_page_teaser_image: null
+  field_section_page_teaser_title: "Aktuelle Interviews"
+  field_section_page_teaser_text: "Aktuelle Interviews mit Gabriele Peters über digitale Angelegenheiten und Open Source."
+  field_section_page_teaser_stitle: "Interviews mit Gabriele Peters über digitale Angelegenheiten und Open Source."
+  field_section_page_section: null
+ -
+  xkey: "S8"
+  xparent: "S1"
+  menu_name: "main"
+  menu_title: "Veranstaltungen"
+  menu_weight: "40"
+  field_title: "Veranstaltungen"
+  field_section_page_subtitle: "Hier finden Sie aktuelle Veranstaltungen des Ministeriums für digitale Angelegenheiten und Open Source."
+  field_section_page_image: null
+  field_section_page_color: "#666"
+  field_section_page_contents: null
+  field_section_page_tags: null
+  field_section_page_teaser_image: null
+  field_section_page_teaser_title: "Aktuelle Veranstaltungen"
+  field_section_page_teaser_text: "Aktuelle Veranstaltungen des Ministeriums für digitale Angelegenheiten und Open Source."
+  field_section_page_teaser_stitle: "Veranstaltungen des Ministeriums digitale Angelegenheiten und Open Source."
+  field_section_page_section: null
+ -
+  xkey: "S5"
+  menu_name: "main"
+  menu_title: "Themen"
+  menu_weight: "50"
+  field_title: "Themen"
+  field_section_page_subtitle: "Hier finden Sie aktuelle Themen über digitale Angelegenheiten und Open Source."
+  field_section_page_image: null
+  field_section_page_color: "#666"
+  field_section_page_contents: null
+  field_section_page_tags: null
+  field_section_page_teaser_image: null
+  field_section_page_teaser_title: "Aktuelle Themen"
+  field_section_page_teaser_text: "Aktuelle Themen über digitale Angelegenheiten und Open Source."
+  field_section_page_teaser_stitle: "Themen über digitale Angelegenheiten und Open Source."
+  field_section_page_section: null
+ -
+  xkey: "S6"
+  menu_name: "main"
+  menu_title: "Ministerium"
+  menu_weight: "60"
+  field_title: "Ministerium"
+  field_section_page_subtitle: "Hier finden Sie allgemeine Informationen über das Ministerium für digitale Angelegenheiten und Open Source."
+  field_section_page_image: null
+  field_section_page_color: "#666"
+  field_section_page_contents: null
+  field_section_page_tags: null
+  field_section_page_teaser_image: null
+  field_section_page_teaser_title: "Ministerium"
+  field_section_page_teaser_text: "Allgemeine Informationen über das Ministerium für digitale Angelegenheiten und Open Source."
+  field_section_page_teaser_stitle: "Informationen über das Ministerium."
+  field_section_page_section: null
+ -
+  xkey: "S7"
+  menu_name: "main"
+  menu_title: "Service"
+  menu_weight: "70"
+  field_title: "Service"
+  field_section_page_subtitle: "Hier finden Sie Informationen zur Anfahrt, unsere Kontaktdaten und Antworten auf häufig gestellte Fragen."
+  field_section_page_image: null
+  field_section_page_color: "#666"
+  field_section_page_contents: null
+  field_section_page_tags: null
+  field_section_page_teaser_image: null
+  field_section_page_teaser_title: "Service"
+  field_section_page_teaser_text: "Informationen zur Anfahrt, unsere Kontaktdaten und Antworten auf häufig gestellte Fragen."
+  field_section_page_teaser_stitle: "Informationen zur Anfahrt und Kontaktdaten."
+  field_section_page_section: null
 
 # Artikel
 article_page:
  -
-  xparent: "S1"
-  field_title: "Flucht und Asyl: Fakten und Hintergründe"
+  xparent: "S5"
+  menu_name: "main"
+  menu_title: "Digitale Wirtschaft im Wandel"
+  menu_weight: "51"
+  field_title: "Die digitale Wirtschaft im Wandel"
+  field_article_page_subtitle: "In Zeiten der digitale Wirtschaft mit Open Source Lösungen mit gutem Beispiel voran gehen."
   field_article_page_section: null
-  field_article_page_datetime: "2016-12-24T00:00:00"
-  field_article_page_contents: null
+  field_article_page_datetime: "2016-11-17T16:00:00"
+  field_article_page_contents: [TB1, TE1]
   field_article_page_tags: null
-  field_article_page_teaser_image: "article_page/flucht-1.jpg"
-  field_article_page_teaser_color: "#3498db"
-  field_article_page_teaser_title: "Flucht und Asyl: Fakten und Hintergründe"
-  field_article_page_teaser_stitle: "Fucht & Asyl"
-  field_article_page_subtitle: "Flucht & Asyl"
+  field_article_page_teaser_image: null
+  field_article_page_teaser_color: "#666"
+  field_article_page_teaser_title: "Digitale Wirtschaft"
+  field_article_page_teaser_stitle: "Open Source Lösungen und die digitale Wirtschaft."
  -
-  xparent: "S1"
-  field_title: "EU-Migrationspartnerschaften Afrika"
+  xparent: "S5"
+  menu_name: "main"
+  menu_title: "Open Source auf dem Vormarsch"
+  menu_weight: "52"
+  field_title: "Open Source Lösungen auf dem Vormarsch"
+  field_article_page_subtitle: "Kosten senken durch den Einsatz von bewährten Open Source Lösungen in der Verwaltung."
   field_article_page_section: null
-  field_article_page_datetime: "2016-12-23T00:00:00"
-  field_article_page_contents: null
+  field_article_page_datetime: "2016-11-17T16:00:00"
+  field_article_page_contents: [TB1, TE1]
   field_article_page_tags: null
-  field_article_page_teaser_image: "article_page/afrika-1.jpg"
-  field_article_page_teaser_color: "#27ae60"
-  field_article_page_teaser_title: "EU-Migrationspartnerschaften Afrika"
-  field_article_page_teaser_stitle: "Migration Afrika"
-  field_article_page_subtitle: "Migration Afrika"
+  field_article_page_teaser_image: null
+  field_article_page_teaser_color: "#666"
+  field_article_page_teaser_title: "Open Source Lösungen"
+  field_article_page_teaser_stitle: "Open Source Lösungen auf dem Vormarsch."
  -
-  xparent: "S3"
-  field_title: "Impro Dairy – Alles für gesunde Kühe"
+  xparent: "S5"
+  menu_name: "main"
+  menu_title: "Open Government"
+  menu_weight: "53"
+  field_title: "Open Government"
+  field_article_page_subtitle: "Warum sich die Verwaltung gegenüber der Bevölkerung zukünftig öffnen sollte."
   field_article_page_section: null
-  field_article_page_datetime: "2016-12-20T00:00:00"
-  field_article_page_contents: null
+  field_article_page_datetime: "2016-11-17T16:00:00"
+  field_article_page_contents: [TB2, TE1]
   field_article_page_tags: null
-  field_article_page_teaser_image: "article_page/cow-1.jpg"
-  field_article_page_teaser_color: "#e67e22"
-  field_article_page_teaser_title: "Impro Dairy – Alles für gesunde Kühe"
-  field_article_page_teaser_stitle: "Alles für gesunde Kühe"
-  field_article_page_subtitle: "Alles für gesunde Kühe"
+  field_article_page_teaser_image: null
+  field_article_page_teaser_color: "#666"
+  field_article_page_teaser_title: "Open Government"
+  field_article_page_teaser_stitle: "Öffnung der Verwaltung der Bevölkerung gegenüber."
  -
-  xparent: "S3"
-  field_title: "Europäische Klimaabkommen"
+  xparent: "S6"
+  menu_name: "main"
+  menu_title: "Ministerin Gabriele Peters"
+  menu_weight: "61"
+  field_title: "Ministerin Gabriele Peters"
+  field_article_page_subtitle: "Informationen und Werdegang über die Ministerin Gabriele Peters."
   field_article_page_section: null
-  field_article_page_datetime: "2016-12-19T00:00:00"
-  field_article_page_contents: null
+  field_article_page_datetime: "2016-11-17T16:00:00"
+  field_article_page_contents: [TB1, TE1, CIE1, CE1]
   field_article_page_tags: null
-  field_article_page_teaser_image: "article_page/climate-1.jpg"
-  field_article_page_teaser_color: "#d35400"
-  field_article_page_teaser_title: "Europäische Klimaabkommen"
-  field_article_page_teaser_stitle: "Klimaabkommen"
-  field_article_page_subtitle: "Klimaabkommen"
+  field_article_page_teaser_image: null
+  field_article_page_teaser_color: "#666"
+  field_article_page_teaser_title: "Gabriele Peters"
+  field_article_page_teaser_stitle: "Allgemeines über die Ministerin Gabriele Peters."
  -
-  xparent: "S2"
-  field_title: "Schutz der Außengrenzen wird Realität"
-  field_article_page_section: "Schutz der EU-Außengrenzen wird Realität"
-  field_article_page_datetime: "2016-12-18T00:00:00"
-  field_article_page_contents: null
-  field_article_page_tags: null
-  field_article_page_teaser_image: "article_page/real-1.jpg"
-  field_article_page_teaser_color: "#1abc9c"
-  field_article_page_teaser_title: "Schutz der Außengrenzen wird Realität"
-  field_article_page_teaser_stitle: "Schutz der Realität"
-  field_article_page_subtitle: "Schutz der Realität"
- -
-  xparent: "S2"
-  field_title: "Nato-Beschlüsse auf dem Prüfstand"
+  xparent: "S6"
+  menu_name: "main"
+  menu_title: "Aufgaben des Ministeriums"
+  menu_weight: "62"
+  field_title: "Aufgaben des Ministeriums"
+  field_article_page_subtitle: "Aufgaben und Organisation des Ministeriums für digitale Angelegenheiten und Open Source."
   field_article_page_section: null
-  field_article_page_datetime: "2016-12-17T00:00:00"
-  field_article_page_contents: null
+  field_article_page_datetime: "2016-11-17T16:00:00"
+  field_article_page_contents: [IE1, TE1, TE1]
   field_article_page_tags: null
-  field_article_page_teaser_image: "article_page/nato-1.jpg"
-  field_article_page_teaser_color: "#2980b9"
-  field_article_page_teaser_title: "Nato-Beschlüsse auf dem Prüfstand"
-  field_article_page_teaser_stitle: "Nato-Beschlüsse"
-  field_article_page_subtitle: "Nato-Beschlüsse"
+  field_article_page_teaser_image: null
+  field_article_page_teaser_color: "#666"
+  field_article_page_teaser_title: "Aufgaben des Ministeriums"
+  field_article_page_teaser_stitle: "Aufgaben und Organisation des Ministeriums für digitale Angelegenheiten und Open Source."
  -
-  xparent: "S2"
-  field_title: "Strenge Kontrolle für Rüstungsexporte"
+  xparent: "S6"
+  menu_name: "main"
+  menu_title: "Ausschreibungen"
+  menu_weight: "63"
+  field_title: "Ausschreibungen"
+  field_article_page_subtitle: "Aktuelle Ausschreibungen des Ministeriums für digitale Angelegenheiten und Open Source."
   field_article_page_section: null
-  field_article_page_datetime: "2016-12-16T00:00:00"
-  field_article_page_contents: null
+  field_article_page_datetime: "2016-11-17T16:00:00"
+  field_article_page_contents: [TE1, TE1, CE2, DE1]
   field_article_page_tags: null
-  field_article_page_teaser_image: "article_page/armor-1.jpg"
-  field_article_page_teaser_color: "#3498db"
-  field_article_page_teaser_title: "Strenge Kontrolle für Rüstungsexporte"
-  field_article_page_teaser_stitle: "Kontrolle für Rüstungsexporte"
-  field_article_page_subtitle: "Kontrolle für Rüstungsexporte"
+  field_article_page_teaser_image: null
+  field_article_page_teaser_color: "#666"
+  field_article_page_teaser_title: "Ausschreibungen"
+  field_article_page_teaser_stitle: "Ausschreibungen des Ministeriums für digitale Angelegenheiten und Open Source."
  -
-  xparent: "S1"
-  field_title: "Reservisten machen fabelhaften Dienst"
+  xparent: "S6"
+  menu_name: "main"
+  menu_title: "Stellenangebote"
+  menu_weight: "64"
+  field_title: "Stellenangebote"
+  field_article_page_subtitle: "Aktuelle Stellenangebote des Ministeriums für digitale Angelegenheiten und Open Source."
   field_article_page_section: null
-  field_article_page_datetime: "2016-12-15T00:00:00"
-  field_article_page_contents: null
+  field_article_page_datetime: "2016-11-17T16:00:00"
+  field_article_page_contents: [TE1, LE1, LE2, LE3, LE4]
   field_article_page_tags: null
-  field_article_page_teaser_image: "article_page/reserve-1.jpg"
-  field_article_page_teaser_color: "#d35400"
-  field_article_page_teaser_title: "Reservisten machen fabelhaften Dienst"
-  field_article_page_teaser_stitle: "Reservisten Dienst"
-  field_article_page_subtitle: "Reservisten Dienst"
+  field_article_page_teaser_image: null
+  field_article_page_teaser_color: "#666"
+  field_article_page_teaser_title: "Stellenangebote"
+  field_article_page_teaser_stitle: "Stellenangebote des Ministeriums für digitale Angelegenheiten und Open Source."
  -
-  xparent: "S1"
-  field_title: "Was Bürgern wichtig ist"
+  xparent: "S7"
+  menu_name: "main"
+  menu_title: "Anfahrt"
+  menu_weight: "71"
+  field_title: "Anfahrt"
+  field_article_page_subtitle: "Anfahrtsbeschreibung zum Ministerium für digitale Angelegenheiten und Open Source."
   field_article_page_section: null
-  field_article_page_datetime: "2016-12-14T00:00:00"
-  field_article_page_contents: null
+  field_article_page_datetime: "2016-11-17T16:00:00"
+  field_article_page_contents: [TE1, GME1, AE1]
   field_article_page_tags: null
-  field_article_page_teaser_image: "article_page/people-1.jpg"
-  field_article_page_teaser_color: "#2980b9"
-  field_article_page_teaser_title: "Was Bürgern wichtig ist"
-  field_article_page_teaser_stitle: "Bürger"
-  field_article_page_subtitle: "Bürger"
+  field_article_page_teaser_image: null
+  field_article_page_teaser_color: "#666"
+  field_article_page_teaser_title: "Anfahrtsbeschreibung"
+  field_article_page_teaser_stitle: "Anfahrtsbeschreibung zum Ministerium für digitale Angelegenheiten und Open Source."
+ -
+  xparent: "S7"
+  menu_name: "main"
+  menu_title: "Kontakt"
+  menu_weight: "72"
+  field_title: "Kontakt"
+  field_article_page_subtitle: "Kontaktmöglichkeit zum Ministerium für digitale Angelegenheiten und Open Source."
+  field_article_page_section: null
+  field_article_page_datetime: "2016-11-17T16:00:00"
+  field_article_page_contents: [TE1, AE1]
+  field_article_page_tags: null
+  field_article_page_teaser_image: null
+  field_article_page_teaser_color: "#666"
+  field_article_page_teaser_title: "Kontaktmöglichkeit"
+  field_article_page_teaser_stitle: "Kontaktmöglichkeit zum Ministerium für digitale Angelegenheiten und Open Source."
+ -
+  xparent: "S7"
+  menu_name: "main"
+  menu_title: "Newsletter"
+  menu_weight: "73"
+  field_title: "Newsletter"
+  field_article_page_subtitle: "Im Newsletter informieren wir über aktuelle Geschehnisse im Bereich digitale Angelegenheiten und Open Source."
+  field_article_page_section: null
+  field_article_page_datetime: "2016-11-17T16:00:00"
+  field_article_page_contents: [TE1]
+  field_article_page_tags: null
+  field_article_page_teaser_image: null
+  field_article_page_teaser_color: "#666"
+  field_article_page_teaser_title: "Newsletter"
+  field_article_page_teaser_stitle: "Newsletter des Ministerium für digitale Angelegenheiten und Open Source."
+ -
+  xparent: "S7"
+  menu_name: "main"
+  menu_title: "FAQ"
+  menu_weight: "74"
+  field_title: "Fragen und Antworten"
+  field_article_page_subtitle: "Hier finden Sie häufig gestellte Fragen und Antworten für digitale Angelegenheiten und Open Source."
+  field_article_page_section: null
+  field_article_page_datetime: "2016-11-17T16:00:00"
+  field_article_page_contents: [TE1]
+  field_article_page_tags: null
+  field_article_page_teaser_image: null
+  field_article_page_teaser_color: "#666"
+  field_article_page_teaser_title: "Fragen und Antworten"
+  field_article_page_teaser_stitle: "Fragen und Antworten für digitale Angelegenheiten und Open Source."
 
 # Nebenseite
 next_page:
  -
-  menu_title: "Mediathek"
-  weight: "50"
-  field_title: "Jahresbericht des Normenkontrollrates"
-  field_next_page_contents: null
-  field_next_page_stitle: "Jahresbericht des Normenkontrollrates"
+  xkey: "F1"
+  menu_name: "footer"
+  menu_title: "Impressum"
+  menu_weight: "10"
+  field_title: "Impressum"
+  field_next_page_stitle: "Betreiberdaten des Ministerium für digitale Angelegenheiten und Open Source."
+  field_next_page_contents: [TE1, TE1, TE1]
  -
-  menu_title: "Service"
-  weight: "40"
-  field_title: "Gesellschaftlicher Dialog zur Nachhaltigkeit"
-  field_next_page_contents: null
-  field_next_page_stitle: "Gesellschaftlicher Dialog zur Nachhaltigkeit"
+  xkey: "F2"
+  menu_name: "footer"
+  menu_title: "Datenschutz"
+  menu_weight: "20"
+  field_title: "Datenschutz"
+  field_next_page_stitle: "Datenschutzerklärung des Ministerium für digitale Angelegenheiten und Open Source."
+  field_next_page_contents: [TE1, TE1]
+ -
+  xkey: "F3"
+  menu_name: "footer"
+  menu_title: "Seitenübersicht"
+  menu_weight: "30"
+  field_title: "Seitenübersicht"
+  field_next_page_stitle: "Seitenübersicht des Ministerium für digitale Angelegenheiten und Open Source."
+  field_next_page_contents: [TE1]
 
 # Veranstaltung
 event_page:
  -
-  xparent: "S3"
-  field_title: "Infotag: Vergaberecht der öffentlichen Hand für Bieter"
-  field_event_page_datetime_begin: "2016-12-08T09:30:00"
+  xparent: "S8"
+  menu_name: "main"
+  menu_title: "Anwendertag: Drupal in der öffentlichen Verwaltung"
+  menu_weight: "81"
+  field_title: "Anwendertag: Drupal in der öffentlichen Verwaltung"
+  field_event_page_stitle: "Am 17.11.2016 ist es soweit: Gemeinsam mit Partnern veranstaltet publicplan den ersten Anwendertag 'Drupal in der öffentlichen Verwaltung' in Düsseldorf"
+  field_event_page_datetime_begin: "2016-11-17T08:30:00"
   field_event_page_section: null
-  field_event_page_datetime_end: "2016-12-08T15:00:00"
-  field_event_page_contents: "Der Infotag  Vergaberecht der öffentlichen Hand für Bieter  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi."
+  field_event_page_datetime_end: "2016-11-17T16:00:00"
+  field_event_page_contents: [TE2, TE3, GE1]
   field_event_page_tags: null
-  field_event_page_teaser_image: "events/infotag-vergaberecht.jpg"
-  field_event_page_teaser_color: "#871701"
-  field_event_page_teaser_title: "Infotag: Vergaberecht der öffentlichen Hand"
-  field_event_page_teaser_stitle: "Infotag: Vergaberecht der öffentlichen Hand"
-  field_event_page_stitle: "Eine Informationsveranstalltung für Bieter zur Vergabe der öffentlichen Hand"
+  field_event_page_teaser_image: null
+  field_event_page_teaser_color: "#666"
+  field_event_page_teaser_title: "Anwendertag: Drupal in der öffentlichen Verwaltung"
+  field_event_page_teaser_stitle: " Gemeinsam mit Partnern veranstaltet publicplan den ersten Anwendertag 'Drupal in der öffentlichen Verwaltung' in Düsseldorf"
   field_event_page_location: "Düsseldorf"
- -
-  xparent: "S1"
-  field_title: "Abfallarme Veranstaltungen im öffentlichen Bereich"
-  field_event_page_datetime_begin: "2016-12-16T09:00:00"
-  field_event_page_section: null
-  field_event_page_datetime_end: "2016-12-16T10:00:00"
-  field_event_page_contents: "Eine Schulung zum Thema Abfallarme Veranstaltungen im öffentlichen Bereich Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi."
-  field_event_page_tags: null
-  field_event_page_teaser_image: "events/abfallarme-veranstaltungen.jpg"
-  field_event_page_teaser_color: "#1f8500"
-  field_event_page_teaser_title: "Abfallarme Veranstaltungen im öffentlichen Bereich"
-  field_event_page_teaser_stitle: "Abfallarme Veranstaltungen im öffentlichen Bereich"
-  field_event_page_stitle: "Informationen und Tipps zur Abhaltung von abfallarmen Veranstaltungen im öffentlichen Bereich."
-  field_event_page_location: "Dortmund"
- -
-  xparent: "S2"
-  field_title: "Regierungspressekonferenz"
-  field_event_page_datetime_begin: "2017-01-24T12:15:00"
-  field_event_page_section: null
-  field_event_page_datetime_end: "2017-01-24T14:30:00"
-  field_event_page_contents: "Die Regierungspressekonferenz Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi."
-  field_event_page_tags: null
-  field_event_page_teaser_image: "events/regierungspressekonferenz.jpg"
-  field_event_page_teaser_color: "#0059d4"
-  field_event_page_teaser_title: "Regierungspressekonferenz"
-  field_event_page_teaser_stitle: "Regierungspressekonferenz"
-  field_event_page_stitle: "Die Regierungspressekonferenz von Januar 2017"
-  field_event_page_location: "Berlin"
 
+# Startseite
+blogarticle:
+ -
+  xparent: "S3"
+  menu_name: "main"
+  menu_title: "Anwendertag"
+  menu_weight: "31"
+  field_title: "Anwendertag Drupal in der öffentlichen Verwaltung"
+  field_blogarticle_subtitle: "Drupal in der öffentlichen Verwaltung"
+  field_blogarticle_datetime: "2016-11-17T16:00:00"
+  field_blogarticle_image: null
+  field_blogarticle_text: "<p>Das freie Content-Management-System und Open-Source-Framework Drupal ist dabei, sich zu einem De-facto-Standard für größere Internet-Projekte und Portale im Umfeld der öffentlichen Hand zu entwickeln. Mit dem Anwendertag der publicplan findet die erste Veranstaltung in Deutschland statt, die sich beim Einsatz von Drupal ganz auf die Anforderungen der Öffentlichen Hand fokussiert.</p>"
+  field_blogarticle_tags: null
+  field_blogarticle_section: null
+ -
+  xparent: "S3"
+  menu_name: "main"
+  menu_title: "User Stories"
+  menu_weight: "32"
+  field_title: "In 4 Schritten von der User Story zur Anforderung"
+  field_blogarticle_subtitle: "Von der User Story zur Anforderung"
+  field_blogarticle_datetime: "2016-11-17T16:00:00"
+  field_blogarticle_image: null
+  field_blogarticle_text: "<p>Durch eine User Story wird eine Anforderung für alle Beteiligten verständlicher und Korrekturschleifen lassen sich vermeiden. Im Ergebnis steht die neue Software schneller zur Verfügung. Im folgenden Beispiel aus dem Verwaltungsalltag sehen wir, wie die Definition einer User Story eine Anforderung konkreter macht und wie wir mit den User Stories weiterarbeiten.</p>"
+  field_blogarticle_tags: null
+  field_blogarticle_section: null
+ -
+  xparent: "S3"
+  menu_name: "main"
+  menu_title: "Responsive Webdesign"
+  menu_weight: "33"
+  field_title: "Responsive Webdesign - Ein must have im Bereich E-Government!"
+  field_blogarticle_subtitle: "Ein must have im Bereich E-Government"
+  field_blogarticle_datetime: "2016-11-17T16:00:00"
+  field_blogarticle_image: null
+  field_blogarticle_text: "<p>Unter einem responsiven Webdesign versteht man, dass Funktion, Design und Inhalte einer Internetseite sich dem jeweiligen Endgerät anpassen (egal ob Smartphone, Tablet, Notebook oder PC). Warum sollte man diesen Mehraufwand der Programmierung in Kauf nehmen? Schaut man sich die Statistiken an, so stellt man fest, dass der Anteil der mobilen Endgeräte von Jahr zu Jahr steigt. Weltweit werden bis 2018 ca. 1,873 Mrd. Smartphones im Einsatz sein - ganz zu schweigen von den Tablets.</p>"
+  field_blogarticle_tags: null
+  field_blogarticle_section: null

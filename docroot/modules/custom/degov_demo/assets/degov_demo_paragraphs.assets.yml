@@ -3,34 +3,44 @@
 # Adresse
 address_element:
  -
+  xkey: "AE1"
   field_address_element_state: "NRW"
-  field_address_element_company: "publicplan GmbH"
+  field_address_element_company: "Ministerium für digitale Angelegenheiten und Open Source"
   field_address_element_country: "Deutschland"
   field_address_element_city: "Düsseldorf"
   field_address_element_zip: "40213"
-  field_address_element_street: "Bilker Str. 29"
+  field_address_element_street: "Allee der Verwaltung 5a"
 
 # Bild
 image_element:
  -
+  xkey: "IE1"
   field_image_element_media: null
 
 # Bild Text
 image_text_element:
  -
+  xkey: "TB1"
   field_image_text_element_align: "left"
+  field_image_text_element_image: null
+  field_image_text_element_text: "Bild Text Paragraph Beispiel Content. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi consequuntur nemo, corrupti ut tempora autem dolorum a et odit impedit nisi officia vitae, facere repudiandae possimus quas porro esse voluptate."
+ -
+  xkey: "TB2"
+  field_image_text_element_align: "right"
   field_image_text_element_image: null
   field_image_text_element_text: "Bild Text Paragraph Beispiel Content. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi consequuntur nemo, corrupti ut tempora autem dolorum a et odit impedit nisi officia vitae, facere repudiandae possimus quas porro esse voluptate."
 
 # Download Liste
 downloads_element:
  -
+  xkey: "DE1"
   field_downloads_element_files: null
   field_downloads_element_title: "Download-Liste Beispiel. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero dolor reiciendis id voluptates quas, ipsa culpa. Quo nihil, fugiat, impedit, perspiciatis illo voluptas minus iusto repellat explicabo tempore non officiis!"
 
 # Gallerie
 gallery_element:
  -
+  xkey: "GE1"
   field_gallery_element_images: null
   field_gallery_element_text: "Gallerie - Element Beispiel. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis dignissimos quam mollitia nihil obcaecati. Obcaecati aliquam labore tempore nam aliquid ipsum quas modi nesciunt, sunt, voluptatum cumque cupiditate possimus. Voluptates."
   field_gallery_element_title: "Gallerie - Element Beispiel"
@@ -39,38 +49,76 @@ gallery_element:
 # Google Maps
 google_maps_element:
  -
+  xkey: "GME1"
   field_google_map_element_address: "Bilker Str. 29, 40213 Düsseldorf"
 
 # Kontakt
 contact_element:
  -
+  xkey: "CE1"
   field_contact_element_image: null
-  field_contact_element_email: "info@publicplan.de"
-  field_contact_element_fax: "+49 (0)30 6098980-89"
-  field_contact_element_name: "publicplan GmbH"
-  field_contact_element_position: "Software Developer"
-  field_contact_element_phone: "+49 (0)30 6098980-80"
-  field_contact_element_website: "https://www.publicplan.de"
+  field_contact_element_email: "ministerin@mfdaos.org"
+  field_contact_element_phone: "+49 (0)123 456789-10"
+  field_contact_element_fax: "+49 (0)123 456789-11"
+  field_contact_element_name: "Gabriele Peters"
+  field_contact_element_position: "Ministerin"
+  field_contact_element_website: "http://www.mfdaos.org"
+ -
+  xkey: "CE2"
+  field_contact_element_image: null
+  field_contact_element_email: "ausschreibungen@mfdaos.org"
+  field_contact_element_phone: "+49 (0)123 456789-15"
+  field_contact_element_fax: "+49 (0)123 456789-16"
+  field_contact_element_name: "Sebastian Müller"
+  field_contact_element_position: "Leiter Fachbereich I - Zentrale Dienste"
+  field_contact_element_website: "http://www.mfdaos.org/ausschreibungen"
 
 # Link-Liste
 links_element:
  -
+  xkey: "LE1"
   field_links_element_links: null
-  field_links_element_title: "Beispiel einer Link Element-Liste."
+  field_links_element_title: "Sachbearbeiter/in für digitale Angelegenheiten"
+ -
+  xkey: "LE2"
+  field_links_element_links: null
+  field_links_element_title: "Sachbearbeiter/in für Open Source Lösungen"
+ -
+  xkey: "LE3"
+  field_links_element_links: null
+  field_links_element_title: "Sachbearbeiter/in im gehobenen Dienst der allgemeinen Verwaltung"
+ -
+  xkey: "LE4"
+  field_links_element_links: null
+  field_links_element_title: "Ausbildung Fachinformatiker/in, Fachrichtung Systemintegration"
 
 # Text
 text_element:
  -
+  xkey: "TE1"
   field_text_element_align: "left"
   field_text_element_color: "#2980b9"
   field_text_element_text: "Beispiel eines Text Element Paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum nam, facere quia dignissimos delectus officiis rem placeat autem voluptate. Repellat ipsum necessitatibus blanditiis quis dignissimos explicabo neque, numquam modi repellendus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et magni totam labore officia corporis quasi enim! Tempore labore dignissimos vitae voluptatum, debitis mollitia voluptas omnis neque. Ex modi explicabo, nisi."
   field_text_element_title: "Beispiel eines Text Element Paragraph"
+ -
+  xkey: "TE2"
+  field_text_element_align: "left"
+  field_text_element_color: "#2980b9"
+  field_text_element_text: "Das freie Content-Management-System und Open-Source-Framework Drupal ist dabei, sich zu einem De-facto-Standard für größere Internet-Projekte und Portale im Umfeld der öffentlichen Hand zu entwickeln. Mit dem Anwendertag der publicplan findet die erste Veranstaltung in Deutschland statt, die sich beim Einsatz von Drupal ganz auf die Anforderungen der Öffentlichen Hand fokussiert."
+  field_text_element_title: "Das Content-Management-System Drupal"
+ -
+  xkey: "TE3"
+  field_text_element_align: "left"
+  field_text_element_color: "#2980b9"
+  field_text_element_text: "Der Vormittag wird sich im Schwerpunkt mit Erfahrungsberichten und Best-Practices rund um den Einsatz von Drupal befassen. Hier stellen Projektleiter und Vertreter der Verwaltungen Ihre Projekte vor und geben einen Einblick in die unterschiedlichen Erfahrungen. Am Nachmittag geht es um die Zukunft von Drupal und die neue Version 8."
+  field_text_element_title: "Tagesprogramm"
 
 # Zitat
 citation_element:
  -
+  xkey: "CIE1"
   field_citation_element_image: null
-  field_citation_element_color: "#e67e22"
+  field_citation_element_color: "#666"
   field_citation_element_link: null
-  field_citation_element_text: "Beispiel eines Zitates. Lorem ipsum dolor sit amet, consectetur adipisicing elit. At ipsam necessitatibus fugit ipsum, laboriosam perferendis perspiciatis earum iste. Deserunt unde consectetur enim deleniti debitis a beatae inventore aliquid eius eum."
-  field_citation_element_title: "Beispiel eines Zitates"
+  field_citation_element_text: "Als Ministerin des Ministeriums für digitale Angelegenheiten und Open Source liegt mit der digitale Wandel der Wirtschaft ganz besonders am Herzen."
+  field_citation_element_title: "Meine Zukunftsvision"

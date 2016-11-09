@@ -72,12 +72,23 @@ function degov_demo_install() {
 
         foreach ($paragraphs as $paragraph) {
 
+          $xkey = null;
           $insert_fields = null;
           $insert_fields['type'] = $paragraphs_type;
           foreach ($paragraph as $field => $value) {
 
-            if (preg_match('/\_image$/', $field)) {
+            if ($field == 'xkey') {
+              $xkey = $value;
+            }
+            else if (preg_match('/(\_image|\_media)$/', $field)) {
               $insert_fields[$field][0]['target_id'] = $files_ids[array_rand($files_ids, 1)];
+            }
+            else if (preg_match('/\_images$/', $field)) {
+              $insert_fields[$field][0]['target_id'] = $files_ids[array_rand($files_ids, 1)];
+              $insert_fields[$field][1]['target_id'] = $files_ids[array_rand($files_ids, 1)];
+              $insert_fields[$field][2]['target_id'] = $files_ids[array_rand($files_ids, 1)];
+              $insert_fields[$field][3]['target_id'] = $files_ids[array_rand($files_ids, 1)];
+              $insert_fields[$field][4]['target_id'] = $files_ids[array_rand($files_ids, 1)];
             }
             else if (preg_match('/\_color$/', $field)) {
               $insert_fields[$field]['color'] = $value;
@@ -102,7 +113,7 @@ function degov_demo_install() {
           $oParagraph->save();
 
           // Save Paragraph Id
-          $paragraphs_ids[] = $oParagraph->id();
+          $paragraphs_ids[$xkey] = $oParagraph->id();
 
         }
 
@@ -168,9 +179,9 @@ function degov_demo_install() {
     }
 
     // Content Types
+    $menu_entries = null;
     $home_page_id = null;
-    $section_page_ids = null;
-    $section_page_menu_entries = null;
+    $parent_page_ids = null;
     $home_page_articles_ids = null;
     foreach ($assets as $content_type => $entries) {
 
@@ -187,6 +198,7 @@ function degov_demo_install() {
         $insert_fields['type'] = $content_type;
         $insert_fields['title'] = $entry['field_title'];
         $insert_fields['status'] = 1;
+        $insert_fields['moderation_state'][0]['target_id'] = 'published';
 
         // Content Type Datas
         $xkey = null;
@@ -209,12 +221,14 @@ function degov_demo_install() {
             $insert_fields[$page_field][0]['target_id'] = $files_ids[array_rand($files_ids, 1)];
           }
           else if (preg_match('/\_section$/', $page_field)) {
-            $insert_fields[$page_field][0]['target_id'] = $section_page_ids[$xparent];
+            $insert_fields[$page_field][0]['target_id'] = $parent_page_ids[$xparent];
           }
           else if (preg_match('/\_contents$/', $page_field)) {
-            for($i=0;$i<3;$i++) {
-              $insert_fields[$page_field][$i]['target_id'] = $paragraphs_ids[array_rand($paragraphs_ids,1)];
-              $insert_fields[$page_field][$i]['target_revision_id'] = $insert_fields[$page_field][$i]['target_id'];
+            if ((!empty($value)) && (is_array($value))) {
+              foreach ($value as $i => $value_pt) {
+                $insert_fields[$page_field][$i]['target_id'] = $paragraphs_ids[$value_pt];
+                $insert_fields[$page_field][$i]['target_revision_id'] = $insert_fields[$page_field][$i]['target_id'];
+              }
             }
           }
           else if (preg_match('/\_tags$/', $page_field)) {
@@ -240,46 +254,59 @@ function degov_demo_install() {
 
         }
 
-        // Add Node to Menu
-        if (in_array($content_type, array('section_page'))) {
 
-          $section_page_ids[$xkey] = $node->id();
+        // List all Parent Pages
+        if ($xkey) {
+
+          $parent_page_ids[$xkey] = $node->id();
 
         }
 
-        if (in_array($content_type, array('section_page', 'next_page'))) {
+        // Add Node to Menu - 1nd level
+        $first_level = null;
+        if (($xkey) && (!$xparent)) {
 
           $first_level = MenuLinkContent::create([
-            'title' => $entry['menu_title'],
+            'title' => $insert_fields['menu_title'],
             'link' => ['uri' => 'internal:/node/' . $node->id()],
-            'menu_name' => 'main',
+            'menu_name' => $insert_fields['menu_name'],
+            'weight' => $insert_fields['menu_weight'],
             'expanded' => true,
-            'weight' => $entry['weight'],
           ]);
 
           $first_level->save();
 
-          if (in_array($content_type, array('section_page'))) {
+          // Save Menu Entry
+          $menu_entries[$xkey] = $first_level;
 
-            $section_page_menu_entries[$xkey] = $first_level;
+          if (in_array($content_type, array('section_page'))) {
 
             // Save Ids for Home Page
             $home_page_articles_ids[] = $node->id();
 
           }
 
-        } // Add Node to Menu
-        else if (in_array($content_type, array('article_page', 'event_page'))) {
+        }
+
+        // Add Node to Menu - 2nd level
+        $second_level = null;
+        if (($xparent) && (array_key_exists($xparent, $menu_entries))) {
 
           $second_level = MenuLinkContent::create([
-            'title' => $insert_fields['title'],
+            'title' => $insert_fields['menu_title'],
             'link' => ['uri' => 'internal:/node/' . $node->id()],
-            'menu_name' => 'main',
-            'parent' => $section_page_menu_entries[$xparent]->getPluginId(),
+            'menu_name' => $insert_fields['menu_name'],
+            'weight' => $insert_fields['menu_weight'],
+            'parent' => $menu_entries[$xparent]->getPluginId(),
             'expanded' => true,
           ]);
 
           $second_level->save();
+
+          // Save Menu Entry
+          if ($xkey) {
+            $menu_entries[$xkey] = $second_level;
+          }
 
           // Save Ids for Home Page
           $home_page_articles_ids[] = $node->id();
