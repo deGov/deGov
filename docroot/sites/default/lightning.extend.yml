@@ -63,6 +63,15 @@ modules:
   - elasticsearch_connector
   - elasticsearch_connector_views
   - degov_demo
+  - twitter_block
+  - degov_twitter_block
+  - degov_tax_blog
+  - degov_media_image
+  - viewsreference
+  - degov_recent_articles_element
+  - degov_vsm_nrw
+  - degov_translation_importer
+  - degov_blogarticle
 # A system path to redirect to once installation is complete.
 redirect:
   path: 'degov_welcome'

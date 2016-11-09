@@ -20,12 +20,11 @@ function degov_preprocess_page(&$variables) {
     if ($node->getType() == 'home_page') {
       // Assure that empty image doesn't cause error and WSOD.
       $field_home_page_image = $node->get('field_home_page_image')->get(0);
-      $variables['home_page_image'] = $field_home_page_image ? $field_home_page_image->entity->image->get(0)
-                                                                                                    ->view() : "";
+      $variables['home_page_image'] = $field_home_page_image ? $field_home_page_image->entity->image->get(0)->view('full') : "";
 
       // The title is accessible in the twig template using the renderable array page['#title'].
       // A new variable is not necessary.
-      //$variables['home_page_title'] = $node->title->view();
+      $variables['home_page_title'] = $node->title->view();
     }
   }
 }
@@ -35,11 +34,11 @@ function degov_preprocess_page(&$variables) {
 // Commented because fields can be now excluded in templates using the filter without.
 // These actions are not required anymore.
 // @see: https://www.drupal.org/docs/8/theming/twig/filters-modifying-variables-in-twig-templates
-//function degov_preprocess_node(&$vars) {
-//  if (isset($vars['node'])) {
-//    $node = $vars['node'];
-//    if ($node->getType() == 'home_page') {
-//      unset($vars['content']['field_home_page_image']);
-//    }
-//  }
-//}
+function degov_preprocess_node(&$vars) {
+  if (isset($vars['node'])) {
+    $node = $vars['node'];
+    if ($node->getType() == 'home_page') {
+      unset($vars['content']['field_home_page_image']);
+    }
+  }
+}

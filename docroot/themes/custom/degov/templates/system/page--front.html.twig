@@ -58,7 +58,54 @@
  * @see html.html.twig
  */
 #}
-{% extends 'themes/custom/degov/templates/system/page.html.twig' %}
+{% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
+{# Page top #}
+{% if page.page_intro %}
+  <div class="page-intro-wrapper">
+    <div class="page-intro container">
+      {{ page.page_intro }}
+    </div>
+  </div>
+{% endif %}
+{# Navbar #}
+{% if page.navigation or page.navigation_collapsible %}
+  {% block navbar %}
+    {% set navbar_classes = [
+    'navbar',
+    theme.settings.navbar_inverse ? 'navbar-inverse' : 'navbar-default',
+    theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : container,
+    ] %}
+    <div class="header-wrapper">
+      <header{{ navbar_attributes.addClass(navbar_classes) }} id="navbar" role="banner">
+        {% if not navbar_attributes.hasClass('container') %}
+        <div class="{{ container }}">
+          {% endif %}
+          <div class="navbar-header">
+            {{ page.navigation }}
+            {# .btn-navbar is used as the toggle for collapsed navbar content #}
+            {% if page.navigation_collapsible %}
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                <span class="sr-only">{{ 'Toggle navigation'|t }}</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            {% endif %}
+          </div>
+
+          {# Navigation (collapsible) #}
+          {% if page.navigation_collapsible %}
+            <div id="navbar-collapse" class="navbar-collapse collapse">
+              {{ page.navigation_collapsible }}
+            </div>
+          {% endif %}
+          {% if not navbar_attributes.hasClass('container') %}
+        </div>
+        {% endif %}
+      </header>
+    </div>
+  {% endblock %}
+{% endif %}
 
 {# Main #}
 {% block main %}
@@ -67,87 +114,103 @@
       <div class="home-page-wrapper">
         <div class="home-page-image">{{ home_page_image }}</div>
         <div class="home-page-title-wrapper">
-          <div class="home-page-title"><h1 class="page-header">{{ page['#title'] }}</h1></div>
-
+          <div class="home-page-title"><h1 class="page-header">{{ home_page_title }}</h1></div>
         </div>
       </div>
-        <div class="container">
+      <div class="container">
         <div class="row">
 
-        {# Header #}
-        {% if page.header %}
-          {% block header %}
-            <div class="col-sm-12" role="heading">
-              {{ page.header }}
-            </div>
-          {% endblock %}
-        {% endif %}
-
-        {# Sidebar First #}
-        {% if page.sidebar_first %}
-          {% block sidebar_first %}
-            <aside class="col-sm-3" role="complementary">
-              {{ page.sidebar_first }}
-            </aside>
-          {% endblock %}
-        {% endif %}
-
-        {# Content #}
-        {%
-          set content_classes = [
-            page.sidebar_first and page.sidebar_second ? 'col-sm-6',
-            page.sidebar_first and page.sidebar_second is empty ? 'col-sm-9',
-            page.sidebar_second and page.sidebar_first is empty ? 'col-sm-9',
-            page.sidebar_first is empty and page.sidebar_second is empty ? 'col-sm-12'
-          ]
-        %}
-        <section{{ content_attributes.addClass(content_classes) }}>
-
-          {# Highlighted #}
-          {% if page.highlighted %}
-            {% block highlighted %}
-              <div class="highlighted">{{ page.highlighted }}</div>
+          {# Header #}
+          {% if page.header %}
+            {% block header %}
+              <div class="col-sm-12" role="heading">
+                {{ page.header }}
+              </div>
             {% endblock %}
           {% endif %}
 
-          {# Breadcrumbs #}
-          {% if breadcrumb %}
-            {% block breadcrumb %}
-              {{ breadcrumb }}
-            {% endblock %}
-          {% endif %}
-
-          {# Action Links #}
-          {% if action_links %}
-            {% block action_links %}
-              <ul class="action-links">{{ action_links }}</ul>
-            {% endblock %}
-          {% endif %}
-
-          {# Help #}
-          {% if page.help %}
-            {% block help %}
-              {{ page.help }}
+          {# Sidebar First #}
+          {% if page.sidebar_first %}
+            {% block sidebar_first %}
+              <aside class="col-sm-3" role="complementary">
+                {{ page.sidebar_first }}
+              </aside>
             {% endblock %}
           {% endif %}
 
           {# Content #}
-          {% block content %}
-            <a id="main-content"></a>
-            {{ page.content }}
-          {% endblock %}
-        </section>
+          {% set content_classes = [
+          page.sidebar_first and page.sidebar_second ? 'col-sm-6',
+          page.sidebar_first and page.sidebar_second is empty ? 'col-sm-9',
+          page.sidebar_second and page.sidebar_first is empty ? 'col-sm-9',
+          page.sidebar_first is empty and page.sidebar_second is empty ? 'col-sm-12'
+          ] %}
+          <section{{ content_attributes.addClass(content_classes) }}>
 
-        {# Sidebar Second #}
-        {% if page.sidebar_second %}
-          {% block sidebar_second %}
-            <aside class="col-sm-3" role="complementary">
-              {{ page.sidebar_second }}
-            </aside>
-          {% endblock %}
-        {% endif %}
-      </div>
+            {# Highlighted #}
+            {% if page.highlighted %}
+              {% block highlighted %}
+                <div class="highlighted">{{ page.highlighted }}</div>
+              {% endblock %}
+            {% endif %}
+
+            {# Breadcrumbs #}
+            {% if breadcrumb %}
+              {% block breadcrumb %}
+                {{ breadcrumb }}
+              {% endblock %}
+            {% endif %}
+
+            {# Action Links #}
+            {% if action_links %}
+              {% block action_links %}
+                <ul class="action-links">{{ action_links }}</ul>
+              {% endblock %}
+            {% endif %}
+
+            {# Help #}
+            {% if page.help %}
+              {% block help %}
+                {{ page.help }}
+              {% endblock %}
+            {% endif %}
+
+            {# Content #}
+            {% block content %}
+              <a id="main-content"></a>
+              {{ page.content }}
+            {% endblock %}
+          </section>
+
+          {# Sidebar Second #}
+          {% if page.sidebar_second %}
+            {% block sidebar_second %}
+              <aside class="col-sm-3" role="complementary">
+                {{ page.sidebar_second }}
+              </aside>
+            {% endblock %}
+          {% endif %}
+        </div>
       </div>
     </div>
   </div>
 {% endblock %}
+
+{% if page.footer %}
+  {% block footer %}
+    <div class="footer-wrapper">
+      <footer class="footer {{ container }}" role="contentinfo">
+        {{ page.footer }}
+      </footer>
+    </div>
+  {% endblock %}
+{% endif %}
+
+{% if page.page_outro %}
+  <div class="page-outro-wrapper">
+    <div class="page-outro container">
+      {{ page.page_outro }}
+    </div>
+  </div>
+{% endif %}
+

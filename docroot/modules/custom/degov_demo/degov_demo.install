@@ -250,10 +250,11 @@ function degov_demo_install() {
         if (in_array($content_type, array('section_page', 'next_page'))) {
 
           $first_level = MenuLinkContent::create([
-            'title' => $insert_fields['title'],
+            'title' => $entry['menu_title'],
             'link' => ['uri' => 'internal:/node/' . $node->id()],
             'menu_name' => 'main',
             'expanded' => true,
+            'weight' => $entry['weight'],
           ]);
 
           $first_level->save();

@@ -16,7 +16,9 @@ home_page:
 # Bereichsseite
 section_page:
  -
-  xkey: "S1"
+  xkey: "S3"
+  menu_title: "Ministerium"
+  weight: "30"
   field_title: "Bundesministerium für Wirtschaft"
   field_section_page_image: "section_page/bm-w.jpg"
   field_section_page_color: "#666"
@@ -28,7 +30,9 @@ section_page:
   field_section_page_teaser_stitle: "Wirtschaftsinformationen"
   field_section_page_subtitle: "weitere Wirtschaftsinformationen"
  -
-  xkey: "S2"
+  xkey: "S1"
+  menu_title: "Aktuelles"
+  weight: "10"
   field_title: "Auswärtiges Amt"
   field_section_page_image: "section_page/bm-a.jpg"
   field_section_page_color: "#424242"
@@ -40,7 +44,9 @@ section_page:
   field_section_page_teaser_stitle: "Auswärtige Amt Informationen"
   field_section_page_subtitle: "weitere Informationen zum Auswärtigen Amt"
  -
-  xkey: "S3"
+  xkey: "S2"
+  menu_title: "Themen"
+  weight: "20"
   field_title: "Bundesministerium des Innern"
   field_section_page_image: "section_page/bm-i.jpg"
   field_section_page_color: "#474747"
@@ -55,7 +61,7 @@ section_page:
 # Artikel
 article_page:
  -
-  xparent: "S2"
+  xparent: "S1"
   field_title: "Flucht und Asyl: Fakten und Hintergründe"
   field_article_page_section: null
   field_article_page_datetime: "2016-12-24T00:00:00"
@@ -67,7 +73,7 @@ article_page:
   field_article_page_teaser_stitle: "Fucht & Asyl"
   field_article_page_subtitle: "Flucht & Asyl"
  -
-  xparent: "S2"
+  xparent: "S1"
   field_title: "EU-Migrationspartnerschaften Afrika"
   field_article_page_section: null
   field_article_page_datetime: "2016-12-23T00:00:00"
@@ -79,7 +85,7 @@ article_page:
   field_article_page_teaser_stitle: "Migration Afrika"
   field_article_page_subtitle: "Migration Afrika"
  -
-  xparent: "S1"
+  xparent: "S3"
   field_title: "Impro Dairy – Alles für gesunde Kühe"
   field_article_page_section: null
   field_article_page_datetime: "2016-12-20T00:00:00"
@@ -91,7 +97,7 @@ article_page:
   field_article_page_teaser_stitle: "Alles für gesunde Kühe"
   field_article_page_subtitle: "Alles für gesunde Kühe"
  -
-  xparent: "S1"
+  xparent: "S3"
   field_title: "Europäische Klimaabkommen"
   field_article_page_section: null
   field_article_page_datetime: "2016-12-19T00:00:00"
@@ -103,7 +109,7 @@ article_page:
   field_article_page_teaser_stitle: "Klimaabkommen"
   field_article_page_subtitle: "Klimaabkommen"
  -
-  xparent: "S3"
+  xparent: "S2"
   field_title: "Schutz der Außengrenzen wird Realität"
   field_article_page_section: "Schutz der EU-Außengrenzen wird Realität"
   field_article_page_datetime: "2016-12-18T00:00:00"
@@ -115,7 +121,7 @@ article_page:
   field_article_page_teaser_stitle: "Schutz der Realität"
   field_article_page_subtitle: "Schutz der Realität"
  -
-  xparent: "S3"
+  xparent: "S2"
   field_title: "Nato-Beschlüsse auf dem Prüfstand"
   field_article_page_section: null
   field_article_page_datetime: "2016-12-17T00:00:00"
@@ -127,7 +133,7 @@ article_page:
   field_article_page_teaser_stitle: "Nato-Beschlüsse"
   field_article_page_subtitle: "Nato-Beschlüsse"
  -
-  xparent: "S3"
+  xparent: "S2"
   field_title: "Strenge Kontrolle für Rüstungsexporte"
   field_article_page_section: null
   field_article_page_datetime: "2016-12-16T00:00:00"
@@ -139,7 +145,7 @@ article_page:
   field_article_page_teaser_stitle: "Kontrolle für Rüstungsexporte"
   field_article_page_subtitle: "Kontrolle für Rüstungsexporte"
  -
-  xparent: "S2"
+  xparent: "S1"
   field_title: "Reservisten machen fabelhaften Dienst"
   field_article_page_section: null
   field_article_page_datetime: "2016-12-15T00:00:00"
@@ -151,7 +157,7 @@ article_page:
   field_article_page_teaser_stitle: "Reservisten Dienst"
   field_article_page_subtitle: "Reservisten Dienst"
  -
-  xparent: "S2"
+  xparent: "S1"
   field_title: "Was Bürgern wichtig ist"
   field_article_page_section: null
   field_article_page_datetime: "2016-12-14T00:00:00"
@@ -166,10 +172,14 @@ article_page:
 # Nebenseite
 next_page:
  -
+  menu_title: "Mediathek"
+  weight: "50"
   field_title: "Jahresbericht des Normenkontrollrates"
   field_next_page_contents: null
   field_next_page_stitle: "Jahresbericht des Normenkontrollrates"
  -
+  menu_title: "Service"
+  weight: "40"
   field_title: "Gesellschaftlicher Dialog zur Nachhaltigkeit"
   field_next_page_contents: null
   field_next_page_stitle: "Gesellschaftlicher Dialog zur Nachhaltigkeit"
@@ -177,7 +187,7 @@ next_page:
 # Veranstaltung
 event_page:
  -
-  xparent: "S1"
+  xparent: "S3"
   field_title: "Infotag: Vergaberecht der öffentlichen Hand für Bieter"
   field_event_page_datetime_begin: "2016-12-08T09:30:00"
   field_event_page_section: null
@@ -191,7 +201,7 @@ event_page:
   field_event_page_stitle: "Eine Informationsveranstalltung für Bieter zur Vergabe der öffentlichen Hand"
   field_event_page_location: "Düsseldorf"
  -
-  xparent: "S2"
+  xparent: "S1"
   field_title: "Abfallarme Veranstaltungen im öffentlichen Bereich"
   field_event_page_datetime_begin: "2016-12-16T09:00:00"
   field_event_page_section: null
@@ -205,7 +215,7 @@ event_page:
   field_event_page_stitle: "Informationen und Tipps zur Abhaltung von abfallarmen Veranstaltungen im öffentlichen Bereich."
   field_event_page_location: "Dortmund"
  -
-  xparent: "S3"
+  xparent: "S2"
   field_title: "Regierungspressekonferenz"
   field_event_page_datetime_begin: "2017-01-24T12:15:00"
   field_event_page_section: null
