@@ -11,7 +11,7 @@ home_page:
   menu_title: "Startseite"
   menu_weight: "0"
   field_title: "Ministerium für digitale Angelegenheiten und Open Source"
-  field_home_page_image: null
+  field_home_page_image: "bundestag.jpg"
   field_home_page_mainarticle: null
   field_home_page_contents: null
 
