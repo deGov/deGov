@@ -19,3 +19,4 @@ dependencies:
   - taxonomy
   - user
   - workbench_moderation
+description: 'Stellt das Element Bereichsseite für deGov zur Verfügung.'
