@@ -73,6 +73,9 @@ modules:
   - degov_easy_breadcrumb
   - degov_subpages_teaserview
   - degov_welcome
+  - degov_simplenews_settings
+  - degov_twitter_block
+
 # A system path to redirect to once installation is complete.
 redirect:
   path: 'degov_welcome'

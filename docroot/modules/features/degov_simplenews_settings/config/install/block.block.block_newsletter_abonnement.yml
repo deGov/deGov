@@ -5,7 +5,7 @@ dependencies:
     - simplenews
   theme:
     - degov
-id: block__newsletter_abonnement
+id: block_newsletter_abonnement
 theme: degov
 region: footer
 weight: -4
