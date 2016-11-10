@@ -36,6 +36,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: /node/1
+    pages: '<front>'
     negate: false
     context_mapping: {  }
