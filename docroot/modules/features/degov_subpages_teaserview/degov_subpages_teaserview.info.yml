@@ -10,3 +10,4 @@ dependencies:
   - node
   - user
   - views
+description: 'Stellt das Element Unterseiten Teaseransicht für deGov zur Verfügung.'
