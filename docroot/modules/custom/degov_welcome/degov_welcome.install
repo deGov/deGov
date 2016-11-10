@@ -23,9 +23,12 @@ function degov_welcome_install() {
   // Place some blocks in the correct regions
 
   // Page intro
+  $block = Block::load('degov_searchform');
+  $block->setRegion('page_intro');
+  $block->save(0);
   $block = Block::load('degov_account_menu');
   $block->setRegion('page_intro');
-  $block->save();
+  $block->save(1);
 
   // Navigation
   $block = Block::load('degov_branding');
@@ -70,6 +73,10 @@ function degov_welcome_install() {
   $block = Block::load('degov_content');
   $block->setRegion('content');
   $block->setWeight(4);
+  $block->save();
+  $block = Block::load('degov_views_block__related_content_block_1');
+  $block->setRegion('content');
+  $block->setWeight(5);
   $block->save();
 
   /*
