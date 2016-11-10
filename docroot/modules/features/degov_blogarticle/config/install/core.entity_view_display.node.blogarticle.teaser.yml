@@ -1,30 +1,78 @@
 langcode: de
-status: false
+status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.blogarticle.field_blogarticle_datetime
     - field.field.node.blogarticle.field_blogarticle_image
+    - field.field.node.blogarticle.field_blogarticle_section
     - field.field.node.blogarticle.field_blogarticle_subtitle
     - field.field.node.blogarticle.field_blogarticle_tags
+    - field.field.node.blogarticle.field_blogarticle_teaser_color
+    - field.field.node.blogarticle.field_blogarticle_teaser_image
+    - field.field.node.blogarticle.field_blogarticle_teaser_stitle
+    - field.field.node.blogarticle.field_blogarticle_teaser_title
     - field.field.node.blogarticle.field_blogarticle_text
     - node.type.blogarticle
   module:
+    - color_field
+    - panelizer
     - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.blogarticle.teaser
 targetEntityType: node
 bundle: blogarticle
 mode: teaser
 content:
-  links:
-    weight: 100
+  field_blogarticle_teaser_color:
+    type: color_field_formatter_text
+    weight: 3
+    label: hidden
+    settings:
+      opacity: '1'
+      format: hex
+    third_party_settings: {  }
+  field_blogarticle_teaser_image:
+    type: entity_reference_entity_view
+    weight: 4
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+  field_blogarticle_teaser_stitle:
+    type: string
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_blogarticle_teaser_title:
+    type: string
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  shariff_field:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
   workbench_moderation_control:
-    weight: -20
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   field_blogarticle_datetime: true
   field_blogarticle_image: true
+  field_blogarticle_section: true
   field_blogarticle_subtitle: true
   field_blogarticle_tags: true
   field_blogarticle_text: true
   langcode: true
-  shariff_field: true
+  links: true

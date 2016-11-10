@@ -40,7 +40,8 @@
         "drupal/search404": "8.x-1.x-dev",
         "drupal/color_field": "8.x-2.x-dev",
         "drupal/elasticsearch_connector": "8.x",
-        "drupal/viewsreference": "8.x"
+        "drupal/viewsreference": "8.x",
+        "drupal/simplenews": "8.x-1.x-dev"
     },
     "repositories": {
         "drupal": {

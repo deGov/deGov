@@ -1,0 +1,33 @@
+hash_expiration: 86400
+newsletter:
+  format: plain
+  priority: 3
+  receipt: false
+  from_address: degov@test.publicplan.de
+  from_name: 'DeGov - Newsletter'
+subscriber:
+  sync_fields: true
+subscription:
+  use_combined: 'Bestätigung für [simplenews-newsletter:name] aus [site:name]'
+  confirm_subscribe_subject: 'Bestätigung für [simplenews-newsletter:name] aus [site:name]'
+  confirm_subscribe_unsubscribed: "Wir haben einen Auftrag bekommen, um  diese Adresse [simplenews-subscriber:mail] auf [simplenews-newsletter:name] newsletter bei [site:name] zu abonnieren. Benutzen Sie den Link unten, um es zu bestätigen.\r\n\r\n [simplenews-subscriber:subscribe-url]"
+  confirm_subscribe_subscribed: "Wir haben einen Auftrag bekommen, um  diese Adresse [simplenews-subscriber:mail] auf [simplenews-newsletter:name] newsletter bei [site:name] zu abonnieren. Allerdings ist diese E-Mail-Adresse bereits abonniert. \r\nWenn Sie Ihr Abonnement abbestellen möchten, besuchen Sie bitte unsere Seite: [site:url]"
+  confirm_unsubscribe_subscribed: "Wir haben einen Auftrag bekommen, um  diese Adresse [simplenews-subscriber:mail] auf [simplenews-newsletter:name] newsletter bei [site:name] zu abzubestellen. Benutzen Sie den Link unten, um es zu bestätigen.\r\n\r\n[simplenews-subscriber:unsubscribe-url]"
+  confirm_unsubscribe_unsubscribed: "Wir haben einen Auftrag bekommen, um  das Abonnement der Adresse [simplenews-subscriber:mail] auf [simplenews-newsletter:name] newsletter bei [site:name] abzubestellen. Allerdings ist diese E-Mail-Adresse noch nicht abonniert.\r\nWenn Sie sich abonnieren möchten, besuchen Sie unsere Seite: [site:url]"
+  confirm_combined_subject: 'Bestätigung für [site:name]'
+  confirm_combined_body: "Wir haben einen Auftrag, um das Abonnement für  [simplenews-subscriber:mail] auf [site:url] zu verändern. Die Veränderungen sind:\r\n\r\n[changes-list]\r\n\r\nBenutzen Sie den Link unten, um es zu bestätigen.\r\n\r\n[simplenews-subscriber:combined-url]"
+  confirm_combined_body_unchanged: "Wir haben eine Auftrag, um das Abonnement für  [simplenews-subscriber:mail] auf [site:url] zu verändern. Die Veränderungen sind: \r\n\r\n[changes-list]\r\n\r\nEine Bestätiguns ist nicht benötigt, weil die gewunschten Anpassungen den aktuell Status nicht verändern."
+  confirm_combined_line_subscribe_unsubscribed: 'Abonnieren auf [simplenews-newsletter:name]'
+  confirm_combined_line_subscribe_subscribed: 'Bereits abonniert auf [simplenews-newsletter:name]'
+  confirm_combined_line_unsubscribe_subscribed: 'Abonnement vom [simplenews-newsletter:name] abbestellen'
+  confirm_combined_line_unsubscribe_unsubscribed: 'Das Abonnement auf [simplenews-newsletter:name] ist nun abbestellt'
+  confirm_subscribe_page: ''
+  confirm_unsubscribe_page: ''
+  combined_body_unchanged: "Wir haben einen Auftrag, um das Abonnement für  [simplenews-subscriber:mail] auf [site:url] zu verändern. Die Veränderungen sind:\r\n\r\n[changes-list]\r\n\r\nEine Bestätiguns ist nicht benötigt, weil die gewunschten Anpassungen den aktuell Status nicht verändern."
+mail:
+  use_cron: true
+  throttle: 20
+  spool_progress_expiration: 3600
+  spool_expire: 0
+  debug: false
+langcode: de

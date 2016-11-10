@@ -18,7 +18,7 @@ function degov_welcome_install() {
   \Drupal::configFactory()->getEditable('system.theme')->set('default', 'degov')->save(TRUE);
 
   // Set first node as default frontpage
-  \Drupal::configFactory()->getEditable('system.site')->set('page.front', '/willkommen-auf-degov')->save(TRUE);
+  \Drupal::configFactory()->getEditable('system.site')->set('page.front', '/node/1')->save(TRUE);
 
   // Place some blocks in the correct regions
 
@@ -71,6 +71,13 @@ function degov_welcome_install() {
   $block->setRegion('content');
   $block->setWeight(4);
   $block->save();
+
+  /*
+  $block = Block::load('twitterblock');
+  $block->setRegion('content');
+  $block->setWeight(5);
+  $block->save();
+  */
 
   // Footer
   $block = Block::load('degov_powered');
