@@ -4,6 +4,8 @@ dependencies:
   config:
     - field.storage.node.field_home_page_contents
     - node.type.article_page
+    - node.type.blogarticle
+    - node.type.event_page
     - node.type.home_page
     - node.type.section_page
 id: node.home_page.field_home_page_contents
@@ -20,10 +22,12 @@ settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
-      article_page: article_page
       section_page: section_page
+      blogarticle: blogarticle
+      article_page: article_page
+      event_page: event_page
     sort:
       field: _none
     auto_create: false
-    auto_create_bundle: article_page
+    auto_create_bundle: section_page
 field_type: entity_reference

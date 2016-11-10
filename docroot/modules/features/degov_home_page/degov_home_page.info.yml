@@ -3,6 +3,8 @@ type: module
 core: 8.x
 dependencies:
   - degov_article_page
+  - degov_blogarticle
+  - degov_event_page
   - degov_section_page
   - entity_browser
   - field
