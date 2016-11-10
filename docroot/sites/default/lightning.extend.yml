@@ -71,6 +71,7 @@ modules:
   - degov_blogarticle
   - degov_userroles
   - degov_easy_breadcrumb
+  - degov_subpages_teaserview
   - degov_welcome
 # A system path to redirect to once installation is complete.
 redirect:
