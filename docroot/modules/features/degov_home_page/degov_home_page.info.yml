@@ -18,3 +18,4 @@ dependencies:
   - path
   - user
   - workbench_moderation
+description: 'Stellt die deGov Startseiten Ansicht zur Verfügung.'
