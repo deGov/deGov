@@ -12,3 +12,4 @@ dependencies:
   - path
   - user
   - workbench_moderation
+description: 'Stellt das Element Nebenseite für deGov zur Verfügung.'
