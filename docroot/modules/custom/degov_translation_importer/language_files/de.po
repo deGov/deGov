@@ -1,10 +1,10 @@
-# German translation of Drupal
+# German translation of dev.Gov
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-11-07 09:23+0100\n"
-"PO-Revision-Date: 2016-11-07 09:23+0100\n"
+"POT-Creation-Date: 2016-11-10 11:16+0100\n"
+"PO-Revision-Date: 2016-11-10 11:16+0100\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -19959,6 +19959,9 @@ msgstr "Verbundener Pfad"
 msgid "Menu link count"
 msgstr "Menü-Link-Zähler"
 
+msgid "Paragraph type"
+msgstr "Abschnitt-Typ"
+
 msgid "Reinstall modules"
 msgstr "Module neu installieren"
 
@@ -20968,9 +20971,6 @@ msgstr "Titel: @title"
 
 msgid "The user ID of the author of the current revision."
 msgstr "Die Benutzerkennung des Autoren der aktuellen Überarbeitung."
-
-msgid "Paragraph type"
-msgstr "Abschnitt-Typ"
 
 msgid ""
 "Label to appear as title on the button as \"Add new [title]\", this "
@@ -22135,4 +22135,111 @@ msgstr "Auszuschließende Pfade"
 
 msgid "No content types available"
 msgstr "Es sind keine Inhaltstypen vorhanden."
+
+msgid "@title"
+msgstr "@title"
+
+msgid "Mark old nodes as read"
+msgstr "Alte Beiträge als gelesen markieren"
+
+msgid "Update indexes"
+msgstr "Indizes aktualisieren"
+
+msgid "enabled"
+msgstr "aktiviert"
+
+msgid "Logs"
+msgstr "Logs"
+
+msgid "Throttle"
+msgstr "Lastreduzierung"
+
+msgid "Serial"
+msgstr "Seriennummer"
+
+msgid "anonymous"
+msgstr "Gast"
+
+msgid "Expiration"
+msgstr "Verfällt am"
+
+msgid "Threshold"
+msgstr "Grenzwert"
+
+msgid "Rules"
+msgstr "Rules"
+
+msgid "Start Time"
+msgstr "Startzeit"
+
+msgid "End Time"
+msgstr "Ende"
+
+msgid "Threads"
+msgstr "Themen"
+
+msgid "by"
+msgstr "von"
+
+msgid "Run"
+msgstr "﻿Ausführen"
+
+msgid "running"
+msgstr "In Bearbeitung"
+
+msgid "Simple"
+msgstr "Einfach"
+
+msgid "Logger"
+msgstr "Protokollierung"
+
+msgid "Time until expiration"
+msgstr "Verbleibender Zeitraum bis zum Verfall der Rolle"
+
+msgid "Queue"
+msgstr "Warteschlange"
+
+msgid "Scheduled"
+msgstr "Geplant"
+
+msgid "Scheduler"
+msgstr "Zeitplaner"
+
+msgid "Module Name"
+msgstr "Modulname"
+
+msgid ""
+"This will appear in the administrative interface to easily identify "
+"it."
+msgstr ""
+"Dieser wird zur leichteren Identifizierung in der "
+"Verwaltungsoberfläche angezeigt."
+
+msgid "Lock timeout"
+msgstr "Verfallzeit für Sperre"
+
+msgid "Default (@default)"
+msgstr "Standard (@default)"
+
+msgid "Administer Ultimate Cron"
+msgstr "Ultimate Cron verwalten"
+
+msgid "Lets you configure everything in Ultimate Cron"
+msgstr "Lässt Sie alles in Ultimate Cron konfigurieren"
+
+msgid "Enable cron job"
+msgstr "Cron-Job aktivieren"
+
+msgid "Disable cron job"
+msgstr "Cron-Job deaktivieren"
+
+msgid "Username or email address"
+msgstr "Benutzername oder E-Mail Adresse"
+
+msgid ""
+"Password reset instructions will be sent to your registered email "
+"address."
+msgstr ""
+"Informationen wie Sie Ihr Passwort zurücksetzten werden an Ihre "
+"registrierte E-Mail-Adresse gesendet."
 
