@@ -1,44 +1,7 @@
 // Styles for frontpage
 
-// Set width for home_page_image
-.home-page-wrapper {
-  position: relative;
-  margin-bottom: $vertical-gutter-width;
-  @include container-fixed();
-  width: 100%;
-  @include larger-than(1600px) {
-    width: 1600px;
-  }
-}
-.home-page-image {
-  img {
-    @include container-fixed();
-  }
-}
-.home-page-title-wrapper {
-  position: relative;
-  @include container-fixed();
-  @include larger-than($container-large-desktop) {
-    width: $container-large-desktop;
-  }
-}
-.home-page-title {
-  position: absolute;
-  bottom: -$vertical-gutter-width;
-  width: 100%;
-  background-color: $color-white;
-  padding: 0 $grid-gutter-width;
-}
 
 // Hide normal node title
-.page-node-type-home-page {
-  .container {
-    .page-header {
-      display: none;
-    }
-  }
-  // Add background because box model was changed.
-  .main-container {
-    background: $gray-lighter;
-  }
+.page-node-type-home-page .region-content .page-header {
+  display: none;
 }
