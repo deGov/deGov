@@ -5,3 +5,4 @@ dependencies:
   - block
   - system
   - twitter_block
+description: 'Stellt das Element Twitter Block für deGov zur Verfügung.'
