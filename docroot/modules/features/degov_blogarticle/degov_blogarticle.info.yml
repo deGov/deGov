@@ -20,3 +20,4 @@ dependencies:
   - text
   - user
   - workbench_moderation
+description: 'Stellt das Element Blogartikel / Pressemitteilung für deGov zur Verfügung.'
