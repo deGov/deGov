@@ -96,5 +96,7 @@ function degov_welcome_install() {
   $block->setWeight(1);
   $block->save();
 
+  // Run cron, so contents get indexed
+  Drupal::service('cron')->run();
 
 }
