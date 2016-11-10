@@ -1,3 +1,4 @@
 name: 'deGov - Shariff Social Share'
 type: module
 core: 8.x
+description: 'Shariff ermöglicht das Teilen von Webseiten Inhalten in sozialen Medien ohne die Privatsphäre der User einzuschränken.'
