@@ -1,0 +1,7 @@
+name: 'deGov - Cronconfig'
+type: module
+core: 8.x
+description: 'Beinhaltet die Konfiguration für die System-Crons'
+dependencies:
+  - automated_cron
+  - ultimate_cron

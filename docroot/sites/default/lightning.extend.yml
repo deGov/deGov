@@ -75,7 +75,9 @@ modules:
   - degov_welcome
   - degov_simplenews_settings
   - degov_twitter_block
-
+  - automated_cron
+  - ultimate_cron
+  - degov_cronconfig
 # A system path to redirect to once installation is complete.
 redirect:
   path: 'degov_welcome'
