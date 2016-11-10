@@ -1,4 +1,3 @@
-# German translation of dev.Gov
 #
 msgid ""
 msgstr ""
@@ -21621,9 +21620,6 @@ msgstr ""
 "<p>By clicking any link on this page you are "
 "giving your consent for us to set cookies.</p>\r\n"
 ""
-
-msgid "[current-page:title] | [site:name]"
-msgstr "dev.degov.local | [current-page:title] | [site:name]"
 
 msgid "Password Policy"
 msgstr "Passwort Regel"
