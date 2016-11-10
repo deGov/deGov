@@ -21,3 +21,4 @@ dependencies:
   - taxonomy
   - user
   - workbench_moderation
+description: 'Stellt das Element Veranstaltung für deGov zur Verfügung.'
