@@ -2,6 +2,7 @@ name: 'deGov - Paragraphs - Kontaktformular'
 type: module
 core: 8.x
 dependencies:
+  - contact
   - contact_storage
   - field
   - paragraphs
