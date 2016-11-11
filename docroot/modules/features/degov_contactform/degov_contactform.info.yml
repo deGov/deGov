@@ -1,0 +1,8 @@
+name: 'deGov - Kontaktformular'
+type: module
+core: 8.x
+dependencies:
+  - contact
+  - contact_storage
+  - field
+  - options
