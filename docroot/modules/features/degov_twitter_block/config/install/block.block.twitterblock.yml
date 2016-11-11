@@ -9,7 +9,7 @@ dependencies:
 id: twitterblock
 theme: degov
 region: content
-weight: 0
+weight: 50
 provider: null
 plugin: twitter_block
 settings:

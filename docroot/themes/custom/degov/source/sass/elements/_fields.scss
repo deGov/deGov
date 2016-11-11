@@ -38,7 +38,7 @@
 // Format reference fields {
 .field--name-field-home-page-contents {
 	@include make-row();
-	.field--item {
+	>.field--item {
 		@include make-xs-column(12);
 		@include make-sm-column(6);
 		article {

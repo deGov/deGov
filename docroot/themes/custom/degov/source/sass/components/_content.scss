@@ -4,5 +4,6 @@
 	background-color: $gray-lighter;
 }
 .main-container {
-	padding-bottom: $line-height-computed;
+	background: $color-white;
+	padding-bottom: $vertical-gutter-width;
 }
