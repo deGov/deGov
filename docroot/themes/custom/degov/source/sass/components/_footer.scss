@@ -11,6 +11,7 @@
 
 
 .region-footer, .region-page-outro {
+  @include make-row();
   .menu {
     margin-left: -15px; // from $nav-link-padding
     li {
@@ -21,5 +22,9 @@
         text-decoration: underline;
       }
     }
+  }
+  #block-twitterblock, #block-block-newsletter-abonnement {
+    @include make-xs-column(12);
+    @include make-sm-column(6);
   }
 }
