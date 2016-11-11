@@ -33,13 +33,15 @@
 }
 
 .header-wrapper{
-	// Right align navigation
-	.navbar-header {
-		width: 100%;
-		#block-degov-main-menu {
-			float: right;
-			font-size: $font-size-large;
-			font-weight: 600;
+	@include larger-than($screen-tablet) {
+		// Right align navigation
+		.navbar-header {
+			width: 100%;
+			#block-degov-main-menu {
+				float: right;
+				font-size: $font-size-large;
+				font-weight: 600;
+			}
 		}
 	}
 }
