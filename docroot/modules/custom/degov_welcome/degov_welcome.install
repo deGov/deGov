@@ -113,7 +113,7 @@ function degov_welcome_install() {
   $block = null;
   $block = Block::load('degov_powered');
   if ($block) {
-    $block->setRegion('footer');
+    $block->setRegion('page_outro');
     $block->setWeight(0);
     $block->save();
   }
@@ -121,7 +121,7 @@ function degov_welcome_install() {
   $block = null;
   $block = Block::load('degov_footer');
   if ($block) {
-    $block->setRegion('footer');
+    $block->setRegion('page_outro');
     $block->setWeight(1);
     $block->save();
   }
