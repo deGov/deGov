@@ -42,3 +42,18 @@ function degov_preprocess_node(&$vars) {
     }
   }
 }
+
+/**
+ * Add fields to paragraph templates
+ *
+ * @param $variables
+ */
+function degov_preprocess_paragraph(&$variables) {
+  if(isset($variables['paragraph'])) {
+    $paragraph = $variables['paragraph'];
+    if($paragraph->getType() == 'image_text_element') {
+      $alignment = $paragraph->get('field_image_text_element_align')->get(0)->getValue()['value'];
+      $variables['alignment'] = $alignment;
+    }
+  }
+}
