@@ -45,7 +45,7 @@ function degov_welcome_install() {
   $block = null;
   $block = Block::load('degov_main_menu');
   if ($block) {
-    $block->setRegion('navigation');
+    $block->setRegion('navigation_collapsible');
     $block->setWeight(1);
     $menu_plugin = $block->getPlugin();
     $menu_plugin->setConfigurationValue('depth', 2);
