@@ -27,9 +27,12 @@
 	border: none;
 }
 
-.dropdown-menu > li  > a {
-	line-height: $line-height-computed * 1.5;
-	//padding: 0 $grid-gutter-width;
+.dropdown-menu {
+	left: auto;
+	right: 0;
+	> li  > a {
+		line-height: $line-height-computed * 1.5;
+	}
 }
 
 .header-wrapper{

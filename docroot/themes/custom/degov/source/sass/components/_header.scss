@@ -12,6 +12,15 @@
 
 .navbar-collapse {
 	.navbar-nav {
-		float: right;
+		a {
+			text-align: center;
+			&.dropdown-toggle {
+				font-weight: bold;
+			}
+		}
+		// Float right for larger screens
+		@include larger-than($screen-tablet) {
+			float: right;
+		}
 	}
 }
