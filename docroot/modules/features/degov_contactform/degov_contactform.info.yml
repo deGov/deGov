@@ -7,3 +7,4 @@ dependencies:
   - contact_storage
   - field
   - options
+  - degov_contactform_element
