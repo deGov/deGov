@@ -1,0 +1,18 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_faq_element_answer
+    - paragraphs.paragraphs_type.faq_element
+id: paragraph.faq_element.field_faq_element_answer
+field_name: field_faq_element_answer
+entity_type: paragraph
+bundle: faq_element
+label: Antwort
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

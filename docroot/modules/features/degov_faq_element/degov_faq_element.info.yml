@@ -1,0 +1,8 @@
+name: 'deGov - Paragraphs - FAQ'
+description: 'Stellt den Absatztyp FAQ und die zugehörige Konfiguration bereit.'
+type: module
+core: 8.x
+dependencies:
+  - field
+  - paragraphs
+  - workbench_moderation
