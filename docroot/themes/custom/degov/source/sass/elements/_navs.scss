@@ -22,9 +22,19 @@
   padding-right: 0;
 }
 
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+	border-color: $color-gray;
+}
+
 .navbar-default {
 	background: none;
 	border: none;
+	.navbar-toggle {
+		border-color: $color-gray;
+		.icon-bar {
+			background-color: $color-gray;
+		}
+	}
 }
 
 .dropdown-menu {
