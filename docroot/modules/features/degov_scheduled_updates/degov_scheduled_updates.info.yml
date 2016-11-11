@@ -1,0 +1,10 @@
+name: 'deGov - Scheduled Updates'
+type: module
+core: 8.x
+dependencies:
+  - field
+  - options
+  - scheduled_updates
+  - user
+  - workbench_moderation
+description: 'Stellt die Funktionalität für geplante Aufgaben zur Verfügung.'

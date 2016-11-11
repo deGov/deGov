@@ -1,0 +1,30 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.scheduled_update.publish_unpublish.field_moderation_state_2
+    - scheduled_updates.scheduled_update_type.publish_unpublish
+id: scheduled_update.publish_unpublish.default
+targetEntityType: scheduled_update
+bundle: publish_unpublish
+mode: default
+content:
+  entity_ids:
+    type: entity_reference_autocomplete
+    weight: -10
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_moderation_state_2:
+    type: options_select
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+  update_timestamp:
+    type: datetime_timestamp
+    weight: -9
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

@@ -79,6 +79,8 @@ modules:
   - automated_cron
   - ultimate_cron
   - degov_cronconfig
+  - scheduled_updates
+  - degov_scheduled_updates
 # A system path to redirect to once installation is complete.
 redirect:
   path: 'degov_welcome'
