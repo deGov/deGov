@@ -84,7 +84,9 @@ modules:
   - contact_storage
   - degov_contactform_element
   - degov_contactform
+  - degov_languageswichter
   - degov_media_video
+  - degov_searchform
 # A system path to redirect to once installation is complete.
 redirect:
   path: 'degov_welcome'
