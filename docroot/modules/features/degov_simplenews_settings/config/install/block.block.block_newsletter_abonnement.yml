@@ -18,6 +18,6 @@ settings:
   label_display: visible
   newsletters:
     degov_newsletter: degov_newsletter
-  message: 'Bleiben Sie informiert - abonnieren Sie auf unseren Newsletter'
+  message: 'Bleiben Sie informiert - abonnieren Sie unseren Newsletter'
   unique_id: degov_newsletter_abonnement
 visibility: {  }
