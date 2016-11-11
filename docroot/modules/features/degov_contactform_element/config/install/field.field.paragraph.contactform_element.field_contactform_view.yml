@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_contactform_view
+    - paragraphs.paragraphs_type.contactform_element
+id: paragraph.contactform_element.field_contactform_view
+field_name: field_contactform_view
+entity_type: paragraph
+bundle: contactform_element
+label: Kontaktformular
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:contact_form'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

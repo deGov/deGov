@@ -80,7 +80,6 @@ modules:
   - degov_cronconfig
   - contact_storage
   - degov_contactform_element
-  - degov_contactform
 # A system path to redirect to once installation is complete.
 redirect:
   path: 'degov_welcome'

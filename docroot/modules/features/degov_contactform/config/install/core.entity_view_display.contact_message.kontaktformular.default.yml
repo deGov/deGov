@@ -18,9 +18,10 @@ content:
   field_email:
     weight: 3
     label: above
-    settings: {  }
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
-    type: basic_string
+    type: string
   field_firstname:
     weight: 1
     label: above

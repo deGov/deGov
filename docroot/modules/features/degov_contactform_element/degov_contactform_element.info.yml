@@ -3,4 +3,7 @@ type: module
 core: 8.x
 dependencies:
   - contact_storage
+  - field
   - paragraphs
+  - workbench_moderation
+description: 'Stellt den Paragraphs Typ für die Einbindung von Kontaktformularen bereit.'

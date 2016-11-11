@@ -12,7 +12,7 @@ third_party_settings:
 id: kontaktformular
 label: Kontaktformular
 recipients:
-  - deGov@test.publicplan.de
+  - degov@test.publicplan.de
 reply: ''
 weight: 0
 message: 'Vielen Dank für Ihre Anfrage.'
