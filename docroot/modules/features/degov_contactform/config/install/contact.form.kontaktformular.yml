@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact_storage
+third_party_settings:
+  contact_storage:
+    submit_text: 'Nachricht senden'
+    show_preview: false
+    disabled_form_message: 'Dieses Kontaktformular ist vorrübergehend inaktiv.'
+    maximum_submissions_user: 0
+id: kontaktformular
+label: Kontaktformular
+recipients:
+  - degov@test.publicplan.de
+reply: ''
+weight: 0
+message: 'Vielen Dank für Ihre Anfrage.'
+redirect: ''

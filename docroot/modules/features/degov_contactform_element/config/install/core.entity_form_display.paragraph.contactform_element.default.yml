@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.contactform_element.field_contactform_view
+    - paragraphs.paragraphs_type.contactform_element
+  module:
+    - workbench_moderation
+id: paragraph.contactform_element.default
+targetEntityType: paragraph
+bundle: contactform_element
+mode: default
+content:
+  field_contactform_view:
+    weight: 6
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+hidden:
+  created: true
+  status: true
+  uid: true
