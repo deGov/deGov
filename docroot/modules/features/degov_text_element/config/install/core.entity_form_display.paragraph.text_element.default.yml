@@ -8,7 +8,6 @@ dependencies:
     - field.field.paragraph.text_element.field_text_element_title
     - paragraphs.paragraphs_type.text_element
   module:
-    - color_field
     - text
     - workbench_moderation
 id: paragraph.text_element.default
@@ -25,7 +24,7 @@ content:
     weight: 9
     settings: {  }
     third_party_settings: {  }
-    type: color_field_widget_html5
+    type: options_select
   field_text_element_text:
     weight: 7
     settings:

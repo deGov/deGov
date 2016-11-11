@@ -14,7 +14,6 @@ dependencies:
     - field.field.node.article_page.field_article_page_teaser_title
     - node.type.article_page
   module:
-    - color_field
     - datetime
     - entity_browser
     - paragraphs
@@ -69,12 +68,12 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
   field_article_page_teaser_color:
-    weight: 7
+    weight: 8
     settings: {  }
     third_party_settings: {  }
-    type: color_field_widget_html5
+    type: options_select
   field_article_page_teaser_image:
-    weight: 8
+    weight: 7
     settings:
       entity_browser: media_browser
       field_widget_display: rendered_entity

@@ -5,7 +5,7 @@ dependencies:
     - field.storage.node.field_blogarticle_teaser_color
     - node.type.blogarticle
   module:
-    - color_field
+    - options
 id: node.blogarticle.field_blogarticle_teaser_color
 field_name: field_blogarticle_teaser_color
 entity_type: node
@@ -16,6 +16,5 @@ required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
-settings:
-  opacity: 0
-field_type: color_field_type
+settings: {  }
+field_type: list_string

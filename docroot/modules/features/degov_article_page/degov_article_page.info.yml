@@ -2,7 +2,6 @@ name: 'deGov - Inhaltsseite'
 type: module
 core: 8.x
 dependencies:
-  - color_field
   - datetime
   - degov_section_page
   - degov_tags
@@ -15,6 +14,7 @@ dependencies:
   - media_entity
   - menu_ui
   - node
+  - options
   - panelizer
   - paragraphs
   - path

@@ -15,7 +15,6 @@ dependencies:
     - field.field.node.section_page.field_section_page_teaser_title
     - node.type.section_page
   module:
-    - color_field
     - entity_browser
     - paragraphs
     - path
@@ -34,7 +33,7 @@ content:
     weight: 3
     settings: {  }
     third_party_settings: {  }
-    type: color_field_widget_html5
+    type: options_select
   field_section_page_contents:
     type: entity_reference_paragraphs
     weight: 5

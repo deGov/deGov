@@ -15,7 +15,6 @@ dependencies:
     - field.field.node.blogarticle.field_blogarticle_text
     - node.type.blogarticle
   module:
-    - color_field
     - datetime
     - entity_browser
     - path
@@ -72,12 +71,12 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
   field_blogarticle_teaser_color:
-    weight: 8
+    weight: 9
     settings: {  }
     third_party_settings: {  }
-    type: color_field_widget_html5
+    type: options_select
   field_blogarticle_teaser_image:
-    weight: 9
+    weight: 8
     settings:
       entity_browser: media_browser
       field_widget_display: rendered_entity

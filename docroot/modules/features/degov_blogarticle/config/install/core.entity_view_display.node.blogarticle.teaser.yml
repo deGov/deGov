@@ -15,7 +15,7 @@ dependencies:
     - field.field.node.blogarticle.field_blogarticle_text
     - node.type.blogarticle
   module:
-    - color_field
+    - options
     - panelizer
     - user
 third_party_settings:
@@ -30,16 +30,14 @@ bundle: blogarticle
 mode: teaser
 content:
   field_blogarticle_teaser_color:
-    type: color_field_formatter_text
-    weight: 3
+    type: list_key
+    weight: 4
     label: hidden
-    settings:
-      opacity: '1'
-      format: hex
+    settings: {  }
     third_party_settings: {  }
   field_blogarticle_teaser_image:
     type: entity_reference_entity_view
-    weight: 4
+    weight: 3
     label: hidden
     settings:
       view_mode: default

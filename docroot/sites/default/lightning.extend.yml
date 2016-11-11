@@ -21,7 +21,6 @@ modules:
   - simple_sitemap
   - filter
   - features
-  - color_field
   - degov_eu_cookie_compliance
   - degov_pathauto
   - entity_reference_revisions

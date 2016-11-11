@@ -14,8 +14,8 @@ dependencies:
     - field.field.node.section_page.field_section_page_teaser_title
     - node.type.section_page
   module:
-    - color_field
     - entity_reference_revisions
+    - options
     - panelizer
     - user
 third_party_settings:
@@ -30,23 +30,21 @@ bundle: section_page
 mode: default
 content:
   field_section_page_color:
-    weight: 3
+    weight: 4
     label: hidden
-    settings:
-      opacity: '1'
-      format: hex
+    settings: {  }
     third_party_settings: {  }
-    type: color_field_formatter_text
+    type: list_key
   field_section_page_contents:
     type: entity_reference_revisions_entity_view
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
   field_section_page_image:
-    weight: 1
+    weight: 2
     label: hidden
     settings:
       link: true
@@ -54,14 +52,16 @@ content:
     third_party_settings: {  }
     type: entity_reference_entity_view
   field_section_page_subtitle:
-    weight: 0
+    weight: 1
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   workbench_moderation_control:
-    weight: -20
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   field_section_page_section: true
   field_section_page_tags: true

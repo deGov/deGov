@@ -5,17 +5,16 @@ dependencies:
     - field.storage.paragraph.field_citation_element_color
     - paragraphs.paragraphs_type.citation_element
   module:
-    - color_field
+    - options
 id: paragraph.citation_element.field_citation_element_color
 field_name: field_citation_element_color
 entity_type: paragraph
 bundle: citation_element
 label: Farbe
-description: ''
+description: '<span class="grey"></span><span class="blue"></span><span class="red"></span><span class="yellow"></span><span class="green"></span>'
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
-settings:
-  opacity: 0
-field_type: color_field_type
+settings: {  }
+field_type: list_string

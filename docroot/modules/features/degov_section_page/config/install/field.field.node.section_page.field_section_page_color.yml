@@ -5,17 +5,16 @@ dependencies:
     - field.storage.node.field_section_page_color
     - node.type.section_page
   module:
-    - color_field
+    - options
 id: node.section_page.field_section_page_color
 field_name: field_section_page_color
 entity_type: node
 bundle: section_page
 label: Farbe
-description: ''
+description: '<span class="grey"></span><span class="blue"></span><span class="red"></span><span class="yellow"></span><span class="green"></span>'
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
-settings:
-  opacity: 0
-field_type: color_field_type
+settings: {  }
+field_type: list_string

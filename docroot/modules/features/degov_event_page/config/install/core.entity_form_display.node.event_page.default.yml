@@ -16,7 +16,6 @@ dependencies:
     - field.field.node.event_page.field_event_page_teaser_title
     - node.type.event_page
   module:
-    - color_field
     - datetime
     - entity_browser
     - paragraphs
@@ -83,10 +82,10 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
   field_event_page_teaser_color:
-    weight: 10
+    weight: 26
     settings: {  }
     third_party_settings: {  }
-    type: color_field_widget_html5
+    type: options_select
   field_event_page_teaser_image:
     weight: 9
     settings:

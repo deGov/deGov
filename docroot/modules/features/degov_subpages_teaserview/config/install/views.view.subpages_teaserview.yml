@@ -2,10 +2,10 @@ langcode: de
 status: true
 dependencies:
   config:
-    - field.storage.node.field_article_page_teaser_color
     - field.storage.node.field_article_page_teaser_image
     - field.storage.node.field_article_page_teaser_stitle
     - field.storage.node.field_article_page_teaser_title
+    - field.storage.node.field_article_page_teaser_color
     - field.storage.node.field_blogarticle_teaser_color
     - field.storage.node.field_blogarticle_teaser_image
     - field.storage.node.field_blogarticle_teaser_stitle
@@ -23,8 +23,8 @@ dependencies:
     - node.type.event_page
     - node.type.section_page
   module:
-    - color_field
     - node
+    - options
     - user
 id: subpages_teaserview
 label: 'Unterseiten Teaseransicht'
@@ -319,70 +319,6 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_article_page_teaser_color:
-          id: field_article_page_teaser_color
-          table: node__field_article_page_teaser_color
-          field: field_article_page_teaser_color
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: color
-          type: color_field_formatter_text
-          settings:
-            format: hex
-            opacity: '1'
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
         field_article_page_teaser_title:
           id: field_article_page_teaser_title
           table: node__field_article_page_teaser_title
@@ -509,6 +445,68 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+        field_article_page_teaser_color:
+          id: field_article_page_teaser_color
+          table: node__field_article_page_teaser_color
+          field: field_article_page_teaser_color
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_key
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
       relationships:
         field_article_page_section:
           id: field_article_page_section
@@ -565,10 +563,10 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_article_page_teaser_color'
         - 'config:field.storage.node.field_article_page_teaser_image'
         - 'config:field.storage.node.field_article_page_teaser_stitle'
         - 'config:field.storage.node.field_article_page_teaser_title'
+        - 'config:field.storage.node.field_article_page_teaser_color'
   block_blogarticle_page:
     display_plugin: block
     id: block_blogarticle_page
@@ -703,70 +701,6 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_blogarticle_teaser_color:
-          id: field_blogarticle_teaser_color
-          table: node__field_blogarticle_teaser_color
-          field: field_blogarticle_teaser_color
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: color
-          type: color_field_formatter_text
-          settings:
-            format: hex
-            opacity: '1'
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
         field_blogarticle_teaser_title:
           id: field_blogarticle_teaser_title
           table: node__field_blogarticle_teaser_title
@@ -882,6 +816,68 @@ display:
           type: string
           settings:
             link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_blogarticle_teaser_color:
+          id: field_blogarticle_teaser_color
+          table: node__field_blogarticle_teaser_color
+          field: field_blogarticle_teaser_color
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_key
+          settings: {  }
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -1025,70 +1021,6 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_event_page_teaser_color:
-          id: field_event_page_teaser_color
-          table: node__field_event_page_teaser_color
-          field: field_event_page_teaser_color
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: color
-          type: color_field_formatter_text
-          settings:
-            format: hex
-            opacity: '1'
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
         field_event_page_teaser_title:
           id: field_event_page_teaser_title
           table: node__field_event_page_teaser_title
@@ -1204,6 +1136,68 @@ display:
           type: string
           settings:
             link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_event_page_teaser_color:
+          id: field_event_page_teaser_color
+          table: node__field_event_page_teaser_color
+          field: field_event_page_teaser_color
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_key
+          settings: {  }
           group_column: value
           group_columns: {  }
           group_rows: true

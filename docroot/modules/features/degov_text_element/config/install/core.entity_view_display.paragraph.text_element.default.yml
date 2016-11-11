@@ -21,6 +21,12 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_key
+  field_text_element_color:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
   field_text_element_text:
     weight: 1
     label: hidden
@@ -36,5 +42,4 @@ content:
     type: string
 hidden:
   created: true
-  field_text_element_color: true
   uid: true

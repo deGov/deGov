@@ -2,6 +2,7 @@ langcode: de
 status: true
 dependencies:
   config:
+    - entity_browser.browser.media_browser
     - field.field.paragraph.citation_element.field_citation_element_color
     - field.field.paragraph.citation_element.field_citation_element_image
     - field.field.paragraph.citation_element.field_citation_element_link
@@ -9,7 +10,6 @@ dependencies:
     - field.field.paragraph.citation_element.field_citation_element_title
     - paragraphs.paragraphs_type.citation_element
   module:
-    - color_field
     - entity_browser
     - link
     - workbench_moderation
@@ -22,7 +22,7 @@ content:
     weight: 10
     settings: {  }
     third_party_settings: {  }
-    type: color_field_widget_html5
+    type: options_select
   field_citation_element_image:
     weight: 8
     settings:
