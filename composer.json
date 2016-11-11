@@ -43,7 +43,8 @@
         "drupal/viewsreference": "8.x",
         "drupal/simplenews": "8.x-1.x-dev",
         "drupal/ultimate_cron": "8.x-2.x-dev",
-        "drupal/contact_storage": "8.x"
+        "drupal/contact_storage": "8.x",
+        "drupal/smtp": "8.1.x-dev"
     },
     "repositories": {
         "drupal": {
@@ -105,6 +106,9 @@
         "patches": {
             "drupal/views_database_connector": {
                 "Not compatible with latest Drupal 8 RC": "https://www.drupal.org/files/issues/views_database_connector-not_compatible_with_latest_d8-2610480-15.patch"
+            },
+            "drupal/smtp": {
+                "Can't send mail: Non-existent service": "https://www.drupal.org/files/issues/0001-Issue-2819793-Can-t-send-mail-Non-existent-service-s.patch"
             }
         },
         "enable-patching": true
