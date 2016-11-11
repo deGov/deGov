@@ -15,7 +15,11 @@
 .field--name-field-downloads-element-title,
 .field--name-field-gallery-element-title,
 .field--name-field-text-element-title {
-	font-weight: bold;
+	// Please use semantic "styling" aka working with
+	// the HTML inbuild primitives to give the website a
+	// structure and then style that.
+	//font-weight: bold;
+	//color: red;
 }
 
 // Format some fields to be displayed next to each other
@@ -70,10 +74,19 @@
 // Format citation
 .field--name-field-citation-element-text {
 	margin-top: $vertical-gutter-width;
-	padding: $vertical-gutter-width $grid-gutter-width;
+	padding: $vertical-gutter-width*2 $grid-gutter-width*2;
+	margin: $vertical-gutter-width*2 $grid-gutter-width*-2;
+	font-size: $font-size-large;
 	background-color: $gray-light;
-	color: $color-white;
+	color: $gray;
 	font-style: italic;
+	@include icon-before($fa-var-angle-double-right, 0.5em);
+	&:before {
+		font-size: $font-size-large*2;
+		margin-left: -1em;
+		position: relative;
+		bottom: -0.15em;
+	}
 }
 
 // Format gallery

@@ -1,7 +1,17 @@
 // Styles for intro, header, and top bar regions
 
 // Styles for navbar
-.navbar-default {
-	background: none;
-	border: none;
+.header-wrapper .name {
+	display: none;
+}
+
+.header-wrapper .branding {
+	margin-top: -0.75em;
+}
+
+
+.navbar-collapse {
+	.navbar-nav {
+		float: right;
+	}
 }

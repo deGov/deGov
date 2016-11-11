@@ -74,7 +74,7 @@
       set navbar_classes = [
         'navbar',
         theme.settings.navbar_inverse ? 'navbar-inverse' : 'navbar-default',
-        theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : container,
+        
       ]
     %}
     <div class="header-wrapper">
@@ -112,6 +112,19 @@
 {# Main #}
 {% block main %}
   <div class="main-wrapper">
+
+    {% if home_page_image %}
+    <div class="banner-wrapper">
+      <div class="banner-image">{{ home_page_image }}</div>
+      <div class="banner-title-wrapper">
+        <div class="container">
+          <h1 class="page-header">{{ page['#title'] }}</h1>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+
     <div role="main" class="main-container {{ container }} js-quickedit-main-content">
       <div class="row">
 
@@ -209,4 +222,3 @@
     </div>
   </div>
 {% endif %}
-

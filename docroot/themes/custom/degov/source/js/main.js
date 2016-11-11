@@ -8,14 +8,12 @@ const Slick = require('slick-carousel');
   // Repeat parent element of dropdown as first element
   Drupal.behaviors.dropdown = {
     attach: function (context, settings) {
-      $('.navbar-nav').once('dropdown', function () {
-        console.info("ADFSASDF");
+      $('.navbar-nav').once('dropdown').each(function () {
         $(this).find('ul.dropdown-menu').each(function () {
-          var href = $(this).siblings('a').first().attr('href');
-          var text = $(this).siblings('a').first().text();
-          var link = '<a href="' + href + '">text</a>';
-          console.info("This is the line: " + link);
-          $(this).prepend('<li>' + link + '</li>');
+          var $rootA = $(this).siblings('a').first();
+          var href = $rootA.attr('href');
+          var text = $rootA.text();
+          $(this).prepend(`<li><a class="dropdown-parent-link" href="${href}">${text}</a></li>`);
         });
       });
     }
