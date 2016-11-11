@@ -2405,7 +2405,7 @@
     display: table; }
   .field--name-field-home-page-contents:after {
     clear: both; }
-  .field--name-field-home-page-contents .field--item {
+  .field--name-field-home-page-contents > .field--item {
     position: relative;
     float: left;
     width: 100%;
@@ -2417,15 +2417,15 @@
     padding-left: 20px;
     padding-right: 20px; }
     @media (min-width: 768px) {
-      .field--name-field-home-page-contents .field--item {
+      .field--name-field-home-page-contents > .field--item {
         float: left;
         width: 50%; } }
-    .field--name-field-home-page-contents .field--item article {
+    .field--name-field-home-page-contents > .field--item article {
       margin: 40px 0;
       padding: 40px 40px;
       background-color: #ffffff;
       border-top: 4px solid #004473; }
-      .field--name-field-home-page-contents .field--item article h2 {
+      .field--name-field-home-page-contents > .field--item article h2 {
         font-size: 31px;
         margin-top: 0; }
 
