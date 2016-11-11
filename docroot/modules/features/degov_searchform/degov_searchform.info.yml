@@ -1,0 +1,7 @@
+name: 'deGov - Suchformular xy'
+description: 'Einbindung des Suchformulares in den Header.'
+type: module
+core: 8.x
+dependencies:
+  - block
+  - search
