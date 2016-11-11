@@ -1,0 +1,92 @@
+langcode: de
+status: true
+dependencies:
+  module:
+    - ctools
+    - social_media_links
+  theme:
+    - degov
+id: degov_socialmedialinks
+theme: degov
+region: navigation
+weight: 0
+provider: null
+plugin: social_media_links_block
+settings:
+  id: social_media_links_block
+  label: 'Social Media Links'
+  provider: social_media_links
+  label_display: '0'
+  platforms:
+    facebook:
+      value: deGov
+      weight: '-10'
+    twitter:
+      value: Drupal_deGov
+      weight: '-9'
+    contact:
+      value: service/kontakt
+      weight: '-8'
+    drupal:
+      value: ''
+      weight: '-7'
+    email:
+      value: ''
+      weight: '-6'
+    googleplus:
+      value: ''
+      weight: '-5'
+    instagram:
+      value: ''
+      weight: '-4'
+    linkedin:
+      value: ''
+      weight: '-3'
+    pinterest:
+      value: ''
+      weight: '-2'
+    rss:
+      value: ''
+      weight: '-1'
+    slideshare:
+      value: ''
+      weight: '0'
+    tumblr:
+      value: ''
+      weight: '1'
+    vimeo:
+      value: ''
+      weight: '2'
+    youtube:
+      value: ''
+      weight: '3'
+    youtube_channel:
+      value: ''
+      weight: '4'
+  appearance:
+    orientation: h
+    show_name: 0
+  link_attributes:
+    target: _blank
+    rel: '<none>'
+  iconset:
+    style: 'fontawesome:2x'
+    installed_iconsets:
+      fontawesome:
+        examples: ''
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      article_page: article_page
+      blogarticle: blogarticle
+      event_page: event_page
+      home_page: home_page
+      landing_page: landing_page
+      next_page: next_page
+      page: page
+      section_page: section_page
+      simplenews_issue: simplenews_issue
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
