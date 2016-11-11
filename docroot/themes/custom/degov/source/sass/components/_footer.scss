@@ -9,9 +9,11 @@
   border-top: none;
 }
 
+.region-footer {
+  @include make-row();
+}
 
 .region-footer, .region-page-outro {
-  @include make-row();
   .menu {
     margin-left: -15px; // from $nav-link-padding
     li {
