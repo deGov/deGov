@@ -18,14 +18,8 @@ settings:
   provider: social_media_links
   label_display: '0'
   platforms:
-    facebook:
-      value: deGov
-      weight: '-10'
-    twitter:
-      value: Drupal_deGov
-      weight: '-9'
     contact:
-      value: service/kontakt
+      value: kontakt
       weight: '-8'
     drupal:
       value: ''
@@ -33,6 +27,9 @@ settings:
     email:
       value: ''
       weight: '-6'
+    facebook:
+      value: deGov
+      weight: '-10'
     googleplus:
       value: ''
       weight: '-5'
@@ -54,6 +51,9 @@ settings:
     tumblr:
       value: ''
       weight: '1'
+    twitter:
+      value: Drupal_deGov
+      weight: '-9'
     vimeo:
       value: ''
       weight: '2'
