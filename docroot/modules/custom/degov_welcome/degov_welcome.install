@@ -28,7 +28,7 @@ function degov_welcome_install() {
   $block = null;
   $block = Block::load('degov_account_menu');
   if ($block) {
-    $block->setRegion('page_intro');
+    $block->setRegion(-1);
     $block->save();
   }
 
@@ -127,6 +127,10 @@ function degov_welcome_install() {
   }
 
 
+  //@TODO: Security measures.
+  // Test if block exists before to activate it twice to avoid WSOD with error.
+  // It can occurs if the module "degov_welcome is desinstalled and installed.
+
   // VIEW BLOCKS
 
   // Block Visibility
@@ -216,6 +220,5 @@ function degov_welcome_install() {
   // Add Block
   $block = \Drupal\block\Entity\Block::create($values);
   $block->save();
-
 
 }
