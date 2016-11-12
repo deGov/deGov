@@ -1,0 +1,31 @@
+custom:
+  style: default
+  activate: 1
+  transition_type: fade
+  transition_speed: 350
+  opacity: 0.85
+  text_current: '{current} von {total}'
+  text_previous: '« Zurück'
+  text_next: 'Weiter »'
+  text_close: Schließen
+  maxwidth: 98%
+  maxheight: 98%
+  initialwidth: '300'
+  initialheight: '250'
+  overlayclose: true
+  fixed: true
+  scrolling: true
+  slideshow:
+    slideshow: 0
+    auto: true
+    speed: 5000
+    text_start: 'Slideshow starten'
+    text_stop: 'Slideshow stoppen'
+advanced:
+  unique_token: 1
+  mobile_detect: 1
+  mobile_device_width: 480px
+  caption_trim: 0
+  caption_trim_length: 75
+  compression_type: minified
+  mobile_detect_width: 480px

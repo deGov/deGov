@@ -93,6 +93,7 @@ modules:
   - degov_social_media_links
   - degov_languages
   - colorbox
+  - degov_colorbox
 # A system path to redirect to once installation is complete.
 redirect:
   path: 'degov_welcome'
