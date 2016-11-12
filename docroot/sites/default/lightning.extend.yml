@@ -91,6 +91,7 @@ modules:
   - degov_frontpage_rss
   - social_media_links
   - degov_social_media_links
+  - degov_languages
 # A system path to redirect to once installation is complete.
 redirect:
   path: 'degov_welcome'
