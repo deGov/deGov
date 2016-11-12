@@ -1,0 +1,19 @@
+// Views styles
+#block-degov-views-block-related-content-block-1 {
+  @include make-row();
+  clear: both;
+  .block-title {
+    padding-left: $grid-gutter-width / 2;
+  }
+  .views-field {
+    @include make-sm-column(6);
+    article {
+      height: 30em;
+      overflow: hidden;
+      margin-bottom:  $vertical-gutter-width;
+      background-color: $color-white;
+      padding-left: $grid-gutter-width;
+      padding-right: $grid-gutter-width;
+    }
+  }
+}
