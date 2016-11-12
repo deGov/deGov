@@ -8,8 +8,8 @@ dependencies:
     - degov
 id: twitterblock
 theme: degov
-region: content
-weight: 50
+region: footer
+weight: -9
 provider: null
 plugin: twitter_block
 settings:
