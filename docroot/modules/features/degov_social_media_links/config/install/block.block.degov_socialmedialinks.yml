@@ -2,7 +2,6 @@ langcode: de
 status: true
 dependencies:
   module:
-    - ctools
     - social_media_links
   theme:
     - degov
@@ -74,19 +73,4 @@ settings:
     installed_iconsets:
       fontawesome:
         examples: ''
-visibility:
-  'entity_bundle:node':
-    id: 'entity_bundle:node'
-    bundles:
-      article_page: article_page
-      blogarticle: blogarticle
-      event_page: event_page
-      home_page: home_page
-      landing_page: landing_page
-      next_page: next_page
-      page: page
-      section_page: section_page
-      simplenews_issue: simplenews_issue
-    negate: false
-    context_mapping:
-      node: '@node.node_route_context:node'
+visibility: {  }
