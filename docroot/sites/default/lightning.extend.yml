@@ -86,6 +86,8 @@ modules:
   - degov_languageswichter
   - degov_media_video
   - degov_searchform
+  - degov_related_content
+  - degov_views
 # A system path to redirect to once installation is complete.
 redirect:
   path: 'degov_welcome'
