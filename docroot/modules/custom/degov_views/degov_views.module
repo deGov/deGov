@@ -1,0 +1,49 @@
+<?php
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\views\ViewExecutable;
+use Drupal\views\Plugin\views\query\QueryPluginBase;
+
+/**
+ * @file
+ * Contains degov_demo.module..
+ */
+
+/**
+ * Implements hook_help().
+ */
+function degov_views_help($route_name, RouteMatchInterface $route_match) {
+
+  switch ($route_name) {
+
+    // Main module help for the degov_welcome module.
+    case 'help.page.degov_views':
+
+      $output = '';
+      return $output;
+
+    default:
+
+  }
+
+}
+
+/**
+ * Implements hook_views_query_alter().
+ */
+function degov_views_views_query_alter(ViewExecutable $view, QueryPluginBase $query) {
+  if ($view->id() == 'related_content') {
+    $arg = $view->args[0];
+    $where = &$query->where;
+    $where[] = array(
+      'conditions' => array(array(
+          'field' => 'field_section_page_tags_taxonomy_term_field_data.nid',
+          'value' => $arg,
+          'operator' => '<>',
+        )
+      ),
+      'args' => array(),
+      'type' => 'AND'
+    );
+  }
+}

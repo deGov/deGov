@@ -1,0 +1,5 @@
+name: deGov Views
+type: module
+description: Adds functionality to views used in deGov
+core: 8.x
+package: deGov

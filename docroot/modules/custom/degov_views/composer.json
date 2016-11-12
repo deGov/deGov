@@ -1,0 +1,9 @@
+{
+  "name": "drupal/degov_views",
+  "type": "drupal-module",
+  "description": "Views functions for deGov",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "minimum-stability": "dev",
+  "require": { }
+}

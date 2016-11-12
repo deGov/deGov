@@ -214,8 +214,37 @@ function degov_welcome_install() {
   );
 
   // Add Block
-  $block = \Drupal\block\Entity\Block::create($values);
+/*  $block = \Drupal\block\Entity\Block::create($values);
   $block->save();
 
+  // Block Values
+  $values = array(
+    'id' => 'degov_views_block__related_content_block_1',
+    'plugin' => 'views_block:related_content-block_1',
+    'region' => 'footer',
+    'settings' => array(
+      'id' => 'views_block:related_content-block_1',
+      'label' => 'Related content',
+      'label_display' => 1,
+      'items_per_page' => 10,
+    ),
+    'theme' => 'degov',
+    'visibility' => $visibility,
+    'weight' => 3,
+  );
+
+  // Add Block
+  $block = \Drupal\block\Entity\Block::create($values);
+  $block->save();
+*/
+
+  // Footer
+  $block = null;
+  $block = Block::load('views_block__related_content_block_1');
+  if ($block) {
+    $block->setRegion('footer');
+    $block->setWeight(0);
+    $block->save();
+  }
 
 }
