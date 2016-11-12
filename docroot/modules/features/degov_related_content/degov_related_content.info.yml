@@ -2,7 +2,6 @@ name: 'deGov - Related content'
 type: module
 core: 8.x
 dependencies:
-  - block
   - node
   - taxonomy
   - user

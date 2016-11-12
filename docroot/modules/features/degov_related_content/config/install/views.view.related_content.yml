@@ -295,6 +295,11 @@ display:
         - 'config:core.entity_view_display.node.page.teaser'
         - 'config:core.entity_view_display.node.section_page.default'
         - 'config:core.entity_view_display.node.section_page.teaser'
+        - 'config:core.entity_view_display.node.simplenews_issue.default'
+        - 'config:core.entity_view_display.node.simplenews_issue.email_html'
+        - 'config:core.entity_view_display.node.simplenews_issue.email_plain'
+        - 'config:core.entity_view_display.node.simplenews_issue.email_textalt'
+        - 'config:core.entity_view_display.node.simplenews_issue.teaser'
   block_1:
     display_plugin: block
     id: block_1
@@ -327,3 +332,8 @@ display:
         - 'config:core.entity_view_display.node.page.teaser'
         - 'config:core.entity_view_display.node.section_page.default'
         - 'config:core.entity_view_display.node.section_page.teaser'
+        - 'config:core.entity_view_display.node.simplenews_issue.default'
+        - 'config:core.entity_view_display.node.simplenews_issue.email_html'
+        - 'config:core.entity_view_display.node.simplenews_issue.email_plain'
+        - 'config:core.entity_view_display.node.simplenews_issue.email_textalt'
+        - 'config:core.entity_view_display.node.simplenews_issue.teaser'
