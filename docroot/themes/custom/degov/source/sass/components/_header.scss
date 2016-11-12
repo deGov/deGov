@@ -56,3 +56,10 @@
 		}
 	}
 }
+
+// Position of language and login
+.region-page-intro {
+	#block-languageswitcher, #block-degov-account-menu {
+		float: right;
+	}
+}
