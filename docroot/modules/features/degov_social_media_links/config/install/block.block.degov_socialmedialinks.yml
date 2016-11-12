@@ -28,7 +28,7 @@ settings:
       value: ''
       weight: '-6'
     facebook:
-      value: deGov
+      value: deGov.org
       weight: '-10'
     googleplus:
       value: ''
@@ -43,7 +43,7 @@ settings:
       value: ''
       weight: '-2'
     rss:
-      value: ''
+      value: rss.xml
       weight: '-1'
     slideshare:
       value: ''
@@ -61,7 +61,7 @@ settings:
       value: ''
       weight: '3'
     youtube_channel:
-      value: ''
+      value: UCTcaEfwEFZ_txYW49HtApuQ
       weight: '4'
   appearance:
     orientation: h
