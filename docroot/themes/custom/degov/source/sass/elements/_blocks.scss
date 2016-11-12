@@ -26,6 +26,7 @@
     z-index: 100;
     display: none;
     background-color: $color-blue;
+    padding-left: 9px; // Padding to match caret width
     &.open {
       display: block;
     }
@@ -34,10 +35,15 @@
       list-style: none;
       a {
         color: $color-white;
-        padding: 0 $grid-gutter-width/4;
+        padding-right: 25px; // Padding that matches caret
         line-height: 2em;
 
       }
     }
+  }
+}
+#block-degov-account-menu {
+  a {
+    padding: $vertical-gutter-width/8 $grid-gutter-width/4;
   }
 }
