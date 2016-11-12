@@ -97,6 +97,8 @@ modules:
   - degov_vsm_nrw_block
   - degov_site_branding
   - spamspan
+  - degov_rich_text_format_settings
+  - degov_plain_text_format_settings
 # A system path to redirect to once installation is complete.
 redirect:
   path: 'degov_welcome'
