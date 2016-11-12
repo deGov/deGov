@@ -36,7 +36,7 @@ xxx
 
 ## Table of Contents
 
-* [Installing deGov](#Installing-deGov)
+* [Installing deGov](#installing-deGov)
 * [Usage](#usage)
 * [License](#license)
 
