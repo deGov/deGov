@@ -155,20 +155,24 @@ function degov_vsm_nrw_search($query, $area='land', $options=array())
   $resources = null;
   if ($options['resources'] == true) {
     $resources = $crawler->filterXPath('//GSP/RES/R')->each(function (Crawler $node, $i) {
-
+      $result1 = $node->filterXPath('//U/text()')
+                      ->each(function (Crawler $node, $i) {
+                        return $node->text();
+                      });
+      $result2 = $node->filterXPath('//T/text()')
+                      ->each(function (Crawler $node, $i) {
+                        return $node->text();
+                      });
+      $result3 = $node->filterXPath('//S/text()')
+                      ->each(function (Crawler $node, $i) {
+                        return $node->text();
+                      });
       return array(
         'mime' => $node->attr('MIME'),
-        'url' => $node->filterXPath('//U/text()')->each(function (Crawler $node, $i) {
-          return $node->text();
-        })[0],
-        'title' => $node->filterXPath('//T/text()')->each(function (Crawler $node, $i) {
-          return $node->text();
-        })[0],
-        'description' => $node->filterXPath('//S/text()')->each(function (Crawler $node, $i) {
-          return $node->text();
-        })[0],
+        'url' => isset($result1[0])? $result1[0] : '#',
+        'title' => isset($result2[0]) ? $result2[0] : '',
+        'description' => isset($result3[0]) ? $result3[0] : '',
       );
-
     });
 
   }
