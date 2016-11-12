@@ -94,6 +94,7 @@ modules:
   - degov_languages
   - colorbox
   - degov_colorbox
+  - degov_vsm_nrw_block
 # A system path to redirect to once installation is complete.
 redirect:
   path: 'degov_welcome'
