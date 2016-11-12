@@ -40,6 +40,34 @@ function degov_preprocess_node(&$vars) {
     //Frontpage preprocessing
     if ($node->getType() == 'home_page') {
       unset($vars['content']['field_home_page_image']);
+    } elseif($node->getType() == 'article_page' && $vars['view_mode'] == 'teaser') {
+      if(!empty($node->get('field_article_page_teaser_color')->get(0))) {
+        $color = $node->get('field_article_page_teaser_color')
+          ->get(0)
+          ->getValue()['value'];
+        $vars['attributes']['class'][] = 'article-color-' . $color;
+      }
+    } elseif($node->getType() == 'blogarticle' && $vars['view_mode'] == 'teaser') {
+      if(!empty($node->get('field_blogarticle_teaser_color')->get(0))) {
+        $color = $node->get('field_blogarticle_teaser_color')
+          ->get(0)
+          ->getValue()['value'];
+        $vars['attributes']['class'][] = 'article-color-' . $color;
+      }
+    } elseif($node->getType() == 'event_page' && $vars['view_mode'] == 'teaser') {
+      if(!empty($node->get('field_event_page_teaser_color')->get(0))) {
+        $color = $node->get('field_event_page_teaser_color')
+          ->get(0)
+          ->getValue()['value'];
+        $vars['attributes']['class'][] = 'article-color-' . $color;
+      }
+    } elseif($node->getType() == 'section_page' && $vars['view_mode'] == 'teaser') {
+      if(!empty($node->get('field_section_page_color')->get(0))) {
+        $color = $node->get('field_section_page_color')
+          ->get(0)
+          ->getValue()['value'];
+        $vars['attributes']['class'][] = 'article-color-' . $color;
+      }
     }
   }
 }
@@ -55,6 +83,20 @@ function degov_preprocess_paragraph(&$variables) {
     if($paragraph->getType() == 'image_text_element') {
       $alignment = $paragraph->get('field_image_text_element_align')->get(0)->getValue()['value'];
       $variables['alignment'] = $alignment;
+    } elseif ($paragraph->getType() == 'text_element') {
+      if(!empty($paragraph->get('field_text_element_color')->get(0))) {
+        $color = $paragraph->get('field_text_element_color')
+          ->get(0)
+          ->getValue()['value'];
+        $variables['attributes']['class'][] = 'paragraph-color-' . $color;
+      }
+    } elseif ($paragraph->getType() == 'citation_element') {
+      if(!empty($paragraph->get('field_citation_element_color')->get(0))) {
+        $color = $paragraph->get('field_citation_element_color')
+          ->get(0)
+          ->getValue()['value'];
+        $variables['attributes']['class'][] = 'paragraph-color-' . $color;
+      }
     }
   }
 }
