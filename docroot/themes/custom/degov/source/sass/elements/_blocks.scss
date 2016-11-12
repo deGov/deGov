@@ -13,7 +13,6 @@
     background-color: $color-blue;
     padding: 0 $grid-gutter-width/4;
     margin-right: $grid-gutter-width/4;
-    margin-top: $vertical-gutter-width/4;
     line-height: 2em;
     color: $color-white;
     @include icon-after($fa-var-caret-down);
@@ -41,5 +40,10 @@
 
       }
     }
+  }
+}
+#block-degov-account-menu {
+  a {
+    padding: $vertical-gutter-width/8 $grid-gutter-width/4;
   }
 }
