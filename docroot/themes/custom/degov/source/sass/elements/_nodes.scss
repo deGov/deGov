@@ -1,0 +1,37 @@
+// Styles for nodes
+
+.full {
+  &::before {
+    content: '';
+    display: block;
+    height: 4px;
+    width: $grid-gutter-width * 2;
+    margin-bottom: $vertical-gutter-width/2;
+  }
+  &.article-color-red {
+    &::before {
+      background: $color-red;
+    }
+  }
+  &.article-color-green {
+    &::before {
+      background: $color-yellow;
+    }
+  }
+  &.article-color-blue {
+    background-color: blue;
+    &::before {
+      background: $color-blue;
+    }
+  }
+  &.article-color-gray {
+    &::before {
+      background: $color-gray;
+    }
+  }
+  &.article-color-yellow {
+    &::before {
+      background: $color-yellow;
+    }
+  }
+}
