@@ -24,6 +24,10 @@
 		// Float right for larger screens
 		@include larger-than($screen-tablet) {
 			float: right;
+			a {
+				text-align: left;
+			}
 		}
+
 	}
 }
