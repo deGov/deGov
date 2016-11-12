@@ -5,3 +5,8 @@
 .page-node-type-home-page .region-content .page-header {
   display: none;
 }
+
+//override top padding
+.page-node-type-home-page .main-wrapper {
+  padding-top: 0;
+}

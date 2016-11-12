@@ -43,7 +43,11 @@
 	> li  > a {
 		line-height: $line-height-computed * 1.5;
 	}
+	.dropdown-parent-link {
+		font-weight: bold;
+	}
 }
+
 
 .header-wrapper{
 	@include larger-than($screen-tablet) {

@@ -1,0 +1,7 @@
+name: 'deGov - Social Media Links'
+type: module
+core: 8.x
+dependencies:
+  - block
+  - ctools
+  - social_media_links
