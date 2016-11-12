@@ -2,6 +2,7 @@ langcode: de
 status: true
 dependencies:
   module:
+    - node
     - simplenews
   theme:
     - degov
@@ -20,4 +21,12 @@ settings:
     degov_newsletter: degov_newsletter
   message: 'Bleiben Sie informiert - abonnieren Sie unseren Newsletter'
   unique_id: degov_newsletter_abonnement
-visibility: {  }
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      home_page: home_page
+      simplenews_issue: simplenews_issue
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
