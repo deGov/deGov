@@ -193,8 +193,12 @@ function degov_welcome_install() {
     ),
     'theme' => 'degov',
     'visibility' => $visibility,
-    'weight' => 7,
+    'weight' => 8,
   );
+
+  // Add Block
+  $block = \Drupal\block\Entity\Block::create($values);
+  $block->save();
 
   // Block Values
   // Add Block
