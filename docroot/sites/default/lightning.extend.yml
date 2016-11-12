@@ -88,6 +88,8 @@ modules:
   - degov_searchform
   - degov_related_content
   - degov_views
+  - social_media_links
+  - degov_social_media_links
 # A system path to redirect to once installation is complete.
 redirect:
   path: 'degov_welcome'
