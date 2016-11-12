@@ -34,17 +34,14 @@ const Slick = require('slick-carousel');
   };
 
   // Language dropdown
-  Drupal.behaviors.faq = {
+  Drupal.behaviors.lang = {
     attach: function (context, settings) {
       $('#block-languageswitcher').click(function () {
-        console.info("Click");
         if($(this).children('ul').hasClass('open')) {
           $(this).children().removeClass('open');
-          console.info('Remove open');
         }
         else {
           $(this).children().addClass('open');
-          console.info('Add open');
         }
       });
     }
