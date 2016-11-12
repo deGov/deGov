@@ -1,5 +1,5 @@
 name: 'deGov - Suchformular'
-description: 'Einbindung des Suchformulares in den Header.'
+description: 'Positioniert den Block Suchformular im Kopfbereich.'
 type: module
 core: 8.x
 dependencies:

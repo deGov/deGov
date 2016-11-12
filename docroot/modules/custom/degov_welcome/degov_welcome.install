@@ -24,15 +24,6 @@ function degov_welcome_install() {
 
   // Place some blocks in the correct regions
 
-  // Navigation
-  $block = null;
-  $block = Block::load('degov_branding');
-  if ($block) {
-    $block->setRegion('navigation');
-    $block->setWeight(0);
-    $block->save();
-  }
-
   // For menu blocks set the depth
   $block = null;
   $block = Block::load('degov_main_menu');
