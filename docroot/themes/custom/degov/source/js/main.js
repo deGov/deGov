@@ -23,15 +23,30 @@ const Slick = require('slick-carousel');
   Drupal.behaviors.faq = {
     attach: function (context, settings) {
       $('.paragraph--type--faq-element').click(function () {
-        console.info("Click");
         if($(this).children('.field--name-field-faq-element-question').hasClass('active')) {
           $(this).children().removeClass('active');
-          console.info('Remove active');
         }
         else {
           $(this).children().addClass('active');
-          console.info('Set active');
         }
+      });
+    }
+  };
+
+  // Language dropdown
+  Drupal.behaviors.lang = {
+    attach: function (context, settings) {
+      $('#block-languageswitcher').click(function () {
+        if($(this).children('ul').hasClass('open')) {
+          $(this).children().removeClass('open');
+        }
+        else {
+          $(this).children().addClass('open');
+        }
+      });
+      $('#block-languageswitcher a').once('language-processed').each(function() {
+        var hreflang = $(this).attr('hreflang');
+        $(this).text(hreflang)
       });
     }
   };

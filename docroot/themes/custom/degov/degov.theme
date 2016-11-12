@@ -58,3 +58,10 @@ function degov_preprocess_paragraph(&$variables) {
     }
   }
 }
+
+/**
+ * Preprocess language switceher block
+ */
+function degov_preprocess_links__language_block(&$variables) {
+  $variables['active_language'] = \Drupal::languageManager()->getCurrentLanguage()->getId();;
+}
