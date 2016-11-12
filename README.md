@@ -24,7 +24,7 @@ Sounds interesting? Then go for it and install the first Drupal 8 distribution f
 
 ## Note
 
-Something about this Project/Repository
+xxx
 
 ## Prerequisites
 
