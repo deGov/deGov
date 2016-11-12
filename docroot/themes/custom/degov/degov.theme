@@ -20,7 +20,24 @@ function degov_preprocess_page(&$variables) {
     if ($node->getType() == 'home_page') {
       // Assure that empty image doesn't cause error and WSOD.
       $field_home_page_image = $node->get('field_home_page_image')->get(0);
+
+      $imageUrl = $node->get('field_home_page_image')->get(0)->entity->image->get(0);
+      if($imageUrl instanceof \Drupal\image\Plugin\Field\FieldType\ImageItem) {
+        $value = $imageUrl->getValue();
+        $gett = $imageUrl->getEntity();
+        if ($gett instanceof \Drupal\media_entity\Entity\Media) {
+          $few2 = $gett->toUrl()->toString();
+          $bla = file_create_url($few2);
+        }
+      }
+
+
       $variables['home_page_image'] = $field_home_page_image ? $field_home_page_image->entity->image->get(0)->view('full') : "";
+      $variables['home_page_image_styles'] = "mystyle";
+
+      /*$variables['attributes']['style'][] = 'background-image: url("' . $field_home_page_image->entity-> . '");';
+      $variables['home_page_image']['attributes']['style'][] = 'background-size: cover;';
+      */$variables['home_page_image']['attributes']['style'][] = 'background-position: center center;';
 
       // The title is accessible in the twig template using the renderable array page['#title'].
       // A new variable is not necessary.
@@ -37,6 +54,7 @@ function degov_preprocess_page(&$variables) {
 function degov_preprocess_node(&$vars) {
   if (isset($vars['node'])) {
     $node = $vars['node'];
+    //Frontpage preprocessing
     if ($node->getType() == 'home_page') {
       unset($vars['content']['field_home_page_image']);
     }

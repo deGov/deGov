@@ -31,3 +31,14 @@
 
 	}
 }
+
+.branding {
+	@include smaller-than($container-tablet) {
+		padding-bottom: $vertical-gutter-width;
+	}
+}
+
+//search block
+.search-block-form, .branding {
+	@include make-sm-column(6);
+}
