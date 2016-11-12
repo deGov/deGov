@@ -4,6 +4,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.email_html
     - field.field.node.simplenews_issue.body
+    - field.field.node.simplenews_issue.field_simplenews_issue_artikel
     - field.field.node.simplenews_issue.simplenews_issue
     - node.type.simplenews_issue
   module:
@@ -28,6 +29,7 @@ content:
     third_party_settings: {  }
     label: hidden
 hidden:
+  field_simplenews_issue_artikel: true
   langcode: true
   links: true
   shariff_field: true
