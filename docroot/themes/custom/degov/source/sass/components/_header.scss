@@ -45,10 +45,11 @@
 		@include make-lg-column(4);
 	}
 	.search-block-form {
+		padding-right: $grid-gutter-width / 4;
 		@include make-sm-column-push(6);
 		@include make-lg-column-push(0);
 	}
-	
+
 	#block-degov-socialmedialinks {
 		@include larger-than($screen-phone) {
 			text-align: right;
