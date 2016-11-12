@@ -4,6 +4,25 @@
 	margin: $vertical-gutter-width*2 0;
 }
 
+.paragraph--type--faq-element {
+	cursor: pointer;
+	margin: $vertical-gutter-width/4 0;
+	.field--name-field-faq-element-question {
+		.field--item {
+			@include icon-after($fa-var-caret-down);
+		}
+		&.active .field--item {
+			@include icon-after($fa-var-caret-up);
+		}
+	}
+	.field--name-field-faq-element-answer {
+		display: none;
+		&.active {
+			display: block;
+		}
+	}
+}
+
 // Paragraph layout for Image-Text
 .paragraph--type--image-text-element {
 	@include make-row();
