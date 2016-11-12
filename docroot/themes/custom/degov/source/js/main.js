@@ -44,6 +44,10 @@ const Slick = require('slick-carousel');
           $(this).children().addClass('open');
         }
       });
+      $('#block-languageswitcher a').once('language-processed').each(function() {
+        var hreflang = $(this).attr('hreflang');
+        $(this).text(hreflang)
+      });
     }
   };
 
