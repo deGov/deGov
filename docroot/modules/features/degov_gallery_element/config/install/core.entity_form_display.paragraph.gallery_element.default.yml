@@ -6,9 +6,10 @@ dependencies:
     - field.field.paragraph.gallery_element.field_gallery_element_images
     - field.field.paragraph.gallery_element.field_gallery_element_text
     - field.field.paragraph.gallery_element.field_gallery_element_title
+    - image.style.thumbnail
     - paragraphs.paragraphs_type.gallery_element
   module:
-    - entity_browser
+    - image
     - text
     - workbench_moderation
 id: paragraph.gallery_element.default
@@ -22,17 +23,17 @@ content:
     third_party_settings: {  }
     type: options_select
   field_gallery_element_images:
-    weight: 3
+    type: entity_browser_file
+    weight: 6
     settings:
-      entity_browser: media_browser
-      field_widget_display: rendered_entity
+      entity_browser: image_browser
       field_widget_edit: true
       field_widget_remove: true
+      view_mode: default
+      preview_image_style: thumbnail
+      open: true
       selection_mode: selection_append
-      open: false
-      field_widget_display_settings: {  }
     third_party_settings: {  }
-    type: entity_browser_entity_reference
   field_gallery_element_text:
     weight: 2
     settings:

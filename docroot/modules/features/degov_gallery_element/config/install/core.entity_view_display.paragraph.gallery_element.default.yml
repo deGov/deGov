@@ -6,8 +6,11 @@ dependencies:
     - field.field.paragraph.gallery_element.field_gallery_element_images
     - field.field.paragraph.gallery_element.field_gallery_element_text
     - field.field.paragraph.gallery_element.field_gallery_element_title
+    - image.style.big
+    - image.style.large
     - paragraphs.paragraphs_type.gallery_element
   module:
+    - colorbox
     - options
     - text
 id: paragraph.gallery_element.default
@@ -25,10 +28,15 @@ content:
     weight: 3
     label: hidden
     settings:
-      link: true
-      view_mode: default
+      colorbox_node_style: large
+      colorbox_node_style_first: large
+      colorbox_image_style: big
+      colorbox_gallery: post
+      colorbox_gallery_custom: ''
+      colorbox_caption: auto
+      colorbox_caption_custom: ''
     third_party_settings: {  }
-    type: entity_reference_entity_view
+    type: colorbox
   field_gallery_element_text:
     weight: 2
     label: hidden

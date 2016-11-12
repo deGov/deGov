@@ -44,7 +44,8 @@
         "drupal/ultimate_cron": "8.x-2.x-dev",
         "drupal/contact_storage": "8.x",
         "drupal/smtp": "8.1.x-dev",
-        "drupal/social_media_links": "^8.2"
+        "drupal/social_media_links": "^8.2",
+        "drupal/colorbox": "8.x-1.x-dev"
     },
     "repositories": {
         "drupal": {

@@ -24,14 +24,6 @@ function degov_welcome_install() {
 
   // Place some blocks in the correct regions
 
-  // Page intro
-  $block = null;
-  $block = Block::load('degov_account_menu');
-  if ($block) {
-    $block->setRegion(-1);
-    $block->save();
-  }
-
   // Navigation
   $block = null;
   $block = Block::load('degov_branding');

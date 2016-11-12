@@ -10,7 +10,11 @@
 }
 
 .region-footer {
-  @include make-row();
+  //@include make-row();
+}
+.region-page-outro {
+  padding-top: $vertical-gutter-width / 2;
+  padding-bottom: $vertical-gutter-width / 2;
 }
 
 .region-footer, .region-page-outro {

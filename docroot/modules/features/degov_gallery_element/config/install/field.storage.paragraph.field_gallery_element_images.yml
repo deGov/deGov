@@ -1,16 +1,26 @@
-langcode: de
+langcode: en
 status: true
 dependencies:
   module:
-    - media_entity
+    - file
+    - image
     - paragraphs
 id: paragraph.field_gallery_element_images
 field_name: field_gallery_element_images
 entity_type: paragraph
-type: entity_reference
+type: image
 settings:
-  target_type: media
-module: core
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
 locked: false
 cardinality: -1
 translatable: true
