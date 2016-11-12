@@ -34,11 +34,24 @@
 
 .branding {
 	@include smaller-than($container-tablet) {
-		padding-bottom: $vertical-gutter-width;
+		padding-bottom: $vertical-gutter-width / 2;
 	}
 }
 
-//search block
-.search-block-form, .branding {
-	@include make-sm-column(6);
+//Positionin of branding, search, sm
+.header-wrapper {
+	.search-block-form, .branding, #block-degov-socialmedialinks {
+		@include make-sm-column(6);
+		@include make-lg-column(4);
+	}
+	.search-block-form {
+		@include make-sm-column-push(6);
+		@include make-lg-column-push(0);
+	}
+	
+	#block-degov-socialmedialinks {
+		@include larger-than($screen-phone) {
+			text-align: right;
+		}
+	}
 }
