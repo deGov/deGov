@@ -9,7 +9,7 @@ dependencies:
 id: degov_socialmedialinks
 theme: degov
 region: navigation
-weight: 0
+weight: -9
 provider: null
 plugin: social_media_links_block
 settings:
