@@ -28,7 +28,7 @@ function degov_welcome_install() {
   $block = null;
   $block = Block::load('degov_account_menu');
   if ($block) {
-    $block->setRegion('page_intro');
+    $block->setRegion(-1);
     $block->save();
   }
 
