@@ -1,6 +1,6 @@
 // Styles for nodes
 
-.full {
+article.full {
   &::before {
     content: '';
     display: block;
@@ -15,7 +15,7 @@
   }
   &.article-color-green {
     &::before {
-      background: $color-yellow;
+      background: $color-green;
     }
   }
   &.article-color-blue {
@@ -35,3 +35,41 @@
     }
   }
 }
+
+article.teaser h2 {
+  &::after {
+    content: '';
+    display: block;
+    height: 4px;
+    width: $grid-gutter-width * 2;
+    margin-bottom: $vertical-gutter-width/2;
+    margin-top: $vertical-gutter-width/2;
+  }
+}
+article.teaser.article-color-red h2 {
+  &::after {
+    background: $color-red;
+  }
+}
+article.teaser.article-color-green h2 {
+  &::after {
+    background: $color-green;
+  }
+}
+article.teaser.article-color-blue h2 {
+  background-color: blue;
+  &::after {
+    background: $color-blue;
+  }
+}
+article.teaser.article-color-gray h2 {
+  &::after {
+    background: $color-gray;
+  }
+}
+article.teaser.article-color-yellow h2 {
+  &::after {
+    background: $color-yellow;
+  }
+}
+
