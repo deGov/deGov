@@ -13,7 +13,7 @@
     background-color: $color-gray;
     padding: 0 $grid-gutter-width/4;
     margin-right: $grid-gutter-width/4;
-    line-height: 2.3em;
+    line-height: 2.0em;
     color: $color-white;
     @include icon-after($fa-var-caret-down);
     &.open {
@@ -40,10 +40,14 @@
       a {
         color: $color-white;
         padding-right: 25px; // Padding that matches caret
-        line-height: 2.3em;
+        line-height: 2.0em;
       }
     }
   }
+}
+
+#block-degov-socialmedialinks .fa-2x {
+  font-size: 1.5em;
 }
 
 #block-block-newsletter-abonnement{
