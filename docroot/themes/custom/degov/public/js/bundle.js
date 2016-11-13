@@ -108,6 +108,7 @@
 	        } else {
 	          e.preventDefault();
 	          $(this).addClass('active');
+	          $(this).find('#edit-keys').focus();
 	        }
 	      });
 	    }

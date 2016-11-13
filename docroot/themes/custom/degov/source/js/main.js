@@ -63,6 +63,7 @@ const stick = require('jquery-sticky');
         else {
           e.preventDefault();
           $(this).addClass('active');
+          $(this).find('#edit-keys').focus();
         }
       });
     }
