@@ -1,5 +1,5 @@
 name: 'deGov - Paragraphs - Slider'
-description: 'Provides a Slider Paragraph Type '
+description: 'Stellt einen neuen Paragraph-Typ Slider'
 type: module
 core: 8.x
 dependencies:
