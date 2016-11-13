@@ -1,31 +1,19 @@
 [![Stories in Ready](https://badge.waffle.io/deGov/deGov.png?label=ready&title=Ready)](https://waffle.io/deGov/deGov)
-## deGov
 
-Be part of deGov and help us making deGov great! 
+# deGov - Drupal 8 for Government
 
-deGov is the first German Drupal 8 distribution - expecially programmed for the German Government.
+## Notes
 
-This distribution is developed according to the needs of government portals, ministries, authorities and municipalities.
+deGov is the first Drupal 8 distribution focussing on the needs of (German) governmental organisations. It uses Acquia Lightning as a basis and extends this it with valueable functions to meet the use cases for different scenarios:
 
-As a content management framework, it supports providing digital information systems on the Internet (citizens will be able to receive several information such as activities, the main focus of the governmantal insitution, news and many other helpfull information)
+- Websites for governmental organisations from all levels (federal, regional, local) to publish information
+- Service-oriented E-Government portals to close the gap between citizens and your administration
+- Citizen Engagement portals to discuss and decide online
+- Open311 portals for civic issue tracking
+- Open data portals to publish and create communities around data
+- Intranet/Extranet for government employees
 
-The Government is able to: 
-
-- inform about their work, 
-- initiatives
-- strategies
-- publish press releases and set up notifications for press representatives etc.
-
-Over and above that they can make use of editorial workflows for publishing articles and use existing and coordinated content elements to put teir content in a different and special way. All that can be reached by usiny an existing, professional basic layout for the governmentral websites. 
-
-Of course this can be customized according to their CI and supports mobile devices such as smartphones and tablets.
-Last but not least they can choose from a modular kit system the functions according to their need in order to get their unique portal.
-
-Sounds interesting? Then go for it and install the first Drupal 8 distribution for the German Goverment - of course Open Source! 
-
-## Note
-
-xxx
+Sounds interesting? Then go for it and install the first Drupal 8 distribution for government!
 
 ## Prerequisites
 
@@ -34,12 +22,6 @@ xxx
 - RDMS (MySQL => 5.5.3, MariaDB => 5.5.20, Percona Server => 5.5.8)
 - Mailserver (Postfix, exim, etc.)
 - [Composer](https://getcomposer.org/download/ "https://getcomposer.org/download/")
-
-## Table of Contents
-
-* [Installing deGov](#installing-degov)
-* [Usage](#usage)
-* [License](#license)
 
 ## Installing deGov
 
@@ -73,4 +55,4 @@ http://[YOUR_SITE]/user/login/
 ``` 
 
 ## License
-[**GPLv2**](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html "visit GPLv2 website")
+[**GNU GENERAL PUBLIC LICENSE v2**](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html "visit GPLv2 website")
