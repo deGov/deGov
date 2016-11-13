@@ -1,1 +1,3 @@
+excluded:
+  - block.block.bartik_account_menu
 required: true
