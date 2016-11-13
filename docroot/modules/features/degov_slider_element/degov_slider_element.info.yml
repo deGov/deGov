@@ -1,0 +1,12 @@
+name: 'deGov - Paragraphs - Slider'
+description: 'Provides a Slider Paragraph Type '
+type: module
+core: 8.x
+dependencies:
+  - degov_article_page
+  - degov_blogarticle
+  - field
+  - lightning_media_image
+  - media_entity
+  - node
+  - paragraphs

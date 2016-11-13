@@ -1,0 +1,30 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slider_element_article
+    - node.type.article_page
+    - node.type.blogarticle
+    - paragraphs.paragraphs_type.slider_element
+id: paragraph.slider_element.field_slider_element_article
+field_name: field_slider_element_article
+entity_type: paragraph
+bundle: slider_element
+label: Artikel
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      blogarticle: blogarticle
+      article_page: article_page
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: blogarticle
+field_type: entity_reference

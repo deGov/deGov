@@ -99,6 +99,7 @@ modules:
   - spamspan
   - degov_rich_text_format_settings
   - degov_plain_text_format_settings
+  - degov_slider_element
 # A system path to redirect to once installation is complete.
 redirect:
   path: 'degov_welcome'
