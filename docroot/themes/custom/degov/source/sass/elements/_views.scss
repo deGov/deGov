@@ -9,13 +9,14 @@
   }
   .views-field {
     @include make-sm-column(6);
-    article {
+    > .field-content > article {
       //height: 30em;
       //overflow: hidden;
       margin-bottom:  $vertical-gutter-width;
       background-color: $color-white;
       padding-left: $grid-gutter-width;
       padding-right: $grid-gutter-width;
+      @include content-box($color-gray);
     }
   }
 }
