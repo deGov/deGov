@@ -30,6 +30,7 @@
 	background: none;
 	border: none;
 	.navbar-toggle {
+		clear: both;
 		border-color: $color-gray;
 		.icon-bar {
 			background-color: $color-gray;

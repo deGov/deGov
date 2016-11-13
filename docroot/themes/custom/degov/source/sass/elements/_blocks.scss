@@ -54,3 +54,7 @@
   @include content-box($color-gray);
   margin-top: 0;
 }
+
+#block-searchform .form-group {
+  margin-bottom: 0;
+}

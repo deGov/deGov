@@ -27,9 +27,24 @@
 	display: none;
 }
 .header-wrapper .branding {
-	margin-top: -0.75em;
+	float: left;
 	@include smaller-than($screen-tablet) {
 		padding-left: $grid-gutter-width / 2;
+		padding-top: $vertical-gutter-width / 4;
+		padding-bottom: $vertical-gutter-width / 2;
+	}
+}
+.header-wrapper {
+	#block-degov-socialmedialinks,
+	#block-languageswitcher {
+		@include smaller-than($screen-tablet) {
+			padding-top: $vertical-gutter-width / 4 * 3;
+		}
+	}
+	#block-searchform {
+		@include smaller-than($screen-tablet) {
+			margin-right: $grid-gutter-width / 2;
+		}
 	}
 }
 
@@ -52,12 +67,6 @@
 	}
 }
 
-.branding {
-	@include smaller-than($container-tablet) {
-		padding-bottom: $vertical-gutter-width / 2;
-	}
-}
-
 //Positionin of branding, search, sm
 .header-wrapper {
 	a {
@@ -66,17 +75,27 @@
 			color: $color-blue;
 		}
 	}
-	.branding {
-		float: left;
-	}
-	#block-languageswitcher,
-	.search-block-form,
-	#block-degov-socialmedialinks {
+	#block-languageswitcher {
 		float: right;
 	}
-
 	#block-degov-socialmedialinks {
-		padding-right: $grid-gutter-width / 4;
+		text-align: right;
+	}
+	.search-block-form {
+		float: right;
+	}
+	@include larger-than($screen-tablet) {
+		#block-languageswitcher,
+		#block-degov-socialmedialinks {
+			text-align: left;
+		}
+		#block-languageswitcher,
+		#block-degov-socialmedialinks {
+			float: right;
+		}
+		#block-degov-socialmedialinks {
+			padding-right: $grid-gutter-width / 4;
+		}
 	}
 	.search-block-form {
 		width: 50px;
@@ -99,14 +118,4 @@
 			}
 		}
 	}
-}
-
-// Position of language and login
-.region-page-intro {
-	#block-languageswitcher, #block-degov-account-menu {
-		float: right;
-	}
-}
-.page-intro-wrapper {
-	margin-bottom: $vertical-gutter-width/2;
 }
