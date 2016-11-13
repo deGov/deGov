@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/deGov/deGov.png?label=ready&title=Ready)](https://waffle.io/deGov/deGov)
 ## deGov
 
 Be part of deGov and help us making deGov great! 
