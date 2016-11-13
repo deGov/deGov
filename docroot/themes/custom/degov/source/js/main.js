@@ -2,6 +2,7 @@ const jQuery = require('jquery');
 const Bootstrap = require('bootstrap-sass');
 const jQueryOnce = require('jquery-once');
 const Slick = require('slick-carousel');
+const matchHeight = require('jquery-match-height');
 
 (function ($, Drupal) {
 
@@ -13,7 +14,7 @@ const Slick = require('slick-carousel');
           var $rootA = $(this).siblings('a').first();
           var href = $rootA.attr('href');
           var text = $rootA.text();
-          $(this).prepend(`<li><a class="dropdown-parent-link" href="${href}">${text}</a></li>`);
+          $(this).prepend('<li><a class="dropdown-parent-link" href="' + href +  '">' + text + '</a></li>');
         });
       });
     }
@@ -63,6 +64,14 @@ const Slick = require('slick-carousel');
           $(this).addClass('active');
         }
       });
+    }
+  };
+
+  // Adapt height of certain elements
+  Drupal.behaviors.heights = {
+    attach: function (context, settings) {
+      console.info("ASDF");
+      $('.view-related-content .view-content .views-row .views-field').matchHeight();
     }
   };
 

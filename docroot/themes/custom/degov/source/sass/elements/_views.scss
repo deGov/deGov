@@ -10,8 +10,8 @@
   .views-field {
     @include make-sm-column(6);
     article {
-      height: 30em;
-      overflow: hidden;
+      //height: 30em;
+      //overflow: hidden;
       margin-bottom:  $vertical-gutter-width;
       background-color: $color-white;
       padding-left: $grid-gutter-width;
