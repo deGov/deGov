@@ -2,4 +2,4 @@ langcode: de
 status: true
 dependencies: {  }
 id: slider_element
-label: Slider Element
+label: Slider
