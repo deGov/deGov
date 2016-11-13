@@ -40,19 +40,40 @@
 
 //Positionin of branding, search, sm
 .header-wrapper {
-	.search-block-form, .branding, #block-degov-socialmedialinks {
-		@include make-sm-column(6);
-		@include make-lg-column(4);
+	a {
+		color: $color-gray;
+		&:hover {
+			color: $color-blue;
+		}
 	}
-	.search-block-form {
-		padding-right: $grid-gutter-width / 4;
-		@include make-sm-column-push(6);
-		@include make-lg-column-push(0);
+	.branding {
+		float: left;
+	}
+	#block-languageswitcher,
+	.search-block-form,
+	#block-degov-socialmedialinks {
+		float: right;
 	}
 
 	#block-degov-socialmedialinks {
-		@include larger-than($screen-phone) {
-			text-align: right;
+		padding-right: $grid-gutter-width / 4;
+	}
+	.search-block-form {
+		width: 50px;
+		button {
+			background-color: transparent;
+			color: $color-gray;
+			border: none;
+		}
+		.form-search {
+			display: none;
+			border-radius: 0;
+		}
+		&.active {
+			width: 300px;
+			.form-search {
+				display: block;
+			}
 		}
 	}
 }

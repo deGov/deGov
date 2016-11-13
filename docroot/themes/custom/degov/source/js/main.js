@@ -51,4 +51,19 @@ const Slick = require('slick-carousel');
     }
   };
 
+  // Search
+  Drupal.behaviors.search = {
+    attach: function (context, settings) {
+      $('#block-searchform').click(function (e) {
+        if($(this).hasClass('active')) {
+          $(this).children().removeClass('active');
+        }
+        else {
+          e.preventDefault();
+          $(this).addClass('active');
+        }
+      });
+    }
+  };
+
 })(jQuery, window.Drupal);
