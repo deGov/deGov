@@ -3,10 +3,11 @@
 // Styles for navbar
 .header-wrapper {
 	background-color: $color-white;
+	z-index: 1 !important;
 }
 .main-wrapper, .footer-wrapper {
 	position: relative;
-	z-index: -1;
+	z-index: 0;
 }
 .is-sticky header {
 	#block-searchform,
