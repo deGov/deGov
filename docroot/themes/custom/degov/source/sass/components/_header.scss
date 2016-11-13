@@ -4,7 +4,7 @@
 .header-wrapper {
 	background-color: $color-white;
 }
-.main-wrapper {
+.main-wrapper, .footer-wrapper {
 	position: relative;
 	z-index: -1;
 }

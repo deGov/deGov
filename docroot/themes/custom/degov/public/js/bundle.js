@@ -108,6 +108,7 @@
 	        } else {
 	          e.preventDefault();
 	          $(this).addClass('active');
+	          $(this).find('#edit-keys').focus();
 	        }
 	      });
 	    }
@@ -128,7 +129,16 @@
 	  // Adapt height of certain elements
 	  Drupal.behaviors.sticky = {
 	    attach: function attach(context, settings) {
-	      $('.header-wrapper').sticky();
+	      if (window.matchMedia('(min-width: 768px)').matches) {
+	        $('.header-wrapper').sticky();
+	      }
+	      $(window).resize(function () {
+	        if (window.matchMedia('(min-width: 768px)').matches) {
+	          $('.header-wrapper').sticky();
+	        } else {
+	          $('.header-wrapper').unstick();
+	        }
+	      });
 	    }
 	  };
 	})(jQuery, window.Drupal);
