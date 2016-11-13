@@ -1,14 +1,14 @@
-langcode: en
+langcode: de
 status: true
 dependencies:
   module:
     - system
   theme:
-    - bartik
-id: bartik_branding
-theme: bartik
-region: header
-weight: 0
+    - degov
+id: degov_branding
+theme: degov
+region: page_intro
+weight: -12
 provider: null
 plugin: system_branding_block
 settings:
