@@ -10,11 +10,19 @@
 }
 
 .region-footer {
-  //@include make-row();
+  @include make-row();
 }
+
 .region-page-outro {
   padding-top: $vertical-gutter-width / 2;
   padding-bottom: $vertical-gutter-width / 2;
+  #block-degov-footer,
+  #block-degov-account-menu {
+    @include larger-than($screen-phone) {
+      float: right;
+      margin-right: $grid-gutter-width / 2;
+    }
+  }
 }
 
 .region-footer, .region-page-outro {

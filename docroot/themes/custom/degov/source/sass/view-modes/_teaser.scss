@@ -1,10 +1,11 @@
 // Styles for teasers
 .teaser {
-  > h2 {
+  h2, h3 {
     a {
       //@include icon-before($fa-var-arrow-right);
       &:hover, &:focus {
         text-decoration: none;
+        color: $color-gray;
       }
     }
   }

@@ -18,6 +18,10 @@
     @include icon-after($fa-var-caret-down);
     &.open {
       @include icon-after($fa-var-caret-up);
+      background-color: $color-blue;
+    }
+    &:hover {
+      background-color: $color-blue;
     }
   }
   ul {
@@ -25,7 +29,7 @@
     right: $grid-gutter-width/4;;
     z-index: 100;
     display: none;
-    background-color: $color-gray;
+    background-color: $color-blue;
     padding-left: 9px; // Padding to match caret width
     &.open {
       display: block;
@@ -40,4 +44,9 @@
       }
     }
   }
+}
+
+#block-block-newsletter-abonnement{
+  @include content-box($color-gray);
+  margin-top: 0;
 }

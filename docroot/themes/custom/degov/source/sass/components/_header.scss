@@ -64,6 +64,9 @@
 			background-color: transparent;
 			color: $color-gray;
 			border: none;
+			&:hover {
+				color: $color-blue;
+			}
 		}
 		.form-search {
 			display: none;

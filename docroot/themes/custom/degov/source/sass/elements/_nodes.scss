@@ -36,7 +36,13 @@ article.full {
   }
 }
 
+// Hide standard title
 article.teaser h2 {
+  //display: none;
+}
+
+// Format teaser title
+article.teaser .content .field--type-string h3 {
   &::after {
     content: '';
     display: block;
@@ -46,28 +52,28 @@ article.teaser h2 {
     margin-top: $vertical-gutter-width/2;
   }
 }
-article.teaser.article-color-red h2 {
+article.teaser.article-color-red .content .field--type-string h3  {
   &::after {
     background: $color-red;
   }
 }
-article.teaser.article-color-green h2 {
+article.teaser.article-color-green .content .field--type-string h3  {
   &::after {
     background: $color-green;
   }
 }
-article.teaser.article-color-blue h2 {
+article.teaser.article-color-blue .content .field--type-string h3  {
   background-color: blue;
   &::after {
     background: $color-blue;
   }
 }
-article.teaser.article-color-gray h2 {
+article.teaser.article-color-gray .content .field--type-string h3  {
   &::after {
     background: $color-gray;
   }
 }
-article.teaser.article-color-yellow h2 {
+article.teaser.article-color-yellow .content .field--type-string h3  {
   &::after {
     background: $color-yellow;
   }
