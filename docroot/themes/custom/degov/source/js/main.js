@@ -3,6 +3,7 @@ const Bootstrap = require('bootstrap-sass');
 const jQueryOnce = require('jquery-once');
 const Slick = require('slick-carousel');
 const matchHeight = require('jquery-match-height');
+const stick = require('jquery-sticky');
 
 (function ($, Drupal) {
 
@@ -70,8 +71,19 @@ const matchHeight = require('jquery-match-height');
   // Adapt height of certain elements
   Drupal.behaviors.heights = {
     attach: function (context, settings) {
-      console.info("ASDF");
+      // Related content
       $('.view-related-content .view-content .views-row .views-field').matchHeight();
+      // Homepage content
+      $('.field--name-field-home-page-contents .field--item').matchHeight();
+      //$('.field--name-field-home-page-contents .field--item article').css("background-color", "red");
+      //$('.field--name-field-home-page-contents .field--item article').matchHeight();
+    }
+  };
+
+  // Adapt height of certain elements
+  Drupal.behaviors.sticky = {
+    attach: function (context, settings) {
+      $('.header-wrapper').sticky();
     }
   };
 

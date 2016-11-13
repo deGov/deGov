@@ -1,10 +1,31 @@
 // Styles for intro, header, and top bar regions
 
 // Styles for navbar
+.header-wrapper {
+	background-color: $color-white;
+}
+.main-wrapper {
+	position: relative;
+	z-index: -1;
+}
+.is-sticky header {
+	#block-searchform,
+	#block-degov-socialmedialinks,
+	#block-languageswitcher{
+		display: none;
+	}
+	.branding {
+		position: relative;
+		top: $vertical-gutter-width;
+		img {
+			max-height: $vertical-gutter-width;
+			width: auto;
+		}
+	}
+}
 .header-wrapper .name {
 	display: none;
 }
-
 .header-wrapper .branding {
 	margin-top: -0.75em;
 	@include smaller-than($screen-tablet) {
