@@ -7,8 +7,8 @@ dependencies:
     - degov
 id: degov_branding
 theme: degov
-region: page_intro
-weight: -12
+region: navigation
+weight: -10
 provider: null
 plugin: system_branding_block
 settings:
