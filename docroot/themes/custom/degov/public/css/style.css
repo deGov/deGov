@@ -2424,7 +2424,7 @@
 .header-wrapper {
   background-color: #ffffff; }
 
-.main-wrapper {
+.main-wrapper, .footer-wrapper {
   position: relative;
   z-index: -1; }
 

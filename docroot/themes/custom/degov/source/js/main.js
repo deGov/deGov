@@ -84,7 +84,17 @@ const stick = require('jquery-sticky');
   // Adapt height of certain elements
   Drupal.behaviors.sticky = {
     attach: function (context, settings) {
-      $('.header-wrapper').sticky();
+      if (window.matchMedia('(min-width: 768px)').matches) {
+        $('.header-wrapper').sticky();
+      }
+      $(window).resize(function(){
+        if (window.matchMedia('(min-width: 768px)').matches) {
+          $('.header-wrapper').sticky();
+        }
+        else {
+          $('.header-wrapper').unstick();
+        }
+      });
     }
   };
 
