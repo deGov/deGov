@@ -18,19 +18,19 @@ function degov_preprocess_page(&$variables) {
   if (isset($variables['node'])) {
     $node = $variables['node'];
     if ($node->getType() == 'home_page') {
-
-      // Assure that empty image doesn't cause error and WSOD.
-      //$field_home_page_image = $node->get('field_home_page_image')->get(0);
-      //$variables['home_page_image'] = $field_home_page_image ? $field_home_page_image->entity->image->get(0)->view('full') : "";
-
-      // The title is accessible in the twig template using the renderable array page['#title'].
-      // A new variable is not necessary.
-      //$variables['home_page_title'] = $node->title->view();
+      $variables['home_page'] = TRUE;
+      $field_home_page_slider = $node->get('field_home_page_slider');
+      $slider = array();
+      if($field_home_page_slider) {
+        foreach ($field_home_page_slider->getIterator() as $item) {
+          $entity = $item->entity;
+          $slider[] = entity_view($entity, 'full');
+        }
+      }
+      $variables['slider'] = $slider;
     }
   }
 }
-
-// Remove field_home_page_image from render array
 
 // Commented because fields can be now excluded in templates using the filter without.
 // These actions are not required anymore.
@@ -40,7 +40,7 @@ function degov_preprocess_node(&$vars) {
     $node = $vars['node'];
     //Frontpage preprocessing
     if ($node->getType() == 'home_page') {
-      //unset($vars['content']['field_home_page_image']);
+      unset($vars['content']['field_home_page_slider']);
     } elseif($node->getType() == 'article_page') {
       if(!empty($node->get('field_article_page_teaser_color')->get(0))) {
         $color = $node->get('field_article_page_teaser_color')
