@@ -1,4 +1,5 @@
 name: 'deGov - Startseite'
+description: 'Stellt das Element Startseite für deGov zur Verfügung.'
 type: module
 core: 8.x
 dependencies:
@@ -6,16 +7,14 @@ dependencies:
   - degov_blogarticle
   - degov_event_page
   - degov_section_page
-  - entity_browser
+  - degov_slider_element
+  - entity_reference_revisions
   - field
   - language
-  - lightning_media
-  - lightning_media_image
-  - media_entity
   - menu_ui
   - node
   - panelizer
+  - paragraphs
   - path
   - user
   - workbench_moderation
-description: 'Stellt die deGov Startseiten Ansicht zur Verfügung.'
