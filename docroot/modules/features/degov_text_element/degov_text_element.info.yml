@@ -1,5 +1,4 @@
 name: 'deGov - Paragraphs - Text'
-description: 'Provides Text paragraphs type and related configuration.'
 type: module
 core: 8.x
 dependencies:

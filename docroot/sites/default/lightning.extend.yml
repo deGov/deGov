@@ -61,7 +61,6 @@ modules:
   - degov_search404
   - elasticsearch_connector
   - elasticsearch_connector_views
-  - degov_demo
   - degov_tax_blog
   - degov_media_image
   - viewsreference
@@ -95,9 +94,10 @@ modules:
   - degov_plain_text_format_settings
   - degov_slider_element
   - degov_blocklayout
+  - degov_demo
 # A system path to redirect to once installation is complete.
 redirect:
-  path: 'degov_welcome'
+  path: 'herzlich-willkommen-bei-degov'
   # Additional options to pass to the URL generator.
   options: { }
 
