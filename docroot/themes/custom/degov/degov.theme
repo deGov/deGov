@@ -18,13 +18,14 @@ function degov_preprocess_page(&$variables) {
   if (isset($variables['node'])) {
     $node = $variables['node'];
     if ($node->getType() == 'home_page') {
+
       // Assure that empty image doesn't cause error and WSOD.
-      $field_home_page_image = $node->get('field_home_page_image')->get(0);
-      $variables['home_page_image'] = $field_home_page_image ? $field_home_page_image->entity->image->get(0)->view('full') : "";
+      //$field_home_page_image = $node->get('field_home_page_image')->get(0);
+      //$variables['home_page_image'] = $field_home_page_image ? $field_home_page_image->entity->image->get(0)->view('full') : "";
 
       // The title is accessible in the twig template using the renderable array page['#title'].
       // A new variable is not necessary.
-      $variables['home_page_title'] = $node->title->view();
+      //$variables['home_page_title'] = $node->title->view();
     }
   }
 }
@@ -39,7 +40,7 @@ function degov_preprocess_node(&$vars) {
     $node = $vars['node'];
     //Frontpage preprocessing
     if ($node->getType() == 'home_page') {
-      unset($vars['content']['field_home_page_image']);
+      //unset($vars['content']['field_home_page_image']);
     } elseif($node->getType() == 'article_page') {
       if(!empty($node->get('field_article_page_teaser_color')->get(0))) {
         $color = $node->get('field_article_page_teaser_color')
@@ -90,12 +91,23 @@ function degov_preprocess_paragraph(&$variables) {
           ->getValue()['value'];
         $variables['attributes']['class'][] = 'paragraph-color-' . $color;
       }
-    } elseif ($paragraph->getType() == 'citation_element') {
+    }
+    elseif ($paragraph->getType() == 'citation_element') {
       if(!empty($paragraph->get('field_citation_element_color')->get(0))) {
         $color = $paragraph->get('field_citation_element_color')
           ->get(0)
           ->getValue()['value'];
         $variables['attributes']['class'][] = 'paragraph-color-' . $color;
+      }
+    }
+    elseif ($paragraph->getType() == 'slider_element') {
+      if(!empty($paragraph->get('field_slider_element_article')->get(0))) {
+        $reference = $paragraph->get('field_slider_element_article')->get(0)->get('entity');
+        $entity = $reference->getTarget()->getValue();
+        $options = ['absolute' => TRUE];
+        $url = \Drupal\Core\Url::fromRoute('entity.node.canonical', ['node' => $entity->id()], $options);
+        $url = $url->toString();
+        $variables['url'] = $url;
       }
     }
   }
