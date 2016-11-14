@@ -8,7 +8,7 @@ dependencies:
 id: searchform
 theme: degov
 region: navigation
-weight: -8
+weight: -11
 provider: null
 plugin: search_form_block
 settings:
