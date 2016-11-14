@@ -1,7 +1,0 @@
-name: 'deGov - Suchformular'
-description: 'Positioniert den Block Suchformular im Kopfbereich.'
-type: module
-core: 8.x
-dependencies:
-  - block
-  - search

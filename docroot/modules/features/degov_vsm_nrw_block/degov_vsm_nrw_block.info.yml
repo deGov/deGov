@@ -1,8 +1,0 @@
-name: 'deGov - VSM NRW Block'
-description: 'Positioniert den Block "VSM NRW Block" auf der Suchseite.'
-type: module
-core: 8.x
-dependencies:
-  - block
-  - degov_vsm_nrw
-  - system

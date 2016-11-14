@@ -1,7 +1,0 @@
-name: 'deGov - User Account Menu'
-description: 'Positioniert das Nutzer Menu im Kopfbereich.'
-type: module
-core: 8.x
-dependencies:
-  - block
-  - system

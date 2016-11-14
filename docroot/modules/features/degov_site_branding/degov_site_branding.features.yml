@@ -1,4 +1,0 @@
-excluded:
-  - block.block.bartik_branding
-  - block.block.degov_local_actions
-required: true
