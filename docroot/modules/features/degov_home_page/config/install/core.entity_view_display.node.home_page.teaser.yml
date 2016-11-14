@@ -4,8 +4,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.home_page.field_home_page_contents
-    - field.field.node.home_page.field_home_page_image
-    - field.field.node.home_page.field_home_page_mainarticle
     - node.type.home_page
   module:
     - user
@@ -20,7 +18,5 @@ content:
     weight: -20
 hidden:
   field_home_page_contents: true
-  field_home_page_image: true
-  field_home_page_mainarticle: true
   langcode: true
   shariff_field: true
