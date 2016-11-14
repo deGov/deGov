@@ -5,6 +5,7 @@ id: land
 label: Land
 weight: 24
 is_admin: null
+permissions:
   - 'access content'
   - 'view media'
   - 'display eu cookie compliance popup'
