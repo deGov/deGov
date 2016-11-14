@@ -1,0 +1,41 @@
+langcode: de
+status: true
+dependencies:
+  module:
+    - system
+    - twitter_block
+  theme:
+    - degov
+id: twitterblock
+theme: degov
+region: footer
+weight: -10
+provider: null
+plugin: twitter_block
+settings:
+  id: twitter_block
+  label: 'Twitter block'
+  provider: twitter_block
+  label_display: '0'
+  widget_id: '793100883903021056'
+  theme: ''
+  link_color: ''
+  width: ''
+  height: ''
+  chrome:
+    noheader: '0'
+    nofooter: '0'
+    noborders: '0'
+    noscrollbar: '0'
+    transparent: '0'
+  border_color: ''
+  language: ''
+  tweet_limit: ''
+  related: ''
+  polite: polite
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
