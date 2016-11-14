@@ -285,7 +285,7 @@ $config_directories = array();
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = 'tKZc7K3i1Y3q7SYX5FHoUYLTP3kYkm6bVIghxc7CWqcOFOkRACHX0S8grlBVUH0umOpl-pcpIg';
+$settings['hash_salt'] = 'Xtt115eTiCTHghH2wqdrX34f-LszbS0HxldG4tKVjyKhtADwFmddp-oiuSjgGVoT8a6GqavTzA';
 
 /**
  * Deployment identifier.
@@ -762,3 +762,13 @@ if (file_exists(__DIR__ . '/settings.local.php')) {
 
 $settings['install_profile'] = 'lightning';
 $config_directories['sync'] = 'sites/default/files/config_eZCOMvONmnbhozyvFZ23MC7-k9Nei2Q-B_nTPSz-t1TeKeipCKA5rYOPNZA5yvqNiGhUWmucPw/sync';
+$databases['default']['default'] = array (
+  'database' => 'degov',
+  'username' => 'degov',
+  'password' => 'degov',
+  'prefix' => '',
+  'host' => 'localhost',
+  'port' => '3306',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+);

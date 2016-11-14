@@ -359,6 +359,7 @@ function degov_demo_content_types($module_real_path, &$files_ids, &$paragraphs_i
   }
   
   // Set Main/Articles for Home Page
+  /*
   $node = null;
   $node = Node::load($home_page_id);
   $node->field_home_page_mainarticle = array('target_id' =>  $home_page_articles_ids[0]);
@@ -366,4 +367,5 @@ function degov_demo_content_types($module_real_path, &$files_ids, &$paragraphs_i
   $node->field_home_page_contents = array('target_id' => $home_page_articles_ids[2]);
   $node->field_home_page_contents = array('target_id' => $home_page_articles_ids[3]);
   $node->save();
+  */
 }
