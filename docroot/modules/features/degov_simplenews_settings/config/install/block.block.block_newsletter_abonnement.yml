@@ -2,8 +2,8 @@ langcode: de
 status: true
 dependencies:
   module:
-    - node
     - simplenews
+    - system
   theme:
     - degov
 id: block_newsletter_abonnement
@@ -14,7 +14,7 @@ provider: null
 plugin: simplenews_subscription_block
 settings:
   id: simplenews_subscription_block
-  label: 'Newsletter Abonnement'
+  label: Newsletter
   provider: simplenews
   label_display: visible
   newsletters:
@@ -22,11 +22,8 @@ settings:
   message: 'Bleiben Sie informiert - abonnieren Sie unseren Newsletter'
   unique_id: degov_newsletter_abonnement
 visibility:
-  node_type:
-    id: node_type
-    bundles:
-      home_page: home_page
-      simplenews_issue: simplenews_issue
+  request_path:
+    id: request_path
+    pages: '<front>'
     negate: false
-    context_mapping:
-      node: '@node.node_route_context:node'
+    context_mapping: {  }
