@@ -144,7 +144,7 @@
 
 	  Drupal.behaviors.sliderParagraph = {
 	    attach: function attach(context, settings) {
-	      $(context).find('.field--name-field-home-page-slider').once('slider-paragraph-frontpage').each(function () {
+	      $(context).find('.banner-wrapper').once('slider-paragraph-frontpage').each(function () {
 	        $(this).slick();
 	      });
 	    }

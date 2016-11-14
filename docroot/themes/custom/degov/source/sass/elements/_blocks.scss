@@ -19,9 +19,9 @@
     }
   }
   ul {
+    z-index: 999999999999999;
     position: absolute;
-    right: $grid-gutter-width/4;;
-    z-index: 100;
+    right: $grid-gutter-width/4;
     display: none;
     background-color: $color-blue;
     padding-left: 9px; // Padding to match caret width
