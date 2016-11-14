@@ -62,7 +62,7 @@
 	          var $rootA = $(this).siblings('a').first();
 	          var href = $rootA.attr('href');
 	          var text = $rootA.text();
-	          $(this).prepend('<li><a class="dropdown-parent-link" href="${href}">' + text + '</a></li>');
+	          $(this).prepend('<li><a class="dropdown-parent-link" href="' + href + '">' + text + '</a></li>');
 	        });
 	      });
 	    }
@@ -87,52 +87,64 @@
 	      });
 
 	      $(context).find('#block-languageswitcher a').once('lang-link-click').click(function () {
-	        var hreflang = $(this).attr('hreflang');
-	        $(this).text(hreflang);
+	        var hrefLang = $(this).attr('hreflang');
+	        $(this).text(hrefLang);
 	      });
 	    }
 	  };
 
 	  // Search
-	  Drupal.behaviors.search = {
+	  Drupal.behaviors.navSearch = {
 	    attach: function attach(context, settings) {
-	      $(context).find('#block-searchform').once('search-click').click(function (e) {
-	        if ($(this).hasClass('active')) {
-	          $(this).children().removeClass('active');
-	        } else {
-	          e.preventDefault();
-	          $(this).addClass('active');
-	          $(this).find('#edit-keys').focus();
-	        }
+	      $('.block-search', context).once('nav-search').each(function () {
+	        var $container = $(this);
+
+	        // open when clicking on the button the first time
+	        $('button', this).click(function () {
+	          if ($('body', context).hasClass('expanded-search')) {
+	            return true;
+	          }
+	          $('body', context).addClass('expanded-search');
+	          $('input[type="search"]', $container).focus();
+
+	          $(document).on('click.hideSearch', '*', function (e) {
+	            if (!$(e.target).closest('.block-search').length) {
+	              $('body', context).removeClass('expanded-search');
+	              $(document).off('click.hideSearch');
+	            }
+	          });
+
+	          return false;
+	        });
 	      });
 	    }
 	  };
 
 	  // Add body class on scroll
-	  Drupal.behaviors.search = {
+	  Drupal.behaviors.scroll = {
 	    attach: function attach(context, settings) {
-	      $(window).scroll(function (event) {
-	        var scroll = $(window).scrollTop();
-	        if (scroll > 0) {
-	          $('body').addClass('scroll');
-	        } else {
-	          $('body').removeClass('scroll');
-	        }
+	      $(context).find('body').once('scroll-class').each(function () {
+	        $(window).scroll(function (event) {
+	          var scrollPos = $(window).scrollTop();
+	          $(context).find('body').toggleClass('scroll', scrollPos > 0);
+	        });
 	      });
 	    }
 	  };
 
-	  // Adapt height of certain elements
-	  //  Drupal.behaviors.heights = {
-	  //  attach: function (context, settings) {
-	  //    // Related content
-	  //    $('.view-related-content .view-content .views-row .views-field').matchHeight();
-	  //    // Homepage content
-	  //    $('.field--name-field-home-page-contents .field--item').matchHeight();
-	  //    //$('.field--name-field-home-page-contents .field--item article').css("background-color", "red");
-	  //    //$('.field--name-field-home-page-contents .field--item article').matchHeight();
-	  //  }
-	  //  };
+	  Drupal.behaviors.toolBarOffset = {
+	    attach: function attach(context, settings) {
+	      $(context).find('#toolbar-administration').each(function () {
+	        window.setTimeout(function () {
+	          var offset = $('#toolbar-bar').outerHeight() + $('#toolbar-item-administration-tray').outerHeight();
+	          var paddingTop = +$('body').css('padding-top').replace('px', '');
+
+	          $('.header-wrapper').css('top', offset);
+	          $('body').attr('style', 'padding-top: ' + (offset + paddingTop) + 'px !important;');
+	        }, 100);
+	      });
+	    }
+	  };
 	})(jQuery, window.Drupal);
 
 /***/ },
