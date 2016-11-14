@@ -82,8 +82,12 @@
         {% if not navbar_attributes.hasClass('container') %}
           <div class="{{ container }}">
         {% endif %}
+
+        <div class="navbar-branding">
+          {{ page.navigation_branding }}
+        </div>
+
         <div class="navbar-header">
-          {{ page.navigation }}
           {# .btn-navbar is used as the toggle for collapsed navbar content #}
           {% if page.navigation_collapsible %}
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
@@ -95,7 +99,12 @@
           {% endif %}
         </div>
 
-        {# Navigation (collapsible) #}
+        {# Seondary navigation area #}
+        <div class="navbar-secondary">
+          {{ page.navigation }}
+        </div>
+
+        {# Navigation (collapsible), main menu #}
         {% if page.navigation_collapsible %}
           <div id="navbar-collapse" class="navbar-collapse collapse">
             {{ page.navigation_collapsible }}
