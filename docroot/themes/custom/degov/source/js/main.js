@@ -60,6 +60,21 @@ const stick = require('jquery-sticky'); */
     }
   };
 
+  // Add body class on scroll
+  Drupal.behaviors.search = {
+    attach: function (context, settings) {
+      $(window).scroll(function (event) {
+        var scroll = $(window).scrollTop();
+        if(scroll > 0) {
+          $('body').addClass('scroll');
+        }
+        else {
+          $('body').removeClass('scroll');
+        }
+      });
+    }
+  };
+
   // Adapt height of certain elements
   //  Drupal.behaviors.heights = {
   //  attach: function (context, settings) {
