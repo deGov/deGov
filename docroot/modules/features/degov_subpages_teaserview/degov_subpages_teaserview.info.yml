@@ -7,6 +7,7 @@ dependencies:
   - degov_event_page
   - degov_section_page
   - node
+  - options
   - user
   - views
 description: 'Stellt das Element Unterseiten Teaseransicht für deGov zur Verfügung.'

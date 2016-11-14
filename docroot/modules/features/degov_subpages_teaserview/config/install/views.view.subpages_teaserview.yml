@@ -2,10 +2,11 @@ langcode: de
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.teaser
+    - field.storage.node.field_article_page_teaser_color
     - field.storage.node.field_article_page_teaser_image
     - field.storage.node.field_article_page_teaser_stitle
     - field.storage.node.field_article_page_teaser_title
-    - field.storage.node.field_article_page_teaser_color
     - field.storage.node.field_blogarticle_teaser_color
     - field.storage.node.field_blogarticle_teaser_image
     - field.storage.node.field_blogarticle_teaser_stitle
@@ -74,7 +75,9 @@ display:
       style:
         type: default
       row:
-        type: fields
+        type: 'entity:node'
+        options:
+          view_mode: teaser
       fields:
         nid:
           id: nid
@@ -563,10 +566,10 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.node.field_article_page_teaser_color'
         - 'config:field.storage.node.field_article_page_teaser_image'
         - 'config:field.storage.node.field_article_page_teaser_stitle'
         - 'config:field.storage.node.field_article_page_teaser_title'
-        - 'config:field.storage.node.field_article_page_teaser_color'
   block_blogarticle_page:
     display_plugin: block
     id: block_blogarticle_page
