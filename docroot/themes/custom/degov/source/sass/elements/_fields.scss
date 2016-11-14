@@ -15,11 +15,12 @@
 .field--name-field-downloads-element-title,
 .field--name-field-gallery-element-title,
 .field--name-field-text-element-title {
-	// Please use semantic "styling" aka working with
-	// the HTML inbuild primitives to give the website a
-	// structure and then style that.
-	//font-weight: bold;
-	//color: red;
+	font-weight: bold;
+}
+
+.field--type-string,
+.field--type-text-long {
+	padding: $vertical-gutter-width/2 0;
 }
 
 // Format some fields to be displayed next to each other
@@ -96,5 +97,20 @@
 		@include make-xs-column(6);
 		@include make-md-column(4);
 		@include make-md-column(3);
+		padding-bottom: $vertical-gutter-width;
+	}
+}
+
+.content table {
+	width: 100%;
+	td, th {
+		padding: 0.25em;
+	}
+	td {
+		border-bottom: 1px solid $gray-light;
+		vertical-align: baseline;
+	}
+	th {
+		border-bottom: 3px solid $color-gray;
 	}
 }

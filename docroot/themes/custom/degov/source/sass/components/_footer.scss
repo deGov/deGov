@@ -43,4 +43,12 @@
   }
 }
 
+.region-footer .block-twitter-block {
+  padding-left: 0 !important;
+  iframe {
+    width: 100% !important;
+    border-top: 4px solid $color-gray !important;
+  }
+}
+
 

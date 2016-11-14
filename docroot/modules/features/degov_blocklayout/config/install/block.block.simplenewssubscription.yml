@@ -1,4 +1,4 @@
-langcode: de
+langcode: en
 status: true
 dependencies:
   module:
@@ -6,10 +6,10 @@ dependencies:
     - system
   theme:
     - degov
-id: block_newsletter_abonnement
+id: simplenewssubscription
 theme: degov
-region: footer
-weight: -7
+region: content
+weight: -1
 provider: null
 plugin: simplenews_subscription_block
 settings:
@@ -20,10 +20,10 @@ settings:
   newsletters:
     degov_newsletter: degov_newsletter
   message: 'Bleiben Sie informiert - abonnieren Sie unseren Newsletter'
-  unique_id: degov_newsletter_abonnement
+  unique_id: degov_newsletter_abonnement_2
 visibility:
   request_path:
     id: request_path
-    pages: '<front>'
+    pages: /service/newsletter
     negate: false
     context_mapping: {  }

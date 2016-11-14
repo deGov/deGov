@@ -2,13 +2,11 @@ langcode: de
 status: true
 dependencies:
   config:
-    - entity_browser.browser.media_browser
     - field.field.node.home_page.field_home_page_contents
-    - field.field.node.home_page.field_home_page_image
-    - field.field.node.home_page.field_home_page_mainarticle
+    - field.field.node.home_page.field_home_page_slider
     - node.type.home_page
   module:
-    - entity_browser
+    - paragraphs
     - path
     - workbench_moderation
 id: node.home_page.default
@@ -18,30 +16,10 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 6
+    weight: 5
     settings: {  }
     third_party_settings: {  }
   field_home_page_contents:
-    weight: 3
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-  field_home_page_image:
-    weight: 1
-    settings:
-      entity_browser: media_browser
-      field_widget_display: rendered_entity
-      field_widget_edit: true
-      field_widget_remove: true
-      selection_mode: selection_append
-      open: false
-      field_widget_display_settings: {  }
-    third_party_settings: {  }
-    type: entity_browser_entity_reference
-  field_home_page_mainarticle:
     weight: 2
     settings:
       match_operator: CONTAINS
@@ -49,27 +27,37 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+  field_home_page_slider:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 4
+    weight: 3
     settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 9
+    weight: 8
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 7
+    weight: 6
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 8
+    weight: 7
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -80,7 +68,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 4
     settings:
       match_operator: CONTAINS
       size: 60

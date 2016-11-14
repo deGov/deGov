@@ -76,7 +76,6 @@ modules:
   - degov_subpages_teaserview
   - degov_welcome
   - degov_simplenews_settings
-  - degov_twitter_block
   - automated_cron
   - ultimate_cron
   - degov_cronconfig
@@ -85,23 +84,19 @@ modules:
   - contact_storage
   - degov_contactform_element
   - degov_contactform
-  - degov_languageswichter
   - degov_media_video
-  - degov_searchform
   - degov_related_content
   - degov_views
   - degov_frontpage_rss
   - social_media_links
-  - degov_social_media_links
   - degov_languages
   - colorbox
   - degov_colorbox
-  - degov_vsm_nrw_block
-  - degov_site_branding
   - spamspan
   - degov_rich_text_format_settings
   - degov_plain_text_format_settings
   - degov_slider_element
+  - degov_blocklayout
 # A system path to redirect to once installation is complete.
 redirect:
   path: 'degov_welcome'

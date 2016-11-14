@@ -1,21 +1,20 @@
-const jQuery = require('jquery');
 const Bootstrap = require('bootstrap-sass');
-const jQueryOnce = require('jquery-once');
+/*
 const Slick = require('slick-carousel');
 const matchHeight = require('jquery-match-height');
-const stick = require('jquery-sticky');
+const stick = require('jquery-sticky'); */
 
 (function ($, Drupal) {
 
   // Repeat parent element of dropdown as first element
   Drupal.behaviors.dropdown = {
     attach: function (context, settings) {
-      $('.navbar-nav').once('dropdown').each(function () {
+      $(context).find('.navbar-nav').once('dropdown').each(function () {
         $(this).find('ul.dropdown-menu').each(function () {
-          var $rootA = $(this).siblings('a').first();
-          var href = $rootA.attr('href');
-          var text = $rootA.text();
-          $(this).prepend('<li><a class="dropdown-parent-link" href="' + href +  '">' + text + '</a></li>');
+          const $rootA = $(this).siblings('a').first();
+          const href = $rootA.attr('href');
+          const text = $rootA.text();
+          $(this).prepend('<li><a class="dropdown-parent-link" href="${href}">' + text + '</a></li>');
         });
       });
     }
@@ -24,13 +23,9 @@ const stick = require('jquery-sticky');
   // FAQ
   Drupal.behaviors.faq = {
     attach: function (context, settings) {
-      $('.paragraph--type--faq-element').click(function () {
-        if($(this).children('.field--name-field-faq-element-question').hasClass('active')) {
-          $(this).children().removeClass('active');
-        }
-        else {
-          $(this).children().addClass('active');
-        }
+      $(context).find('.paragraph--type--faq-element').once('faq-click').click(function () {
+        const isActive = $(this).children('.field--name-field-faq-element-question').hasClass('active');
+        $(this).children().toggleClass('active', !isActive);
       });
     }
   };
@@ -38,17 +33,14 @@ const stick = require('jquery-sticky');
   // Language dropdown
   Drupal.behaviors.lang = {
     attach: function (context, settings) {
-      $('#block-languageswitcher').click(function () {
-        if($(this).children('ul').hasClass('open')) {
-          $(this).children().removeClass('open');
-        }
-        else {
-          $(this).children().addClass('open');
-        }
+      $(context).find('#block-languageswitcher').once('lang-click').click(function () {
+        const isOpen = $(this).children('ul').hasClass('open');
+        $(this).children().toggleClass('open', !isOpen);
       });
-      $('#block-languageswitcher a').once('language-processed').each(function() {
-        var hreflang = $(this).attr('hreflang');
-        $(this).text(hreflang)
+
+      $(context).find('#block-languageswitcher a').once('lang-link-click').click(function () {
+        const hreflang = $(this).attr('hreflang');
+        $(this).text(hreflang);
       });
     }
   };
@@ -56,11 +48,10 @@ const stick = require('jquery-sticky');
   // Search
   Drupal.behaviors.search = {
     attach: function (context, settings) {
-      $('#block-searchform').click(function (e) {
-        if($(this).hasClass('active')) {
+      $(context).find('#block-searchform').once('search-click').click(function (e) {
+        if ($(this).hasClass('active')) {
           $(this).children().removeClass('active');
-        }
-        else {
+        } else {
           e.preventDefault();
           $(this).addClass('active');
           $(this).find('#edit-keys').focus();
@@ -69,33 +60,31 @@ const stick = require('jquery-sticky');
     }
   };
 
-  // Adapt height of certain elements
-  Drupal.behaviors.heights = {
+  // Add body class on scroll
+  Drupal.behaviors.search = {
     attach: function (context, settings) {
-      // Related content
-      $('.view-related-content .view-content .views-row .views-field').matchHeight();
-      // Homepage content
-      $('.field--name-field-home-page-contents .field--item').matchHeight();
-      //$('.field--name-field-home-page-contents .field--item article').css("background-color", "red");
-      //$('.field--name-field-home-page-contents .field--item article').matchHeight();
-    }
-  };
-
-  // Adapt height of certain elements
-  Drupal.behaviors.sticky = {
-    attach: function (context, settings) {
-      if (window.matchMedia('(min-width: 768px)').matches) {
-        $('.header-wrapper').sticky();
-      }
-      $(window).resize(function(){
-        if (window.matchMedia('(min-width: 768px)').matches) {
-          $('.header-wrapper').sticky();
+      $(window).scroll(function (event) {
+        var scroll = $(window).scrollTop();
+        if(scroll > 0) {
+          $('body').addClass('scroll');
         }
         else {
-          $('.header-wrapper').unstick();
+          $('body').removeClass('scroll');
         }
       });
     }
   };
+
+  // Adapt height of certain elements
+  //  Drupal.behaviors.heights = {
+  //  attach: function (context, settings) {
+  //    // Related content
+  //    $('.view-related-content .view-content .views-row .views-field').matchHeight();
+  //    // Homepage content
+  //    $('.field--name-field-home-page-contents .field--item').matchHeight();
+  //    //$('.field--name-field-home-page-contents .field--item article').css("background-color", "red");
+  //    //$('.field--name-field-home-page-contents .field--item article').matchHeight();
+  //  }
+  //  };
 
 })(jQuery, window.Drupal);

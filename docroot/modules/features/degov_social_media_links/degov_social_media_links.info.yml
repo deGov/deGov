@@ -1,8 +1,0 @@
-name: 'deGov - Social Media Links'
-description: 'Positioniert den Block Social Media Links im Kopfbereich.'
-type: module
-core: 8.x
-dependencies:
-  - block
-  - ctools
-  - social_media_links

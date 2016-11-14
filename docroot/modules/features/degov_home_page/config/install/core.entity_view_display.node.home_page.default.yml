@@ -3,10 +3,10 @@ status: true
 dependencies:
   config:
     - field.field.node.home_page.field_home_page_contents
-    - field.field.node.home_page.field_home_page_image
-    - field.field.node.home_page.field_home_page_mainarticle
+    - field.field.node.home_page.field_home_page_slider
     - node.type.home_page
   module:
+    - entity_reference_revisions
     - panelizer
     - user
 third_party_settings:
@@ -21,35 +21,29 @@ bundle: home_page
 mode: default
 content:
   field_home_page_contents:
-    weight: 103
+    weight: 3
     label: hidden
     settings:
       view_mode: teaser
       link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
-  field_home_page_image:
-    weight: 101
+  field_home_page_slider:
+    type: entity_reference_revisions_entity_view
+    weight: 2
     label: hidden
     settings:
-      link: true
       view_mode: default
+      link: ''
     third_party_settings: {  }
-    type: entity_reference_entity_view
-  field_home_page_mainarticle:
-    weight: 102
-    label: hidden
-    settings:
-      view_mode: teaser
-      link: false
-    third_party_settings: {  }
-    type: entity_reference_entity_view
   links:
-    weight: 100
+    weight: 1
     settings: {  }
     third_party_settings: {  }
   workbench_moderation_control:
-    weight: -20
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   langcode: true
   shariff_field: true

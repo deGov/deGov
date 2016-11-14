@@ -18,97 +18,9 @@ function degov_welcome_install() {
   \Drupal::service('theme_installer')->install(array('degov'), TRUE);
   \Drupal::configFactory()->getEditable('system.theme')->set('default', 'degov')->save(TRUE);
 
+
   // Set first node as default frontpage
   \Drupal::configFactory()->getEditable('system.site')->set('page.front', '/node/1')->save(TRUE);
-
-
-  // Place some blocks in the correct regions
-
-  // For menu blocks set the depth
-  $block = null;
-  $block = Block::load('degov_main_menu');
-  if ($block) {
-    $block->setRegion('navigation_collapsible');
-    $block->setWeight(1);
-    $menu_plugin = $block->getPlugin();
-    $menu_plugin->setConfigurationValue('depth', 2);
-    $block->save();
-  }
-
-  // Top bar
-  $block = null;
-  $block = Block::load('degov_breadcrumbs');
-  if ($block) {
-    $block->setRegion('header');
-    $block->save();
-  }
-
-  // Highlighted
-  $block = null;
-  $block = Block::load('degov_messages');
-  if ($block) {
-    $block->setRegion('highlighted');
-    $block->save();
-  }
-
-  // Content
-  $block = null;
-  $block = Block::load('degov_help');
-  if ($block) {
-    $block->setRegion('content');
-    $block->setWeight(0);
-    $block->save();
-  }
-
-  $block = null;
-  $block = Block::load('degov_page_title');
-  if ($block) {
-    $block->setRegion('content');
-    $block->setWeight(1);
-    $block->save();
-  }
-
-  $block = null;
-  $block = Block::load('degov_local_actions');
-  if ($block) {
-    $block->setRegion('content');
-    $block->setWeight(2);
-    $block->save();
-  }
-
-  $block = null;
-  $block = Block::load('degov_local_tasks');
-  if ($block) {
-    $block->setRegion('content');
-    $block->setWeight(3);
-    $block->save();
-  }
-
-  $block = null;
-  $block = Block::load('degov_content');
-  if ($block) {
-    $block->setRegion('content');
-    $block->setWeight(4);
-    $block->save();
-  }
-
-  // Footer
-  $block = null;
-  $block = Block::load('degov_powered');
-  if ($block) {
-    $block->setRegion('page_outro');
-    $block->setWeight(0);
-    $block->save();
-  }
-
-  $block = null;
-  $block = Block::load('degov_footer');
-  if ($block) {
-    $block->setRegion('page_outro');
-    $block->setWeight(1);
-    $block->save();
-  }
-
 
   // VIEW BLOCKS
 
