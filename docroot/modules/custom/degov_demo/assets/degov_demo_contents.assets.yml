@@ -302,36 +302,6 @@ article_page:
   field_article_page_teaser_color: "#666"
   field_article_page_teaser_title: "Fragen und Antworten"
   field_article_page_teaser_stitle: "Fragen und Antworten für digitale Angelegenheiten und Open Source."
- -
-  xparent: "S5"
-  menu_name: "main"
-  menu_title: "Nur Kommune"
-  menu_weight: "51"
-  field_title: "Nur sichtbar für Kommune"
-  field_article_page_subtitle: "In Zeiten der digitale Wirtschaft mit Open Source Lösungen mit gutem Beispiel voran gehen."
-  field_article_page_section: null
-  field_article_page_datetime: "2016-11-17T16:00:00"
-  field_article_page_contents: [TB1, TE1]
-  field_article_page_tags: null
-  field_article_page_teaser_image: null
-  field_article_page_teaser_color: "#666"
-  field_article_page_teaser_title: "Digitale Wirtschaft"
-  field_article_page_teaser_stitle: "Open Source Lösungen und die digitale Wirtschaft."
--
-  xparent: "S5"
-  menu_name: "main"
-  menu_title: "Nur Land"
-  menu_weight: "51"
-  field_title: "Nur sichtbar für Land"
-  field_article_page_subtitle: "In Zeiten der digitale Wirtschaft mit Open Source Lösungen mit gutem Beispiel voran gehen."
-  field_article_page_section: null
-  field_article_page_datetime: "2016-11-17T16:00:00"
-  field_article_page_contents: [TB1, TE1]
-  field_article_page_tags: null
-  field_article_page_teaser_image: null
-  field_article_page_teaser_color: "#666"
-  field_article_page_teaser_title: "Digitale Wirtschaft"
-  field_article_page_teaser_stitle: "Open Source Lösungen und die digitale Wirtschaft."
 
 # Nebenseite
 next_page:
