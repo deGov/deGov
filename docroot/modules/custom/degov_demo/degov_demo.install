@@ -20,6 +20,7 @@ function degov_demo_install() {
   $demo_create_images = true;
   $demo_create_paragraphs = true;
   $demo_create_content_types = true;
+  $demo_create_users = true;
   
   // Module Path
   $module_path = sprintf('modules/custom/degov_demo/assets', \Drupal::root());
@@ -41,6 +42,11 @@ function degov_demo_install() {
   // Create Content-Types
   if($demo_create_content_types) {
     degov_demo_content_types($module_real_path, $files_ids, $paragraphs_ids);
+  }
+  
+  // Create demo users
+  if($demo_create_users) {
+    degov_demo_users();
   }
 }
 
@@ -368,4 +374,51 @@ function degov_demo_content_types($module_real_path, &$files_ids, &$paragraphs_i
   $node->field_home_page_contents = array('target_id' => $home_page_articles_ids[3]);
   $node->save();
   */
+}
+
+/**
+ * Creates demo users for the content_access modul.
+ *
+ * @see https://www.drupal.org/project/content_access
+ */
+function degov_demo_users() {
+  
+  $users = array(
+    array(
+      'name' => 'Testuser 1',
+      'password' => 'test',
+      'email' => 'testuser-1@degov.org',
+      'role' => 'land'
+    ),
+    array(
+      'name' => 'Testuser 2',
+      'password' => 'test',
+      'email' => 'testuser-2@degov.org',
+      'role' => 'kommune'
+    )
+  );
+  
+  $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  
+  foreach ($users as $user_data) {
+  
+    $user = \Drupal\user\Entity\User::create();
+  
+    // Mandatory settings
+    $user->setPassword($user_data['password']);
+    $user->enforceIsNew();
+    $user->setEmail($user_data['email']);
+    $user->setUsername($user_data['name']);
+    $user->addRole($user_data['role']);
+  
+    // Optional settings
+    $user->set("init", 'email');
+    $user->set("langcode", $language);
+    $user->set("preferred_langcode", $language);
+    $user->set("preferred_admin_langcode", $language);
+    $user->activate();
+  
+    // Save user
+    $user->save();
+  }
 }
