@@ -14,7 +14,7 @@ const stick = require('jquery-sticky'); */
           const $rootA = $(this).siblings('a').first();
           const href = $rootA.attr('href');
           const text = $rootA.text();
-          $(this).prepend(`<li><a class="dropdown-parent-link" href="${href}">${text}</a></li>`);
+          $(this).prepend('<li><a class="dropdown-parent-link" href="${href}">' + text + '</a></li>');
         });
       });
     }
@@ -55,6 +55,21 @@ const stick = require('jquery-sticky'); */
           e.preventDefault();
           $(this).addClass('active');
           $(this).find('#edit-keys').focus();
+        }
+      });
+    }
+  };
+
+  // Add body class on scroll
+  Drupal.behaviors.search = {
+    attach: function (context, settings) {
+      $(window).scroll(function (event) {
+        var scroll = $(window).scrollTop();
+        if(scroll > 0) {
+          $('body').addClass('scroll');
+        }
+        else {
+          $('body').removeClass('scroll');
         }
       });
     }

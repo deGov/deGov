@@ -62,7 +62,7 @@
 	          var $rootA = $(this).siblings('a').first();
 	          var href = $rootA.attr('href');
 	          var text = $rootA.text();
-	          $(this).prepend('<li><a class="dropdown-parent-link" href="' + href + '">' + text + '</a></li>');
+	          $(this).prepend('<li><a class="dropdown-parent-link" href="${href}">' + text + '</a></li>');
 	        });
 	      });
 	    }
@@ -103,6 +103,20 @@
 	          e.preventDefault();
 	          $(this).addClass('active');
 	          $(this).find('#edit-keys').focus();
+	        }
+	      });
+	    }
+	  };
+
+	  // Add body class on scroll
+	  Drupal.behaviors.search = {
+	    attach: function attach(context, settings) {
+	      $(window).scroll(function (event) {
+	        var scroll = $(window).scrollTop();
+	        if (scroll > 0) {
+	          $('body').addClass('scroll');
+	        } else {
+	          $('body').removeClass('scroll');
 	        }
 	      });
 	    }
