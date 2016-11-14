@@ -1,5 +1,5 @@
 name: deGov Demo
 type: module
-description: Add demo content to deGov
+description: Fügt Beispielinhalte für die deGov Installation hinzu.
 core: 8.x
 package: deGov
