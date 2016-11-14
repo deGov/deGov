@@ -1,0 +1,4 @@
+name: 'deGov - Inhaltsberechtigungen'
+description: 'Ermöglicht das Setzen von Berechtigung für einzelnen Rollen auf bestimmte Inhalte.'
+type: module
+core: 8.x

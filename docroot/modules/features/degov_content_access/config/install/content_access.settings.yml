@@ -1,0 +1,30 @@
+content_access_roles_gids:
+  anonymous: 1
+  authenticated: 2
+  administrator: 3
+  page_creator: 4
+  layout_manager: 5
+  page_reviewer: 6
+  landing_page_creator: 7
+  landing_page_reviewer: 8
+  media_creator: 9
+  media_manager: 10
+  section_page_creator: 11
+  section_page_reviewer: 12
+  article_page_creator: 13
+  article_page_reviewer: 14
+  blogarticle_creator: 15
+  blogarticle_reviewer: 16
+  event_page_creator: 17
+  event_page_reviewer: 18
+  home_page_creator: 19
+  home_page_reviewer: 20
+  next_page_creator: 21
+  next_page_reviewer: 22
+  redakteur: 23
+  chefredakteur: 24
+  simplenews_issue_creator: 25
+  simplenews_issue_reviewer: 26
+langcode: de
+content_access_node_type:
+  page: 'a:1:{s:8:"per_node";i:1;}'
