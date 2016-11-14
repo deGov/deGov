@@ -48,6 +48,9 @@ function degov_demo_install() {
   if($demo_create_users) {
     degov_demo_users();
   }
+  
+  // Required by the content_access module
+  node_access_rebuild();
 }
 
 /**
