@@ -1,5 +1,148 @@
 // Styles for intro, header, and top bar regions
 
+
+// layout for the navbar
+.header-wrapper .name {
+	display: none;
+}
+.navbar-secondary {
+	display: none;
+	ul {
+		margin-bottom: 0;
+	}
+}
+.navbar-branding {
+	float: left;
+	.logo img {
+		height: 100%;
+		max-height: floor($navbar-height*0.75);
+		width: auto;
+		margin-top: floor($navbar-height*0.125);
+	}
+}
+.navbar-header {
+	float: right;
+}
+.header-wrapper .navbar {
+	margin-bottom: 0;
+}
+.navbar-collapse {
+	clear: both;
+	.navbar-nav {
+		margin: 0;
+	}
+}
+
+// anything larger than mobile menu breakpoint
+// in effect the same as screen-sm-min –
+// but could be something else
+@include larger-than($grid-float-breakpoint) {
+	.navbar-collapse {
+		clear: none;
+	}
+}
+
+// larget than mobile
+@include larger-than($screen-sm-min) {
+	body {
+		margin-top: 0;
+		padding-top: $navbar-height*2 !important;
+	}
+	.header-wrapper {
+		position: fixed;
+		z-index: 9;
+		left: 0;
+		right: 0;
+		top: 0;
+		background: $color-white;
+		.container {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	.scroll {
+		.navbar-secondary {
+			max-height: 0;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+		.navbar-branding .logo img {
+			margin-top: floor($navbar-height*0.25);
+			max-height: floor($navbar-height*0.75);
+			margin-top: floor($navbar-height*0.125);
+		}
+	}
+	.navbar-branding .logo img {
+		margin-top: floor($navbar-height*0.75);
+		max-height: $navbar-height;
+		@include transition(max-height 200ms ease-in-out, margin-top 200ms ease-in-out);
+	}
+	.navbar-header {
+		display: none;
+	}
+	.navbar-secondary {
+		display: block;
+		float: right;
+		overflow: hidden;
+		max-height: $navbar-height;
+		margin-top: 0.25em;
+		margin-bottom: 0.25em;
+		transition: max-height 200ms ease-in-out, margin 200ms ease-in-out;
+	}
+	.region-navigation > .block {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.navbar-collapse {
+		float: right;
+		clear: right;
+	}
+}
+
+// search block
+.block-search {
+	width: $line-height-computed*1.5;
+	height: $line-height-computed*1.5;
+	position: relative;
+
+	form {
+		position: absolute;
+		z-index: 99999;
+		right: 0;
+	}
+	.button {
+		background-color: transparent;
+		@include icon($fa-var-search);
+		outline: none;
+		&:before {
+			color: $link-color;
+		}
+	}
+	form .input-group-btn:last-child > .button {
+		border-top-left-radius: $border-radius-base;
+		border-bottom-left-radius: $border-radius-base;
+	}
+	.form-search {
+		float: right;
+		width: 0;
+		transition: width 200ms ease-in-out;
+	}
+}
+.expanded-search .block-search {
+	overflow: visible;
+	// padding plus borders …
+	width: $line-height-computed*10.5 + ($padding-base-horizontal * 2) + 3px;
+	.form-search {
+		width: $line-height-computed*10;
+	}
+	form .input-group-btn:last-child > .button {
+		border-top-left-radius: inherit;
+		border-bottom-left-radius: inherit;
+	}
+}
+
+
+/*
 // Styles for navbar
 .header-wrapper {
 	background-color: $color-white;
@@ -16,6 +159,7 @@
 .block-language {
 	display: none;
 }
+// desktop layout
 @include larger-than($screen-sm-min) {
 	.block-social-media-links,
 	.search-block-form,
@@ -37,11 +181,12 @@
 	.toolbar-fixed {
 		padding-top: 130px !important;
 	}
+	.scroll .header-wrapper {
+
+	}
 }
 
-.header-wrapper .name {
-	display: none;
-}
+
 .header-wrapper .branding {
 	float: left;
 	// @TODO: refactor this:
@@ -143,4 +288,4 @@
 			}
 		}
 	}
-}
+}*/

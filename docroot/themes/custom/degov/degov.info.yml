@@ -10,6 +10,7 @@ regions:
   page_intro: 'Page intro'
   navigation: 'Navigation'
   navigation_collapsible: 'Navigation (Collapsible)'
+  navigation_branding: 'Branding region in the navigation bar'
   header: 'Top Bar'
   highlighted: 'Highlighted'
   help: 'Help'
