@@ -136,12 +136,15 @@
 
 @mixin content-box($color: $color-blue) {
   margin: $vertical-gutter-width 0;
-  padding: $vertical-gutter-width $grid-gutter-width;
+  padding: $vertical-gutter-width/2 $grid-gutter-width/2;
   background-color: $color-white;
   border-top: $title-underline-height solid $color;
   > h1,
   > h2,
   > h3 {
     margin-top: 0;
+  }
+  @include larger-than($screen-sm-min) {
+    padding: $vertical-gutter-width $grid-gutter-width;
   }
 }

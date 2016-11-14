@@ -57,3 +57,32 @@
 	}
 
 }
+
+// Paragraph layout for slider paragraph
+.paragraph--type--slider-element {
+	margin: 0;
+	position: relative;
+	img {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+	> a {
+		position: absolute;
+		bottom: 0;
+		font-size: $font-size-h1;
+		font-family: $headings-font-family;
+		background: $color-white;
+		padding: 0 0.5em;
+		display: inline-block;
+			bottom: 1em;
+		text-decoration: none;
+			margin-left: 0;
+	}
+	@include larger-than($screen-sm-min) {
+		> a {
+		bottom: 5em;
+		margin-left: 16.666667%;
+		}	
+	}
+}
