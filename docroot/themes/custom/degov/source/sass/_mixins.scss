@@ -139,4 +139,9 @@
   padding: $vertical-gutter-width $grid-gutter-width;
   background-color: $color-white;
   border-top: $title-underline-height solid $color;
+  > h1,
+  > h2,
+  > h3 {
+    margin-top: 0;
+  }
 }
