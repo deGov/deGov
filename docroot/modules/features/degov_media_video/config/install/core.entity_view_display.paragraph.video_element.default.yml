@@ -1,0 +1,20 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.video_element.field_video_element_iframe
+    - paragraphs.paragraphs_type.video_element
+id: paragraph.video_element.default
+targetEntityType: paragraph
+bundle: video_element
+mode: default
+content:
+  field_video_element_iframe:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+hidden:
+  created: true
+  uid: true
