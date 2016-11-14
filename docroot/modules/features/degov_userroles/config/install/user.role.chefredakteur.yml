@@ -106,3 +106,4 @@ permissions:
   118: 'use needs_review_published transition'
   123: 'view the administration theme'
   124: 'access shortcuts'
+  125: 'grant own content access'
