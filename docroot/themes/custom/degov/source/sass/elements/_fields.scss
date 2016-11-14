@@ -98,3 +98,17 @@
 		@include make-md-column(3);
 	}
 }
+
+.content table {
+	width: 100%;
+	td, th {
+		padding: 0.25em;
+	}
+	td {
+		border-bottom: 1px solid $gray-light;
+		vertical-align: baseline;
+	}
+	th {
+		border-bottom: 3px solid $color-gray;
+	}
+}

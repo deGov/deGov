@@ -1,0 +1,15 @@
+
+// Teaser view
+.view-subpages-teaserview {
+	margin-top: $vertical-gutter-width/2;
+  .view-content {
+    @include make-row();
+  }
+  .views-row {
+    @include make-sm-column(6);
+    margin-bottom: $vertical-gutter-width;
+  }
+  .views-row:nth-child(2n+1) {
+		clear: left;
+	}
+}
