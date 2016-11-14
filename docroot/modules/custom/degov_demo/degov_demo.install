@@ -26,21 +26,25 @@ function degov_demo_install() {
   $module_real_path = \Drupal::service('file_system')->realpath($module_path);
   
   $files_ids = array();
+  $files_system_ids = array();
   $paragraphs_ids = array();
   
   // Create images
   if($demo_create_images) {
-    degov_demo_images($module_real_path, $files_ids);
+    $res = null;
+    $res = degov_demo_images($module_real_path);
+    $files_ids = $res[0];
+    $files_system_ids = $res[1];
   }
-  
+
   // Create paragraphs
   if($demo_create_paragraphs) {
-    degov_demo_paragraphs($module_real_path, $files_ids, $paragraphs_ids);
+    $paragraphs_ids = degov_demo_paragraphs($module_real_path, $files_ids, $files_system_ids);
   }
-  
+
   // Create Content-Types
   if($demo_create_content_types) {
-    degov_demo_content_types($module_real_path, $files_ids, $paragraphs_ids);
+    degov_demo_content_types($module_real_path, $files_ids, $files_system_ids, $paragraphs_ids);
   }
 }
 
@@ -52,7 +56,7 @@ function degov_demo_install() {
  *
  * @see degov_demo_install()
  */
-function degov_demo_images($module_real_path, &$files_ids) {
+function degov_demo_images($module_real_path) {
   
   $files = glob($module_real_path.'/images/*.jpg');
   
@@ -80,8 +84,12 @@ function degov_demo_images($module_real_path, &$files_ids) {
       $image_media->save();
       
       $files_ids[$file_basename] = $image_media->id();
+      $files_system_ids[$file_basename] = $image_system->id();
     }
   }
+
+  return array($files_ids, $files_system_ids);
+
 }
 
 /**
@@ -89,11 +97,11 @@ function degov_demo_images($module_real_path, &$files_ids) {
  *
  * @param string $module_real_path The real module path of the drupal installation.
  * @param array  $files_ids An array with field ids.
- * @param array  $paragraphs_ids An array with paragraph ids.
+ * @param array  $files_system_ids An array with field ids.
  *
  * @see degov_demo_install()
  */
-function degov_demo_paragraphs($module_real_path, &$files_ids, &$paragraphs_ids) {
+function degov_demo_paragraphs($module_real_path, $files_ids, $files_system_ids) {
   
   // Load assets
   $assets = file_get_contents($module_real_path . '/degov_demo_paragraphs.assets.yml');
@@ -118,14 +126,14 @@ function degov_demo_paragraphs($module_real_path, &$files_ids, &$paragraphs_ids)
             else $insert_fields[$field][0]['target_id'] = $files_ids[array_rand($files_ids, 1)];
           }
           else if (preg_match('/\_images$/', $field)) {
-            $insert_fields[$field][0]['target_id'] = $files_ids[array_rand($files_ids, 1)];
-            $insert_fields[$field][1]['target_id'] = $files_ids[array_rand($files_ids, 1)];
-            $insert_fields[$field][2]['target_id'] = $files_ids[array_rand($files_ids, 1)];
-            $insert_fields[$field][3]['target_id'] = $files_ids[array_rand($files_ids, 1)];
-            $insert_fields[$field][4]['target_id'] = $files_ids[array_rand($files_ids, 1)];
+            $insert_fields[$field][0]['target_id'] = $files_system_ids[array_rand($files_system_ids, 1)];
+            $insert_fields[$field][1]['target_id'] = $files_system_ids[array_rand($files_system_ids, 1)];
+            $insert_fields[$field][2]['target_id'] = $files_system_ids[array_rand($files_system_ids, 1)];
+            $insert_fields[$field][3]['target_id'] = $files_system_ids[array_rand($files_system_ids, 1)];
+            $insert_fields[$field][4]['target_id'] = $files_system_ids[array_rand($files_system_ids, 1)];
           }
           else if (preg_match('/\_color$/', $field)) {
-            $insert_fields[$field]['color'] = $value;
+            $insert_fields[$field][0]['value'] = $value;
           }
           else if (preg_match('/\_files$/', $field)) {
             // $insert_fields[$field]['target_id'] = null;
@@ -158,6 +166,8 @@ function degov_demo_paragraphs($module_real_path, &$files_ids, &$paragraphs_ids)
       }
     }
   }
+
+  return $paragraphs_ids;
 }
 
 /**
@@ -169,7 +179,7 @@ function degov_demo_paragraphs($module_real_path, &$files_ids, &$paragraphs_ids)
  *
  * @see degov_demo_install()
  */
-function degov_demo_content_types($module_real_path, &$files_ids, &$paragraphs_ids) {
+function degov_demo_content_types($module_real_path, $files_ids, $files_system_ids, $paragraphs_ids) {
   
   // Load assets
   $assets = file_get_contents($module_real_path . '/degov_demo_contents.assets.yml');
@@ -260,16 +270,16 @@ function degov_demo_content_types($module_real_path, &$files_ids, &$paragraphs_i
           continue;
         }
         else if (preg_match('/\_color$/', $page_field)) {
-          $insert_fields[$page_field]['color'] = $value;
+          $insert_fields[$page_field][0]['value'] = $value;
         }
         else if (preg_match('/\_image$/', $page_field)) {
           if ((!empty($value)) && ($value != 'null')) $insert_fields[$page_field][0]['target_id'] = $files_ids[$value];
           else $insert_fields[$page_field][0]['target_id'] = $files_ids[array_rand($files_ids, 1)];
         }
-        else if (preg_match('/\_section$/', $page_field)) {
+        else if ((preg_match('/\_section$/', $page_field)) && (!empty($xparent))) {
           $insert_fields[$page_field][0]['target_id'] = $parent_page_ids[$xparent];
         }
-        else if (preg_match('/\_contents$/', $page_field)) {
+        else if (preg_match('/(\_contents|\_slider)$/', $page_field)) {
           if ((!empty($value)) && (is_array($value))) {
             foreach ($value as $i => $value_pt) {
               $insert_fields[$page_field][$i]['target_id'] = $paragraphs_ids[$value_pt];
@@ -304,53 +314,57 @@ function degov_demo_content_types($module_real_path, &$files_ids, &$paragraphs_i
       if ($xkey) {
         $parent_page_ids[$xkey] = $node->id();
       }
+
+      if (!empty($insert_fields['menu_name'])) {
       
-      // Add Node to Menu - 1nd level
-      $first_level = null;
-      if (($xkey) && (!$xparent)) {
-        
-        $first_level = MenuLinkContent::create([
-          'title' => $insert_fields['menu_title'],
-          'link' => ['uri' => 'internal:/node/' . $node->id()],
-          'menu_name' => $insert_fields['menu_name'],
-          'weight' => $insert_fields['menu_weight'],
-          'expanded' => true,
-        ]);
-        
-        $first_level->save();
-        
-        // Save Menu Entry
-        $menu_entries[$xkey] = $first_level;
-        
-        if (in_array($content_type, array('section_page'))) {
-          
-          // Save Ids for Home Page
-          $home_page_articles_ids[] = $node->id();
-          
+        // Add Node to Menu - 1nd level
+        $first_level = null;
+        if (($xkey) && (!$xparent)) {
+
+          $first_level = MenuLinkContent::create([
+            'title' => $insert_fields['menu_title'],
+            'link' => ['uri' => 'internal:/node/' . $node->id()],
+            'menu_name' => $insert_fields['menu_name'],
+            'weight' => $insert_fields['menu_weight'],
+            'expanded' => true,
+          ]);
+
+          $first_level->save();
+
+          // Save Menu Entry
+          $menu_entries[$xkey] = $first_level;
+
+          if (in_array($content_type, array('section_page'))) {
+
+            // Save Ids for Home Page
+            $home_page_articles_ids[] = $node->id();
+
+          }
+
         }
-        
-      }
-      
-      // Add Node to Menu - 2nd level
-      $second_level = null;
-      if (($xparent) && (array_key_exists($xparent, $menu_entries))) {
-        
-        $second_level = MenuLinkContent::create([
-          'title' => $insert_fields['menu_title'],
-          'link' => ['uri' => 'internal:/node/' . $node->id()],
-          'menu_name' => $insert_fields['menu_name'],
-          'weight' => $insert_fields['menu_weight'],
-          'parent' => $menu_entries[$xparent]->getPluginId(),
-          'expanded' => true,
-        ]);
-        
-        $second_level->save();
-        
-        // Save Menu Entry
-        if ($xkey) {
-          $menu_entries[$xkey] = $second_level;
+
+        // Add Node to Menu - 2nd level
+        $second_level = null;
+        if (($xparent) && (array_key_exists($xparent, $menu_entries))) {
+
+          $second_level = MenuLinkContent::create([
+            'title' => $insert_fields['menu_title'],
+            'link' => ['uri' => 'internal:/node/' . $node->id()],
+            'menu_name' => $insert_fields['menu_name'],
+            'weight' => $insert_fields['menu_weight'],
+            'parent' => $menu_entries[$xparent]->getPluginId(),
+            'expanded' => true,
+          ]);
+
+          $second_level->save();
+
+          // Save Menu Entry
+          if ($xkey) {
+            $menu_entries[$xkey] = $second_level;
+          }
+
         }
-        
+
         // Save Ids for Home Page
         $home_page_articles_ids[] = $node->id();
         
@@ -359,13 +373,10 @@ function degov_demo_content_types($module_real_path, &$files_ids, &$paragraphs_i
   }
   
   // Set Main/Articles for Home Page
-  /*
   $node = null;
   $node = Node::load($home_page_id);
-  $node->field_home_page_mainarticle = array('target_id' =>  $home_page_articles_ids[0]);
   $node->field_home_page_contents = array('target_id' => $home_page_articles_ids[1]);
   $node->field_home_page_contents = array('target_id' => $home_page_articles_ids[2]);
   $node->field_home_page_contents = array('target_id' => $home_page_articles_ids[3]);
   $node->save();
-  */
 }
