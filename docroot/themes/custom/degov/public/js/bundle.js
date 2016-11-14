@@ -62,7 +62,7 @@
 	          var $rootA = $(this).siblings('a').first();
 	          var href = $rootA.attr('href');
 	          var text = $rootA.text();
-	          $(this).prepend('<li><a class="dropdown-parent-link" href="' + href + '">' + text + '</a></li>');
+	          $(this).prepend('<li><a class="dropdown-parent-link" href="${href}">' + text + '</a></li>');
 	        });
 	      });
 	    }
