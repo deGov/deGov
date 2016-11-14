@@ -139,16 +139,19 @@ gulp.task('font', function() {
  * Handles JS
  * Runs JS code through webpack compilation
  */
-gulp.task('js', function() {
-  gulp.src(['./source/js/**/*.js'])
+gulp.task('lint', function() {
+  return gulp.src(['./source/js/**/*.js'])
     .pipe($.plumber({ errorHandler: handleError }))
     .pipe($.cached('js'))
     .pipe($.debug({title: 'Linting JS file:'}))
     .pipe($.eslint())
     .pipe($.eslint.format())
     .pipe($.eslint.failAfterError());
+});
 
+gulp.task('js', function() {
   return gulp.src('./source/js/main.js')
+    .pipe($.debug({title: 'Compiling JS bundle:'}))
     .pipe(webpack(webpackConfig))
     .pipe(gulp.dest('./public/js'))
     .pipe($.livereload());
@@ -175,7 +178,7 @@ gulp.task('clean', function(cb) {
 gulp.task('watch', function() {
   $.livereload.listen()
   gulp.watch(['./source/sass/**'], watchOptions, ['sass'])
-  gulp.watch(['./source/js/**'], watchOptions, ['js'])
+  gulp.watch(['./source/js/**'], watchOptions, ['lint', 'js'])
   gulp.watch(['./source/images/**'], watchOptions, ['img'])
   gulp.watch(['./source/fonts/**'], watchOptions, ['font'])
 });
@@ -191,6 +194,7 @@ gulp.task('watch', function() {
  */
 gulp.task('default', ['clean'], function() {
   gulp.start('sass');
+  gulp.start('lint');
   gulp.start('js');
   gulp.start('img');
   gulp.start('font');
