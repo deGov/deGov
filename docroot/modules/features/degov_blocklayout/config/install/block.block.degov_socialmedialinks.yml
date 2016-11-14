@@ -1,0 +1,76 @@
+langcode: de
+status: true
+dependencies:
+  module:
+    - social_media_links
+  theme:
+    - degov
+id: degov_socialmedialinks
+theme: degov
+region: navigation
+weight: -9
+provider: null
+plugin: social_media_links_block
+settings:
+  id: social_media_links_block
+  label: 'Social Media Links'
+  provider: social_media_links
+  label_display: '0'
+  platforms:
+    contact:
+      value: kontakt
+      weight: '-8'
+    drupal:
+      value: ''
+      weight: '-7'
+    email:
+      value: ''
+      weight: '-6'
+    facebook:
+      value: deGov.org
+      weight: '-10'
+    googleplus:
+      value: ''
+      weight: '-5'
+    instagram:
+      value: ''
+      weight: '-4'
+    linkedin:
+      value: ''
+      weight: '-3'
+    pinterest:
+      value: ''
+      weight: '-2'
+    rss:
+      value: rss.xml
+      weight: '-1'
+    slideshare:
+      value: ''
+      weight: '0'
+    tumblr:
+      value: ''
+      weight: '1'
+    twitter:
+      value: Drupal_deGov
+      weight: '-9'
+    vimeo:
+      value: ''
+      weight: '2'
+    youtube:
+      value: ''
+      weight: '3'
+    youtube_channel:
+      value: UCTcaEfwEFZ_txYW49HtApuQ
+      weight: '4'
+  appearance:
+    orientation: h
+    show_name: 0
+  link_attributes:
+    target: _blank
+    rel: '<none>'
+  iconset:
+    style: 'fontawesome:2x'
+    installed_iconsets:
+      fontawesome:
+        examples: ''
+visibility: {  }

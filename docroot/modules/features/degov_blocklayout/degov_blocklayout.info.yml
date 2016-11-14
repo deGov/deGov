@@ -1,0 +1,14 @@
+name: 'deGov - Blocklayout'
+description: 'Positioniert die Inhaltsblöcke im Layout.'
+type: module
+core: 8.x
+dependencies:
+  - block
+  - degov_vsm_nrw
+  - help
+  - language
+  - search
+  - simplenews
+  - social_media_links
+  - system
+  - twitter_block
