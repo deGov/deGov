@@ -2,14 +2,14 @@ langcode: de
 status: true
 dependencies:
   config:
+    - entity_browser.browser.image_browser
     - field.field.paragraph.gallery_element.field_element_type
     - field.field.paragraph.gallery_element.field_gallery_element_images
     - field.field.paragraph.gallery_element.field_gallery_element_text
     - field.field.paragraph.gallery_element.field_gallery_element_title
-    - image.style.thumbnail
     - paragraphs.paragraphs_type.gallery_element
   module:
-    - image
+    - entity_browser
     - text
     - workbench_moderation
 id: paragraph.gallery_element.default
