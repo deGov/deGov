@@ -17,3 +17,4 @@ vendor/
 # OS Files
 .DS_Store
 settings.php
+settings.local.php
