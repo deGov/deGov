@@ -14,7 +14,6 @@ dependencies:
     - field.field.node.article_page.field_article_page_teaser_title
     - node.type.article_page
   module:
-    - options
     - panelizer
     - user
 third_party_settings:
@@ -28,12 +27,6 @@ targetEntityType: node
 bundle: article_page
 mode: teaser
 content:
-  field_article_page_teaser_color:
-    type: list_key
-    weight: 4
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
   field_article_page_teaser_image:
     type: entity_reference_entity_view
     weight: 3
@@ -56,16 +49,14 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-  workbench_moderation_control:
-    weight: 0
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   field_article_page_contents: true
   field_article_page_datetime: true
   field_article_page_section: true
   field_article_page_subtitle: true
   field_article_page_tags: true
+  field_article_page_teaser_color: true
   langcode: true
   links: true
   shariff_field: true
+  workbench_moderation_control: true

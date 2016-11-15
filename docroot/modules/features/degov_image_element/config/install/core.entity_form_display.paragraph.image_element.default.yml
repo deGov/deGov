@@ -2,6 +2,7 @@ langcode: de
 status: true
 dependencies:
   config:
+    - entity_browser.browser.media_browser
     - field.field.paragraph.image_element.field_image_element_media
     - paragraphs.paragraphs_type.image_element
   module:

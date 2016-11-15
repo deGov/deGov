@@ -35,13 +35,8 @@ article.full {
   }
 }
 
-// Hide standard title
-article.teaser h2 {
-  //display: none;
-}
-
 // Format teaser title
-article.teaser .content .field--type-string h3 {
+article.teaser .content .field--type-string h2 {
   &::after {
     content: '';
     display: block;
@@ -51,28 +46,28 @@ article.teaser .content .field--type-string h3 {
     margin-top: $vertical-gutter-width/2;
   }
 }
-article.teaser.article-color-red .content .field--type-string h3  {
+article.teaser.article-color-red .content .field--type-string h2  {
   &::after {
     background: $color-red;
   }
 }
-article.teaser.article-color-green .content .field--type-string h3  {
+article.teaser.article-color-green .content .field--type-string h2  {
   &::after {
     background: $color-green;
   }
 }
-article.teaser.article-color-blue .content .field--type-string h3  {
+article.teaser.article-color-blue .content .field--type-string h2  {
   background-color: blue;
   &::after {
     background: $color-blue;
   }
 }
-article.teaser.article-color-gray .content .field--type-string h3  {
+article.teaser.article-color-gray .content .field--type-string h2  {
   &::after {
     background: $color-gray;
   }
 }
-article.teaser.article-color-yellow .content .field--type-string h3  {
+article.teaser.article-color-yellow .content .field--type-string h2  {
   &::after {
     background: $color-yellow;
   }

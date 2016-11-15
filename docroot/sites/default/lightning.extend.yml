@@ -81,19 +81,18 @@ modules:
   - contact_storage
   - degov_contactform_element
   - degov_contactform
-  - degov_media_video
+  - degov_video_element
   - degov_related_content
   - degov_views
   - degov_frontpage_rss
   - social_media_links
   - degov_languages
-  - colorbox
-  - degov_colorbox
   - spamspan
   - degov_rich_text_format_settings
   - degov_plain_text_format_settings
   - degov_slider_element
   - degov_blocklayout
+  - back_to_top
   - degov_demo
 # A system path to redirect to once installation is complete.
 redirect:

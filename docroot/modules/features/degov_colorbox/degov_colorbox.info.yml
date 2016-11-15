@@ -1,6 +1,0 @@
-name: 'deGov - Colorbox'
-description: 'Stellt eine Lightbox für die Galerie zur Verfügung.'
-type: module
-core: 8.x
-dependencies:
-  - colorbox

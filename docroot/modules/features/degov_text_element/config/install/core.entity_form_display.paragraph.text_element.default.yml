@@ -15,10 +15,10 @@ bundle: text_element
 mode: default
 content:
   field_text_element_color:
-    weight: 9
+    type: options_select
+    weight: 0
     settings: {  }
     third_party_settings: {  }
-    type: options_select
   field_text_element_text:
     weight: 7
     settings:

@@ -7,19 +7,12 @@ dependencies:
     - field.field.paragraph.text_element.field_text_element_title
     - paragraphs.paragraphs_type.text_element
   module:
-    - options
     - text
 id: paragraph.text_element.default
 targetEntityType: paragraph
 bundle: text_element
 mode: default
 content:
-  field_text_element_color:
-    weight: 3
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_key
   field_text_element_text:
     weight: 1
     label: hidden
@@ -35,4 +28,5 @@ content:
     type: string
 hidden:
   created: true
+  field_text_element_color: true
   uid: true

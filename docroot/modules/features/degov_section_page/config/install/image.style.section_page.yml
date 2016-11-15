@@ -1,0 +1,13 @@
+langcode: de
+status: true
+dependencies: {  }
+name: section_page
+label: 'Bereichsseite (1240x620)'
+effects:
+  7a2b42df-56df-406d-b675-c2246bc33064:
+    uuid: 7a2b42df-56df-406d-b675-c2246bc33064
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1240
+      height: 620

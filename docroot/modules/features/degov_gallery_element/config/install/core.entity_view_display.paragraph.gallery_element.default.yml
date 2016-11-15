@@ -7,7 +7,7 @@ dependencies:
     - field.field.paragraph.gallery_element.field_gallery_element_text
     - field.field.paragraph.gallery_element.field_gallery_element_title
     - image.style.big
-    - image.style.large
+    - image.style.gallery_preview
     - paragraphs.paragraphs_type.gallery_element
   module:
     - colorbox
@@ -28,7 +28,7 @@ content:
     weight: 3
     label: hidden
     settings:
-      colorbox_node_style: large
+      colorbox_node_style: gallery_preview
       colorbox_node_style_first: large
       colorbox_image_style: big
       colorbox_gallery: post

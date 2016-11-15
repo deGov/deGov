@@ -91,4 +91,19 @@
 			}
 		}
 	}
+	.field--name-field-image-copyright,
+	.field--name-field-image-subtitle {
+		background: $color-white-transparent;
+		padding: 0 0.5em;
+	}
+	.field--name-field-image-copyright {
+		position: absolute;
+		top: $vertical-gutter-width * 2;
+		right: $grid-gutter-width;
+	}
+	.field--name-field-image-subtitle {
+		position: absolute;
+		top: $vertical-gutter-width;
+		right: $grid-gutter-width;
+	}
 }

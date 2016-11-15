@@ -1,0 +1,13 @@
+langcode: de
+status: true
+dependencies: {  }
+name: gallery_preview
+label: 'Gallerie Vorschau (280x160)'
+effects:
+  e66697d1-120d-48e2-bf4d-8eb9c20b42d7:
+    uuid: e66697d1-120d-48e2-bf4d-8eb9c20b42d7
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 280
+      height: 160
