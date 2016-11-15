@@ -386,6 +386,11 @@ next_page:
   field_title: "Herzlich Willkommen bei deGov!"
   field_next_page_stitle: ""
   field_next_page_contents: [TE4]
+ -
+  xkey: "F6"
+  field_title: "Einfache Sprache"
+  field_next_page_stitle: "Diese Seite enthält die Erklärung der Website in einer einfachen Sprache."
+  field_next_page_contents: [TE1]
 
 # Veranstaltung
 event_page:
