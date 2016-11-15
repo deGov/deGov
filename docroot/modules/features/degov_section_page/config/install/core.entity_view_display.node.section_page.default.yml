@@ -15,7 +15,6 @@ dependencies:
     - node.type.section_page
   module:
     - entity_reference_revisions
-    - options
     - panelizer
     - user
 third_party_settings:
@@ -29,12 +28,6 @@ targetEntityType: node
 bundle: section_page
 mode: default
 content:
-  field_section_page_color:
-    weight: 4
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_key
   field_section_page_contents:
     type: entity_reference_revisions_entity_view
     weight: 3
@@ -58,11 +51,8 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-  workbench_moderation_control:
-    weight: 0
-    settings: {  }
-    third_party_settings: {  }
 hidden:
+  field_section_page_color: true
   field_section_page_section: true
   field_section_page_tags: true
   field_section_page_teaser_image: true
@@ -72,3 +62,4 @@ hidden:
   langcode: true
   links: true
   shariff_field: true
+  workbench_moderation_control: true
