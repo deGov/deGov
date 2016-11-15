@@ -35,10 +35,13 @@
 }
 .header-wrapper .navbar {
 	margin-bottom: 0;
+	li a {
+		color: $color-gray;
+	}
 	li a:hover,
 	li a:focus,
 	li a:active {
-		color: $color-gray;
+		color: $color-blue;
 	}
 }
 .navbar-collapse {
@@ -135,8 +138,9 @@
 		@include icon($fa-var-search);
 		outline: none;
 		&:before {
-			color: $link-color;
+			color: $color-gray;
 		}
+		border-color: $color-gray;
 	}
 	form .input-group-btn:last-child > .button {
 		border-top-left-radius: $border-radius-base;
