@@ -37,7 +37,7 @@ const PhotoSwipeUiDefault = require('photoswipe/dist/photoswipe-ui-default');
         $(this).children().toggleClass('open', !isOpen);
       });
 
-      $(context).find('#block-languageswitcher a').once('lang-link-click').click(function () {
+      $(context).find('#block-languageswitcher a').once('lang-link').each(function () {
         const hrefLang = $(this).attr('hreflang');
         $(this).text(hrefLang);
       });
