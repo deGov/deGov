@@ -72,8 +72,11 @@ const Slick = require('slick-carousel');
   Drupal.behaviors.scroll = {
     attach: function (context, settings) {
       $(context).find('body').once('scroll-class').each(function() {
+        var headerOffset = $('.navbar-secondary', context).outerHeight();
         $(window).scroll(function (event) {
+
           var scrollPos = $(window).scrollTop();
+          $(context).find('body').toggleClass('scroll-past-navbar',scrollPos > headerOffset);
           $(context).find('body').toggleClass('scroll',scrollPos > 0);
         });
       });

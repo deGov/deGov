@@ -50,7 +50,7 @@
 	}
 	.header-wrapper {
 		position: fixed;
-		z-index: 1;
+		z-index: 9999;
 		left: 0;
 		right: 0;
 		top: 0;
@@ -62,17 +62,21 @@
 			padding-right: 0;
 		}
 	}
+	.scroll.scroll-past-navbar {
+		.navbar-secondary {
+			max-height: 0;
+		}
+	}
 	.scroll {
 		.header-wrapper {
 			box-shadow: 0px 0px 10px rgba(0,0,0,.2);
 		}
 		.navbar-secondary {
-			max-height: 0;
 			margin-top: 0;
 			margin-bottom: 0;
+			overflow: hidden;
 		}
 		.navbar-branding .logo img {
-			margin-top: floor($navbar-height*0.25);
 			max-height: floor($navbar-height*0.75);
 			margin-top: floor($navbar-height*0.125);
 		}
@@ -80,7 +84,7 @@
 	.navbar-branding .logo img {
 		margin-top: floor($navbar-height*0.75);
 		max-height: $navbar-height;
-		@include transition(max-height 200ms ease-in-out, margin-top 200ms ease-in-out);
+		transition: max-height 200ms ease-in-out, margin-top 200ms ease-in-out;
 	}
 	.navbar-header {
 		display: none;
@@ -88,8 +92,7 @@
 	.navbar-secondary {
 		display: block;
 		float: right;
-		overflow: hidden;
-		max-height: $navbar-height;
+		max-height: 5em;
 		margin-top: 0.25em;
 		margin-bottom: 0.25em;
 		transition: max-height 200ms ease-in-out, margin 200ms ease-in-out;
@@ -130,7 +133,9 @@
 	.form-search {
 		float: right;
 		width: 0;
-		transition: width 200ms ease-in-out;
+		opacity: 0;
+		transition: width 200ms ease-in-out, opacity 200ms ease-in-out;
+		padding: 0;
 	}
 }
 .expanded-search .block-search {
@@ -139,6 +144,8 @@
 	width: $line-height-computed*10.5 + ($padding-base-horizontal * 2) + 3px;
 	.form-search {
 		width: $line-height-computed*10;
+		padding: $padding-base-vertical $padding-base-horizontal;
+		opacity: 1;
 	}
 	form .input-group-btn:last-child > .button {
 		border-top-left-radius: inherit;
