@@ -23,18 +23,6 @@
   }
 }
 
-@include larger-than($screen-sm-min) {
-  .region-footer {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    align-items: flex-start;
-    .block {
-      flex: 1;
-      margin: 0 $grid-gutter-width/2;
-    }
-  }
-}
 
 .region-footer,
 .region-page-outro {

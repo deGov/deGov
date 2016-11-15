@@ -17,3 +17,16 @@
   @include content-box($color-gray);
   margin: 0 $grid-gutter-width/2;
 }
+
+@include larger-than($screen-sm-min) {
+  .page-node-type-home-page .region-footer {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: flex-start;
+    .block {
+      flex: 1;
+      margin: 0 $grid-gutter-width/2;
+    }
+  }
+}
