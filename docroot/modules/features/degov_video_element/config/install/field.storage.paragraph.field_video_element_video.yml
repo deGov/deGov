@@ -2,11 +2,11 @@ langcode: de
 status: true
 dependencies:
   module:
-    - media_entity
+    - paragraphs
     - video_embed_field
-id: media.field_media_video_embed_field
-field_name: field_media_video_embed_field
-entity_type: media
+id: paragraph.field_video_element_video
+field_name: field_video_element_video
+entity_type: paragraph
 type: video_embed_field
 settings: {  }
 module: video_embed_field
