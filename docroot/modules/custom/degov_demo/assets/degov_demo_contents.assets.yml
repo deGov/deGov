@@ -11,8 +11,7 @@ home_page:
   menu_title: "Startseite"
   menu_weight: "0"
   field_title: "Ministerium für digitale Angelegenheiten und Open Source"
-  field_home_page_image: "bundestag.jpg"
-  field_home_page_mainarticle: null
+  field_home_page_slider: [SE1, SE2, SE3]
   field_home_page_contents: null
 
 # Bereichsseite
@@ -24,8 +23,8 @@ section_page:
   menu_weight: "10"
   field_title: "Aktuelles"
   field_section_page_subtitle: "Hier finden Sie aktuelle Informationen über digitale Angelegenheiten und Open Source."
-  field_section_page_image: null
-  field_section_page_color: "#666"
+  field_section_page_image: "default.jpg"
+  field_section_page_color: "blue"
   field_section_page_contents: null
   field_section_page_tags: null
   field_section_page_teaser_image: null
@@ -41,8 +40,8 @@ section_page:
   menu_weight: "20"
   field_title: "Pressemitteilungen"
   field_section_page_subtitle: "Hier finden Sie aktuelle Pressemitteilungen des Ministeriums für digitale Angelegenheiten und Open Source."
-  field_section_page_image: null
-  field_section_page_color: "#666"
+  field_section_page_image: "default.jpg"
+  field_section_page_color: "blue"
   field_section_page_contents: null
   field_section_page_tags: null
   field_section_page_teaser_image: null
@@ -58,8 +57,8 @@ section_page:
   menu_weight: "30"
   field_title: "Blog"
   field_section_page_subtitle: "Hier finden Sie aktuelle Blogbeiträge des Ministeriums für digitale Angelegenheiten und Open Source."
-  field_section_page_image: null
-  field_section_page_color: "#666"
+  field_section_page_image: "default.jpg"
+  field_section_page_color: "blue"
   field_section_page_contents: null
   field_section_page_tags: null
   field_section_page_teaser_image: null
@@ -75,8 +74,8 @@ section_page:
   menu_weight: "40"
   field_title: "Interviews"
   field_section_page_subtitle: "Hier finden Sie aktuelle Interviews mit Gabriele Peters über digitale Angelegenheiten und Open Source."
-  field_section_page_image: null
-  field_section_page_color: "#666"
+  field_section_page_image: "default.jpg"
+  field_section_page_color: "blue"
   field_section_page_contents: null
   field_section_page_tags: null
   field_section_page_teaser_image: null
@@ -92,11 +91,11 @@ section_page:
   menu_weight: "40"
   field_title: "Veranstaltungen"
   field_section_page_subtitle: "Hier finden Sie aktuelle Veranstaltungen des Ministeriums für digitale Angelegenheiten und Open Source."
-  field_section_page_image: null
-  field_section_page_color: "#666"
+  field_section_page_image: "default.jpg"
+  field_section_page_color: "blue"
   field_section_page_contents: null
   field_section_page_tags: null
-  field_section_page_teaser_image: null
+  field_section_page_teaser_image: "default.jpg"
   field_section_page_teaser_title: "Aktuelle Veranstaltungen"
   field_section_page_teaser_text: "Aktuelle Veranstaltungen des Ministeriums für digitale Angelegenheiten und Open Source."
   field_section_page_teaser_stitle: "Veranstaltungen des Ministeriums digitale Angelegenheiten und Open Source."
@@ -108,11 +107,11 @@ section_page:
   menu_weight: "50"
   field_title: "Themen"
   field_section_page_subtitle: "Hier finden Sie aktuelle Themen über digitale Angelegenheiten und Open Source."
-  field_section_page_image: null
-  field_section_page_color: "#666"
+  field_section_page_image: "default.jpg"
+  field_section_page_color: "blue"
   field_section_page_contents: null
   field_section_page_tags: null
-  field_section_page_teaser_image: null
+  field_section_page_teaser_image: "default.jpg"
   field_section_page_teaser_title: "Aktuelle Themen"
   field_section_page_teaser_text: "Aktuelle Themen über digitale Angelegenheiten und Open Source."
   field_section_page_teaser_stitle: "Themen über digitale Angelegenheiten und Open Source."
@@ -124,11 +123,11 @@ section_page:
   menu_weight: "60"
   field_title: "Ministerium"
   field_section_page_subtitle: "Hier finden Sie allgemeine Informationen über das Ministerium für digitale Angelegenheiten und Open Source."
-  field_section_page_image: null
-  field_section_page_color: "#666"
+  field_section_page_image: "default.jpg"
+  field_section_page_color: "blue"
   field_section_page_contents: null
   field_section_page_tags: null
-  field_section_page_teaser_image: null
+  field_section_page_teaser_image: "default.jpg"
   field_section_page_teaser_title: "Ministerium"
   field_section_page_teaser_text: "Allgemeine Informationen über das Ministerium für digitale Angelegenheiten und Open Source."
   field_section_page_teaser_stitle: "Informationen über das Ministerium."
@@ -140,11 +139,11 @@ section_page:
   menu_weight: "70"
   field_title: "Service"
   field_section_page_subtitle: "Hier finden Sie Informationen zur Anfahrt, unsere Kontaktdaten und Antworten auf häufig gestellte Fragen."
-  field_section_page_image: null
-  field_section_page_color: "#666"
+  field_section_page_image: "default.jpg"
+  field_section_page_color: "blue"
   field_section_page_contents: null
   field_section_page_tags: null
-  field_section_page_teaser_image: null
+  field_section_page_teaser_image: "default.jpg"
   field_section_page_teaser_title: "Service"
   field_section_page_teaser_text: "Informationen zur Anfahrt, unsere Kontaktdaten und Antworten auf häufig gestellte Fragen."
   field_section_page_teaser_stitle: "Informationen zur Anfahrt und Kontaktdaten."
@@ -163,8 +162,8 @@ article_page:
   field_article_page_datetime: "2016-11-17T16:00:00"
   field_article_page_contents: [TB1, TE1]
   field_article_page_tags: null
-  field_article_page_teaser_image: null
-  field_article_page_teaser_color: "#666"
+  field_article_page_teaser_image: "default.jpg"
+  field_article_page_teaser_color: "blue"
   field_article_page_teaser_title: "Digitale Wirtschaft"
   field_article_page_teaser_stitle: "Open Source Lösungen und die digitale Wirtschaft."
  -
@@ -178,8 +177,8 @@ article_page:
   field_article_page_datetime: "2016-11-17T16:00:00"
   field_article_page_contents: [TB1, TE1]
   field_article_page_tags: null
-  field_article_page_teaser_image: null
-  field_article_page_teaser_color: "#666"
+  field_article_page_teaser_image: "default.jpg"
+  field_article_page_teaser_color: "blue"
   field_article_page_teaser_title: "Open Source Lösungen"
   field_article_page_teaser_stitle: "Open Source Lösungen auf dem Vormarsch."
  -
@@ -193,8 +192,8 @@ article_page:
   field_article_page_datetime: "2016-11-17T16:00:00"
   field_article_page_contents: [TB2, TE1]
   field_article_page_tags: null
-  field_article_page_teaser_image: null
-  field_article_page_teaser_color: "#666"
+  field_article_page_teaser_image: "default.jpg"
+  field_article_page_teaser_color: "blue"
   field_article_page_teaser_title: "Open Government"
   field_article_page_teaser_stitle: "Öffnung der Verwaltung der Bevölkerung gegenüber."
  -
@@ -208,8 +207,8 @@ article_page:
   field_article_page_datetime: "2016-11-17T16:00:00"
   field_article_page_contents: [TB1, TE1, CIE1, CE1]
   field_article_page_tags: null
-  field_article_page_teaser_image: null
-  field_article_page_teaser_color: "#666"
+  field_article_page_teaser_image: "default.jpg"
+  field_article_page_teaser_color: "blue"
   field_article_page_teaser_title: "Gabriele Peters"
   field_article_page_teaser_stitle: "Allgemeines über die Ministerin Gabriele Peters."
  -
@@ -223,8 +222,8 @@ article_page:
   field_article_page_datetime: "2016-11-17T16:00:00"
   field_article_page_contents: [IE1, TE1, TE1]
   field_article_page_tags: null
-  field_article_page_teaser_image: null
-  field_article_page_teaser_color: "#666"
+  field_article_page_teaser_image: "default.jpg"
+  field_article_page_teaser_color: "blue"
   field_article_page_teaser_title: "Aufgaben des Ministeriums"
   field_article_page_teaser_stitle: "Aufgaben und Organisation des Ministeriums für digitale Angelegenheiten und Open Source."
  -
@@ -238,8 +237,8 @@ article_page:
   field_article_page_datetime: "2016-11-17T16:00:00"
   field_article_page_contents: [TE1, TE1, CE2, DE1]
   field_article_page_tags: null
-  field_article_page_teaser_image: null
-  field_article_page_teaser_color: "#666"
+  field_article_page_teaser_image: "default.jpg"
+  field_article_page_teaser_color: "blue"
   field_article_page_teaser_title: "Ausschreibungen"
   field_article_page_teaser_stitle: "Ausschreibungen des Ministeriums für digitale Angelegenheiten und Open Source."
  -
@@ -253,8 +252,8 @@ article_page:
   field_article_page_datetime: "2016-11-17T16:00:00"
   field_article_page_contents: [TE1, LE1, LE2, LE3, LE4]
   field_article_page_tags: null
-  field_article_page_teaser_image: null
-  field_article_page_teaser_color: "#666"
+  field_article_page_teaser_image: "default.jpg"
+  field_article_page_teaser_color: "blue"
   field_article_page_teaser_title: "Stellenangebote"
   field_article_page_teaser_stitle: "Stellenangebote des Ministeriums für digitale Angelegenheiten und Open Source."
  -
@@ -268,8 +267,8 @@ article_page:
   field_article_page_datetime: "2016-11-17T16:00:00"
   field_article_page_contents: [TE1, GME1, AE1]
   field_article_page_tags: null
-  field_article_page_teaser_image: null
-  field_article_page_teaser_color: "#666"
+  field_article_page_teaser_image: "default.jpg"
+  field_article_page_teaser_color: "blue"
   field_article_page_teaser_title: "Anfahrtsbeschreibung"
   field_article_page_teaser_stitle: "Anfahrtsbeschreibung zum Ministerium für digitale Angelegenheiten und Open Source."
  -
@@ -283,8 +282,8 @@ article_page:
   field_article_page_datetime: "2016-11-17T16:00:00"
   field_article_page_contents: [TE1]
   field_article_page_tags: null
-  field_article_page_teaser_image: null
-  field_article_page_teaser_color: "#666"
+  field_article_page_teaser_image: "default.jpg"
+  field_article_page_teaser_color: "blue"
   field_article_page_teaser_title: "Newsletter"
   field_article_page_teaser_stitle: "Newsletter des Ministerium für digitale Angelegenheiten und Open Source."
  -
@@ -296,12 +295,42 @@ article_page:
   field_article_page_subtitle: "Hier finden Sie häufig gestellte Fragen und Antworten für digitale Angelegenheiten und Open Source."
   field_article_page_section: null
   field_article_page_datetime: "2016-11-17T16:00:00"
-  field_article_page_contents: [TE1]
+  field_article_page_contents: [TE1, FAQ1, FAQ2, FAQ3]
   field_article_page_tags: null
-  field_article_page_teaser_image: null
-  field_article_page_teaser_color: "#666"
+  field_article_page_teaser_image: "default.jpg"
+  field_article_page_teaser_color: "blue"
   field_article_page_teaser_title: "Fragen und Antworten"
   field_article_page_teaser_stitle: "Fragen und Antworten für digitale Angelegenheiten und Open Source."
+ -
+  xparent: "S7"
+  menu_name: "main"
+  menu_title: "Nur Kommune"
+  menu_weight: "75"
+  field_title: "Nur sichtbar für Kommune"
+  field_article_page_subtitle: "Dieser Inhalt ist nur für Kommunen sichtbar."
+  field_article_page_section: null
+  field_article_page_datetime: "2016-11-17T16:00:00"
+  field_article_page_contents: [TB1, TE1]
+  field_article_page_tags: null
+  field_article_page_teaser_image: "default.jpg"
+  field_article_page_teaser_color: "blue"
+  field_article_page_teaser_title: "Nur für Kommune"
+  field_article_page_teaser_stitle: "Dieser Inhalt ist nur für Kommunen sichtbar."
+ -
+  xparent: "S7"
+  menu_name: "main"
+  menu_title: "Nur Land"
+  menu_weight: "76"
+  field_title: "Nur sichtbar für Land"
+  field_article_page_subtitle: "Dieser Inhalt ist nur für Land-Nutzer sichtbar."
+  field_article_page_section: null
+  field_article_page_datetime: "2016-11-17T16:00:00"
+  field_article_page_contents: [TB1, TE1]
+  field_article_page_tags: null
+  field_article_page_teaser_image: "default.jpg"
+  field_article_page_teaser_color: "blue"
+  field_article_page_teaser_title: "Nur für Land"
+  field_article_page_teaser_stitle: "Dieser Inhalt ist nur für Land sichtbar."
 
 # Nebenseite
 next_page:
@@ -330,20 +359,18 @@ next_page:
   field_next_page_stitle: "Seitenübersicht des Ministerium für digitale Angelegenheiten und Open Source."
   field_next_page_contents: [TE1]
  -
-  xparent: "F3"
+  xkey: "F4"
   menu_name: "footer"
   menu_title: "Kontakt"
   menu_weight: "40"
   field_title: "Kontakt"
-  field_article_page_subtitle: "Kontaktmöglichkeit zum Ministerium für digitale Angelegenheiten und Open Source."
-  field_article_page_section: null
-  field_article_page_datetime: "2016-11-17T16:00:00"
-  field_article_page_contents: [TE1, AE1]
-  field_article_page_tags: null
-  field_article_page_teaser_image: null
-  field_article_page_teaser_color: "#666"
-  field_article_page_teaser_title: "Kontaktmöglichkeit"
-  field_article_page_teaser_stitle: "Kontaktmöglichkeit zum Ministerium für digitale Angelegenheiten und Open Source."
+  field_next_page_stitle: "Kontaktmöglichkeit zum Ministerium für digitale Angelegenheiten und Open Source."
+  field_next_page_contents: [TE1, AE1]
+ -
+  xkey: "F5"
+  field_title: "Herzlich Willkommen bei deGov!"
+  field_next_page_stitle: ""
+  field_next_page_contents: [TE4]
 
 # Veranstaltung
 event_page:
@@ -359,8 +386,8 @@ event_page:
   field_event_page_datetime_end: "2016-11-17T16:00:00"
   field_event_page_contents: [TE2, TE3, GE1]
   field_event_page_tags: null
-  field_event_page_teaser_image: null
-  field_event_page_teaser_color: "#666"
+  field_event_page_teaser_image: "default.jpg"
+  field_event_page_teaser_color: "blue"
   field_event_page_teaser_title: "Anwendertag: Drupal in der öffentlichen Verwaltung"
   field_event_page_teaser_stitle: " Gemeinsam mit Partnern veranstaltet publicplan den ersten Anwendertag 'Drupal in der öffentlichen Verwaltung' in Düsseldorf"
   field_event_page_location: "Düsseldorf"
@@ -375,7 +402,7 @@ blogarticle:
   field_title: "Anwendertag Drupal in der öffentlichen Verwaltung"
   field_blogarticle_subtitle: "Drupal in der öffentlichen Verwaltung"
   field_blogarticle_datetime: "2016-11-17T16:00:00"
-  field_blogarticle_image: null
+  field_blogarticle_image: "default.jpg"
   field_blogarticle_text: "<p>Das freie Content-Management-System und Open-Source-Framework Drupal ist dabei, sich zu einem De-facto-Standard für größere Internet-Projekte und Portale im Umfeld der öffentlichen Hand zu entwickeln. Mit dem Anwendertag der publicplan findet die erste Veranstaltung in Deutschland statt, die sich beim Einsatz von Drupal ganz auf die Anforderungen der Öffentlichen Hand fokussiert.</p>"
   field_blogarticle_tags: null
   field_blogarticle_section: null
@@ -387,7 +414,7 @@ blogarticle:
   field_title: "In 4 Schritten von der User Story zur Anforderung"
   field_blogarticle_subtitle: "Von der User Story zur Anforderung"
   field_blogarticle_datetime: "2016-11-17T16:00:00"
-  field_blogarticle_image: null
+  field_blogarticle_image: "default.jpg"
   field_blogarticle_text: "<p>Durch eine User Story wird eine Anforderung für alle Beteiligten verständlicher und Korrekturschleifen lassen sich vermeiden. Im Ergebnis steht die neue Software schneller zur Verfügung. Im folgenden Beispiel aus dem Verwaltungsalltag sehen wir, wie die Definition einer User Story eine Anforderung konkreter macht und wie wir mit den User Stories weiterarbeiten.</p>"
   field_blogarticle_tags: null
   field_blogarticle_section: null
@@ -399,7 +426,7 @@ blogarticle:
   field_title: "Responsive Webdesign - Ein must have im Bereich E-Government!"
   field_blogarticle_subtitle: "Ein must have im Bereich E-Government"
   field_blogarticle_datetime: "2016-11-17T16:00:00"
-  field_blogarticle_image: null
+  field_blogarticle_image: "default.jpg"
   field_blogarticle_text: "<p>Unter einem responsiven Webdesign versteht man, dass Funktion, Design und Inhalte einer Internetseite sich dem jeweiligen Endgerät anpassen (egal ob Smartphone, Tablet, Notebook oder PC). Warum sollte man diesen Mehraufwand der Programmierung in Kauf nehmen? Schaut man sich die Statistiken an, so stellt man fest, dass der Anteil der mobilen Endgeräte von Jahr zu Jahr steigt. Weltweit werden bis 2018 ca. 1,873 Mrd. Smartphones im Einsatz sein - ganz zu schweigen von den Tablets.</p>"
   field_blogarticle_tags: null
   field_blogarticle_section: null

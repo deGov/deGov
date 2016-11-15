@@ -121,15 +121,9 @@
 {# Main #}
 {% block main %}
   <div class="main-wrapper">
-
-    {% if home_page_image %}
-    <div class="banner-wrapper">
-      <div class="banner-image" style="{{ home_page_image_styles }}">{{ home_page_image }}</div>
-      <div class="banner-title-wrapper">
-        <div class="container">
-          <h1 class="page-header">{{ page['#title'] }}</h1>
-        </div>
-      </div>
+    {% if home_page %}
+      <div class="banner-wrapper">
+        {{ slider }}
     </div>
     {% endif %}
 

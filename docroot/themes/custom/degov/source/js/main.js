@@ -1,8 +1,5 @@
 const Bootstrap = require('bootstrap-sass');
-/*
 const Slick = require('slick-carousel');
-const matchHeight = require('jquery-match-height');
-const stick = require('jquery-sticky'); */
 
 (function ($, Drupal) {
 
@@ -65,8 +62,6 @@ const stick = require('jquery-sticky'); */
               $(document).off('click.hideSearch');
             }
           });
-
-
           return false;
         });
       });
@@ -98,6 +93,14 @@ const stick = require('jquery-sticky'); */
         },100);
       });
     }
-  }
+  };
+
+  Drupal.behaviors.sliderParagraph = {
+    attach: function(context, settings) {
+      $(context).find('.banner-wrapper').once('slider-paragraph-frontpage').each(function() {
+        $(this).slick();
+      });
+    }
+  };
 
 })(jQuery, window.Drupal);

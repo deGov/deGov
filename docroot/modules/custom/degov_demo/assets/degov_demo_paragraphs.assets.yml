@@ -15,19 +15,19 @@ address_element:
 image_element:
  -
   xkey: "IE1"
-  field_image_element_media: null
+  field_image_element_media: "default.jpg"
 
 # Bild Text
 image_text_element:
  -
   xkey: "TB1"
   field_image_text_element_align: "left"
-  field_image_text_element_image: null
+  field_image_text_element_image: "default.jpg"
   field_image_text_element_text: "Bild Text Paragraph Beispiel Content. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi consequuntur nemo, corrupti ut tempora autem dolorum a et odit impedit nisi officia vitae, facere repudiandae possimus quas porro esse voluptate."
  -
   xkey: "TB2"
   field_image_text_element_align: "right"
-  field_image_text_element_image: null
+  field_image_text_element_image: "default.jpg"
   field_image_text_element_text: "Bild Text Paragraph Beispiel Content. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi consequuntur nemo, corrupti ut tempora autem dolorum a et odit impedit nisi officia vitae, facere repudiandae possimus quas porro esse voluptate."
 
 # Download Liste
@@ -41,10 +41,10 @@ downloads_element:
 gallery_element:
  -
   xkey: "GE1"
-  field_gallery_element_images: null
   field_gallery_element_text: "Gallerie - Element Beispiel. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis dignissimos quam mollitia nihil obcaecati. Obcaecati aliquam labore tempore nam aliquid ipsum quas modi nesciunt, sunt, voluptatum cumque cupiditate possimus. Voluptates."
   field_gallery_element_title: "Gallerie - Element Beispiel"
   field_element_type: "gallery"
+  field_gallery_element_images: null
 
 # Google Maps
 google_maps_element:
@@ -56,7 +56,7 @@ google_maps_element:
 contact_element:
  -
   xkey: "CE1"
-  field_contact_element_image: null
+  field_contact_element_image: "default.jpg"
   field_contact_element_email: "ministerin@mfdaos.org"
   field_contact_element_phone: "+49 (0)123 456789-10"
   field_contact_element_fax: "+49 (0)123 456789-11"
@@ -65,7 +65,7 @@ contact_element:
   field_contact_element_website: "http://www.mfdaos.org"
  -
   xkey: "CE2"
-  field_contact_element_image: null
+  field_contact_element_image: "default.jpg"
   field_contact_element_email: "ausschreibungen@mfdaos.org"
   field_contact_element_phone: "+49 (0)123 456789-15"
   field_contact_element_fax: "+49 (0)123 456789-16"
@@ -96,29 +96,64 @@ links_element:
 text_element:
  -
   xkey: "TE1"
-  field_text_element_align: "left"
-  field_text_element_color: "#2980b9"
+  field_text_element_color: "blue"
   field_text_element_text: "Beispiel eines Text Element Paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum nam, facere quia dignissimos delectus officiis rem placeat autem voluptate. Repellat ipsum necessitatibus blanditiis quis dignissimos explicabo neque, numquam modi repellendus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et magni totam labore officia corporis quasi enim! Tempore labore dignissimos vitae voluptatum, debitis mollitia voluptas omnis neque. Ex modi explicabo, nisi."
   field_text_element_title: "Beispiel eines Text Element Paragraph"
  -
   xkey: "TE2"
-  field_text_element_align: "left"
-  field_text_element_color: "#2980b9"
+  field_text_element_color: "blue"
   field_text_element_text: "Das freie Content-Management-System und Open-Source-Framework Drupal ist dabei, sich zu einem De-facto-Standard für größere Internet-Projekte und Portale im Umfeld der öffentlichen Hand zu entwickeln. Mit dem Anwendertag der publicplan findet die erste Veranstaltung in Deutschland statt, die sich beim Einsatz von Drupal ganz auf die Anforderungen der Öffentlichen Hand fokussiert."
   field_text_element_title: "Das Content-Management-System Drupal"
  -
   xkey: "TE3"
-  field_text_element_align: "left"
-  field_text_element_color: "#2980b9"
+  field_text_element_color: "blue"
   field_text_element_text: "Der Vormittag wird sich im Schwerpunkt mit Erfahrungsberichten und Best-Practices rund um den Einsatz von Drupal befassen. Hier stellen Projektleiter und Vertreter der Verwaltungen Ihre Projekte vor und geben einen Einblick in die unterschiedlichen Erfahrungen. Am Nachmittag geht es um die Zukunft von Drupal und die neue Version 8."
   field_text_element_title: "Tagesprogramm"
+ -
+  xkey: "TE4"
+  field_text_element_color: "blue"
+  field_text_element_text: "<p>deGov ist eine auf die Bedürfnisse der öffentlichen Verwaltung spezialisierte Distribution von Drupal 8, einem der weltweit populärsten Content Management Systeme (CMS). deGov eignet sich zur Abbildung folgender Anwendungsfälle:</p><ul><li>Internetauftritte für Bundes-, Landes- und Kommunalverwaltungen</li><li>E-Government-Portale mit Serviceorientierung</li><li>Beiteiligungsportale zur Politikkommunikation</li><li>Offenes Anliegenmanagement und Crowdmapping</li><li>Datenportale zur Katalogisierung, Veröffentlichung und Visualisierung von offenen Daten</li><li>Intranet für Behörden</li></ul><p>deGov ist Open Source und unterliegt der <a href='http://www.gnu.de/documents/gpl-2.0.de.html'>GNU GENERAL PUBLIC LICENSE Version 2</a>. Der Code deGov wird auf Github unter <a href='https://github.com/deGov'>https://github.com/deGov</a> verwaltet und kann dort jederzeit kostenlos heruntergeladen werden. Bitte beachten Sie bei der Verwendung von deGov:</p><ul><li>deGov lebt von seinen Nutzern! Korrigieren Sie Fehler im Code oder weitern die Funktionalitäten von deGov, dann geben Sie diese auch der Community zurück. Dazu genügt ein Pull-Request auf Github und wir kümmern uns um den Rest.</li><li>Kennzeichnen Sie, dass Sie deGov einsetzen! Ein simpler Hinweis im Sinne von 'Diese Website verwendert <a href='http://www.degov.org/'>deGov</a>, die Drupal 8-Distribution für die öffentliche Verwaltung.' im Ihrem Impressum reicht aus.</li><li>Melden Sie sich bei uns! Wir sind stolz auf deGov und wollen wissen, wo es überall eingesetzt wird. Eine kleine Mail an <a href='mailto:mail@degov.org'>mail@degov.org</a> reicht aus und wir wissen Bescheid. Wir planen zukünftig ein Verzeichnis von Websites zu pflegen, in denen alle Installation von deGOv gelistet sind; dort wird Ihr Eintrag auch landen.</li></ul><h2>Sie brauchen Hilfe?</h2><p>deGov kann von zahlreichen Partnern auf Ihre spezifischen Wünsche hin angepasst und erweitert werden. Darüber hinaus bekommen Sie auch Unterstützung beim Design, Redaktionstätigkeiten oder dem Betrieb im Rechenzentrum. Unter <a href='http://www.degov.org/und-los/'>http://www.degov.org/und-los/</a> finden Sie eine Auswahl von geeigneten Partnerunternehmen für eine Vielzahl von Dienstleistungen rund um Drupal.</p>"
+  field_text_element_title: ""
 
 # Zitat
 citation_element:
  -
   xkey: "CIE1"
-  field_citation_element_image: null
-  field_citation_element_color: "#666"
+  field_citation_element_image: "default.jpg"
+  field_citation_element_color: "blue"
   field_citation_element_link: null
   field_citation_element_text: "Als Ministerin des Ministeriums für digitale Angelegenheiten und Open Source liegt mit der digitale Wandel der Wirtschaft ganz besonders am Herzen."
   field_citation_element_title: "Meine Zukunftsvision"
+
+# FAQ
+faq_element:
+ -
+  xkey: "FAQ1"
+  field_faq_element_question: "Wie können Sie die Leistungen erhalten?"
+  field_faq_element_answer: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+ -
+  xkey: "FAQ2"
+  field_faq_element_question: "Welche Leistungen gibt es?"
+  field_faq_element_answer: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+ -
+  xkey: "FAQ3"
+  field_faq_element_question: "Wer kann die Leistungen erhalten?"
+  field_faq_element_answer: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+
+# Slider
+slider_element:
+ -
+  xkey: "SE1"
+  field_slider_element_image: "default.jpg"
+  field_slider_element_article: null
+  field_slider_element_text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+ -
+  xkey: "SE2"
+  field_slider_element_image: "default.jpg"
+  field_slider_element_article: null
+  field_slider_element_text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+ -
+  xkey: "SE3"
+  field_slider_element_image: "default.jpg"
+  field_slider_element_article: null
+  field_slider_element_text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."

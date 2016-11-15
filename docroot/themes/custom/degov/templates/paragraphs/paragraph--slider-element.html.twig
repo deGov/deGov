@@ -45,5 +45,7 @@ view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class
 %}
 <div{{ attributes.addClass(classes) }}>
     {{ content.field_slider_element_image }}
-    <a href="{{ url }}">{{ content.field_slider_element_text }}</a>
+    <div class="container">
+        <a href="{{ url }}">{{ content.field_slider_element_text }}</a>
+    </div>
 </div>
