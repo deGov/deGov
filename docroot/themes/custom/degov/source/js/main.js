@@ -1,5 +1,7 @@
 const Bootstrap = require('bootstrap-sass');
 const Slick = require('slick-carousel');
+const PhotoSwipe = require('photoswipe');
+const PhotoSwipeUiDefault = require('photoswipe/dist/photoswipe-ui-default');
 
 (function ($, Drupal) {
 
@@ -105,6 +107,47 @@ const Slick = require('slick-carousel');
     attach: function(context, settings) {
       $(context).find('.banner-wrapper').once('slider-paragraph-frontpage').each(function() {
         $(this).slick();
+      });
+    }
+  };
+
+  Drupal.behaviors.photoswipe = {
+    attach: function(context, settings) {
+      $(context).find('.field--name-field-gallery-element-images').once('photoswipe-processed').each(function() {
+        var modalContainer = document.querySelectorAll('.pswp')[0];
+        var $fields = $(this).find('.field--item');
+        var items = [];
+        $fields.each(function(i) {
+          var $link = $(this).find('a');
+          var $img = $link.find('img');
+          var width = $img.attr('width') * 3;
+          var height = $img.attr('height') * 3;
+          var href= $link.attr('href');
+          items.push({
+            w: width,
+            h: height,
+            src: href
+          });
+          $link.click(function(e) {
+
+            var gallery = new PhotoSwipe(modalContainer, PhotoSwipeUiDefault, items, {
+              index: i,
+              getThumbBoundsFn: function(index) {
+                var thumbnail = $(context).find('.field--name-field-gallery-element-images .field--item').eq(index).find('img')[0];
+                console.log(thumbnail);
+                const pageYScroll = window.pageYOffset || document.documentElement.scrollTop;
+                const rect = thumbnail.getBoundingClientRect();
+                return {
+                  x: rect.left,
+                  y: rect.top + pageYScroll,
+                  w: rect.width
+                };
+              }
+            });
+            gallery.init();
+            e.preventDefault();
+          });
+        });
       });
     }
   };
