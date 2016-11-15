@@ -4,6 +4,11 @@ type: module
 core: 8.x
 dependencies:
   - field
+  - lightning_media
+  - lightning_media_video
+  - media_entity
   - paragraphs
+  - user
   - video_embed_field
+  - video_embed_media
   - workbench_moderation
