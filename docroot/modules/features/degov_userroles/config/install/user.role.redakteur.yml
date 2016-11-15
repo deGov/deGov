@@ -66,3 +66,4 @@ permissions:
   71: 'delete own article_page content'
   72: 'delete own event_page content'
   73: 'use published_archived transition'
+  74: 'grant own content access'

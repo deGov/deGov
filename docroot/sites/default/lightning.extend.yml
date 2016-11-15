@@ -68,6 +68,8 @@ modules:
   - degov_vsm_nrw
   - degov_translation_importer
   - degov_blogarticle
+  - content_access
+  - degov_content_access
   - degov_userroles
   - degov_easy_breadcrumb
   - degov_subpages_teaserview

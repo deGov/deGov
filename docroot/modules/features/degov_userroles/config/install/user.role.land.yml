@@ -1,10 +1,10 @@
 langcode: de
 status: true
 dependencies: {  }
-id: anonymous
-label: Gast
-weight: 0
-is_admin: false
+id: land
+label: Land
+weight: 24
+is_admin: null
 permissions:
   - 'access content'
   - 'view media'
@@ -13,3 +13,4 @@ permissions:
   - 'access site-wide contact form'
   - 'access sitemap'
   - 'search content'
+  - 'grant own content access'

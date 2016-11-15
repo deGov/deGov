@@ -1,0 +1,39 @@
+content_access_roles_gids:
+  anonymous: 1
+  authenticated: 2
+  administrator: 3
+  page_creator: 4
+  layout_manager: 5
+  page_reviewer: 6
+  landing_page_creator: 7
+  landing_page_reviewer: 8
+  media_creator: 9
+  media_manager: 10
+  section_page_creator: 11
+  section_page_reviewer: 12
+  article_page_creator: 13
+  article_page_reviewer: 14
+  blogarticle_creator: 15
+  blogarticle_reviewer: 16
+  event_page_creator: 17
+  event_page_reviewer: 18
+  home_page_creator: 19
+  home_page_reviewer: 20
+  next_page_creator: 21
+  next_page_reviewer: 22
+  redakteur: 23
+  chefredakteur: 24
+  simplenews_issue_creator: 25
+  simplenews_issue_reviewer: 26
+  kommune: 27
+  land: 28
+langcode: de
+content_access_node_type:
+  page: 'a:3:{s:8:"per_node";i:1;s:4:"view";a:7:{i:0;s:9:"anonymous";i:1;s:13:"authenticated";i:2;s:13:"administrator";i:3;s:9:"redakteur";i:4;s:13:"chefredakteur";i:5;s:7:"kommune";i:6;s:4:"land";}s:8:"view_own";a:6:{i:0;s:9:"anonymous";i:1;s:13:"authenticated";i:2;s:9:"redakteur";i:3;s:13:"chefredakteur";i:4;s:7:"kommune";i:5;s:4:"land";}}'
+  section_page: 'a:3:{s:8:"view_own";a:6:{i:0;s:9:"anonymous";i:1;s:13:"authenticated";i:2;s:9:"redakteur";i:3;s:13:"chefredakteur";i:4;s:7:"kommune";i:5;s:4:"land";}s:4:"view";a:6:{i:0;s:9:"anonymous";i:1;s:13:"authenticated";i:2;s:9:"redakteur";i:3;s:13:"chefredakteur";i:4;s:7:"kommune";i:5;s:4:"land";}s:8:"per_node";i:1;}'
+  blogarticle: 'a:3:{s:8:"view_own";a:6:{i:0;s:9:"anonymous";i:1;s:13:"authenticated";i:2;s:9:"redakteur";i:3;s:13:"chefredakteur";i:4;s:7:"kommune";i:5;s:4:"land";}s:4:"view";a:6:{i:0;s:9:"anonymous";i:1;s:13:"authenticated";i:2;s:9:"redakteur";i:3;s:13:"chefredakteur";i:4;s:7:"kommune";i:5;s:4:"land";}s:8:"per_node";i:1;}'
+  article_page: 'a:3:{s:8:"view_own";a:6:{i:0;s:9:"anonymous";i:1;s:13:"authenticated";i:2;s:9:"redakteur";i:3;s:13:"chefredakteur";i:4;s:7:"kommune";i:5;s:4:"land";}s:4:"view";a:6:{i:0;s:9:"anonymous";i:1;s:13:"authenticated";i:2;s:9:"redakteur";i:3;s:13:"chefredakteur";i:4;s:7:"kommune";i:5;s:4:"land";}s:8:"per_node";i:1;}'
+  landing_page: 'a:3:{s:8:"view_own";a:6:{i:0;s:9:"anonymous";i:1;s:13:"authenticated";i:2;s:9:"redakteur";i:3;s:13:"chefredakteur";i:4;s:7:"kommune";i:5;s:4:"land";}s:4:"view";a:6:{i:0;s:9:"anonymous";i:1;s:13:"authenticated";i:2;s:9:"redakteur";i:3;s:13:"chefredakteur";i:4;s:7:"kommune";i:5;s:4:"land";}s:8:"per_node";i:1;}'
+  next_page: 'a:3:{s:8:"view_own";a:6:{i:0;s:9:"anonymous";i:1;s:13:"authenticated";i:2;s:9:"redakteur";i:3;s:13:"chefredakteur";i:4;s:7:"kommune";i:5;s:4:"land";}s:4:"view";a:6:{i:0;s:9:"anonymous";i:1;s:13:"authenticated";i:2;s:9:"redakteur";i:3;s:13:"chefredakteur";i:4;s:7:"kommune";i:5;s:4:"land";}s:8:"per_node";i:1;}'
+  home_page: 'a:3:{s:8:"view_own";a:6:{i:0;s:9:"anonymous";i:1;s:13:"authenticated";i:2;s:9:"redakteur";i:3;s:13:"chefredakteur";i:4;s:7:"kommune";i:5;s:4:"land";}s:4:"view";a:6:{i:0;s:9:"anonymous";i:1;s:13:"authenticated";i:2;s:9:"redakteur";i:3;s:13:"chefredakteur";i:4;s:7:"kommune";i:5;s:4:"land";}s:8:"per_node";i:1;}'
+  event_page: 'a:3:{s:8:"view_own";a:6:{i:0;s:9:"anonymous";i:1;s:13:"authenticated";i:2;s:9:"redakteur";i:3;s:13:"chefredakteur";i:4;s:7:"kommune";i:5;s:4:"land";}s:4:"view";a:6:{i:0;s:9:"anonymous";i:1;s:13:"authenticated";i:2;s:9:"redakteur";i:3;s:13:"chefredakteur";i:4;s:7:"kommune";i:5;s:4:"land";}s:8:"per_node";i:1;}'
