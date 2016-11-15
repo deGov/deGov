@@ -1,27 +1,3 @@
-// Format title fields
-.field--name-field-article-page-subtitle,
-.field--name-field-article-page-teaser-stitle,
-.field--name-field-article-page-teaser-title,
-.field--name-field-event-page-stitle,
-.field--name-field-event-page-teaser-stitle,
-.field--name-field-event-page-teaser-title,
-.field--name-field-home-page-mainarticle,
-.field--name-field-next-page-stitle,
-.field--name-field-section-page-subtitle,
-.field--name-field-section-page-teaser-stitle,
-.field--name-field-section-page-teaser-title,
-.field--name-field-links-element-title,
-.field--name-field-citation-element-title,
-.field--name-field-downloads-element-title,
-.field--name-field-gallery-element-title,
-.field--name-field-text-element-title {
-	// Please use semantic "styling" aka working with
-	// the HTML inbuild primitives to give the website a
-	// structure and then style that.
-	//font-weight: bold;
-	//color: red;
-}
-
 // Format some fields to be displayed next to each other
 .field--type-file {
 	padding-bottom: 1em;
@@ -164,6 +140,7 @@
 		@include make-xs-column(6);
 		@include make-md-column(4);
 		@include make-md-column(3);
+		padding-bottom: $vertical-gutter-width;
 	}
 }
 
