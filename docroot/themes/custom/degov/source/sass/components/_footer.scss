@@ -23,10 +23,6 @@
   }
 }
 
-.region-footer .block {
-  @include content-box($color-gray);
-  
-}
 @include larger-than($screen-sm-min) {
   .region-footer {
     display: flex;

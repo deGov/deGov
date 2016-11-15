@@ -1,0 +1,24 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_video_element_video
+    - paragraphs.paragraphs_type.video_element
+  module:
+    - video_embed_field
+id: paragraph.video_element.field_video_element_video
+field_name: field_video_element_video
+entity_type: paragraph
+bundle: video_element
+label: Video
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_providers:
+    youtube: youtube
+    vimeo: '0'
+    youtube_playlist: '0'
+field_type: video_embed_field

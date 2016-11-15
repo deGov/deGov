@@ -67,22 +67,28 @@
 		height: auto;
 		display: block;
 	}
-	> a {
-		position: absolute;
-		bottom: 0;
-		font-size: $font-size-h1;
-		font-family: $headings-font-family;
-		background: $color-white;
-		padding: 0 0.5em;
-		display: inline-block;
-			bottom: 1em;
-		text-decoration: none;
-			margin-left: 0;
-	}
-	@include larger-than($screen-sm-min) {
+	.container {
+		position: relative;
 		> a {
-		bottom: 5em;
-		margin-left: 16.666667%;
-		}	
+			position: absolute;
+			font-size: $font-size-h1;
+			font-family: $headings-font-family;
+			background: $color-white-transparent;
+			padding: 0 0.5em;
+			display: inline-block;
+			width: 100%;
+			bottom: $vertical-gutter-width / 2;
+			left: 0;
+			text-decoration: none;
+			color: $color-blue;
+			&:hover {
+				color: $text-color;
+			}
+		}
+		@include larger-than($screen-sm-min) {
+			> a {
+				//bottom: 5em;
+			}
+		}
 	}
 }

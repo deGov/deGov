@@ -72,8 +72,11 @@ const Slick = require('slick-carousel');
   Drupal.behaviors.scroll = {
     attach: function (context, settings) {
       $(context).find('body').once('scroll-class').each(function() {
+        var headerOffset = $('.navbar-secondary', context).outerHeight();
         $(window).scroll(function (event) {
+
           var scrollPos = $(window).scrollTop();
+          $(context).find('body').toggleClass('scroll-past-navbar',scrollPos > headerOffset);
           $(context).find('body').toggleClass('scroll',scrollPos > 0);
         });
       });
@@ -83,6 +86,9 @@ const Slick = require('slick-carousel');
   Drupal.behaviors.toolBarOffset = {
     attach: function(context, settings) {
       $(context).find('#toolbar-administration').each(function() {
+        if ($(window).innerWidth() < 768) {
+          return;
+        }
         window.setTimeout(function() {
           var offset = $('#toolbar-bar').outerHeight() + $('#toolbar-item-administration-tray').outerHeight();
           var paddingTop = +($('body').css('padding-top').replace('px', ''));

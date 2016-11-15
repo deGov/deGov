@@ -19,7 +19,6 @@ article.full {
     }
   }
   &.article-color-blue {
-    background-color: blue;
     &::before {
       background: $color-blue;
     }

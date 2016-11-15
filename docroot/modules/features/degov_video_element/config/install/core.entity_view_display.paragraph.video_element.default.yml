@@ -2,23 +2,25 @@ langcode: de
 status: true
 dependencies:
   config:
-    - field.field.paragraph.video_element.field_video_element_iframe
+    - field.field.paragraph.video_element.field_video_element_video
     - paragraphs.paragraphs_type.video_element
   module:
-    - workbench_moderation
+    - video_embed_field
 id: paragraph.video_element.default
 targetEntityType: paragraph
 bundle: video_element
 mode: default
 content:
-  field_video_element_iframe:
-    weight: 6
+  field_video_element_video:
+    weight: 1
+    label: hidden
     settings:
-      rows: 5
-      placeholder: ''
+      responsive: true
+      width: 854
+      height: 480
+      autoplay: false
     third_party_settings: {  }
-    type: string_textarea
+    type: video_embed_field_video
 hidden:
   created: true
-  status: true
   uid: true
