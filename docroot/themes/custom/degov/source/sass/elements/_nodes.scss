@@ -57,7 +57,6 @@ article.teaser.article-color-green .content .field--type-string h2  {
   }
 }
 article.teaser.article-color-blue .content .field--type-string h2  {
-  background-color: blue;
   &::after {
     background: $color-blue;
   }
