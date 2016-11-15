@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.blogarticle.field_blogarticle_text
     - node.type.blogarticle
   module:
+    - options
     - panelizer
     - user
 third_party_settings:
@@ -28,6 +29,12 @@ targetEntityType: node
 bundle: blogarticle
 mode: teaser
 content:
+  field_blogarticle_teaser_color:
+    type: list_key
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
   field_blogarticle_teaser_image:
     type: entity_reference_entity_view
     weight: 3
@@ -54,14 +61,16 @@ content:
     weight: 5
     settings: {  }
     third_party_settings: {  }
+  workbench_moderation_control:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   field_blogarticle_datetime: true
   field_blogarticle_image: true
   field_blogarticle_section: true
   field_blogarticle_subtitle: true
   field_blogarticle_tags: true
-  field_blogarticle_teaser_color: true
   field_blogarticle_text: true
   langcode: true
   links: true
-  workbench_moderation_control: true

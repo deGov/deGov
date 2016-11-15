@@ -41,8 +41,8 @@ content:
     weight: 3
     label: hidden
     settings:
-      link: true
-      view_mode: default
+      view_mode: blog_article
+      link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
   field_blogarticle_subtitle:
@@ -62,6 +62,10 @@ content:
     weight: 5
     settings: {  }
     third_party_settings: {  }
+  workbench_moderation_control:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   field_blogarticle_section: true
   field_blogarticle_tags: true
@@ -71,4 +75,3 @@ hidden:
   field_blogarticle_teaser_title: true
   langcode: true
   links: true
-  workbench_moderation_control: true
