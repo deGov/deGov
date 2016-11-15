@@ -331,6 +331,21 @@ article_page:
   field_article_page_teaser_color: "blue"
   field_article_page_teaser_title: "Nur für Land"
   field_article_page_teaser_stitle: "Dieser Inhalt ist nur für Land sichtbar."
+ -
+  xparent: "S7"
+  menu_name: "main"
+  menu_title: "Alle Elemente im Überblick"
+  menu_weight: "76"
+  field_title: "Alle Elemente im Überblick"
+  field_article_page_subtitle: "Inhaltsseite"
+  field_article_page_section: null
+  field_article_page_datetime: "2016-11-17T16:00:00"
+  field_article_page_contents: [TE5, CIE2, AE2, CE3, DE2, GE1, IE1, TB1, LE5, CON1, FAQ1, FAQ2, FAQ3, GME2]
+  field_article_page_tags: null
+  field_article_page_teaser_image: "default.jpg"
+  field_article_page_teaser_color: "blue"
+  field_article_page_teaser_title: "Elemente im Überblick"
+  field_article_page_teaser_stitle: ""
 
 # Nebenseite
 next_page:
