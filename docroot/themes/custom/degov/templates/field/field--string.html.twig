@@ -81,8 +81,12 @@ set wrapper_caption = [
 'field_image_copyright'
 ]
 %}
-{% set wrapper_start = '<h3>' %}
-{% set wrapper_end = '</h3>' %}
+{% set wrapper_start = '' %}
+{% set wrapper_end = '' %}
+{% if field_name in wrapper_h3 %}
+    {% set wrapper_start = '<h3>' %}
+    {% set wrapper_end = '</h3>'  %}
+{% endif %}
 {% if field_name in wrapper_h2 %}
     {% set wrapper_start = '<h2>' %}
     {% set wrapper_end = '</h2>'  %}

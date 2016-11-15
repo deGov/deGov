@@ -23,10 +23,64 @@
 }
 
 // Format some fields to be displayed next to each other
-.field--name-field-mime-type {
-	float: left;
-	margin-right: $grid-gutter-width / 2;
+.field--type-file {
+	padding-bottom: 1em;
+	.file {
+		display: inline;
+		> span {
+			border: none;
+		}
+		.file-icon, .file-link, .file-size {
+			display: inline;
+		}
+	}
+	.file-icon {
+		display: inline-block !important;
+		width: 43px;
+		height: 43px;
+	}
+	.file--mime-application-pdf {
+		.file-icon {
+			background: url(../../img/sprite@2x_thumb_degov.png) !important;
+			background-position-x: -250px !important;
+			background-position-y: 0 !important;
+			&:hover {
+				background-position-y: -53px !important;
+			}
+		}
+	}
+	.file--mime-application-xls {
+		.file-icon {
+			background: url(../../img/sprite@2x_thumb_degov.png) !important;
+			background-position-x: -339px !important;
+			background-position-y: 0 !important;
+			&:hover {
+				background-position-y: -53px !important;
+			}
+		}
+	}
+	.file--mime-application-doc {
+		.file-icon {
+			background: url(../../img/sprite@2x_thumb_degov.png) !important;
+			background-position-x: -294px !important;
+			background-position-y: 0 !important;
+			&:hover {
+				background-position-y: -53px !important;
+			}
+		}
+	}
+	.file--mime-application-ppt {
+		.file-icon {
+			background: url(../../img/sprite@2x_thumb_degov.png) !important;
+			background-position-x: -204px !important;
+			background-position-y: 0 !important;
+			&:hover {
+				background-position-y: -53px !important;
+			}
+		}
+	}
 }
+
 
 // Format some field to be in line
 .field--name-field-address-element-zip,
