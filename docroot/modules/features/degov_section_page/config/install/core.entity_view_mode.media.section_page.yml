@@ -1,0 +1,9 @@
+langcode: de
+status: true
+dependencies:
+  module:
+    - media_entity
+id: media.section_page
+label: Bereichsseite
+targetEntityType: media
+cache: true
