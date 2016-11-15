@@ -86,6 +86,9 @@ const Slick = require('slick-carousel');
   Drupal.behaviors.toolBarOffset = {
     attach: function(context, settings) {
       $(context).find('#toolbar-administration').each(function() {
+        if ($(window).innerWidth() < 768) {
+          return;
+        }
         window.setTimeout(function() {
           var offset = $('#toolbar-bar').outerHeight() + $('#toolbar-item-administration-tray').outerHeight();
           var paddingTop = +($('body').css('padding-top').replace('px', ''));

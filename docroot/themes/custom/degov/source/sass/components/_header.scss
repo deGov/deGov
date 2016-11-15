@@ -6,10 +6,19 @@
 	display: none;
 }
 .navbar-secondary {
+	float: right;
+	margin-top: 0.25em;
+	margin-bottom: 0.25em;
+}
+.region-navigation > .block {
+	display: inline-block;
+	vertical-align: middle;
+}
+.navbar-secondary ul {
+	margin-bottom: 0;
+}
+.region-navigation > .block-social-media-links {
 	display: none;
-	ul {
-		margin-bottom: 0;
-	}
 }
 .navbar-branding {
 	float: left;
@@ -20,11 +29,17 @@
 		margin-top: floor($navbar-height*0.125);
 	}
 }
-.navbar-header {
+.container > .navbar-header {
 	float: right;
+	margin-left: 0;
 }
 .header-wrapper .navbar {
 	margin-bottom: 0;
+	li a:hover,
+	li a:focus,
+	li a:active {
+		color: $color-gray;
+	}
 }
 .navbar-collapse {
 	clear: both;
@@ -89,18 +104,15 @@
 	.navbar-header {
 		display: none;
 	}
+	.region-navigation > .block-social-media-links {
+		display: inline-block;
+	}
 	.navbar-secondary {
-		display: block;
-		float: right;
 		max-height: 5em;
-		margin-top: 0.25em;
-		margin-bottom: 0.25em;
+		
 		transition: max-height 200ms ease-in-out, margin 200ms ease-in-out;
 	}
-	.region-navigation > .block {
-		display: inline-block;
-		vertical-align: middle;
-	}
+	
 	.navbar-collapse {
 		float: right;
 		clear: right;
@@ -152,152 +164,3 @@
 		border-bottom-left-radius: inherit;
 	}
 }
-
-
-/*
-// Styles for navbar
-.header-wrapper {
-	background-color: $color-white;
-	z-index: 1 !important;
-}
-.main-wrapper, .footer-wrapper {
-	position: relative;
-	z-index: 0;
-}
-
-// simplify on mobile
-.block-social-media-links,
-.search-block-form,
-.block-language {
-	display: none;
-}
-// desktop layout
-@include larger-than($screen-sm-min) {
-	.block-social-media-links,
-	.search-block-form,
-	.block-language {
-		display: block;
-	}
-	.header-wrapper {
-		position: fixed;
-		left: 0;
-		top: 0;
-		right: 0;
-	}
-	.toolbar-fixed .header-wrapper {
-		top: 39px;
-	}
-	body {
-		padding-top: 95px !important;
-	}
-	.toolbar-fixed {
-		padding-top: 130px !important;
-	}
-	.scroll .header-wrapper {
-
-	}
-}
-
-
-.header-wrapper .branding {
-	float: left;
-	// @TODO: refactor this:
-	position: relative;
-	top: $vertical-gutter-width;
-	margin-left: $grid-gutter-width/2;
-	img {
-		max-height: $vertical-gutter-width;
-		width: auto;
-	}
-	@include larger-than($screen-sm-min) {
-		margin-left: 0;
-		img {
-			max-height: 99999px;
-		}
-	}
-}
-.header-wrapper {
-	#block-degov-socialmedialinks,
-	#block-languageswitcher {
-		@include smaller-than($screen-tablet) {
-			padding-top: $vertical-gutter-width / 4 * 3;
-		}
-	}
-	#block-searchform {
-		@include smaller-than($screen-tablet) {
-			margin-right: $grid-gutter-width / 2;
-		}
-	}
-}
-
-.navbar-collapse {
-	.navbar-nav {
-		a {
-			text-align: center;
-			&.dropdown-toggle {
-				font-weight: bold;
-			}
-		}
-		// Float right for larger screens
-		@include larger-than($screen-tablet) {
-			float: right;
-			a {
-				text-align: left;
-			}
-		}
-
-	}
-}
-
-//Positionin of branding, search, sm
-.header-wrapper {
-	a {
-		color: $color-gray;
-		&:hover {
-			color: $color-blue;
-		}
-	}
-	#block-languageswitcher {
-		float: right;
-	}
-	#block-degov-socialmedialinks {
-		text-align: right;
-	}
-	.search-block-form {
-		float: right;
-	}
-	@include larger-than($screen-tablet) {
-		#block-languageswitcher,
-		#block-degov-socialmedialinks {
-			text-align: left;
-		}
-		#block-languageswitcher,
-		#block-degov-socialmedialinks {
-			float: right;
-		}
-		#block-degov-socialmedialinks {
-			padding-right: $grid-gutter-width / 4;
-		}
-	}
-	.search-block-form {
-		width: 50px;
-		button {
-			background-color: transparent;
-			color: $color-gray;
-			border: none;
-			&:hover {
-				color: $color-blue;
-			}
-		}
-		.form-search {
-			display: none;
-			border-radius: 0;
-		}
-		&.active {
-			width: 300px;
-			.form-search {
-				display: block;
-			}
-		}
-	}
-}*/
