@@ -1,5 +1,5 @@
 name: 'deGov - Paragraphs - Video'
-description: 'Video support for deGov Media.'
+description: 'Stellt einen neuen Paragraph-Typ "Video" zur Vefügung'
 type: module
 core: 8.x
 dependencies:

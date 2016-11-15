@@ -81,7 +81,7 @@ modules:
   - contact_storage
   - degov_contactform_element
   - degov_contactform
-  - degov_media_video
+  - degov_video_element
   - degov_related_content
   - degov_views
   - degov_frontpage_rss

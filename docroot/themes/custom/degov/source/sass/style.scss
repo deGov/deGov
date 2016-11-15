@@ -1,7 +1,6 @@
 @import "variables";
 @import "../../node_modules/font-awesome/scss/font-awesome";
 @import "../../node_modules/slick-carousel/slick/slick.scss";
-@import "../../node_modules/slick-carousel/slick/slick-theme.scss";
 @import "mixins";
 
 @import "components/content";
@@ -17,6 +16,7 @@
 @import "elements/paragraphs";
 @import "elements/type";
 @import "elements/views";
+@import "elements/sliders";
 @import "pages/front";
 @import "view-modes/full";
 @import "view-modes/teaser";

@@ -71,4 +71,26 @@ function degov_welcome_page_attachments_alter(array &$attachments) {
   }
 }
 
-
+/**
+ * Implements hook_css_alter().
+ * Add a custom CSS file to fix image sizes in backend.
+ */
+function degov_welcome_css_alter(&$css, \Drupal\Core\Asset\AttachedAssetsInterface $assets) {
+  
+  $is_admin = \Drupal::service('router.admin_context')->isAdminRoute();
+  if ($is_admin) {
+    $css[drupal_get_path('module', 'degov_welcome') . '/css/admin.css'] = array(
+      'weight' => 200.1,
+      'group' => 0,
+      'type' => 'file',
+      'data' => drupal_get_path('module', 'degov_welcome') . '/css/admin.css',
+      'version' => '8.2.2',
+      'media' => 'all',
+      'preprocess' => 1,
+      'browsers' => array(
+        'IE' => 1,
+        '!IE' => 1,
+      ),
+    );
+  }
+}

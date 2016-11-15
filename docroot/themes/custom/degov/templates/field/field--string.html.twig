@@ -75,6 +75,12 @@ set wrapper_h3 = [
 'field_links_element_title'
 ]
 %}
+{%
+set wrapper_caption = [
+'field_image_subtitle',
+'field_image_copyright'
+]
+%}
 {% set wrapper_start = '<h3>' %}
 {% set wrapper_end = '</h3>' %}
 {% if field_name in wrapper_h2 %}
@@ -84,6 +90,10 @@ set wrapper_h3 = [
 {% if field_name in wrapper_h1 %}
     {% set wrapper_start = '<h1>' %}
     {% set wrapper_end = '</h1>'  %}
+{% endif %}
+{% if field_name in wrapper_caption %}
+    {% set wrapper_start = '<figcaption>' %}
+    {% set wrapper_end = '</figcaption>'  %}
 {% endif %}
 {% if label_hidden %}
     {% if multiple %}
