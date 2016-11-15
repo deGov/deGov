@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.section_page.field_section_page_color
     - field.field.node.section_page.field_section_page_contents
     - field.field.node.section_page.field_section_page_image
     - field.field.node.section_page.field_section_page_section
@@ -55,9 +56,8 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-  workbench_moderation_control:
-    weight: -20
 hidden:
+  field_section_page_color: true
   field_section_page_contents: true
   field_section_page_image: true
   field_section_page_section: true
@@ -66,3 +66,4 @@ hidden:
   langcode: true
   links: true
   shariff_field: true
+  workbench_moderation_control: true
