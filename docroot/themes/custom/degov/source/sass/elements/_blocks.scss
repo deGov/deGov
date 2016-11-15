@@ -2,6 +2,9 @@
 #block-languageswitcher {
   cursor: pointer;
   position: relative;
+  .simple-lang {
+    display: inline-block;
+  }
   .active-lang {
     text-transform: uppercase;
     background-color: $color-gray;

@@ -35,13 +35,13 @@
 }
 .header-wrapper .navbar {
 	margin-bottom: 0;
-	li a {
+	li a,
+	.simple-lang a {
 		color: $color-gray;
-	}
-	li a:hover,
-	li a:focus,
-	li a:active {
-		color: $color-blue;
+		&:hover, &:focus, &:active {
+			color: $color-blue;
+			text-decoration: none;
+		}
 	}
 }
 .navbar-collapse {
