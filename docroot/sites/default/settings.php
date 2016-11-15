@@ -757,15 +757,3 @@ if (file_exists(__DIR__ . '/settings.local.php')) {
 if (file_exists(__DIR__ . '/settings.local.php')) {
   include __DIR__ . '/settings.platformsh.php';
 }
-$databases['default']['default'] = array (
-  'database' => 'degov',
-  'username' => 'root',
-  'password' => '',
-  'prefix' => '',
-  'host' => 'localhost',
-  'port' => '3306',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-);
-$settings['install_profile'] = 'lightning';
-$config_directories['sync'] = 'sites/default/files/config_Rd2h8PRCITCW_o9QaoTZ-SvkrKpwaYGQK7B1UJ9AF5MlQvsB8fCBI4s_kb-zySP6j4w5CwzNmA/sync';
