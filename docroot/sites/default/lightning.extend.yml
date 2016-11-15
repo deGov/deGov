@@ -95,6 +95,7 @@ modules:
   - degov_slider_element
   - degov_blocklayout
   - back_to_top
+  - degov_media_document
   - degov_demo
 # A system path to redirect to once installation is complete.
 redirect:
