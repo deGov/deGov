@@ -3,7 +3,6 @@ description: 'Provides Gallerie paragraphs type and related configuration.'
 type: module
 core: 8.x
 dependencies:
-  - colorbox
   - entity_browser
   - field
   - file
