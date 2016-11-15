@@ -1,0 +1,13 @@
+langcode: de
+status: true
+dependencies: {  }
+name: teaser_image
+label: 'Teaser Bild (600x337)'
+effects:
+  ea47c347-5f93-4c5c-848a-0b9de1970dfc:
+    uuid: ea47c347-5f93-4c5c-848a-0b9de1970dfc
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 337

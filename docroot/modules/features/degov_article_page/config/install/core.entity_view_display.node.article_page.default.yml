@@ -55,10 +55,6 @@ content:
     weight: 4
     settings: {  }
     third_party_settings: {  }
-  workbench_moderation_control:
-    weight: 0
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   field_article_page_section: true
   field_article_page_tags: true
@@ -68,3 +64,4 @@ hidden:
   field_article_page_teaser_title: true
   langcode: true
   links: true
+  workbench_moderation_control: true

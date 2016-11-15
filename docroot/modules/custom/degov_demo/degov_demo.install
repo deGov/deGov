@@ -25,11 +25,11 @@ function degov_demo_install() {
   // Module Path
   $module_path = sprintf('modules/custom/degov_demo/assets', \Drupal::root());
   $module_real_path = \Drupal::service('file_system')->realpath($module_path);
-  
+
   $files_ids = array();
   $files_system_ids = array();
   $paragraphs_ids = array();
-  
+
   // Create images
   if($demo_create_images) {
     $res = null;
@@ -161,8 +161,17 @@ function degov_demo_paragraphs($module_real_path, $files_ids, $files_system_ids)
               'title' => 'Dies ist ein Link zur Unterseite Drei',
             );
           }
+          else if (preg_match('/\_website$/', $field)) {
+            $insert_fields[$field][0] = array(
+              'uri' => 'http://www.mfdaos.org/link-zur-unterseite-eins',
+              'title' => 'Dies ist ein Link',
+            );
+          }
           else {
-            $insert_fields[$field] = $value;
+            $insert_fields[$field]['value'] = $value;
+            if (strpos($value, '<p>') !== false) {
+              $insert_fields[$field]['format'] = 'rich_text';
+            }
           }
         }
         
@@ -303,6 +312,9 @@ function degov_demo_content_types($module_real_path, $files_ids, $files_system_i
         }
         else {
           $insert_fields[$page_field]['value'] = $value;
+          if (strpos($value, '<p>') !== false) {
+            $insert_fields[$page_field]['format'] = 'rich_text';
+          }
         }
         
       }

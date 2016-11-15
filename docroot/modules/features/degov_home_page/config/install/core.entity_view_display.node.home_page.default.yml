@@ -40,10 +40,7 @@ content:
     weight: 1
     settings: {  }
     third_party_settings: {  }
-  workbench_moderation_control:
-    weight: 0
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   langcode: true
   shariff_field: true
+  workbench_moderation_control: true

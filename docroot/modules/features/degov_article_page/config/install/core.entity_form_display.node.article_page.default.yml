@@ -31,16 +31,16 @@ content:
     third_party_settings: {  }
   field_article_page_contents:
     type: entity_reference_paragraphs
-    weight: 4
+    weight: 8
     settings:
       title: Paragraph
       title_plural: Paragraphs
-      edit_mode: open
+      edit_mode: closed
       add_mode: dropdown
       form_display_mode: default
     third_party_settings: {  }
   field_article_page_datetime:
-    weight: 3
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
@@ -53,7 +53,7 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
   field_article_page_subtitle:
-    weight: 2
+    weight: 6
     settings:
       size: 60
       placeholder: ''
@@ -68,12 +68,12 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
   field_article_page_teaser_color:
-    weight: 8
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_select
   field_article_page_teaser_image:
-    weight: 7
+    weight: 3
     settings:
       entity_browser: media_browser
       field_widget_display: rendered_entity
@@ -86,14 +86,14 @@ content:
     third_party_settings: {  }
     type: entity_browser_entity_reference
   field_article_page_teaser_stitle:
-    weight: 6
+    weight: 2
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
   field_article_page_teaser_title:
-    weight: 5
+    weight: 1
     settings:
       size: 60
       placeholder: ''
@@ -123,7 +123,7 @@ content:
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 1
+    weight: 5
     settings:
       size: 60
       placeholder: ''

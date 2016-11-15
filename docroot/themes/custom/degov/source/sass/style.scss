@@ -1,6 +1,8 @@
 @import "variables";
 @import "../../node_modules/font-awesome/scss/font-awesome";
 @import "../../node_modules/slick-carousel/slick/slick.scss";
+@import "../../node_modules/photoswipe/src/css/main.scss";
+@import "../../node_modules/photoswipe/src/css/default-skin/default-skin.scss";
 @import "mixins";
 
 @import "components/content";
@@ -18,8 +20,10 @@
 @import "elements/views";
 @import "elements/sliders";
 @import "pages/front";
+@import "pages/search-page";
 @import "view-modes/full";
 @import "view-modes/teaser";
 @import "views/related-content";
 @import "views/subpages";
+
 //@import "views/*";

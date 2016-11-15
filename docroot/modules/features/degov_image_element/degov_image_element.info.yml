@@ -3,8 +3,11 @@ description: 'Provides Bild paragraphs type and related configuration.'
 type: module
 core: 8.x
 dependencies:
+  - degov_media_image
   - entity_browser
   - field
+  - image
+  - lightning_media
   - lightning_media_image
   - media_entity
   - paragraphs

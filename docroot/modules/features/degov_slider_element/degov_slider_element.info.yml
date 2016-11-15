@@ -5,8 +5,10 @@ core: 8.x
 dependencies:
   - degov_article_page
   - degov_blogarticle
+  - degov_media_image
   - entity_browser
   - field
+  - image
   - lightning_media
   - lightning_media_image
   - media_entity
