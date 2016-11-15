@@ -1,0 +1,9 @@
+langcode: de
+status: true
+dependencies:
+  module:
+    - media_entity
+id: media.teaser_image
+label: 'Teaser Bild'
+targetEntityType: media
+cache: true
