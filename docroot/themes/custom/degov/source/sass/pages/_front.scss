@@ -38,6 +38,16 @@
   &:active {
     background: $gray-light;
   }
+  &.slick-next {
+    &:before {
+      content: "\f105";
+    }
+  }
+  &.slick-prev {
+    &:before {
+      content: "\f104";
+    }
+  }
   &.slick-next, &.slick-prev {
     &:before {
       font-size: $font-size-h3;
