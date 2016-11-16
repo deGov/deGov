@@ -78,6 +78,9 @@
 			}
 		}
 	}
+	>.field--item:nth-child(2n+1) {
+		clear: left;
+	}
 }
 
 // Make google maps field full width

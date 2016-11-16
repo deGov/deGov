@@ -37,6 +37,7 @@ article.full {
 
 article.teaser {
   @include content-box();
+  margin-bottom: $vertical-gutter-width;
 }
 
 // Format teaser title
