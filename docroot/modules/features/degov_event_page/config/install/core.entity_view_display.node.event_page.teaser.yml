@@ -16,7 +16,6 @@ dependencies:
     - field.field.node.event_page.field_event_page_teaser_title
     - node.type.event_page
   module:
-    - options
     - panelizer
     - user
 third_party_settings:
@@ -30,12 +29,6 @@ targetEntityType: node
 bundle: event_page
 mode: teaser
 content:
-  field_event_page_teaser_color:
-    type: list_key
-    weight: 4
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
   field_event_page_teaser_image:
     type: entity_reference_entity_view
     weight: 3
@@ -56,11 +49,7 @@ content:
     weight: 1
     label: hidden
     settings:
-      link_to_entity: false
-    third_party_settings: {  }
-  workbench_moderation_control:
-    weight: 0
-    settings: {  }
+      link_to_entity: true
     third_party_settings: {  }
 hidden:
   field_event_page_contents: true
@@ -70,6 +59,8 @@ hidden:
   field_event_page_section: true
   field_event_page_stitle: true
   field_event_page_tags: true
+  field_event_page_teaser_color: true
   langcode: true
   links: true
   shariff_field: true
+  workbench_moderation_control: true

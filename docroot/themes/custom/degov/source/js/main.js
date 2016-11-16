@@ -32,12 +32,12 @@ const PhotoSwipeUiDefault = require('photoswipe/dist/photoswipe-ui-default');
   // Language dropdown
   Drupal.behaviors.lang = {
     attach: function (context, settings) {
-      $(context).find('#block-languageswitcher').once('lang-click').click(function () {
-        const isOpen = $(this).children('ul').hasClass('open');
-        $(this).children().toggleClass('open', !isOpen);
+      $(context).find('#block-languageswitcher .active-lang').once('lang-click').click(function () {
+        const isOpen = $(this).siblings('ul').hasClass('open');
+        $(this).siblings('ul').toggleClass('open', !isOpen);
       });
 
-      $(context).find('#block-languageswitcher a').once('lang-link').each(function () {
+      $(context).find('#block-languageswitcher .active-lang a').once('lang-link').each(function () {
         const hrefLang = $(this).attr('hreflang');
         $(this).text(hrefLang);
       });
@@ -106,7 +106,14 @@ const PhotoSwipeUiDefault = require('photoswipe/dist/photoswipe-ui-default');
   Drupal.behaviors.sliderParagraph = {
     attach: function(context, settings) {
       $(context).find('.banner-wrapper').once('slider-paragraph-frontpage').each(function() {
-        $(this).slick();
+        var $slider = $(this);
+        $slider.slick({arrows: false});
+        $slider.find('.slider-prev').click(function(){
+          $slider.slick('slickPrev');
+        });
+        $slider.find('.slider-next').click(function(){
+          $slider.slick('slickNext');
+        });
       });
     }
   };

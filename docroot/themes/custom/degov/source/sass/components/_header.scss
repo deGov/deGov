@@ -43,6 +43,22 @@
 			text-decoration: none;
 		}
 	}
+	.simple-lang {
+		@include smaller-than($screen-tablet) {
+			display: none;
+		}
+	}
+	.region-navigation-collapsible {
+		li a {
+			color: $color-blue;
+			&:hover, &:focus, &:active {
+				color: $color-blue;
+			}
+		}
+		> nav > ul > li > a {
+			font-weight: bold;
+		}
+	}
 }
 .navbar-collapse {
 	clear: both;

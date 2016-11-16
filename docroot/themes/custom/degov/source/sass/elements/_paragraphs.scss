@@ -69,25 +69,46 @@
 	}
 	.container {
 		position: relative;
-		> a {
+		.slider-text-wrapper {
 			position: absolute;
-			font-size: $font-size-h1;
-			font-family: $headings-font-family;
-			background: $color-white-transparent;
-			padding: 0 0.5em;
 			display: inline-block;
 			width: 100%;
-			bottom: $vertical-gutter-width / 2;
+			background: $color-white-transparent;
 			left: 0;
-			text-decoration: none;
-			color: $color-blue;
-			&:hover {
-				color: $text-color;
+			bottom: $vertical-gutter-width / 2;
+			font-size: $font-size-h1;
+			padding: 0 0.5em;
+		}
+		.slider-text {
+			float: left;
+			max-width: 80%;
+			a {
+				font-family: $headings-font-family;
+				text-decoration: none;
+				color: $color-blue;
+				&:hover {
+					color: $text-color;
+				}
 			}
 		}
-		@include larger-than($screen-sm-min) {
-			> a {
-				//bottom: 5em;
+		.slider-prev, .slider-next {
+			color: $color-blue;
+			cursor: pointer;
+			width: $grid-gutter-width;
+		}
+		.slider-prev {
+			float: left;
+			text-align: left;
+			@include icon-before($fa-var-angle-left, 0.5em);
+		}
+		.slider-next {
+			float: right;
+			text-align: right;
+			@include icon-after($fa-var-angle-right, 0.5em);
+		}
+		@include smaller-than($screen-tablet) {
+			.slider-text a {
+				font-size: $font-size-h2;
 			}
 		}
 	}

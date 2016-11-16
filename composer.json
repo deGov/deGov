@@ -47,7 +47,8 @@
         "drupal/social_media_links": "^8.2",
         "drupal/spamspan": "8.x-1.x-dev",
         "drupal/back_to_top": "8.x",
-        "drupal/content_access": "8.x-1.x-dev"
+        "drupal/content_access": "8.x-1.x-dev",
+        "drupal/entity_browser": "8.x"
     },
     "repositories": {
         "drupal": {
@@ -112,6 +113,9 @@
             },
             "drupal/smtp": {
                 "Can't send mail: Non-existent service": "https://www.drupal.org/files/issues/0001-Issue-2819793-Can-t-send-mail-Non-existent-service-s.patch"
+            },
+            "drupal/entity_browser": {
+                "Undefined index: view_mode in RenderedEntity::settingsForm()": "https://www.drupal.org/files/issues/undefined_index-2824686-2.patch"
             }
         },
         "enable-patching": true
