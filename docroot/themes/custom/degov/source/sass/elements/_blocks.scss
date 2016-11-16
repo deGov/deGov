@@ -27,7 +27,7 @@
     right: $grid-gutter-width/4;
     display: none;
     background-color: $color-blue;
-    padding-left: 9px; // Padding to match caret width
+    padding-left: $grid-gutter-width/4; // Padding to match caret width
     &.open {
       display: block;
     }
