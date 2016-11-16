@@ -9,7 +9,7 @@
     @include make-sm-column(6);
     margin-bottom: $vertical-gutter-width;
   }
-}
-.region-footer .views-row:nth-child(2n+1) {
-  clear: left;
+  .views-row:nth-child(2n+1) {
+		clear: left;
+	}
 }

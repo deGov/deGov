@@ -80,6 +80,11 @@
 			bottom: -$vertical-gutter-width;
 			font-size: $font-size-h1;
 			padding: 0.5em;
+			@include smaller-than($screen-desktop) {
+				position: relative;
+				left: auto;
+				bottom: auto;
+			}
 		}
 		.slider-text {
 			float: left;
