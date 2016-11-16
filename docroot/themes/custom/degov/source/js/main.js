@@ -33,11 +33,14 @@ const PhotoSwipeUiDefault = require('photoswipe/dist/photoswipe-ui-default');
   Drupal.behaviors.lang = {
     attach: function (context, settings) {
       $(context).find('#block-languageswitcher .active-lang').once('lang-click').click(function () {
-        const isOpen = $(this).siblings('ul').hasClass('open');
+        const isOpen = $(this).hasClass('open');
+        //const isOpen = $(this).siblings('ul').hasClass('open');
+        $(this).toggleClass('open', !isOpen);
         $(this).siblings('ul').toggleClass('open', !isOpen);
       });
 
-      $(context).find('#block-languageswitcher .active-lang a').once('lang-link').each(function () {
+      $(context).find('#block-languageswitcher a').once('lang-link').each(function () {
+        console.info('do it');
         const hrefLang = $(this).attr('hreflang');
         $(this).text(hrefLang);
       });

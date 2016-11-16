@@ -53,6 +53,15 @@
 	.fa-2x {
 		font-size: 1.5em;
 	}
+	.block-language {
+		ul {
+			li {
+				a {
+					color: $color-white;
+				}
+			}
+		}
+	}
 	.region-navigation-collapsible {
 		li a {
 			color: $color-blue;
