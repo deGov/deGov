@@ -24,9 +24,9 @@
 	float: left;
 	.logo img {
 		height: 100%;
-		max-height: floor($navbar-height*0.75);
+		max-height: floor($navbar-height*0.6);
 		width: auto;
-		margin-top: floor($navbar-height*0.125);
+		margin-top: floor($navbar-height*0.225);
 	}
 }
 .container > .navbar-header {
