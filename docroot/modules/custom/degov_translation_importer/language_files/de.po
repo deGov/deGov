@@ -1,9 +1,10 @@
+# German translation of deGov
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-11-10 11:16+0100\n"
-"PO-Revision-Date: 2016-11-10 11:16+0100\n"
+"POT-Creation-Date: 2016-11-16 12:36+0100\n"
+"PO-Revision-Date: 2016-11-16 12:36+0100\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -16,6 +17,11 @@ msgstr "Benutzerdefinierter Blocktyp"
 
 msgid "Content type"
 msgstr "Inhaltstyp"
+
+msgid "1 min"
+msgid_plural "@count min"
+msgstr[0] "1 Minute"
+msgstr[1] "@count Minuten"
 
 msgid "1 sec"
 msgid_plural "@count sec"
@@ -34,8 +40,14 @@ msgstr "Vokabular"
 msgid "Token"
 msgstr "Token"
 
+msgid "Add the @label role to the selected users"
+msgstr "Die @label Rolle den gewählten Benutzern zuweisen."
+
 msgid "0 sec"
 msgstr "0 Sek."
+
+msgid "Content library"
+msgstr "Inhaltsbibliothek"
 
 msgid "Description"
 msgstr "Beschreibung"
@@ -81,6 +93,12 @@ msgstr "aktiv"
 
 msgid "Configure site"
 msgstr "Website konfigurieren"
+
+msgid "Choose extensions"
+msgstr "Erweiterungen auswählen"
+
+msgid "Install extensions"
+msgstr "Erweiterungen installieren"
 
 msgid "Finish translations"
 msgstr "Übersetzungen abschließen"
@@ -181,7 +199,7 @@ msgid "Submit"
 msgstr "Absenden"
 
 msgid "Operations"
-msgstr "Operationen"
+msgstr "Operations"
 
 msgid "Content"
 msgstr "Inhalt"
@@ -193,13 +211,13 @@ msgid "Value"
 msgstr "Wert"
 
 msgid "Username"
-msgstr "Benutzername"
+msgstr "Username"
 
 msgid "Email address"
 msgstr "E-Mail-Adresse"
 
 msgid "Development"
-msgstr "Development"
+msgstr "Entwicklung"
 
 msgid "Groups"
 msgstr "Gruppen"
@@ -223,7 +241,7 @@ msgid "yes"
 msgstr "Ja"
 
 msgid "List"
-msgstr "Liste"
+msgstr "List"
 
 msgid "Subject"
 msgstr "Betreff"
@@ -382,10 +400,10 @@ msgid "Links"
 msgstr "Links"
 
 msgid "Search"
-msgstr "Suche"
+msgstr "Suchbegriff eingeben"
 
 msgid "Reset"
-msgstr "Zurücksetzen"
+msgstr "Reset"
 
 msgid "Daily"
 msgstr "Täglich"
@@ -555,7 +573,7 @@ msgid "Session opened for %name."
 msgstr "Die Sitzung für %name wurde eröffnet."
 
 msgid "Help"
-msgstr "Hilfe"
+msgstr "Help"
 
 msgid "Image settings"
 msgstr "Bildeinstellungen"
@@ -725,6 +743,12 @@ msgstr "Erweiterte Einstellungen"
 msgid "Teaser"
 msgstr "Anrisstext"
 
+msgid "@message (@percent%)."
+msgstr "@message (@percent%)."
+
+msgid "Importing translation for %project."
+msgstr "Importiere Übersetzungen für %project."
+
 msgid "never"
 msgstr "niemals"
 
@@ -828,7 +852,7 @@ msgid "Configure"
 msgstr "Konfigurieren"
 
 msgid "Email"
-msgstr "E-Mail"
+msgstr "Email"
 
 msgid "Files"
 msgstr "Dateien"
@@ -852,7 +876,7 @@ msgid "New user: %name %email."
 msgstr "Neuer Benutzer: %name %email."
 
 msgid "Created"
-msgstr "Erstellt am"
+msgstr "Created"
 
 msgid "Node"
 msgstr "Beitrag"
@@ -924,7 +948,7 @@ msgid "All"
 msgstr "Alle"
 
 msgid "Active"
-msgstr "Aktiv"
+msgstr "Active"
 
 msgid "Done"
 msgstr "Fertig"
@@ -948,7 +972,7 @@ msgid "Area"
 msgstr "Bereich"
 
 msgid "Page title"
-msgstr "Seitentitel"
+msgstr "Page title"
 
 msgid "Block"
 msgstr "Block"
@@ -963,7 +987,7 @@ msgid "Add view"
 msgstr "Ansicht hinzufügen"
 
 msgid "Page"
-msgstr "Seite"
+msgstr "Page"
 
 msgid "Pager ID"
 msgstr "Pager ID"
@@ -1020,7 +1044,7 @@ msgid "Site"
 msgstr "Website"
 
 msgid "Drupal"
-msgstr "Drupal"
+msgstr "deGov"
 
 msgid "Not found"
 msgstr "Nicht gefunden"
@@ -1386,7 +1410,7 @@ msgid "Plain text"
 msgstr "Klartext"
 
 msgid "standard"
-msgstr "Standard"
+msgstr "tls"
 
 msgid "Caching"
 msgstr "Cache"
@@ -1422,7 +1446,7 @@ msgid "Current"
 msgstr "Aktuell"
 
 msgid "Desc"
-msgstr "Absteigend"
+msgstr "Desc"
 
 msgid "Filter by"
 msgstr "Filtern nach"
@@ -1681,7 +1705,7 @@ msgid "Anonymous"
 msgstr "Gast"
 
 msgid "Provider"
-msgstr "Anbieter"
+msgstr "Typ"
 
 msgid "Uninstall"
 msgstr "Deinstallieren"
@@ -1816,7 +1840,7 @@ msgid "Germany"
 msgstr "Deutschland"
 
 msgid "Sort by"
-msgstr "Sortieren nach"
+msgstr "Sort by"
 
 msgid "Created date"
 msgstr "Erstellungsdatum"
@@ -2490,7 +2514,7 @@ msgid "Arabic"
 msgstr "Arabisch"
 
 msgid "English"
-msgstr "Englisch"
+msgstr "English"
 
 msgid "French"
 msgstr "Französisch"
@@ -2597,7 +2621,7 @@ msgid "Search results"
 msgstr "Suchergebnisse"
 
 msgid "Please enter some keywords."
-msgstr "Bitte geben Sie Wörter ein, nach denen gesucht werden soll."
+msgstr "Bitte geben Sie Suchbegriffe ein, nach denen gesucht werden sollte."
 
 msgid "Front page"
 msgstr "Startseite"
@@ -3129,12 +3153,6 @@ msgstr "Der Benutzername %name wurde nicht aktiviert oder ist gesperrt."
 msgid "Login attempt failed for %user."
 msgstr "Anmeldung für %user fehlgeschlagen."
 
-msgid "@message (@percent%)."
-msgstr "@message (@percent%)."
-
-msgid "Importing translation for %project."
-msgstr "Importiere Übersetzungen für %project."
-
 msgid "Next ›"
 msgstr "Weiter >"
 
@@ -3353,7 +3371,7 @@ msgid "Western Sahara"
 msgstr "Westsahara"
 
 msgid "Language switcher"
-msgstr "Sprachumschalter"
+msgstr "Language switcher"
 
 msgid "Block description"
 msgstr "Blockbeschreibung"
@@ -3944,11 +3962,6 @@ msgid "1 week"
 msgid_plural "@count weeks"
 msgstr[0] "1 Woche"
 msgstr[1] "@count Wochen"
-
-msgid "1 min"
-msgid_plural "@count min"
-msgstr[0] "1 Minute"
-msgstr[1] "@count Minuten"
 
 msgid "Columns"
 msgstr "Spalten"
@@ -4712,7 +4725,7 @@ msgid "original"
 msgstr "Original"
 
 msgid "Main navigation"
-msgstr "Hauptnavigation"
+msgstr "Hauptmenü"
 
 msgid "Starting level"
 msgstr "Startebene"
@@ -6514,7 +6527,7 @@ msgid "Mini"
 msgstr "Mini"
 
 msgid "Items per page"
-msgstr "Elemente pro Seite"
+msgstr "Items per page"
 
 msgid "Specify whether this display will provide a \"more\" link."
 msgstr "Festlegen, ob diese Anzeige einen „Weiter“-Link bereitstellt."
@@ -6889,7 +6902,7 @@ msgid "Cron run completed."
 msgstr "Cron-Lauf vollständig."
 
 msgid "- All -"
-msgstr "- Alle -"
+msgstr "- All -"
 
 msgid "Visitors"
 msgstr "Besucher"
@@ -6943,7 +6956,7 @@ msgid "Catalan"
 msgstr "Katalanisch"
 
 msgid "Contact form"
-msgstr "Kontaktformular"
+msgstr "Contact form"
 
 msgid "Drag to re-order"
 msgstr "Ziehen, um die Reihenfolge zu ändern"
@@ -7823,7 +7836,7 @@ msgstr ""
 "nicht."
 
 msgid "Search form"
-msgstr "Suchformular"
+msgstr "Search form"
 
 msgid "Top search phrases"
 msgstr "Häufigste Suchbegriffe"
@@ -8574,7 +8587,7 @@ msgid "Lock"
 msgstr "Sperre"
 
 msgid "Status messages"
-msgstr "Status-Nachrichten"
+msgstr "Status messages"
 
 msgid "Delete content"
 msgstr "Inhalt löschen"
@@ -9105,7 +9118,7 @@ msgid "Total rows"
 msgstr "Zeilen gesamt"
 
 msgid "Main page content"
-msgstr "Haupt-Seiteninhalt"
+msgstr "Main page content"
 
 msgid "Content Moderation"
 msgstr "Inhaltsmoderation"
@@ -13090,13 +13103,13 @@ msgid "The entity type."
 msgstr "Der Entitäts-Typ."
 
 msgid "Footer menu"
-msgstr "Fußbereichsmenü"
+msgstr "Footer menu"
 
 msgid "Unable to parse info file: %info_file."
 msgstr "Die info-Datei kann nicht ausgewertet werdden: %info_file."
 
 msgid "Asc"
-msgstr "Aufsteigend"
+msgstr "Asc"
 
 msgid "HTML element"
 msgstr "HTML-Element"
@@ -18363,7 +18376,7 @@ msgid "@title (value @number)"
 msgstr "@title (Wert @number)"
 
 msgid "Primary admin actions"
-msgstr "Primäre Admin-Aktionen"
+msgstr "Primary admin actions"
 
 msgid "Shown tabs"
 msgstr "Angezeigte Reiter"
@@ -19874,11 +19887,20 @@ msgstr "Experimentell"
 msgid "Thumbnail"
 msgstr "Vorschaubild"
 
+msgid "Save to my media library"
+msgstr "Save to my media library"
+
 msgid "Paragraph"
 msgstr "Absatz"
 
 msgid "Created by"
 msgstr "Erstellt von"
+
+msgid "Update Date/time"
+msgstr "Aktualisierung Datum/Uhrzeit "
+
+msgid "Entities to Update"
+msgstr "Zu aktualisierende Objekte"
 
 msgid "Menu links"
 msgstr "Menüeinträge"
@@ -19957,9 +19979,6 @@ msgstr "Verbundener Pfad"
 
 msgid "Menu link count"
 msgstr "Menü-Link-Zähler"
-
-msgid "Paragraph type"
-msgstr "Abschnitt-Typ"
 
 msgid "Reinstall modules"
 msgstr "Module neu installieren"
@@ -20154,19 +20173,19 @@ msgid "Append"
 msgstr "Hinzufügen"
 
 msgid "‹ previous"
-msgstr "‹ vorherige Seite"
+msgstr "‹ previous"
 
 msgid "next ›"
-msgstr "nächste Seite ›"
+msgstr "next ›"
 
 msgid "Metadata"
 msgstr "Metadaten"
 
 msgid "« first"
-msgstr "« erste Seite"
+msgstr "« first"
 
 msgid "last »"
-msgstr "letzte Seite »"
+msgstr "last »"
 
 msgid "iFrame"
 msgstr "iFrame"
@@ -20971,6 +20990,9 @@ msgstr "Titel: @title"
 msgid "The user ID of the author of the current revision."
 msgstr "Die Benutzerkennung des Autoren der aktuellen Überarbeitung."
 
+msgid "Paragraph type"
+msgstr "Abschnitt-Typ"
+
 msgid ""
 "Label to appear as title on the button as \"Add new [title]\", this "
 "label is translatable"
@@ -21603,10 +21625,11 @@ msgid ""
 "<h2>Thank you for accepting cookies</h2><p>You can now hide this "
 "message or find out more about cookies.</p>"
 msgstr ""
-"<h2>Thank you for accepting cookies</h2>\r\n"
+"<h2>Vielen Dank für die Annahme von Cookies</h2>\r\n"
 "\r\n"
-"<p>You can now hide "
-"this message or find out more about cookies.</p>\r\n"
+"<p>Sie "
+"können diese Nachricht jetzt verstecken oder mehr über Cookies "
+"erfahren.</p>\r\n"
 ""
 
 msgid ""
@@ -21614,12 +21637,11 @@ msgid ""
 "experience</h2><p>By clicking any link on this page you are giving "
 "your consent for us to set cookies.</p>"
 msgstr ""
-"<h2>We use cookies on this site to enhance your user "
-"experience</h2>\r\n"
-"\r\n"
-"<p>By clicking any link on this page you are "
-"giving your consent for us to set cookies.</p>\r\n"
-""
+"<h2>Dieser Internetauftritt verwendet Cookies, um die "
+"Benutzererfahrung auf unseren Seiten zu verbessern.</h2>"
+
+msgid "[current-page:title] | [site:name]"
+msgstr "dev.degov.local | [current-page:title] | [site:name]"
 
 msgid "Password Policy"
 msgstr "Passwort Regel"
@@ -22135,6 +22157,309 @@ msgstr "Es sind keine Inhaltstypen vorhanden."
 msgid "@title"
 msgstr "@title"
 
+msgid "OK, I agree"
+msgstr "OK"
+
+msgid "No, give me more info"
+msgstr "Nein, geben Sie mir mehr Informationen"
+
+msgid "A locally hosted document, such a PDF."
+msgstr "Ein lokal gehostetet Dokument z.B. ein PDF Dokument."
+
+msgid "A video hosted by YouTube, Vimeo, or some other provider."
+msgstr "A video hosted by YouTube, Vimeo, or some other provider."
+
+msgid "Add and configure"
+msgstr "Hinzufügen und konfigurieren"
+
+msgid "Save and add"
+msgstr "Speichern und hinzufügen"
+
+msgid "Username or email address"
+msgstr "Benutzername oder E-Mail Adresse"
+
+msgid ""
+"Password reset instructions will be sent to your registered email "
+"address."
+msgstr ""
+"Informationen, wie Sie Ihr Passwort zurücksetzen, werden an Ihre "
+"registrierte E-Mail-Adresse gesendet."
+
+msgid ""
+"Unrecognized username or password. <a href=\":password\">Forgot your "
+"password?</a>"
+msgstr ""
+"Unbekannter Benutzername oder Passwort. Haben Sie Ihr <a "
+"href=\":password\">Passwort vergessen?</a>"
+
+msgid "User interface translation"
+msgstr "Übersetzung der Benutzeroberfläche"
+
+msgid "Scheduled Updates Overview"
+msgstr "Geplante Aufgaben - Übersicht"
+
+msgid "Select and configure themes."
+msgstr "Auswählen und Konfiguration Themen"
+
+msgid "Manage Scheduled Update Types and Run Scheduled Updates"
+msgstr "Geplante Aufgaben verwalten und ausführen"
+
+msgid "Run Scheduled Updates"
+msgstr "Geplante Aufgaben ausführen"
+
+msgid "Scheduled Updates Settings"
+msgstr "Geplante Aufgaben - Einstellungen"
+
+msgid ""
+"Each menu has a corresponding block that is managed on the <a "
+"href=\":blocks\">Block layout page</a>."
+msgstr ""
+"Jedes Menü hat einen zugehörigen Block, der über das <a "
+"href=\":blocks\">Blocklayout</a> konfiguriert werden kann"
+
+msgid "Administrative summary"
+msgstr "Beschreibung"
+
+msgid "Promotion options"
+msgstr "Veröffentlichungsoptionen"
+
+msgid "No @title added yet."
+msgstr "Bisher keinen @title hinzugefügt."
+
+msgid "- any -"
+msgstr "- beliebig -"
+
+msgid "Apply to selected items"
+msgstr "Auf ausgewählte Elemente anwenden"
+
+msgid "Scheduled Updates"
+msgstr "Geplante Aufgaben"
+
+msgid "The name of this media."
+msgstr "Der Name dies Mediaelements"
+
+msgid ""
+"<ul>\n"
+"        <li>Check if your spelling is correct.</li>\n"
+"        "
+"<li>Remove quotes around phrases to search for each word individually. "
+"<em>bike shed</em> will often show more results than <em>&quot;bike "
+"shed&quot;</em>.</li>\n"
+"        <li>Consider loosening your query with "
+"<em>OR</em>. <em>bike OR shed</em> will often show more results than "
+"<em>bike shed</em>.</li>\n"
+"        </ul>"
+msgstr ""
+"<ul> <li>Überprüfen Sie, ob die Schreibweise korrekt ist.</li> "
+"<li>Entfernen Sie Anführungszeichen um Ausdrücke, damit nach jedem "
+"Wort einzeln gesucht wird. <em>Fahrrad Schuppen</em> wird oft mehr "
+"Ergebnisse als <em>&quot;Fahrrad Schuppen&quot;</em> liefern.</li> "
+"<li>Erwägen Sie, Ihre Abfrage mit <em>OR</em> zu lösen. <em>Fahrrad "
+"OR Schuppen</em> zeigt oft mehr Ergebnisse als <em>Fahrrad "
+"Schuppen</em>.</li> </ul> "
+
+msgid "Save and publish"
+msgstr "Speichern und veröffentlichen"
+
+msgid "Google+"
+msgstr "Google+"
+
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+msgid "Tumblr"
+msgstr "Tumblr"
+
+msgid "E-Mail"
+msgstr "E-Mail"
+
+msgid "Orientation"
+msgstr "Orientierung"
+
+msgid "Opens in new window"
+msgstr "In einem neuen Fenster öffnen"
+
+msgid "No content selected."
+msgstr "Es wurden keine Inhalte ausgewählt."
+
+msgid "Preferred admin language code"
+msgstr "Bevorzugtes admin Sprachkürzel"
+
+msgid "Confirmation for [simplenews-newsletter:name] from [site:name]"
+msgstr "Bestätigung für [simplenews-newsletter:name] aus [site:name]"
+
+msgid ""
+"We have received a request to subscribe [simplenews-subscriber:mail] "
+"to the [simplenews-newsletter:name] newsletter on [site:name] website "
+"at [site:url]. To confirm please use the link below. \n"
+"\n"
+" "
+"[simplenews-subscriber:subscribe-url]"
+msgstr ""
+"Wir haben einen Auftrag bekommen, um  diese Adresse "
+"[simplenews-subscriber:mail] auf [simplenews-newsletter:name] "
+"newsletter bei [site:name] zu abonnieren. Benutzen Sie den Link unten, "
+"um es zu bestätigen.\r\n"
+"\r\n"
+" [simplenews-subscriber:subscribe-url]"
+
+msgid ""
+"We have received a request to subscribe [simplenews-subscriber:mail] "
+"to the [simplenews-newsletter:name]  newsletter on [site:name] website "
+"at [site:url]. However, this email is already subscribed to this "
+"newsletter. If you intended to unsubscribe please visit our site: "
+"[site:url]"
+msgstr ""
+"Wir haben einen Auftrag bekommen, um  diese Adresse "
+"[simplenews-subscriber:mail] auf [simplenews-newsletter:name] "
+"newsletter bei [site:name] zu abonnieren. Allerdings ist diese "
+"E-Mail-Adresse bereits abonniert. \r\n"
+"Wenn Sie Ihr Abonnement "
+"abbestellen möchten, besuchen Sie bitte unsere Seite: [site:url]"
+
+msgid ""
+"We have received a request to remove the [simplenews-subscriber:mail] "
+"from the [simplenews-newsletter:name] mailing list on [site:name] "
+"website at [site:url]. To confirm please use the link "
+"below.\r\n"
+"\r\n"
+"[simplenews-subscriber:unsubscribe-url]"
+msgstr ""
+"Wir haben einen Auftrag bekommen, um  diese Adresse "
+"[simplenews-subscriber:mail] auf [simplenews-newsletter:name] "
+"newsletter bei [site:name] zu abzubestellen. Benutzen Sie den Link "
+"unten, um es zu "
+"bestätigen.\r\n"
+"\r\n"
+"[simplenews-subscriber:unsubscribe-url]"
+
+msgid ""
+"We have received a request to remove the [simplenews-subscriber:mail] "
+"from the [simplenews-newsletter:name] mailing list on [site:name] "
+"website at [site:url]. However, this email is not subscribed to this "
+"mailing list. If you intended to subscribe please visit our site at "
+"[site:url]"
+msgstr ""
+"Wir haben einen Auftrag bekommen, um  das Abonnement der Adresse "
+"[simplenews-subscriber:mail] auf [simplenews-newsletter:name] "
+"newsletter bei [site:name] abzubestellen. Allerdings ist diese "
+"E-Mail-Adresse noch nicht abonniert.\r\n"
+"Wenn Sie sich abonnieren "
+"möchten, besuchen Sie unsere Seite: [site:url]"
+
+msgid "Confirmation for [site:name]"
+msgstr "Bestätigung für [site:name]"
+
+msgid ""
+"We have received a request for the following subscription changes for "
+"[simplenews-subscriber:mail] at "
+"[site:url]:\r\n"
+"\r\n"
+"[changes-list]\r\n"
+"\r\n"
+"To confirm please use the "
+"link below.\r\n"
+"\r\n"
+"[simplenews-subscriber:combined-url]"
+msgstr ""
+"Wir haben einen Auftrag, um das Abonnement für  "
+"[simplenews-subscriber:mail] auf [site:url] zu verändern. Die "
+"Veränderungen sind:\r\n"
+"\r\n"
+"[changes-list]\r\n"
+"\r\n"
+"Benutzen Sie den "
+"Link unten, um es zu "
+"bestätigen.\r\n"
+"\r\n"
+"[simplenews-subscriber:combined-url]"
+
+msgid ""
+"We have received a request for the following subscription changes for "
+"[simplenews-subscriber:mail] at "
+"[site:url]:\r\n"
+"\r\n"
+"[changes-list]\r\n"
+"\r\n"
+"No confirmation necessary "
+"because all requested changes equal the current state."
+msgstr ""
+"Wir haben eine Auftrag, um das Abonnement für  "
+"[simplenews-subscriber:mail] auf [site:url] zu verändern. Die "
+"Veränderungen sind: \r\n"
+"\r\n"
+"[changes-list]\r\n"
+"\r\n"
+"Eine "
+"Bestätiguns ist nicht benötigt, weil die gewunschten Anpassungen den "
+"aktuell Status nicht verändern."
+
+msgid "Subscribe to [simplenews-newsletter:name]"
+msgstr "Abonnieren auf [simplenews-newsletter:name]"
+
+msgid "Already subscribed to [simplenews-newsletter:name]"
+msgstr "Bereits abonniert auf [simplenews-newsletter:name]"
+
+msgid "Unsubscribe from [simplenews-newsletter:name]"
+msgstr "Abonnement vom [simplenews-newsletter:name] abbestellen"
+
+msgid "Already unsubscribed from [simplenews-newsletter:name]"
+msgstr "Das Abonnement auf [simplenews-newsletter:name] ist nun abbestellt"
+
+msgid "Subscribers"
+msgstr "Abonnenten"
+
+msgid "Subscriber ID"
+msgstr "Abonnent-ID"
+
+msgid "Unsubscribe URL"
+msgstr "Abmelde-URL"
+
+msgid "Subscriber email"
+msgstr "Abonnent E-Mail"
+
+msgid "Subscriber settings"
+msgstr "Abonnent Einstellungen"
+
+msgid "The subscriber's email address."
+msgstr "E-Mail Adresse des Abonnenten."
+
+msgid "Subscribe"
+msgstr "Abonnieren"
+
+msgid "Search for @keywords"
+msgstr "Suche nach @keywords"
+
+msgid "You have been subscribed."
+msgstr "Ihre Newsletter Anmeldung war erfolgreich."
+
+msgid "Unsubscribe"
+msgstr "Abonnement beenden"
+
+msgid "You have been unsubscribed."
+msgstr "Sie wurden erfolgreich abgemeldet."
+
+msgid "The message language code."
+msgstr "Nachrichten Sprachkürzel"
+
+msgid "Send yourself a copy"
+msgstr "Eine Nachrichtenkopie an mich senden"
+
+msgid "The entities of that will be updated."
+msgstr "Die Elemente dieses Types werden aktualisiert."
+
+msgid ""
+"Scheduled Updates Types define the updates available on your site.  "
+"Each type targets specified entity type such as nodes or users.  Each "
+"type also specifies which field or fields are available on the updates "
+"of that type."
+msgstr ""
+"Geplante Aufgaben-Typen definieren die auf Ihrer Website zur "
+"Verfügung stehen. Jeder Typ zielt auf einen bestimmten Entitätstyp "
+"wie z.B. Knoten oder Benutzer. Jeder Typ gibt auch an, welches Feld "
+"oder welche Felder auf den Aktualisierungen dieses Typs verfügbar "
+"sind."
+
 msgid "Mark old nodes as read"
 msgstr "Alte Beiträge als gelesen markieren"
 
@@ -22229,13 +22554,82 @@ msgstr "Cron-Job aktivieren"
 msgid "Disable cron job"
 msgstr "Cron-Job deaktivieren"
 
-msgid "Username or email address"
-msgstr "Benutzername oder E-Mail Adresse"
+msgid "Add @label"
+msgstr "@label hinzufügen"
+
+msgid "Add newsletter"
+msgstr "Newsletter hinzufügen"
+
+msgid "Subscribe confirmation"
+msgstr "Anmeldung bestätigen"
+
+msgid "Unsubscribe confirmation"
+msgstr "Abmeldung bestätigen"
+
+msgid "With selection"
+msgstr "Für die Auswahl"
+
+msgid "Newsletter issues"
+msgstr "Newsletter Ausgaben"
+
+msgid "Skip confirmation and proceed."
+msgstr "Bestätigung überspringen und fortfahren"
+
+msgid "Delete message"
+msgstr "Nachricht löschen"
+
+msgid "Clone"
+msgstr "Duplizieren"
+
+msgid "Message ID"
+msgstr "Nachrichten-ID"
+
+msgid "Unconfirmed"
+msgstr "Unbestätigt"
+
+msgid "25"
+msgstr "587"
 
 msgid ""
-"Password reset instructions will be sent to your registered email "
-"address."
+"Use language codes as <a href=\":w3ctags\">defined by the W3C</a> for "
+"interoperability. <em>Examples: \"en\", \"en-gb\" and "
+"\"zh-hant\".</em>"
 msgstr ""
-"Informationen wie Sie Ihr Passwort zurücksetzten werden an Ihre "
-"registrierte E-Mail-Adresse gesendet."
+"Setzen Sie ein Spachkürzel wie folgt <a href=\".w3ctags\">definiert "
+"durch W3C</a> für Interoperabilität. <em>Beispiel: \"en\", \"en-gb\" "
+"und \"zh-hant\".</em>"
+
+msgid ""
+"Add a language to be supported by your site. If your desired language "
+"is not available, pick <em>Custom language...</em> at the end and "
+"provide a language code and other details manually."
+msgstr ""
+"Fügen Sie eine Sprache hinzu, die Ihre Webseite unterstützt. Wenn "
+"ihre bevorzugte Sprache nicht verfügbar ist, wählen Sie am Ende "
+"<em>benutzerdefinierte Sprache...</em> und vergeben Sie einen "
+"Sprachkürzel und andere Details manuell."
+
+msgid "A comma-separated list of language codes"
+msgstr "durch Komma getrennte Liste von Sparchkürzeln"
+
+msgid "Content title"
+msgstr "Inhaltstitel"
+
+msgid "Youtube"
+msgstr "Youtube"
+
+msgid "Not installed."
+msgstr "Nicht installiert."
+
+msgid "Platform"
+msgstr "Plattform"
+
+msgid "SlideShare"
+msgstr "SlideShare"
+
+msgid "Open in the current window (_self)"
+msgstr "Im aktuellen Fenster öffnen"
+
+msgid "- Select a view -"
+msgstr "- Einen View aussuchen -"
 
