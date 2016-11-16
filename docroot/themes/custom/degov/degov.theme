@@ -70,14 +70,6 @@ function degov_preprocess_node(&$vars) {
         $vars['attributes']['class'][] = 'article-color-' . $color;
       }
     }
-    elseif ($node->getType() == 'next_page') {
-      if (!empty($node->get('field_next_page_color')->get(0))) {
-        $color = $node->get('field_next_page_color')
-                      ->get(0)
-                      ->getValue()['value'];
-        $vars['attributes']['class'][] = 'article-color-' . $color;
-      }
-    }
   }
 }
 
