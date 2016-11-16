@@ -38,3 +38,31 @@
     }
   }
 }
+
+// Slick arrows are disabled, but if they are enabled these are the styles
+// Styles for slick slider
+.slick-arrow {
+  background: $color-white-transparent;
+  &:hover,
+  &:focus,
+  &:active {
+    background: $gray-light;
+  }
+  &.slick-next {
+    &:before {
+      content: "\f105";
+    }
+  }
+  &.slick-prev {
+    &:before {
+      content: "\f104";
+    }
+  }
+  &.slick-next, &.slick-prev {
+    &:before {
+      font-size: $font-size-h3;
+      color: $color-blue;
+      text-shadow: none;
+    }
+  }
+}

@@ -106,7 +106,14 @@ const PhotoSwipeUiDefault = require('photoswipe/dist/photoswipe-ui-default');
   Drupal.behaviors.sliderParagraph = {
     attach: function(context, settings) {
       $(context).find('.banner-wrapper').once('slider-paragraph-frontpage').each(function() {
-        $(this).slick();
+        var $slider = $(this);
+        $slider.slick({arrows: false});
+        $slider.find('.slider-prev').click(function(){
+          $slider.slick('slickPrev');
+        });
+        $slider.find('.slider-next').click(function(){
+          $slider.slick('slickNext');
+        });
       });
     }
   };
