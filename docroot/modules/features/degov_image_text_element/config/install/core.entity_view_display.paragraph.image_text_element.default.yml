@@ -24,8 +24,8 @@ content:
     weight: 0
     label: hidden
     settings:
-      link: true
-      view_mode: default
+      view_mode: teaser_image
+      link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
   field_image_text_element_text:
