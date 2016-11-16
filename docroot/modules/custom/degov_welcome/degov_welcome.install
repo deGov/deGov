@@ -36,7 +36,7 @@ function degov_welcome_install() {
   $values = array(
     'id' => 'degov_views_block__subpages_teaserview_block_section_page',
     'plugin' => 'views_block:subpages_teaserview-block_section_page',
-    'region' => 'content',
+    'region' => 'footer',
     'settings' => array(
       'id' => 'views_block:subpages_teaserview-block_section_page',
       'label' => 'Unterseiten Teaseransicht: Bereichsseiten',
@@ -56,7 +56,7 @@ function degov_welcome_install() {
   $values = array(
     'id' => 'degov_views_block__subpages_teaserview_block_article_page',
     'plugin' => 'views_block:subpages_teaserview-block_article_page',
-    'region' => 'content',
+    'region' => 'footer',
     'settings' => array(
       'id' => 'views_block:subpages_teaserview-block_article_page',
       'label' => 'Unterseiten Teaseransicht: Inhaltsseiten',
@@ -76,7 +76,7 @@ function degov_welcome_install() {
   $values = array(
     'id' => 'degov_views_block__subpages_teaserview_block_blogarticle_page',
     'plugin' => 'views_block:subpages_teaserview-block_blogarticle_page',
-    'region' => 'content',
+    'region' => 'footer',
     'settings' => array(
       'id' => 'views_block:subpages_teaserview-block_blogarticle_page',
       'label' => 'Unterseiten Teaseransicht: Blogseiten',
@@ -96,7 +96,7 @@ function degov_welcome_install() {
   $values = array(
     'id' => 'degov_views_block__subpages_teaserview_block_event_page',
     'plugin' => 'views_block:subpages_teaserview-block_event_page',
-    'region' => 'content',
+    'region' => 'footer',
     'settings' => array(
       'id' => 'views_block:subpages_teaserview-block_event_page',
       'label' => 'Unterseiten Teaseransicht: Veranstaltungen',
@@ -112,7 +112,14 @@ function degov_welcome_install() {
   $block = \Drupal\block\Entity\Block::create($values);
   $block->save();
 
-  // Block Values
+  // Block Visibility
+  $visibility = null;
+  $visibility['node_type'] = array(
+    'id' => 'node_type',
+    'bundles' => array('event_page' => 'event_page', 'blogarticle' => 'blogarticle', 'article_page' => 'article_page'),
+    'context_mapping' => array('node' => '@node.node_route_context:node'),
+  );
+
   // Add Block
   $values = array(
     'id' => 'degov_views_block__related_content_block_1',
