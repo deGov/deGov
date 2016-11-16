@@ -75,9 +75,10 @@
 			width: 100%;
 			background: $color-white-transparent;
 			left: 0;
-			bottom: $vertical-gutter-width / 2;
+			//bottom: $vertical-gutter-width / 2;
+			bottom: -$vertical-gutter-width;
 			font-size: $font-size-h1;
-			padding: 0 0.5em;
+			padding: 0.5em;
 		}
 		.slider-text {
 			float: left;
@@ -108,7 +109,7 @@
 		}
 		@include smaller-than($screen-tablet) {
 			.slider-text a {
-				font-size: $font-size-h2;
+				font-size: $font-size-h3;
 			}
 		}
 	}

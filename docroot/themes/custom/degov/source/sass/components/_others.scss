@@ -82,6 +82,11 @@
   }
 }
 
+// We want to move some content outside of the slider, therefore we change the overflow setting
+.slick-list {
+  overflow: visible;
+}
+
 // Scroll to top
 .scroll-to-top {
   position: fixed;
