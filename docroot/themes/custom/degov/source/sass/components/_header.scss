@@ -23,9 +23,11 @@
 .navbar-branding {
 	float: left;
 	.logo img {
-		height: 100%;
+		max-width: 120px;
+		height: auto;
+		/*height: 100%;
 		max-height: floor($navbar-height*0.6);
-		width: auto;
+		width: auto;*/
 		margin-top: floor($navbar-height*0.225);
 	}
 }
@@ -120,6 +122,7 @@
 	}
 	.navbar-branding .logo img {
 		margin-top: floor($navbar-height*0.75);
+		max-width: inherit;
 		max-height: $navbar-height;
 		transition: max-height 200ms ease-in-out, margin-top 200ms ease-in-out;
 	}
