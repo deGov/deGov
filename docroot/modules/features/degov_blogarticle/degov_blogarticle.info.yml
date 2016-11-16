@@ -3,6 +3,8 @@ type: module
 core: 8.x
 dependencies:
   - datetime
+  - degov_image_element
+  - degov_image_text_element
   - degov_media_image
   - degov_section_page
   - degov_tax_blog
