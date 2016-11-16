@@ -135,7 +135,6 @@
 }
 
 @mixin content-box($color: $color-blue) {
-  margin: $vertical-gutter-width 0;
   padding: $vertical-gutter-width/2 $grid-gutter-width/2;
   background-color: $color-white;
   border-top: $title-underline-height solid $color;
