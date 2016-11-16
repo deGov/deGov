@@ -1,4 +1,4 @@
-langcode: de
+langcode: en
 status: true
 dependencies:
   module:
@@ -6,8 +6,10 @@ dependencies:
 id: paragraph.field_slider_element_text
 field_name: field_slider_element_text
 entity_type: paragraph
-type: string_long
+type: string
 settings:
+  max_length: 255
+  is_ascii: false
   case_sensitive: false
 module: core
 locked: false
