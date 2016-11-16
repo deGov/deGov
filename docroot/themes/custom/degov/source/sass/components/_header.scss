@@ -43,6 +43,11 @@
 			text-decoration: none;
 		}
 	}
+	.simple-lang {
+		@include smaller-than($screen-tablet) {
+			display: none;
+		}
+	}
 }
 .navbar-collapse {
 	clear: both;

@@ -85,9 +85,9 @@
 				color: $text-color;
 			}
 		}
-		@include larger-than($screen-sm-min) {
+		@include smaller-than($screen-tablet) {
 			> a {
-				//bottom: 5em;
+				font-size: $font-size-h2;
 			}
 		}
 	}
