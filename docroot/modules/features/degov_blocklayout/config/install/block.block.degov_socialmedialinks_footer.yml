@@ -1,0 +1,76 @@
+langcode: de
+status: true
+dependencies:
+  module:
+    - social_media_links
+  theme:
+    - degov
+id: degov_socialmedialinks_footer
+theme: degov
+region: page_outro
+weight: 0
+provider: null
+plugin: social_media_links_block
+settings:
+  id: social_media_links_block
+  label: 'Social Media Links - Footer'
+  provider: social_media_links
+  label_display: '0'
+  platforms:
+    contact:
+      value: ''
+      weight: '-10'
+    drupal:
+      value: ''
+      weight: '-9'
+    email:
+      value: ''
+      weight: '-8'
+    facebook:
+      value: ''
+      weight: '-7'
+    googleplus:
+      value: ''
+      weight: '-6'
+    instagram:
+      value: ''
+      weight: '-5'
+    linkedin:
+      value: ''
+      weight: '-4'
+    pinterest:
+      value: ''
+      weight: '-3'
+    rss:
+      value: rss.xml
+      weight: '-2'
+    slideshare:
+      value: ''
+      weight: '-1'
+    tumblr:
+      value: ''
+      weight: '0'
+    twitter:
+      value: ''
+      weight: '1'
+    vimeo:
+      value: ''
+      weight: '2'
+    youtube:
+      value: ''
+      weight: '3'
+    youtube_channel:
+      value: ''
+      weight: '4'
+  appearance:
+    orientation: h
+    show_name: 0
+  link_attributes:
+    target: '<none>'
+    rel: '<none>'
+  iconset:
+    style: 'fontawesome:2x'
+    installed_iconsets:
+      fontawesome:
+        examples: ''
+visibility: {  }

@@ -29,9 +29,10 @@ content:
   field_slider_element_text:
     weight: 2
     label: hidden
-    settings: {  }
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
-    type: basic_string
+    type: string
 hidden:
   created: true
   uid: true
