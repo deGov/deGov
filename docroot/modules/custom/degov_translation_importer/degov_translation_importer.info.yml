@@ -8,3 +8,4 @@ package: deGov
 core: 8.x
 dependencies:
   - node
+  - locale
