@@ -50,10 +50,6 @@ content:
     settings:
       link_to_entity: true
     third_party_settings: {  }
-  shariff_field:
-    weight: 5
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   field_blogarticle_datetime: true
   field_blogarticle_image: true
@@ -64,4 +60,5 @@ hidden:
   field_blogarticle_text: true
   langcode: true
   links: true
+  shariff_field: true
   workbench_moderation_control: true
