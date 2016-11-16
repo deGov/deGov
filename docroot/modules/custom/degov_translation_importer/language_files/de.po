@@ -21641,7 +21641,7 @@ msgstr ""
 "Benutzererfahrung auf unseren Seiten zu verbessern.</h2>"
 
 msgid "[current-page:title] | [site:name]"
-msgstr "dev.degov.local | [current-page:title] | [site:name]"
+msgstr "[current-page:title] | [site:name]"
 
 msgid "Password Policy"
 msgstr "Passwort Regel"
