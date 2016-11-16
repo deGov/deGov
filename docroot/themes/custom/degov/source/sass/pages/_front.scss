@@ -30,3 +30,19 @@
     }
   }
 }
+
+.slick-arrow {
+  background: $color-white-transparent;
+  &:hover,
+  &:focus,
+  &:active {
+    background: $gray-light;
+  }
+  &.slick-next, &.slick-prev {
+    &:before {
+      font-size: $font-size-h3;
+      color: $color-blue;
+      text-shadow: none;
+    }
+  }
+}
