@@ -72,7 +72,6 @@
 		@include make-xs-column(12);
 		@include make-sm-column(6);
 		> article {
-			@include content-box();
 			h2 {
 				font-size: $font-size-h3;
 				margin-top: 0;

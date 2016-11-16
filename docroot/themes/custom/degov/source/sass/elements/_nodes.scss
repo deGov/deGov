@@ -35,6 +35,10 @@ article.full {
   }
 }
 
+article.teaser {
+  @include content-box();
+}
+
 // Format teaser title
 article.teaser .content .field--type-string h2 {
   &::after {
