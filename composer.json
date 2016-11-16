@@ -46,7 +46,6 @@
         "drupal/smtp": "8.1.x-dev",
         "drupal/social_media_links": "^8.2",
         "drupal/spamspan": "8.x-1.x-dev",
-        "drupal/back_to_top": "8.x",
         "drupal/content_access": "8.x-1.x-dev",
         "drupal/entity_browser": "8.x"
     },
