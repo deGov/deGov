@@ -115,6 +115,9 @@
             },
             "drupal/entity_browser": {
                 "Undefined index: view_mode in RenderedEntity::settingsForm()": "https://www.drupal.org/files/issues/undefined_index-2824686-2.patch"
+            },
+            "drupal/core": {
+                "Redirect to install.php on empty DB": "https://www.drupal.org/files/issues/728702-163.patch"
             }
         },
         "enable-patching": true
