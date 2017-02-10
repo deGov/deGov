@@ -11,7 +11,7 @@
 # Ignore Composer-managed dependencies.
 vendor/
 
-#IDE files
+# Ignore IDE files
 .idea
 
 # OS Files
