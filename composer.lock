@@ -313,7 +313,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/deGov/degov_theme.git",
-                "reference": "ee209a818c279c2f489df162370d60ecd039b299"
+                "reference": "3a274971669adc07ac5ec45673900d02fd9ed1bb"
             },
             "dist": {
                 "type": "vcs",
