@@ -47,12 +47,27 @@
         "drupal/spamspan": "8.x-1.x-dev",
         "drupal/content_access": "8.x-1.x-dev",
         "drupal/entity_browser": "8.x",
-        "drupal/smtp": "8.x-1.x-dev"
+        "drupal/smtp": "8.x-1.x-dev",
+        "degov/features": "0.1",
+        "degov/modules": "0.1",
+        "degov/degov_theme": "0.1"
     },
     "repositories": {
         "drupal": {
             "type": "composer",
             "url": "https://packagist.drupal-composer.org"
+        },
+        "degovmodules": {
+            "type": "vcs",
+            "url": "git@github.com:deGov/modules.git"
+        },
+        "degovfeatures": {
+            "type": "vcs",
+            "url": "git@github.com:deGov/features.git"
+        },
+        "degovtheme": {
+            "type": "vcs",
+            "url": "git@github.com:deGov/degov_theme.git"
         },
         "shariff": {
             "type": "package",
@@ -92,6 +107,12 @@
             ],
             "docroot/libraries/{$name}": [
                 "type:drupal-library"
+            ],
+            "docroot/modules/degov/modules/": [
+                "degov/modules"
+            ],
+            "docroot/modules/degov/features/": [
+                "degov/features"
             ],
             "docroot/modules/contrib/{$name}": [
                 "type:drupal-module"
