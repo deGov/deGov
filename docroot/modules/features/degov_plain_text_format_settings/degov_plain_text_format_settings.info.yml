@@ -1,6 +1,0 @@
-name: 'deGov - Plain Text Format - Settings'
-type: module
-core: 8.x
-dependencies:
-  - filter
-  - spamspan

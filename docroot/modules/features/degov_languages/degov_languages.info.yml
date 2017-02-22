@@ -1,5 +1,0 @@
-name: 'deGov - Sprachen'
-type: module
-core: 8.x
-dependencies:
-  - language

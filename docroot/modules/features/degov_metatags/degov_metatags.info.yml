@@ -1,6 +1,0 @@
-name: 'deGov - Metatags'
-type: module
-core: 8.x
-dependencies:
-  - metatag
-description: 'Generiert automatisch suchmaschinenoptimierte Meta Tags für Inhalte.'

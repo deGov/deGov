@@ -1,7 +1,0 @@
-name: 'deGov - Benutzerrollen'
-type: module
-core: 8.x
-dependencies:
-  - user
-  - workbench_moderation
-description: 'Benutzerrollen für das deGov Redaktionssystem.'

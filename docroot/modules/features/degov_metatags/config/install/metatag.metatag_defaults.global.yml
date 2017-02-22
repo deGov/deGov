@@ -1,8 +1,0 @@
-langcode: de
-status: true
-dependencies: {  }
-id: global
-label: Global
-tags:
-  robots: 'index, follow'
-  title: '[current-page:title] | [site:name]'

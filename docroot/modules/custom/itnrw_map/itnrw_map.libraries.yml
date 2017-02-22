@@ -1,7 +1,0 @@
-itnrw_map_loader:
-  version: VERSION
-  js:
-    js/itnrw_map.js: {}
-  dependencies:
-    - core/jquery
-    - core/drupalSettings

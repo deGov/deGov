@@ -1,9 +1,0 @@
-name: 'deGov - Frontpage/RSS'
-description: 'Stellt die RSS Feed Ansichten bereit.'
-type: module
-core: 8.x
-dependencies:
-  - degov_event_page
-  - node
-  - user
-  - views
