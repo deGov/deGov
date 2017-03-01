@@ -48,9 +48,9 @@
         "drupal/content_access": "8.x-1.x-dev",
         "drupal/entity_browser": "8.x",
         "drupal/smtp": "8.x-1.x-dev",
-        "degov/features": "0.1",
-        "degov/modules": "0.1",
-        "degov/degov_theme": "0.1"
+        "degov/features": "~0.1",
+        "degov/modules": "~0.1",
+        "degov/degov_theme": "~0.1"
     },
     "repositories": {
         "drupal": {
