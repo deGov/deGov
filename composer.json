@@ -19,43 +19,43 @@
     "require": {
         "composer/installers": "^1.0",
         "drupal-composer/drupal-scaffold": "^2.0.0",
-        "cweagans/composer-patches": "1.5.0",
-        "drupal/lightning": "^8.1.0",
-        "drupal/bootstrap": "8.x",
-        "drupal/devel": "8.x-1.x-dev",
-        "drupal/eu_cookie_compliance": "8.*",
-        "drupal/simple_sitemap": "8.*",
-        "drupal/simple_gmap": "8.*",
-        "drupal/easy_breadcrumb": "8.*",
-        "drupal/piwik": "8.*",
-        "drupal/open_readspeaker": "8.*",
-        "drupal/twitter_block": "8.x-3.x-dev",
-        "drupal/entity_reference_revisions": "8.*",
-        "drupal/paragraphs": "8.*",
-        "drupal/admin_toolbar": "^8.1",
-        "drupal/password_policy": "8.x-3.x-dev",
-        "drupal/sitemap": "8.x-1.x-dev",
-        "drupal/shariff": "8.x-1.x-dev",
-        "drupal/views_database_connector": "8.*",
-        "drupal/search404": "8.x-1.x-dev",
-        "drupal/elasticsearch_connector": "8.x",
-        "drupal/viewsreference": "8.x",
-        "drupal/simplenews": "8.x-1.x-dev",
-        "drupal/ultimate_cron": "8.x-2.x-dev",
-        "drupal/contact_storage": "8.x",
-        "drupal/social_media_links": "^8.2",
-        "drupal/spamspan": "8.x-1.x-dev",
-        "drupal/content_access": "8.x-1.x-dev",
-        "drupal/entity_browser": "8.x",
-        "drupal/smtp": "8.x-1.x-dev",
-        "degov/features": "~0.1",
-        "degov/modules": "~0.1",
-        "degov/degov_theme": "~0.1"
+        "cweagans/composer-patches": "^1.5",
+        "drupal/bootstrap": "^3.3",
+        "drupal/devel": "^1.0@RC",
+        "drupal/eu_cookie_compliance": "^1.0@beta",
+        "drupal/simple_sitemap": "^2.9",
+        "drupal/simple_gmap": "^1.2",
+        "drupal/easy_breadcrumb": "^1.6",
+        "drupal/piwik": "^1.1",
+        "drupal/open_readspeaker": "^1.3",
+        "drupal/twitter_block": "^2.1",
+        "drupal/entity_reference_revisions": "^1.2",
+        "drupal/paragraphs": "^1.1",
+        "drupal/admin_toolbar": "^1.19",
+        "drupal/password_policy": "^3.0@alpha",
+        "drupal/sitemap": "^1.3",
+        "drupal/shariff": "^1.1",
+        "drupal/views_database_connector": "^1.0",
+        "drupal/search404": "^1.0@beta",
+        "drupal/elasticsearch_connector": "5.x-dev",
+        "drupal/viewsreference": "^1.0@alpha",
+        "drupal/simplenews": "^1.0@alpha",
+        "drupal/ultimate_cron": "^2.0@alpha",
+        "drupal/contact_storage": "^1.0@beta",
+        "drupal/social_media_links": "^2.2",
+        "drupal/spamspan": "1.x-dev",
+        "drupal/content_access": "1.x-dev",
+        "drupal/entity_browser": "^1.0@RC",
+        "drupal/smtp": "^1.0@beta",
+        "degov/features": "dev-master",
+        "degov/modules": "dev-master",
+        "degov/degov_theme": "dev-master",
+        "acquia/lightning": "^2.1"
     },
     "repositories": {
         "drupal": {
             "type": "composer",
-            "url": "https://packagist.drupal-composer.org"
+            "url": "https://packages.drupal.org/8"
         },
         "degovmodules": {
             "type": "vcs",
@@ -127,17 +127,7 @@
                 "type:drupal-drush"
             ]
         },
-        "patches": {
-            "drupal/views_database_connector": {
-                "Not compatible with latest Drupal 8 RC": "https://www.drupal.org/files/issues/views_database_connector-not_compatible_with_latest_d8-2610480-15.patch"
-            },
-            "drupal/entity_browser": {
-                "Undefined index: view_mode in RenderedEntity::settingsForm()": "https://www.drupal.org/files/issues/undefined_index-2824686-2.patch"
-            },
-            "drupal/core": {
-                "Redirect to install.php on empty DB": "https://www.drupal.org/files/issues/728702-163.patch"
-            }
-        },
+        "patches": {},
         "enable-patching": true
     }
 }
