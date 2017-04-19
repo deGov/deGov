@@ -21689,7 +21689,7 @@ msgstr[1] "Das Password muß mindestens @count Sonderzeichen enthalten."
 msgid "Password length must be at least 1 character."
 msgid_plural "Password length must be at least @count characters."
 msgstr[0] "Das Passwort muß aus mindestens 1 Zeichen bestehen."
-msgstr[1] "Das Passwort muß aus mindestens @count characters Zeichen bestehen."
+msgstr[1] "Das Passwort muß aus mindestens @count Zeichen bestehen."
 
 msgid "Password must contain at least 1 uppercase character."
 msgid_plural "Password must contain at least @count uppercase characters."
