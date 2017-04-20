@@ -1,5 +1,8 @@
 name: 'deGov'
 type: profile
+distribution:
+  name: deGov
+  langcode: de
 description: 'Drupal 8 for Government (Drupal 8 für die öffentliche Verwaltung)'
 version: 8.x-dev
 core: '8.x'
@@ -17,6 +20,9 @@ dependencies:
   - social_media_links
   - spamspan
   - viewsreference
+
+# Standard user roles for deGov
+  - degov_userroles
 
 # Password policy with deGov settings
   - password_policy
@@ -48,14 +54,14 @@ dependencies:
 
 # Pathauto with deGov settings
   - pathauto
-#  - degov_pathauto
+  - degov_pathauto
 
 # SEO Modules.
 #  - degov_metatags
 
 # Social media sharing with deGov settings
   - shariff
-#  - degov_shariff_social_share
+  - degov_shariff_social_share
 
 # Cront modules with deGov settings
 # Disabled because broken.
@@ -63,7 +69,7 @@ dependencies:
   - ultimate_cron
 #  - degov_cronconfig
   - scheduled_updates
-#  - degov_scheduled_updates
+  - degov_scheduled_updates
 
 # Contact storage with deGov settings
 # Disabled because broken.
@@ -72,10 +78,7 @@ dependencies:
 #  - degov_contactform
 
 # Default taxonomy
-#  - degov_tags
-
-# Standard user roles for deGov
-#  - degov_userroles
+  - degov_tags
 
 # Content features for deGov
 # Standard paragraphs
