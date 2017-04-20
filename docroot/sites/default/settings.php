@@ -295,7 +295,6 @@ $config_directories = array();
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = 'kWRUfPofKpGjHeFqA4Gropd0h5dL-Ft8F4jGK9dS_eX_ahx2QhxSnsGkbFF48uCXY9BpccFB7g';
 
 /**
  * Deployment identifier.
@@ -749,7 +748,6 @@ $settings['file_scan_ignore_directories'] = [
   'bower_components',
 ];
 
-$settings['install_profile'] = 'lightning';
 $config_directories[CONFIG_SYNC_DIRECTORY] = '../config/sync';
 /**
  * Load local development override configuration, if available.
