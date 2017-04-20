@@ -48,7 +48,6 @@
         "drupal/social_media_links": "^2.2",
         "drupal/spamspan": "1.x-dev",
         "drupal/content_access": "1.x-dev",
-        "drupal/entity_browser": "^1.0@RC",
         "drupal/smtp": "^1.0@beta",
         "degov/features": "dev-master",
         "degov/modules": "dev-master",
