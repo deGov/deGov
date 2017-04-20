@@ -1,27 +1,30 @@
 {
-    "name": "acquia/lightning-project",
-    "description": "Project template for Drupal 8 sites built with the Lightning distribution.",
+    "name": "deGov/deGov",
+    "description": "Drupal 8 for Government (Drupal 8 für die öffentliche Verwaltung)",
     "type": "project",
     "license": "GPL-2.0+",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require-dev": {
-        "behat/behat": "^3.1",
-        "drupal/drupal-extension": "^3.1",
-        "behat/mink": "~1.6",
+        "drupal/drupal-extension": "^3.2",
+        "behat/mink": "~1.7",
         "behat/mink-goutte-driver": "~1.2",
         "jcalderonzumba/gastonjs": "~1.0.2",
-        "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
+        "drupal/coder": "8.*",
         "mikey179/vfsStream": "~1.2",
         "phpunit/phpunit": "~4.8",
-        "symfony/css-selector": "2.7.*"
+        "symfony/css-selector": "~2.8",
+        "behat/behat": "^3.0",
+        "se/selenium-server-standalone": "^2.53",
+        "composer/composer": "^1.3"
     },
     "require": {
         "composer/installers": "^1.0",
         "drupal-composer/drupal-scaffold": "^2.0.0",
-        "cweagans/composer-patches": "^1.5",
+        "cweagans/composer-patches": "^1.6.0",
+        "acquia/lightning": "~2.1.0",
+        "mnsami/composer-custom-directory-installer": "^1.0",
         "drupal/bootstrap": "^3.3",
-        "drupal/devel": "^1.0@RC",
         "drupal/eu_cookie_compliance": "^1.0@beta",
         "drupal/simple_sitemap": "^2.9",
         "drupal/simple_gmap": "^1.2",
@@ -49,8 +52,7 @@
         "drupal/smtp": "^1.0@beta",
         "degov/features": "dev-master",
         "degov/modules": "dev-master",
-        "degov/degov_theme": "dev-master",
-        "acquia/lightning": "^2.1"
+        "degov/degov_theme": "dev-master"
     },
     "repositories": {
         "drupal": {
@@ -58,12 +60,28 @@
             "url": "https://packages.drupal.org/8"
         },
         "degovmodules": {
-            "type": "vcs",
-            "url": "git@github.com:deGov/modules.git"
+            "type": "package",
+            "package": {
+                "name": "degov/modules",
+                "version": "master",
+                "source": {
+                    "url": "https://github.com/deGov/modules.git",
+                    "type": "git",
+                    "reference": "origin/master"
+                }
+            }
         },
         "degovfeatures": {
-            "type": "vcs",
-            "url": "git@github.com:deGov/features.git"
+            "type": "package",
+            "package": {
+                "name": "degov/features",
+                "version": "master",
+                "source": {
+                    "url": "https://github.com/deGov/features.git",
+                    "type": "git",
+                    "reference": "origin/master"
+                }
+            }
         },
         "degovtheme": {
             "type": "vcs",
@@ -84,35 +102,19 @@
     },
     "scripts": {
       "post-install-cmd": [
-        "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-        "Acquia\\Lightning\\ScriptHandler::deployLibraries"
+        "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
       ],
       "post-update-cmd": [
-        "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-        "Acquia\\Lightning\\ScriptHandler::deployLibraries"
+        "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
       ]
     },
     "config": {
         "bin-dir": "bin/"
     },
-    "autoload": {
-        "classmap": [
-          "scripts/ScriptHandler.php"
-        ]
-    },
     "extra": {
         "installer-paths": {
             "docroot/core": [
-                "drupal/core"
-            ],
-            "docroot/libraries/{$name}": [
-                "type:drupal-library"
-            ],
-            "docroot/modules/degov/modules/": [
-                "degov/modules"
-            ],
-            "docroot/modules/degov/features/": [
-                "degov/features"
+                "type:drupal-core"
             ],
             "docroot/modules/contrib/{$name}": [
                 "type:drupal-module"
@@ -125,9 +127,14 @@
             ],
             "drush/contrib/{$name}": [
                 "type:drupal-drush"
+            ],
+            "./docroot/modules/degov/modules/": [
+                "degov/modules"
+            ],
+            "./docroot/modules/degov/features/": [
+                "degov/features"
             ]
         },
-        "patches": {},
         "enable-patching": true
     }
 }
