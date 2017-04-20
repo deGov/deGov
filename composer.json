@@ -128,6 +128,9 @@
             "drush/contrib/{$name}": [
                 "type:drupal-drush"
             ],
+            "docroot/libraries/{$name}": [
+                "type:drupal-library"
+            ],
             "./docroot/modules/degov/modules/": [
                 "degov/modules"
             ],
