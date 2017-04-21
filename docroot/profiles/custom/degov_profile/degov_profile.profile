@@ -36,6 +36,8 @@ function degov_module_setup(&$install_state) {
   $files = system_rebuild_module_data();
 
   $modules = array(
+    'degov_rich_text_format_settings' => 'degov_rich_text_format_settings',
+    'degov_plain_text_format_settings' => 'degov_plain_text_format_settings',
     'degov_address_element' => 'degov_address_element',
     'degov_image_element' => 'degov_image_element',
     'degov_image_text_element' => 'degov_image_text_element',
