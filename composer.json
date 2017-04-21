@@ -49,6 +49,7 @@
         "drupal/spamspan": "1.x-dev",
         "drupal/content_access": "1.x-dev",
         "drupal/smtp": "^1.0@beta",
+        "drupal/webform": "^5.0@beta",
         "degov/features": "8.x-2.x-dev",
         "degov/modules": "8.x-2.x-dev",
         "degov/degov_theme": "8.x-2.x-dev"
