@@ -127,6 +127,7 @@ function degov_profile_form_install_configure_form_alter(&$form, \Drupal\Core\Fo
   $degov_optional_modules = [
     'degov_eu_cookie_compliance' => t('EU cookie compliance'),
     'degov_password_policy' => t('Secure password policy'),
+    'degov_blogarticle' => t('Blog'),
     'degov_sitemap' => t('User sitemap'),
     'degov_shariff_social_share' => t('Social sharing')
   ];
