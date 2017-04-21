@@ -114,14 +114,19 @@ function degov_finalize_setup() {
  */
 function degov_profile_form_install_configure_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
   $degov_optional_modules = [
-    'degov_eu_cookie_compliance' => t('EU Cookie compliance'),
+    'degov_eu_cookie_compliance' => t('EU cookie compliance'),
+    'degov_password_policy' => t('Secure password policy')
   ];
 
   $form['degov']['optional_modules'] = [
     '#type' => 'checkboxes',
     '#title' => t('ENABLE OPTIONAL FEATURES'),
+    '#description' => t('Checked features are recommended.'),
     '#options' => $degov_optional_modules,
-    '#default_value' => [],
+    '#default_value' => [
+      'degov_eu_cookie_compliance',
+      'degov_password_policy'
+    ],
   ];
 
   $form['#submit'][] = 'degov_optional_modules_submit';
