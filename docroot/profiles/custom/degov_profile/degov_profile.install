@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * Install, update and uninstall hooks for the {{ profile }} subprofile.
@@ -9,6 +8,20 @@
  * Implements hook_install().
  */
 function degov_profile_install() {
-  // Add code here perform additional site information tasks, generate sample
-  // content, etc.
+  // Set the deGov theme logo and favicon.
+  $degov_path = drupal_get_path('theme', 'degov_theme');
+  \Drupal::configFactory()
+    ->getEditable('system.theme.global')
+    ->set('logo', [
+      'path' => $degov_path . '/img/logo-degov.png',
+      'url' => '',
+      'use_default' => FALSE,
+    ])
+    ->set('favicon', [
+      'mimetype' => 'image/vnd.microsoft.icon',
+      'path' => $degov_path . '/img/favicon.ico',
+      'url' => '',
+      'use_default' => FALSE,
+    ])
+    ->save(TRUE);
 }
