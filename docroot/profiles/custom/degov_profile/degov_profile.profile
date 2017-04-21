@@ -122,6 +122,8 @@ function degov_finalize_setup() {
  * Implements hook_form_FORM_ID_alter().
  */
 function degov_profile_form_install_configure_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  drupal_get_messages('status', TRUE);
+
   $degov_optional_modules = [
     'degov_eu_cookie_compliance' => t('EU cookie compliance'),
     'degov_password_policy' => t('Secure password policy'),
