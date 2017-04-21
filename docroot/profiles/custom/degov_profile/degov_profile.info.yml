@@ -24,15 +24,6 @@ dependencies:
 # Standard user roles for deGov
   - degov_userroles
 
-# Password policy with deGov settings
-  - password_policy
-  - password_policy_length
-  - password_policy_characters
-  - password_policy_character_types
-  - password_policy_history
-  - password_policy_username
-  - degov_password_policy
-
 # Textformat settings for deGov
 #  - degov_rich_text_format_settings
 #  - degov_plain_text_format_settings
