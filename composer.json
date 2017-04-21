@@ -49,9 +49,9 @@
         "drupal/spamspan": "1.x-dev",
         "drupal/content_access": "1.x-dev",
         "drupal/smtp": "^1.0@beta",
-        "degov/features": "dev-master",
-        "degov/modules": "dev-master",
-        "degov/degov_theme": "dev-master"
+        "degov/features": "8.x-2.x-dev",
+        "degov/modules": "8.x-2.x-dev",
+        "degov/degov_theme": "8.x-2.x-dev"
     },
     "repositories": {
         "drupal": {
@@ -62,11 +62,11 @@
             "type": "package",
             "package": {
                 "name": "degov/modules",
-                "version": "master",
+                "version": "8.x-2.x-dev",
                 "source": {
                     "url": "https://github.com/deGov/modules.git",
                     "type": "git",
-                    "reference": "origin/master"
+                    "reference": "origin/8.x-2.x-dev"
                 }
             }
         },
@@ -74,17 +74,26 @@
             "type": "package",
             "package": {
                 "name": "degov/features",
-                "version": "master",
+                "version": "8.x-2.x-dev",
                 "source": {
                     "url": "https://github.com/deGov/features.git",
                     "type": "git",
-                    "reference": "origin/master"
+                    "reference": "origin/8.x-2.x-dev"
                 }
             }
         },
         "degovtheme": {
-            "type": "vcs",
-            "url": "git@github.com:deGov/degov_theme.git"
+	    "type": "package",
+            "package": {
+                "name": "degov/degov_theme",
+                "version": "8.x-2.x-dev",
+		"type": "drupal-theme",
+                "source": {
+                    "url": "https://github.com/deGov/degov_theme.git",
+                    "type": "git",
+                    "reference": "origin/8.x-2.x-dev"
+                }
+            }
         },
         "shariff": {
             "type": "package",
