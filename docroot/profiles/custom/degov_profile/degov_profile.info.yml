@@ -33,10 +33,6 @@ dependencies:
   - password_policy_username
   - degov_password_policy
 
-# Cookie compliance with deGov settings
-  - eu_cookie_compliance
-#  - degov_eu_cookie_compliance
-
 # Textformat settings for deGov
 #  - degov_rich_text_format_settings
 #  - degov_plain_text_format_settings
