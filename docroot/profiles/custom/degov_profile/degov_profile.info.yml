@@ -7,7 +7,6 @@ description: 'Drupal 8 for Government (Drupal 8 für die öffentliche Verwaltung
 version: 8.x-dev
 core: '8.x'
 dependencies:
-# Additional contrib modules for deGov
   - admin_toolbar
   - admin_toolbar_tools
   - content_access
@@ -20,48 +19,16 @@ dependencies:
   - social_media_links
   - spamspan
   - viewsreference
-
-# Standard user roles for deGov
-  - degov_userroles
-
-# Breadcrumb settings
-  - easy_breadcrumb
-#  - degov_easy_breadcrumb
-
-# User sitemap with deGov settings
-  - sitemap
-#  - degov_sitemap
-
-# XML Sitemap
-  - simple_sitemap
-
-# Pathauto with deGov settings
   - pathauto
-  - degov_pathauto
-
-# SEO Modules.
-#  - degov_metatags
-
-# Social media sharing with deGov settings
-  - shariff
-  - degov_shariff_social_share
-
-# Cront modules with deGov settings
-# Disabled because broken.
+  - simple_sitemap
   - automated_cron
   - ultimate_cron
-#  - degov_cronconfig
   - scheduled_updates
-  - degov_scheduled_updates
+  - easy_breadcrumb
 
-# Contact storage with deGov settings
-# Disabled because broken.
-#  - contact_storage
-#  - degov_contactform_element
-#  - degov_contactform
-
-# Default taxonomy
-  - degov_tags
+# Newsletter functionality (Dependencies: degov_article_page, degov_blogarticle)
+  #- simplenews
+  #- degov_simplenews_settings
 
 # Content types
   #- degov_media_image
@@ -82,10 +49,6 @@ dependencies:
   #- degov_media_document
   #- degov_content_access
 
-# Newsletter functionality (Dependencies: degov_article_page, degov_blogarticle)
-  #- simplenews
-  #- degov_simplenews_settings
-
 # Search modules and deGov settings
   #- search
   #- search404
@@ -99,7 +62,7 @@ dependencies:
   #- degov_translation_importer
 
 # Welcome module for deGov
-#  - degov_welcome
+  #- degov_welcome
 
 themes:
   - bartik

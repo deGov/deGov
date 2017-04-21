@@ -36,8 +36,15 @@ function degov_module_setup(&$install_state) {
   $files = system_rebuild_module_data();
 
   $modules = array(
+    'degov_userroles' => 'degov_userroles',
     'degov_rich_text_format_settings' => 'degov_rich_text_format_settings',
     'degov_plain_text_format_settings' => 'degov_plain_text_format_settings',
+    'degov_pathauto' => 'degov_pathauto',
+    'degov_metatags' => 'degov_metatags',
+    'degov_tags' => 'degov_tags',
+    'degov_easy_breadcrumb' => 'degov_easy_breadcrumb',
+    'degov_cronconfig' => 'degov_cronconfig',
+    'degov_scheduled_updates' => 'degov_scheduled_updates',
     'degov_address_element' => 'degov_address_element',
     'degov_image_element' => 'degov_image_element',
     'degov_image_text_element' => 'degov_image_text_element',
@@ -117,7 +124,9 @@ function degov_finalize_setup() {
 function degov_profile_form_install_configure_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
   $degov_optional_modules = [
     'degov_eu_cookie_compliance' => t('EU cookie compliance'),
-    'degov_password_policy' => t('Secure password policy')
+    'degov_password_policy' => t('Secure password policy'),
+    'degov_sitemap' => t('User sitemap'),
+    'degov_shariff_social_share' => t('Social sharing')
   ];
 
   $form['degov']['optional_modules'] = [
