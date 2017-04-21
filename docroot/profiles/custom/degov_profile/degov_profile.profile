@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * Enables modules and site configuration for the {{ profile }} profile.
@@ -37,7 +36,6 @@ function degov_module_setup(&$install_state) {
   $files = system_rebuild_module_data();
 
   $modules = array(
-    'degov_eu_cookie_compliance' => 'degov_eu_cookie_compliance',
     'degov_address_element' => 'degov_address_element',
     'degov_image_element' => 'degov_image_element',
     'degov_image_text_element' => 'degov_image_text_element',
@@ -100,4 +98,39 @@ function degov_theme_setup(&$install_state) {
  */
 function degov_finalize_setup() {
   drupal_get_messages('status', TRUE);
+
+  $batch = array();
+
+  $degov_optional_modules = \Drupal::state()->get('degov_optional_modules');
+  foreach ($degov_optional_modules as $module => $module_name) {
+    $batch['operations'][] = ['_install_degov_module_batch', array(array($module), $module_name)];
+  }
+
+  return $batch;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function degov_profile_form_install_configure_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  $degov_optional_modules = [
+    'degov_eu_cookie_compliance' => t('EU Cookie compliance'),
+  ];
+
+  $form['degov']['optional_modules'] = [
+    '#type' => 'checkboxes',
+    '#title' => t('ENABLE OPTIONAL FEATURES'),
+    '#options' => $degov_optional_modules,
+    '#default_value' => [],
+  ];
+
+  $form['#submit'][] = 'degov_optional_modules_submit';
+}
+
+/**
+ * Submit handler for degov_profile_form_install_configure_form_alter().
+ */
+function degov_optional_modules_submit($form_id, &$form_state) {
+  $degov_optional_modules = array_filter($form_state->getValue('optional_modules'));
+  \Drupal::state()->set('degov_optional_modules', $degov_optional_modules);
 }
