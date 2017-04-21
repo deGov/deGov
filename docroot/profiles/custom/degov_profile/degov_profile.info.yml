@@ -25,6 +25,7 @@ dependencies:
   - ultimate_cron
   - scheduled_updates
   - easy_breadcrumb
+  - webform
 
 # Newsletter functionality (Dependencies: degov_article_page, degov_blogarticle)
   #- simplenews
