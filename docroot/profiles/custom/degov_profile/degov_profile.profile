@@ -65,7 +65,8 @@ function degov_module_setup(&$install_state) {
     'degov_faq_element' => 'degov_faq_element',
     'degov_google_maps_element' => 'degov_google_maps_element',
     'degov_video_element' => 'degov_video_element',
-    'degov_views_reference_element' => 'degov_views_reference_element'
+    'degov_views_reference_element' => 'degov_views_reference_element',
+    'degov_content_reference_element' => 'degov_content_reference_element'
   );
 
   // Add a batch operation to install each module.
