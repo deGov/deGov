@@ -98,14 +98,14 @@ function _install_degov_module_batch($module, $module_name, &$context) {
 /**
  * Install deGov theme task.
  *
- * Installs the deGov base theme as an additional step.
+ * Installs the deGov demo theme as an additional step.
  */
 function degov_theme_setup(&$install_state) {
   // Prevent Drupal status messages during profile installation.
   drupal_get_messages('status', TRUE);
 
   // Set the default theme to be deGov.
-  $theme = 'degov_theme';
+  $theme = 'degov_demo_theme';
   \Drupal::service('theme_handler')->install(array($theme));
   \Drupal::configFactory()
     ->getEditable('system.theme')

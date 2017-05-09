@@ -52,7 +52,8 @@
         "drupal/webform": "^5.0@beta",
         "degov/features": "8.x-2.x-dev",
         "degov/modules": "8.x-2.x-dev",
-        "degov/degov_theme": "8.x-2.x-dev"
+        "degov/degov_base_theme": "8.x-2.x-dev",
+        "degov/degov_demo_theme": "8.x-2.x-dev"
     },
     "repositories": {
         "drupal": {
@@ -83,14 +84,27 @@
                 }
             }
         },
-        "degovtheme": {
+        "degovbasetheme": {
 	    "type": "package",
             "package": {
-                "name": "degov/degov_theme",
+                "name": "degov/degov_base_theme",
                 "version": "8.x-2.x-dev",
 		"type": "drupal-theme",
                 "source": {
-                    "url": "https://github.com/deGov/degov_theme.git",
+                    "url": "https://github.com/deGov/degov_base_theme.git",
+                    "type": "git",
+                    "reference": "origin/8.x-2.x-dev"
+                }
+            }
+        },
+        "degovdemotheme": {
+	    "type": "package",
+            "package": {
+                "name": "degov/degov_demo_theme",
+                "version": "8.x-2.x-dev",
+		"type": "drupal-theme",
+                "source": {
+                    "url": "https://github.com/deGov/degov_demo_theme.git",
                     "type": "git",
                     "reference": "origin/8.x-2.x-dev"
                 }

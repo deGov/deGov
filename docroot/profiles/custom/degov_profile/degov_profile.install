@@ -9,7 +9,7 @@
  */
 function degov_profile_install() {
   // Set the deGov theme logo and favicon.
-  $degov_path = drupal_get_path('theme', 'degov_theme');
+  $degov_path = drupal_get_path('theme', 'degov_demo_theme');
   \Drupal::configFactory()
     ->getEditable('system.theme.global')
     ->set('logo', [
