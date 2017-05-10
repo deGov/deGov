@@ -9,17 +9,17 @@
  */
 function degov_profile_install() {
   // Set the deGov theme logo and favicon.
-  $degov_path = drupal_get_path('theme', 'degov_demo_theme');
+  $degov_path = drupal_get_path('theme', 'degov_base_theme');
   \Drupal::configFactory()
     ->getEditable('system.theme.global')
     ->set('logo', [
-      'path' => $degov_path . '/img/logo-degov.png',
+      'path' => $degov_path . '/public/images/logo-degov.png',
       'url' => '',
       'use_default' => FALSE,
     ])
     ->set('favicon', [
       'mimetype' => 'image/vnd.microsoft.icon',
-      'path' => $degov_path . '/img/favicon.ico',
+      'path' => $degov_path . '/public/images/favicon.ico',
       'url' => '',
       'use_default' => FALSE,
     ])
