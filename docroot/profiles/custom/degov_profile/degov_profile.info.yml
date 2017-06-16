@@ -1,0 +1,35 @@
+name: 'nrwGov'
+type: profile
+distribution:
+  name: nrwGov
+  langcode: de
+description: 'Drupal 8 for Government (Drupal 8 für die öffentliche Verwaltung)'
+version: 8.x-dev
+core: '8.x'
+dependencies:
+  - admin_toolbar
+  - admin_toolbar_tools
+  - content_access
+  - entity_reference_revisions
+  - entity_browser
+  - features
+  - filter
+  - paragraphs
+  - simple_gmap
+  - social_media_links
+  - spamspan
+  - viewsreference
+  - pathauto
+  - simple_sitemap
+  - automated_cron
+  - ultimate_cron
+  - scheduled_updates
+  - easy_breadcrumb
+  - webform
+
+themes:
+  - bartik
+  - seven
+
+base profile:
+  name: lightning
