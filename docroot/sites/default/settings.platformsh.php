@@ -7,27 +7,32 @@
 // Configure the database.
 if (isset($_ENV['PLATFORM_RELATIONSHIPS'])) {
   $relationships = json_decode(base64_decode($_ENV['PLATFORM_RELATIONSHIPS']), TRUE);
+  if (empty($databases['default']) && !empty($relationships)) {
+    foreach ($relationships as $key => $relationship) {
+      $drupal_key = ($key === 'database') ? 'default' : $key;
+      foreach ($relationship as $instance) {
+        if (empty($instance['scheme']) || ($instance['scheme'] !== 'mysql' && $instance['scheme'] !== 'pgsql')) {
+          continue;
+        }
+        $database = [
+          'driver' => $instance['scheme'],
+          'database' => $instance['path'],
+          'username' => $instance['username'],
+          'password' => $instance['password'],
+          'host' => $instance['host'],
+          'port' => $instance['port'],
+        ];
 
-  if (empty($databases['default']['default']) && !empty($relationships['database'])) {
-    foreach ($relationships['database'] as $endpoint) {
-      $database = [
-        'driver'   => $endpoint['scheme'],
-        'database' => $endpoint['path'],
-        'username' => $endpoint['username'],
-        'password' => $endpoint['password'],
-        'host'     => $endpoint['host'],
-        'port'     => $endpoint['port'],
-      ];
+        if (!empty($instance['query']['compression'])) {
+          $database['pdo'][PDO::MYSQL_ATTR_COMPRESS] = TRUE;
+        }
 
-      if (!empty($endpoint['query']['compression'])) {
-        $database['pdo'][PDO::MYSQL_ATTR_COMPRESS] = TRUE;
-      }
-
-      if (!empty($endpoint['query']['is_master'])) {
-        $databases['default']['default'] = $database;
-      }
-      else {
-        $databases['default']['replica'][] = $database;
+        if (!empty($instance['query']['is_master'])) {
+          $databases[$drupal_key]['default'] = $database;
+        }
+        else {
+          $databases[$drupal_key]['replica'][] = $database;
+        }
       }
     }
   }
@@ -99,4 +104,9 @@ if (isset($_ENV['PLATFORM_VARIABLES'])) {
 // keys and such.
 if (isset($_ENV['PLATFORM_PROJECT_ENTROPY']) && empty($settings['hash_salt'])) {
   $settings['hash_salt'] = $_ENV['PLATFORM_PROJECT_ENTROPY'];
+}
+
+// Set the deployment identifier, which is used by some Drupal cache systems.
+if (isset($_ENV['PLATFORM_TREE_ID']) && empty($settings['deployment_identifier'])) {
+  $settings['deployment_identifier'] = $_ENV['PLATFORM_TREE_ID'];
 }
