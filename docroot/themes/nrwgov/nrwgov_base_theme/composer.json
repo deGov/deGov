@@ -1,0 +1,9 @@
+{
+    "name": "nrwgov/degov_base_theme",
+    "type": "drupal-theme",
+    "version": "0.1",
+    "dist": {
+        "url": "git@github.com:NRWgov/degov_base_theme.git",
+        "type": "vcs"
+    }
+}

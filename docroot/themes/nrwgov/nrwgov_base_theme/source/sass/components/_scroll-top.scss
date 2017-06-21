@@ -1,0 +1,17 @@
+// Scroll to top
+.scroll-to-top {
+  position: fixed;
+  bottom: $vertical-gutter-width;
+  right: $vertical-gutter-width;
+  @include icon-before($fa-var-angle-up, 0  );
+  background-color: $color-gray;
+  color: $color-white;
+  font-size: $font-size-h3;
+  padding: 0 0.5em;
+  cursor: pointer;
+  opacity:0;
+  transition:opacity 0.5s linear;
+}
+.is-scrolling .scroll-to-top {
+  opacity: 1;
+}

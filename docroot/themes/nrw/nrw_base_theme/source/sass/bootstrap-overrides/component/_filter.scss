@@ -1,0 +1,27 @@
+/**
+ * Filter styles.
+ */
+
+// Mimic .panel-default styling.
+.filter-wrapper {
+  margin-bottom: $line-height-computed;
+  padding: 10px;
+  border: 1px solid $panel-default-border;
+  border-top: 0;
+  border-radius: 0 0 $panel-border-radius $panel-border-radius;
+  background-color: $panel-bg;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+
+  @extend .clearfix;
+}
+
+.filter-help {
+  line-height: 1;
+  float: right;
+  margin: 0.5em 0 0;
+}
+
+// Full list page.
+.nav.nav-tabs.filter-formats {
+  margin-bottom: 15px;
+}

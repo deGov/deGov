@@ -1,0 +1,25 @@
+.paragraph--type--faq-element {
+	cursor: pointer;
+	margin: $vertical-gutter-width/4 0;
+	.field--label {
+		display: none;
+	}
+	.field--name-field-faq-element-question {
+		font-weight: bold;
+		.field--item {
+			@include icon-after($fa-var-caret-down);
+			&::after {
+				color: $color-blue;
+			}
+		}
+		&.active .field--item {
+			@include icon-after($fa-var-caret-up);
+		}
+	}
+	.field--name-field-faq-element-answer {
+		display: none;
+		&.active {
+			display: block;
+		}
+	}
+}

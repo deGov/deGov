@@ -1,0 +1,15 @@
+// Styles for content region
+
+.main-wrapper {
+  background-color: $gray-lighter;
+  padding-top: $vertical-gutter-width * 1.5;
+}
+.main-container {
+  background: $color-white;
+  padding-bottom: $vertical-gutter-width;
+  position: relative;
+}
+.main-container .region-header {
+  position: absolute;
+  top: -$vertical-gutter-width * 1.5;
+}

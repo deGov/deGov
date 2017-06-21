@@ -1,0 +1,12 @@
+// Reduce spacing below page header
+.page-header {
+	padding: $vertical-gutter-width/2 0;
+	border-bottom: 0;
+  margin: 0;
+	max-width: 20em;
+}
+
+// Format captions
+figcaption {
+	text-align: center;
+}

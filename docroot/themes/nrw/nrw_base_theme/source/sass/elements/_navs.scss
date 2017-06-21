@@ -1,0 +1,56 @@
+// nav tabs
+.nav-tabs {
+  margin-bottom: $line-height-computed;
+}
+
+// navbar
+.navbar {
+  margin-bottom: floor($line-height-computed / 2);
+}
+
+// navbar collapsible
+.navbar-collapse {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+// default navbars
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  border-color: $color-gray;
+}
+.navbar-default {
+  background: none;
+  border: none;
+}
+// navbar default toggle icon
+.navbar-default .navbar-toggle {
+  clear: both;
+  border-color: $color-gray;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: $color-gray;
+}
+
+// secondary navs
+.navbar-secondary {
+  float: right;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+.navbar-secondary ul {
+  margin-bottom: 0;
+}
+
+// dropdowns
+.dropdown-menu {
+  left: auto;
+  right: 0;
+}
+.dropdown-menu > li  > a {
+  line-height: $line-height-computed * 1.5;
+}
+.dropdown-menu .dropdown-parent-link {
+  font-weight: bold;
+}
+
+

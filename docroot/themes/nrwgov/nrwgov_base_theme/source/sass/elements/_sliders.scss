@@ -1,0 +1,55 @@
+// Slick arrows are disabled, but if they are enabled these are the styles
+.slick-arrow {
+  background: $color-white-transparent;
+  &:hover,
+  &:focus,
+  &:active {
+    background: $gray-light;
+  }
+  &.slick-next {
+    &:before {
+      content: "\f105";
+    }
+  }
+  &.slick-prev {
+    &:before {
+      content: "\f104";
+    }
+  }
+  &.slick-next, &.slick-prev {
+    &:before {
+      font-size: $font-size-h3;
+      color: $color-blue;
+      text-shadow: none;
+    }
+  }
+}
+
+// slide arrows which are added in the template
+.inslide-slick-prev,
+.inslide-slick-next {
+  width: $grid-gutter-width;
+  height: $grid-gutter-width;
+  top: 25%; 
+  appearance: none;
+  background:transparent;
+  border: 0;
+  position: absolute;
+  z-index: 9;
+  top: 50%;
+  transform: translate(0,-50%);
+  outline: none;
+  &:before {
+    font-size: $grid-gutter-width;
+    color: $body-bg;
+    text-shadow: 5px 5px 10px rgba(0,0,0,0.75);
+  }
+}
+.inslide-slick-prev {
+  @include icon($fa-var-arrow-left);
+  left: $grid-gutter-width;
+}
+.inslide-slick-next {
+  @include icon($fa-var-arrow-right);
+  right: $grid-gutter-width;
+}

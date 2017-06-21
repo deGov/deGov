@@ -1,0 +1,127 @@
+{#
+/**
+ * @file
+ * Theme override for a field.
+ *
+ * To override output, copy the "field.html.twig" from the templates directory
+ * to your theme's directory and customize it, just like customizing other
+ * Drupal templates such as page.html.twig or node.html.twig.
+ *
+ * Instead of overriding the theming for all fields, you can also just override
+ * theming for a subset of fields using
+ * @link themeable Theme hook suggestions. @endlink For example,
+ * here are some theme hook suggestions that can be used for a field_foo field
+ * on an article node type:
+ * - field--node--field-foo--article.html.twig
+ * - field--node--field-foo.html.twig
+ * - field--node--article.html.twig
+ * - field--field-foo.html.twig
+ * - field--text-with-summary.html.twig
+ * - field.html.twig
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the containing element.
+ * - label_hidden: Whether to show the field label or not.
+ * - title_attributes: HTML attributes for the title.
+ * - label: The label for the field.
+ * - multiple: TRUE if a field can contain multiple items.
+ * - items: List of all the field items. Each item contains:
+ *   - attributes: List of HTML attributes for each item.
+ *   - content: The field item's content.
+ * - entity_type: The entity type to which the field belongs.
+ * - field_name: The name of the field.
+ * - field_type: The type of the field.
+ * - label_display: The display settings for the label.
+ *
+ * @ingroup templates
+ *
+ * @see template_preprocess_field()
+ */
+#}
+{%
+set classes = [
+'field',
+'field--name-' ~ field_name|clean_class,
+'field--type-' ~ field_type|clean_class,
+'field--label-' ~ label_display,
+]
+%}
+{%
+set title_classes = [
+'field--label',
+label_display == 'visually_hidden' ? 'sr-only',
+]
+%}
+{% set wrapper_h1 = ['field_title'] %}
+{%
+set wrapper_h2 = [
+'field_event_page_stitle',
+'field_section_page_subtitle',
+'field_blogarticle_subtitle',
+'field_article_page_subtitle',
+'field_next_page_stitle',
+'field_event_page_teaser_title',
+'field_section_page_teaser_title',
+'field_blogarticle_teaser_title',
+'field_article_page_teaser_title'
+]
+%}
+{%
+set wrapper_h3 = [
+'field_citation_element_title',
+'field_downloads_element_title',
+'field_faq_element_answer',
+'field_gallery_element_title',
+'field_links_element_title'
+]
+%}
+{%
+set wrapper_caption = [
+'field_image_subtitle',
+'field_image_copyright'
+]
+%}
+{% set wrapper_start = '' %}
+{% set wrapper_end = '' %}
+{% if field_name in wrapper_h3 %}
+    {% set wrapper_start = '<h3>' %}
+    {% set wrapper_end = '</h3>'  %}
+{% endif %}
+{% if field_name in wrapper_h2 %}
+    {% set wrapper_start = '<h2>' %}
+    {% set wrapper_end = '</h2>'  %}
+{% endif %}
+{% if field_name in wrapper_h1 %}
+    {% set wrapper_start = '<h1>' %}
+    {% set wrapper_end = '</h1>'  %}
+{% endif %}
+{% if field_name in wrapper_caption %}
+    {% set wrapper_start = '<figcaption>' %}
+    {% set wrapper_end = '</figcaption>'  %}
+{% endif %}
+{% if label_hidden %}
+    {% if multiple %}
+        <div{{ attributes.addClass(classes, 'field--items') }}>
+            {% for item in items %}
+                <div{{ item.attributes.addClass('field--item') }}>{{ wrapper_start|raw }}{{ item.content }}{{ wrapper_end|raw }}</div>
+            {% endfor %}
+        </div>
+    {% else %}
+        {% for item in items %}
+            <div{{ attributes.addClass(classes, 'field--item') }}>{{ wrapper_start|raw }}{{ item.content }}{{ wrapper_end|raw }}</div>
+        {% endfor %}
+    {% endif %}
+{% else %}
+    <div{{ attributes.addClass(classes) }}>
+        <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+        {% if multiple %}
+        <div class="field__items">
+            {% endif %}
+            {% for item in items %}
+                <div{{ item.attributes.addClass('field--item') }}>{{ wrapper_start|raw }}{{ item.content }}{{ wrapper_end|raw }}</div>
+            {% endfor %}
+            {% if multiple %}
+        </div>
+        {% endif %}
+    </div>
+{% endif %}

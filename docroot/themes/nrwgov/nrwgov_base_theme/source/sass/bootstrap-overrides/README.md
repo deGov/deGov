@@ -1,0 +1,1 @@
+Do not edit any files in this directory. The files included here are overrides for the Bootstrap framework to make it work with the Drupal bootstrap theme and and are provided by the Drupal Bootstrap base theme (originally in less form) – See the originals in /themes/bootstrap/starterkits/less/less/
