@@ -1,0 +1,21 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser_title
+    - node.type.normal_page
+  enforced:
+    module:
+      - normal_page
+id: node.normal_page.field_teaser_title
+field_name: field_teaser_title
+entity_type: node
+bundle: normal_page
+label: 'Vorschau Titel'
+description: 'Der Titel für die Vorschau'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,11 @@
+name: FAQ/Akkordion
+description: 'Mit diesem Flexiblen Paragraphen sollen an beliebigen Stellen im Inhalt FAQ-Listen eingestellt werden können.'
+type: module
+core: 8.x
+dependencies:
+  - content_types_shared_fields
+  - entity_reference_revisions
+  - field
+  - paragraphs
+  - text
+  - workbench_moderation

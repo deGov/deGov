@@ -1,0 +1,16 @@
+<?php
+
+use Drupal\content_types_shared_fields\Common;
+
+/**
+ * Implements hook_preprocess().
+ */
+function normal_page_preprocess(&$variables, $hook, &$info) {
+  // Add template suggestions and libraries implemented in this module.
+  Common::addThemeSuggestions($variables, $hook, $info, [
+    'module_name' => 'normal_page',
+    'entity_type' => 'node',
+    'entity_bundles' => ['normal_page'],
+    'entity_view_modes' => ['teaser']
+  ]);
+}

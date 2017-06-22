@@ -1,0 +1,55 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.normal_page.field_normal_page_content_pars
+    - field.field.node.normal_page.field_normal_page_header_pars
+    - field.field.node.normal_page.field_normal_page_side_right_par
+    - field.field.node.normal_page.field_teaser_image
+    - field.field.node.normal_page.field_teaser_text
+    - field.field.node.normal_page.field_teaser_title
+    - node.type.normal_page
+  module:
+    - entity_reference_revisions
+    - user
+  enforced:
+    module:
+      - normal_page
+id: node.normal_page.default
+targetEntityType: node
+bundle: normal_page
+mode: default
+content:
+  field_normal_page_content_pars:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_normal_page_header_pars:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_normal_page_side_right_par:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_teaser_image: true
+  field_teaser_text: true
+  field_teaser_title: true
+  langcode: true
+  links: true

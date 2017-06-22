@@ -1,0 +1,33 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.faq.field_faq_text
+    - field.field.paragraph.faq.field_faq_title
+    - paragraphs.paragraphs_type.faq
+  enforced:
+    module:
+      - degov_paragraph_faq
+  module:
+    - text
+id: paragraph.faq.default
+targetEntityType: paragraph
+bundle: faq
+mode: default
+content:
+  field_faq_text:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_faq_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

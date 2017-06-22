@@ -1,0 +1,23 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_faq_text
+    - paragraphs.paragraphs_type.faq
+  enforced:
+    module:
+      - degov_paragraph_faq
+  module:
+    - text
+id: paragraph.faq.field_faq_text
+field_name: field_faq_text
+entity_type: paragraph
+bundle: faq
+label: Antwort
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

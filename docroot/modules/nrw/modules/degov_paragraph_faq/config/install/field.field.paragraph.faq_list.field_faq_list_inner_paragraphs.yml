@@ -1,0 +1,38 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_faq_list_inner_paragraphs
+    - paragraphs.paragraphs_type.faq
+    - paragraphs.paragraphs_type.faq_list
+  enforced:
+    module:
+      - degov_paragraph_faq
+  module:
+    - entity_reference_revisions
+id: paragraph.faq_list.field_faq_list_inner_paragraphs
+field_name: field_faq_list_inner_paragraphs
+entity_type: paragraph
+bundle: faq_list
+label: Elemente
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      faq: faq
+    target_bundles_drag_drop:
+      faq_list:
+        weight: 4
+        enabled: false
+      faq:
+        enabled: true
+        weight: 5
+      faq_element:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

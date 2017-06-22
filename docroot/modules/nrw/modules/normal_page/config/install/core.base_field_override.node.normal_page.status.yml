@@ -1,0 +1,24 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.normal_page
+  enforced:
+    module:
+      - normal_page
+id: node.normal_page.status
+field_name: status
+entity_type: node
+bundle: normal_page
+label: Veröffentlichungsstatus
+description: 'Ein boolescher Wert, der angibt, ob ein Inhalt veröffentlicht ist oder nicht.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

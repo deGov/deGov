@@ -1,0 +1,9 @@
+langcode: de
+status: true
+dependencies:
+  enforced:
+    module:
+      - degov_paragraph_faq
+id: faq_list
+label: 'FAQ / Akkordion Liste'
+behavior_plugins: {  }

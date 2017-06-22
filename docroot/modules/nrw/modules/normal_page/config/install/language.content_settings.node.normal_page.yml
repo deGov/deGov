@@ -1,0 +1,13 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.normal_page
+  enforced:
+    module:
+      - normal_page
+id: node.normal_page
+target_entity_type_id: node
+target_bundle: normal_page
+default_langcode: site_default
+language_alterable: true

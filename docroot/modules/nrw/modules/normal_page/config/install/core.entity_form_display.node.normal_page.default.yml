@@ -1,0 +1,142 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.media_browser
+    - field.field.node.normal_page.field_normal_page_content_pars
+    - field.field.node.normal_page.field_normal_page_header_pars
+    - field.field.node.normal_page.field_normal_page_side_right_par
+    - field.field.node.normal_page.field_teaser_image
+    - field.field.node.normal_page.field_teaser_text
+    - field.field.node.normal_page.field_teaser_title
+    - node.type.normal_page
+  module:
+    - entity_browser
+    - paragraphs
+    - path
+    - text
+    - workbench_moderation
+  enforced:
+    module:
+      - normal_page
+id: node.normal_page.default
+targetEntityType: node
+bundle: normal_page
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_normal_page_content_pars:
+    type: entity_reference_paragraphs
+    weight: 5
+    settings:
+      title: Absatz
+      title_plural: Paragraphs
+      edit_mode: preview
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
+  field_normal_page_header_pars:
+    type: entity_reference_paragraphs
+    weight: 4
+    settings:
+      title: Absatz
+      title_plural: Paragraphs
+      edit_mode: preview
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
+  field_normal_page_side_right_par:
+    type: entity_reference_paragraphs
+    weight: 6
+    settings:
+      title: Absatz
+      title_plural: Paragraphs
+      edit_mode: preview
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
+  field_teaser_image:
+    type: entity_browser_entity_reference
+    weight: 3
+    settings:
+      entity_browser: media_browser
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_display_settings:
+        view_mode: thumbnail
+      open: false
+    region: content
+    third_party_settings: {  }
+  field_teaser_text:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_teaser_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 10
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 11
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 8
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }

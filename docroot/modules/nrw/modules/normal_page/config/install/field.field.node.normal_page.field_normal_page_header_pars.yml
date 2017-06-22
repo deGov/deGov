@@ -1,0 +1,26 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_normal_page_header_pars
+    - node.type.normal_page
+  module:
+    - entity_reference_revisions
+  enforced:
+    module:
+      - normal_page
+id: node.normal_page.field_normal_page_header_pars
+field_name: field_normal_page_header_pars
+entity_type: node
+bundle: normal_page
+label: Kopfbereich
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles: null
+field_type: entity_reference_revisions
