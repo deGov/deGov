@@ -23,4 +23,4 @@ regions:
   page_bottom: 'Page bottom'
 
 libraries:
-  - 'degov_nrw_theme/theme-assets'
+  - 'nrw_base_theme/theme-assets'
