@@ -7,7 +7,7 @@ dependencies:
     - node.type.normal_page
   enforced:
     module:
-      - normal_page
+      - degov_normal_page
 id: node.normal_page.field_teaser_image
 field_name: field_teaser_image
 entity_type: node

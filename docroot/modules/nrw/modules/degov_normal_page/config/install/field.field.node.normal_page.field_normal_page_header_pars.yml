@@ -2,18 +2,18 @@ langcode: de
 status: true
 dependencies:
   config:
-    - field.storage.node.field_normal_page_side_right_par
+    - field.storage.node.field_normal_page_header_pars
     - node.type.normal_page
   module:
     - entity_reference_revisions
   enforced:
     module:
-      - normal_page
-id: node.normal_page.field_normal_page_side_right_par
-field_name: field_normal_page_side_right_par
+      - degov_normal_page
+id: node.normal_page.field_normal_page_header_pars
+field_name: field_normal_page_header_pars
 entity_type: node
 bundle: normal_page
-label: 'Seitenleiste rechts'
+label: Kopfbereich
 description: ''
 required: false
 translatable: false

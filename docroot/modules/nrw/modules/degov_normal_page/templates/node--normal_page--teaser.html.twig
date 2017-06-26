@@ -66,38 +66,37 @@
  */
 #}
 {% set classes = [
-  node.bundle|clean_class,
-  node.isPromoted() ? 'is-promoted',
-  node.isSticky() ? 'is-sticky',
-  not node.isPublished() ? 'is-unpublished',
-  view_mode ? view_mode|clean_class,
-  'clearfix',
+node.bundle|clean_class,
+node.isPromoted() ? 'is-promoted',
+node.isSticky() ? 'is-sticky',
+not node.isPublished() ? 'is-unpublished',
+view_mode ? view_mode|clean_class,
+'clearfix',
 ] %}
-{% set content_cols = node.field_normal_page_side_right_par.value ? 'col-md-9' %}
+
 <article{{ attributes.addClass(classes) }}>
 
-  <div class="wrapper">
-
-    <!-- header paragraphs() -->
-    {% if node.field_normal_page_header_pars.value %}
-      <div class="normal-page__header-paragraphs">
-        {{ content.field_normal_page_header_pars }}
-      </div>
+    <!-- teaser image -->
+    {% if content.field_teaser_image %}
+        <div class="normal-page__teaser-image col-sm-3"> <!-- from medium screen up, show on the right sidebar -->
+            {{ content.field_teaser_image }}
+        </div>
     {% endif %}
 
-    <!-- content paragraphs -->
-    {% if node.field_normal_page_content_pars.value %}
-      <div{{ create_attribute({'class': ['normal-page__content-paragraphs', content_cols ]}) }}> <!-- from medium screen up, only use 3/4 of width (in case of a right sidebar) -->
-        {{ content.field_normal_page_content_pars }}
-      </div>
-    {% endif %}
+    <div class="normal-page__teaser-content teaser-content"> <!-- from medium screen up, show on the right sidebar -->
+        <!-- teaser title -->
+        {% if content.field_teaser_title %}
+            <div class="normal-page__teaser-title">
+                {{ content.field_teaser_title }}
+            </div>
+        {% endif %}
 
-    <!-- right sidebar paragraphs -->
-    {% if node.field_normal_page_side_right_par.value %}
-      <div class="normal-page__side-right-paragraphs col-md-3"> <!-- from medium screen up, display the right sidebar next to the content -->
-        {{ content.field_normal_page_side_right_par }}
-      </div>
-    {% endif %}
-  </div>
+        <!-- Teaser text -->
+        {% if content.field_teaser_text %}
+            <div class="normal-page__teaser-text">
+                {{ content.field_teaser_text }}
+            </div>
+        {% endif %}
+    </div>
 
 </article>

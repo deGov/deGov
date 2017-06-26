@@ -8,7 +8,7 @@ dependencies:
     - entity_reference_revisions
   enforced:
     module:
-      - normal_page
+      - degov_normal_page
 id: node.normal_page.field_normal_page_content_pars
 field_name: field_normal_page_content_pars
 entity_type: node

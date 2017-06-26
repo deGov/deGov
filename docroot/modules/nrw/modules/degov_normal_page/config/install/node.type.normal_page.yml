@@ -5,7 +5,7 @@ dependencies:
     - menu_ui
   enforced:
     module:
-      - normal_page
+      - degov_normal_page
 third_party_settings:
   menu_ui:
     available_menus:

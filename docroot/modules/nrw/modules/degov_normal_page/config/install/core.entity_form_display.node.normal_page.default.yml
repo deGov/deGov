@@ -18,7 +18,7 @@ dependencies:
     - workbench_moderation
   enforced:
     module:
-      - normal_page
+      - degov_normal_page
 id: node.normal_page.default
 targetEntityType: node
 bundle: normal_page

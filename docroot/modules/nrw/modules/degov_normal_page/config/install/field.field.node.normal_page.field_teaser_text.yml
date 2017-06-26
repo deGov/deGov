@@ -8,7 +8,7 @@ dependencies:
     - text
   enforced:
     module:
-      - normal_page
+      - degov_normal_page
 id: node.normal_page.field_teaser_text
 field_name: field_teaser_text
 entity_type: node

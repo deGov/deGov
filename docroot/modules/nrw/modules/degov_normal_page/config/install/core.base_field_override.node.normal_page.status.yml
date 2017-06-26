@@ -5,13 +5,13 @@ dependencies:
     - node.type.normal_page
   enforced:
     module:
-      - normal_page
-id: node.normal_page.promote
-field_name: promote
+      - degov_normal_page
+id: node.normal_page.status
+field_name: status
 entity_type: node
 bundle: normal_page
-label: 'Auf der Startseite anzeigen'
-description: ''
+label: Veröffentlichungsstatus
+description: 'Ein boolescher Wert, der angibt, ob ein Inhalt veröffentlicht ist oder nicht.'
 required: false
 translatable: true
 default_value:

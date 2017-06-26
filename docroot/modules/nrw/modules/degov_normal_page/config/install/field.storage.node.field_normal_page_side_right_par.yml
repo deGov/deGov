@@ -7,9 +7,9 @@ dependencies:
     - paragraphs
   enforced:
     module:
-      - normal_page
-id: node.field_normal_page_header_pars
-field_name: field_normal_page_header_pars
+      - degov_normal_page
+id: node.field_normal_page_side_right_par
+field_name: field_normal_page_side_right_par
 entity_type: node
 type: entity_reference_revisions
 settings:

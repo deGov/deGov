@@ -15,7 +15,7 @@ dependencies:
     - user
   enforced:
     module:
-      - normal_page
+      - degov_normal_page
 id: node.normal_page.teaser
 targetEntityType: node
 bundle: normal_page

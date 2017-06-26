@@ -5,7 +5,7 @@ dependencies:
     - node.type.normal_page
   enforced:
     module:
-      - normal_page
+      - degov_normal_page
 id: node.normal_page.title
 field_name: title
 entity_type: node

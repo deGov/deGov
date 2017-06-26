@@ -5,7 +5,7 @@ dependencies:
     - node
   enforced:
     module:
-      - normal_page
+      - degov_normal_page
 id: normal_page
 label: Inhaltsseite
 type: 'canonical_entities:node'
