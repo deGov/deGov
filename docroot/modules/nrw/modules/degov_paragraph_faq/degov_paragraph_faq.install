@@ -1,6 +1,6 @@
 <?php
 
-use Drupal\content_types_shared_fields\Common;
+use Drupal\degov_content_types_shared_fields\Common;
 
 /**
  * Implements hook_uninstall().
