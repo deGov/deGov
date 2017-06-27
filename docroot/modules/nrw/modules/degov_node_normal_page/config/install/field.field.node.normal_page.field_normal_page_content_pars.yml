@@ -2,18 +2,18 @@ langcode: de
 status: true
 dependencies:
   config:
-    - field.storage.node.field_normal_page_header_pars
+    - field.storage.node.field_normal_page_content_pars
     - node.type.normal_page
   module:
     - entity_reference_revisions
   enforced:
     module:
-      - degov_normal_page
-id: node.normal_page.field_normal_page_header_pars
-field_name: field_normal_page_header_pars
+      - degov_node_normal_page
+id: node.normal_page.field_normal_page_content_pars
+field_name: field_normal_page_content_pars
 entity_type: node
 bundle: normal_page
-label: Kopfbereich
+label: Inhaltsbereich
 description: ''
 required: false
 translatable: false

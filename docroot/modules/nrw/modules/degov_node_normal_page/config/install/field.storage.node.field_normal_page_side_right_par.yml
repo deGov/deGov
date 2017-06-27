@@ -7,7 +7,7 @@ dependencies:
     - paragraphs
   enforced:
     module:
-      - degov_normal_page
+      - degov_node_normal_page
 id: node.field_normal_page_side_right_par
 field_name: field_normal_page_side_right_par
 entity_type: node

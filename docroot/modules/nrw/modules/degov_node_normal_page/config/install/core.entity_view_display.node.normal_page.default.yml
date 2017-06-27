@@ -2,7 +2,6 @@ langcode: de
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
     - field.field.node.normal_page.field_normal_page_content_pars
     - field.field.node.normal_page.field_normal_page_header_pars
     - field.field.node.normal_page.field_normal_page_side_right_par
@@ -11,43 +10,46 @@ dependencies:
     - field.field.node.normal_page.field_teaser_title
     - node.type.normal_page
   module:
-    - text
+    - entity_reference_revisions
     - user
   enforced:
     module:
-      - degov_normal_page
-id: node.normal_page.teaser
+      - degov_node_normal_page
+id: node.normal_page.default
 targetEntityType: node
 bundle: normal_page
-mode: teaser
+mode: default
 content:
-  field_teaser_image:
-    type: entity_reference_entity_view
-    weight: 0
-    region: content
+  field_normal_page_content_pars:
+    type: entity_reference_revisions_entity_view
+    weight: 1
     label: hidden
     settings:
       view_mode: default
-      link: false
+      link: ''
     third_party_settings: {  }
-  field_teaser_text:
-    type: text_default
-    weight: 2
     region: content
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-  field_teaser_title:
-    type: string
-    weight: 1
-    region: content
+  field_normal_page_header_pars:
+    type: entity_reference_revisions_entity_view
+    weight: 0
     label: hidden
     settings:
-      link_to_entity: false
+      view_mode: default
+      link: ''
     third_party_settings: {  }
+    region: content
+  field_normal_page_side_right_par:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
 hidden:
-  field_normal_page_content_pars: true
-  field_normal_page_header_pars: true
-  field_normal_page_side_right_par: true
+  field_teaser_image: true
+  field_teaser_text: true
+  field_teaser_title: true
   langcode: true
   links: true

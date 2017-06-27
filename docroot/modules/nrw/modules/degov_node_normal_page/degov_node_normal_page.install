@@ -5,7 +5,7 @@ use Drupal\content_types_shared_fields\Common;
 /**
  * Implements hook_uninstall().
  */
-function normal_page_uninstall() {
+function degov_node_normal_page_uninstall() {
   // Removes all module type defined content when uninstalling the module.
   Common::removeContent([
     'entity_type' => 'node',
