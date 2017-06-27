@@ -1,9 +1,0 @@
-name: 'Content Types Shared Fields'
-description: 'Dieses Modul enthält alle gemeinsamen Felder für alle Entitäten.'
-type: module
-core: 8.x
-dependencies:
-  - field
-  - media_entity
-  - node
-  - text
