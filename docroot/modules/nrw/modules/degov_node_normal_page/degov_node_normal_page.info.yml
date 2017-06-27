@@ -17,4 +17,4 @@ dependencies:
   - text
   - user
   - workbench_moderation
-  - content_types_shared_fields
+  - degov_content_types_shared_fields
