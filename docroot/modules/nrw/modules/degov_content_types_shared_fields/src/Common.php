@@ -30,6 +30,12 @@ class Common {
    *   - entity_type: the entity type created by the module (node, paragraph,..)
    *   - entity_bundles: array of entity bundles created.
    *   - entity_view_modes: array of entity view modes that need templates.
+   *
+   * TODO: media entities do not work here, something like below needs to be added
+   * if ($hook === 'media') {
+   *   $variables['media'] = $variables['elements']['#media'];
+   * }
+   *
    */
   public static function addThemeSuggestions(&$variables, $hook, &$info, $options) {
     /* @var $entity_type string */

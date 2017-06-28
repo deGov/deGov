@@ -1,5 +1,6 @@
 name: 'Content Types Shared Fields'
 description: 'Dieses Modul enthält alle gemeinsamen Felder für alle Entitäten.'
+package: deGov
 type: module
 core: 8.x
 dependencies:
