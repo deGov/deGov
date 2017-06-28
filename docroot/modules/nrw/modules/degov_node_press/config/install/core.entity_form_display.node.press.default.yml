@@ -10,6 +10,9 @@ dependencies:
     - field.field.node.press.field_teaser_text
     - field.field.node.press.field_teaser_title
     - node.type.press
+  enforced:
+    module:
+      - degov_node_press
   module:
     - datetime
     - entity_browser

@@ -6,6 +6,9 @@ dependencies:
     - node.type.press
   module:
     - entity_reference_revisions
+  enforced:
+    module:
+      - degov_node_press
 id: node.press.field_content_paragraphs
 field_name: field_content_paragraphs
 entity_type: node

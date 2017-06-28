@@ -3,6 +3,9 @@ status: true
 dependencies:
   config:
     - node.type.press
+  enforced:
+    module:
+      - degov_node_press
 id: node.press.title
 field_name: title
 entity_type: node

@@ -3,6 +3,9 @@ status: true
 dependencies:
   config:
     - node.type.press
+  enforced:
+    module:
+      - degov_node_press
 id: node.press.promote
 field_name: promote
 entity_type: node

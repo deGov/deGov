@@ -6,6 +6,9 @@ dependencies:
     - node.type.press
   module:
     - text
+  enforced:
+    module:
+      - degov_node_press
 id: node.press.field_teaser_text
 field_name: field_teaser_text
 entity_type: node

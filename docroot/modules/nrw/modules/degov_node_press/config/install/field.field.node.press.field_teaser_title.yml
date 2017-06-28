@@ -4,6 +4,9 @@ dependencies:
   config:
     - field.storage.node.field_teaser_title
     - node.type.press
+  enforced:
+    module:
+      - degov_node_press
 id: node.press.field_teaser_title
 field_name: field_teaser_title
 entity_type: node

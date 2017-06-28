@@ -9,17 +9,13 @@ dependencies:
     - field.field.node.press.field_teaser_text
     - field.field.node.press.field_teaser_title
     - node.type.press
+  enforced:
+    module:
+      - degov_node_press
   module:
     - datetime
     - entity_reference_revisions
-    - panelizer
     - user
-third_party_settings:
-  panelizer:
-    enable: false
-    custom: false
-    allow: false
-    default: default
 id: node.press.default
 targetEntityType: node
 bundle: press
