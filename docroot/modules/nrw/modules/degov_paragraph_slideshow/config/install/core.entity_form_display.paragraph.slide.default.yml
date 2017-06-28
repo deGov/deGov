@@ -1,0 +1,54 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slide.field_slide_link
+    - field.field.paragraph.slide.field_slide_media
+    - field.field.paragraph.slide.field_slide_text
+    - paragraphs.paragraphs_type.slide
+  module:
+    - inline_entity_form
+    - link
+    - text
+    - workbench_moderation
+  enforced:
+   module:
+   - nrwgov_paragraph_slideshow
+id: paragraph.slide.default
+targetEntityType: paragraph
+bundle: slide
+mode: default
+content:
+  field_slide_link:
+    weight: 8
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_slide_media:
+    weight: 6
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: false
+      match_operator: CONTAINS
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_slide_text:
+    weight: 7
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

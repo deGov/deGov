@@ -1,0 +1,9 @@
+.slideshow .slick-arrow.slick-prev:before {
+  content: "<";
+  margin-left: 20px;
+}
+
+.slideshow .slick-arrow.slick-next:before {
+  content: ">";
+  margin-left: -20px;
+}

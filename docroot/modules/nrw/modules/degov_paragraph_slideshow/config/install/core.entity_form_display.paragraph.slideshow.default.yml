@@ -1,0 +1,40 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slideshow.field_slideshow_slides
+    - field.field.paragraph.slideshow.field_slideshow_type
+    - paragraphs.paragraphs_type.slideshow
+  module:
+    - paragraphs
+    - workbench_moderation
+  enforced:
+   module:
+   - nrwgov_paragraph_slideshow
+id: paragraph.slideshow.default
+targetEntityType: paragraph
+bundle: slideshow
+mode: default
+content:
+  field_slideshow_slides:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Absatz
+      title_plural: Paragraphs
+      edit_mode: preview
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: slide
+    third_party_settings: {  }
+    region: content
+  field_slideshow_type:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

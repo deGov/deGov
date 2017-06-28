@@ -1,0 +1,25 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slideshow_type
+    - paragraphs.paragraphs_type.slideshow
+  module:
+    - options
+  enforced:
+   module:
+   - nrwgov_paragraph_slideshow
+id: paragraph.slideshow.field_slideshow_type
+field_name: field_slideshow_type
+entity_type: paragraph
+bundle: slideshow
+label: Typ
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: type_1
+default_value_callback: ''
+settings: {  }
+field_type: list_string

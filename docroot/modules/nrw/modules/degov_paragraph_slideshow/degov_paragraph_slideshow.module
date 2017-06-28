@@ -1,0 +1,36 @@
+<?php
+
+use Drupal\content_types_shared_fields\Common;
+
+/**
+ * Implements hook_preprocess().
+ */
+function nrwgov_paragraph_slideshow_preprocess(&$variables, $hook, &$info) {
+  // Add template suggestions and libraries implemented in this module.
+  Common::addThemeSuggestions($variables, $hook, $info, [
+    'module_name' => 'nrwgov_paragraph_slideshow',
+    'entity_type' => 'paragraph',
+    'entity_bundles' => ['slide', 'slideshow'],
+    'entity_view_modes' => [],
+  ]);
+}
+
+/**
+ * Implements hook_preprocess_paragraph().
+ */
+function nrwgov_paragraph_slideshow_preprocess_paragraph(&$variables) {
+  $paragraph = $variables['paragraph'];
+  // Add variables to the slideshow template file.
+  if ($paragraph->getType() == 'slideshow') {
+    // Add the variable slideshow_type.
+    $variables['slideshow_type'] = $paragraph->field_slideshow_type->value;
+  }
+  // Add variables to the slideshow template file.
+  if ($paragraph->getType() == 'slide') {
+    // Add the variable slide_link.
+    $variables['slide_link'] = FALSE;
+    if ($paragraph->field_slide_link->uri) {
+      $variables['slide_link'] = $paragraph->field_slide_link->uri;
+    }
+  }
+}

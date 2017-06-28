@@ -1,0 +1,41 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slideshow_slides
+    - paragraphs.paragraphs_type.slide
+    - paragraphs.paragraphs_type.slideshow
+  module:
+    - entity_reference_revisions
+  enforced:
+   module:
+   - nrwgov_paragraph_slideshow
+id: paragraph.slideshow.field_slideshow_slides
+field_name: field_slideshow_slides
+entity_type: paragraph
+bundle: slideshow
+label: Slides
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      slide: slide
+    target_bundles_drag_drop:
+      slide:
+        enabled: true
+        weight: 5
+      faq:
+        weight: 6
+        enabled: false
+      faq_list:
+        weight: 7
+        enabled: false
+      slideshow:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions
