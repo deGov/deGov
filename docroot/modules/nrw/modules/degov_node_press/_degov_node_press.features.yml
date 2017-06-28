@@ -1,0 +1,4 @@
+excluded:
+  - user.role.press_creator
+  - user.role.press_reviewer
+required: true
