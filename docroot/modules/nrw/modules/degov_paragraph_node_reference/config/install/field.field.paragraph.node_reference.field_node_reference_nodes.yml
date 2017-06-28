@@ -1,0 +1,30 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_node_reference_nodes
+    - node.type.normal_page
+    - paragraphs.paragraphs_type.node_reference
+  enforced:
+    module:
+      - degov_paragraph_node_reference
+id: paragraph.node_reference.field_node_reference_nodes
+field_name: field_node_reference_nodes
+entity_type: paragraph
+bundle: node_reference
+label: Seiten
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      normal_page: normal_page
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

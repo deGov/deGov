@@ -1,0 +1,12 @@
+name: 'deGov - Paragraph Inhaltsreferenz'
+description: 'Mit diesem Paragraphen können an beliebigen Stellen Teaser-Listen erstellt werden.'
+type: module
+package: deGov
+core: 8.x
+dependencies:
+  - field
+  - node
+  - paragraphs
+  - workbench_moderation
+  - degov_content_types_shared_fields
+  - degov_node_normal_page
