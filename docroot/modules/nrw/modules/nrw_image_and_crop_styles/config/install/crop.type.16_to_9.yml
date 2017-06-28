@@ -1,0 +1,11 @@
+langcode: de
+status: true
+dependencies: {  }
+label: '16 zu 9'
+id: 16_to_9
+description: '16:9 Bildzuschnitt, z.B. für Main Slider'
+aspect_ratio: '16:9'
+soft_limit_width: 1280
+soft_limit_height: 720
+hard_limit_width: null
+hard_limit_height: null

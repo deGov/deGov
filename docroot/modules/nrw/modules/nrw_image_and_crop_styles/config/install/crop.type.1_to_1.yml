@@ -1,0 +1,11 @@
+langcode: de
+status: true
+dependencies: {  }
+label: '1 zu 1'
+id: 1_to_1
+description: '1:1 Bildzuschnitt, z.B. für Teaser squared'
+aspect_ratio: '1:1'
+soft_limit_width: 480
+soft_limit_height: 480
+hard_limit_width: null
+hard_limit_height: null

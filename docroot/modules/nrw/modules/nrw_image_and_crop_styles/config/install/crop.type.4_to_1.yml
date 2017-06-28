@@ -1,0 +1,11 @@
+langcode: de
+status: true
+dependencies: {  }
+label: '4 zu 1'
+id: 4_to_1
+description: '4:1 Bildzuschnitt, z.B. für Opinion Teaser'
+aspect_ratio: '4:1'
+soft_limit_width: 1280
+soft_limit_height: 320
+hard_limit_width: null
+hard_limit_height: null

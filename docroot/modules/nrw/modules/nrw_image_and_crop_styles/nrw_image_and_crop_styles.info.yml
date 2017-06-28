@@ -1,0 +1,11 @@
+name: 'NRW Image And Crop Styles'
+description: 'Provides a configuration for breakpoints, responsive images, cropping and image styles used in NRW'
+package: NRW
+type: module
+core: 8.x
+dependencies:
+  - crop
+  - image
+  - responsive_image
+  - crop_media_entity
+  - image_widget_crop
