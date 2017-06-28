@@ -1,0 +1,4 @@
+excluded:
+  - user.role.event_creator
+  - user.role.event_reviewer
+required: true
