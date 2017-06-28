@@ -1,0 +1,27 @@
+nrw_image_and_crop_styles.media.xs:
+  label: "Extra small"
+  mediaQuery: '@media (max-width: 509px) { max-width: 100%; }'
+  weight: 0
+  multipliers:
+    - 1x
+    - 1.5x
+    - 2x
+  group: nrw_image_and_crop_styles.media
+nrw_image_and_crop_styles.media.sm:
+  label: "Small"
+  mediaQuery: '@media (max-width: 991px) { max-width: 100%; }'
+  weight: 1
+  multipliers:
+    - 1x
+    - 1.5x
+    - 2x
+  group: nrw_image_and_crop_styles.media
+nrw_image_and_crop_styles.media.md:
+  label: "Medium and up"
+  mediaQuery: '@media (min-width: 992px) { max-width: 1280px; }'
+  weight: 2
+  multipliers:
+    - 1x
+    - 1.5x
+    - 2x
+  group: nrw_image_and_crop_styles.media
