@@ -1,4 +1,4 @@
-name: 'NRW Image And Crop Styles'
+name: 'NRW - Image And Crop Styles'
 description: 'Provides a configuration for breakpoints, responsive images, cropping and image styles used in NRW'
 package: NRW
 type: module
