@@ -6,6 +6,9 @@ dependencies:
     - node.type.event
   module:
     - entity_reference_revisions
+  enforced:
+    module:
+      - degov_node_event
 id: node.event.field_content_paragraphs
 field_name: field_content_paragraphs
 entity_type: node

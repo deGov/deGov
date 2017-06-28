@@ -14,14 +14,7 @@ dependencies:
       - degov_node_normal_page
   module:
     - entity_reference_revisions
-    - panelizer
     - user
-third_party_settings:
-  panelizer:
-    enable: false
-    custom: false
-    allow: false
-    default: default
 id: node.normal_page.default
 targetEntityType: node
 bundle: normal_page
