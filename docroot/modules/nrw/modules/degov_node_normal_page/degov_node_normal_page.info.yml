@@ -1,4 +1,4 @@
-name: Inhaltsseite
+name: "deGov - Inhaltsseite"
 description: 'Provides Inhaltsseite content type and related configuration. Dieser Seitentyp ist für allgemeine Seiten gedacht.'
 package: deGov
 type: module
