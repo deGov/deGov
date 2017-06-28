@@ -38,12 +38,12 @@
  * @ingroup themeable
  */
 #}
-<div class="node-reference">
-  <div class="node-reference__header">
-    {{ content.field_title }}
-    {{ content.field_sub_title }}
+<div class="paragraph node-reference">
+  <div class="paragraph__header">
+    <h2>{{ content.field_title }}
+    <span class="sub-title">{{ content.field_sub_title }}</span></h2>
   </div>
-  <div class="node-reference__content">
+  <div class="paragraph__content">
     {% for key, teaser in content.field_node_reference_nodes if key|first != '#' %}
     <div class="{{ cycle(['odd', 'even'], loop.index0) }}">
       {{ teaser }}
