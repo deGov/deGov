@@ -1,4 +1,4 @@
-name: 'Content Types Shared Fields'
+name: 'deGov - Content Types Shared Fields'
 description: 'Dieses Modul enthält alle gemeinsamen Felder für alle Entitäten.'
 package: deGov
 type: module
