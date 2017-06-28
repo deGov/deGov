@@ -1,0 +1,20 @@
+langcode: de
+status: true
+dependencies:
+  enforced:
+    module:
+      - degov_node_event
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Veranstaltung
+type: event
+description: 'Erstellen von Veranstaltungen / Events, die in einzeln, in einem Kalender und in Aggregationen angezeigt werden können.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,70 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.event.field_event_content_paragraphs
+    - field.field.node.event.field_event_date
+    - field.field.node.event.field_event_location
+    - field.field.node.event.field_event_sidebar_right_par
+    - field.field.node.event.field_teaser_image
+    - field.field.node.event.field_teaser_text
+    - field.field.node.event.field_teaser_title
+    - node.type.event
+  enforced:
+    module:
+      - degov_node_event
+  module:
+    - datetime
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.event.teaser
+targetEntityType: node
+bundle: event
+mode: teaser
+content:
+  field_event_date:
+    type: datetime_default
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+  field_teaser_image:
+    type: entity_reference_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+  field_teaser_text:
+    type: text_default
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_teaser_title:
+    type: string
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  field_event_content_paragraphs: true
+  field_event_location: true
+  field_event_sidebar_right_par: true
+  langcode: true
+  links: true

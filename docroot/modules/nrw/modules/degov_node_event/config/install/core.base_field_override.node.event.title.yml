@@ -1,0 +1,20 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.event
+  enforced:
+    module:
+      - degov_node_event
+id: node.event.title
+field_name: title
+entity_type: node
+bundle: event
+label: Titel
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

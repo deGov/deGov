@@ -1,0 +1,16 @@
+<?php
+
+use Drupal\degov_content_types_shared_fields\Common;
+
+/**
+ * Implements hook_preprocess().
+ */
+function degov_node_event_preprocess(&$variables, $hook, &$info) {
+  // Add template suggestions and libraries implemented in this module.
+  Common::addThemeSuggestions($variables, $hook, $info, [
+    'module_name' => 'degov_node_event',
+    'entity_type' => 'node',
+    'entity_bundles' => ['event'],
+    'entity_view_modes' => ['teaser']
+  ]);
+}

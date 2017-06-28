@@ -1,0 +1,71 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.event.field_event_content_paragraphs
+    - field.field.node.event.field_event_date
+    - field.field.node.event.field_event_location
+    - field.field.node.event.field_event_sidebar_right_par
+    - field.field.node.event.field_teaser_image
+    - field.field.node.event.field_teaser_text
+    - field.field.node.event.field_teaser_title
+    - node.type.event
+  enforced:
+    module:
+      - degov_node_event
+  module:
+    - address
+    - datetime
+    - entity_reference_revisions
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.event.default
+targetEntityType: node
+bundle: event
+mode: default
+content:
+  field_event_content_paragraphs:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_event_date:
+    weight: 0
+    label: hidden
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_event_location:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_event_sidebar_right_par:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_teaser_image: true
+  field_teaser_text: true
+  field_teaser_title: true
+  langcode: true
+  links: true
