@@ -1,0 +1,52 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.press.field_content_paragraphs
+    - field.field.node.press.field_press_date
+    - field.field.node.press.field_sidebar_right_paragraphs
+    - field.field.node.press.field_teaser_image
+    - field.field.node.press.field_teaser_text
+    - field.field.node.press.field_teaser_title
+    - node.type.press
+  module:
+    - datetime
+    - entity_reference_revisions
+    - panelizer
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.press.default
+targetEntityType: node
+bundle: press
+mode: default
+content:
+  field_content_paragraphs:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_press_date:
+    weight: 0
+    label: hidden
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+hidden:
+  field_sidebar_right_paragraphs: true
+  field_teaser_image: true
+  field_teaser_text: true
+  field_teaser_title: true
+  langcode: true
+  links: true

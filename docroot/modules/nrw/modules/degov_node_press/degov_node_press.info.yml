@@ -1,0 +1,20 @@
+name: 'deGov - Pressemitteilung'
+description: 'Erstellen von Pressemitteilungen.'
+type: module
+package: deGov
+core: 8.x
+dependencies:
+  - datetime
+  - degov_content_types_shared_fields
+  - entity_browser
+  - entity_reference_revisions
+  - field
+  - language
+  - menu_ui
+  - node
+  - panelizer
+  - paragraphs
+  - path
+  - text
+  - user
+  - workbench_moderation
