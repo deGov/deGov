@@ -4,11 +4,11 @@ dependencies:
   config:
     - field.storage.node.field_teaser_text
     - node.type.normal_page
-  module:
-    - text
   enforced:
     module:
       - degov_node_normal_page
+  module:
+    - text
 id: node.normal_page.field_teaser_text
 field_name: field_teaser_text
 entity_type: node

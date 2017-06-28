@@ -73,30 +73,30 @@ not node.isPublished() ? 'is-unpublished',
 view_mode ? view_mode|clean_class,
 'clearfix',
 ] %}
-{% set content_cols = node.field_normal_page_side_right_par.value ? 'col-md-9' %}
+{% set content_cols = node.field_sidebar_right_paragraphs.value ? 'col-md-9' %}
 
 <article{{ attributes.addClass(classes) }}>
 
     <!-- header paragraphs() -->
-    {% if node.field_normal_page_header_pars.value %}
+    {% if node.field_header_paragraphs.value %}
         <div class="normal-page__header-paragraphs">
-            {{ content.field_normal_page_header_pars }}
+            {{ content.field_header_paragraphs }}
         </div>
     {% endif %}
 
     <!-- content paragraphs -->
-    {% if node.field_normal_page_content_pars.value %}
+    {% if node.field_content_paragraphs.value %}
         <div{{ create_attribute({'class': ['normal-page__content-paragraphs', content_cols ]}) }}>
             <!-- from medium screen up, only use 3/4 of width (in case of a right sidebar) -->
-            {{ content.field_normal_page_content_pars }}
+            {{ content.field_content_paragraphs }}
         </div>
     {% endif %}
 
     <!-- right sidebar paragraphs -->
-    {% if node.field_normal_page_side_right_par.value %}
+    {% if node.field_sidebar_right_paragraphs.value %}
         <div class="normal-page__side-right-paragraphs col-md-3">
             <!-- from medium screen up, display the right sidebar next to the content -->
-            {{ content.field_normal_page_side_right_par }}
+            {{ content.field_sidebar_right_paragraphs }}
         </div>
     {% endif %}
 

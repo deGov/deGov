@@ -3,19 +3,26 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.normal_page.field_normal_page_content_pars
-    - field.field.node.normal_page.field_normal_page_header_pars
-    - field.field.node.normal_page.field_normal_page_side_right_par
+    - field.field.node.normal_page.field_content_paragraphs
+    - field.field.node.normal_page.field_header_paragraphs
+    - field.field.node.normal_page.field_sidebar_right_paragraphs
     - field.field.node.normal_page.field_teaser_image
     - field.field.node.normal_page.field_teaser_text
     - field.field.node.normal_page.field_teaser_title
     - node.type.normal_page
-  module:
-    - text
-    - user
   enforced:
     module:
       - degov_node_normal_page
+  module:
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.normal_page.teaser
 targetEntityType: node
 bundle: normal_page
@@ -46,8 +53,8 @@ content:
       link_to_entity: false
     third_party_settings: {  }
 hidden:
-  field_normal_page_content_pars: true
-  field_normal_page_header_pars: true
-  field_normal_page_side_right_par: true
+  field_content_paragraphs: true
+  field_header_paragraphs: true
+  field_sidebar_right_paragraphs: true
   langcode: true
   links: true

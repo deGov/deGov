@@ -3,22 +3,22 @@ status: true
 dependencies:
   config:
     - entity_browser.browser.media_browser
-    - field.field.node.normal_page.field_normal_page_content_pars
-    - field.field.node.normal_page.field_normal_page_header_pars
-    - field.field.node.normal_page.field_normal_page_side_right_par
+    - field.field.node.normal_page.field_content_paragraphs
+    - field.field.node.normal_page.field_header_paragraphs
+    - field.field.node.normal_page.field_sidebar_right_paragraphs
     - field.field.node.normal_page.field_teaser_image
     - field.field.node.normal_page.field_teaser_text
     - field.field.node.normal_page.field_teaser_title
     - node.type.normal_page
+  enforced:
+    module:
+      - degov_node_normal_page
   module:
     - entity_browser
     - paragraphs
     - path
     - text
     - workbench_moderation
-  enforced:
-    module:
-      - degov_node_normal_page
 id: node.normal_page.default
 targetEntityType: node
 bundle: normal_page
@@ -30,8 +30,7 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_normal_page_content_pars:
-    type: entity_reference_paragraphs
+  field_content_paragraphs:
     weight: 5
     settings:
       title: Absatz
@@ -41,9 +40,9 @@ content:
       form_display_mode: default
       default_paragraph_type: _none
     third_party_settings: {  }
-    region: content
-  field_normal_page_header_pars:
     type: entity_reference_paragraphs
+    region: content
+  field_header_paragraphs:
     weight: 4
     settings:
       title: Absatz
@@ -53,9 +52,9 @@ content:
       form_display_mode: default
       default_paragraph_type: _none
     third_party_settings: {  }
-    region: content
-  field_normal_page_side_right_par:
     type: entity_reference_paragraphs
+    region: content
+  field_sidebar_right_paragraphs:
     weight: 6
     settings:
       title: Absatz
@@ -65,6 +64,7 @@ content:
       form_display_mode: default
       default_paragraph_type: _none
     third_party_settings: {  }
+    type: entity_reference_paragraphs
     region: content
   field_teaser_image:
     type: entity_browser_entity_reference
@@ -74,10 +74,10 @@ content:
       field_widget_display: rendered_entity
       field_widget_edit: true
       field_widget_remove: true
+      open: true
       selection_mode: selection_append
       field_widget_display_settings:
         view_mode: thumbnail
-      open: false
     region: content
     third_party_settings: {  }
   field_teaser_text:

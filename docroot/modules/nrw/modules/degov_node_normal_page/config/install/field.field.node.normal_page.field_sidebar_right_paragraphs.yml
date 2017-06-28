@@ -2,21 +2,21 @@ langcode: de
 status: true
 dependencies:
   config:
-    - field.storage.node.field_normal_page_side_right_par
+    - field.storage.node.field_sidebar_right_paragraphs
     - node.type.normal_page
   module:
     - entity_reference_revisions
   enforced:
     module:
       - degov_node_normal_page
-id: node.normal_page.field_normal_page_side_right_par
-field_name: field_normal_page_side_right_par
+id: node.normal_page.field_sidebar_right_paragraphs
+field_name: field_sidebar_right_paragraphs
 entity_type: node
 bundle: normal_page
 label: 'Seitenleiste rechts'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

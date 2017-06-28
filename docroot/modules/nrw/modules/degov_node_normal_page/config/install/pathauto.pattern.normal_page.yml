@@ -1,11 +1,11 @@
 langcode: de
 status: true
 dependencies:
-  module:
-    - node
   enforced:
     module:
       - degov_node_normal_page
+  module:
+    - node
 id: normal_page
 label: Inhaltsseite
 type: 'canonical_entities:node'
