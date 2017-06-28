@@ -2,6 +2,7 @@
 
 # deGov - Drupal 8 for Government
 
+
 ## Notes
 
 deGov is the first Drupal 8 distribution focussing on the needs of (German) governmental organisations. It uses Acquia Lightning as a basis and extends this it with valueable functions to meet the use cases for different scenarios:
