@@ -3,10 +3,8 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.event.field_event_content_paragraphs
     - field.field.node.event.field_event_date
     - field.field.node.event.field_event_location
-    - field.field.node.event.field_event_sidebar_right_par
     - field.field.node.event.field_teaser_image
     - field.field.node.event.field_teaser_text
     - field.field.node.event.field_teaser_title
@@ -16,6 +14,7 @@ dependencies:
       - degov_node_event
   module:
     - datetime
+    - panelizer
     - text
     - user
 third_party_settings:
@@ -63,8 +62,6 @@ content:
       link_to_entity: false
     third_party_settings: {  }
 hidden:
-  field_event_content_paragraphs: true
   field_event_location: true
-  field_event_sidebar_right_par: true
   langcode: true
   links: true

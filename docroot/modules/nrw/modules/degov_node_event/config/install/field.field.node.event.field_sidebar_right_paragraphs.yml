@@ -1,0 +1,22 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sidebar_right_paragraphs
+    - node.type.event
+  module:
+    - entity_reference_revisions
+id: node.event.field_sidebar_right_paragraphs
+field_name: field_sidebar_right_paragraphs
+entity_type: node
+bundle: event
+label: 'Seitenleiste rechts'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings: {  }
+field_type: entity_reference_revisions

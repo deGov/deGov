@@ -2,10 +2,10 @@ langcode: de
 status: true
 dependencies:
   config:
-    - field.field.node.event.field_event_content_paragraphs
+    - field.field.node.event.field_content_paragraphs
     - field.field.node.event.field_event_date
     - field.field.node.event.field_event_location
-    - field.field.node.event.field_event_sidebar_right_par
+    - field.field.node.event.field_sidebar_right_paragraphs
     - field.field.node.event.field_teaser_image
     - field.field.node.event.field_teaser_text
     - field.field.node.event.field_teaser_title
@@ -17,6 +17,7 @@ dependencies:
     - address
     - datetime
     - entity_reference_revisions
+    - panelizer
     - user
 third_party_settings:
   panelizer:
@@ -29,14 +30,14 @@ targetEntityType: node
 bundle: event
 mode: default
 content:
-  field_event_content_paragraphs:
-    type: entity_reference_revisions_entity_view
+  field_content_paragraphs:
     weight: 2
-    label: hidden
+    label: above
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
     region: content
   field_event_date:
     weight: 0
@@ -54,14 +55,14 @@ content:
     third_party_settings: {  }
     type: address_default
     region: content
-  field_event_sidebar_right_par:
-    type: entity_reference_revisions_entity_view
+  field_sidebar_right_paragraphs:
     weight: 3
-    label: hidden
+    label: above
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
     region: content
 hidden:
   field_teaser_image: true

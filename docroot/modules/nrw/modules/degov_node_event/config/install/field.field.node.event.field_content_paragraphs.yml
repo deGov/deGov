@@ -2,21 +2,18 @@ langcode: de
 status: true
 dependencies:
   config:
-    - field.storage.node.field_event_content_paragraphs
+    - field.storage.node.field_content_paragraphs
     - node.type.event
-  enforced:
-    module:
-      - degov_node_event
   module:
     - entity_reference_revisions
-id: node.event.field_event_content_paragraphs
-field_name: field_event_content_paragraphs
+id: node.event.field_content_paragraphs
+field_name: field_content_paragraphs
 entity_type: node
 bundle: event
 label: Inhaltsbereich
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

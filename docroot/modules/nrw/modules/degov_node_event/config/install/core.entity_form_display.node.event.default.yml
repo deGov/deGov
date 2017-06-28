@@ -3,10 +3,10 @@ status: true
 dependencies:
   config:
     - entity_browser.browser.media_browser
-    - field.field.node.event.field_event_content_paragraphs
+    - field.field.node.event.field_content_paragraphs
     - field.field.node.event.field_event_date
     - field.field.node.event.field_event_location
-    - field.field.node.event.field_event_sidebar_right_par
+    - field.field.node.event.field_sidebar_right_paragraphs
     - field.field.node.event.field_teaser_image
     - field.field.node.event.field_teaser_text
     - field.field.node.event.field_teaser_title
@@ -18,7 +18,7 @@ dependencies:
     - address
     - datetime
     - entity_browser
-    - paragraphs
+    - entity_reference_revisions
     - path
     - text
     - workbench_moderation
@@ -33,17 +33,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_event_content_paragraphs:
-    type: entity_reference_paragraphs
-    weight: 6
+  field_content_paragraphs:
+    weight: 26
     settings:
-      title: Absatz
-      title_plural: Paragraphs
-      edit_mode: preview
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: _none
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
+    type: entity_reference_revisions_autocomplete
     region: content
   field_event_date:
     weight: 4
@@ -58,17 +55,14 @@ content:
     third_party_settings: {  }
     type: address_default
     region: content
-  field_event_sidebar_right_par:
-    type: entity_reference_paragraphs
-    weight: 7
+  field_sidebar_right_paragraphs:
+    weight: 27
     settings:
-      title: Absatz
-      title_plural: Paragraphs
-      edit_mode: preview
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: _none
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
+    type: entity_reference_revisions_autocomplete
     region: content
   field_teaser_image:
     type: entity_browser_entity_reference
