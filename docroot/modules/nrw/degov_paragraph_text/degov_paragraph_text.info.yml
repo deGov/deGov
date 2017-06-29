@@ -1,0 +1,10 @@
+name: 'deGov - Paragraph Text'
+description: 'Ein allgemeiner Paragraph für formatierte Texte beliebiger Länge.'
+type: module
+package: deGov
+core: 8.x
+dependencies:
+  - field
+  - paragraphs
+  - text
+  - workbench_moderation
