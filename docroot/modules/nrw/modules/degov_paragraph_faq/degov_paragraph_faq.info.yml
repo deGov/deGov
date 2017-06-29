@@ -1,7 +1,7 @@
-name: 'deGov - FAQ/Akkordion'
+name: 'deGov - Paragraph FAQ/Akkordion'
 description: 'Mit diesem Flexiblen Paragraphen sollen an beliebigen Stellen im Inhalt FAQ-Listen eingestellt werden können.'
-package: deGov
 type: module
+package: deGov
 core: 8.x
 dependencies:
   - degov_content_types_shared_fields
