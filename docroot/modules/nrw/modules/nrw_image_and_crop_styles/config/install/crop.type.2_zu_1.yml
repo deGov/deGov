@@ -1,6 +1,9 @@
 langcode: de
 status: true
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - nrw_image_and_crop_styles
 label: '2 zu 1'
 id: 2_zu_1
 description: '2:1 Bildzuschnitt, z.B. für Teaser Landscape oder Teaser Topic'

@@ -1,6 +1,9 @@
 langcode: de
 status: true
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - nrw_image_and_crop_styles
 label: '8 zu 3'
 id: 8_to_3
 description: '8:3 Bildzuschnitt, z.B. für Teaser Landscape Small'

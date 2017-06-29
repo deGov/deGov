@@ -1,6 +1,9 @@
 langcode: de
 status: true
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - nrw_image_and_crop_styles
 label: '4 zu 1'
 id: 4_to_1
 description: '4:1 Bildzuschnitt, z.B. für Opinion Teaser'

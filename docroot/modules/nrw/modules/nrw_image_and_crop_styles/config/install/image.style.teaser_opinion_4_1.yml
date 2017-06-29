@@ -3,6 +3,9 @@ status: true
 dependencies:
   module:
     - crop
+  enforced:
+    module:
+      - nrw_image_and_crop_styles
 name: teaser_opinion_4_1
 label: 'Teaser opinion (4:1)'
 effects:

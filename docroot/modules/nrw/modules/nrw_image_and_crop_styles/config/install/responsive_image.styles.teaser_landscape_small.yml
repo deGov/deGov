@@ -3,6 +3,9 @@ status: true
 dependencies:
   config:
     - image.style.teaser_landscape_small_8_3
+  enforced:
+    module:
+      - nrw_image_and_crop_styles
 id: teaser_landscape_small
 label: 'Teaser landscape small'
 image_style_mappings:
