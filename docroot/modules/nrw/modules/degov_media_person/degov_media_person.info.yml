@@ -1,0 +1,6 @@
+name: 'deGov - Person'
+type: module
+core: 8.x
+dependencies:
+  - crop
+  - media_entity
