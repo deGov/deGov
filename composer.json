@@ -50,7 +50,10 @@
         "drupal/content_access": "1.x-dev",
         "drupal/smtp": "^1.0@beta",
         "drupal/webform": "^5.0@beta",
-        "drupal/linkit": "^4.3"
+        "drupal/linkit": "^4.3",
+        "drupal/config_rewrite": "^1.0",
+        "drupal/image_widget_crop": "^2.0",
+        "drupal/address": "^1.0"
     },
     "repositories": {
         "drupal": {
