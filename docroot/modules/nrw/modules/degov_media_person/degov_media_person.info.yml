@@ -1,4 +1,6 @@
 name: 'deGov - Person'
+description: 'Dieses Modul stellt das Media Bundle Person bereit.'
+package: deGov
 type: module
 core: 8.x
 dependencies:
