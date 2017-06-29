@@ -7,8 +7,8 @@ dependencies:
     - media_entity.bundle.video
     - paragraphs.paragraphs_type.slide
   enforced:
-   module:
-   - nrwgov_paragraph_slideshow
+    module:
+      - degov_paragraph_slideshow
 id: paragraph.slide.field_slide_media
 field_name: field_slide_media
 entity_type: paragraph

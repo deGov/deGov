@@ -2,8 +2,8 @@ langcode: de
 status: true
 dependencies:
   enforced:
-   module:
-   - nrwgov_paragraph_slideshow
+    module:
+      - degov_paragraph_slideshow
 id: slideshow
 label: Slideshow
 behavior_plugins: {  }

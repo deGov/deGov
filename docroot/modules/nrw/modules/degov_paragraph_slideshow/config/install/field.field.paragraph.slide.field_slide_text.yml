@@ -4,11 +4,11 @@ dependencies:
   config:
     - field.storage.paragraph.field_slide_text
     - paragraphs.paragraphs_type.slide
+  enforced:
+    module:
+      - degov_paragraph_slideshow
   module:
     - text
-  enforced:
-   module:
-   - nrwgov_paragraph_slideshow
 id: paragraph.slide.field_slide_text
 field_name: field_slide_text
 entity_type: paragraph

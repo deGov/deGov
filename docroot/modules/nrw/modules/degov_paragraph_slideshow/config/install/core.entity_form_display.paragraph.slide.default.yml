@@ -2,18 +2,19 @@ langcode: de
 status: true
 dependencies:
   config:
+    - entity_browser.browser.media_browser
     - field.field.paragraph.slide.field_slide_link
     - field.field.paragraph.slide.field_slide_media
     - field.field.paragraph.slide.field_slide_text
     - paragraphs.paragraphs_type.slide
+  enforced:
+    module:
+      - degov_paragraph_slideshow
   module:
-    - inline_entity_form
+    - entity_browser
     - link
     - text
     - workbench_moderation
-  enforced:
-   module:
-   - nrwgov_paragraph_slideshow
 id: paragraph.slide.default
 targetEntityType: paragraph
 bundle: slide
@@ -30,15 +31,15 @@ content:
   field_slide_media:
     weight: 6
     settings:
-      form_mode: default
-      override_labels: false
-      label_singular: ''
-      label_plural: ''
-      allow_new: true
-      allow_existing: false
-      match_operator: CONTAINS
+      entity_browser: media_browser
+      field_widget_display: label
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      open: false
+      field_widget_display_settings: {  }
     third_party_settings: {  }
-    type: inline_entity_form_complex
+    type: entity_browser_entity_reference
     region: content
   field_slide_text:
     weight: 7

@@ -1,14 +1,14 @@
 <?php
 
-use Drupal\content_types_shared_fields\Common;
+use Drupal\degov_content_types_shared_fields\Common;
 
 /**
  * Implements hook_preprocess().
  */
-function nrwgov_paragraph_slideshow_preprocess(&$variables, $hook, &$info) {
+function degov_paragraph_slideshow_preprocess(&$variables, $hook, &$info) {
   // Add template suggestions and libraries implemented in this module.
   Common::addThemeSuggestions($variables, $hook, $info, [
-    'module_name' => 'nrwgov_paragraph_slideshow',
+    'module_name' => 'degov_paragraph_slideshow',
     'entity_type' => 'paragraph',
     'entity_bundles' => ['slide', 'slideshow'],
     'entity_view_modes' => [],
@@ -18,7 +18,7 @@ function nrwgov_paragraph_slideshow_preprocess(&$variables, $hook, &$info) {
 /**
  * Implements hook_preprocess_paragraph().
  */
-function nrwgov_paragraph_slideshow_preprocess_paragraph(&$variables) {
+function degov_paragraph_slideshow_preprocess_paragraph(&$variables) {
   $paragraph = $variables['paragraph'];
   // Add variables to the slideshow template file.
   if ($paragraph->getType() == 'slideshow') {

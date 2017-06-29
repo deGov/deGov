@@ -1,8 +1,10 @@
-name: Slideshow
+name: 'deGov - Paragraph Slideshow'
 description: 'Slideshowparagraph, der hauptsächlich im Headerbereich zum Einstatz kommt.'
 type: module
+package: deGov
 core: 8.x
 dependencies:
+  - entity_browser
   - entity_reference_revisions
   - field
   - inline_entity_form

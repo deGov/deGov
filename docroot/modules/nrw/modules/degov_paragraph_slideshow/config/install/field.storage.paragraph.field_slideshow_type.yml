@@ -1,12 +1,12 @@
 langcode: de
 status: true
 dependencies:
+  enforced:
+    module:
+      - degov_paragraph_slideshow
   module:
     - options
     - paragraphs
-  enforced:
-   module:
-   - nrwgov_paragraph_slideshow
 id: paragraph.field_slideshow_type
 field_name: field_slideshow_type
 entity_type: paragraph

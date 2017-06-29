@@ -2,20 +2,23 @@ langcode: de
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.slide.field_slide_link
     - field.field.paragraph.slide.field_slide_media
     - field.field.paragraph.slide.field_slide_text
+    - image.style.medium
     - paragraphs.paragraphs_type.slide
   enforced:
     module:
       - degov_paragraph_slideshow
   module:
     - link
+    - media_entity
     - text
-id: paragraph.slide.default
+id: paragraph.slide.preview
 targetEntityType: paragraph
 bundle: slide
-mode: default
+mode: preview
 content:
   field_slide_link:
     weight: 2
@@ -33,10 +36,10 @@ content:
     weight: 0
     label: hidden
     settings:
-      link: true
-      view_mode: default
+      image_style: medium
+      image_link: ''
     third_party_settings: {  }
-    type: entity_reference_entity_view
+    type: media_thumbnail
     region: content
   field_slide_text:
     weight: 1

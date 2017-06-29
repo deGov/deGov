@@ -5,11 +5,11 @@ dependencies:
     - field.storage.paragraph.field_slideshow_slides
     - paragraphs.paragraphs_type.slide
     - paragraphs.paragraphs_type.slideshow
+  enforced:
+    module:
+      - degov_paragraph_slideshow
   module:
     - entity_reference_revisions
-  enforced:
-   module:
-   - nrwgov_paragraph_slideshow
 id: paragraph.slideshow.field_slideshow_slides
 field_name: field_slideshow_slides
 entity_type: paragraph
