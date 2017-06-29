@@ -60,85 +60,44 @@
 #}
 {% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
 {# Page top #}
-{% if page.page_intro %}
+
   <div class="page-intro-wrapper">
     <div class="page-intro container">
-      {{ page.page_intro }}
+      
     </div>
   </div>
-{% endif %}
 {# Navbar #}
-{% if page.navigation or page.navigation_collapsible %}
-  {% block navbar %}
-    {%
-      set navbar_classes = [
-        'navbar',
-        theme.settings.navbar_inverse ? 'navbar-inverse' : 'navbar-default',
-        
-      ]
-    %}
-    <div class="header-wrapper">
-      <header{{ navbar_attributes.addClass(navbar_classes) }} id="navbar" role="banner">
-        {% if not navbar_attributes.hasClass('container') %}
-          <div class="{{ container }}">
-        {% endif %}
+<div class="header-wrapper">
+  <header class="header {{ container }}">
 
-        <div class="navbar-branding">
-          {{ page.navigation_branding }}
+  {# TODO: select the correct language for select the template #}
+  {# TODO: create template for other templates #}
+  
+    {% include 'header-intro.html.twig' %}
+    <div class="header__branding">
+        <div class="col-md-3 header__title">
+            <span>WIR IN NRW</span>
+            DAS LANDESPORTAL
         </div>
-
-        <div class="navbar-header">
-          {# .btn-navbar is used as the toggle for collapsed navbar content #}
-          {% if page.navigation_collapsible %}
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-              <span class="sr-only">{{ 'Toggle navigation'|t }}</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-          {% endif %}
+        <div class="col-md-3 pull-right header__logo">
+            <div class="image">
+                <img src="{{ base_path ~ directory }}/source/images/logo.png"></div>
+            </div>
         </div>
-
-        {# Seondary navigation area #}
-        <div class="navbar-secondary">
-          {{ page.navigation }}
-        </div>
-
-        {# Navigation (collapsible), main menu #}
-        {% if page.navigation_collapsible %}
-          <div id="navbar-collapse" class="navbar-collapse collapse">
-            {{ page.navigation_collapsible }}
-          </div>
-        {% endif %}
-        {% if not navbar_attributes.hasClass('container') %}
-          </div>
-        {% endif %}
-      </header>
     </div>
-  {% endblock %}
-{% endif %}
+    {# please Vivek inlude your template here. like the next. #}
+    {# include 'header.html.twig' #}      
+  </header>
+  
+
+</div>
+
 
 {# Main #}
 {% block main %}
   <div class="main-wrapper">
-    {% if home_page %}
-      <div class="banner-wrapper">
-        {{ slider }}
-    </div>
-    {% endif %}
-
-
     <div role="main" class="main-container {{ container }} js-quickedit-main-content">
       <div class="row">
-
-        {# Header #}
-        {% if page.header %}
-          {% block header %}
-            <div class="col-sm-12" role="heading">
-              {{ page.header }}
-            </div>
-          {% endblock %}
-        {% endif %}
 
         {# Sidebar First #}
         {% if page.sidebar_first %}
@@ -159,20 +118,6 @@
           ]
         %}
         <section{{ content_attributes.addClass(content_classes) }}>
-
-          {# Highlighted #}
-          {% if page.highlighted %}
-            {% block highlighted %}
-              <div class="highlighted">{{ page.highlighted }}</div>
-            {% endblock %}
-          {% endif %}
-
-          {# Breadcrumbs #}
-          {% if breadcrumb %}
-            {% block breadcrumb %}
-              {{ breadcrumb }}
-            {% endblock %}
-          {% endif %}
 
           {# Action Links #}
           {% if action_links %}
@@ -208,23 +153,22 @@
   </div>
 {% endblock %}
 
-{% if page.footer %}
+
   {% block footer %}
     <div class="footer-wrapper">
       <footer class="footer {{ container }}" role="contentinfo">
-        {{ page.footer }}
+      <img src="{{ base_path ~ directory }}/source/images/footer.png">
       </footer>
     </div>
-  {% endblock %}
-{% endif %}
+{% endblock %}
 
-{% if page.page_outro %}
+
   <div class="page-outro-wrapper">
     <div class="page-outro container">
-      {{ page.page_outro }}
+     
     </div>
   </div>
-{% endif %}
+
 
 <!-- Back to top -->
 <div class="scroll-to-top"></div>

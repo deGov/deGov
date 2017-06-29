@@ -3,7 +3,7 @@
  */
 $bootstrap-sass-asset-helper: false;
 
-$fa-font-path:   "../../../../contrib/nrw_base_theme/public/fonts/font-awesome";
+$fa-font-path:   "../../../../contrib/degov_nrw_theme/public/fonts/font-awesome";
 
 //
 // Variables
@@ -87,7 +87,7 @@ $title-underline-height: 4px;
 // [converter] This is because some asset helpers, such as Sprockets, do not work with file-relative paths.
 
 // Set the proper directory for the Bootstrap Glyphicon font.
-$icon-font-path: "../../../../contrib/nrw_base_theme/public/fonts/bootstrap/";
+$icon-font-path: "../../../../contrib/degov_nrw_theme/public/fonts/bootstrap/";
 
 //** File name for all font files.
 $icon-font-name: "glyphicons-halflings-regular";

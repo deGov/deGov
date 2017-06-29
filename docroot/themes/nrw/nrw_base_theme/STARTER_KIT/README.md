@@ -1,6 +1,6 @@
 # degov
 
-This is a starter kit for a theme for the deGov Drupal distribution. It extends the nrw_base_theme.
+This is a starter kit for a theme for the deGov Drupal distribution. It extends the degov_nrw_theme.
 
 
 It uses a watch system built on _gulp_ to run build and copy tasks and trigger livereloading.

@@ -90,7 +90,7 @@
 		left: 0;
 		right: 0;
 		top: 0;
-		background: $color-white;
+		background: $background-grey;
 		box-shadow: 0px 0px 0px transparent;
 		transition: box-shadow 200ms ease-in-out;
 	}
@@ -132,6 +132,67 @@
 		.navbar-branding .logo img {
 			max-height: floor($navbar-height*0.75);
 			margin-top: floor($navbar-height*0.125);
+		}
+	}
+}
+
+.header{
+	&__upper-menu{
+		min-height: 42px;
+		background-color: $brand-primary;
+		font-size: $font-size-small - 2;
+		color: $color-white;
+		font-family: $font-family-sans-serif-bold;
+		text-transform: uppercase;
+		position: relative; 
+		> div{
+			display: flex;
+			flex-direction: row ;
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			align-items: center;
+  
+		}
+		select{
+			border: 0;
+			color: $color-white;
+			background: transparent;
+		}
+	}
+	&__branding{
+		background-color: $color-white;
+		min-height: 100px;
+		position: relative;
+		
+		}
+	&__logo{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		position: absolute;
+		height: 100%;
+		right: 0;
+		img{
+			float: right;
+		}
+	}
+	&__title{
+		font-size: $font-size-h2;
+		line-height: $font-size-h2;
+		color: $brand-primary;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		position: absolute;
+		height: 100%;
+		a{
+			color: $brand-primary;
+		}
+		span{
+			font-family: $font-family-sans-serif-bold;
+			display: inline-block;
+			width: 100%; 
 		}
 	}
 }

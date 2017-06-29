@@ -2,10 +2,10 @@
 // This file is purely a skeleton to compile bootstrap with the correct
 // variables and the Drupal theme overrides
 // import default vars from the base theme
-@import "../../../../contrib/nrw_base_theme/source/sass/variables";
+@import "../../../../contrib/degov_nrw_theme/source/sass/variables";
 // import override variables for this theme
 @import "variables";
 
 @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
-@import "../../../../contrib/nrw_base_theme/source/sass/bootstrap-overrides/overrides";
+@import "../../../../contrib/degov_nrw_theme/source/sass/bootstrap-overrides/overrides";

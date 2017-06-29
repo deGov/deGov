@@ -4,12 +4,48 @@
 $bootstrap-sass-asset-helper: false;
 
 $fa-font-path:   "../fonts/font-awesome";
+@font-face {
+    font-family: "BentonSans-Bold";
+    src: url('../fonts/BentonSans/BentonSans-Bold/BentonSans-Bold.eot');
+    src: url('../fonts/BentonSans/BentonSans-Bold/BentonSans-Bold.eot') format('embedded-opentype'),
+         url('../fonts/BentonSans/BentonSans-Bold/BentonSans-Bold.woff') format('woff'),
+         url('../fonts/BentonSans/BentonSans-Bold/BentonSans-Bold.ttf') format('truetype'),
+         url('../fonts/BentonSans/BentonSans-Bold/BentonSans-Bold.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "BentonSans-Regular";
+    src: url('../fonts/BentonSans/BentonSans-Regular/BentonSans-Regular.eot');
+    src: url('../fonts/BentonSans/BentonSans-Regular/BentonSans-Regular.eot') format('embedded-opentype'),
+         url('../fonts/BentonSans/BentonSans-Regular/BentonSans-Regular.woff') format('woff'),
+         url('../fonts/BentonSans/BentonSans-Regular/BentonSans-Regular.ttf') format('truetype'),
+         url('../fonts/BentonSans/BentonSans-Regular/BentonSans-Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+$mik_primary: #1b4265; //dark_blue
+$mik_secondary: #286093; // blue
+$mik_gray: #d9dada; //grey
+$mik_light: #dde6f0; // light blue
+
+
+//other colors
+
+$mik-green: #008732; 
+$mik-yellow: #a76600;
+$mik-red: #8b1a1a;
+
+$background-grey: #c0c0c0;
 
 //
 // Variables
 // --------------------------------------------------
 //== Colors
 //##Colorguide
+
 $color-white: #ffffff;
 $color-white-transparent: rgba($color-white, 0.9);
 $color-gray: #838e98;
@@ -24,11 +60,11 @@ $gray-dark: lighten($gray-base, 20%);
 $gray: lighten($gray-base, 33.5%);
 $gray-light: #e3e3e3;
 $gray-lighter: #f5f5f5;
-$brand-primary: $color-blue;
-$brand-success: $color-green;
-$brand-info: $color-gray;
-$brand-warning: $color-yellow;
-$brand-danger: $color-red;
+$brand-primary: $mik_primary;
+$brand-success: $mik-green;
+$brand-info: $mik_gray;
+$brand-warning: $mik-yellow;
+$brand-danger: $mik-red;
 
 //== Scaffolding
 //
@@ -51,22 +87,24 @@ $link-hover-decoration: underline;
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
-$font-family-sans-serif: 'Open Sans', arial, sans-serif;
+$font-family-sans-serif: 'BentonSans-Regular', 'Open Sans', arial, sans-serif;
+$font-family-sans-serif-bold: 'BentonSans-Bold', 'Open Sans', arial, sans-serif;
 $font-family-serif: Georgia, "Times New Roman", Times, serif;
 
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
 $font-family-base: $font-family-sans-serif;
-$font-size-base: 18px;
+$font-size-base: 16px;
 $font-size-large: ceil(($font-size-base * 1.25));
-$font-size-small: ceil(($font-size-base * 0.85));
-$font-size-h1: floor(($font-size-base * 2.0));
+$font-size-small: ceil(($font-size-base * 0.75)); //12px
+$font-size-extra-small: ceil(($font-size-base * 0.626)); //10px
+$font-size-h1: floor(($font-size-base * 2.125)); //34px
 $font-size-banner-h1: floor(($font-size-base * 2.25));
-$font-size-h2: floor(($font-size-base * 1.75));
-$font-size-h3: ceil(($font-size-base * 1.5));
-$font-size-h4: ceil(($font-size-base * 1.25));
-$font-size-h5: $font-size-base;
-$font-size-h6: ceil(($font-size-base * 0.85));
+$font-size-h2: floor(($font-size-base * 1.5)); // 24px
+$font-size-h3: ceil(($font-size-base * 1.25)); //20px
+$font-size-h4: ceil(($font-size-base * 1.125)); //18px
+$font-size-h5: $font-size-base; //16px
+$font-size-h6: ceil(($font-size-base * 0.875));//14px
 //** Unit-less `line-height` for use in components like buttons.
 $line-height-base: 1.6;
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.

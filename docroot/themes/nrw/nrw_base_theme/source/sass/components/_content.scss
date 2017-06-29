@@ -1,8 +1,8 @@
 // Styles for content region
 
 .main-wrapper {
-  background-color: $gray-lighter;
-  padding-top: $vertical-gutter-width * 1.5;
+  background-color: $background-grey;
+  padding-top: $vertical-gutter-width * 4.125; 
 }
 .main-container {
   background: $color-white;
@@ -12,4 +12,8 @@
 .main-container .region-header {
   position: absolute;
   top: -$vertical-gutter-width * 1.5;
+}
+
+h2{
+  font-family: $font-family-sans-serif;
 }

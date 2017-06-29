@@ -49,8 +49,99 @@
 .dropdown-menu > li  > a {
   line-height: $line-height-computed * 1.5;
 }
-.dropdown-menu .dropdown-parent-link {
+.dropdown-menu .dropdown-parent-link {    
   font-weight: bold;
 }
+  
+ 
 
+.header__upper-menu{
+  .language{
+    padding: $padding-large-vertical $padding-large-vertical*2 $padding-base-vertical $padding-large-vertical*2;
+    -webkit-font-smoothing: antialiased;
+    select{
+        text-transform: uppercase;
+        display: none;
+    }
+    .selector{
+      background: url(../images/language-block.png) no-repeat scroll right 3px transparent;
+      padding-right:  $padding-large-vertical*1.5;
+    }
+    .options{
+      display: block;
+      position: absolute;
+      z-index: 2;
+      left: 64px;
+      top: 42px; 
+      list-style: none;
+      padding: 0;
+      background: $brand-primary;
+       li{
+          padding: $padding-large-vertical/2 $padding-large-vertical;
+          a{
+            font-size: $font-size-base - 6;
+          }
+        }
+      &.hiden{
+        opacity: 0;
+        -moz-transition: opacity 1s, visibility 1.3s;
+        -webkit-transition: opacity 1s, visibility 1.3s;
+        -o-transition: opacity 1s, visibility 1.3s;
+        transition: opacity 1s, visibility 1.3s;
+      }
+      &.open{
+        visibility:visible;
+        opacity: 1;
+        -moz-transition: opacity 1s, visibility 1.3s;
+        -webkit-transition: opacity 1s, visibility 1.3s;
+        -o-transition: opacity 1s, visibility 1.3s;
+        transition: opacity 1s, visibility 1.3s;
+       
+      }
+    }
+    a{
+      cursor: pointer;
+      color: $color-white;
+    }
+  }
+  #secondary-menu{
+    ul{
+      float: right;
+    }
 
+  }
+  .menu{
+    padding-left: 0;
+    ul{  
+      list-style: none;  
+      margin-bottom: 0;
+      padding: 0; 
+      li{
+        display: inline-block;
+        float: left;
+        a{
+          color: $color-white;
+          padding: $padding-large-vertical $padding-large-vertical*2 $padding-large-vertical/2.5 $padding-large-vertical;
+          -webkit-font-smoothing: antialiased;
+          &.gebaerdensprache{
+            background: url(../images/download.png) no-repeat scroll right 6px transparent;
+            padding: $padding-large-vertical $padding-large-vertical*2.4 $padding-large-vertical/2.5 $padding-large-vertical;
+          }
+          &.leichtesprache{
+            background: url(../images/leichtesprache.png) no-repeat scroll right 10px transparent;
+          }
+          &.login{
+            background: url(../images/user-login.png) no-repeat scroll right 10px transparent;
+          }
+          &.kontakt {
+            background: url(../images/kontakt.png) no-repeat scroll right 10px transparent;
+          }
+          
+        } 
+      }
+    }
+    &:last-child{
+      margin-left: auto;
+    }
+  }
+}

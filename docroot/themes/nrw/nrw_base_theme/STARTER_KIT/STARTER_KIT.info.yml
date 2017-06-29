@@ -1,6 +1,6 @@
 core: 8.x
 type: theme
-base theme: nrw_base_theme
+base theme: degov_nrw_theme
 
 name: 'NRW - STARTER_KIT'
 description: 'Starter kit for a theme for a ressort page in NRW. Based on the deGov distribution.'
@@ -26,5 +26,5 @@ libraries:
   - 'STARTER_KIT/theme-assets'
 
 stylesheets-remove:
-  - 'themes/contrib/nrw_base_theme/public/css/bootstrap.css'
-  - 'themes/contrib/nrw_base_theme/public/css/style.css'
+  - 'themes/contrib/degov_nrw_theme/public/css/bootstrap.css'
+  - 'themes/contrib/degov_nrw_theme/public/css/style.css'

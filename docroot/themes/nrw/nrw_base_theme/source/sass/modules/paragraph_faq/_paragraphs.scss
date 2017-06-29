@@ -23,3 +23,84 @@
 		}
 	}
 }
+.field--name-field-normal-page-header-pars{
+	> .field--item{
+		&:after{
+			content: " ";
+			display: inline-block;
+			/* width: 100%; */
+			height: 3px;
+			border: 1px solid $mik_gray;
+			position: relative;
+			margin: 0px -1*($padding-small-vertical*4);
+			width: 1280px;
+			@media(max-width: 1300px){
+				width: 980px;
+			}
+			@media(max-width: 992px){
+				width: 760px;
+			}
+		}
+		&:last-child{
+			&:after{
+				
+				border: 0px solid $mik_gray;
+			}
+		}
+	}
+}
+.faq-list{
+	&__header{
+		padding:  $padding-small-vertical*2 0;
+		margin-top: $padding-base-vertical/3;
+		font-size: $font-size-h2;
+		line-height: $font-size-h2*1.15;
+		.field--name-field-sub-title{
+			font-weight: bold;
+			font-family: $font-family-sans-serif-bold;
+		}
+	}
+}
+.faq{
+	position: relative;
+	padding:  $padding-small-vertical*2 0;
+	margin-top: $padding-base-vertical/3;
+	&__question{	 
+		cursor: pointer;
+		.field--name-field-faq-title{
+			font-size: $font-size-h3;
+  			color: $brand-primary;
+			  &:before{
+				  content: " ";
+				  background-image: url(../images/accordion-close.png);
+				  background-repeat: no-repeat;
+				  display: inline-block;
+				  height: 20px;
+				  width: 20px;
+				  margin-right: $padding-base-horizontal*0.833;
+			  }
+		}
+	}
+	&__answer{
+		display: none;
+		padding-left: $padding-base-horizontal*3;;
+	}
+	&.opened{
+		.field--name-field-faq-title{
+			&:before{
+				  content: " ";
+				  background-image: url(../images/accordion-open.png);
+			}
+		}
+	}
+}
+.paragraph__header{
+	font-size: $font-size-h3; 
+  	color: $brand-primary;
+	.sub-title{
+		font-weight: bold;
+		font-family: $font-family-sans-serif-bold;
+		display: inline-block;
+		width: 100%;
+	}
+}

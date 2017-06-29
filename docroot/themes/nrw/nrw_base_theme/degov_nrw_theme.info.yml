@@ -13,4 +13,5 @@ regions:
   sidebar_second: 'Secondary'
 
 libraries:
-  - 'nrw_base_theme/theme-assets'
+  - 'degov_nrw_theme/theme-assets'
+ 

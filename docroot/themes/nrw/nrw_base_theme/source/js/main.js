@@ -130,6 +130,17 @@ const PhotoSwipeUiDefault = require('photoswipe/dist/photoswipe-ui-default');
     }
   };
 
+  // language selector
+  Drupal.behaviors.languageSelector = {
+    attach: function (context, settings) { 
+      $('.language').once('language-selector').each(function () {
+        $(this).find('a.selector').click(function(){
+          $('.language .options').toggleClass('open hiden'); 
+        })
+      });
+    }
+  };
+
   Drupal.behaviors.photoswipe = {
     attach: function (context, settings) {
       $(context).find('.field--name-field-gallery-element-images').once('photoswipe-processed').each(function () {
