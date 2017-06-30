@@ -1,0 +1,24 @@
+langcode: de
+status: true
+dependencies:
+  module:
+    - video_embed_media
+    - workbench_moderation
+third_party_settings:
+  workbench_moderation:
+    enabled: 0
+    allowed_moderation_states:
+      - published
+      - archived
+      - draft
+      - needs_review
+    default_moderation_state: draft
+id: video
+label: Video
+description: 'A video hosted by YouTube, Vimeo, or some other provider.'
+type: video_embed_field
+queue_thumbnail_downloads: false
+new_revision: false
+type_configuration:
+  source_field: field_media_video_embed_field
+field_map: {  }

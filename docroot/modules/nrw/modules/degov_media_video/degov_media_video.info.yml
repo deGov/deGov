@@ -1,0 +1,17 @@
+name: 'deGov - Video'
+description: 'Erweiterung des existierenden Video Bundles um Copyright und Caption.'
+package: deGov
+type: module
+core: 8.x
+dependencies:
+  - degov_content_types_shared_fields
+  - degov_taxonomy_term_copyright
+  - config_rewrite
+  - field
+  - image
+  - language
+  - media_entity
+  - taxonomy
+  - video_embed_field
+  - video_embed_media
+  - workbench_moderation

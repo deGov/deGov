@@ -1,0 +1,13 @@
+langcode: de
+status: true
+dependencies:
+  enforced:
+    module:
+      - degov_taxonomy_term_copyright
+  config:
+    - taxonomy.vocabulary.copyright
+id: taxonomy_term.copyright
+target_entity_type_id: taxonomy_term
+target_bundle: copyright
+default_langcode: site_default
+language_alterable: false
