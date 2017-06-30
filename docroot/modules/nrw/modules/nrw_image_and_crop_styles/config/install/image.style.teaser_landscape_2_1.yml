@@ -3,6 +3,9 @@ status: true
 dependencies:
   module:
     - crop
+  enforced:
+    module:
+      - nrw_image_and_crop_styles
 name: teaser_landscape_2_1
 label: 'Teaser landscape (2:1)'
 effects:

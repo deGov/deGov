@@ -1,0 +1,19 @@
+{#
+/**
+ * @file
+ * Default theme implementation to present a media entity.
+ *
+ * Available variables:
+ * - name: Name of the media.
+ * - content: Media content.
+ *
+ * @see template_preprocess_media()
+ *
+ * @ingroup themeable
+ */
+#}
+<article class="video">
+  <div class="video__video">{{ content.field_media_video_embed_field }}</div>
+  <div class="video__caption">{{ content.field_video_caption }}</div>
+  <div class="video__copyright"><span class="video__copryright-label">Copyright:</span> {{ content.field_video_copyright }}</div>
+</article>

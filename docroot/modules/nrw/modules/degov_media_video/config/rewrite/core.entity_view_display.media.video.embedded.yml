@@ -1,0 +1,25 @@
+langcode: de
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.media.embedded
+    - field.field.media.video.field_media_in_library
+    - field.field.media.video.field_video_caption
+    - field.field.media.video.field_video_copyright
+    - field.field.media.video.field_media_video_embed_field
+    - media_entity.bundle.video
+id: media.video.embedded
+targetEntityType: media
+bundle: video
+mode: embedded
+content: {  }
+hidden:
+  created: true
+  field_media_in_library: true
+  field_video_caption: true
+  field_video_copyright: true
+  field_media_video_embed_field: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

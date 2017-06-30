@@ -8,7 +8,6 @@ dependencies:
   - editor
   - entity_embed
   - filter
-  - lightning_media
   - linkit
   - node
   - spamspan

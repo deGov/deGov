@@ -1,6 +1,9 @@
 langcode: de
 status: true
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - nrw_image_and_crop_styles
 label: '1 zu 1'
 id: 1_to_1
 description: '1:1 Bildzuschnitt, z.B. für Teaser squared'

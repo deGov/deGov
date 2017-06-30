@@ -3,6 +3,9 @@ status: true
 dependencies:
   module:
     - crop
+  enforced:
+    module:
+      - nrw_image_and_crop_styles
 name: teaser_squared_1_1
 label: 'Teaser squared (1:1)'
 effects:

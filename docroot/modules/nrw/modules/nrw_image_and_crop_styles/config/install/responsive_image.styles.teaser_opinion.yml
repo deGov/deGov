@@ -3,6 +3,9 @@ status: true
 dependencies:
   config:
     - image.style.teaser_opinion_4_1
+  enforced:
+    module:
+      - nrw_image_and_crop_styles
 id: teaser_opinion
 label: 'Teaser opinion'
 image_style_mappings:

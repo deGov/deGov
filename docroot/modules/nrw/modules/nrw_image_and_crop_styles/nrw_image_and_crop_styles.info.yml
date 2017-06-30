@@ -9,3 +9,4 @@ dependencies:
   - responsive_image
   - crop_media_entity
   - image_widget_crop
+  - config_rewrite

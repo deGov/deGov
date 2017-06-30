@@ -3,6 +3,9 @@ status: true
 dependencies:
   config:
     - image.style.slider_main_16_9
+  enforced:
+    module:
+      - nrw_image_and_crop_styles
 id: slider_main
 label: 'Slider main'
 image_style_mappings:

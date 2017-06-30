@@ -12,3 +12,7 @@ settings:
   show_default_crop: true
   show_crop_area: true
 langcode: de
+dependencies:
+  enforced:
+    module:
+      - nrw_image_and_crop_styles

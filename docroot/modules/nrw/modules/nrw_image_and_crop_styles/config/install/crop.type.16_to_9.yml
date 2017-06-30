@@ -1,6 +1,9 @@
 langcode: de
 status: true
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - nrw_image_and_crop_styles
 label: '16 zu 9'
 id: 16_to_9
 description: '16:9 Bildzuschnitt, z.B. für Main Slider'
