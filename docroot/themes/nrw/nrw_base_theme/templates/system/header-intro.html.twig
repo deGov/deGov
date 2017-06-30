@@ -22,16 +22,21 @@
         <div class="menu col-md-3">
             <nav id="service-menu" class="navigation" role="navigation">
                 <ul class="menu clearfix">
-                    <li class="first leaf"><a href="/de/leichte-sprache" class="leichtesprache">Leichte Sprache</a></li>
-                    <li class="last leaf"><a href="/de/gebaerdensprache" class="gebaerdensprache">Gebärdensprache</a></li>
+                    <li class="first leaf"><a href="/leichte-sprache" class="leichtesprache">Leichte Sprache</a></li>
+                    <li class="last leaf"><a href="/gebaerdensprache" class="gebaerdensprache">Gebärdensprache</a></li>
                 </ul>
             </nav>
         </div>
         <div class="menu col-md-3 pull-right">
             <nav id="secondary-menu" role="navigation" class="navigation">
                 <ul id="secondary-menu-links" class="links inline clearfix">
-                    <li class="menu-22577 first"><a href="/de/user/login" title="Anmelden / Registrieren" class="login">Anmelden / Registrieren</a></li>
-                    <li class="menu-14823 last"><a href="/de/servicecenter/kontakt" title="Kontakt" class="kontakt">Kontakt</a></li>
+                    {% if logged_in %}
+                        <li class="first"><a href="/user" title="Benutzer" class="login">Benutzer</a></li>
+                    {% else %}
+                        <li class="first"><a href="/user/login" title="Anmelden / Registrieren" class="login">Anmelden / Registrieren</a></li>  
+                    {% endif %}
+                   
+                    <li class="last"><a href="/servicecenter/kontakt" title="Kontakt" class="kontakt">Kontakt</a></li>
                 </ul>
             </nav>
         </div>
