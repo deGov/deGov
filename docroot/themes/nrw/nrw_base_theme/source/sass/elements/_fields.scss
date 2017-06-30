@@ -74,3 +74,44 @@
 		clear: left;
 	}
 }
+
+.field--name-field-text-text{
+	.embedded-entity{
+		&.align-left{
+			margin-right: 15px;
+		}
+		&.align-right{
+			margin-left: 15px;
+		}
+	}
+	ul{
+		list-style: none;
+		li{
+			&:before{
+				content: "";
+				margin-right: 10px;
+				background: $gray-base;
+				background-size: 4px 4px;
+				display: inline-block;
+				border-radius: 50%;
+				width: 5px;
+				height: 5px;
+				background-position: 11px 7px;
+				line-height: 49px;
+				position: relative;
+				bottom: 3px;
+				
+			}
+		}
+	}
+	ol{
+		list-style: none;
+		li{
+			counter-increment: counter;
+			&:before{
+				content: counter(counter);
+				margin-right: 10px;
+			}
+		}
+	}
+}
