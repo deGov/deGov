@@ -1,9 +1,14 @@
 langcode: de
 status: true
 dependencies:
+  enforced:
+    module:
+      - degov_node_event
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.blog.field_blog_author
     - field.field.node.blog.field_blog_date
+    - field.field.node.blog.field_blog_image
     - field.field.node.blog.field_blog_sub_title
     - field.field.node.blog.field_content_paragraphs
     - field.field.node.blog.field_sidebar_right_paragraphs
@@ -12,6 +17,7 @@ dependencies:
     - field.field.node.blog.field_teaser_title
     - node.type.blog
   module:
+    - datetime
     - panelizer
     - text
     - user
@@ -26,9 +32,18 @@ targetEntityType: node
 bundle: blog
 mode: teaser
 content:
+  field_blog_date:
+    type: datetime_default
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: short
+    third_party_settings: {  }
   field_teaser_image:
     type: entity_reference_entity_view
-    weight: 1
+    weight: 2
     region: content
     label: hidden
     settings:
@@ -37,21 +52,22 @@ content:
     third_party_settings: {  }
   field_teaser_text:
     type: text_default
-    weight: 2
+    weight: 3
     region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
   field_teaser_title:
     type: string
-    weight: 0
+    weight: 1
     region: content
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
 hidden:
-  field_blog_date: true
+  field_blog_author: true
+  field_blog_image: true
   field_blog_sub_title: true
   field_content_paragraphs: true
   field_sidebar_right_paragraphs: true

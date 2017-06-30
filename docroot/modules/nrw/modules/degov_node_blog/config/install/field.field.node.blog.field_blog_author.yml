@@ -5,24 +5,24 @@ dependencies:
     module:
       - degov_node_event
   config:
-    - field.storage.node.field_teaser_image
-    - media_entity.bundle.image
+    - field.storage.node.field_blog_author
+    - media_entity.bundle.person
     - node.type.blog
-id: node.blog.field_teaser_image
-field_name: field_teaser_image
+id: node.blog.field_blog_author
+field_name: field_blog_author
 entity_type: node
 bundle: blog
-label: 'Vorschau Bild'
+label: Blogautor
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:media'
   handler_settings:
     target_bundles:
-      image: image
+      person: person
     sort:
       field: _none
     auto_create: false

@@ -1,6 +1,9 @@
 langcode: de
 status: true
 dependencies:
+  enforced:
+    module:
+      - degov_node_event
   module:
     - node
 id: node.field_blog_sub_title

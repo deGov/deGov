@@ -1,8 +1,14 @@
 langcode: de
 status: true
 dependencies:
+  enforced:
+    module:
+      - degov_node_event
   config:
+    - entity_browser.browser.media_browser
+    - field.field.node.blog.field_blog_author
     - field.field.node.blog.field_blog_date
+    - field.field.node.blog.field_blog_image
     - field.field.node.blog.field_blog_sub_title
     - field.field.node.blog.field_content_paragraphs
     - field.field.node.blog.field_sidebar_right_paragraphs
@@ -12,6 +18,7 @@ dependencies:
     - node.type.blog
   module:
     - datetime
+    - entity_browser
     - paragraphs
     - path
     - text
@@ -23,9 +30,23 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 12
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_blog_author:
+    type: entity_browser_entity_reference
+    weight: 7
+    settings:
+      entity_browser: media_browser
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_display_settings:
+        view_mode: thumbnail
+      open: true
+    region: content
     third_party_settings: {  }
   field_blog_date:
     weight: 2
@@ -33,6 +54,20 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
+  field_blog_image:
+    type: entity_browser_entity_reference
+    weight: 6
+    settings:
+      entity_browser: media_browser
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_display_settings:
+        view_mode: thumbnail
+      open: true
+    region: content
+    third_party_settings: {  }
   field_blog_sub_title:
     weight: 1
     settings:
@@ -42,7 +77,7 @@ content:
     type: string_textfield
     region: content
   field_content_paragraphs:
-    weight: 6
+    weight: 8
     settings:
       title: Absatz
       title_plural: Paragraphs
@@ -54,7 +89,7 @@ content:
     type: entity_reference_paragraphs
     region: content
   field_sidebar_right_paragraphs:
-    weight: 7
+    weight: 9
     settings:
       title: Absatz
       title_plural: Paragraphs
@@ -68,11 +103,16 @@ content:
   field_teaser_image:
     weight: 4
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      entity_browser: media_browser
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_display_settings:
+        view_mode: default
+      open: false
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: entity_browser_entity_reference
     region: content
   field_teaser_text:
     weight: 5
@@ -92,13 +132,13 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 8
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 13
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -106,14 +146,14 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 11
+    weight: 13
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 12
+    weight: 14
     region: content
     third_party_settings: {  }
   title:
@@ -126,7 +166,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 9
+    weight: 11
     settings:
       match_operator: CONTAINS
       size: 60

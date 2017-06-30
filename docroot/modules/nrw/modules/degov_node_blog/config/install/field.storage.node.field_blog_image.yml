@@ -5,15 +5,15 @@ dependencies:
     module:
       - degov_node_event
   module:
-    - datetime
+    - media_entity
     - node
-id: node.field_blog_date
-field_name: field_blog_date
+id: node.field_blog_image
+field_name: field_blog_image
 entity_type: node
-type: datetime
+type: entity_reference
 settings:
-  datetime_type: date
-module: datetime
+  target_type: media
+module: core
 locked: false
 cardinality: 1
 translatable: true

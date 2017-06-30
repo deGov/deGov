@@ -5,17 +5,17 @@ dependencies:
     module:
       - degov_node_event
   config:
-    - field.storage.node.field_teaser_image
+    - field.storage.node.field_blog_image
     - media_entity.bundle.image
     - node.type.blog
-id: node.blog.field_teaser_image
-field_name: field_teaser_image
+id: node.blog.field_blog_image
+field_name: field_blog_image
 entity_type: node
 bundle: blog
-label: 'Vorschau Bild'
+label: Bild
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

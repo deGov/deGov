@@ -1,6 +1,9 @@
 langcode: de
 status: true
 dependencies:
+  enforced:
+    module:
+      - degov_node_event
   config:
     - field.storage.node.field_sidebar_right_paragraphs
     - node.type.blog
