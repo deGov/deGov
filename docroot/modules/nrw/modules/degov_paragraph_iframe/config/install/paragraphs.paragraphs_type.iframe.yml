@@ -1,0 +1,9 @@
+langcode: de
+status: true
+dependencies:
+  enforced:
+    module:
+      - degov_paragraph_iframe
+id: iframe
+label: Iframe
+behavior_plugins: {  }

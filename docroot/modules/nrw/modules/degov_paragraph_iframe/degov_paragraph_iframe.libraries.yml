@@ -1,0 +1,18 @@
+iframe:
+  version: 1.0
+  js:
+    js/iframe.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
+davidjbradshaw.iframe-resizer:
+  remote: https://github.com/davidjbradshaw/iframe-resizer
+  version: 3.5.14
+  license:
+    name: MIT
+    url: https://github.com/davidjbradshaw/iframe-resizer/blob/master/LICENSE
+    gpl-compatible: true
+  js:
+    https://cdn.jsdelivr.net/iframe-resizer/3.5.14/iframeResizer.min.js: { type: external, minified: true }

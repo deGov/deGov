@@ -1,0 +1,21 @@
+langcode: de
+status: true
+dependencies:
+  enforced:
+    module:
+      - degov_paragraph_iframe
+  config:
+    - field.storage.paragraph.field_iframe_sub_title
+    - paragraphs.paragraphs_type.iframe
+id: paragraph.iframe.field_iframe_sub_title
+field_name: field_iframe_sub_title
+entity_type: paragraph
+bundle: iframe
+label: Untertitel
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

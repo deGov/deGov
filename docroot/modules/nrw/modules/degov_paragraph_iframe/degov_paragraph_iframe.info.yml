@@ -1,0 +1,11 @@
+name: 'deGov - Iframe'
+description: 'Stellt einen Paragraphen zum Einbinden von Iframes bereit.'
+package: deGov
+type: module
+core: 8.x
+dependencies:
+  - field
+  - link
+  - paragraphs
+  - workbench_moderation
+  - degov_content_types_shared_fields
