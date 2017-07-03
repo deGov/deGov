@@ -1,0 +1,16 @@
+<?php
+
+use Drupal\degov_content_types_shared_fields\Common;
+
+/**
+ * Implements hook_preprocess().
+ */
+function degov_node_blog_preprocess(&$variables, $hook, &$info) {
+  // Add template suggestions and libraries implemented in this module.
+  Common::addThemeSuggestions($variables, $hook, $info, [
+    'module_name' => 'degov_node_blog',
+    'entity_type' => 'node',
+    'entity_bundles' => ['blog'],
+    'entity_view_modes' => ['teaser']
+  ]);
+}
