@@ -1,0 +1,31 @@
+<?php
+
+use Drupal\degov_content_types_shared_fields\Common;
+
+/**
+ * Implements hook_preprocess().
+ */
+function degov_media_document_preprocess(&$variables, $hook, &$info) {
+  if ($hook === 'media') {
+    /* @var \Drupal\media_entity\Entity\Media $media */
+    $media = $variables['elements']['#media'];
+    $variables['media'] = $media;
+
+    if ($media->bundle() === 'document') {
+      /* @var \Drupal\file\Entity\File $file */
+      $file = $media->field_document->entity;
+      $variables['media_url'] = file_create_url($file->getFileUri());
+      $variables['media_bytes'] = $file->getSize();
+      $variables['media_size'] = format_size($file->getSize());
+      $variables['media_mime'] = $file->getMimeType();
+    }
+  }
+
+  // Add template suggestions and libraries implemented in this module.
+  Common::addThemeSuggestions($variables, $hook, $info, [
+    'module_name' => 'degov_media_document',
+    'entity_type' => 'media',
+    'entity_bundles' => ['document'],
+    'entity_view_modes' => [],
+  ]);
+}

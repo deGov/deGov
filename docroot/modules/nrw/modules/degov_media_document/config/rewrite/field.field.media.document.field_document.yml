@@ -1,0 +1,26 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_document
+    - media_entity.bundle.document
+  module:
+    - file
+id: media.document.field_document
+field_name: field_document
+entity_type: media
+bundle: document
+label: Datei
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: media/document/file
+  file_extensions: 'doc docx xls xlsx csv ppt pptx'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

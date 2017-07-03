@@ -1,0 +1,30 @@
+langcode: de
+status: true
+dependencies:
+  enforced:
+    module:
+      - degov_paragraph_downloads
+  config:
+    - field.storage.paragraph.field_downloads_files
+    - media_entity.bundle.document
+    - paragraphs.paragraphs_type.downloads
+id: paragraph.downloads.field_downloads_files
+field_name: field_downloads_files
+entity_type: paragraph
+bundle: downloads
+label: Dateien
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      document: document
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
