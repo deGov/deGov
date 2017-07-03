@@ -1,0 +1,45 @@
+langcode: de
+status: true
+dependencies:
+  enforced:
+    module:
+      - degov_node_blog
+  config:
+    - field.storage.node.field_sidebar_right_paragraphs
+    - node.type.blog
+  module:
+    - entity_reference_revisions
+id: node.blog.field_sidebar_right_paragraphs
+field_name: field_sidebar_right_paragraphs
+entity_type: node
+bundle: blog
+label: 'Seitenleiste rechts'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles: null
+    target_bundles_drag_drop:
+      faq:
+        weight: 7
+        enabled: false
+      faq_list:
+        weight: 8
+        enabled: false
+      node_reference:
+        weight: 9
+        enabled: false
+      slide:
+        weight: 10
+        enabled: false
+      slideshow:
+        weight: 11
+        enabled: false
+      text:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

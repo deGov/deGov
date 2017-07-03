@@ -1,0 +1,9 @@
+langcode: de
+status: true
+dependencies:
+  enforced:
+    module:
+      - degov_paragraph_downloads
+id: downloads
+label: Downloads
+behavior_plugins: {  }

@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * Default theme implementation to present a media entity.
+ *
+ * Available variables:
+ * - name: Name of the media.
+ * - content: Media content.
+ *
+ * @see template_preprocess_media()
+ *
+ * @ingroup themeable
+ */
+#}
+<article class="document">
+  <div class="document__title"><a type="{{ media_mime }}; length={{ media_bytes }}" href="{{ media_url }}">{{ name }}</a></div>
+  <div class="document__meta" >
+    <span class="mime-{{ media_mime|clean_class }}"></span>{{ media_size }}
+  </div>
+</article>

@@ -75,13 +75,15 @@
   
     {% include 'header-intro.html.twig' %}
     <div class="header__branding">
-        <div class="col-md-3 header__title">
-            <span>WIR IN NRW</span>
-            DAS LANDESPORTAL
-        </div>
+        <a href="{{ url('<front>') }}">
+          <div class="col-md-3 header__title">
+              <span>WIR IN NRW</span>
+              DAS LANDESPORTAL
+          </div>
+        </a>
         <div class="col-md-3 pull-right header__logo">
             <div class="image">
-                <img src="{{ base_path ~ directory }}/source/images/logo.png"></div>
+                <a href="{{ url('<front>') }}"><img src="{{ base_path ~ directory }}/source/images/logo.png"></div></a>
             </div>
         </div>
     </div>

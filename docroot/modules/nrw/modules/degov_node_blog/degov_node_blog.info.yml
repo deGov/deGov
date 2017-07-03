@@ -1,0 +1,21 @@
+name: 'deGov - Inhalt Blog'
+description: 'Dieses Modul stellt einen Inhaltstyp für Blogeinträge bereit.'
+package: deGov
+type: module
+core: 8.x
+dependencies:
+  - datetime
+  - entity_browser
+  - entity_reference_revisions
+  - field
+  - language
+  - media_entity
+  - menu_ui
+  - node
+  - paragraphs
+  - path
+  - text
+  - user
+  - workbench_moderation
+  - degov_content_types_shared_fields
+  - degov_media_person

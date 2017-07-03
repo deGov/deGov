@@ -38,12 +38,18 @@
  * @ingroup themeable
  */
 #}
-<div class="paragraph faq-list">
-  <div class="paragraph__header"> 
-    <h2>{{ content.field_title }}
-      <span class="sub-title">{{ content.field_sub_title }}</span></h2>
-  </div>
-  <div class="paragraph__content">
-    {{ content.field_faq_list_inner_paragraphs }}
+<div class="downloads">
+  {% if paragraph.field_title.value or paragraph.field_sub_title.value %}
+  <h2 class="downloads__header">
+    {% if paragraph.field_title.value %}
+    {{ paragraph.field_title.value }}
+    {% endif %}
+    {% if paragraph.field_sub_title.value %}
+    <span class="subtitle">{{ paragraph.field_sub_title.value }}</span>
+    {% endif %}
+  </h2>
+  {% endif %}
+  <div class="downloads__content">
+    {{ content.field_downloads_files }}
   </div>
 </div>

@@ -1,0 +1,13 @@
+name: 'deGov - Dokument'
+description: 'Ein Media Bundle für Dokumente'
+bundle: deGov
+type: module
+core: 8.x
+dependencies:
+  - field
+  - file
+  - media_entity
+  - media_entity_document
+  - workbench_moderation
+  - config_rewrite
+  - degov_content_types_shared_fields

@@ -1,0 +1,21 @@
+langcode: de
+status: true
+dependencies:
+  enforced:
+    module:
+      - degov_node_blog
+  config:
+    - field.storage.node.field_teaser_title
+    - node.type.blog
+id: node.blog.field_teaser_title
+field_name: field_teaser_title
+entity_type: node
+bundle: blog
+label: 'Vorschau Titel'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
