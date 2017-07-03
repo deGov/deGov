@@ -4,6 +4,9 @@ dependencies:
   config:
     - field.storage.media.field_image_description
     - media_entity.bundle.image
+  enforced:
+    module:
+      - degov_media_image
   module:
     - text
 id: media.image.field_image_description

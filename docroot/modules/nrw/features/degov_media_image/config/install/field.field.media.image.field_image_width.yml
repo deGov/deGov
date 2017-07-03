@@ -4,6 +4,9 @@ dependencies:
   config:
     - field.storage.media.field_image_width
     - media_entity.bundle.image
+  enforced:
+    module:
+      - degov_media_image
 id: media.image.field_image_width
 field_name: field_image_width
 entity_type: media
