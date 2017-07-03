@@ -1,6 +1,6 @@
 name: 'deGov - Blog'
 description: 'Dieses Modul stellt einen Blog bereit.'
-package: deGov
+package: nrw
 type: module
 core: 8.x
 dependencies:
