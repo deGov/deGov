@@ -1,6 +1,6 @@
-name: 'deGov - Blog'
-description: 'Dieses Modul stellt einen Blog bereit.'
-package: nrw
+name: 'deGov - Inhalt Blog'
+description: 'Dieses Modul stellt einen Inhaltstyp für Blogeinträge bereit.'
+package: deGov
 type: module
 core: 8.x
 dependencies:
@@ -12,7 +12,6 @@ dependencies:
   - media_entity
   - menu_ui
   - node
-  - panelizer
   - paragraphs
   - path
   - text
