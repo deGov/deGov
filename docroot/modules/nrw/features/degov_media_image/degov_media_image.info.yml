@@ -1,0 +1,14 @@
+name: 'degov media image'
+type: module
+core: 8.x
+dependencies:
+  - datetime
+  - field
+  - file
+  - image
+  - media_entity
+  - media_entity_image
+  - taxonomy
+  - text
+  - workbench_moderation
+  - config_rewrite
