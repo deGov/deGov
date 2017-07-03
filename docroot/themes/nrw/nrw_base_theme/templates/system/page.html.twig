@@ -154,12 +154,8 @@
 {% endblock %}
 
 
-  {% block footer %}
-    <div class="footer-wrapper">
-      <footer class="footer {{ container }}" role="contentinfo">
-      <img src="{{ base_path ~ directory }}/source/images/footer.png">
-      </footer>
-    </div>
+{% block footer %}
+  {% include 'footer.html.twig' %}
 {% endblock %}
 
 
