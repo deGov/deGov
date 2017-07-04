@@ -2,6 +2,7 @@ langcode: und
 status: true
 dependencies:
   module:
+    - crop
     - media_entity_image
     - workbench_moderation
 third_party_settings:
@@ -13,6 +14,8 @@ third_party_settings:
       - draft
       - needs_review
     default_moderation_state: draft
+  crop:
+    image_field: image
 id: image
 label: Image
 description: 'Locally hosted images.'
@@ -21,5 +24,8 @@ queue_thumbnail_downloads: false
 new_revision: false
 type_configuration:
   source_field: image
-  gather_exif: '0'
-field_map: {  }
+  gather_exif: false
+field_map:
+  mime: field_image_mime
+  width: field_image_width
+  height: field_image_height
