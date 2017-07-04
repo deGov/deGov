@@ -1,0 +1,43 @@
+.paragraph{
+    &.downloads{
+        .field--item{
+            @include icon-before($fa-var-arrow-circle-o-down);    
+            width: 100%; 
+            &__meta{
+                font-size: $font-size-h6;
+            }
+        }
+
+    }
+}
+
+.paragraph.nav-list{
+    .field--item{
+        float: left; 
+        margin-top: $padding-large-vertical + 5;
+        -webkit-font-smoothing: antialiased;
+        &:before{
+            float: left;
+            min-height: 32px;
+            position: relative;
+            top: 4px;
+            font-size: $font-size-h3;
+            color: $brand-primary;
+            margin-right: $padding-base-horizontal;
+        }
+    }
+}
+.sidebar{
+    .paragraph.nav-list{
+        .field--items{
+            columns: 1;
+        }
+    }
+}
+.region-content{
+    .paragraph.nav-list{
+        .field--items{
+            columns: 2;
+        }
+    }
+}

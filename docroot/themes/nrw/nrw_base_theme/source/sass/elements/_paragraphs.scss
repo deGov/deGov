@@ -1,6 +1,9 @@
 // Give some space to paragraph fields
 .paragraph {
 	margin: $vertical-gutter-width*2 0;
+	a{
+		font-family: $font-family-sans-serif-bold;
+	}
 }
 
 .paragraph__header{
@@ -9,7 +12,7 @@
 	display: flex;
 	margin: 0 -20px;
     padding: 20px;
-    background: $mik_light;
+    background: $nrw-light;
 	i{
 		color: $color-white;
 		background-color: $brand-primary;

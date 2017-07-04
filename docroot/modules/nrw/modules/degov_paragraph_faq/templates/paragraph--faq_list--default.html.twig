@@ -49,7 +49,7 @@
   <div class="paragraph__header">
     <i class="fa fa-arrow-right" aria-hidden="true"></i>
     <h2>{% spaceless %}{{ title|striptags }}{% endspaceless %}
-    <span class="sub-title">{{ sub_title }}</span></h2>
+    <span class="sub-title">{% spaceless %}{{ sub_title|striptags }}{% endspaceless %}</span></h2>
   </div>
   <div class="paragraph__content">
     {{ content.field_faq_list_inner_paragraphs }}
