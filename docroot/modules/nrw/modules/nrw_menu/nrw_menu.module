@@ -22,11 +22,16 @@ function nrw_menu_theme($existing, $type, $theme, $path) {
 }
 
 /**
+ * Proprocess page content to add menus
+ * 
  * @param $variables
  */
 function nrw_menu_preprocess_page(&$variables) {
+  // get the simplify_menu service
   $menuTree = \Drupal::service('simplify_menu.menu_items');
+  // get the menu items from main menu tree
   $menuItems = $menuTree->getMenuTree('main');
+  // create the variables for page.html.twig template
   $variables['page_header_menu'] = [
     '#theme' => 'nrw_menu_header',
     '#menu_items' => $menuItems,
@@ -37,4 +42,6 @@ function nrw_menu_preprocess_page(&$variables) {
     '#menu_items' => $menuItems,
     '#menu_extra' => '',
   ];
+  // add the library for adding expandable functionality
+  $variables['#attached']['library'][] = 'nrw_menu/nrw_menu';
 }
