@@ -27,10 +27,14 @@ class MenuItems extends SimplifiedMenuItems {
   protected function simplifyLinks(array $links, $submenuKey = 'submenu') {
     $result = [];
     foreach ($links as $item) {
+      // get menu item definitions to get the entity id of the menu item
       $menuDefinition = $item->link->getPluginDefinition();
+      // load the menu link content entity to get menu_extra valuie
       $menuItem = MenuLinkContent::load($menuDefinition['metadata']['entity_id']);
       $extra = '';
+      // check if the value is set
       if (!$menuItem->get('menu_extra')->isEmpty()) {
+        // create the proper markup with all the filters applied
         $extra = check_markup($menuItem->get('menu_extra')->value, $menuItem->get('menu_extra')->format);
       }
       $simplifiedLink = [

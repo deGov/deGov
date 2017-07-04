@@ -48,6 +48,7 @@ function nrw_menu_preprocess_page(&$variables) {
  */
 function nrw_menu_entity_base_field_info(\Drupal\Core\Entity\EntityTypeInterface $entity_type) {
   if ($entity_type->id() == 'menu_link_content') {
+    // add the extra field to menu link content entity to store the extra data
     $fields = [];
     $fields['menu_extra'] = \Drupal\Core\Field\BaseFieldDefinition::create('text_long')
         ->setLabel(t('Extra Content'))
