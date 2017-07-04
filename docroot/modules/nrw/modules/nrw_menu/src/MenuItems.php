@@ -1,0 +1,51 @@
+<?php
+
+namespace Drupal\nrw_menu;
+
+use Drupal\menu_link_content\Entity\MenuLinkContent;
+use Drupal\simplify_menu\MenuItems as SimplifiedMenuItems;
+
+
+/**
+ * Class MenuItems.
+ *
+ * @package \Drupal\nrw_menu
+ */
+class MenuItems extends SimplifiedMenuItems {
+
+  /**
+   * Map menu tree into an array.
+   *
+   * @param array $links
+   *   The array of menu tree links.
+   * @param string $submenuKey
+   *   The key for the submenu to simplify.
+   *
+   * @return array
+   *   The simplified menu tree array.
+   */
+  protected function simplifyLinks(array $links, $submenuKey = 'submenu') {
+    $result = [];
+    foreach ($links as $item) {
+      $menuDefinition = $item->link->getPluginDefinition();
+      $menuItem = MenuLinkContent::load($menuDefinition['metadata']['entity_id']);
+      $extra = '';
+      if (!$menuItem->get('menu_extra')->isEmpty()) {
+        $extra = check_markup($menuItem->get('menu_extra')->value, $menuItem->get('menu_extra')->format);
+      }
+      $simplifiedLink = [
+        'text' => $item->link->getTitle(),
+        'url' => $item->link->getUrlObject()->toString(),
+        'menu_extra' => $extra,
+      ];
+
+      if ($item->hasChildren) {
+        $simplifiedLink[$submenuKey] = $this->simplifyLinks($item->subtree);
+      }
+      $result[] = $simplifiedLink;
+    }
+
+    return $result;
+  }
+
+}

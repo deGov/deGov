@@ -42,11 +42,12 @@
             </ul>
             {% endif %}
         </div>
+        {% if menu_item is not empty %}
         <div class="nrw-menu__extra">
             <!-- Extra content goes here, see screenshot below, content on the right side. Mock something here -->
-            {{ menu_extra }}
+            {{ menu_item.menu_extra }}
         </div>
-
+        {% endif %}
     </div>
     {% endfor %}
 </div>
