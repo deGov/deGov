@@ -1,11 +1,11 @@
 langcode: de
 status: true
 dependencies:
-  module:
-    - crop
   enforced:
     module:
       - nrw_image_and_crop_styles
+  module:
+    - crop
 name: teaser_opinion_4_1
 label: 'Teaser opinion (4:1)'
 effects:
