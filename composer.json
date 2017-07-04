@@ -53,7 +53,8 @@
         "drupal/linkit": "^4.3",
         "drupal/config_rewrite": "^1.0",
         "drupal/image_widget_crop": "^2.0",
-        "drupal/address": "^1.0"
+        "drupal/address": "^1.0",
+        "drupal/simplify_menu": "1.x-dev"
     },
     "repositories": {
         "drupal": {
