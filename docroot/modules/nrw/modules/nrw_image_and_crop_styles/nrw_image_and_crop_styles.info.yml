@@ -11,5 +11,4 @@ dependencies:
   - image_widget_crop
   - lightning_core
   - media_entity
-  - nrw_image_and_crop_styles
   - responsive_image
