@@ -12,7 +12,7 @@ id: media.video.field_video_copyright
 field_name: field_video_copyright
 entity_type: media
 bundle: video
-label: Copyright
+label: 'Copyright'
 description: ''
 required: true
 translatable: false
