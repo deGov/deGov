@@ -3,4 +3,32 @@
 	margin: $vertical-gutter-width*2 0;
 }
 
-    
+.paragraph__header{
+	font-size: $font-size-h3; 
+  	color: $brand-primary;
+	display: flex;
+	margin: 0 -20px;
+    padding: 20px;
+    background: $mik_light;
+	i{
+		color: $color-white;
+		background-color: $brand-primary;
+		width: 45px;
+  		height: 45px;
+		display: flex;
+		align-items: center;
+  		justify-content: center;
+		float: left;
+		margin-right: $padding-base-horizontal + 5;
+	}
+	h2{
+		margin: 0;
+		line-height: 1;
+	}
+	.sub-title{
+		font-weight: bold;
+		font-family: $font-family-sans-serif-bold;
+		display: inline-block;
+		width: 100%;
+	}
+}
