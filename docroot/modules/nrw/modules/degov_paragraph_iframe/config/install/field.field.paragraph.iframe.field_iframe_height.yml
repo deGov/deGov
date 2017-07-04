@@ -1,0 +1,27 @@
+langcode: de
+status: true
+dependencies:
+  enforced:
+    module:
+      - degov_paragraph_iframe
+  config:
+    - field.storage.paragraph.field_iframe_height
+    - paragraphs.paragraphs_type.iframe
+id: paragraph.iframe.field_iframe_height
+field_name: field_iframe_height
+entity_type: paragraph
+bundle: iframe
+label: Höhe
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 400
+default_value_callback: ''
+settings:
+  min: 20
+  max: 2000
+  prefix: ''
+  suffix: ''
+field_type: integer
