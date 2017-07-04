@@ -80,6 +80,11 @@ class Common {
     /* @var $entity_type string */
     /* @var $entity_bundles array */
     extract($options);
+    // Retrieve the bundle name of the entity type.
+    $entity_bundle_name = 'type';
+    if ($entity_type == 'media') {
+      $entity_bundle_name = 'bundle';
+    }
     if ($entity_type == 'paragraph') {
       // TODO: There is still a problem with orphaned paragraph references.
       //       Although the paragraph has been removed, the references (on the node) still exist.
@@ -95,7 +100,7 @@ class Common {
     foreach ($entity_bundles as $entity_bundle) {
       \Drupal::logger($entity_bundle)->notice(t('Removing all content of type @bundle', array('@bundle' => $entity_bundle)));
       $entity_ids = \Drupal::entityQuery($entity_type)
-        ->condition('type', $entity_bundle)
+        ->condition($entity_bundle_name, $entity_bundle)
         ->execute();
       $controller = \Drupal::entityTypeManager()->getStorage($entity_type);
       $entities = $controller->loadMultiple($entity_ids);

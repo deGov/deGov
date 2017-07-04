@@ -1,11 +1,11 @@
 langcode: de
 status: true
 dependencies:
-  module:
-    - crop
   enforced:
     module:
       - nrw_image_and_crop_styles
+  module:
+    - crop
 name: teaser_landscape_small_8_3
 label: 'Teaser landscape small (8:3)'
 effects:

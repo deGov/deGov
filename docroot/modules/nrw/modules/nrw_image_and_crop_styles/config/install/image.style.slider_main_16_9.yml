@@ -1,11 +1,11 @@
 langcode: de
 status: true
 dependencies:
-  module:
-    - crop
   enforced:
     module:
       - nrw_image_and_crop_styles
+  module:
+    - crop
 name: slider_main_16_9
 label: 'Slider main (16:9)'
 effects:
