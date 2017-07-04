@@ -38,10 +38,18 @@
  * @ingroup themeable
  */
 #}
+{% set title %}
+{{- content.field_title -}}
+{% endset %}
+{% set sub_title %}
+{{- content.field_sub_title -}}
+{% endset %}
+
 <div class="paragraph node-reference">
   <div class="paragraph__header">
-    <h2>{{ content.field_title }}
-    <span class="sub-title">{{ content.field_sub_title }}</span></h2>
+    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+    <h2>{% spaceless %}{{ title|striptags }}{% endspaceless %}
+    <span class="sub-title">{{ sub_title }}</span></h2>
   </div>
   <div class="paragraph__content">
     {% for key, teaser in content.field_node_reference_nodes if key|first != '#' %}
