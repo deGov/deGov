@@ -1,0 +1,21 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_image_mime
+    - media_entity.bundle.image
+  enforced:
+    module:
+      - degov_media_image
+id: media.image.field_image_mime
+field_name: field_image_mime
+entity_type: media
+bundle: image
+label: Mime
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
