@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function nrw_menu_theme($existing, $type, $theme, $path) {
+  return [
+    'nrw_menu_header' => [
+      'variables' => [
+        'menu_items' => [],
+        'menu_extra' => NULL,
+      ],
+      'template' => 'nrw-menu-header',
+    ],
+    'nrw_menu_footer' => [
+      'variables' => [
+        'menu_items' => [],
+      ],
+      'template' => 'nrw-menu-footer',
+    ],
+  ];
+}
+
+/**
+ * @param $variables
+ */
+function nrw_menu_preprocess_page(&$variables) {
+  $menuTree = \Drupal::service('simplify_menu.menu_items');
+  $menuItems = $menuTree->getMenuTree('main');
+  $variables['page_header_menu'] = [
+    '#theme' => 'nrw_menu_header',
+    '#menu_items' => $menuItems,
+    '#menu_extra' => '',
+  ];
+  $variables['page_footer_menu'] = [
+    '#theme' => 'nrw_menu_footer',
+    '#menu_items' => $menuItems,
+    '#menu_extra' => '',
+  ];
+}

@@ -1,0 +1,22 @@
+<div class="nrw-menu nrw-menu-footer">
+    {% for menu_item in menu_items.menu_tree %}
+    <div class="nrw-menu-footer__col">
+        <div class="nrw-menu-footer__header">
+            <!-- First level of main menu-->
+            <a class="link" href="{{ menu_item.url }}">{{ menu_item.text }}</a>
+        </div>
+        <div class="nrw-menu-footer__content">
+            {% if menu_item.submenu is not empty %}
+            <!-- Second level of main menu-->
+            <ul class="nrw-menu__list">
+                {% for submenu_item in menu_item.submenu %}
+                    <li class="nrw-menu__item">
+                        <a class="link link--external" href="{{ submenu_item.url }}">{{ submenu_item.text }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+</div>

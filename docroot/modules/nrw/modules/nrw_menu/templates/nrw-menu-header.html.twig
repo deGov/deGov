@@ -1,0 +1,52 @@
+<div class="nrw-menu">
+    {% for menu_item in menu_items.menu_tree %}
+    <div class="nrw-menu__col">
+        <div class="nrw-menu__header">
+            <!-- First level of main menu-->
+            <div class="nrw-menu__header-link-area">
+                <a class="link link--nolink" href="{{ menu_item.url }}">{{ menu_item.text }}</a>
+            </div>
+        </div>
+        <div class="nrw-menu__content">
+            <div class="nrw-menu__content-title-area">
+                <a class="link" href="javascrit:;">
+                    <div class="nrw-menu__content-title-icon"><!-- Space for styling an icon --></div>
+                    <div class="nrw-menu__content-title-text">
+                        <!-- Space for styling text-->
+                        {{ 'Menü'|trans }}
+                        <div class="sub-title">{{ 'Menu subtitle'|trans }}</div>
+                    </div>
+                </a>
+                <div class="nrw-menu__content-close">
+                    <a class="link link--nolink" href="javascrit:;">{{ 'Schliessen'|trans }}</a>
+                </div>
+            </div>
+            {% if menu_item.submenu is not empty %}
+            <!-- Second level of main menu-->
+            <ul class="nrw-menu__list">
+                {% for submenu_item in menu_item.submenu %}
+                    <li class="nrw-menu__item">
+                        <a class="link link--external" href="{{ submenu_item.url }}">{{ submenu_item.text }}</a>
+                        {% if submenu_item.submenu is not empty %}
+                            <!-- Third level of main menu-->
+                            <ul class="nrw-menu__list">
+                                {% for third_level_item in submenu_item.submenu %}
+                                    <li class="nrw-menu__item">
+                                        <a class="link" href="{{ third_level_item.url }}">{{ third_level_item.text }}</a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+        <div class="nrw-menu__extra">
+            <!-- Extra content goes here, see screenshot below, content on the right side. Mock something here -->
+            {{ menu_extra }}
+        </div>
+
+    </div>
+    {% endfor %}
+</div>

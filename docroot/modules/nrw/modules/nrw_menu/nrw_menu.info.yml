@@ -1,0 +1,7 @@
+name: NRW menu
+description: The module provides the templates and preprocess functions to show the menu in the page
+core: 8.x
+type: module
+
+dependencies:
+  - simplify_menu
