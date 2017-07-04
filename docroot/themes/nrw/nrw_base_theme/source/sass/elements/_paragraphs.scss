@@ -7,7 +7,9 @@
 	font-size: $font-size-h3; 
   	color: $brand-primary;
 	display: flex;
-	  
+	margin: 0 -20px;
+    padding: 20px;
+    background: $mik_light;
 	i{
 		color: $color-white;
 		background-color: $brand-primary;

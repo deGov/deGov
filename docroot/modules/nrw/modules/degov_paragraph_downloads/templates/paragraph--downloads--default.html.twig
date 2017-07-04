@@ -38,18 +38,22 @@
  * @ingroup themeable
  */
 #}
-<div class="downloads">
+{% set title %}
+{{- content.field_title -}}
+{% endset %}
+{% set sub_title %}
+{{- content.field_sub_title -}}
+{% endset %}
+
+<div class="paragraph downloads">
   {% if paragraph.field_title.value or paragraph.field_sub_title.value %}
-  <h2 class="downloads__header">
-    {% if paragraph.field_title.value %}
-    {{ paragraph.field_title.value }}
-    {% endif %}
-    {% if paragraph.field_sub_title.value %}
-    <span class="subtitle">{{ paragraph.field_sub_title.value }}</span>
-    {% endif %}
-  </h2>
+  <div class="paragraph__header">
+    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+    <h2>{% spaceless %}{{ title|striptags }}{% endspaceless %}
+    <span class="sub-title">{{ sub_title }}</span></h2>
+  </div>
   {% endif %}
-  <div class="downloads__content">
+  <div class="paragraph__content">
     {{ content.field_downloads_files }}
   </div>
 </div>
