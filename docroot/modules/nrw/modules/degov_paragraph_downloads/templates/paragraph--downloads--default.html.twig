@@ -49,8 +49,9 @@
 <div class="paragraph downloads nav-list">
   {% if paragraph.field_title.value or paragraph.field_sub_title.value %}
   <div class="paragraph__header">
+    <i class="fa fa-arrow-right" aria-hidden="true"></i>
     <h2>{% spaceless %}{{ title|striptags }}{% endspaceless %}
-    <span class="sub-title">{{ sub_title }}</span></h2>
+    <span class="sub-title">{% spaceless %}{{ sub_title|striptags }}{% endspaceless %}</span></h2>
   </div>
   {% endif %}
   <div class="paragraph__content">
