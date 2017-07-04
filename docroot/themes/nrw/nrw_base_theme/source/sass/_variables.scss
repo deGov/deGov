@@ -26,17 +26,17 @@ $fa-font-path:   "../fonts/font-awesome";
 }
 
 
-$mik_primary: #1b4265; //dark_blue
-$mik_secondary: #286093; // blue
-$mik_gray: #d9dada; //grey
-$mik_light: #dde6f0; // light blue
+$nrw-primary: #1b4265; //dark_blue
+$nrw-secondary: #286093; // blue
+$nrw-gray: #d9dada; //grey
+$nrw-light: #dde6f0; // light blue
 
 
 //other colors
 
-$mik-green: #008732; 
-$mik-yellow: #a76600;
-$mik-red: #8b1a1a;
+$nrw-green: #008732; 
+$nrw-yellow: #a76600;
+$nrw-red: #8b1a1a;
 
 $background-grey: #c0c0c0;
 
@@ -59,11 +59,11 @@ $gray-dark: lighten($gray-base, 20%);
 $gray: lighten($gray-base, 33.5%);
 $gray-light: #e3e3e3;
 $gray-lighter: #f5f5f5;
-$brand-primary: $mik_primary;
-$brand-success: $mik-green;
-$brand-info: $mik_gray;
-$brand-warning: $mik-yellow;
-$brand-danger: $mik-red;
+$brand-primary: $nrw-primary;
+$brand-success: $nrw-green;
+$brand-info: $nrw-gray;
+$brand-warning: $nrw-yellow;
+$brand-danger: $nrw-red;
 
 //== Scaffolding
 //
