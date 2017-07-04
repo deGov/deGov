@@ -1,4 +1,4 @@
-name: 'deGov - Iframe'
+name: 'deGov - Paragraph Iframe'
 description: 'Stellt einen Paragraphen zum Einbinden von Iframes bereit.'
 package: deGov
 type: module
