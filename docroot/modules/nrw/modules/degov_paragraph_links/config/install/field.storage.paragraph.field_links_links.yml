@@ -1,0 +1,21 @@
+langcode: de
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+  enforced:
+    module:
+      - degov_paragraph_links
+id: paragraph.field_links_links
+field_name: field_links_links
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

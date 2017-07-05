@@ -1,0 +1,20 @@
+langcode: de
+status: true
+dependencies:
+  module:
+    - workbench_moderation
+  enforced:
+    module:
+      - degov_paragraph_links
+third_party_settings:
+  workbench_moderation:
+    enabled: 0
+    allowed_moderation_states:
+      - published
+      - archived
+      - draft
+      - needs_review
+    default_moderation_state: draft
+id: links
+label: Link-Liste
+behavior_plugins: {  }

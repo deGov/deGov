@@ -1,0 +1,11 @@
+name: 'deGov - Paragraph Link-Liste'
+description: 'Mit diesem Paragraphen lassen sich Link-Listen erstellen.'
+package: deGov
+type: module
+core: 8.x
+dependencies:
+  - degov_content_types_shared_fields
+  - field
+  - link
+  - paragraphs
+  - workbench_moderation
