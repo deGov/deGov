@@ -1,0 +1,7 @@
+name: 'deGov - EU Cookie Compliance Settings'
+description: 'Standardeinstellungen für das "EU Cookie Richtlinie" Modul'
+package: deGov
+type: module
+core: 8.x
+dependencies:
+  - eu_cookie_compliance

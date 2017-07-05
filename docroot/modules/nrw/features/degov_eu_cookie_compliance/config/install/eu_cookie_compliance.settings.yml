@@ -1,0 +1,30 @@
+domain: ''
+domains_option: 1
+domains_list: ''
+eu_only: false
+exclude_paths: "/admin\r\n/admin/*\r\n/batch\r\n/node/add*\r\n/node/*/*\r\n/user/*/*"
+export:
+  folder: custom
+langcode: de
+popup_agreed:
+  value: "<h2>Thank you for accepting cookies</h2>\r\n\r\n<p>You can now hide this message or find out more about cookies.</p>\r\n"
+  format: rich_text
+popup_agree_button_message: 'Ich stimme zu'
+popup_agreed_enabled: false
+popup_bg_hex: 1b4265
+popup_clicking_confirmation: true
+popup_delay: 1
+popup_disagree_button_message: 'Mehr Informationen'
+popup_enabled: true
+popup_find_more_button_message: 'Weitere Informationen'
+popup_height: null
+popup_hide_agreed: false
+popup_hide_button_message: Hide
+popup_info:
+  value: "<h3>Diese Seite verwendet Cookies, um für Sie die Benutzerfreundlichkeit der Webseite zu verbessern.</h3>\r\n\r\n<p>Wenn Sie diese Webseite weiter nutzen, erklären Sie sich damit einverstanden.</p>\r\n"
+  format: rich_text
+popup_link: 'http://www.mik.nrw.de/service/impressum.html'
+popup_link_new_window: true
+popup_position: false
+popup_text_hex: ffffff
+popup_width: 100%
