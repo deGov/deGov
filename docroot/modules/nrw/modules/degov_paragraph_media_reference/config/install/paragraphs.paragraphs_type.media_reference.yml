@@ -1,0 +1,9 @@
+langcode: de
+status: true
+dependencies:
+  enforced:
+    module:
+      - degov_paragraph_media_reference
+id: media_reference
+label: Medienreferenz
+behavior_plugins: {  }

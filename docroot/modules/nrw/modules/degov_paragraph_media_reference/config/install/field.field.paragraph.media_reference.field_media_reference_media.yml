@@ -1,0 +1,38 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_reference_media
+    - media_entity.bundle.document
+    - media_entity.bundle.image
+    - media_entity.bundle.instagram
+    - media_entity.bundle.tweet
+    - media_entity.bundle.video
+    - paragraphs.paragraphs_type.media_reference
+  enforced:
+    module:
+      - degov_paragraph_media_reference
+id: paragraph.media_reference.field_media_reference_media
+field_name: field_media_reference_media
+entity_type: paragraph
+bundle: media_reference
+label: Media
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      document: document
+      image: image
+      instagram: instagram
+      tweet: tweet
+      video: video
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: document
+field_type: entity_reference

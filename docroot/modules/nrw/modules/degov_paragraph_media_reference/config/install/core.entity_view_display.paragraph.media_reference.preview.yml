@@ -1,0 +1,43 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.media_reference.field_media_reference_media
+    - field.field.paragraph.media_reference.field_sub_title
+    - field.field.paragraph.media_reference.field_title
+    - paragraphs.paragraphs_type.media_reference
+  enforced:
+    module:
+      - degov_paragraph_media_reference
+id: paragraph.media_reference.preview
+targetEntityType: paragraph
+bundle: media_reference
+mode: preview
+content:
+  field_media_reference_media:
+    weight: 2
+    label: above
+    settings:
+      view_mode: thumbnail
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_sub_title:
+    weight: 1
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_title:
+    weight: 0
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }
