@@ -66,9 +66,18 @@ content:
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
     region: content
+  field_sidebar_right_paragraphs:
+    weight: 4
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+
 hidden:
   field_blog_author: true
-  field_sidebar_right_paragraphs: true
   field_teaser_image: true
   field_teaser_text: true
   field_teaser_title: true
