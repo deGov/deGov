@@ -1,0 +1,6 @@
+nrw_menu:
+  version: 1.0
+  js:
+    js/nrw_menu.js: {}
+  dependencies:
+    - core/jquery

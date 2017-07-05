@@ -1,0 +1,10 @@
+{
+  "name": "nrw_menu",
+  "type": "drupal-module",
+  "description": "Will provide a menu templates",
+  "license": "GPL-2.0+",
+  "homepage": "https://www.nrwgov.org",
+  "require": {
+    "drupal/simplify_menu": "8.*"
+  }
+}

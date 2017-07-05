@@ -1,0 +1,64 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function nrw_menu_theme($existing, $type, $theme, $path) {
+  return [
+    'nrw_menu_header' => [
+      'variables' => [
+        'menu_items' => [],
+      ],
+      'template' => 'nrw-menu-header',
+    ],
+    'nrw_menu_footer' => [
+      'variables' => [
+        'menu_items' => [],
+      ],
+      'template' => 'nrw-menu-footer',
+    ],
+  ];
+}
+
+/**
+ * Proprocess page content to add menus
+ *
+ * @param $variables
+ */
+function nrw_menu_preprocess_page(&$variables) {
+  // get the simplify_menu service
+  $menuTree = \Drupal::service('nrw_menu.menu_items');
+  // get the menu items from main menu tree
+  $menuItems = $menuTree->getMenuTree('main');
+  // create the variables for page.html.twig template
+  $variables['page_header_menu'] = [
+    '#theme' => 'nrw_menu_header',
+    '#menu_items' => $menuItems,
+  ];
+  $variables['page_footer_menu'] = [
+    '#theme' => 'nrw_menu_footer',
+    '#menu_items' => $menuItems,
+  ];
+  // add the library for adding expandable functionality
+  $variables['#attached']['library'][] = 'nrw_menu/nrw_menu';
+}
+
+/**
+ * Implements hook_entity_base_field_info().
+ */
+function nrw_menu_entity_base_field_info(\Drupal\Core\Entity\EntityTypeInterface $entity_type) {
+  if ($entity_type->id() == 'menu_link_content') {
+    // add the extra field to menu link content entity to store the extra data
+    $fields = [];
+    $fields['menu_extra'] = \Drupal\Core\Field\BaseFieldDefinition::create('text_long')
+        ->setLabel(t('Extra Content'))
+        ->setDescription(t('The content of the extra block'))
+        ->setDisplayOptions('form', array(
+          'type'   => 'text_textarea',
+          'weight' => 15
+        ))
+        ->setRequired(FALSE)
+        ->setDisplayConfigurable('form', TRUE);
+    return $fields;
+  }
+}

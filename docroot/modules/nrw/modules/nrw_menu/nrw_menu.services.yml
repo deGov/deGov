@@ -1,0 +1,6 @@
+services:
+  nrw_menu.menu_items:
+    class: Drupal\nrw_menu\MenuItems
+    arguments: ['@menu.link_tree']
+
+
