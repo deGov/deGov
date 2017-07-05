@@ -12,7 +12,8 @@
    */
   Drupal.behaviors.faq = {
     attach: function (context, settings) {
-      if ($('.faq', context).length == 0) {
+      
+      if ( $('.faq', context).length == 0 ) {
         return;
       }
       $('.faq', context).once('faq-is-opened').each(function () {

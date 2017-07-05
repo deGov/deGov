@@ -82,21 +82,20 @@
             font-size: $font-size-base - 6;
           }
         }
-      &.hiden{
+      &.is-hidden{
         opacity: 0;
         -moz-transition: opacity 1s, visibility 1.3s;
         -webkit-transition: opacity 1s, visibility 1.3s;
         -o-transition: opacity 1s, visibility 1.3s;
         transition: opacity 1s, visibility 1.3s;
       }
-      &.open{
+      &.is-open{
         visibility:visible;
         opacity: 1;
         -moz-transition: opacity 1s, visibility 1.3s;
         -webkit-transition: opacity 1s, visibility 1.3s;
         -o-transition: opacity 1s, visibility 1.3s;
         transition: opacity 1s, visibility 1.3s;
-       
       }
     }
     a{

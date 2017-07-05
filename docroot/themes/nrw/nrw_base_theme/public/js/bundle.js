@@ -46,6 +46,8 @@
 
 	'use strict';
 
+	//state class should be ".is-*****"
+
 	/* eslint-disable no-unused-vars, lines-around-comment*/
 	var Bootstrap = __webpack_require__(1);
 	var Slick = __webpack_require__(2);
@@ -183,7 +185,7 @@
 	    attach: function attach(context, settings) {
 	      $('.language').once('language-selector').each(function () {
 	        $(this).find('a.selector').click(function () {
-	          $('.language .options').toggleClass('open hiden');
+	          $('.language .options').toggleClass('is-open is-hidden');
 	        });
 	      });
 	    }

@@ -11,7 +11,7 @@
             </select>
             {# TODO: Change 'DE' for the language variable #}
             <a class="selector">DE</a>
-            <ul id="options" class="options hiden" >
+            <ul id="options" class="options is-hidden" >
                 <li><a href="#de" rel="de">de</a></li>
                 <li><a href="#en-gb" rel="en-gb">en</a></li>
                 <li><a href="#fr" rel="fr" class="sbFocus">fr</a></li>
@@ -31,9 +31,9 @@
             <nav id="secondary-menu" role="navigation" class="navigation">
                 <ul id="secondary-menu-links" class="links inline clearfix">
                     {% if logged_in %}
-                        <li class="first"><a href="/user" title="Benutzer" class="login">{% trans %}Benutzer{% endtrans %}</a></li> 
+                         <li class="first"><a href="/user" title="Benutzer" class="login">{% trans %}Benutzer{% endtrans %}</a></li> 
                     {% else %}
-                        <li class="first"><a href="/user/login" title="Anmelden / Registrieren" class="login">{% trans %}Anmelden / Registrieren{% endtrans %}</a></li>  
+                         <li class="first"><a href="/user/login" title="Anmelden / Registrieren" class="login">{% trans %}Anmelden / Registrieren{% endtrans %}</a></li>  
                     {% endif %}
                    
                     <li class="last"><a href="/servicecenter/kontakt" title="Kontakt" class="kontakt">Kontakt</a></li>

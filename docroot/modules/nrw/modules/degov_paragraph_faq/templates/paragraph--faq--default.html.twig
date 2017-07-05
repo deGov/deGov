@@ -46,12 +46,11 @@
 {{- content.field_faq_title -}}
 {% endset %}
 
-
 <div class="faq">
   <div class="faq_question">
     {% spaceless %}{{ title|striptags }}{% endspaceless %}
   </div>
   <div class="faq_answer">
-    {% spaceless %}{{ text|striptags }}{% endspaceless %}
+    {% spaceless %}{{ text|striptags }}{% endspaceless %} 
   </div>
 </div>

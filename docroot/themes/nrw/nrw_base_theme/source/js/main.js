@@ -1,3 +1,5 @@
+//state class should be ".is-*****"
+
 /* eslint-disable no-unused-vars, lines-around-comment*/
 const Bootstrap = require('bootstrap-sass');
 const Slick = require('slick-carousel');
@@ -134,8 +136,8 @@ const PhotoSwipeUiDefault = require('photoswipe/dist/photoswipe-ui-default');
   Drupal.behaviors.languageSelector = {
     attach: function (context, settings) { 
       $('.language').once('language-selector').each(function () {
-        $(this).find('a.selector').click(function () {
-          $('.language .options').toggleClass('open hiden'); 
+        $(this).find('a.selector').click(function () {    
+          $('.language .options').toggleClass('is-open is-hidden');
         });
       });
     }
