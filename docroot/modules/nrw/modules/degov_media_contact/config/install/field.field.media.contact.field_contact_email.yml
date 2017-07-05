@@ -1,0 +1,21 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_contact_email
+    - media_entity.bundle.contact
+  enforced:
+    module:
+      - degov_media_contact
+id: media.contact.field_contact_email
+field_name: field_contact_email
+entity_type: media
+bundle: contact
+label: E-Mail
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

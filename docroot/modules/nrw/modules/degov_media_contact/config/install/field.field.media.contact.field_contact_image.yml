@@ -1,0 +1,30 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_contact_image
+    - media_entity.bundle.contact
+    - media_entity.bundle.image
+  enforced:
+    module:
+      - degov_media_contact
+id: media.contact.field_contact_image
+field_name: field_contact_image
+entity_type: media
+bundle: contact
+label: Media
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

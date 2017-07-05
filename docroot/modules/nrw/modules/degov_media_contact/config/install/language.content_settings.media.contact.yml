@@ -1,0 +1,13 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - media_entity.bundle.contact
+  enforced:
+    module:
+      - degov_media_contact
+id: media.contact
+target_entity_type_id: media
+target_bundle: contact
+default_langcode: site_default
+language_alterable: false

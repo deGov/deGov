@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * Default theme implementation to present a media entity.
+ *
+ * Available variables:
+ * - name: Name of the media.
+ * - content: Media content.
+ *
+ * @see template_preprocess_media()
+ *
+ * @ingroup themeable
+ */
+#}
+<article class="contact">
+  <div class="contact__image">{{ content.field_contact_image }}</div>
+  <div class="contact__title">{{ content.field_contact_title }}</div>
+  <div class="contact__tel">{{ content.field_contact_tel }}</div>
+  <div class="contact__email">{{ content.field_contact_email }}</div>
+</article>
