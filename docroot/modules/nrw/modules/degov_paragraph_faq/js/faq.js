@@ -15,15 +15,15 @@
       if ($('.faq', context).length == 0) {
         return;
       }
-      $('.faq', context).once('faq-element-processed').each(function () {
+      $('.faq', context).once('faq-is-opened').each(function () {
         var wrapper = $(this);
-        $('.faq__question', wrapper).click(function () {
-          if (wrapper.hasClass('opened')) {
-            $('.faq__answer', wrapper).slideUp();
-            wrapper.removeClass('opened');
+        $('.faq_question', wrapper).click(function () {
+          if (wrapper.hasClass('is-openend')) {
+            $('.faq_answer', wrapper).slideUp();
+            wrapper.removeClass('is-openend');
           } else {
-            $('.faq__answer', wrapper).slideDown();
-            wrapper.addClass('opened');
+            $('.faq_answer', wrapper).slideDown();
+            wrapper.addClass('is-openend');
           }
         });
       });

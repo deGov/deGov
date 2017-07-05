@@ -24,7 +24,7 @@ const PhotoSwipeUiDefault = require('photoswipe/dist/photoswipe-ui-default');
   // FAQ
   Drupal.behaviors.faq = {
     attach: function (context, settings) {
-      $(context).find('.paragraph--type--faq-element').once('faq-click').click(function () {
+      $(context).find('.paragraph__content').once('faq-click').click(function () {
         const isActive = $(this).children('.field--name-field-faq-element-question').hasClass('active');
         $(this).children().toggleClass('active', !isActive);
       });
@@ -134,9 +134,9 @@ const PhotoSwipeUiDefault = require('photoswipe/dist/photoswipe-ui-default');
   Drupal.behaviors.languageSelector = {
     attach: function (context, settings) { 
       $('.language').once('language-selector').each(function () {
-        $(this).find('a.selector').click(function(){
+        $(this).find('a.selector').click(function () {
           $('.language .options').toggleClass('open hiden'); 
-        })
+        });
       });
     }
   };

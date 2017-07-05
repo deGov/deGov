@@ -72,7 +72,7 @@
 	  // FAQ
 	  Drupal.behaviors.faq = {
 	    attach: function attach(context, settings) {
-	      $(context).find('.paragraph--type--faq-element').once('faq-click').click(function () {
+	      $(context).find('.paragraph__content').once('faq-click').click(function () {
 	        var isActive = $(this).children('.field--name-field-faq-element-question').hasClass('active');
 	        $(this).children().toggleClass('active', !isActive);
 	      });

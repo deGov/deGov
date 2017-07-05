@@ -38,11 +38,20 @@
  * @ingroup themeable
  */
 #}
+
+{% set title %}
+{{- content.field_faq_title -}}
+{% endset %}
+{% set text %}
+{{- content.field_faq_title -}}
+{% endset %}
+
+
 <div class="faq">
-  <div class="faq__question">
-    {{ content.field_faq_title }}
+  <div class="faq_question">
+    {% spaceless %}{{ title|striptags }}{% endspaceless %}
   </div>
-  <div class="faq__answer">
-    {{ content.field_faq_text }}
+  <div class="faq_answer">
+    {% spaceless %}{{ text|striptags }}{% endspaceless %}
   </div>
 </div>

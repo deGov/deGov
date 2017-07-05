@@ -65,31 +65,24 @@
 	position: relative;
 	padding:  $padding-small-vertical*2 0;
 	margin-top: $padding-base-vertical/3;
-	&__question{	 
+	&_question{	 
 		cursor: pointer;
-		.field--name-field-faq-title{
-			font-size: $font-size-h3;
-  			color: $brand-primary;
-			  &:before{
-				  content: " ";
-				  background-image: url(../images/accordion-close.png);
-				  background-repeat: no-repeat;
-				  display: inline-block;
-				  height: 20px;
-				  width: 20px;
-				  margin-right: $padding-base-horizontal*0.833;
-			  }
-		}
+		font-size: $font-size-h3;
+		color: $brand-primary;
+			@include icon-before($fa-var-angle-down);
+			&:before{
+				margin-right: $padding-base-horizontal*0.833;
+			}
 	}
-	&__answer{
+	&_answer{
 		display: none;
 		padding-left: $padding-base-horizontal*3;;
 	}
-	&.opened{
-		.field--name-field-faq-title{
+	&.is-openend{
+		.faq_question{
+			@include icon-before($fa-var-angle-up);
 			&:before{
-				  content: " ";
-				  background-image: url(../images/accordion-open.png);
+				  margin-right: $padding-base-horizontal*0.833;
 			}
 		}
 	}

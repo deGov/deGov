@@ -326,7 +326,7 @@ $zindex-modal: 1050;
 //## Define the breakpoints at which your layout will change, adapting to different screen sizes.
 // Extra small screen / phone
 //** Deprecated `$screen-xs` as of v3.0.1
-$screen-xs: 480px;
+$screen-xs: 510px;
 
 //** Deprecated `$screen-xs-min` as of v3.2.0
 $screen-xs-min: $screen-xs;
@@ -336,7 +336,7 @@ $screen-phone: $screen-xs-min;
 
 // Small screen / tablet
 //** Deprecated `$screen-sm` as of v3.0.1
-$screen-sm: 510px;
+$screen-sm: 720px;
 $screen-sm-min: $screen-sm;
 
 //** Deprecated `$screen-tablet` as of v3.0.1
@@ -352,7 +352,7 @@ $screen-desktop: $screen-md-min;
 
 // Large screen / wide desktop
 //** Deprecated `$screen-lg` as of v3.0.1
-$screen-lg: 1300px;
+$screen-lg: 1310px;
 $screen-lg-min: $screen-lg;
 
 //** Deprecated `$screen-lg-desktop` as of v3.0.1

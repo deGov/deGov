@@ -31,9 +31,9 @@
             <nav id="secondary-menu" role="navigation" class="navigation">
                 <ul id="secondary-menu-links" class="links inline clearfix">
                     {% if logged_in %}
-                        <li class="first"><a href="/user" title="Benutzer" class="login">Benutzer</a></li> 
+                        <li class="first"><a href="/user" title="Benutzer" class="login">{% trans %}Benutzer{% endtrans %}</a></li> 
                     {% else %}
-                        <li class="first"><a href="/user/login" title="Anmelden / Registrieren" class="login">Anmelden / Registrieren</a></li>  
+                        <li class="first"><a href="/user/login" title="Anmelden / Registrieren" class="login">{% trans %}Anmelden / Registrieren{% endtrans %}</a></li>  
                     {% endif %}
                    
                     <li class="last"><a href="/servicecenter/kontakt" title="Kontakt" class="kontakt">Kontakt</a></li>
