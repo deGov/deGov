@@ -4,17 +4,17 @@
         <div class="nrw-menu__header">
             <!-- First level of main menu-->
             <div class="nrw-menu__header-link-area">
-                <a class="link link--nolink" href="{{ menu_item.url }}">{{ menu_item.text }}</a>
+                <a class="link link--nolink" href="javascrit:;">{{ menu_item.text }}</a>
             </div>
         </div>
         <div class="nrw-menu__content">
             <div class="nrw-menu__content-title-area">
-                <a class="link" href="javascrit:;">
+                <a class="link" href="{{ menu_item.url }}">
                     <div class="nrw-menu__content-title-icon"><!-- Space for styling an icon --></div>
                     <div class="nrw-menu__content-title-text">
                         <!-- Space for styling text-->
                         {{ 'Menü'|trans }}
-                        <div class="sub-title">{{ 'Menu subtitle'|trans }}</div>
+                        <div class="sub-title">{{ menu_item.text }}</div>
                     </div>
                 </a>
                 <div class="nrw-menu__content-close">
