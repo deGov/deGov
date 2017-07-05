@@ -1,0 +1,22 @@
+<?php
+
+use Drupal\degov_content_types_shared_fields\Common;
+
+/**
+ * Implements hook_preprocess().
+ */
+function degov_media_citation_preprocess(&$variables, $hook, &$info) {
+  if ($hook === 'media') {
+    /* @var \Drupal\media_entity\Entity\Media $media */
+    $media = $variables['elements']['#media'];
+    $variables['media'] = $media;
+  }
+
+  // Add template suggestions and libraries implemented in this module.
+  Common::addThemeSuggestions($variables, $hook, $info, [
+    'module_name' => 'degov_media_citation',
+    'entity_type' => 'media',
+    'entity_bundles' => ['citation'],
+    'entity_view_modes' => [],
+  ]);
+}

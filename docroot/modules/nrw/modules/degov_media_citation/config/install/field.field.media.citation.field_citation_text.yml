@@ -1,0 +1,21 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_citation_text
+    - media_entity.bundle.citation
+  enforced:
+    module:
+      - degov_media_citation
+id: media.citation.field_citation_text
+field_name: field_citation_text
+entity_type: media
+bundle: citation
+label: Text
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

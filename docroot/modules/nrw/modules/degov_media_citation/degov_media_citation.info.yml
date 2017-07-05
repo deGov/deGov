@@ -1,0 +1,16 @@
+name: 'deGov - Media citation'
+description: 'Ein Media-Bundle mit einem Zitat sowie einem optionalen Bild.'
+type: module
+core: 8.x
+package: deGov
+dependencies:
+  - crop
+  - entity_browser
+  - field
+  - file
+  - image
+  - language
+  - media_entity
+  - user
+  - workbench_moderation
+  - degov_content_types_shared_fields

@@ -1,0 +1,13 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - media_entity.bundle.citation
+  enforced:
+    module:
+      - degov_media_citation
+id: media.citation
+target_entity_type_id: media
+target_bundle: citation
+default_langcode: site_default
+language_alterable: false
