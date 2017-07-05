@@ -25,7 +25,7 @@ mode: default
 content:
   field_content_paragraphs:
     weight: 2
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''
@@ -50,7 +50,7 @@ content:
     region: content
   field_sidebar_right_paragraphs:
     weight: 3
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''

@@ -1,0 +1,9 @@
+<?php
+
+function degov_content_types_shared_fields_preprocess_node(&$variables) {
+  /** @var \Drupal\node\NodeInterface $node */
+  $node = $variables['node'];
+  if ($node->hasField('field_sidebar_right_paragraphs') && !empty($variables['content']['field_sidebar_right_paragraphs'])) {
+    unset($variables['content']['field_sidebar_right_paragraphs']);
+  }
+}
