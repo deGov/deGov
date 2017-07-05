@@ -40,6 +40,8 @@ class MenuItems extends SimplifiedMenuItems {
       $simplifiedLink = [
         'text' => $item->link->getTitle(),
         'url' => $item->link->getUrlObject()->toString(),
+        'description' => empty($item->link->getDescription()) ? $item->link->getTitle() : $item->link->getDescription(),
+        'external' => $item->link->getUrlObject()->isExternal(),
         'menu_extra' => $extra,
       ];
 
