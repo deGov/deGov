@@ -1,0 +1,13 @@
+langcode: de
+status: true
+dependencies:
+  module:
+    - media_entity
+id: media
+label: Medien
+type: 'canonical_entities:media'
+pattern: '[media:bundle-name]/[media:name]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }
