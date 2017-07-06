@@ -1,0 +1,11 @@
+{
+  "name": "degov_html_mail",
+  "type": "drupal-module",
+  "description": "Adds default configuration for all HTML mails.",
+  "license": "GPL-2.0+",
+  "homepage": "https://www.nrwgov.org",
+  "require": {
+    "drupal/swiftmailer": "^1.0-beta1",
+    "drupal/mailsystem": "^4.1"
+  }
+}
