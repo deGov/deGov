@@ -2,7 +2,6 @@ langcode: de
 status: true
 dependencies:
   config:
-    - field.field.paragraph.image_header.field_header_download
     - field.field.paragraph.image_header.field_header_media
     - field.field.paragraph.image_header.field_header_text
     - field.field.paragraph.image_header.field_sub_title
@@ -15,19 +14,9 @@ targetEntityType: paragraph
 bundle: image_header
 mode: default
 content:
-  field_header_download:
-    weight: 4
-    label: above
-    settings:
-      format: default
-      format_custom_true: ''
-      format_custom_false: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
   field_header_media:
     weight: 2
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: false
@@ -36,14 +25,14 @@ content:
     region: content
   field_header_text:
     weight: 3
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_sub_title:
     weight: 1
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -51,7 +40,7 @@ content:
     region: content
   field_title:
     weight: 0
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }

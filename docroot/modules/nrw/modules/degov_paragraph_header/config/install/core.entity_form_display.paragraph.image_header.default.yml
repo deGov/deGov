@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - entity_browser.browser.media_browser
-    - field.field.paragraph.image_header.field_header_download
     - field.field.paragraph.image_header.field_header_media
     - field.field.paragraph.image_header.field_header_text
     - field.field.paragraph.image_header.field_sub_title
@@ -18,13 +17,6 @@ targetEntityType: paragraph
 bundle: image_header
 mode: default
 content:
-  field_header_download:
-    weight: 10
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_header_media:
     type: entity_browser_entity_reference
     weight: 8
