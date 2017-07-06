@@ -132,7 +132,7 @@
           {% endif %}
 
           {# Help #}
-          {% if page.help %}
+          {% if page.help|render|striptags|trim %}
             {% block help %}
               {{ page.help }}
             {% endblock %}
