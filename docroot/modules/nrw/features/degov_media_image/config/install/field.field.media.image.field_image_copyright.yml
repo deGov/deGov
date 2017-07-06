@@ -1,0 +1,30 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_image_copyright
+    - media_entity.bundle.image
+    - taxonomy.vocabulary.copyright
+  enforced:
+    module:
+      - degov_media_image
+id: media.image.field_image_copyright
+field_name: field_image_copyright
+entity_type: media
+bundle: image
+label: 'Image Copyright'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      copyright: copyright
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference
