@@ -6,6 +6,9 @@ dependencies:
     - paragraphs.paragraphs_type.image_header
   module:
     - text
+  enforced:
+    module:
+      - degov_paragraph_header
 id: paragraph.image_header.field_header_text
 field_name: field_header_text
 entity_type: paragraph

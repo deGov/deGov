@@ -12,6 +12,9 @@ dependencies:
     - entity_browser
     - text
     - workbench_moderation
+  enforced:
+    module:
+      - degov_paragraph_header
 id: paragraph.image_header.default
 targetEntityType: paragraph
 bundle: image_header

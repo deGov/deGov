@@ -1,5 +1,5 @@
 name: 'deGov - Paragraph Header'
-description: 'Stellt einen Paragraphentyp für '
+description: 'Stellt einen Paragraphentyp für headers.'
 package: deGov
 type: module
 core: 8.x

@@ -4,11 +4,14 @@ dependencies:
   config:
     - field.storage.paragraph.field_sub_title
     - paragraphs.paragraphs_type.image_header
+  enforced:
+    module:
+      - degov_paragraph_header
 id: paragraph.image_header.field_sub_title
 field_name: field_sub_title
 entity_type: paragraph
 bundle: image_header
-label: field_sub_title
+label: Untertitel
 description: ''
 required: false
 translatable: true

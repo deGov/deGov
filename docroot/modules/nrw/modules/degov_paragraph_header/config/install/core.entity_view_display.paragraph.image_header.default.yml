@@ -9,6 +9,9 @@ dependencies:
     - paragraphs.paragraphs_type.image_header
   module:
     - text
+  enforced:
+    module:
+      - degov_paragraph_header
 id: paragraph.image_header.default
 targetEntityType: paragraph
 bundle: image_header
