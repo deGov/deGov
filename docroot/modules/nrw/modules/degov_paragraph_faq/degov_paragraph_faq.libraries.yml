@@ -2,9 +2,6 @@ faq:
   version: 1.0
   js:
     js/faq.js: {}
-  css:
-    theme:
-      css/faq.css : {}
   dependencies:
     - core/jquery
     - core/drupal
