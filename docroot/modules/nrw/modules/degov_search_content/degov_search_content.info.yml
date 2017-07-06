@@ -1,0 +1,14 @@
+name: 'deGov - Search content'
+description: 'Basiseinstellungen für die Suche.'
+type: module
+core: 8.x
+package: deGov
+dependencies:
+  - block
+  - facets
+  - node
+  - search_api
+  - search_api_db
+  - search_api_sorts
+  - system
+  - views
