@@ -73,7 +73,6 @@ not node.isPublished() ? 'is-unpublished',
 view_mode ? view_mode|clean_class,
 'clearfix',
 ] %}
-{% set content_cols = node.field_sidebar_right_paragraphs.value ? 'col-md-9' %}
 
 <article{{ attributes.addClass(classes) }}>
 
@@ -86,17 +85,8 @@ view_mode ? view_mode|clean_class,
 
     <!-- content paragraphs -->
     {% if node.field_content_paragraphs.value %}
-        <div{{ create_attribute({'class': ['normal-page__content-paragraphs', content_cols ]}) }}>
-            <!-- from medium screen up, only use 3/4 of width (in case of a right sidebar) -->
+        <div class="normal-page__content-paragraphs">
             {{ content.field_content_paragraphs }}
-        </div>
-    {% endif %}
-
-    <!-- right sidebar paragraphs -->
-    {% if node.field_sidebar_right_paragraphs.value %}
-        <div class="normal-page__side-right-paragraphs col-md-3">
-            <!-- from medium screen up, display the right sidebar next to the content -->
-            {{ content.field_sidebar_right_paragraphs }}
         </div>
     {% endif %}
 
