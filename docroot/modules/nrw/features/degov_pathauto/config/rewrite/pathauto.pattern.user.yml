@@ -1,0 +1,13 @@
+langcode: de
+status: true
+dependencies:
+  module:
+    - user
+id: user
+label: Benutzer
+type: 'canonical_entities:user'
+pattern: 'benutzer/[user:display-name]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }
