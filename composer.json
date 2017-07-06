@@ -54,7 +54,7 @@
         "drupal/config_rewrite": "^1.0",
         "drupal/image_widget_crop": "^2.0",
         "drupal/address": "^1.0",
-        "drupal/simplify_menu": "1.x-dev"
+        "wikimedia/composer-merge-plugin": "^1.4"
     },
     "repositories": {
         "drupal": {
@@ -86,11 +86,11 @@
             }
         },
         "nrwgovbasetheme": {
-	    "type": "package",
+        "type": "package",
             "package": {
                 "name": "nrwgov/nrw_base_theme",
                 "version": "8.x-2.x-dev",
-		"type": "drupal-theme",
+        "type": "drupal-theme",
                 "source": {
                     "url": "https://github.com/NRWgov/nrw_base_theme.git",
                     "type": "git",
@@ -98,7 +98,7 @@
                 }
             }
         },
-	"nrwmodules": {
+        "nrwmodules": {
             "type": "package",
             "package": {
                 "name": "nrw/modules",
@@ -135,7 +135,6 @@
                 }
             }
         },
-
         "shariff": {
             "type": "package",
             "package": {
@@ -193,6 +192,13 @@
                 "nrw/features"
             ]
         },
-        "enable-patching": true
+        "enable-patching": true,
+        "merge-plugin": {
+            "include": [
+                "docroot/modules/nrw/*/*/composer.json",
+                "docroot/modules/nrwgov/*/*/composer.json",
+                "docroot/modules/custom/*/composer.json"
+            ]
+        }
     }
 }
