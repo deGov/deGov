@@ -1,0 +1,6 @@
+langcode: de
+status: true
+dependencies: {  }
+id: image_header
+label: 'Image Header'
+behavior_plugins: {  }
