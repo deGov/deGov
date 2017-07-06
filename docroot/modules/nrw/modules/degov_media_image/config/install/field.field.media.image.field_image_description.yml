@@ -13,7 +13,7 @@ id: media.image.field_image_description
 field_name: field_image_description
 entity_type: media
 bundle: image
-label: 'Image Description'
+label: 'Beschreibung'
 description: ''
 required: false
 translatable: false
