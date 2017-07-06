@@ -165,6 +165,9 @@ header{
         .nrw-menu__header{
           
         }
+      }
+      &:hover{
+        background-color: $brand-primary;
       } 
     }
     &__content{
@@ -190,6 +193,7 @@ header{
           justify-content: flex-end;
           i{
             color: $color-white;
+            line-height: 1.1;
             line-height: $padding-large-horizontal;
             margin-left: $padding-base-horizontal/3;
           }
