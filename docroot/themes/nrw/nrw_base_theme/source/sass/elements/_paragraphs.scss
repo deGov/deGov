@@ -1,6 +1,6 @@
 // Give some space to paragraph fields
 .paragraph {
-	margin: $vertical-gutter-width*2 0;
+	//margin: $vertical-gutter-width*2 0;
 	a{
 		font-family: $font-family-sans-serif-bold;
 	}
@@ -34,4 +34,8 @@
 		display: inline-block;
 		width: 100%;
 	}
+}
+.paragraph__content{
+padding-top: $padding-large-vertical*2;
+padding-bottom: $padding-large-vertical*2;	
 }

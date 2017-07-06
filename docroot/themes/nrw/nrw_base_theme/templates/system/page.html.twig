@@ -83,12 +83,15 @@
         </a>
         <div class="col-md-3 pull-right header__logo">
             <div class="image">
-                <a href="{{ url('<front>') }}"><img src="{{ base_path ~ directory }}/source/images/logo.png"></div></a>
+                <a href="{{ url('<front>') }}"><img src="{{ base_path ~ directory }}/source/images/logo.png"></a>
             </div>
         </div>
     </div>
     {# please Vivek inlude your template here. like the next. #}
-    {# include 'header.html.twig' #}      
+     <div class="header__menu">
+      {{ page_header_menu }}
+     </div>
+    {# include 'header.html.twig' #}   
   </header>
   
 
@@ -102,7 +105,7 @@
       <div class="row">
 
         {# Sidebar First #}
-        {% if page.sidebar_first %}
+        {% if page.sidebar_first|render|striptags|trim %}
           {% block sidebar_first %}
             <aside class="col-sm-3" role="complementary">
               {{ page.sidebar_first }}
@@ -113,10 +116,10 @@
         {# Content #}
         {%
           set content_classes = [
-            page.sidebar_first and page.sidebar_second ? 'col-sm-6',
-            page.sidebar_first and page.sidebar_second is empty ? 'col-sm-9',
-            page.sidebar_second and page.sidebar_first is empty ? 'col-sm-9',
-            page.sidebar_first is empty and page.sidebar_second is empty ? 'col-sm-12'
+            page.sidebar_first|render|striptags|trim and page.sidebar_second|render|striptags|trim ? 'col-sm-6',
+            page.sidebar_first|render|striptags|trim and page.sidebar_second|render|striptags|trim is empty ? 'col-sm-9',
+            page.sidebar_second|render|striptags|trim and page.sidebar_first|render|striptags|trim is empty ? 'col-sm-9',
+            page.sidebar_first|render|striptags|trim is empty and page.sidebar_second|render|striptags|trim is empty ? 'col-sm-12'
           ]
         %}
         <section{{ content_attributes.addClass(content_classes) }}>
@@ -143,7 +146,7 @@
         </section>
 
         {# Sidebar Second #}
-        {% if page.sidebar_second %}
+        {% if page.sidebar_second|render|striptags|trim %}
           {% block sidebar_second %}
             <aside class="col-sm-3" role="complementary">
               {{ page.sidebar_second }}
