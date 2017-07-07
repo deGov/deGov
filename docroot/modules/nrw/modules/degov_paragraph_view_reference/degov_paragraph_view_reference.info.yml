@@ -1,0 +1,12 @@
+name: 'deGov - Paragraph Ansichtsreferenz'
+description: 'Mit diesem Paragraphen können an beliebigen Stellen Ansichten (Views) eingeblendet werden. '
+package: deGov
+type: module
+core: 8.x
+dependencies:
+  - field
+  - paragraphs
+  - views
+  - viewsreference
+  - workbench_moderation
+  - degov_content_types_shared_fields

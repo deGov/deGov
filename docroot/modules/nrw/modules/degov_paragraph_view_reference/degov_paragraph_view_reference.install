@@ -1,0 +1,14 @@
+<?php
+
+use Drupal\degov_content_types_shared_fields\Common;
+
+/**
+ * Implements hook_uninstall().
+ */
+function degov_paragraph_view_reference_uninstall() {
+  // Removes all module type defined content when uninstalling the module.
+  Common::removeContent([
+    'entity_type' => 'paragraph',
+    'entity_bundles' => ['view_reference'],
+  ]);
+}
