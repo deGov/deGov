@@ -1,0 +1,8 @@
+name: 'deGov - Taxonomy Schlagworte'
+description: 'Enthält Schlagworte für Content Types.'
+package: deGov
+type: module
+core: 8.x
+dependencies:
+  - language
+  - taxonomy

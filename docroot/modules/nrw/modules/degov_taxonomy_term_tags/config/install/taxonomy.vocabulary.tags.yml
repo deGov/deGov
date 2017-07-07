@@ -1,0 +1,8 @@
+langcode: de
+status: true
+dependencies: {  }
+name: Schlagworte
+vid: tags
+description: ''
+hierarchy: 0
+weight: 0
