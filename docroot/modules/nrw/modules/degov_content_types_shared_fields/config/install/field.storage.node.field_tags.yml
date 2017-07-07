@@ -1,21 +1,18 @@
 langcode: de
 status: true
 dependencies:
-  enforced:
-    module:
-      - degov_content_types_shared_fields
   module:
-    - media_entity
     - node
-id: node.field_teaser_image
-field_name: field_teaser_image
+    - taxonomy
+id: node.field_tags
+field_name: field_tags
 entity_type: node
 type: entity_reference
 settings:
-  target_type: media
+  target_type: taxonomy_term
 module: core
 locked: false
-cardinality: 1
+cardinality: -1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

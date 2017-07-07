@@ -4,7 +4,10 @@ package: deGov
 type: module
 core: 8.x
 dependencies:
+  - entity_reference_revisions
   - field
   - media_entity
   - node
+  - paragraphs
+  - taxonomy
   - text
