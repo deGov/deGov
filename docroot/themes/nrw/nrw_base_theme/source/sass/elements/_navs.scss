@@ -88,6 +88,7 @@
         -webkit-transition: opacity 1s, visibility 1.3s;
         -o-transition: opacity 1s, visibility 1.3s;
         transition: opacity 1s, visibility 1.3s;
+        z-index: -10;
       }
       &.is-open{
         visibility:visible;

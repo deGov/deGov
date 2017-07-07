@@ -104,6 +104,15 @@
     <div role="main" class="main-container {{ container }} js-quickedit-main-content">
       <div class="row">
 
+        {# Header Region #}
+        {% if page.header_region|render|striptags|trim %}
+          {% block header_region %}
+            <div class="col-sm-12" role="complementary">
+              {{ page.header_region }}
+            </div>
+          {% endblock %}
+        {% endif %}
+
         {# Sidebar First #}
         {% if page.sidebar_first|render|striptags|trim %}
           {% block sidebar_first %}
