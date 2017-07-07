@@ -1,12 +1,12 @@
 langcode: de
 status: true
 dependencies:
-  module:
-    - datetime
-    - node
   enforced:
     module:
       - degov_node_press
+  module:
+    - datetime
+    - node
 id: node.field_press_date
 field_name: field_press_date
 entity_type: node

@@ -5,6 +5,7 @@ dependencies:
     - field.field.node.press.field_content_paragraphs
     - field.field.node.press.field_press_date
     - field.field.node.press.field_sidebar_right_paragraphs
+    - field.field.node.press.field_tags
     - field.field.node.press.field_teaser_image
     - field.field.node.press.field_teaser_text
     - field.field.node.press.field_teaser_title
@@ -15,7 +16,14 @@ dependencies:
   module:
     - datetime
     - entity_reference_revisions
+    - panelizer
     - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.press.default
 targetEntityType: node
 bundle: press
@@ -40,16 +48,16 @@ content:
     type: datetime_default
     region: content
   field_sidebar_right_paragraphs:
+    type: entity_reference_revisions_entity_view
     weight: 2
+    region: content
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
-    region: content
-
 hidden:
+  field_tags: true
   field_teaser_image: true
   field_teaser_text: true
   field_teaser_title: true
