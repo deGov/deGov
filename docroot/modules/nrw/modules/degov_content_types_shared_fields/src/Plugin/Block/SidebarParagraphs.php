@@ -4,6 +4,7 @@ namespace Drupal\degov_content_types_shared_fields\Plugin\Block;
 
 
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Cache\Cache;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\node\NodeInterface;
@@ -112,5 +113,12 @@ class SidebarParagraphs extends BlockBase implements ContainerFactoryPluginInter
       $cache_tags[] = 'node:' . $node->id();
     }
     return $cache_tags;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getCacheContexts() {
+    return Cache::mergeContexts(parent::getCacheContexts(), ['url.path']);
   }
 }
