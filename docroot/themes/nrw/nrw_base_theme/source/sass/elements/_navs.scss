@@ -183,6 +183,7 @@ header{
         display: flex;
         >a, >div{
           flex-grow: 1;
+          text-decoration: none;
         }
 
         .nrw-menu__content-close{
@@ -259,12 +260,16 @@ header{
         }
       }
      > .nrw-menu__list{
+          list-style: none;
           float: left;
           background-image: url(../images/menus.png);
           min-height: 210px;
           width: 75%;
           padding: $padding-base-horizontal $padding-base-horizontal*3.6;
           margin-bottom: $padding-base-horizontal*5;
+          ul{
+            list-style: none;
+          }
           a{
               @include icon-before('\f061');
               font-size: $font-size-base - 4;
