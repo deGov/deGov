@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.event.field_event_date
     - field.field.node.event.field_event_location
     - field.field.node.event.field_sidebar_right_paragraphs
+    - field.field.node.event.field_tags
     - field.field.node.event.field_teaser_image
     - field.field.node.event.field_teaser_text
     - field.field.node.event.field_teaser_title
@@ -17,7 +18,14 @@ dependencies:
     - address
     - datetime
     - entity_reference_revisions
+    - panelizer
     - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.event.default
 targetEntityType: node
 bundle: event
@@ -58,6 +66,7 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
 hidden:
+  field_tags: true
   field_teaser_image: true
   field_teaser_text: true
   field_teaser_title: true
