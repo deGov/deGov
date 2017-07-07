@@ -1,0 +1,45 @@
+langcode: de
+status: true
+dependencies:
+  enforced:
+    module:
+      - degov_paragraph_view_reference
+  config:
+    - field.field.paragraph.view_reference.field_sub_title
+    - field.field.paragraph.view_reference.field_title
+    - field.field.paragraph.view_reference.field_view_reference_view
+    - paragraphs.paragraphs_type.view_reference
+  module:
+    - viewsreference
+    - workbench_moderation
+id: paragraph.view_reference.default
+targetEntityType: paragraph
+bundle: view_reference
+mode: default
+content:
+  field_sub_title:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_view_reference_view:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: viewsreference_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

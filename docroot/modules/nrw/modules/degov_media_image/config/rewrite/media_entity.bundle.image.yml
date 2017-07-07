@@ -17,7 +17,7 @@ third_party_settings:
   crop:
     image_field: image
 id: image
-label: Image
+label: Bild
 description: 'Locally hosted images.'
 type: image
 queue_thumbnail_downloads: false

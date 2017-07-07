@@ -7,7 +7,7 @@ description: 'Base theme for the deGov distribution. Depends on Bootstrap theme.
 package: 'Bootstrap'
 
 regions:
-  help: 'Help'
+  header_region: 'Header'
   content: 'Content'
   sidebar_first: 'Primary'
   sidebar_second: 'Secondary'

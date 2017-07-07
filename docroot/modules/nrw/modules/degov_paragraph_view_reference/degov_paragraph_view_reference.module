@@ -1,0 +1,16 @@
+<?php
+
+use Drupal\degov_content_types_shared_fields\Common;
+
+/**
+ * Implements hook_preprocess().
+ */
+function degov_paragraph_view_reference_preprocess(&$variables, $hook, &$info) {
+  // Add template suggestions and libraries implemented in this module.
+  Common::addThemeSuggestions($variables, $hook, $info, [
+    'module_name' => 'degov_paragraph_view_reference',
+    'entity_type' => 'paragraph',
+    'entity_bundles' => ['view_reference'],
+    'entity_view_modes' => [],
+  ]);
+}
