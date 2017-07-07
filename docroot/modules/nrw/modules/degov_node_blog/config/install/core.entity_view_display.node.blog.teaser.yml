@@ -1,9 +1,6 @@
 langcode: de
 status: true
 dependencies:
-  enforced:
-    module:
-      - degov_node_blog
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.blog.field_blog_author
@@ -16,6 +13,9 @@ dependencies:
     - field.field.node.blog.field_teaser_text
     - field.field.node.blog.field_teaser_title
     - node.type.blog
+  enforced:
+    module:
+      - degov_node_blog
   module:
     - datetime
     - panelizer
