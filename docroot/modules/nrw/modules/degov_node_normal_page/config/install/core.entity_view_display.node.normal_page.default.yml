@@ -5,6 +5,7 @@ dependencies:
     - field.field.node.normal_page.field_content_paragraphs
     - field.field.node.normal_page.field_header_paragraphs
     - field.field.node.normal_page.field_sidebar_right_paragraphs
+    - field.field.node.normal_page.field_tags
     - field.field.node.normal_page.field_teaser_image
     - field.field.node.normal_page.field_teaser_text
     - field.field.node.normal_page.field_teaser_title
@@ -14,7 +15,14 @@ dependencies:
       - degov_node_normal_page
   module:
     - entity_reference_revisions
+    - panelizer
     - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.normal_page.default
 targetEntityType: node
 bundle: normal_page
@@ -39,15 +47,16 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
   field_sidebar_right_paragraphs:
+    type: entity_reference_revisions_entity_view
     weight: 2
+    region: content
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
-    region: content
 hidden:
+  field_tags: true
   field_teaser_image: true
   field_teaser_text: true
   field_teaser_title: true
