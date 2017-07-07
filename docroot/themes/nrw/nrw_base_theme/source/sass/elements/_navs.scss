@@ -236,27 +236,12 @@ header{
         float: right;
         background-color: $nrw-secondary;
         padding: $padding-base-horizontal + 5;
+        color: $color-white;
         p{
-          font-size: $font-size-h2;
           color: $color-white;
           margin: 0;
           line-height: $font-size-h2 + 6;
           -webkit-font-smoothing: antialiased;
-        }
-        p:nth-child(1){
-
-        }
-        p:nth-child(2){
-          font-family: $font-family-sans-serif-bold;
-          display: inline-block;
-          width: 100%;
-          
-        }
-        a{
-          @include icon-before('\f061');
-          font-size: $font-size-base - 4;
-          text-transform: initial;
-          padding-left: $padding-base-horizontal*3;
         }
       }
      > .nrw-menu__list{
