@@ -5,6 +5,7 @@
             <!-- First level of main menu-->
             <a class="link{% if menu_item.external %} link--external{% endif %}" href="{{ menu_item.url }}" title="{{ menu_item.description }}"{% if menu_item.external %} target="_blank"{% endif %}>
                 {{ menu_item.text }}</a>
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
         </div>
         <div class="nrw-menu-footer__content">
             {% if menu_item.submenu is not empty %}
