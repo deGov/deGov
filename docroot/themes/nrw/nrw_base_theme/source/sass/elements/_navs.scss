@@ -106,7 +106,7 @@
   &__icon{
     text-decoration: none;
     display: inline-block;
-    height: 100px;
+    height: 80px;
     width: 160px;
     border-right: 1px solid $nrw-light;
     float: left;
@@ -128,7 +128,7 @@
       z-index: 1;
       margin-bottom: $padding-base-vertical*2;
       &:before{
-        font-size: $font-size-base;
+        font-size: $font-size-large;
       }
     }
     &.menu-search{
@@ -205,6 +205,7 @@
     width: 100%;
     left: 0;
     top: 45px;
+    z-index: 1;
     &-title-area{
       padding: 20px 20px 13px 20px;
       color: $brand-primary;
