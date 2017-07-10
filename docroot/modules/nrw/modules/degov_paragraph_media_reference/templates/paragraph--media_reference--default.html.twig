@@ -39,10 +39,13 @@
  */
 #}
 <div class="paragraph media-reference">
-  {% if paragraph.field_title.value or paragraph.field_sub_title.value %}
+  {% if content.field_title|field_value or content.field_sub_title|field_value %}
     <div class="paragraph__header">
+      <i class="fa fa-arrow-right" aria-hidden="true"></i>
       <h2>{{ content.field_title }}
-        <span class="sub-title">{{ content.field_sub_title }}</span>
+        {% if content.field_sub_title|field_value %}
+          <span class="sub-title">{{ content.field_sub_title|field_value }}</span>
+        {% endif %}
       </h2>
     </div>
   {% endif %}
