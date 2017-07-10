@@ -1,0 +1,24 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.video_subtitle.field_subtitle_default
+    - field.field.paragraph.video_subtitle.field_subtitle_file
+    - field.field.paragraph.video_subtitle.field_subtitle_kind
+    - field.field.paragraph.video_subtitle.field_subtitle_label
+    - field.field.paragraph.video_subtitle.field_subtitle_lang
+    - paragraphs.paragraphs_type.video_subtitle
+  enforced:
+    module:
+      - degov_paragraph_video_subtitle
+id: paragraph.video_subtitle.default
+targetEntityType: paragraph
+bundle: video_subtitle
+mode: default
+content: {  }
+hidden:
+  field_subtitle_default: true
+  field_subtitle_file: true
+  field_subtitle_kind: true
+  field_subtitle_label: true
+  field_subtitle_lang: true

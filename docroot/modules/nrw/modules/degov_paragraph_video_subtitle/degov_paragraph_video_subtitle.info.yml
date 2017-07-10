@@ -1,0 +1,12 @@
+name: 'deGov - Paragraph Video-Untertitel'
+description: 'Stellt einen Paragraphen für Video-Untertitel bereit.'
+package: deGov
+type: module
+core: 8.x
+dependencies:
+  - degov_content_types_shared_fields
+  - field
+  - file
+  - options
+  - paragraphs
+  - workbench_moderation

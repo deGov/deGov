@@ -1,0 +1,28 @@
+langcode: de
+status: true
+dependencies:
+  enforced:
+    module:
+      - degov_media_video_upload
+  module:
+    - crop
+    - workbench_moderation
+third_party_settings:
+  crop:
+    image_field: null
+  workbench_moderation:
+    enabled: 0
+    allowed_moderation_states:
+      - published
+      - archived
+      - draft
+      - needs_review
+    default_moderation_state: draft
+id: video_upload
+label: 'Video Upload'
+description: 'Mit diesem Bundle können Video-Dateien hochgeladen werden. Für die Einbindung externe Videos (z.B. Youtube) muss das Video-Bundle benutzt werden.'
+type: generic
+queue_thumbnail_downloads: false
+new_revision: false
+type_configuration: {  }
+field_map: {  }
