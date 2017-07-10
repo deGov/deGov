@@ -1,0 +1,21 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_image_height
+    - media_entity.bundle.image
+  enforced:
+    module:
+      - degov_media_image
+id: media.image.field_image_height
+field_name: field_image_height
+entity_type: media
+bundle: image
+label: Höhe
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

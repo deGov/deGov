@@ -1,0 +1,12 @@
+name: 'deGov - Pathauto'
+description: 'Einstellungen für Standardpfade'
+package: deGov
+type: module
+core: 8.x
+dependencies:
+  - media_entity
+  - node
+  - pathauto
+  - taxonomy
+  - user
+  - config_rewrite

@@ -5,16 +5,9 @@
  *
  * Available variables:
  * - node: The node entity with limited access to object properties and methods.
- *   Only method names starting with "get", "has", or "is" and a few common
- *   methods such as "id", "label", and "bundle" are available. For example:
- *   - node.getCreatedTime() will return the node creation timestamp.
- *   - node.hasField('field_example') returns TRUE if the node bundle includes
- *     field_example. (This does not indicate the presence of a value in this
- *     field.)
- *   - node.isPublished() will return whether the node is published or not.
- *   Calling other methods, such as node.delete(), will result in an exception.
- *   See \Drupal\node\Entity\Node for a full list of public properties and
- *   methods for the node object.
+     Only "getter" methods (method names starting with "get", "has", or "is")
+     and a few common methods such as "id" and "label" are available. Calling
+     other methods (such as node.delete) will result in an exception.
  * - label: The title of the node.
  * - content: All node items. Use {{ content }} to print them all,
  *   or print a subset such as {{ content.field_example }}. Use
@@ -63,6 +56,8 @@
  * - is_admin: Flag for admin user status. Will be true when the current user
  *   is an administrator.
  *
+ * @ingroup templates
+ *
  * @see template_preprocess_node()
  *
  * @todo Remove the id attribute (or make it a class), because if that gets
@@ -70,28 +65,37 @@
  *   in different view modes.
  */
 #}
-<article{{ attributes }}>
-
-  {{ title_prefix }}
-  {% if not page %}
-      <h2{{ title_attributes }}>
-          <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-      </h2>
-  {% endif %}
-  {{ title_suffix }}
-
-  {% if display_submitted %}
-      <footer>
-        {{ author_picture }}
-          <div{{ author_attributes }}>
-            {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-            {{ metadata }}
-          </div>
-      </footer>
-  {% endif %}
-
-    <div{{ content_attributes }}>
-      {{ content }}
+{%
+  set classes = [
+    node.bundle|clean_class,
+    node.isPromoted() ? 'is-promoted',
+    node.isSticky() ? 'is-sticky',
+    not node.isPublished() ? 'is-unpublished',
+    view_mode ? view_mode|clean_class,
+    'clearfix',
+  ]
+%}
+<article{{ attributes.addClass(classes) }}>
+  {% if content.field_teaser_image %}
+    <div class="press__teaser-image col-sm-3">
+      {{ content.field_teaser_image }}
     </div>
-
+  {% endif %}
+  <div class="press-page__teaser-content teaser-content">
+    {% if content.field_press_date %}
+      <div class="press__teaser-date">
+        {{ content.field_press_date }}
+      </div>
+    {% endif %}
+    {% if content.field_teaser_title %}
+      <div class="press__teaser-title">
+        {{ content.field_teaser_title }}
+      </div>
+    {% endif %}
+    {% if content.field_teaser_text %}
+      <div class="press__teaser-text">
+        {{ content.field_teaser_text }}
+      </div>
+    {% endif %}
+  </div>
 </article>

@@ -86,9 +86,6 @@
 
 .nrw-menu-header{
   border-top: 1px solid $nrw-light;
-  a{
-    color: $color-white;
-  }
   &__icons{
     position: relative;
     display: flex;
@@ -140,9 +137,13 @@
     -webkit-flex-flow: row wrap;
     justify-content: flex-start;
     background-color: $nrw-secondary;
+    a{
+      color: $color-white;
+    }
   }
   
 
+  
   &__col{
     padding: 10px;
     &.is-open{

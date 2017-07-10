@@ -8,3 +8,4 @@ dependencies:
   - media_entity
   - node
   - text
+  - twig_field_value

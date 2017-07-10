@@ -1,3 +1,4 @@
+/*
 // Style link lists
 .field--name-field-links-element-links {
 	.field--item {
@@ -5,6 +6,21 @@
 			@include icon-before('►');
 			&:hover, &:focus {
 				text-decoration: none;
+			}
+		}
+	}
+}
+*/
+.links{
+	.paragraph__content{
+		a{
+			font-size: $font-size-h6;
+			@include icon-before('\f061');
+			text-transform: initial;
+			text-indent: -$grid-gutter-width/4;
+			margin-left: $grid-gutter-width/2;
+			&:before{
+				margin-right: 7px;
 			}
 		}
 	}

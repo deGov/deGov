@@ -1,0 +1,37 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.embedded
+    - field.field.media.image.field_image_caption
+    - field.field.media.image.field_image_copyright
+    - field.field.media.image.field_image_date
+    - field.field.media.image.field_image_description
+    - field.field.media.image.field_image_height
+    - field.field.media.image.field_image_image
+    - field.field.media.image.field_image_mime
+    - field.field.media.image.field_image_title
+    - field.field.media.image.field_image_width
+    - field.field.media.image.field_media_in_library
+    - media_entity.bundle.image
+id: media.image.embedded
+targetEntityType: media
+bundle: image
+mode: embedded
+content: {  }
+hidden:
+  created: true
+  field_image_caption: true
+  field_image_copyright: true
+  field_image_date: true
+  field_image_description: true
+  field_image_height: true
+  field_image_image: true
+  field_image_mime: true
+  field_image_title: true
+  field_image_width: true
+  field_media_in_library: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

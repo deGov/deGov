@@ -19,7 +19,6 @@
             // on click add the class to siblings
             $('.nrw-menu-header__col .nrw-menu__header', context).click(function (e) {
                 e.preventDefault();
-                console.log('aaa');
                 // remove the class from all the content containers in the menu
                 // add the class only to the sibling of the active menu__header                
                 var parent = $(this).closest('.nrw-menu-header__col');

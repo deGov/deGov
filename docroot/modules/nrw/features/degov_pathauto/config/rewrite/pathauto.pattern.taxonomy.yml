@@ -1,0 +1,13 @@
+langcode: de
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy
+label: Taxonomien
+type: 'canonical_entities:taxonomy_term'
+pattern: "[term:vocabulary:name]/[term:name]"
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }

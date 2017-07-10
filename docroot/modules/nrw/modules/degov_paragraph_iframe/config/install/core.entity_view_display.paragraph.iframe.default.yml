@@ -1,30 +1,30 @@
 langcode: de
 status: true
 dependencies:
+  config:
+    - field.field.paragraph.iframe.field_iframe_height
+    - field.field.paragraph.iframe.field_iframe_url
+    - field.field.paragraph.iframe.field_sub_title
+    - field.field.paragraph.iframe.field_title
+    - paragraphs.paragraphs_type.iframe
   enforced:
     module:
       - degov_paragraph_iframe
-  config:
-    - field.field.paragraph.iframe.field_iframe_height
-    - field.field.paragraph.iframe.field_iframe_sub_title
-    - field.field.paragraph.iframe.field_iframe_title
-    - field.field.paragraph.iframe.field_iframe_url
-    - paragraphs.paragraphs_type.iframe
 id: paragraph.iframe.default
 targetEntityType: paragraph
 bundle: iframe
 mode: default
 content:
-  field_iframe_sub_title:
-    weight: 1
+  field_sub_title:
+    weight: 3
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
-  field_iframe_title:
-    weight: 0
+  field_title:
+    weight: 2
     label: hidden
     settings:
       link_to_entity: false

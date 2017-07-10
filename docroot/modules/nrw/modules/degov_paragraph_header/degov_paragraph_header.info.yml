@@ -1,0 +1,13 @@
+name: 'deGov - Paragraph Header'
+description: 'Stellt einen Paragraphentyp für headers.'
+package: deGov
+type: module
+core: 8.x
+dependencies:
+  - degov_content_types_shared_fields
+  - entity_browser
+  - field
+  - media_entity
+  - paragraphs
+  - text
+  - workbench_moderation
