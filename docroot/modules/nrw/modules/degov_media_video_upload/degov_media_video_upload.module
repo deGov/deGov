@@ -1,0 +1,57 @@
+<?php
+
+use Drupal\degov_content_types_shared_fields\Common;
+use Drupal\Core\Template\Attribute;
+
+/**
+ * Implements hook_preprocess().
+ */
+function degov_media_video_upload_preprocess(&$variables, $hook, &$info) {
+  if ($hook === 'media') {
+    /* @var \Drupal\media_entity\Entity\Media $media */
+    $media = $variables['elements']['#media'];
+    $variables['media'] = $media;
+  }
+
+  // Add template suggestions and libraries implemented in this module.
+  Common::addThemeSuggestions($variables, $hook, $info, [
+    'module_name' => 'degov_media_video_upload',
+    'entity_type' => 'media',
+    'entity_bundles' => ['video_upload'],
+    'entity_view_modes' => [],
+  ]);
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function degov_media_video_upload_preprocess_media__video_upload(&$variables) {
+  /* @var \Drupal\media_entity\Entity\Media $media */
+  $media = $variables['media'];
+
+  $variables['video_attributes'] = new Attribute([
+    'id' => 'video-upload-' . $media->id(),
+    'preload' => 'metadata',
+    'controls' => 'controls',
+  ]);
+
+  /* @var \Drupal\file\Entity\File $file */
+  $file = $media->field_video_upload_mp4->entity;
+  if (!empty($file)) {
+    $variables['video_mp4'] = file_create_url($file->getFileUri());
+  }
+
+  $file = $media->field_video_upload_webm->entity;
+  if (!empty($file)) {
+    $variables['video_webm'] = file_create_url($file->getFileUri());
+  }
+
+  /* @var \Drupal\media_entity\Entity\Media $poster */
+  $image = $media->field_video_upload_preview->entity;
+  if (!empty($image)) {
+    $file = $image->image->entity;
+    if (!empty($file)) {
+      $variables['video_attributes']['poster'] = file_create_url($file->getFileUri());
+    }
+  }
+}

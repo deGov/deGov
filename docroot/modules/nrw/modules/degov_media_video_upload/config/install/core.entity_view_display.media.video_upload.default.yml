@@ -1,0 +1,57 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.media.video_upload.field_media_in_library
+    - field.field.media.video_upload.field_video_upload_caption
+    - field.field.media.video_upload.field_video_upload_copyright
+    - field.field.media.video_upload.field_video_upload_mp4
+    - field.field.media.video_upload.field_video_upload_preview
+    - field.field.media.video_upload.field_video_upload_subtitle
+    - field.field.media.video_upload.field_video_upload_webm
+    - media_entity.bundle.video_upload
+  enforced:
+    module:
+      - degov_media_video_upload
+  module:
+    - entity_reference_revisions
+id: media.video_upload.default
+targetEntityType: media
+bundle: video_upload
+mode: default
+content:
+  field_video_upload_caption:
+    type: string
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_video_upload_copyright:
+    type: entity_reference_label
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+  field_video_upload_subtitle:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_media_in_library: true
+  field_video_upload_mp4: true
+  field_video_upload_preview: true
+  field_video_upload_webm: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

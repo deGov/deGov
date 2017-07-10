@@ -1,0 +1,23 @@
+langcode: de
+status: true
+dependencies:
+  enforced:
+    module:
+      - degov_media_video_upload
+  module:
+    - entity_reference_revisions
+    - media_entity
+    - paragraphs
+id: media.field_video_upload_subtitle
+field_name: field_video_upload_subtitle
+entity_type: media
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

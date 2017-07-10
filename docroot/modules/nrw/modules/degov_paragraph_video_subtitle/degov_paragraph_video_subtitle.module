@@ -1,0 +1,54 @@
+<?php
+
+use Drupal\degov_content_types_shared_fields\Common;
+
+/**
+ * Implements hook_preprocess().
+ */
+function degov_paragraph_video_subtitle_preprocess(&$variables, $hook, &$info) {
+  // Add template suggestions and libraries implemented in this module.
+  Common::addThemeSuggestions($variables, $hook, $info, [
+    'module_name' => 'degov_paragraph_video_subtitle',
+    'entity_type' => 'paragraph',
+    'entity_bundles' => ['video_subtitle'],
+    'entity_view_modes' => [],
+  ]);
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function degov_paragraph_video_subtitle_preprocess_paragraph__video_subtitle(&$variables) {
+  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+  $paragraph = $variables['paragraph'];
+
+  $attributes = [];
+
+  $label = $paragraph->field_subtitle_label->value;
+  if (!empty($label)) {
+    $attributes['label'] = $label;
+  }
+
+  $kind = $paragraph->field_subtitle_kind->value;
+  if (!empty($kind)) {
+    $attributes['kind'] = $kind;
+  }
+
+  $lang = $paragraph->field_subtitle_lang->value;
+  if (!empty($lang)) {
+    $attributes['srclang'] = $lang;
+  }
+
+  /** @var \Drupal\file\Entity\File $file */
+  $file = $paragraph->field_subtitle_file->entity;
+  if (!empty($file)) {
+    $attributes['src'] = file_create_url($file->getFileUri());
+  }
+
+  $default = $paragraph->field_subtitle_default->value;
+  if (!empty($default)) {
+    $attributes['default'] = 'default';
+  }
+
+  $variables['attributes'] = $attributes;
+}

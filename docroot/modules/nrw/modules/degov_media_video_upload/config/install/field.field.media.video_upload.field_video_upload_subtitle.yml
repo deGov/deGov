@@ -1,0 +1,53 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_video_upload_subtitle
+    - media_entity.bundle.video_upload
+    - paragraphs.paragraphs_type.video_subtitle
+  enforced:
+    module:
+      - degov_media_video_upload
+  module:
+    - entity_reference_revisions
+id: media.video_upload.field_video_upload_subtitle
+field_name: field_video_upload_subtitle
+entity_type: media
+bundle: video_upload
+label: Untertitel
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      video_subtitle: video_subtitle
+    target_bundles_drag_drop:
+      subtitle:
+        enabled: true
+        weight: 9
+      faq:
+        weight: 10
+        enabled: false
+      faq_list:
+        weight: 11
+        enabled: false
+      links:
+        weight: 12
+        enabled: false
+      node_reference:
+        weight: 13
+        enabled: false
+      slide:
+        weight: 14
+        enabled: false
+      slideshow:
+        weight: 15
+        enabled: false
+      text:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

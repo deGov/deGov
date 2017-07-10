@@ -1,0 +1,38 @@
+langcode: de
+status: true
+dependencies:
+  enforced:
+    module:
+      - degov_paragraph_video_subtitle
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_subtitle_kind
+field_name: field_subtitle_kind
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: subtitles
+      label: Untertitel
+    -
+      value: captions
+      label: 'Untertitel für Hörgeschädigte'
+    -
+      value: descriptions
+      label: Beschreibungen
+    -
+      value: chapters
+      label: Kapitel
+    -
+      value: metadata
+      label: Metadata
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

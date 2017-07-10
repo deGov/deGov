@@ -1,0 +1,20 @@
+langcode: de
+status: true
+dependencies:
+  enforced:
+    module:
+      - degov_paragraph_video_subtitle
+  module:
+    - workbench_moderation
+third_party_settings:
+  workbench_moderation:
+    enabled: 0
+    allowed_moderation_states:
+      - published
+      - archived
+      - draft
+      - needs_review
+    default_moderation_state: draft
+id: video_subtitle
+label: Untertitel
+behavior_plugins: {  }
