@@ -1,6 +1,6 @@
 // Styles for intro, header, and top bar regions
 
-
+/*
 // layout for the navbar
 .header-wrapper .name {
 	display: none;
@@ -19,6 +19,7 @@
 		margin-top: floor($navbar-height*0.225);
 	}
 }
+
 .container > .navbar-header {
 	float: right;
 	margin-left: 0;
@@ -27,6 +28,7 @@
 .header-wrapper .navbar {
 	margin-bottom: 0;
 }
+
 .header-wrapper .navbar li a {
 	color: $color-gray;
 	&:hover,
@@ -50,6 +52,7 @@
 .header-wrapper .navbar .region-navigation-collapsible > nav > ul > li > a {
 	font-weight: bold;
 }
+*/
 
 .header-wrapper{
 	@include larger-than($screen-tablet) {
@@ -136,13 +139,15 @@
 	}
 }
 
+
+
 .header{
 	&__upper-menu{
 		min-height: 42px;
 		background-color: $brand-primary;
 		font-size: $font-size-small - 2;
 		color: $color-white;
-		font-family: $font-family-sans-serif-bold;
+		font-weight: bold;
 		text-transform: uppercase;
 		position: relative; 
 		> div{
@@ -190,7 +195,7 @@
 			color: $brand-primary;
 		}
 		span{
-			font-family: $font-family-sans-serif-bold;
+			font-weight: bold;
 			display: inline-block;
 			width: 100%; 
 		}

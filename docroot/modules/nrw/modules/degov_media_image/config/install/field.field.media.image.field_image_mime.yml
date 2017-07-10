@@ -11,7 +11,7 @@ id: media.image.field_image_mime
 field_name: field_image_mime
 entity_type: media
 bundle: image
-label: Mime
+label: 'MIME Typ'
 description: ''
 required: false
 translatable: true

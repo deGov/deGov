@@ -16,16 +16,24 @@
             if ($('.nrw-menu__header', context).length == 0) {
                 return;
             }
-            // on click add the class to sibling
-            $('.nrw-menu__header a', context).click(function (e) {
+            // on click add the class to siblings
+            $('.nrw-menu-header__col .nrw-menu__header', context).click(function (e) {
                 e.preventDefault();
                 // remove the class from all the content containers in the menu
-                $('.nrw-menu__content', context).each(function(){
-                    $(this).removeClass('is-expanded');
-                });
-                // add the class only to the sibling of the active menu__header
-                var parent = $(this).closest('.nrw-menu__col');
-                $('.nrw-menu__content', parent).addClass('is-expanded');
+                // add the class only to the sibling of the active menu__header                
+                var parent = $(this).closest('.nrw-menu-header__col');
+                if( $(this).siblings('.nrw-menu-header__content').hasClass( "is-expanded" ) ){
+                    $(this).parent().removeClass('is-open');
+                    $(this).siblings('.nrw-menu-header__content').removeClass("is-expanded");
+                }else {
+                    $('.nrw-menu-header__col').removeClass('is-open');
+                    $('.nrw-menu-header__content').removeClass("is-expanded");
+                    $(this).parent().addClass('is-open');
+                    $(this).siblings('.nrw-menu-header__content').addClass("is-expanded");
+                }                
+            });
+            $('.nrw-menu__content-close a', context).click(function (e) {
+                $(this).parent().parent().parent().removeClass('is-expanded');
             });
         }
     }

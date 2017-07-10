@@ -1,0 +1,25 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subtitle_default
+    - paragraphs.paragraphs_type.video_subtitle
+  enforced:
+    module:
+      - degov_paragraph_video_subtitle
+id: paragraph.video_subtitle.field_subtitle_default
+field_name: field_subtitle_default
+entity_type: paragraph
+bundle: video_subtitle
+label: Standard
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

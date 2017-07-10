@@ -1,0 +1,13 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - media_entity.bundle.video_upload
+  enforced:
+    module:
+      - degov_media_video_upload
+id: media.video_upload
+target_entity_type_id: media
+target_bundle: video_upload
+default_langcode: site_default
+language_alterable: false

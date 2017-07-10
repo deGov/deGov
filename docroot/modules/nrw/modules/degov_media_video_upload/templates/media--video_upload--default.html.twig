@@ -1,0 +1,41 @@
+{#
+/**
+ * @file
+ * Default theme implementation to present a media entity.
+ *
+ * Available variables:
+ * - name: Name of the media.
+ * - content: Media content.
+ *
+ * @see template_preprocess_media()
+ *
+ * @ingroup themeable
+ */
+#}
+{% set caption %}
+  {{- content.field_video_upload_caption -}}
+{% endset %}
+{% set copyright %}
+  {{- content.field_video_upload_copyright -}}
+{% endset %}
+
+<article class="video-upload">
+  <div class="video-upload__video">
+    <video{{ video_attributes }}>
+      <source src="{{ video_mp4 }}" type="video/mp4">
+      <source src="{{ video_webm }}" type="video/webm">
+      {% trans %}
+      I'm sorry; your browser doesn't support HTML5 video in WebM with VP8/VP9 or MP4 with H.264.
+      {% endtrans %}
+      {% for key, subtitle in content.field_video_upload_subtitle if key|first != '#' %}
+      {{ subtitle }}
+      {% endfor %}
+    </video>
+  </div>
+  {% if media.field_video_upload_caption.value %}
+  <div class="video-upload__caption">{% spaceless %}{{ caption|striptags }}{% endspaceless %}</div>
+  {% endif %}
+  {% if media.field_video_upload_copyright.value %}
+  <div class="video-upload__copyright"><span class="video-upload__copyright-label">{{ 'Copyright'|trans }}:</span> {% spaceless %}{{ copyright|striptags }}{% endspaceless %}</div>
+  {% endif %}
+</article>

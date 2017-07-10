@@ -1,15 +1,15 @@
 langcode: de
 status: true
 dependencies:
+  config:
+    - field.field.paragraph.iframe.field_iframe_height
+    - field.field.paragraph.iframe.field_iframe_url
+    - field.field.paragraph.iframe.field_sub_title
+    - field.field.paragraph.iframe.field_title
+    - paragraphs.paragraphs_type.iframe
   enforced:
     module:
       - degov_paragraph_iframe
-  config:
-    - field.field.paragraph.iframe.field_iframe_height
-    - field.field.paragraph.iframe.field_iframe_sub_title
-    - field.field.paragraph.iframe.field_iframe_title
-    - field.field.paragraph.iframe.field_iframe_url
-    - paragraphs.paragraphs_type.iframe
   module:
     - link
     - workbench_moderation
@@ -19,35 +19,35 @@ bundle: iframe
 mode: default
 content:
   field_iframe_height:
-    weight: 9
+    weight: 5
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
     region: content
-  field_iframe_sub_title:
-    weight: 7
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_iframe_title:
-    weight: 6
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_iframe_url:
-    weight: 8
+    weight: 4
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
+  field_sub_title:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
 hidden:
   created: true

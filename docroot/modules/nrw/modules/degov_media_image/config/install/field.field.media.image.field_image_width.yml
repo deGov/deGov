@@ -11,7 +11,7 @@ id: media.image.field_image_width
 field_name: field_image_width
 entity_type: media
 bundle: image
-label: Breite
+label: 'Breite'
 description: ''
 required: false
 translatable: false

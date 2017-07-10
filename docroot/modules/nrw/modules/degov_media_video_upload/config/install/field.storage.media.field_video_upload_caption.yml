@@ -3,12 +3,12 @@ status: true
 dependencies:
   enforced:
     module:
-      - degov_paragraph_iframe
+      - degov_media_video_upload
   module:
-    - paragraphs
-id: paragraph.field_iframe_sub_title
-field_name: field_iframe_sub_title
-entity_type: paragraph
+    - media_entity
+id: media.field_video_upload_caption
+field_name: field_video_upload_caption
+entity_type: media
 type: string
 settings:
   max_length: 255

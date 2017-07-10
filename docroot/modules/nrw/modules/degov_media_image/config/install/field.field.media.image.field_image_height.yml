@@ -11,7 +11,7 @@ id: media.image.field_image_height
 field_name: field_image_height
 entity_type: media
 bundle: image
-label: Höhe
+label: 'Höhe'
 description: ''
 required: false
 translatable: true

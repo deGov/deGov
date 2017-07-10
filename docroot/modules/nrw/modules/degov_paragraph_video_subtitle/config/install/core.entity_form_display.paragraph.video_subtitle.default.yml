@@ -1,0 +1,59 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.video_subtitle.field_subtitle_default
+    - field.field.paragraph.video_subtitle.field_subtitle_file
+    - field.field.paragraph.video_subtitle.field_subtitle_kind
+    - field.field.paragraph.video_subtitle.field_subtitle_label
+    - field.field.paragraph.video_subtitle.field_subtitle_lang
+    - paragraphs.paragraphs_type.video_subtitle
+  enforced:
+    module:
+      - degov_paragraph_video_subtitle
+  module:
+    - file
+    - workbench_moderation
+id: paragraph.video_subtitle.default
+targetEntityType: paragraph
+bundle: video_subtitle
+mode: default
+content:
+  field_subtitle_default:
+    weight: 6
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_subtitle_file:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_subtitle_kind:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_subtitle_label:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_subtitle_lang:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

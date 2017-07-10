@@ -4,16 +4,7 @@
 $bootstrap-sass-asset-helper: false;
 
 $fa-font-path:   "../fonts/font-awesome";
-@font-face {
-    font-family: "BentonSans-Bold";
-    src: url('../fonts/BentonSans/BentonSans-Bold/BentonSans-Bold.eot');
-    src: url('../fonts/BentonSans/BentonSans-Bold/BentonSans-Bold.eot') format('embedded-opentype'),
-         url('../fonts/BentonSans/BentonSans-Bold/BentonSans-Bold.woff') format('woff'),
-         url('../fonts/BentonSans/BentonSans-Bold/BentonSans-Bold.ttf') format('truetype'),
-         url('../fonts/BentonSans/BentonSans-Bold/BentonSans-Bold.svg') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+
 @font-face {
     font-family: "BentonSans-Regular";
     src: url('../fonts/BentonSans/BentonSans-Regular/BentonSans-Regular.eot');
@@ -24,7 +15,16 @@ $fa-font-path:   "../fonts/font-awesome";
     font-weight: normal;
     font-style: normal;
 }
-
+@font-face {
+    font-family: "BentonSans-Regular";
+    src: url('../fonts/BentonSans/BentonSans-Bold/BentonSans-Bold.eot');
+    src: url('../fonts/BentonSans/BentonSans-Bold/BentonSans-Bold.eot') format('embedded-opentype'),
+         url('../fonts/BentonSans/BentonSans-Bold/BentonSans-Bold.woff') format('woff'),
+         url('../fonts/BentonSans/BentonSans-Bold/BentonSans-Bold.ttf') format('truetype'),
+         url('../fonts/BentonSans/BentonSans-Bold/BentonSans-Bold.svg') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
 
 $nrw-primary: #1b4265; //dark_blue
 $nrw-secondary: #286093; // blue
@@ -87,7 +87,6 @@ $link-hover-decoration: underline;
 //
 //## Font, line-height, and color for body text, headings, and more.
 $font-family-sans-serif: 'BentonSans-Regular', 'Open Sans', arial, sans-serif;
-$font-family-sans-serif-bold: 'BentonSans-Bold', 'Open Sans', arial, sans-serif;
 $font-family-serif: Georgia, "Times New Roman", Times, serif;
 
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.

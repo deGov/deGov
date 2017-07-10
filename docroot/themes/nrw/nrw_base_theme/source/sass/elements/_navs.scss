@@ -1,60 +1,3 @@
-// nav tabs
-.nav-tabs {
-  margin-bottom: $line-height-computed;
-}
-
-// navbar
-.navbar {
-  margin-bottom: floor($line-height-computed / 2);
-}
-
-// navbar collapsible
-.navbar-collapse {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-// default navbars
-.navbar-default .navbar-collapse, .navbar-default .navbar-form {
-  border-color: $color-gray;
-}
-.navbar-default {
-  background: none;
-  border: none;
-}
-// navbar default toggle icon
-.navbar-default .navbar-toggle {
-  clear: both;
-  border-color: $color-gray;
-}
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: $color-gray;
-}
-
-// secondary navs
-.navbar-secondary {
-  float: right;
-  margin-top: 0.25em;
-  margin-bottom: 0.25em;
-}
-.navbar-secondary ul {
-  margin-bottom: 0;
-}
-
-// dropdowns
-.dropdown-menu {
-  left: auto;
-  right: 0;
-}
-.dropdown-menu > li  > a {
-  line-height: $line-height-computed * 1.5;
-}
-.dropdown-menu .dropdown-parent-link {    
-  font-weight: bold;
-}
-  
- 
-
 .header__upper-menu{
   .language{
     padding: $padding-large-vertical $padding-large-vertical*2 $padding-base-vertical $padding-large-vertical*2;
@@ -84,17 +27,12 @@
         }
       &.is-hidden{
         opacity: 0;
-        -moz-transition: opacity 1s, visibility 1.3s;
-        -webkit-transition: opacity 1s, visibility 1.3s;
-        -o-transition: opacity 1s, visibility 1.3s;
         transition: opacity 1s, visibility 1.3s;
+        z-index: -10;
       }
       &.is-open{
         visibility:visible;
         opacity: 1;
-        -moz-transition: opacity 1s, visibility 1.3s;
-        -webkit-transition: opacity 1s, visibility 1.3s;
-        -o-transition: opacity 1s, visibility 1.3s;
         transition: opacity 1s, visibility 1.3s;
       }
     }
@@ -141,6 +79,126 @@
     }
     &:last-child{
       margin-left: auto;
+    }
+  }
+}
+
+
+.nrw-menu-header{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  -webkit-flex-flow: row wrap;
+  justify-content: flex-start;
+  background-color: $nrw-secondary;
+  a{
+    color: $color-white;
+  }
+  
+  &__col{
+    padding: 10px;
+    &.is-open{
+      background-color: $brand-primary;
+      .nrw-menu__header{
+      }
+    }
+    &:hover{
+      background-color: $brand-primary;
+    } 
+  }
+  &__content{
+    display: none;
+    position: absolute;
+    background-color: $brand-primary;
+    width: 100%;
+    left: 0;
+    top: 45px;
+    &-title-area{
+      padding: 20px 20px 13px 20px;
+      color: $brand-primary;
+      display: flex;
+      >a, >div{
+        flex-grow: 1;
+        text-decoration: none;
+      }
+
+      .nrw-menu__content-close{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        align-self: flex-end;
+        font-size: $font-size-base - 4;
+        justify-content: flex-end;
+        i{
+          color: $color-white;
+          line-height: 1.1;
+          line-height: $padding-large-horizontal;
+          margin-left: $padding-base-horizontal/3;
+        }
+      }
+      .nrw-menu__content-title-icon{
+        display: inline-block;
+        i{
+          background: $color-white;
+          color: $brand-primary;
+          width: 45px;
+          height: 45px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          float: left;
+          margin-right: $padding-base-horizontal + 5;
+        }
+      }
+      .nrw-menu__content-title-text{
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        margin: 0;
+        line-height: 1.3;
+        font-size: $font-size-h3; 
+        font-family: $font-family-sans-serif;
+        
+        .sub-title{
+          font-weight: bold;
+          display: inline-block;
+          width: 100%;
+        }
+      }
+    }
+    .nrw-menu__extra{
+      min-height: 210px;
+      width: 24%;
+      float: right;
+      background-color: $nrw-secondary;
+      padding: $padding-base-horizontal + 5;
+      color: $color-white;
+      p{
+        color: $color-white;
+        margin: 0;
+        line-height: $font-size-h2 + 6;
+        -webkit-font-smoothing: antialiased;
+      }
+    }
+    > .nrw-menu__list{
+        list-style: none;
+        float: left;
+        background-image: url(../images/menus.png);
+        min-height: 210px;
+        width: 75%;
+        padding: $padding-base-horizontal $padding-base-horizontal*3.6;
+        margin-bottom: $padding-base-horizontal*5;
+        ul{
+          list-style: none;
+        }
+        a{
+            @include icon-before('\f061');
+            font-size: $font-size-base - 4;
+            text-transform: initial;
+          }
+      }
+    
+    &.is-expanded{
+      display: block;
     }
   }
 }

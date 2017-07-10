@@ -4,11 +4,11 @@ dependencies:
   config:
     - field.storage.node.field_sidebar_right_paragraphs
     - node.type.event
-  module:
-    - entity_reference_revisions
   enforced:
     module:
       - degov_node_event
+  module:
+    - entity_reference_revisions
 id: node.event.field_sidebar_right_paragraphs
 field_name: field_sidebar_right_paragraphs
 entity_type: node
@@ -21,5 +21,6 @@ default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:paragraph'
-  handler_settings: {  }
+  handler_settings:
+    target_bundles: null
 field_type: entity_reference_revisions

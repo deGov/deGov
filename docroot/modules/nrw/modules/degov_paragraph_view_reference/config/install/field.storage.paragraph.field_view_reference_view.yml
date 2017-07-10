@@ -3,18 +3,18 @@ status: true
 dependencies:
   enforced:
     module:
-      - degov_paragraph_iframe
+      - degov_paragraph_view_reference
   module:
     - paragraphs
-id: paragraph.field_iframe_title
-field_name: field_iframe_title
+    - views
+    - viewsreference
+id: paragraph.field_view_reference_view
+field_name: field_view_reference_view
 entity_type: paragraph
-type: string
+type: viewsreference
 settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
-module: core
+  target_type: view
+module: viewsreference
 locked: false
 cardinality: 1
 translatable: true

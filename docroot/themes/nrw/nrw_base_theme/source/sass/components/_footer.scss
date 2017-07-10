@@ -1,16 +1,6 @@
 // Add spacing for footer
-.footer-wrapper {
-  background-color: $background-grey;
-}
-.footer {
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-top: 0;
-  padding-left: 0;
-  padding-right: 0;
-  border-top: none;
-}
 
+/*
 .region-page-outro {
   padding-top: $vertical-gutter-width / 2;
   padding-bottom: $vertical-gutter-width / 2;
@@ -37,9 +27,19 @@
     text-decoration: underline;
   }
 }
+*/
+.footer-wrapper {
+  background-color: $background-grey;
+}
 
 .footer{
   color: $color-white;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+  border-top: none;
   a{
     color: $color-white;
   }
@@ -68,12 +68,38 @@
     span{
       width: 100%;
       display: inline-block;
-      font-family: $font-family-sans-serif-bold;
+      font-weight: bold;
     }
   }
   &__menu{
     background: $nrw-secondary;
     padding: $padding-base-vertical*4 $padding-base-horizontal $padding-base-vertical*3;
+    
+    .nrw-menu-footer{
+      padding-left: 4em;
+      display: flex;
+      flex-direction: row;
+      -webkit-flex-flow: row wrap;
+      justify-content: flex-start;
+      &__col{
+        flex-grow: 1;
+        max-width: 25%;
+      }
+      &__header{
+        text-transform: uppercase;
+      }
+      &__content{
+        ul{
+          list-style: none;
+          padding:0;
+          a{
+              @include icon-before('\f061');
+              font-size: $font-size-base - 4;
+              text-transform: initial;
+          }
+        }
+      }
+    }
     ul.footer-menu{
       list-style: none;
       padding-left: 4em;

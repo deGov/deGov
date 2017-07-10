@@ -38,22 +38,19 @@
  * @ingroup themeable
  */
 #}
-{% set title %}
-  {{- content.field_title -}}
-{% endset %}
-{% set sub_title %}
-  {{- content.field_sub_title -}}
-{% endset %}
 
 <div class="paragraph links">
-  {% if paragraph.field_title.value or paragraph.field_sub_title.value %}
+  {% if content.field_title|field_value or content.field_sub_title|field_value %}
     <div class="paragraph__header">
       <i class="fa fa-arrow-right" aria-hidden="true"></i>
-      <h2>{% spaceless %}{{ title|striptags }}{% endspaceless %}
-        <span class="sub-title">{{ sub_title }}</span></h2>
+      <h2>{{ content.field_title }}
+        {% if content.field_sub_title|field_value %}
+          <span class="sub-title">{{ content.field_sub_title|field_value }}</span>
+        {% endif %}
+      </h2>
     </div>
   {% endif %}
   <div class="paragraph__content">
-    {{ content.field_links_links }}
+    {{ content.field_links_links|field_value }}
   </div>
 </div>

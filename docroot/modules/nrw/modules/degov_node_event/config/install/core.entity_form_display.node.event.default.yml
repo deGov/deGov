@@ -18,7 +18,7 @@ dependencies:
     - address
     - datetime
     - entity_browser
-    - entity_reference_revisions
+    - paragraphs
     - path
     - text
     - workbench_moderation
@@ -36,11 +36,14 @@ content:
   field_content_paragraphs:
     weight: 26
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      title: Absatz
+      title_plural: Paragraphs
+      edit_mode: preview
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
     third_party_settings: {  }
-    type: entity_reference_revisions_autocomplete
+    type: entity_reference_paragraphs
     region: content
   field_event_date:
     weight: 4
@@ -58,11 +61,14 @@ content:
   field_sidebar_right_paragraphs:
     weight: 27
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      title: Absatz
+      title_plural: Paragraphs
+      edit_mode: preview
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
     third_party_settings: {  }
-    type: entity_reference_revisions_autocomplete
+    type: entity_reference_paragraphs
     region: content
   field_teaser_image:
     type: entity_browser_entity_reference
