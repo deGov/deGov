@@ -48,8 +48,8 @@
 
 <div class="container-fluid">
   <div{{ create_attribute({'class': classes}) }}>
-    {% if paragraph.field_iframe_title.value or paragraph.field_iframe_sub_title.value %}
-    <h2>{{ paragraph.field_iframe_title.value }}<br><span class="subtitle">{{ paragraph.field_iframe_sub_title.value }}</span></h2>
+    {% if paragraph.field_title.value or paragraph.field_sub_title.value %}
+    <h2>{{ paragraph.field_title.value }}<br><span class="subtitle">{{ paragraph.field_sub_title.value }}</span></h2>
     {% endif %}
     <iframe class="col-xs-12" height="{{ paragraph.field_iframe_height.value }}" src="{{ paragraph.field_iframe_url.uri }}"></iframe>
   </div>
