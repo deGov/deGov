@@ -1,5 +1,5 @@
 format: text/html
-respect_format: true
+respect_format: false
 convert_mode: false
 character_set: UTF-8
 langcode: de
