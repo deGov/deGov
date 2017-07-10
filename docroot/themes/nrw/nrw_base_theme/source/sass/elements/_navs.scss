@@ -108,6 +108,7 @@
       left: 42%;
       top: 25px;
       color: $brand-primary;
+      z-index: 1;
       &:before{
         font-size: $font-size-h2;
       }
@@ -128,6 +129,8 @@
       padding: 68px 0px 0px 0;
       font-weight: bold;
       text-transform: uppercase; 
+      position: relative;
+      z-index: 2;
     }
   }
   &__wrapper{
