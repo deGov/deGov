@@ -1,17 +1,24 @@
 <div class="nrw-menu nrw-menu-header">
+<div class="shadow"></div>
     <div class="nrw-menu-header__icons">
-        <div class="nrw-menu-header__icon menu-icon">
-            <i class="fa fa-list" aria-hidden="true"></i>
-            <a href="/">{% trans %}Menü Landesportal{% endtrans %}</a>
-        </div>
-        <div class="nrw-menu-header__icon faq-icon">
-            <i class="fa fa-list" aria-hidden="true"></i>
-            <a href="/">{% trans %}FAQ{% endtrans %}</a>
-        </div>
-        <div class="nrw-menu-header__icon faq-search">
-            <i class="fa fa-search" aria-hidden="true"></i>
-            <a href="/">{% trans %}Suche{% endtrans %}</a>
-        </div>
+         <a href="/" class="nrw-menu-header__icon menu-icon">
+            <div >
+                <i class="fa fa-list" aria-hidden="true"></i>
+                <span>{% trans %}Menü Landesportal{% endtrans %}</span>
+            </div>
+        </a>
+        <a href="/" class="nrw-menu-header__icon menu-icon">
+            <div >
+                <i class="fa fa-list" aria-hidden="true"></i>
+                <span>{% trans %}faq{% endtrans %}</span>
+            </div>
+        </a>
+        <a href="/" class="nrw-menu-header__icon menu-search">
+            <div >
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <span>{% trans %}Suche{% endtrans %}</span>
+            </div>
+        </a>
     </div>
     <div class="nrw-menu-header__wrapper">
         {% for menu_item in menu_items.menu_tree %}

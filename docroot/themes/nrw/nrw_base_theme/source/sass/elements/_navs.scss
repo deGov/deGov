@@ -85,36 +85,68 @@
 
 
 .nrw-menu-header{
-  border-top: 1px solid $nrw-light;
+  //border-top: 1px solid $nrw-light;
+  background: $color-white;
+  .shadow{
+    border-radius: 50%;
+    width: 100%;
+    height: 14px;
+    background: black;
+    opacity: 0.2;
+    -webkit-filter: blur(10px);
+    -webkit-transform: scale(1, 0.1);
+    margin-bottom: -1*($padding-base-vertical);
+  }
   &__icons{
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    -webkit-flex-flow: row wrap;
-    justify-content: flex-start;
+    display: inline-block;
+    width: 100%;
     background: $color-white;
+    margin-bottom: -1*($padding-base-vertical + 2 );
   }
   &__icon{
-    position: relative;
+    text-decoration: none;
+    display: inline-block;
     height: 100px;
     width: 160px;
-    display: flex;
     border-right: 1px solid $nrw-light;
+    float: left;
+    font-size: $font-size-small - 2;
+    font-weight: bold;
+    text-transform: uppercase;
+    &:hover{
+      text-decoration: none;
+    }
+    div{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
     i{
-      position: absolute;
-      left: 42%;
-      top: 25px;
       color: $brand-primary;
       z-index: 1;
+      margin-bottom: $padding-base-vertical*2;
       &:before{
-        font-size: $font-size-h2;
+        font-size: $font-size-base;
       }
     }
-    &.faq-search{
-      position: absolute;
-      right: 0;
+    &.menu-search{
       border-right: 0px solid $nrw-light;
       border-left: 1px solid $nrw-light;
+      float: right;
+      i{
+        &:before{
+          font-size: $font-size-h4;
+        }
+      }
+      &:hover{
+        background: $brand-primary;
+        color: $color-white;
+        i{
+          color: $color-white;
+        }
+      }
     }
     a{
       color: $brand-primary;
