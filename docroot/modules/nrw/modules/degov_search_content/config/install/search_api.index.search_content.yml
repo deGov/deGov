@@ -5,6 +5,8 @@ dependencies:
     module:
       - degov_search_content
   config:
+    - field.storage.node.field_teaser_text
+    - field.storage.node.field_teaser_title
     - search_api.server.database
   module:
     - search_api
@@ -14,6 +16,13 @@ name: Inhaltssuche
 description: ''
 read_only: false
 field_settings:
+  node_grants:
+    label: 'Node access information'
+    property_path: search_api_node_grants
+    type: string
+    indexed_locked: true
+    type_locked: true
+    hidden: true
   type:
     label: Inhaltstyp
     datasource_id: 'entity:node'
@@ -30,32 +39,45 @@ field_settings:
     property_path: title
     type: text
   status:
-    label: null
+    label: status
     datasource_id: 'entity:node'
     property_path: status
     type: boolean
     indexed_locked: true
     type_locked: true
   uid:
-    label: null
+    label: uid
     datasource_id: 'entity:node'
     property_path: uid
     type: integer
     indexed_locked: true
     type_locked: true
-  node_grants:
-    label: 'Node access information'
-    property_path: search_api_node_grants
-    type: string
-    indexed_locked: true
-    type_locked: true
-    hidden: true
+  field_teaser_text:
+    label: 'Vorschau Text'
+    datasource_id: 'entity:node'
+    property_path: field_teaser_text
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_teaser_text
+  field_teaser_title:
+    label: 'Vorschau Titel'
+    datasource_id: 'entity:node'
+    property_path: field_teaser_title
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_teaser_title
 datasource_settings:
   'entity:node':
     bundles:
       default: false
       selected:
+        - blog
+        - event
         - normal_page
+        - page
+        - press
     languages:
       default: true
       selected: {  }
@@ -79,9 +101,11 @@ processor_settings:
   html_filter:
     all_fields: true
     fields:
+      - node_grants
       - type
       - title
-      - node_grants
+      - field_teaser_text
+      - field_teaser_title
     title: true
     alt: true
     tags:
@@ -98,18 +122,22 @@ processor_settings:
   ignorecase:
     all_fields: true
     fields:
+      - node_grants
       - type
       - title
-      - node_grants
+      - field_teaser_text
+      - field_teaser_title
     weights:
       preprocess_index: -20
       preprocess_query: -20
   ignore_character:
     all_fields: true
     fields:
+      - node_grants
       - type
       - title
-      - node_grants
+      - field_teaser_text
+      - field_teaser_title
     ignorable: '[''¿¡!?,.:;]'
     strip:
       character_sets:
@@ -141,6 +169,8 @@ processor_settings:
     all_fields: true
     fields:
       - title
+      - field_teaser_text
+      - field_teaser_title
     exceptions:
       texan: texa
       mexican: mexic
@@ -151,6 +181,8 @@ processor_settings:
     all_fields: true
     fields:
       - title
+      - field_teaser_text
+      - field_teaser_title
     stopwords:
       - a
       - an
@@ -194,6 +226,8 @@ processor_settings:
     all_fields: true
     fields:
       - title
+      - field_teaser_text
+      - field_teaser_title
     spaces: ''
     overlap_cjk: 1
     minimum_word_size: '3'
@@ -203,9 +237,11 @@ processor_settings:
   transliteration:
     all_fields: true
     fields:
+      - node_grants
       - type
       - title
-      - node_grants
+      - field_teaser_text
+      - field_teaser_title
     weights:
       preprocess_index: -20
       preprocess_query: -20

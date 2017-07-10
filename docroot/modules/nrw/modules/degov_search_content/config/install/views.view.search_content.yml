@@ -65,7 +65,15 @@ display:
       style:
         type: default
       row:
-        type: fields
+        type: search_api
+        options:
+          view_modes:
+            'entity:node':
+              blog: teaser
+              event: teaser
+              normal_page: teaser
+              page: teaser
+              press: teaser
       fields:
         title:
           id: title

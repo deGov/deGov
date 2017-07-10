@@ -14,7 +14,7 @@ dependencies:
 id: search_content_node_bundle
 theme: nrw_base_theme
 region: content
-weight: -2
+weight: -3
 provider: null
 plugin: 'facet_block:search_content_node_bundle'
 settings:

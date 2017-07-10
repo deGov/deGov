@@ -14,7 +14,7 @@ dependencies:
 id: search_content_node_changed
 theme: nrw_base_theme
 region: content
-weight: -1
+weight: -2
 provider: null
 plugin: 'facet_block:search_content_changed'
 settings:
