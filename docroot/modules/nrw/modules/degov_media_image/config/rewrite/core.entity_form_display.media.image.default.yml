@@ -7,7 +7,6 @@ dependencies:
     - field.field.media.image.field_image_date
     - field.field.media.image.field_image_description
     - field.field.media.image.field_image_height
-    - field.field.media.image.field_image_image
     - field.field.media.image.field_image_mime
     - field.field.media.image.field_image_title
     - field.field.media.image.field_image_width
@@ -62,14 +61,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-    region: content
-  field_image_image:
-    weight: 19
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
     region: content
   field_image_mime:
     weight: 13
