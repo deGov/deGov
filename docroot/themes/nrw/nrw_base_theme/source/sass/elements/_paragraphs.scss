@@ -2,7 +2,7 @@
 .paragraph {
 	//margin: $vertical-gutter-width*2 0;
 	a{
-		font-family: $font-family-sans-serif-bold;
+		font-weight: bold;
 	}
 }
 
@@ -30,12 +30,10 @@
 	}
 	.sub-title{
 		font-weight: bold;
-		font-family: $font-family-sans-serif-bold;
-		display: inline-block;
-		width: 100%;
+		display: block;
 	}
 }
 .paragraph__content{
-padding-top: $padding-large-vertical*2;
-padding-bottom: $padding-large-vertical*2;	
+	padding-top: $padding-large-vertical*2;
+	padding-bottom: $padding-large-vertical*2;	
 }

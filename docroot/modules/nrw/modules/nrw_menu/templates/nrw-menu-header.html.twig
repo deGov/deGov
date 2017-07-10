@@ -1,14 +1,14 @@
-<div class="nrw-menu">
+<div class="nrw-menu nrw-menu-header">
     {% for menu_item in menu_items.menu_tree %}
-    <div class="nrw-menu__col">
+    <div class="nrw-menu-header__col">
         <div class="nrw-menu__header">
             <!-- First level of main menu-->
             <div class="nrw-menu__header-link-area">
                 <a class="link link--nolink" href="javascript:;">{{ menu_item.text }}</a>
             </div>
         </div>
-        <div class="nrw-menu__content">
-            <div class="nrw-menu__content-title-area">
+        <div class="nrw-menu-header__content">
+            <div class="nrw-menu-header__content-title-area">
                 <a class="link{% if menu_item.external %} link--external{% endif %}" href="{{ menu_item.url }}" title="{{ menu_item.description }}"{% if menu_item.external %} target="_blank"{% endif %}>
                     <div class="nrw-menu__content-title-icon">    <i class="fa fa-arrow-right" aria-hidden="true"></i></div>
                     <div class="nrw-menu__content-title-text">

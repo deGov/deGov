@@ -4,7 +4,7 @@
   bottom: $vertical-gutter-width;
   right: $vertical-gutter-width;
   @include icon-before($fa-var-angle-up, 0  );
-  background-color: $color-gray;
+  background-color: $brand-primary;
   color: $color-white;
   font-size: $font-size-h3;
   padding: 0 0.5em;
