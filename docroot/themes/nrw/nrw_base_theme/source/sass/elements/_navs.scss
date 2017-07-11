@@ -85,20 +85,112 @@
 
 
 .nrw-menu-header{
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  -webkit-flex-flow: row wrap;
-  justify-content: flex-start;
-  background-color: $nrw-secondary;
-  a{
-    color: $color-white;
+  //border-top: 1px solid $nrw-light;
+  background: $color-white;
+  .shadow{
+    border-radius: 50%;
+    width: 100%;
+    height: 14px;
+    background: black;
+    opacity: 0.2;
+    -webkit-filter: blur(10px);
+    -webkit-transform: scale(1, 0.1);
+    margin-bottom: -1*($padding-base-vertical);
   }
+  &__icons{
+    display: inline-block;
+    width: 100%;
+    background: $color-white;
+    margin-bottom: -1*($padding-base-vertical + 2 );
+  }
+  &__icon{
+    text-decoration: none;
+    display: inline-block;
+    height: 80px;
+    width: 160px;
+    border-right: 1px solid $nrw-light;
+    float: left;
+    font-size: $font-size-small - 2;
+    font-weight: bold;
+    text-transform: uppercase;
+    &:hover{
+      text-decoration: none;
+    }
+    div{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+    i{
+      color: $brand-primary;
+      z-index: 1;
+      margin-bottom: $padding-base-vertical*2;
+      &:before{
+        font-size: $font-size-large;
+      }
+    }
+    &.menu-search{
+      border-right: 0px solid $nrw-light;
+      border-left: 1px solid $nrw-light;
+      float: right;
+      i{
+        &:before{
+          font-size: $font-size-h4;
+        }
+      }
+      &:hover{
+        background: $brand-primary;
+        color: $color-white;
+        i{
+          color: $color-white;
+        }
+      }
+    }
+    a{
+      color: $brand-primary;
+      align-self: flex-end;
+      text-align: center;
+      width: 100%;
+      height: 100px;
+      font-size: $font-size-small;
+      padding: 68px 0px 0px 0;
+      font-weight: bold;
+      text-transform: uppercase; 
+      position: relative;
+      z-index: 2;
+    }
+  }
+  &__wrapper{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    -webkit-flex-flow: row wrap;
+    justify-content: flex-start;
+    background-color: $nrw-secondary;
+    a{
+      color: $color-white;
+    }
+  }
+  
+
   
   &__col{
     padding: 10px;
     &.is-open{
       background-color: $brand-primary;
+      &:before{
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid $brand-primary;
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 66px;
+      }
       .nrw-menu__header{
       }
     }
@@ -113,6 +205,7 @@
     width: 100%;
     left: 0;
     top: 45px;
+    z-index: 1;
     &-title-area{
       padding: 20px 20px 13px 20px;
       color: $brand-primary;
