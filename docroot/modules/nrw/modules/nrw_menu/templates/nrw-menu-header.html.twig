@@ -1,58 +1,81 @@
-<div class="nrw-menu">
-    {% for menu_item in menu_items.menu_tree %}
-    <div class="nrw-menu__col">
-        <div class="nrw-menu__header">
-            <!-- First level of main menu-->
-            <div class="nrw-menu__header-link-area">
-                <a class="link link--nolink" href="javascript:;">{{ menu_item.text }}</a>
+<div class="nrw-menu nrw-menu-header">
+<div class="shadow"></div>
+    <div class="nrw-menu-header__icons">
+         <a href="/" class="nrw-menu-header__icon menu-icon">
+            <div >
+                <i class="fa fa-list" aria-hidden="true"></i>
+                <span>{% trans %}Menü Landesportal{% endtrans %}</span>
             </div>
-        </div>
-        <div class="nrw-menu__content">
-            <div class="nrw-menu__content-title-area">
-                <a class="link{% if menu_item.external %} link--external{% endif %}" href="{{ menu_item.url }}" title="{{ menu_item.description }}"{% if menu_item.external %} target="_blank"{% endif %}>
-                    <div class="nrw-menu__content-title-icon">    <i class="fa fa-arrow-right" aria-hidden="true"></i></div>
-                    <div class="nrw-menu__content-title-text">
-                        <!-- Space for styling text-->
-                        {{ 'Menu'|trans }}
-                        <div class="sub-title">{{ menu_item.text }}</div>
-                    </div>
-                </a>
-                <div class="nrw-menu__content-close">
-                    <a class="link link--nolink" href="javascript:;">{{ 'Schliessen'|trans }}</a>
-                    <i class="fa fa-times" aria-hidden="true"></i>
+        </a>
+        <a href="/" class="nrw-menu-header__icon menu-icon">
+            <div >
+                <i class="fa fa-list" aria-hidden="true"></i>
+                <span>{% trans %}faq{% endtrans %}</span>
+            </div>
+        </a>
+        <a href="/" class="nrw-menu-header__icon menu-search">
+            <div >
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <span>{% trans %}Suche{% endtrans %}</span>
+            </div>
+        </a>
+    </div>
+    <div class="nrw-menu-header__wrapper">
+        {% for menu_item in menu_items.menu_tree %}
+        <div class="nrw-menu-header__col">
+            <div class="nrw-menu__header">
+                <!-- First level of main menu-->
+                <div class="nrw-menu__header-link-area">
+                    <a class="link link--nolink" href="javascript:;">{{ menu_item.text }}</a>
                 </div>
             </div>
-            {% if menu_item.submenu is not empty %}
-            <!-- Second level of main menu-->
-            <ul class="nrw-menu__list">
-                {% for submenu_item in menu_item.submenu %}
-                    <li class="nrw-menu__item">
-                        <a class="link{% if submenu_item.external %} link--external{% endif %}" href="{{ submenu_item.url }}" title="{{ submenu_item.description }}"{% if submenu_item.external %} target="_blank"{% endif %}>
-                            {{ submenu_item.text }}
-                        </a>
-                        {% if submenu_item.submenu is not empty %}
-                            <!-- Third level of main menu-->
-                            <ul class="nrw-menu__list">
-                                {% for third_level_item in submenu_item.submenu %}
-                                    <li class="nrw-menu__item">
-                                        <a class="link{% if third_level_item.external %} link--external{% endif %}" href="{{ third_level_item.url }}" title="{{ third_level_item.description }}"{% if third_level_item.external %} target="_blank"{% endif %}>
-                                            {{ third_level_item.text }}
-                                        </a>
-                                    </li>
-                                {% endfor %}
-                            </ul>
-                        {% endif %}
-                    </li>
-                {% endfor %}
-            </ul>
+            <div class="nrw-menu-header__content">
+                <div class="nrw-menu-header__content-title-area">
+                    <a class="link{% if menu_item.external %} link--external{% endif %}" href="{{ menu_item.url }}" title="{{ menu_item.description }}"{% if menu_item.external %} target="_blank"{% endif %}>
+                        <div class="nrw-menu__content-title-icon">    <i class="fa fa-arrow-right" aria-hidden="true"></i></div>
+                        <div class="nrw-menu__content-title-text">
+                            <!-- Space for styling text-->
+                            {{ 'Menu'|trans }}
+                            <div class="sub-title">{{ menu_item.text }}</div>
+                        </div>
+                    </a>
+                    <div class="nrw-menu__content-close">
+                        <a class="link link--nolink" href="javascript:;">{{ 'Schliessen'|trans }}</a>
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </div>
+                </div>
+                {% if menu_item.submenu is not empty %}
+                <!-- Second level of main menu-->
+                <ul class="nrw-menu__list">
+                    {% for submenu_item in menu_item.submenu %}
+                        <li class="nrw-menu__item">
+                            <a class="link{% if submenu_item.external %} link--external{% endif %}" href="{{ submenu_item.url }}" title="{{ submenu_item.description }}"{% if submenu_item.external %} target="_blank"{% endif %}>
+                                {{ submenu_item.text }}
+                            </a>
+                            {% if submenu_item.submenu is not empty %}
+                                <!-- Third level of main menu-->
+                                <ul class="nrw-menu__list">
+                                    {% for third_level_item in submenu_item.submenu %}
+                                        <li class="nrw-menu__item">
+                                            <a class="link{% if third_level_item.external %} link--external{% endif %}" href="{{ third_level_item.url }}" title="{{ third_level_item.description }}"{% if third_level_item.external %} target="_blank"{% endif %}>
+                                                {{ third_level_item.text }}
+                                            </a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                {% if menu_item is not empty %}
+            <div class="nrw-menu__extra">
+                <!-- Extra content goes here, see screenshot below, content on the right side. Mock something here -->
+                {{ menu_item.menu_extra }}
+            </div>
             {% endif %}
-             {% if menu_item is not empty %}
-        <div class="nrw-menu__extra">
-            <!-- Extra content goes here, see screenshot below, content on the right side. Mock something here -->
-            {{ menu_item.menu_extra }}
+            </div>
         </div>
-        {% endif %}
-        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
 </div>

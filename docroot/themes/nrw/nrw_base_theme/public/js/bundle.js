@@ -46,7 +46,7 @@
 
 	'use strict';
 
-	//state class should be ".is-*****"
+	// state class should be ".is-*****" 
 
 	/* eslint-disable no-unused-vars, lines-around-comment*/
 	var Bootstrap = __webpack_require__(1);
@@ -81,6 +81,14 @@
 	    }
 	  };
 
+	  // Footer menu open in responsive
+	  Drupal.behaviors.footerResposive = {
+	    attach: function attach(context, settings) {
+	      $('.nrw-menu-footer__header i').once('footer-clic').click(function () {
+	        $(this).closest('.nrw-menu-footer__col').toggleClass('is-open');
+	      });
+	    }
+	  };
 	  // Language dropdown
 	  Drupal.behaviors.lang = {
 	    attach: function attach(context, settings) {

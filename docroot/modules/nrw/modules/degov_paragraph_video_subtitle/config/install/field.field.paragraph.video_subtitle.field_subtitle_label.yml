@@ -1,0 +1,21 @@
+langcode: de
+status: true
+dependencies:
+  enforced:
+    module:
+      - degov_paragraph_video_subtitle
+  config:
+    - field.storage.paragraph.field_subtitle_label
+    - paragraphs.paragraphs_type.video_subtitle
+id: paragraph.video_subtitle.field_subtitle_label
+field_name: field_subtitle_label
+entity_type: paragraph
+bundle: video_subtitle
+label: Beschriftung
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

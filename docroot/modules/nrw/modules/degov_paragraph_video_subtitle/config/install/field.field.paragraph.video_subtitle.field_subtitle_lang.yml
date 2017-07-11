@@ -1,0 +1,23 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subtitle_lang
+    - paragraphs.paragraphs_type.video_subtitle
+  enforced:
+    module:
+      - degov_paragraph_video_subtitle
+  module:
+    - options
+id: paragraph.video_subtitle.field_subtitle_lang
+field_name: field_subtitle_lang
+entity_type: paragraph
+bundle: video_subtitle
+label: Sprache
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

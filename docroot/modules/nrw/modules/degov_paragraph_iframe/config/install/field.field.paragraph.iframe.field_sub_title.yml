@@ -2,16 +2,16 @@ langcode: de
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_title
-    - paragraphs.paragraphs_type.image_header
+    - field.storage.paragraph.field_sub_title
+    - paragraphs.paragraphs_type.iframe
   enforced:
     module:
-      - degov_paragraph_header
-id: paragraph.image_header.field_title
-field_name: field_title
+      - degov_paragraph_iframe
+id: paragraph.iframe.field_sub_title
+field_name: field_sub_title
 entity_type: paragraph
-bundle: image_header
-label: Titel
+bundle: iframe
+label: Untertitel
 description: ''
 required: false
 translatable: true

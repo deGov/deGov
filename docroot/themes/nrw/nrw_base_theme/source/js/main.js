@@ -1,4 +1,4 @@
-//state class should be ".is-*****"
+// state class should be ".is-*****" 
 
 /* eslint-disable no-unused-vars, lines-around-comment*/
 const Bootstrap = require('bootstrap-sass');
@@ -33,6 +33,14 @@ const PhotoSwipeUiDefault = require('photoswipe/dist/photoswipe-ui-default');
     }
   };
 
+  // Footer menu open in responsive
+  Drupal.behaviors.footerResposive = {
+    attach: function (context, settings) {
+      $('.nrw-menu-footer__header i').once('footer-clic').click(function () {
+        $(this).closest('.nrw-menu-footer__col').toggleClass('is-open');
+      });
+    }
+  };
   // Language dropdown
   Drupal.behaviors.lang = {
     attach: function (context, settings) {

@@ -1,0 +1,19 @@
+name: 'deGov - Media Video-Upload'
+description: 'Stellt einen Media-Bundle für Video-Uploads bereit.'
+package: deGov
+type: module
+core: 8.x
+dependencies:
+  - crop
+  - degov_content_types_shared_fields
+  - degov_paragraph_video_subtitle
+  - degov_taxonomy_term_copyright
+  - entity_browser
+  - entity_reference_revisions
+  - field
+  - file
+  - language
+  - media_entity
+  - paragraphs
+  - taxonomy
+  - workbench_moderation

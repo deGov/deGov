@@ -39,18 +39,7 @@
  */
 #}
 
-{% set title %}
-{{- content.field_faq_title -}}
-{% endset %}
-{% set text %}
-{{- content.field_faq_text -}}
-{% endset %}
-
 <div class="faq">
-  <div class="faq_question">
-    {% spaceless %}{{ title|striptags }}{% endspaceless %}
-  </div>
-  <div class="faq_answer">
-    {% spaceless %}{{ text|striptags }}{% endspaceless %} 
-  </div>
+  <div class="faq_question">{{ content.field_faq_title|field_value }}</div>
+  <div class="faq_answer">{{ content.field_faq_text|field_value }}</div>
 </div>

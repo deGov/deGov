@@ -1,12 +1,12 @@
 langcode: de
 status: true
 dependencies:
-  module:
-    - media_entity
-    - paragraphs
   enforced:
     module:
       - degov_paragraph_header
+  module:
+    - media_entity
+    - paragraphs
 id: paragraph.field_header_media
 field_name: field_header_media
 entity_type: paragraph

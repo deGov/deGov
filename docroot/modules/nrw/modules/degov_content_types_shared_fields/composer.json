@@ -1,0 +1,10 @@
+{
+  "name": "degov_content_types_shared_fields",
+  "type": "drupal-module",
+  "description": "Adds common configuration and methods for deGov modules.",
+  "license": "GPL-2.0+",
+  "homepage": "https://www.nrwgov.org",
+  "require": {
+    "drupal/twig_field_value": "^1.1"
+  }
+}

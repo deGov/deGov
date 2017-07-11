@@ -4,14 +4,12 @@ dependencies:
   config:
     - field.field.paragraph.image_header.field_header_media
     - field.field.paragraph.image_header.field_header_text
-    - field.field.paragraph.image_header.field_sub_title
-    - field.field.paragraph.image_header.field_title
     - paragraphs.paragraphs_type.image_header
-  module:
-    - text
   enforced:
     module:
       - degov_paragraph_header
+  module:
+    - text
 id: paragraph.image_header.default
 targetEntityType: paragraph
 bundle: image_header
@@ -32,21 +30,5 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
-    region: content
-  field_sub_title:
-    weight: 1
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_title:
-    weight: 0
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
     region: content
 hidden: {  }

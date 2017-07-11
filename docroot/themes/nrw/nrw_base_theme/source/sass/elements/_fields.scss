@@ -1,4 +1,4 @@
-// Format some fields to be displayed next to each other
+/*// Format some fields to be displayed next to each other
 .field--type-file {
 	padding-bottom: 1em;
 	.file {
@@ -75,13 +75,17 @@
 	}
 }
 
-.field--name-field-text-text{
+
+*/
+
+
+.field--type-text-long{
 	.embedded-entity{
 		&.align-left{
-			margin-right: 15px;
+			margin-right: $grid-gutter-width/2.6;
 		}
 		&.align-right{
-			margin-left: 15px;
+			margin-left: $grid-gutter-width/2.6;
 		}
 	}
 	ul{
@@ -89,7 +93,7 @@
 		li{
 			&:before{
 				content: "";
-				margin-right: 10px;
+				margin-right: $grid-gutter-width/4;
 				background: $gray-base; 
 				background-size: 4px 4px;
 				display: inline-block;
@@ -97,10 +101,9 @@
 				width: 5px;
 				height: 5px;
 				background-position: 11px 7px;
-				line-height: 49px;
+				line-height: $grid-gutter-width + 9;
 				position: relative;
 				bottom: 3px;
-				
 			}
 		}
 	}
@@ -110,7 +113,7 @@
 			counter-increment: counter;
 			&:before{
 				content: counter(counter);
-				margin-right: 10px;
+				margin-right: $grid-gutter-width/4;
 			}
 		}
 	}

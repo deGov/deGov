@@ -1,8 +1,9 @@
 // Styles for content region
-
+body{
+  -webkit-font-smoothing: antialiased;
+}
 .main-wrapper {
   background-color: $background-grey;
-  padding-top: $vertical-gutter-width * 2.125; 
 }
 .main-container {
   background: $color-white;
@@ -15,7 +16,7 @@
 }
 h1, h2, h3, h4, h5, h6{
   font-family: $font-family-sans-serif;
-  -webkit-font-smoothing: antialiased;
+  
 }
 a{
   color: $brand-primary;  
@@ -24,5 +25,30 @@ blockquote{
   border-color: $brand-primary;
 }
 strong{
-  font-family: $font-family-sans-serif-bold;
+  font-weight: bold;
+}
+
+table {
+	width: 100%;
+    border-bottom: 15px solid $brand-primary;
+  thead{
+    th{
+      background: $brand-primary;
+      color: $color-white;
+    }
+  }
+  tr:nth-child(even) {
+    background: $nrw-light;
+  }
+  tr:nth-child(odd) {
+    background: $color-white;
+  }
+  tr{
+    border-bottom: 1px solid $nrw-gray;
+  }
+	td, th {
+		padding: 0.25em;
+	}
+
+
 }

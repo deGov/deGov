@@ -11,3 +11,4 @@ dependencies:
   - paragraphs
   - taxonomy
   - text
+  - twig_field_value

@@ -39,19 +39,7 @@
  */
 #}
 
-{% set title %}
-  {{- content.field_title -}}
-{% endset %}
-{% set sub_title %}
-  {{- content.field_sub_title -}}
-{% endset %}
-
 <div class="paragraph header-image">
   <div class="header-image__image">{{ content.field_header_media }}</div>
-  <div class="paragraph__header">
-    <i class="fa fa-arrow-right" aria-hidden="true"></i>
-    <h2>{% spaceless %}{{ title|striptags }}{% endspaceless %}
-     <span class="sub-title">{% spaceless %}{{ sub_title|striptags }}{% endspaceless %}</span></h2>
-  </div>
-  <div class="header-image__text">{{ content.field_header_text }}</div>
+  <div class="header-image__text">{{ content.field_header_text|field_value }}</div>
 </div>

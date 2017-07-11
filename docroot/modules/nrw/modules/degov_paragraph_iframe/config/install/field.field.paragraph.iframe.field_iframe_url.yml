@@ -1,12 +1,12 @@
 langcode: de
 status: true
 dependencies:
-  enforced:
-    module:
-      - degov_paragraph_iframe
   config:
     - field.storage.paragraph.field_iframe_url
     - paragraphs.paragraphs_type.iframe
+  enforced:
+    module:
+      - degov_paragraph_iframe
   module:
     - link
 id: paragraph.iframe.field_iframe_url

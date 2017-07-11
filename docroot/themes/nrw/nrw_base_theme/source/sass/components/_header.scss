@@ -1,6 +1,6 @@
 // Styles for intro, header, and top bar regions
 
-
+/*
 // layout for the navbar
 .header-wrapper .name {
 	display: none;
@@ -19,6 +19,7 @@
 		margin-top: floor($navbar-height*0.225);
 	}
 }
+
 .container > .navbar-header {
 	float: right;
 	margin-left: 0;
@@ -27,6 +28,7 @@
 .header-wrapper .navbar {
 	margin-bottom: 0;
 }
+
 .header-wrapper .navbar li a {
 	color: $color-gray;
 	&:hover,
@@ -50,6 +52,7 @@
 .header-wrapper .navbar .region-navigation-collapsible > nav > ul > li > a {
 	font-weight: bold;
 }
+*/
 
 .header-wrapper{
 	@include larger-than($screen-tablet) {
@@ -82,17 +85,16 @@
 @include larger-than($screen-sm-min) {
 	body {
 		margin-top: 0;
-		padding-top: $navbar-height*2 !important;
 	}
 	.header-wrapper {
-		position: fixed;
-		z-index: 99;
+		//position: fixed;
+		//z-index: 99;
 		left: 0;
 		right: 0;
 		top: 0;
 		background: $background-grey;
-		box-shadow: 0px 0px 0px transparent;
-		transition: box-shadow 200ms ease-in-out;
+		//box-shadow: 0px 0px 0px transparent;
+		//transition: box-shadow 200ms ease-in-out;
 	}
 	.header-wrapper .container {
 		padding-left: 0;
@@ -121,9 +123,9 @@
 		max-height: 0;
 	}
 	.is-scrolling {
-		.header-wrapper {
+		/*.header-wrapper {
 			box-shadow: 0px 0px 10px rgba(0,0,0,.2);
-		}
+		}*/
 		.navbar-secondary {
 			margin-top: 0;
 			margin-bottom: 0;
@@ -136,13 +138,15 @@
 	}
 }
 
+
+
 .header{
 	&__upper-menu{
 		min-height: 42px;
 		background-color: $brand-primary;
 		font-size: $font-size-small - 2;
 		color: $color-white;
-		font-family: $font-family-sans-serif-bold;
+		font-weight: bold;
 		text-transform: uppercase;
 		position: relative; 
 		> div{
@@ -190,7 +194,7 @@
 			color: $brand-primary;
 		}
 		span{
-			font-family: $font-family-sans-serif-bold;
+			font-weight: bold;
 			display: inline-block;
 			width: 100%; 
 		}

@@ -1,0 +1,29 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subtitle_file
+    - paragraphs.paragraphs_type.video_subtitle
+  enforced:
+    module:
+      - degov_paragraph_video_subtitle
+  module:
+    - file
+id: paragraph.video_subtitle.field_subtitle_file
+field_name: field_subtitle_file
+entity_type: paragraph
+bundle: video_subtitle
+label: Datei
+description: 'Anleitung zum Konvertieren von .srt nach .vtt: https://atelier.u-sub.net/srt2vtt/'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: paragraph/video_subtitle
+  file_extensions: vtt
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file
