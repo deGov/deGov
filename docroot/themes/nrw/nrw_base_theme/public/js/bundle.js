@@ -46,7 +46,7 @@
 
 	'use strict';
 
-	// state class should be ".is-*****" 
+	//state class should be ".is-*****"
 
 	/* eslint-disable no-unused-vars, lines-around-comment*/
 	var Bootstrap = __webpack_require__(1);
@@ -81,14 +81,6 @@
 	    }
 	  };
 
-	  // Footer menu open in responsive
-	  Drupal.behaviors.footerResposive = {
-	    attach: function attach(context, settings) {
-	      $('.nrw-menu-footer__header i').once('footer-clic').click(function () {
-	        $(this).closest('.nrw-menu-footer__col').toggleClass('is-open');
-	      });
-	    }
-	  };
 	  // Language dropdown
 	  Drupal.behaviors.lang = {
 	    attach: function attach(context, settings) {
@@ -184,6 +176,15 @@
 	        $slider.find('.inslide-slider-next').click(function () {
 	          $slider.slick('slickNext');
 	        });
+	      });
+
+	      $('.slick__pause').on('click', function () {
+	        $('.slideshow__slides').slick('slickPause');
+	        $(this).hide().siblings('.slick__play').show();
+	      });
+	      $('.slick__play').on('click', function () {
+	        $('.slideshow__slides').slick('slickPlay');
+	        $(this).hide().siblings('.slick__pause').show();
 	      });
 	    }
 	  };

@@ -1,4 +1,9 @@
 // Slick arrows are disabled, but if they are enabled these are the styles
+.paragraph-slideshow {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
 .slideshow {
   /*margin: 0 -15px;*/
   .slick-list {
@@ -11,10 +16,14 @@
   .slick-track {
     .slick-slide {
       .slide__link {
+        max-height: 540px;
         &:hover,
         &:focus, {
           text-decoration: none;
           outline: none;
+        }
+        @media (max-width: $screen-sm-max) {
+          max-height: none;
         }
       }
       .slide__media {
@@ -31,15 +40,19 @@
       }
       .slide__text {
         float: left;
+        max-height: 480px;
+        overflow: auto;
         width: 25%;
-        padding-bottom: 60px;
+        margin-bottom: 60px;
         color: $text-color;
         @media (max-width: $screen-md-max) {
+          max-height: 298px;
           width: 35%;
         }
         @media (max-width: $screen-sm-max) {
+          max-height: none;
           width: 100%;
-          padding-bottom: 0;
+          margin-bottom: 0;
         }
         h2 {
           margin: 0 0 12px;
@@ -66,6 +79,14 @@
           }
         }
       }
+    }
+    .image__caption {
+      position: absolute;
+      display: none;
+    }
+    .image__copyright {
+      position: absolute;
+      display: none;
     }
   }
   .slideshow__slides {
