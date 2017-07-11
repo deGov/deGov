@@ -20,6 +20,7 @@
 {% endset %}
 
 <article class="video-upload">
+  <div class="video-upload__type-text">{{ 'Video'|t }}</div>
   <div class="video-upload__video">
     <video{{ video_attributes }}>
       <source src="{{ video_mp4 }}" type="video/mp4">
@@ -32,10 +33,12 @@
       {% endfor %}
     </video>
   </div>
-  {% if media.field_video_upload_caption.value %}
-  <div class="video-upload__caption">{% spaceless %}{{ caption|striptags }}{% endspaceless %}</div>
-  {% endif %}
-  {% if media.field_video_upload_copyright.value %}
-  <div class="video-upload__copyright"><span class="video-upload__copyright-label">{{ 'Copyright'|trans }}:</span> {% spaceless %}{{ copyright|striptags }}{% endspaceless %}</div>
-  {% endif %}
+  <div class="video-upload__info">
+    {% if media.field_video_upload_caption.value %}
+    <div class="video-upload__caption">{% spaceless %}{{ caption|striptags }}{% endspaceless %}</div>
+    {% endif %}
+    {% if media.field_video_upload_copyright.value %}
+    <div class="video-upload__copyright"><span class="video-upload__copyright-label">{{ 'Copyright'|trans }}:</span> {% spaceless %}{{ copyright|striptags }}{% endspaceless %}</div>
+    {% endif %}
+  </div>
 </article>
