@@ -5,6 +5,9 @@ dependencies:
     - field.storage.node.field_tags
     - node.type.normal_page
     - taxonomy.vocabulary.tags
+  enforced:
+    module:
+      - degov_node_normal_page
 id: node.normal_page.field_tags
 field_name: field_tags
 entity_type: node
