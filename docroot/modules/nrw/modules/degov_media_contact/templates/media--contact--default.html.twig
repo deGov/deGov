@@ -12,9 +12,15 @@
  * @ingroup themeable
  */
 #}
-<article class="contact">
-  <div class="contact__image">{{ content.field_contact_image }}</div>
-  <div class="contact__title">{{ content.field_contact_title }}</div>
-  <div class="contact__tel">{{ content.field_contact_tel }}</div>
-  <div class="contact__email">{{ content.field_contact_email }}</div>
+<article class="media-contact">
+  <div class="row">
+    <div class="col-md-12 media-contact__image-wrapper">
+      <div class="media-contact__image">{{ content.field_contact_image }}</div>
+    </div>
+    <div class="col-md-12 media-contact__info">
+      <div class="media-contact__title">{{ content.field_contact_title|field_value }}</div>
+      <div class="media-contact__tel">{% trans %}Tel.:{% endtrans %} {{ content.field_contact_tel|field_value }}</div>
+      <div class="media-contact__email">{% trans %}E-Mail:{% endtrans %} <a href="mailto:{{ content.field_contact_email|field_value }}">{{ content.field_contact_email|field_value }}</a></div>
+    </div>
+  </div>
 </article>
