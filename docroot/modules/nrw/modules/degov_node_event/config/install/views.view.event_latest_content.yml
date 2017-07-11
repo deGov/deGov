@@ -1,6 +1,9 @@
 langcode: de
 status: true
 dependencies:
+  enforced:
+    module:
+      - degov_node_event
   config:
     - node.type.event
     - taxonomy.vocabulary.tags

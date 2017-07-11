@@ -1,6 +1,9 @@
 langcode: de
 status: true
 dependencies:
+  enforced:
+    module:
+      - degov_node_normal_page
   config:
     - node.type.normal_page
     - taxonomy.vocabulary.tags

@@ -1,6 +1,9 @@
 langcode: de
 status: true
 dependencies:
+  enforced:
+    module:
+      - degov_node_press
   config:
     - node.type.press
     - taxonomy.vocabulary.tags

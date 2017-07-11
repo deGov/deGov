@@ -1,6 +1,9 @@
 langcode: de
 status: true
 dependencies:
+  enforced:
+    module:
+      - degov_node_blog
   config:
     - node.type.blog
     - taxonomy.vocabulary.tags
