@@ -1,4 +1,5 @@
-.video {
+.video,
+.video-upload {
   @include make-row();
   position: relative;
   color: $color-white;
@@ -30,5 +31,9 @@
     @include larger-than($screen-sm-min){
       text-align: right;
     }
+  }
+  video {
+    width: 100%;
+    height: auto;
   }
 }
