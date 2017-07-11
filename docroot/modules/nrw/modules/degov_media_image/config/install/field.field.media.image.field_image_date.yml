@@ -13,7 +13,7 @@ id: media.image.field_image_date
 field_name: field_image_date
 entity_type: media
 bundle: image
-label: 'Datum'
+label: 'Image Date'
 description: ''
 required: false
 translatable: false

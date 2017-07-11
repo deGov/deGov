@@ -10,8 +10,8 @@ function degov_paragraph_slideshow_preprocess(&$variables, $hook, &$info) {
   Common::addThemeSuggestions($variables, $hook, $info, [
     'module_name' => 'degov_paragraph_slideshow',
     'entity_type' => 'paragraph',
-    'entity_bundles' => ['slide', 'slideshow'],
-    'entity_view_modes' => [],
+    'entity_bundles' => ['slideshow', 'slide'],
+    'entity_view_modes' => ['preview'],
   ]);
 }
 

@@ -38,10 +38,16 @@
  * @ingroup themeable
  */
 #}
-<div{{ create_attribute({'class': ['slideshow', 'slideshow--' ~ slideshow_type|clean_class ]}) }}>
-  <div class="slideshow__slides">
-  {% for key, slideshow_slide in content.field_slideshow_slides if key|first != '#' %}
-    {{ slideshow_slide }}
-  {% endfor %}
+<div{{ create_attribute({'class': ['slideshow', 'default', 'slideshow--' ~ slideshow_type|clean_class ]}) }}>
+  <div class="row">
+    <div class="paragraph slideshow__slides">
+    {% for key, slideshow_slide in content.field_slideshow_slides if key|first != '#' %}
+      {{ slideshow_slide }}
+    {% endfor %}
+    </div>
+    <div class="slick-controls">
+      <button class="slick__pause">Pause</button>
+      <button class="slick__play">Play</button>
+    </div>
   </div>
 </div>

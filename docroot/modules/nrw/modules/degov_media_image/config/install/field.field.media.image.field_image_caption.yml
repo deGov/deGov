@@ -11,7 +11,7 @@ id: media.image.field_image_caption
 field_name: field_image_caption
 entity_type: media
 bundle: image
-label: 'Bildunterschrift'
+label: 'Image Caption'
 description: ''
 required: true
 translatable: false
