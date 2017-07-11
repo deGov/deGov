@@ -100,12 +100,13 @@
     .slick-dots {
       right: 0;
       left: auto;
-      @include calc('max-width', '25% - 70px');
+      @include calc('max-width', '27% - 70px');
       width: 100%;
       margin: 0 45px 44px 0;
       padding: 0 0 0 94px;
       text-align: left;
       @media (max-width: $screen-md-max) {
+        @include calc('max-width', '31% - 70px');
         padding-left: 20px;
       }
       @media (max-width: $screen-sm-max) {
@@ -126,7 +127,7 @@
   left: auto;
   margin: 0 90px 44px 0;
   @media (max-width: $screen-md-max) {
-    margin-right: 64px;
+    margin-right: 80px;
   }
   @media (max-width: $screen-sm-max) {
     display: none;
