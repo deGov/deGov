@@ -1,0 +1,8 @@
+.node-reference {
+  .even,
+  .odd {
+    padding-bottom: $padding-base-vertical*3;
+    &:last-child
+    { padding-bottom: 0; }
+  }
+}

@@ -65,16 +65,16 @@
 
   {# TODO: select the correct language for select the template #}
   {# TODO: create template for other templates #}
-  
+
     {% include 'header-intro.html.twig' %}
     <div class="header__branding">
         <a href="{{ url('<front>') }}">
-          <div class="col-md-3 header__title">
+          <div class="col-md-6 header__title">
               <span>WIR IN NRW</span>
               DAS LANDESPORTAL
           </div>
         </a>
-        <div class="col-md-3 pull-right header__logo">
+        <div class="col-md-6 header__logo">
             <div class="image">
                 <a href="{{ url('<front>') }}"><img src="{{ base_path ~ directory }}/source/images/logo.png"></a>
             </div>
@@ -84,9 +84,9 @@
      <div class="header__menu">
       {{ page_header_menu }}
      </div>
-    {# include 'header.html.twig' #}   
+    {# include 'header.html.twig' #}
   </header>
-  
+
 
 </div>
 
@@ -168,7 +168,7 @@
 
   <div class="page-outro-wrapper">
     <div class="page-outro container">
-     
+
     </div>
   </div>
 
