@@ -5,16 +5,14 @@ dependencies:
     - entity_browser.browser.media_browser
     - field.field.paragraph.image_header.field_header_media
     - field.field.paragraph.image_header.field_header_text
-    - field.field.paragraph.image_header.field_sub_title
-    - field.field.paragraph.image_header.field_title
     - paragraphs.paragraphs_type.image_header
+  enforced:
+    module:
+      - degov_paragraph_header
   module:
     - entity_browser
     - text
     - workbench_moderation
-  enforced:
-    module:
-      - degov_paragraph_header
 id: paragraph.image_header.default
 targetEntityType: paragraph
 bundle: image_header
@@ -25,13 +23,12 @@ content:
     weight: 8
     settings:
       entity_browser: media_browser
-      field_widget_display: rendered_entity
+      field_widget_display: label
       field_widget_edit: true
       field_widget_remove: true
-      selection_mode: selection_append
-      field_widget_display_settings:
-        view_mode: thumbnail
       open: true
+      selection_mode: selection_append
+      field_widget_display_settings: {  }
     region: content
     third_party_settings: {  }
   field_header_text:
@@ -41,22 +38,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
-    region: content
-  field_sub_title:
-    weight: 7
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_title:
-    weight: 6
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
     region: content
 hidden:
   created: true
