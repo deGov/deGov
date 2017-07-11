@@ -1,12 +1,12 @@
 langcode: de
 status: true
 dependencies:
-  enforced:
-    module:
-      - degov_node_blog
   config:
     - field.storage.node.field_teaser_text
     - node.type.blog
+  enforced:
+    module:
+      - degov_node_blog
   module:
     - text
 id: node.blog.field_teaser_text

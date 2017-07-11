@@ -1,12 +1,12 @@
 langcode: de
 status: true
 dependencies:
-  enforced:
-    module:
-      - degov_node_blog
   config:
     - field.storage.node.field_blog_date
     - node.type.blog
+  enforced:
+    module:
+      - degov_node_blog
   module:
     - datetime
 id: node.blog.field_blog_date
