@@ -1,11 +1,11 @@
 langcode: de
 status: true
 dependencies:
-  module:
-    - media_entity
   enforced:
     module:
       - degov_media_citation
+  module:
+    - media_entity
 id: media.field_citation_image
 field_name: field_citation_image
 entity_type: media
