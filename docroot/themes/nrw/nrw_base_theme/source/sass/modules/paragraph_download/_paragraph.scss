@@ -1,18 +1,41 @@
 .paragraph{
     &.downloads{
-        .field--item{
-            @include icon-before($fa-var-arrow-circle-o-down);    
+        position: relative;
+        article{
+            @include icon-before($fa-var-arrow-circle-o-down); 
+            &:after{
+                position: absolute;
+            }   
             width: 100%; 
-            &__meta{
+            .document__title{
+                padding-left: $grid-gutter-width/1.3;
+            }
+            .document__meta{
+                padding-left: $grid-gutter-width/1.3;
                 font-size: $font-size-h6;
+                span{
+                    font-size: $font-size-h4;
+                    color: $brand-primary;
+                }
+                .mime-application-pdf{
+                    @include icon-before($fa-var-file-pdf-o);
+                }
+                .mime-application-vndms-excel, .mime-application-vndopenxmlformats-officedocumentspreadsheetmlsheet{
+                    @include icon-before($fa-var-file-excel-o);
+                }
+                .mime-application-msword, .mime-application-vndopenxmlformats-officedocumentwordprocessingmldocument{
+                    @include icon-before($fa-var-file-word-o);
+                }
+                .mime-application-vndms-powerpoint, .mime-application-vndopenxmlformats-officedocumentpresentationmlpresentation{
+                    @include icon-before($fa-var-file-powerpoint-o);
+                }
             }
         }
-
     }
 }
 
 .paragraph.nav-list{
-    .field--item{
+    article{
         float: left; 
         margin-top: $padding-large-vertical + 5;
         -webkit-font-smoothing: antialiased;
@@ -29,14 +52,14 @@
 }
 .sidebar{
     .paragraph.nav-list{
-        .field--items{
+        .paragraph__content{
             columns: 1;
         }
     }
 }
 .region-content{
     .paragraph.nav-list{
-        .field--items{
+        .paragraph__content{
             columns: 2;
         }
     }
