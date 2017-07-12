@@ -72,10 +72,11 @@
     node.isSticky() ? 'is-sticky',
     not node.isPublished() ? 'is-unpublished',
     view_mode ? view_mode|clean_class,
-    'clearfix'
+    'clearfix',
   ]
 %}
 <article{{ attributes.addClass(classes) }}>
+
   {{ content.field_press_date }}
 
   {% if node.field_content_paragraphs.value %}
@@ -83,4 +84,5 @@
       {{ content.field_content_paragraphs }}
     </div>
   {% endif %}
+
 </article>

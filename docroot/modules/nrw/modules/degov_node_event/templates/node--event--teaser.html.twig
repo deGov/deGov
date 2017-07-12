@@ -65,47 +65,48 @@
  *   in different view modes.
  */
 #}
-{% set classes = [
-node.bundle|clean_class,
-node.isPromoted() ? 'is-promoted',
-node.isSticky() ? 'is-sticky',
-not node.isPublished() ? 'is-unpublished',
-view_mode ? view_mode|clean_class,
-'clearfix',
-] %}
+{%
+  set classes = [
+    node.bundle|clean_class,
+    node.isPromoted() ? 'is-promoted',
+    node.isSticky() ? 'is-sticky',
+    not node.isPublished() ? 'is-unpublished',
+    view_mode ? view_mode|clean_class,
+    'clearfix',
+  ]
+%}
 <article{{ attributes.addClass(classes) }}>
-
-  <div class="wrapper">
-
-    <!-- teaser image -->
+  <!-- teaser image -->
+  <div class="event__teaser-image col-sm-3">
     {% if content.field_teaser_image %}
-      <div class="event__teaser-image col-sm-3"> <!-- from medium screen up, show on the right sidebar -->
-        {{ content.field_teaser_image }}
+      <a href="{{ url }}" rel="bookmark">
+          {{ content.field_teaser_image }}
+      </a>
+    {% endif %}
+  </div>
+
+  <div class="event__teaser-content col-md-9"> <!-- from medium screen up, show on the right sidebar -->
+    <!-- teaser date -->
+    {% if content.field_event_date %}
+      <div class="event__teaser-date">
+        {{ content.field_event_date }}
       </div>
     {% endif %}
 
-    <div class="wrapper"> <!-- from medium screen up, show on the right sidebar -->
-      <!-- teaser date -->
-      {% if content.field_event_date %}
-        <div class="event__teaser-date">
-          {{ content.field_event_date }}
-        </div>
-      {% endif %}
-
-      <!-- teaser title -->
-      {% if content.field_teaser_title %}
+    <!-- teaser title -->
+    {% if content.field_teaser_title %}
+      <a href="{{ url }}" rel="bookmark">
         <div class="event__teaser-title">
           {{ content.field_teaser_title }}
         </div>
-      {% endif %}
+      </a>
+    {% endif %}
 
-      <!-- Teaser text -->
-      {% if content.field_teaser_text %}
-        <div class="event__teaser-text">
-          {{ content.field_teaser_text }}
-        </div>
-      {% endif %}
-    </div>
+    <!-- Teaser text -->
+    {% if content.field_teaser_text %}
+      <div class="event__teaser-text">
+        {{ content.field_teaser_text }}
+      </div>
+    {% endif %}
   </div>
-
 </article>

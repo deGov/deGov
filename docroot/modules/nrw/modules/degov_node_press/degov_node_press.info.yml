@@ -13,7 +13,6 @@ dependencies:
   - language
   - menu_ui
   - node
-  - panelizer
   - paragraphs
   - path
   - taxonomy

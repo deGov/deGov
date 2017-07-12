@@ -4,11 +4,11 @@ dependencies:
   config:
     - field.storage.node.field_content_paragraphs
     - node.type.normal_page
+  module:
+    - entity_reference_revisions
   enforced:
     module:
       - degov_node_normal_page
-  module:
-    - entity_reference_revisions
 id: node.normal_page.field_content_paragraphs
 field_name: field_content_paragraphs
 entity_type: node

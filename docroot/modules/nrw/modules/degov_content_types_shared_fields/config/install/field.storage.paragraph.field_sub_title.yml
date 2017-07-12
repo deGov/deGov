@@ -1,11 +1,11 @@
 langcode: de
 status: true
 dependencies:
-  enforced:
-    module:
-      - degov_content_types_shared_fields
   module:
     - paragraphs
+  enforced:
+   module:
+   - degov_content_types_shared_fields
 id: paragraph.field_sub_title
 field_name: field_sub_title
 entity_type: paragraph

@@ -14,15 +14,8 @@ dependencies:
     module:
       - degov_node_normal_page
   module:
-    - panelizer
     - text
     - user
-third_party_settings:
-  panelizer:
-    enable: false
-    custom: false
-    allow: false
-    default: default
 id: node.normal_page.teaser
 targetEntityType: node
 bundle: normal_page
@@ -34,7 +27,7 @@ content:
     region: content
     label: hidden
     settings:
-      view_mode: teaser_squared_1_1
+      view_mode: default
       link: false
     third_party_settings: {  }
   field_teaser_text:
