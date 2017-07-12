@@ -15,8 +15,17 @@
 <article class="video">
   <div class="video__type-text">{{ 'Video'|t }}</div>
   <div class="video__video">{{ content.field_media_video_embed_field }}</div>
+  {% if content.field_video_caption|field_value or content.field_video_copyright|field_value %}
   <div class="video__info">
-    <div class="video__caption">{{ content.field_video_caption }}</div>
-    <div class="video__copyright"><span class="video__copyright-label">Copyright:</span> {{ content.field_video_copyright }}</div>
+    {% if content.field_video_caption|field_value %}
+      <div class="video__caption">{{ content.field_video_caption|field_value }}</div>
+    {% endif %}
+    {% if content.field_video_copyright|field_value %}
+      <div class="video__copyright">
+        <span class="video__copyright-label">{{ '&copy;'|trans }}</span>
+        {{ content.field_video_copyright|field_value }}
+      </div>
+    {% endif %}
   </div>
+  {% endif %}
 </article>
