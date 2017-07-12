@@ -1,0 +1,13 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - media_entity.bundle.address
+  enforced:
+    module:
+      - degov_media_address
+id: media.address
+target_entity_type_id: media
+target_bundle: address
+default_langcode: site_default
+language_alterable: false

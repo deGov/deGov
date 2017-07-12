@@ -6,18 +6,18 @@
   &__type-text {
     position: absolute;
     left: $grid-gutter-width/2;
-    top: $grid-gutter-width/2;
+    top: $vertical-gutter-width/2;
     z-index: 1;
     font-size: $font-size-small;
     line-height: $font-size-small;
     font-weight: bold;
     background: $brand-primary;
-    padding: $grid-gutter-width*0.075 $grid-gutter-width/4;
+    padding: $padding-xs-vertical*3 $padding-small-horizontal;
   }
   &__info {
     @include clearfix;
     background: $brand-primary;
-    padding: $grid-gutter-width/8*3 0;
+    padding: $padding-base-vertical*3 0;
     font-size: $font-size-h6;
   }
   &__caption,

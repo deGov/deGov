@@ -1,11 +1,11 @@
 langcode: de
 status: true
 dependencies:
+  config:
+    - node.type.blog
   enforced:
     module:
       - degov_node_blog
-  config:
-    - node.type.blog
 id: node.blog.promote
 field_name: promote
 entity_type: node

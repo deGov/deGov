@@ -5,11 +5,12 @@ core: 8.x
 package: deGov
 dependencies:
   - crop
+  - degov_content_types_shared_fields
   - entity_browser
   - field
   - image
   - language
   - media_entity
+  - path
   - user
   - workbench_moderation
-  - degov_content_types_shared_fields

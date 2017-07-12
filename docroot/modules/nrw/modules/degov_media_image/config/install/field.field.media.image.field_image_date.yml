@@ -13,11 +13,14 @@ id: media.image.field_image_date
 field_name: field_image_date
 entity_type: media
 bundle: image
-label: 'Datum'
+label: Datum
 description: ''
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    default_date_type: now
+    default_date: now
 default_value_callback: ''
 settings: {  }
 field_type: datetime

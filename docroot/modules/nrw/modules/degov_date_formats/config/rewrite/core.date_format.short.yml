@@ -1,0 +1,7 @@
+langcode: de
+status: true
+dependencies: {  }
+id: short
+label: Kurz
+locked: false
+pattern: d.m.Y

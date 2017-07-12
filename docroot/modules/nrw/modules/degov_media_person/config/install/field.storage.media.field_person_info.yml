@@ -1,0 +1,21 @@
+langcode: de
+status: true
+dependencies:
+  module:
+    - media_entity
+    - text
+  enforced:
+    module:
+      - degov_media_person
+id: media.field_person_info
+field_name: field_person_info
+entity_type: media
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
