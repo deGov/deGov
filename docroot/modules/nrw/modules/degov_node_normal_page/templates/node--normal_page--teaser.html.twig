@@ -73,21 +73,24 @@ not node.isPublished() ? 'is-unpublished',
 view_mode ? view_mode|clean_class,
 'clearfix',
 ] %}
-
 <article{{ attributes.addClass(classes) }}>
   <!-- teaser image -->
   {% if content.field_teaser_image %}
-    <div class="normal-page__teaser-image col-sm-3"> <!-- from medium screen up, show on the right sidebar -->
-      {{ content.field_teaser_image }}
-    </div>
+    <a href="{{ url }}" rel="bookmark">
+      <div class="normal-page__teaser-image col-sm-3"> <!-- from medium screen up, show on the right sidebar -->
+        {{ content.field_teaser_image }}
+      </div>
+    </a>
   {% endif %}
 
-  <div class="normal-page__teaser-content teaser-content"> <!-- from medium screen up, show on the right sidebar -->
+  <div class="normal-page__teaser-content col-md-9 teaser-content"> <!-- from medium screen up, show on the right sidebar -->
     <!-- teaser title -->
     {% if content.field_teaser_title %}
-      <div class="normal-page__teaser-title">
-        {{ content.field_teaser_title }}
-      </div>
+      <a href="{{ url }}" rel="bookmark">
+        <div class="normal-page__teaser-title">
+          {{ content.field_teaser_title }}
+        </div>
+      </a>
     {% endif %}
 
     <!-- Teaser text -->
