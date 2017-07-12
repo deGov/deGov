@@ -2,16 +2,16 @@ langcode: de
 status: true
 dependencies:
   config:
-    - field.storage.media.field_image_width
-    - media_entity.bundle.image
+    - field.storage.media.field_contact_fax
+    - media_entity.bundle.contact
   enforced:
     module:
-      - degov_media_image
-id: media.image.field_image_width
-field_name: field_image_width
+      - degov_media_contact
+id: media.contact.field_contact_fax
+field_name: field_contact_fax
 entity_type: media
-bundle: image
-label: Breite
+bundle: contact
+label: Fax
 description: ''
 required: false
 translatable: false

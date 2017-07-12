@@ -1,19 +1,18 @@
 langcode: de
 status: true
 dependencies:
+  module:
+    - media_entity
+    - text
   enforced:
     module:
-      - degov_media_image
-  module:
-    - datetime
-    - media_entity
-id: media.field_image_date
-field_name: field_image_date
+      - degov_media_person
+id: media.field_person_info
+field_name: field_person_info
 entity_type: media
-type: datetime
-settings:
-  datetime_type: date
-module: datetime
+type: text_long
+settings: {  }
+module: text
 locked: false
 cardinality: 1
 translatable: true

@@ -2,29 +2,29 @@ langcode: de
 status: true
 dependencies:
   config:
-    - field.storage.media.field_image_copyright
+    - field.storage.media.field_person_image
     - media_entity.bundle.image
-    - taxonomy.vocabulary.copyright
+    - media_entity.bundle.person
   enforced:
     module:
-      - degov_media_image
-id: media.image.field_image_copyright
-field_name: field_image_copyright
+      - degov_media_person
+id: media.person.field_person_image
+field_name: field_person_image
 entity_type: media
-bundle: image
-label: Copyright
+bundle: person
+label: Bild
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:taxonomy_term'
+  handler: 'default:media'
   handler_settings:
     target_bundles:
-      copyright: copyright
+      image: image
     sort:
       field: _none
-    auto_create: true
+    auto_create: false
     auto_create_bundle: ''
 field_type: entity_reference
