@@ -1,0 +1,75 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.media.address.field_address_address
+    - field.field.media.address.field_address_email
+    - field.field.media.address.field_address_fax
+    - field.field.media.address.field_address_phone
+    - field.field.media.address.field_address_title
+    - field.field.media.address.field_media_in_library
+    - media_entity.bundle.address
+  enforced:
+    module:
+      - degov_media_address
+  module:
+    - address
+    - spamspan
+id: media.address.default
+targetEntityType: media
+bundle: address
+mode: default
+content:
+  field_address_address:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_address_email:
+    weight: 4
+    label: hidden
+    settings:
+      spamspan_at: ' [at] '
+      spamspan_use_graphic: 0
+      spamspan_dot_enable: 0
+      spamspan_dot: ' [dot] '
+      spamspan_use_form: 0
+      spamspan_form_pattern: '<a href="%url?goto=%email">%displaytext</a>'
+      spamspan_form_default_url: contact
+      spamspan_form_default_displaytext: 'contact form'
+    third_party_settings: {  }
+    type: email_spamspan
+    region: content
+  field_address_fax:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_address_phone:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_address_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  created: true
+  field_media_in_library: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

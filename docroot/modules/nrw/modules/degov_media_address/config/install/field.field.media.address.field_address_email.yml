@@ -1,0 +1,21 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_address_email
+    - media_entity.bundle.address
+  enforced:
+    module:
+      - degov_media_address
+id: media.address.field_address_email
+field_name: field_address_email
+entity_type: media
+bundle: address
+label: E-Mail
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email
