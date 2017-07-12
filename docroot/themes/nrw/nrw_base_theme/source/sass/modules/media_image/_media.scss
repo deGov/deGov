@@ -1,0 +1,27 @@
+.image {
+  @include make-row();
+  position: relative;
+  color: $color-white;
+  &__info {
+    @include clearfix;
+    background: $brand-primary;
+    padding: $grid-gutter-width/8*3 0;
+    font-size: $font-size-h6;
+  }
+  &__caption,
+  &__copyright {
+    @include make-sm-column(6);
+    * {
+      display: inline-block;
+    }
+  }
+  &__copyright {
+    @include larger-than($screen-sm-min){
+      text-align: right;
+    }
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
