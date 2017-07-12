@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Default theme implementation to present a media entity.
+ *
+ * Available variables:
+ * - name: Name of the media.
+ * - content: Media content.
+ *
+ * @see template_preprocess_media()
+ *
+ * @ingroup themeable
+ */
+#}
+<article class="address">
+  <div class="address__title">{{ content.field_address_title }}</div>
+  <div class="address__address">{{ content.field_address_address }}</div>
+  <div class="address__email">{{ content.field_address_email }}</div>
+  <div class="address__fax">{{ content.field_address_fax }}</div>
+  <div class="address__phone">{{ content.field_address_phone }}</div>
+</article>

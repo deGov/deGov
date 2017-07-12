@@ -1,26 +1,26 @@
 // Give some space to paragraph fields
-.paragraph {
-	//margin: $vertical-gutter-width*2 0;
+.paragraph{
 	a{
 		font-weight: bold;
 	}
 }
 
 .paragraph__header{
-	font-size: $font-size-h3; 
+	font-size: $font-size-h3;
   	color: $brand-primary;
 	display: flex;
 	margin: 0 -20px;
-    padding: 20px;
-    background: $nrw-light;
+	padding: 20px;
+	background: $nrw-light;
 	i{
 		color: $color-white;
 		background-color: $brand-primary;
+		min-width: 45px; // To always keep width - responsive
 		width: 45px;
-  		height: 45px;
+		height: 45px;
 		display: flex;
 		align-items: center;
-  		justify-content: center;
+		justify-content: center;
 		float: left;
 		margin-right: $padding-base-horizontal + 5;
 	}
@@ -35,5 +35,40 @@
 }
 .paragraph__content{
 	padding-top: $padding-large-vertical*2;
-	padding-bottom: $padding-large-vertical*2;	
+	padding-bottom: $padding-large-vertical*2;
+}
+
+.content-header {
+	padding-bottom: $padding-base-vertical*3;
+	&__text {
+		background: $brand-primary;
+		color: $color-white;
+		padding: 0 $grid-gutter-width/2;
+		padding-bottom: $padding-large-vertical;
+		margin: 0 $grid-gutter-width/-2;
+		position: relative;
+		h1, h2, h3, h4, h5, h6 {
+			margin-top: 0;
+		}
+		h2 {
+			font-weight: bold;
+			font-size: $font-size-h1;
+			line-height: 1;
+		}
+		p {
+			font-size: $font-size-h4;
+			margin-bottom: 0;
+		}
+		&:after{
+			width: 0;
+			height: 0;
+			border-left: 15px solid transparent;
+			border-right: 15px solid transparent;
+			border-top: 15px solid $brand-primary;
+			content: "";
+			position: absolute;
+			bottom: -15px;
+			left: $grid-gutter-width/2;
+		}
+	}
 }

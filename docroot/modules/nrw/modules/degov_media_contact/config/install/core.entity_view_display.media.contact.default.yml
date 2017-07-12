@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.media.contact.field_contact_email
+    - field.field.media.contact.field_contact_fax
     - field.field.media.contact.field_contact_image
     - field.field.media.contact.field_contact_tel
     - field.field.media.contact.field_contact_title
@@ -25,7 +26,7 @@ content:
   created:
     label: hidden
     type: timestamp
-    weight: 0
+    weight: 2
     region: content
     settings:
       date_format: medium
@@ -33,15 +34,23 @@ content:
       timezone: ''
     third_party_settings: {  }
   field_contact_email:
-    weight: 4
+    weight: 7
     label: visually_hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
+  field_contact_fax:
+    weight: 6
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_contact_image:
-    weight: 5
+    weight: 8
     label: hidden
     settings:
       image_style: medium
@@ -50,7 +59,7 @@ content:
     type: media_thumbnail
     region: content
   field_contact_tel:
-    weight: 3
+    weight: 5
     label: visually_hidden
     settings:
       link_to_entity: false
@@ -58,7 +67,7 @@ content:
     type: string
     region: content
   field_contact_title:
-    weight: 2
+    weight: 4
     label: hidden
     settings:
       link_to_entity: false
@@ -68,14 +77,14 @@ content:
   name:
     label: hidden
     type: string
-    weight: -5
+    weight: 0
     region: content
     settings:
       link_to_entity: false
     third_party_settings: {  }
   thumbnail:
     type: image
-    weight: 1
+    weight: 3
     label: hidden
     settings:
       image_style: thumbnail
@@ -85,7 +94,7 @@ content:
   uid:
     label: hidden
     type: author
-    weight: 0
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }

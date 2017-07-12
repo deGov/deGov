@@ -5,16 +5,15 @@ dependencies:
     module:
       - degov_media_citation
   module:
+    - datetime
     - media_entity
 id: media.field_citation_date
 field_name: field_citation_date
 entity_type: media
-type: string
+type: datetime
 settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
-module: core
+  datetime_type: date
+module: datetime
 locked: false
 cardinality: 1
 translatable: true

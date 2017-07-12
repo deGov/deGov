@@ -18,7 +18,7 @@ default_value: {  }
 default_value_callback: ''
 settings:
   file_directory: media/document/file
-  file_extensions: 'doc docx xls xlsx csv ppt pptx'
+  file_extensions: 'doc docx xls xlsx csv ppt pptx pdf odt ods odp'
   max_filesize: ''
   description_field: false
   handler: 'default:file'
