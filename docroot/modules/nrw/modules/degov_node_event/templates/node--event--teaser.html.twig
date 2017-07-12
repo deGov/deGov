@@ -65,17 +65,19 @@
  *   in different view modes.
  */
 #}
-{% set classes = [
-node.bundle|clean_class,
-node.isPromoted() ? 'is-promoted',
-node.isSticky() ? 'is-sticky',
-not node.isPublished() ? 'is-unpublished',
-view_mode ? view_mode|clean_class,
-'clearfix',
-] %}
+{%
+  set classes = [
+    node.bundle|clean_class,
+    node.isPromoted() ? 'is-promoted',
+    node.isSticky() ? 'is-sticky',
+    not node.isPublished() ? 'is-unpublished',
+    view_mode ? view_mode|clean_class,
+    'clearfix',
+  ]
+%}
 <article{{ attributes.addClass(classes) }}>
   <!-- teaser image -->
-<div class="event__teaser-image col-sm-3">
+  <div class="event__teaser-image col-sm-3">
     {% if content.field_teaser_image %}
       <a href="{{ url }}" rel="bookmark">
           {{ content.field_teaser_image }}
