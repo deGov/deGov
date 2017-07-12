@@ -38,13 +38,10 @@
  * @ingroup themeable
  */
 #}
-<div class="slide">
-  <!-- <div class="row"> -->
-    {% if slide_link %}<a class="slide__link" href="{{ slide_link }}">{% endif %}
-      <div class="slide__media">{{ content.field_slide_media }}</div>
-      <div class="slide__text">
-        <div class="slide__text__sub">{{ content.field_slide_text }}</div>
-      </div>
-    {% if slide_link %}</a>{% endif %}
-  <!-- </div> -->
+<div{{ create_attribute({'class': ['paragraph', 'slideshow', 'preview']}) }}>
+    <div class="slideshow__slides">
+    {% for key, slideshow_slide in content.field_slideshow_slides if key|first != '#' %}
+      {{ slideshow_slide }}
+    {% endfor %}
+    </div>
 </div>

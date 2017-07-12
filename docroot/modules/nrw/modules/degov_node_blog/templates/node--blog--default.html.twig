@@ -77,14 +77,14 @@
 %}
 
 <article{{ attributes.addClass(classes) }}>
-  <div class="blog__header--image">{{ content.field_blog_image }}</div>
+  <div class="blog__header-image">{{ content.field_blog_image }}</div>
   <div class="blog__header content-header">
-    <div class="blog__header--date">{{ content.field_blog_date|field_value }}</div>
-    <div class="blog__header--title">{{ content.field_blog_sub_title|field_value }}</div>
+    <div class="blog__header-date">{{ content.field_blog_date|field_value }}</div>
+    <div class="blog__header-title">{{ content.field_blog_sub_title|field_value }}</div>
   </div>
   
   <div class="blog__content content">
-     <div class="blog__content--author">{{ content.field_blog_author }}</div>
+     <div class="blog__content-author">{{ content.field_blog_author }}</div>
     {% if node.field_content_paragraphs.value %}
       <div class="blog__content-paragraphs">
         {{ content.field_content_paragraphs }}

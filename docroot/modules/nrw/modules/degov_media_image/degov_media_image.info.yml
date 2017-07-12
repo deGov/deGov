@@ -1,4 +1,4 @@
-name: 'deGov - Media Bild'
+name: 'deGov - Media Image'
 description: 'Erweiterung des existierenden Image Bundles um Copyright, Caption und weitere Felder.'
 type: module
 package: deGov

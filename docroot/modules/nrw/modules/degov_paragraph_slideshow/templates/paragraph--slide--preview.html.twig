@@ -39,12 +39,7 @@
  */
 #}
 <div class="slide">
-  <!-- <div class="row"> -->
-    {% if slide_link %}<a class="slide__link" href="{{ slide_link }}">{% endif %}
-      <div class="slide__media">{{ content.field_slide_media }}</div>
-      <div class="slide__text">
-        <div class="slide__text__sub">{{ content.field_slide_text }}</div>
-      </div>
-    {% if slide_link %}</a>{% endif %}
-  <!-- </div> -->
+    <div class="slide__media">{{ content.field_slide_media }}</div>
+    <div class="slide__text">{{ content.field_slide_text }}</div>
+    <div class="slide__link">{{ slide_link }}</div>
 </div>
