@@ -1,7 +1,7 @@
 <?php
 
 use Drupal\degov_content_types_shared_fields\Common;
-
+use Drupal\Core\Url;
 /**
  * Implements hook_preprocess().
  */
@@ -10,8 +10,8 @@ function degov_paragraph_slideshow_preprocess(&$variables, $hook, &$info) {
   Common::addThemeSuggestions($variables, $hook, $info, [
     'module_name' => 'degov_paragraph_slideshow',
     'entity_type' => 'paragraph',
-    'entity_bundles' => ['slideshow', 'slide'],
-    'entity_view_modes' => ['preview'],
+    'entity_bundles' => ['slide', 'slideshow'],
+    'entity_view_modes' => [],
   ]);
 }
 
@@ -29,8 +29,10 @@ function degov_paragraph_slideshow_preprocess_paragraph(&$variables) {
   if ($paragraph->getType() == 'slide') {
     // Add the variable slide_link.
     $variables['slide_link'] = FALSE;
-    if ($paragraph->field_slide_link->uri) {
-      $variables['slide_link'] = $paragraph->field_slide_link->uri;
+    if ($paragraph->field_slide_link->uri) { 
+      $url = Url::fromUri($paragraph->field_slide_link->uri);
+      //var_dump($url);
+      $variables['slide_link'] = $url;
     }
   }
 }
