@@ -52,7 +52,7 @@
   {% endif %}
   <div class="paragraph__content">
     {% for key, teaser in content.field_node_reference_nodes if key|first != '#' %}
-    <div class="{{ cycle(['odd', 'even'], loop.index0) }}">
+    <div class="{{ cycle(['odd', 'even'], loop.index0) }} row">
       {{ teaser }}
     </div>
     {% endfor %}
