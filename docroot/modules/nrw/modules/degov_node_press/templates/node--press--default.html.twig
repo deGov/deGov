@@ -77,7 +77,7 @@
 %}
 <article{{ attributes.addClass(classes) }}>
 
-  {{ content.field_press_date }}
+  <div class="date">{{ content.field_press_date|field_value }}</div>
 
   {% if node.field_content_paragraphs.value %}
     <div class="press__content-paragraphs">
