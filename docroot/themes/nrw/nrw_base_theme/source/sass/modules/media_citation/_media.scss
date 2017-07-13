@@ -5,14 +5,7 @@
   &__left {
     padding: $vertical-gutter-width $padding-small-horizontal*5;
     &:after {
-      width: 0;
-      height: 0;
-      border-top: 15px solid transparent;
-      border-bottom: 15px solid transparent;
-      border-left: 15px solid $color-white;
-      z-index: 1;
-      content: "";
-      position: absolute;
+      @include triangle-right($color: $color-white);
       right: -15px;
       top: $grid-gutter-width/2;
     }
