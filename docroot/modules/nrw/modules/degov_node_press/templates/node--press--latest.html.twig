@@ -77,13 +77,6 @@
 %}
 <article{{ attributes.addClass(classes) }}>
 
-    {% if content.field_press_date %}
-      <a href="{{ url }}" rel="bookmark">
-        <div class="press__teaser-title">
-          {{ content.field_teaser_title }}
-        </div>
-      </a> 
-    {% endif %}
     
     {% if content.field_press_date %}
       <a href="{{ url }}" rel="bookmark">
@@ -91,6 +84,14 @@
           {{ content.field_press_date }}
         </div>
       </a>
+    {% endif %}
+
+    {% if content.field_teaser_title %}
+      <a href="{{ url }}" rel="bookmark">
+        <div class="press__teaser-title">
+          {{ content.field_teaser_title }}
+        </div>
+      </a> 
     {% endif %}
 
 </article>

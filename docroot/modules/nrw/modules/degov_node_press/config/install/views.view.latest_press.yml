@@ -332,13 +332,30 @@ display:
           admin_label: ''
           empty: false
           tokenize: false
-          content: "<p> <span class=\"link-first\"><a href=\"/de/pressetermine\">PRESSETERMINE</a></span>\n<span class=\"link-second\"><a href=\"/de/aktuelles-und-presse/pressekontakt\">PRESSEKONTAKT</a></span></p>"
+          content: "<p> <a href=\"/de/pressetermine\"><i class=\"fa fa-arrow-right\" aria-hidden=\"true\"></i>PRESSETERMINE</a>\n<a href=\"/de/aktuelles-und-presse/pressekontakt\"><i class=\"fa fa-arrow-right\" aria-hidden=\"true\"></i>PRESSEKONTAKT</a></p>"
           plugin_id: text_custom
       empty: {  }
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
       css_class: press-list
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_press_date'
+        - 'config:field.storage.node.field_teaser_title'
+  attachment_1:
+    display_plugin: attachment
+    id: attachment_1
+    display_title: Attachment
+    position: 2
+    display_options:
+      display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:
