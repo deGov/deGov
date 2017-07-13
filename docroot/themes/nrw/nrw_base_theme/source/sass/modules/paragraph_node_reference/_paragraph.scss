@@ -1,0 +1,42 @@
+.node-reference {
+
+  .teaser {
+    border-bottom: 1px solid $gray-light;
+  }
+
+  .paragraph__content {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .teaser-link {
+    color: $text-color;
+
+    &:hover {
+      color: $link-hover-color;
+      text-decoration: none;
+    }
+
+    p, span {
+      font-weight: normal;
+    }
+  }
+
+  .teaser-content {
+    padding: 0 $grid-gutter-width/2 $grid-gutter-width/2 $grid-gutter-width/2;
+  }
+}
+
+.odd {
+
+  .teaser-image {
+    float: left;
+  }
+}
+
+.even {
+
+  .teaser-image {
+    float: right;
+  }
+}
