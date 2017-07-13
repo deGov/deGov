@@ -49,6 +49,7 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
 hidden:
+  field_tags: true
   field_teaser_image: true
   field_teaser_text: true
   field_teaser_title: true
