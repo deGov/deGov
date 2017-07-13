@@ -13,6 +13,11 @@
     padding: $grid-gutter-width/2;
   }
 
+  .teaser-title h3 {
+    margin-top: 0;
+    font-weight: bold;
+  }
+
   .odd {
 
     .teaser-image {
