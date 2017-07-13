@@ -20,13 +20,13 @@
                 .mime-application-pdf{
                     @include icon-before($fa-var-file-pdf-o);
                 }
-                .mime-application-vndms-excel, .mime-application-vndopenxmlformats-officedocumentspreadsheetmlsheet{
+                .mime-application-vndms-excel, .mime-application-vndopenxmlformats-officedocumentspreadsheetmlsheet, .mime-application-vndoasisopendocumentformula{
                     @include icon-before($fa-var-file-excel-o);
                 }
-                .mime-application-msword, .mime-application-vndopenxmlformats-officedocumentwordprocessingmldocument{
+                .mime-application-msword, .mime-application-vndopenxmlformats-officedocumentwordprocessingmldocument, .mime-application-vndoasisopendocumenttext{
                     @include icon-before($fa-var-file-word-o);
                 }
-                .mime-application-vndms-powerpoint, .mime-application-vndopenxmlformats-officedocumentpresentationmlpresentation{
+                .mime-application-vndms-powerpoint, .mime-application-vndopenxmlformats-officedocumentpresentationmlpresentation,  .mime-application-vndoasisopendocumentpresentation{
                     @include icon-before($fa-var-file-powerpoint-o);
                 }
             }
