@@ -12,7 +12,7 @@ id: media.image.field_image_copyright
 field_name: field_image_copyright
 entity_type: media
 bundle: image
-label: 'Copyright'
+label: Copyright
 description: ''
 required: false
 translatable: false

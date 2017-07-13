@@ -1,9 +1,6 @@
 langcode: de
 status: true
 dependencies:
-  enforced:
-    module:
-      - degov_node_blog
   config:
     - field.field.node.blog.field_blog_author
     - field.field.node.blog.field_blog_date
@@ -15,6 +12,9 @@ dependencies:
     - field.field.node.blog.field_teaser_text
     - field.field.node.blog.field_teaser_title
     - node.type.blog
+  enforced:
+    module:
+      - degov_node_blog
   module:
     - datetime
     - entity_reference_revisions
@@ -67,15 +67,14 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
   field_sidebar_right_paragraphs:
+    type: entity_reference_revisions_entity_view
     weight: 4
+    region: content
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
-    region: content
-
 hidden:
   field_blog_author: true
   field_teaser_image: true

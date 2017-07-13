@@ -39,17 +39,7 @@
  */
 #}
 
-<div class="paragraph header-image">
-  <div class="header-image__image">{{ content.field_header_media }}</div>
-  {% if content.field_title|field_value or content.field_sub_title|field_value %}
-    <div class="paragraph__header">
-      <i class="fa fa-arrow-right" aria-hidden="true"></i>
-      <h2>{{ content.field_title }}
-        {% if content.field_sub_title|field_value %}
-          <span class="sub-title">{{ content.field_sub_title|field_value }}</span>
-        {% endif %}
-      </h2>
-    </div>
-  {% endif %}
-  <div class="header-image__text">{{ content.field_header_text|field_value }}</div>
+<div class="paragraph header-image content-header">
+  <div class="header-image__image content-header__media">{{ content.field_header_media }}</div>
+  <div class="header-image__text content-header__text">{{ content.field_header_text|field_value }}</div>
 </div>

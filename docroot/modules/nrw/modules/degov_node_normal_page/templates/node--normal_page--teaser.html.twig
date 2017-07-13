@@ -65,48 +65,46 @@
  *   in different view modes.
  */
 #}
-{% set classes = [
+{%
+set classes = [
 node.bundle|clean_class,
 node.isPromoted() ? 'is-promoted',
 node.isSticky() ? 'is-sticky',
 not node.isPublished() ? 'is-unpublished',
 view_mode ? view_mode|clean_class,
 'clearfix',
-] %}
+]
+%}
 
-{% if url %}
-    <a class="teaser-link" href="{{ url }}">
-{% endif %}
+<article{{ attributes.addClass(classes) }}>
 
-        <article{{ attributes.addClass(classes) }}>
+    <!-- teaser image -->
+    {% if content.field_teaser_image %}
+        <a href="{{ url }}" rel="bookmark">
+            <div class="normal-page__teaser-image teaser-image col-sm-3 arrow"> <!-- from medium screen up, show on the right sidebar -->
+                {{ content.field_teaser_image }}
+            </div>
+        </a>
+    {% endif %}
 
-            <!-- teaser image -->
-            {% if content.field_teaser_image %}
-                <div class="normal-page__teaser-image teaser-image col-sm-3 no-gutter-col arrow"> <!-- from medium screen up, show on the right sidebar -->
-                    {{ content.field_teaser_image }}
+    <div class="normal-page__teaser-content teaser-content col-sm-9"> <!-- from medium screen up, show on the right sidebar -->
+
+        <!-- teaser title -->
+        {% if content.field_teaser_title %}
+            <a href="{{ url }}" rel="bookmark">
+                <div class="normal-page__teaser-title">
+                    {{ content.field_teaser_title }}
                 </div>
-            {% endif %}
+            </a>
+        {% endif %}
 
-                <div class="normal-page__teaser-content teaser-content col-sm-9"> <!-- from medium screen up, show on the right sidebar -->
+        <!-- Teaser text -->
+        {% if content.field_teaser_text %}
+            <div class="normal-page__teaser-text">
+                {{ content.field_teaser_text }}
+            </div>
+        {% endif %}
 
-                    <!-- teaser title -->
-                    {% if content.field_teaser_title %}
-                        <div class="normal-page__teaser-title">
-                            <h3>{{ content.field_teaser_title }}</h3>
-                        </div>
-                    {% endif %}
+    </div>
 
-                    <!-- Teaser text -->
-                    {% if content.field_teaser_text %}
-                        <div class="normal-page__teaser-text">
-                            {{ content.field_teaser_text }}
-                        </div>
-                    {% endif %}
-
-                </div>
-
-        </article>
-
-{% if url %}
-    </a>
-{% endif %}
+</article>

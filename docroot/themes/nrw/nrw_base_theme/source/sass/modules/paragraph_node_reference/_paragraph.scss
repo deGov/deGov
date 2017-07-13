@@ -23,20 +23,20 @@
   }
 
   .teaser-content {
-    padding: 0 $grid-gutter-width/2 $grid-gutter-width/2 $grid-gutter-width/2;
+    padding: $grid-gutter-width/2;
   }
-}
 
-.odd {
+  .odd {
 
-  .teaser-image {
-    float: left;
+    .teaser-image {
+      float: left;
+    }
   }
-}
 
-.even {
+  .even {
 
-  .teaser-image {
-    float: right;
+    .teaser-image {
+      float: right;
+    }
   }
 }

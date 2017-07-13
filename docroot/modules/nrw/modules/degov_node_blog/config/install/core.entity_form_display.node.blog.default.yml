@@ -1,9 +1,6 @@
 langcode: de
 status: true
 dependencies:
-  enforced:
-    module:
-      - degov_node_blog
   config:
     - entity_browser.browser.media_browser
     - field.field.node.blog.field_blog_author
@@ -16,6 +13,9 @@ dependencies:
     - field.field.node.blog.field_teaser_text
     - field.field.node.blog.field_teaser_title
     - node.type.blog
+  enforced:
+    module:
+      - degov_node_blog
   module:
     - datetime
     - entity_browser
@@ -39,13 +39,12 @@ content:
     weight: 7
     settings:
       entity_browser: media_browser
-      field_widget_display: rendered_entity
+      field_widget_display: label
       field_widget_edit: true
       field_widget_remove: true
-      selection_mode: selection_append
-      field_widget_display_settings:
-        view_mode: thumbnail
       open: true
+      selection_mode: selection_append
+      field_widget_display_settings: {  }
     region: content
     third_party_settings: {  }
   field_blog_date:
@@ -59,13 +58,12 @@ content:
     weight: 6
     settings:
       entity_browser: media_browser
-      field_widget_display: rendered_entity
+      field_widget_display: label
       field_widget_edit: true
       field_widget_remove: true
-      selection_mode: selection_append
-      field_widget_display_settings:
-        view_mode: thumbnail
       open: true
+      selection_mode: selection_append
+      field_widget_display_settings: {  }
     region: content
     third_party_settings: {  }
   field_blog_sub_title:
@@ -104,13 +102,12 @@ content:
     weight: 4
     settings:
       entity_browser: media_browser
-      field_widget_display: rendered_entity
+      field_widget_display: label
       field_widget_edit: true
       field_widget_remove: true
       selection_mode: selection_append
-      field_widget_display_settings:
-        view_mode: default
       open: false
+      field_widget_display_settings: {  }
     third_party_settings: {  }
     type: entity_browser_entity_reference
     region: content

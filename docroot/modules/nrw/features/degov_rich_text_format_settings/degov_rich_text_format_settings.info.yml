@@ -6,8 +6,10 @@ core: 8.x
 dependencies:
   - ckeditor
   - editor
+  - embed
   - entity_embed
   - filter
   - linkit
+  - media_entity
   - node
   - spamspan

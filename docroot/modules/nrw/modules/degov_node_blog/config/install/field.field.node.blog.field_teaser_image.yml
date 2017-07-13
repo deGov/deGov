@@ -1,13 +1,13 @@
 langcode: de
 status: true
 dependencies:
-  enforced:
-    module:
-      - degov_node_blog
   config:
     - field.storage.node.field_teaser_image
     - media_entity.bundle.image
     - node.type.blog
+  enforced:
+    module:
+      - degov_node_blog
 id: node.blog.field_teaser_image
 field_name: field_teaser_image
 entity_type: node

@@ -1,0 +1,23 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_person_info
+    - media_entity.bundle.person
+  module:
+    - text
+  enforced:
+    module:
+      - degov_media_person
+id: media.person.field_person_info
+field_name: field_person_info
+entity_type: media
+bundle: person
+label: Info
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

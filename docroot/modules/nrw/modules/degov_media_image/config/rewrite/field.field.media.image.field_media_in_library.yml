@@ -8,7 +8,7 @@ id: media.image.field_media_in_library
 field_name: field_media_in_library
 entity_type: media
 bundle: image
-label: 'Zur Medienverwaltung hinzufügen'
+label: 'Save to my media library'
 description: ''
 required: false
 translatable: false
@@ -17,6 +17,6 @@ default_value:
     value: 1
 default_value_callback: ''
 settings:
-  on_label: 'Zur Medienverwaltung hinzufügt'
-  off_label: 'Nicht in der Medienverwaltung'
+  on_label: 'Saved to my media library'
+  off_label: 'Not in my media library'
 field_type: boolean

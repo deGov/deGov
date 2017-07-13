@@ -3,12 +3,15 @@ status: true
 dependencies:
   module:
     - crop
+  enforced:
+    module:
+      - degov_media_person
 third_party_settings:
   crop:
     image_field: null
 id: person
 label: Person
-description: ''
+description: 'Dient der Erstellung einer Person/Author.'
 type: generic
 queue_thumbnail_downloads: false
 new_revision: false

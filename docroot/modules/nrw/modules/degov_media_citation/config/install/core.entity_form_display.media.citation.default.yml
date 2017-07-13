@@ -2,6 +2,7 @@ langcode: de
 status: true
 dependencies:
   config:
+    - entity_browser.browser.media_browser
     - field.field.media.citation.field_citation_date
     - field.field.media.citation.field_citation_image
     - field.field.media.citation.field_citation_text
@@ -12,6 +13,8 @@ dependencies:
     module:
       - degov_media_citation
   module:
+    - datetime
+    - entity_browser
     - workbench_moderation
 id: media.citation.default
 targetEntityType: media
@@ -25,25 +28,22 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_citation_date:
-    weight: 13
-    settings:
-      size: 60
-      placeholder: ''
+    weight: 17
+    settings: {  }
     third_party_settings: {  }
-    type: string_textfield
+    type: datetime_default
     region: content
   field_citation_image:
     type: entity_browser_entity_reference
     weight: 16
     settings:
       entity_browser: media_browser
-      field_widget_display: rendered_entity
+      field_widget_display: label
       field_widget_edit: true
       field_widget_remove: true
-      selection_mode: selection_append
-      field_widget_display_settings:
-        view_mode: thumbnail
       open: true
+      selection_mode: selection_append
+      field_widget_display_settings: {  }
     region: content
     third_party_settings: {  }
   field_citation_text:
