@@ -46,7 +46,7 @@
 
 	'use strict';
 
-	//state class should be ".is-*****"
+	// state class should be ".is-*****"
 
 	/* eslint-disable no-unused-vars, lines-around-comment*/
 	var Bootstrap = __webpack_require__(1);

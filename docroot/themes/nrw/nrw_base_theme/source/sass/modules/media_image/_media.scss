@@ -5,12 +5,13 @@
   &__info {
     @include clearfix;
     background: $brand-primary;
-    padding: $grid-gutter-width/8*3 0;
     font-size: $font-size-h6;
   }
   &__caption,
   &__copyright {
     @include make-sm-column(6);
+    padding-top: $padding-base-vertical*3;
+    padding-bottom: $padding-base-vertical*3;
     * {
       display: inline-block;
     }
