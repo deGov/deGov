@@ -75,27 +75,42 @@
     'clearfix',
   ]
 %}
-<article{{ attributes.addClass(classes) }}>
-  {% if content.field_teaser_image %}
-    <div class="press__teaser-image col-sm-3">
-      {{ content.field_teaser_image }}
-    </div>
-  {% endif %}
-  <div class="press-page__teaser-content teaser-content">
-    {% if content.field_press_date %}
-      <div class="press__teaser-date">
-        {{ content.field_press_date }}
-      </div>
-    {% endif %}
-    {% if content.field_teaser_title %}
-      <div class="press__teaser-title">
-        {{ content.field_teaser_title }}
-      </div>
-    {% endif %}
-    {% if content.field_teaser_text %}
-      <div class="press__teaser-text">
-        {{ content.field_teaser_text }}
-      </div>
-    {% endif %}
-  </div>
-</article>
+
+{% if url %}
+    <a class="teaser-link" href="{{ url }}">
+{% endif %}
+
+        <article{{ attributes.addClass(classes) }}>
+
+            {% if content.field_teaser_image %}
+                <div class="press__teaser-image teaser-image col-sm-3 no-gutter-col arrow">
+                    {{ content.field_teaser_image }}
+                </div>
+            {% endif %}
+
+                <div class="press-page__teaser-content teaser-content">
+                    {% if content.field_press_date %}
+                        <div class="press__teaser-date">
+                            {{ content.field_press_date }}
+                        </div>
+                    {% endif %}
+
+                    {% if content.field_teaser_title %}
+                        <div class="press__teaser-title">
+                            <h3>{{ content.field_teaser_title }}</h3>
+                        </div>
+                    {% endif %}
+
+                    {% if content.field_teaser_text %}
+                        <div class="press__teaser-text">
+                            {{ content.field_teaser_text }}
+                        </div>
+                    {% endif %}
+
+                </div>
+
+        </article>
+
+{% if url %}
+    </a>
+{% endif %}

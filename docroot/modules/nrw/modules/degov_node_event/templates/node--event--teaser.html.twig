@@ -73,39 +73,51 @@ not node.isPublished() ? 'is-unpublished',
 view_mode ? view_mode|clean_class,
 'clearfix',
 ] %}
-<article{{ attributes.addClass(classes) }}>
 
-  <div class="wrapper">
+{% if url %}
+    <a class="teaser-link" href="{{ url }}">
+{% endif %}
 
-    <!-- teaser image -->
-    {% if content.field_teaser_image %}
-      <div class="event__teaser-image col-sm-3"> <!-- from medium screen up, show on the right sidebar -->
-        {{ content.field_teaser_image }}
-      </div>
-    {% endif %}
+        <article{{ attributes.addClass(classes) }}>
 
-    <div class="wrapper"> <!-- from medium screen up, show on the right sidebar -->
-      <!-- teaser date -->
-      {% if content.field_event_date %}
-        <div class="event__teaser-date">
-          {{ content.field_event_date }}
-        </div>
-      {% endif %}
+            <div class="wrapper">
 
-      <!-- teaser title -->
-      {% if content.field_teaser_title %}
-        <div class="event__teaser-title">
-          {{ content.field_teaser_title }}
-        </div>
-      {% endif %}
+                <!-- teaser image -->
+                {% if content.field_teaser_image %}
+                    <div class="event__teaser-image teaser-image col-sm-3 no-gutter-col arrow"> <!-- from medium screen up, show on the right sidebar -->
+                        {{ content.field_teaser_image }}
+                    </div>
+                {% endif %}
 
-      <!-- Teaser text -->
-      {% if content.field_teaser_text %}
-        <div class="event__teaser-text">
-          {{ content.field_teaser_text }}
-        </div>
-      {% endif %}
-    </div>
-  </div>
+                    <div class="event-page__teaser-content teaser-content"> <!-- from medium screen up, show on the right sidebar -->
 
-</article>
+                        <!-- teaser date -->
+                        {% if content.field_event_date %}
+                            <div class="event__teaser-date">
+                            {{ content.field_event_date }}
+                            </div>
+                        {% endif %}
+
+                        <!-- teaser title -->
+                        {% if content.field_teaser_title %}
+                            <div class="event__teaser-title">
+                                <h3>{{ content.field_teaser_title }}</h3>
+                            </div>
+                        {% endif %}
+
+                        <!-- Teaser text -->
+                        {% if content.field_teaser_text %}
+                            <div class="event__teaser-text">
+                                {{ content.field_teaser_text }}
+                            </div>
+                        {% endif %}
+
+                    </div>
+
+            </div>
+
+        </article>
+
+{% if url %}
+    </a>
+{% endif %}

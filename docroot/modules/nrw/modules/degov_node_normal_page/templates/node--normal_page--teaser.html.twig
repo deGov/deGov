@@ -74,27 +74,39 @@ view_mode ? view_mode|clean_class,
 'clearfix',
 ] %}
 
-<article{{ attributes.addClass(classes) }}>
-  <!-- teaser image -->
-  {% if content.field_teaser_image %}
-    <div class="normal-page__teaser-image col-sm-3"> <!-- from medium screen up, show on the right sidebar -->
-      {{ content.field_teaser_image }}
-    </div>
-  {% endif %}
+{% if url %}
+    <a class="teaser-link" href="{{ url }}">
+{% endif %}
 
-  <div class="normal-page__teaser-content teaser-content"> <!-- from medium screen up, show on the right sidebar -->
-    <!-- teaser title -->
-    {% if content.field_teaser_title %}
-      <div class="normal-page__teaser-title">
-        {{ content.field_teaser_title }}
-      </div>
-    {% endif %}
+        <article{{ attributes.addClass(classes) }}>
 
-    <!-- Teaser text -->
-    {% if content.field_teaser_text %}
-      <div class="normal-page__teaser-text">
-        {{ content.field_teaser_text }}
-      </div>
-    {% endif %}
-  </div>
-</article>
+            <!-- teaser image -->
+            {% if content.field_teaser_image %}
+                <div class="normal-page__teaser-image teaser-image col-sm-3 no-gutter-col arrow"> <!-- from medium screen up, show on the right sidebar -->
+                    {{ content.field_teaser_image }}
+                </div>
+            {% endif %}
+
+                <div class="normal-page__teaser-content teaser-content col-sm-9"> <!-- from medium screen up, show on the right sidebar -->
+
+                    <!-- teaser title -->
+                    {% if content.field_teaser_title %}
+                        <div class="normal-page__teaser-title">
+                            <h3>{{ content.field_teaser_title }}</h3>
+                        </div>
+                    {% endif %}
+
+                    <!-- Teaser text -->
+                    {% if content.field_teaser_text %}
+                        <div class="normal-page__teaser-text">
+                            {{ content.field_teaser_text }}
+                        </div>
+                    {% endif %}
+
+                </div>
+
+        </article>
+
+{% if url %}
+    </a>
+{% endif %}
