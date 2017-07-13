@@ -53,3 +53,119 @@
   @include icon($fa-var-arrow-right);
   right: $grid-gutter-width;
 }
+
+/* Press list - Slick slider */
+.press-list {
+  .view-content {
+    padding-top: $padding-large-vertical*2;
+    padding-bottom: $padding-large-vertical*2;
+    @media (max-width: $screen-sm-max) {
+      padding-bottom: $padding-large-vertical*4;
+    }
+  }
+  .press__teaser-date {
+    color: $text-color;
+    font-size: 12px;
+    font-family: "BentonSans-Regular";
+  }
+  .press__teaser-title {
+    color: $brand-primary;
+    font-size: 14px;
+    font-family: "BentonSans-Regular";
+    font-weight: bold;
+  }
+  .view-footer {
+    a {
+      padding-right: 15px;
+      color: #3c506e;
+      font-family: "BentonSans-Regular";
+      font-size: 12px;
+      line-height: normal;
+      font-weight: bold;
+      vertical-align: top;
+      .fa {
+        padding-right: 5px;
+        vertical-align: top;
+        line-height: 12px;
+      }
+    }
+  }
+
+  /* Arrow design */
+  .slick-arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: auto;
+    z-index: 10;
+    height: auto;
+    width: auto;
+    border: none;
+    margin: -43px 20px 0;
+    padding: 0;
+    background-color: transparent;
+    font-weight: 100;
+    font-size: 0;
+    &:focus {
+      outline: none;
+    }
+    &:before {
+      margin: 0;
+      color: $brand-primary;
+      font-size: $font-size-h1 !important;
+      line-height: normal;
+      font-family: fontawesome;
+      text-shadow: none;
+    }
+    &.slick-prev {
+      right: 10%;
+    }
+    @media (max-width: $screen-sm-max) {
+      display: none !important;
+    }
+  }
+
+  /* Dots design */
+  .slick-dots {
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 10%;
+    width: 100%;
+    margin: -30px 27px 0 0;
+    padding-left: 0;
+    list-style: none;
+    text-align: center;
+    @media (max-width: $screen-sm-max) {
+      top: auto;
+      bottom: 0;
+      left: 0;
+      max-width: 100%;
+      text-align: center;
+      margin: 0;
+    }
+    li {
+      display: inline-block;
+      margin: 0 3px;
+      &.slick-active {
+        button {
+          background-color: $brand-primary;
+        }
+      }
+      button {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        padding: 0;
+        border: 2px solid $brand-primary;
+        background-color: transparent;
+        font-size: 0;
+        vertical-align: top;
+        border-radius: 1000px;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}
