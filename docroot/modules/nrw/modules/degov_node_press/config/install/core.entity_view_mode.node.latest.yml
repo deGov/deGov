@@ -1,0 +1,13 @@
+langcode: de
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - node
+third_party_settings:
+  lightning_core:
+    description: 'Shows latest content'
+id: node.latest
+label: Latest
+targetEntityType: node
+cache: true
