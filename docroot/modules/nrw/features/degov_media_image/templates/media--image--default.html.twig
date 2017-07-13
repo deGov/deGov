@@ -12,9 +12,19 @@
  * @ingroup themeable
  */
 #}
+
 <article class="image">
 
-  <div class="image__image">{{ content.image }}</div>
-  <div class="image__caption">{{ content.field_image_caption }}</div>
-  <div class="image__copyright"><span class="image__copyright-label">Copyright:</span> {{ content.field_image_copyright }}</div>
+    {% if content.image %}
+        <div class="image__image">{{ content.image }}</div>
+    {% endif %}
+
+    {% if content.field_image_caption %}
+        <div class="image__caption">{{ content.field_image_caption }}</div>
+    {%  endif %}
+
+    {% if content.field_image_copyright %}
+        <div class="image__copyright"><span class="image__copyright-label"><i class="fa fa-copyright" aria-hidden="true"></i></span> {{ content.field_image_copyright }}</div>
+    {% endif %}
+
 </article>
