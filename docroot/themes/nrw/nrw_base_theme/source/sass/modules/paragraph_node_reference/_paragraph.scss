@@ -9,19 +9,6 @@
     padding-bottom: 0;
   }
 
-  .teaser-link {
-    color: $text-color;
-
-    &:hover {
-      color: $link-hover-color;
-      text-decoration: none;
-    }
-
-    p, span {
-      font-weight: normal;
-    }
-  }
-
   .teaser-content {
     padding: $grid-gutter-width/2;
   }
