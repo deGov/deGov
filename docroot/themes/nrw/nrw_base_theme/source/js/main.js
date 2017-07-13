@@ -1,4 +1,4 @@
-//state class should be ".is-*****"
+// state class should be ".is-*****"
 
 /* eslint-disable no-unused-vars, lines-around-comment*/
 const Bootstrap = require('bootstrap-sass');
@@ -130,11 +130,11 @@ const PhotoSwipeUiDefault = require('photoswipe/dist/photoswipe-ui-default');
         });
       });
 
-      $('.slick__pause').on('click', function() {
+      $('.slick__pause').on('click', function () {
         $('.slideshow__slides').slick('slickPause');
         $(this).hide().siblings('.slick__play').show();
       });
-      $('.slick__play').on('click', function() {
+      $('.slick__play').on('click', function () {
         $('.slideshow__slides').slick('slickPlay');
         $(this).hide().siblings('.slick__pause').show();
       });
