@@ -27,7 +27,7 @@ const PhotoSwipeUiDefault = require('photoswipe/dist/photoswipe-ui-default');
   Drupal.behaviors.faq = {
     attach: function (context, settings) {
       $(context).find('.paragraph__content').once('faq-click').click(function () {
-        const isActive = $(this).children('.field--name-fieldfaq-element-question').hasClass('active');
+        const isActive = $(this).children('.field--name-field-faq-element-question').hasClass('active');
         $(this).children().toggleClass('active', !isActive);
       });
     }
