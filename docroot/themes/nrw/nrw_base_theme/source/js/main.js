@@ -27,8 +27,31 @@ const PhotoSwipeUiDefault = require('photoswipe/dist/photoswipe-ui-default');
   Drupal.behaviors.faq = {
     attach: function (context, settings) {
       $(context).find('.paragraph__content').once('faq-click').click(function () {
-        const isActive = $(this).children('.field--name-field-faq-element-question').hasClass('active');
+        const isActive = $(this).children('.field--name-fieldfaq-element-question').hasClass('active');
         $(this).children().toggleClass('active', !isActive);
+      });
+    }
+  };
+
+  // Footer menu open in responsive
+  Drupal.behaviors.footerResposive = {
+    attach: function (context, settings) {
+      $('.nrw-menu-footer__header i').once('footer-clic').click(function () {
+        $(this).closest('.nrw-menu-footer__col').toggleClass('is-open');
+      });
+    }
+  };
+
+  // upper Menu
+  Drupal.behaviors.upperMenu = {
+    attach: function (context, settings) {
+      $(context).find('.header__upper-menu--title').once('upper-menu-click').click(function () {
+        $(this).parent().toggleClass('is-open');
+      });
+      $(window).resize(function () {
+        if ($(window).width() > 720) {
+          $('.header__upper-menu').removeClass('is-open');
+        }
       });
     }
   };
