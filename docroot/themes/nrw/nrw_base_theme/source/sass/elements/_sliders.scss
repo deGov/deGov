@@ -97,13 +97,18 @@
       color: #3c506e;
       font-family: "BentonSans-Regular";
       font-size: 12px;
-      line-height: normal;
+      line-height: 12px;
       font-weight: bold;
-      vertical-align: top;
+      /*vertical-align: top;*/
       .fa {
         padding-right: 5px;
-        vertical-align: top;
+        /*vertical-align: top;*/
         line-height: 12px;
+        &:before {
+          display: inline-block;
+          margin: 0 0 1px;
+          vertical-align: text-bottom;
+        }
       }
     }
   }
