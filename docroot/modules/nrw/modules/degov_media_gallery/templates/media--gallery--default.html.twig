@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Default theme implementation to present a media entity.
+ *
+ * Available variables:
+ * - name: Name of the media.
+ * - content: Media content.
+ *
+ * @see template_preprocess_media()
+ *
+ * @ingroup themeable
+ */
+#}
+<article class="media media-gallery">
+  <div class="media-gallery__main_image">{{ content.field_gallery_main_image|field_value }}</div>
+  <div class="media-gallery__title">{{ content.field_gallery_title|field_value }}</div>
+  <div class="media-gallery__sub_title">{{ content.field_gallery_sub_title|field_value }}</div>
+  <div class="media-gallery__text">{{ content.field_gallery_text|field_value }}</div>
+  <div class="media-gallery__images">{{ content.field_gallery_images|field_value }}</div>
+</article>

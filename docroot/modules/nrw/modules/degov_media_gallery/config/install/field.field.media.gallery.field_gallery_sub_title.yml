@@ -1,0 +1,21 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_gallery_sub_title
+    - media_entity.bundle.gallery
+  enforced:
+    module:
+      - degov_media_gallery
+id: media.gallery.field_gallery_sub_title
+field_name: field_gallery_sub_title
+entity_type: media
+bundle: gallery
+label: Untertitel
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
