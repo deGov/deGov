@@ -49,7 +49,6 @@ content:
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
     region: content
-
 hidden:
   field_tags: true
   field_teaser_image: true

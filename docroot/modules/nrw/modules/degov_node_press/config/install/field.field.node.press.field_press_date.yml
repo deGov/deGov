@@ -4,11 +4,11 @@ dependencies:
   config:
     - field.storage.node.field_press_date
     - node.type.press
-  module:
-    - datetime
   enforced:
     module:
       - degov_node_press
+  module:
+    - datetime
 id: node.press.field_press_date
 field_name: field_press_date
 entity_type: node
