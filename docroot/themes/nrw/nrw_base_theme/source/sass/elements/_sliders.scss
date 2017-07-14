@@ -63,16 +63,33 @@
       padding-bottom: $padding-large-vertical*4;
     }
   }
+  .press__latest_wrapper {
+    a {
+      text-decoration: none;
+      cursor: default;
+      &:focus,
+      &:active {
+        outline: none;
+      }
+    }
+  }
   .press__teaser-date {
     color: $text-color;
     font-size: 12px;
     font-family: "BentonSans-Regular";
+    time {
+      font-weight: normal;
+    }
   }
   .press__teaser-title {
     color: $brand-primary;
     font-size: 14px;
     font-family: "BentonSans-Regular";
     font-weight: bold;
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
   }
   .view-footer {
     a {
@@ -118,7 +135,7 @@
       text-shadow: none;
     }
     &.slick-prev {
-      right: 10%;
+      right: 130px;
     }
     @media (max-width: $screen-sm-max) {
       display: none !important;
@@ -130,7 +147,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    max-width: 10%;
+    max-width: 130px;
     width: 100%;
     margin: -30px 27px 0 0;
     padding-left: 0;
