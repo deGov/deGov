@@ -349,23 +349,6 @@ display:
       tags:
         - 'config:field.storage.node.field_press_date'
         - 'config:field.storage.node.field_teaser_title'
-  attachment_1:
-    display_plugin: attachment
-    id: attachment_1
-    display_title: Attachment
-    position: 2
-    display_options:
-      display_extenders: {  }
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - 'user.node_grants:view'
-        - user.permissions
-      tags:
-        - 'config:field.storage.node.field_press_date'
-        - 'config:field.storage.node.field_teaser_title'
   block_1:
     display_plugin: block
     id: block_1

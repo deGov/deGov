@@ -15,7 +15,6 @@ dependencies:
       - degov_node_press
   module:
     - datetime
-    - panelizer
     - user
 third_party_settings:
   panelizer:

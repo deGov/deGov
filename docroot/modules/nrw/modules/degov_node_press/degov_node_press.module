@@ -12,12 +12,5 @@ function degov_node_press_preprocess(&$variables, $hook, &$info) {
     'entity_type' => 'node',
     'entity_bundles' => ['press'],
     'entity_view_modes' => ['teaser', 'latest']
-  ],
-  [
-    'module_name' => 'degov_node_press',
-    'entity_type' => 'block',
-    'entity_bundles' => ['view'],
-    'entity_view_modes' => ['block']
-  ]
-  );
+  ]);
 }
