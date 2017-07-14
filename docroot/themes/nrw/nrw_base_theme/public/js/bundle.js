@@ -71,16 +71,6 @@
 	    }
 	  };
 
-	  // FAQ
-	  Drupal.behaviors.faq = {
-	    attach: function attach(context, settings) {
-	      $(context).find('.paragraph__content').once('faq-click').click(function () {
-	        var isActive = $(this).children('.field--name-field-faq-element-question').hasClass('active');
-	        $(this).children().toggleClass('active', !isActive);
-	      });
-	    }
-	  };
-
 	  // Footer menu open in responsive
 	  Drupal.behaviors.footerResposive = {
 	    attach: function attach(context, settings) {

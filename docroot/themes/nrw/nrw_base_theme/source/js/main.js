@@ -23,15 +23,6 @@ const PhotoSwipeUiDefault = require('photoswipe/dist/photoswipe-ui-default');
     }
   };
 
-  // FAQ
-  Drupal.behaviors.faq = {
-    attach: function (context, settings) {
-      $(context).find('.paragraph__content').once('faq-click').click(function () {
-        const isActive = $(this).children('.field--name-field-faq-element-question').hasClass('active');
-        $(this).children().toggleClass('active', !isActive);
-      });
-    }
-  };
 
   // Footer menu open in responsive
   Drupal.behaviors.footerResposive = {
