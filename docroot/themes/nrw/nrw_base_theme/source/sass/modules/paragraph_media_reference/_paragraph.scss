@@ -1,0 +1,12 @@
+.media-reference {
+  .paragraph__content  {
+    .image,
+    .citation,
+    .media-contact,
+    .video,
+    .video-upload {
+      margin-top: $vertical-gutter-width/-2;
+      margin-bottom: $vertical-gutter-width/-2;
+    }
+  }
+}

@@ -83,9 +83,7 @@
   }
 }
 
-
 .nrw-menu-header{
-  //border-top: 1px solid $nrw-light;
   background: $color-white;
   .shadow{
     border-radius: 50%;
@@ -173,25 +171,14 @@
       color: $color-white;
     }
   }
-
-
-
   &__col{
     padding: 10px;
     &.is-open{
       background-color: $brand-primary;
       &:before{
-        width: 0;
-        height: 0;
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-        border-bottom: 10px solid $brand-primary;
-        content: "";
-        position: absolute;
+        @include triangle-up($size: 10px);
         top: -10px;
         left: 66px;
-      }
-      .nrw-menu__header{
       }
     }
     &:hover{
@@ -205,7 +192,7 @@
     width: 100%;
     left: 0;
     top: 45px;
-    z-index: 1;
+    z-index: 2;
     &-title-area{
       padding: 20px 20px 13px 20px;
       color: $brand-primary;
