@@ -39,7 +39,19 @@
     font-weight: bold;
     text-align: center;
   }
-  &__image img {
-    width: 100%;
+  .image {
+    //HACK, to be removed:
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    //HACK END
+    margin-left: 0;
+    margin-right: 0;
+    &__info {
+      background: transparent;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
   }
 }
