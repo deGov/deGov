@@ -26,16 +26,10 @@ class Common {
    *   Original $info from the hook_preprocess() function.
    * @param array $options
    *   A key named array of options, including:
-   *   - module_name: name of the module.
-   *   - entity_type: the entity type created by the module (node, paragraph,..)
-   *   - entity_bundles: array of entity bundles created.
-   *   - entity_view_modes: array of entity view modes that need templates.
-   *
-   * TODO: media entities do not work here, something like below needs to be added
-   * if ($hook === 'media') {
-   *   $variables['media'] = $variables['elements']['#media'];
-   * }
-   *
+   *   - module_name: mandatory value with the name of the module implementing the method.
+   *   - entity_type: mandatory value with mostly the entity type created (E.g. node, paragraph, media, swiftmailer..)
+   *   - entity_bundles: optional array of entity bundles created, could be empty.
+   *   - entity_view_modes: optional array of entity view modes that need templates, could be empty.
    */
   public static function addThemeSuggestions(&$variables, $hook, &$info, $options) {
     /* @var $entity_type string */
@@ -43,26 +37,47 @@ class Common {
     /* @var $module_name string*/
     /* @var $entity_view_modes array */
     extract($options);
-    // Add module overwritten template suggestions for each entity bundle.
+    $add_suggestion = FALSE;
+
     if ($hook == $entity_type) {
-      $entity_bundle = $variables[$entity_type]->bundle();
-      // Overwrite the core/contrib template with our module template in case no custom theme has overwritten the template.
-      if (in_array($entity_bundle, $entity_bundles)) {
-        $template_path = substr($info['theme path'], 0, 14);
-        if ($template_path == 'themes/contrib' || $template_path != 'themes/custom/') {
-          $info['theme path'] = $module_path = drupal_get_path('module', $module_name);
-          $info['path'] = $module_path . '/templates';
-          // Add a template for every defined view mode else add it for the default view mode.
-          if (in_array($variables['view_mode'], $entity_view_modes)) {
-            $info['template'] = $entity_type . '--' . $entity_bundle . '--' . $variables['view_mode'];
-          } else {
-            $info['template'] = $entity_type . '--' . $entity_bundle . '--default' ;
-          }
+      // Add module overwritten template suggestions for only the entity bundles that are defined.
+      if ($entity_bundles) {
+        if ($hook === 'media') {
+          $entity = $variables['elements']['#media'];
+        } else {
+          $entity = $variables[$entity_type];
         }
-        // Include defined entity bundle libraries.
-        $library = \Drupal::service('library.discovery')->getLibraryByName($module_name, $entity_bundle);
-        if ($library) {
-          $variables['#attached']['library'][] = $module_name . '/' . $entity_bundle;
+        $entity_bundle = $entity->bundle();
+        // Overwrite the core/contrib template with our module template in case no custom theme has overwritten the template.
+        if (in_array($entity_bundle, $entity_bundles)) {
+          $add_suggestion = TRUE;
+        }
+      } else {
+        // In case no entity bundles are defined, we still include the default template override.
+        $add_suggestion = TRUE;
+      }
+    }
+
+    if ($add_suggestion) {
+      $template_path = substr($info['theme path'], 0, 14);
+      // Only override templates that are defined by contrib modules.
+      if ($template_path == 'themes/contrib' || $template_path != 'themes/custom/') {
+        $info['theme path'] = $module_path = drupal_get_path('module', $module_name);
+        $info['path'] = $module_path . '/templates';
+        // Add a template for every defined view mode else add it for the default view mode.
+        if (isset($variables['view_mode']) && in_array($variables['view_mode'], $entity_view_modes)) {
+          $info['template'] = $entity_type . '--' . $entity_bundle . '--' . $variables['view_mode'];
+        } else {
+          if (isset($entity_bundle)) {
+            $info['template'] = $entity_type . '--' . $entity_bundle . '--default';
+            // Include defined entity bundle libraries.
+            $library = \Drupal::service('library.discovery')->getLibraryByName($module_name, $entity_bundle);
+            if ($library) {
+              $variables['#attached']['library'][] = $module_name . '/' . $entity_bundle;
+            }
+          } else {
+            $info['template'] = $entity_type . '--default';
+          }
         }
       }
     }

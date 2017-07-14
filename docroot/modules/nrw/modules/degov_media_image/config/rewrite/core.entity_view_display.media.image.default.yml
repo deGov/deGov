@@ -7,6 +7,7 @@ dependencies:
     - field.field.media.image.field_image_date
     - field.field.media.image.field_image_description
     - field.field.media.image.field_image_height
+    - field.field.media.image.field_image_image
     - field.field.media.image.field_image_mime
     - field.field.media.image.field_image_title
     - field.field.media.image.field_image_width
@@ -33,7 +34,7 @@ content:
     weight: 12
     label: above
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     type: entity_reference_label
     region: content
@@ -41,7 +42,7 @@ content:
     weight: 13
     label: above
     settings:
-      format_type: medium
+      format_type: short
       timezone_override: ''
     third_party_settings: {  }
     type: datetime_default
@@ -60,6 +61,15 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_image_image:
+    weight: 14
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
     region: content
   field_image_mime:
     weight: 8

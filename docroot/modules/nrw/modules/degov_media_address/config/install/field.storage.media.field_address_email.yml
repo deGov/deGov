@@ -1,0 +1,20 @@
+langcode: de
+status: true
+dependencies:
+  enforced:
+    module:
+      - degov_media_address
+  module:
+    - media_entity
+id: media.field_address_email
+field_name: field_address_email
+entity_type: media
+type: email
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,37 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_address_address
+    - media_entity.bundle.address
+  enforced:
+    module:
+      - degov_media_address
+  module:
+    - address
+id: media.address.field_address_address
+field_name: field_address_address
+entity_type: media
+bundle: address
+label: Adresse
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries: {  }
+  fields:
+    locality: locality
+    postalCode: postalCode
+    addressLine1: addressLine1
+    addressLine2: addressLine2
+    organization: organization
+    additionalName: additionalName
+    administrativeArea: '0'
+    dependentLocality: '0'
+    sortingCode: '0'
+    givenName: '0'
+    familyName: '0'
+  langcode_override: ''
+field_type: address

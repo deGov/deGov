@@ -12,8 +12,9 @@
    */
   Drupal.behaviors.slideshow = {
     attach: function (context, settings) {
-      $(".slideshow__slides").slick({
-        dots: true
+      $('.slideshow.default .slideshow__slides').slick({
+        dots: true,
+        autoplay: true
       });
     }
   }

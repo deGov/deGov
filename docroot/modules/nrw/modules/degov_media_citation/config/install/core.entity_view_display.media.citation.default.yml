@@ -14,6 +14,7 @@ dependencies:
     module:
       - degov_media_citation
   module:
+    - datetime
     - image
     - media_entity
     - user
@@ -33,12 +34,13 @@ content:
       timezone: ''
     third_party_settings: {  }
   field_citation_date:
-    weight: 3
-    label: hidden
+    weight: 7
+    label: above
     settings:
-      link_to_entity: false
+      format_type: short
+      timezone_override: ''
     third_party_settings: {  }
-    type: string
+    type: datetime_default
     region: content
   field_citation_image:
     weight: 6

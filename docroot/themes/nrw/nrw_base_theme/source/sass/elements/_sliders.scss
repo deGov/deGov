@@ -1,29 +1,255 @@
 // Slick arrows are disabled, but if they are enabled these are the styles
-.slick-arrow {
-  background: $color-white-transparent;
-  &:hover,
-  &:focus,
-  &:active {
-    background: $gray-light;
-  }
-  &.slick-next {
-    &:before {
-      content: "\f105";
+.paragraph-slideshow {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+.slideshow {
+  /*margin: 0 -15px;*/
+  .slick-list {
+    /*position: static;
+    z-index: 0;*/
+    @media (max-width: $screen-sm-max) {
+      background-color: $nrw-primary;
     }
   }
-  &.slick-prev {
-    &:before {
-      content: "\f104";
+  .slick-track {
+    .slick-slide {
+      .slide__link {
+        max-height: 540px;
+        &:hover,
+        &:focus, {
+          text-decoration: none;
+          outline: none;
+        }
+        @media (max-width: $screen-sm-max) {
+          max-height: none;
+        }
+      }
+      .slide__media {
+        position: relative;
+        z-index: 11;
+        float: left;
+        width: 75%;
+        @media (max-width: $screen-md-max) {
+          width: 65%;
+        }
+        @media (max-width: $screen-sm-max) {
+          width: 100%;
+        }
+      }
+      .slide__text {
+        float: left;
+        max-height: 480px;
+        overflow: auto;
+        width: 25%;
+        margin-bottom: 60px;
+        color: $text-color;
+        @media (max-width: $screen-md-max) {
+          max-height: 298px;
+          width: 35%;
+        }
+        @media (max-width: $screen-sm-max) {
+          max-height: none;
+          width: 100%;
+          margin-bottom: 0;
+        }
+        h2 {
+          margin: 0 0 12px;
+          line-height: normal;
+          font-family: $font-family-sans-serif;
+        }
+        p {
+          font-size: 14px;
+        }
+        .slide__text__sub {
+          /*margin-left: -20px;*/
+          padding-right: 20px;
+          padding-left: 20px;
+        }
+        @media (max-width: $screen-sm-max) {
+          color: $color-white;
+          .slide__text__sub {
+            padding: 22px 25px 70px;
+            /*background-color: $nrw-red;*/
+            .slide__text__sub {
+              padding-right: 0;
+              padding-left: 0;
+            }
+          }
+        }
+      }
+    }
+    .image__caption {
+      position: absolute;
+      display: none;
+    }
+    .image__copyright {
+      position: absolute;
+      display: none;
     }
   }
-  &.slick-next, &.slick-prev {
-    &:before {
-      font-size: $font-size-h3;
-      color: $color-blue;
-      text-shadow: none;
+  .slideshow__slides {
+    .slide {
+      .slide__link {
+        display: inline-block;
+        width: 100%;
+        vertical-align: top;
+      }
+    }
+    .slick-dots {
+      right: 0;
+      left: auto;
+      @include calc('max-width', '27% - 70px');
+      width: 100%;
+      margin: 0 45px 44px 0;
+      padding: 0 0 0 94px;
+      text-align: left;
+      @media (max-width: $screen-md-max) {
+        @include calc('max-width', '31% - 70px');
+        padding-left: 20px;
+      }
+      @media (max-width: $screen-sm-max) {
+        max-width: 100%;
+        margin: 0 0 41px;
+        padding-left: 0;
+        text-align: center;
+      }
     }
   }
 }
+.slick-controls {
+  position: absolute;
+  display: inline-block;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: auto;
+  margin: 0 90px 44px 0;
+  @media (max-width: $screen-md-max) {
+    margin-right: 80px;
+  }
+  @media (max-width: $screen-sm-max) {
+    display: none;
+  }
+  .slick__pause,
+  .slick__play {
+    display: none;
+    height: auto;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    font-size: 0;
+    line-height: 0;
+    text-shadow: none;
+    &::before {
+      position: relative;
+      top: auto;
+      bottom: -3px;
+      color: $brand-primary;
+      font-size: 22px;
+      line-height: 22px;
+      font-family: fontawesome;
+      text-shadow: none;
+      content: "\f04b"; /* For play button */
+    }
+  }
+  .slick__pause {
+    display: inline-block;
+    &::before {
+      content: "\f04c";
+    }
+  }
+}
+.slideshow {
+  .slick-arrow {
+    top: auto;
+    right: 0;
+    bottom: -60px;
+    left: auto;
+    z-index: 10;
+    height: auto;
+    /*height: 90px;*/
+    width: auto;
+    /*margin-right: 20px;*/
+    font-weight: 100;
+    @media (max-width: $screen-sm-max) {
+      display: none !important;
+    }
+    &:before {
+      height: auto;
+      width: auto;
+      margin: 0 0;
+      opacity: 1;
+      color: $brand-primary;
+      font-size: 88px;
+      line-height: 88px;
+      font-weight: 100;
+      font-family: fontawesome;
+      text-shadow: none;
+      content: "\f105"; /* For next arrow */
+    }
+    &.slick-prev {
+      right: 25%;
+      margin-right: -50px;
+      &:before {
+        content: "\f104";
+      }
+      @media (max-width: $screen-md-max) {
+        right: 35%;
+      }
+    }
+    &.slick-next {
+      &:before {
+        margin-right: 20px;
+        margin-left: 0;
+        content: "\f105"; /* For next arrow */
+      }
+    }
+  }
+}
+
+/* Dots design */
+.slick-dots {
+  left: 0;
+  right: 0;
+  width: auto;
+  li {
+    height: 11px;
+    width: 11px;
+    margin: 0 2px;
+    button {
+      height: 11px;
+      width: 11px;
+      padding: 0;
+      border: 2px solid $brand-primary;
+      border-radius: 100px;
+      background-color: $color-white-transparent;
+      &::before {
+        display: none;
+      }
+    }
+    &.slick-active {
+      button {
+        background-color: $brand-primary;
+      }
+    }
+    @media (max-width: $screen-sm-max) {
+      button {
+        border: 2px solid $color-white-transparent;
+        background-color: $brand-primary;
+      }
+      &.slick-active {
+        button {
+          background-color: $color-white-transparent;
+        }
+      }
+    }
+  }
+}
+
 
 // slide arrows which are added in the template
 .inslide-slick-prev,

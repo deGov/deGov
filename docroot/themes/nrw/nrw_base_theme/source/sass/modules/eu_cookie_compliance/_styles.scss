@@ -1,40 +1,63 @@
 //eu cookie compliance overrides
 #sliding-popup {
-  background-color: $color-gray !important;
+  background-color: rgba($color-gray,0.95) !important;
   .popup-content {
+    @include clearfix;
+    max-width: 95%;
+    display: table;
+    @include larger-than($screen-lg-min) {
+      max-width: $container-lg;
+      width: 80%;
+    }
     #popup-text {
-      h2 {
+      margin: $padding-base-horizontal 0;
+      max-width: 90%;
+      @include larger-than($screen-xs-min) {
+        display: table-cell;
+      }
+      h3 {
         font-family: $font-family-base;
         font-size: $font-size-large;
         font-weight: normal;
+        margin-top: 0;
       }
       p {
         font-size: $font-size-small;
         font-weight: normal;
       }
     }
+    #popup-buttons {
+      vertical-align: middle;
+      float: none;
+      @include larger-than($screen-xs-min) {
+        display: table-cell;
+      }
+      @include larger-than($screen-md-min) {
+        text-align: right;
+      }
+    }
     #popup-buttons button {
       display: inline-block;
-      margin-bottom: 0;
-      font-weight: normal;
-      text-align: center;
-      vertical-align: middle;
-      touch-action: manipulation;
-      cursor: pointer;
-      background-image: none;
-      border: 1px solid transparent;
-      white-space: nowrap;
-      padding: 4px 12px;
+      margin: $padding-small-vertical $padding-xs-horizontal;
+      padding: $padding-large-vertical $padding-base-horizontal;
+      font-family: $font-family-base;
       font-size: $font-size-small;
       line-height: $line-height-base;
-      border-radius: 4px;
-      user-select: none;
-      box-shadow: none;
+      font-weight: normal;
+      white-space: nowrap;
+      border-radius: 0;
       background: none;
-      font-family: $font-family-base;
+      box-shadow: none;
       text-shadow: none;
-      margin-top: $vertical-gutter-width/4;
-      @include button-variant($gray-base, $color-white, $color-gray);
+      user-select: none;
+      touch-action: manipulation;
+      @include button-variant($color-white, $nrw-secondary, transparent);
+      &:last-child {
+        margin-right: 0;
+      }
+      &:hover {
+        background: $brand-primary;
+      }
     }
   }
 }
