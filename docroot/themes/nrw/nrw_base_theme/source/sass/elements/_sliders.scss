@@ -41,11 +41,11 @@
         max-height: 480px;
         overflow: auto;
         width: 25%;
-        margin-bottom: 60px;
-        color: $brand-primary;
+        margin-bottom: $vertical-gutter-width*1.5;
         padding-top: $grid-gutter-width/2;
+        color: $brand-primary;
         @media (max-width: $screen-md-max) {
-          max-height: 298px;
+          max-height: 290px;
           width: 35%;
         }
         @media (max-width: $screen-sm-max) {
@@ -60,14 +60,12 @@
           font-weight: bold;
         }
         p {
-          font-size: 14px;
+          font-size: $font-size-h6;
           font-weight: normal;
         }
-        a {
-        }
         .slide__text__sub {
-          padding-right: 20px;
-          padding-left: 20px;
+          padding-right: $padding-small-horizontal*2;
+          padding-left: $padding-small-horizontal*2;
         }
         @media (max-width: $screen-sm-max) {
           color: $color-white;
@@ -101,6 +99,8 @@
     }
   }
 }
+
+// Slider controls
 .slick-controls {
   position: absolute;
   display: inline-block;
@@ -136,7 +136,7 @@
       line-height: 22px;
       font-family: fontawesome;
       text-shadow: none;
-      content: "\f04b"; /* For play button */
+      content: "\f04b"; // For play button
     }
   }
   .slick__pause {
@@ -146,6 +146,58 @@
     }
   }
 }
+
+// Dots design
+.slick-dots {
+  left: auto;
+  right: 120px;
+  bottom: 33px;
+  width: 100%;
+  margin-right: $padding-small-horizontal*2;
+  text-align: center;
+  @include calc('max-width', '14% - 70px');
+  @media (max-width: $screen-md-max) {
+    @include calc('max-width', '20% - 70px');
+  }
+  @media (max-width: $screen-sm-max) {
+    right: 0;
+    max-width: 100%;
+  }
+  li {
+    height: 11px;
+    width: 11px;
+    margin: 0 2px;
+    button {
+      height: 11px;
+      width: 11px;
+      padding: 0;
+      border: 2px solid $brand-primary;
+      border-radius: 100px;
+      background-color: rgba($color-white, 0.4);
+      &::before {
+        display: none;
+      }
+    }
+    &.slick-active {
+      button {
+        background-color: $brand-primary;
+      }
+    }
+    @media (max-width: $screen-sm-max) {
+      button {
+        border: 2px solid $color-white-transparent;
+        background-color: $brand-primary;
+      }
+      &.slick-active {
+        button {
+          background-color: $color-white-transparent;
+        }
+      }
+    }
+  }
+}
+
+// Slick Arrows
 .slideshow {
   .slick-arrow {
     top: auto;
@@ -174,7 +226,7 @@
     }
     &.slick-prev {
       right: 25%;
-      margin-right: -50px;
+      margin-right: -$padding-small-horizontal*5;
       &:before {
         content: "\f104";
       }
@@ -184,64 +236,13 @@
     }
     &.slick-next {
       &:before {
-        margin-right: 20px;
+        margin-right: $padding-small-horizontal*2;
         margin-left: 0;
         content: "\f105"; /* For next arrow */
       }
     }
   }
 }
-
-/* Dots design */
-.slick-dots {
-  left: auto;
-  right: 120px;
-  bottom: 33px;
-  width: 100%;
-  margin-right: 20px;
-  text-align: center;
-  @include calc('max-width', '14% - 70px');
-  @media (max-width: $screen-md-max) {
-    @include calc('max-width', '20% - 70px');
-    right: 0;
-  }
-  @media (max-width: $screen-sm-max) {
-    max-width: 100%;
-  }
-  li {
-    height: 11px;
-    width: 11px;
-    margin: 0 2px;
-    button {
-      height: 11px;
-      width: 11px;
-      padding: 0;
-      border: 2px solid $brand-primary;
-      border-radius: 100px;
-      background-color: $color-white-transparent;
-      &::before {
-        display: none;
-      }
-    }
-    &.slick-active {
-      button {
-        background-color: $brand-primary;
-      }
-    }
-    @media (max-width: $screen-sm-max) {
-      button {
-        border: 2px solid $color-white-transparent;
-        background-color: $brand-primary;
-      }
-      &.slick-active {
-        button {
-          background-color: $color-white-transparent;
-        }
-      }
-    }
-  }
-}
-
 
 // slide arrows which are added in the template
 .inslide-slick-prev,
