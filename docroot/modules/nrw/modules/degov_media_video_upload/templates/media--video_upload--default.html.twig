@@ -33,12 +33,17 @@
       {% endfor %}
     </video>
   </div>
-  <div class="video-upload__info">
-    {% if media.field_video_upload_caption.value %}
-    <div class="video-upload__caption">{% spaceless %}{{ caption|striptags }}{% endspaceless %}</div>
-    {% endif %}
-    {% if media.field_video_upload_copyright.value %}
-    <div class="video-upload__copyright"><span class="video-upload__copyright-label">{{ 'Copyright'|trans }}:</span> {% spaceless %}{{ copyright|striptags }}{% endspaceless %}</div>
-    {% endif %}
-  </div>
+  {% if content.field_video_upload_caption|field_value or content.field_video_upload_copyright|field_value %}
+    <div class="video-upload__info">
+      {% if content.field_video_upload_caption|field_value %}
+        <div class="video-upload__caption">{{ content.field_video_upload_caption|field_value }}</div>
+      {% endif %}
+      {% if content.field_video_upload_copyright|field_value %}
+        <div class="video-upload__copyright">
+          <span class="video-upload__copyright-label">{{ '&copy;'|trans }}</span>
+          {{ content.field_video_upload_copyright|field_value }}
+        </div>
+      {% endif %}
+    </div>
+  {% endif %}
 </article>

@@ -3,26 +3,43 @@
   position: relative;
   color: $color-white;
   &__info {
+    & > div {
+      display: inline;
+      &:nth-child(2) {
+        &:before {
+          content: "/";
+          padding-left: $padding-xs-horizontal;
+        }
+      }
+    }
     @include clearfix;
     background: $brand-primary;
+    padding: $padding-base-vertical*3;
     font-size: $font-size-h6;
+    text-align: right;
   }
   &__caption,
   &__copyright {
-    @include make-sm-column(6);
-    padding-top: $padding-base-vertical*3;
-    padding-bottom: $padding-base-vertical*3;
     * {
       display: inline-block;
     }
   }
   &__copyright {
-    @include larger-than($screen-sm-min){
+    @include larger-than($screen-sm-min) {
       text-align: right;
     }
   }
   img {
     width: 100%;
     height: auto;
+  }
+}
+
+// Add alignment exception per region.
+// @todo: will probably need to be done with javascript based on image size.
+.region-sidebar-second,
+.region-sidebar-first {
+  .image__info {
+    text-align: left;
   }
 }
