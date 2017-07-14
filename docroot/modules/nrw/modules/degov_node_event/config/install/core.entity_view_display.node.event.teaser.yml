@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.event.field_event_date
     - field.field.node.event.field_event_location
     - field.field.node.event.field_sidebar_right_paragraphs
+    - field.field.node.event.field_tags
     - field.field.node.event.field_teaser_image
     - field.field.node.event.field_teaser_text
     - field.field.node.event.field_teaser_title
@@ -60,5 +61,6 @@ hidden:
   field_content_paragraphs: true
   field_event_location: true
   field_sidebar_right_paragraphs: true
+  field_tags: true
   langcode: true
   links: true
