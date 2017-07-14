@@ -1,0 +1,10 @@
+{
+  "name": "degov_node_event",
+  "type": "drupal-module",
+  "description": "Adds an event content type.",
+  "license": "GPL-2.0+",
+  "homepage": "https://www.nrwgov.org",
+  "require": {
+    "drupal/address": "^1.0"
+  }
+}
