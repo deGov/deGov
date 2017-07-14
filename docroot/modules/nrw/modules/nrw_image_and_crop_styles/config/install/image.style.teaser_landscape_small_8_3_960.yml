@@ -6,8 +6,8 @@ dependencies:
       - nrw_image_and_crop_styles
   module:
     - crop
-name: teaser_landscape_small_8_3
-label: 'Teaser landscape small (8:3)'
+name: teaser_landscape_small_8_3_960
+label: 'Teaser landscape small (8:3) 960'
 effects:
   8609ec07-ea14-41fe-ba5b-db73e6b75f4b:
     uuid: 8609ec07-ea14-41fe-ba5b-db73e6b75f4b
@@ -15,3 +15,11 @@ effects:
     weight: 1
     data:
       crop_type: 8_to_3
+  1c35fe4a-6414-4d89-ac2a-627832960c07:
+    uuid: 1c35fe4a-6414-4d89-ac2a-627832960c07
+    id: image_scale
+    weight: 2
+    data:
+      width: 960
+      height: null
+      upscale: true

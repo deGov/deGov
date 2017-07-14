@@ -1,0 +1,115 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.teaser_squared_1_1
+    - field.field.media.image.field_image_caption
+    - field.field.media.image.field_image_copyright
+    - field.field.media.image.field_image_date
+    - field.field.media.image.field_image_description
+    - field.field.media.image.field_image_height
+    - field.field.media.image.field_image_mime
+    - field.field.media.image.field_image_title
+    - field.field.media.image.field_image_width
+    - field.field.media.image.field_media_in_library
+    - field.field.media.image.image
+    - media_entity.bundle.image
+    - responsive_image.styles.teaser_squared
+  module:
+    - datetime
+    - responsive_image
+    - text
+id: media.image.teaser_squared_1_1
+targetEntityType: media
+bundle: image
+mode: teaser_squared_1_1
+content:
+  field_image_caption:
+    weight: 10
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_image_copyright:
+    weight: 12
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_image_date:
+    weight: 13
+    label: above
+    settings:
+      format_type: short
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_image_description:
+    weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_image_height:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_image_image:
+    weight: 14
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_image_mime:
+    weight: 8
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_image_title:
+    weight: 11
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_image_width:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  image:
+    type: responsive_image
+    weight: 0
+    label: hidden
+    settings:
+      responsive_image_style: teaser_squared
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_media_in_library: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

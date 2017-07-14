@@ -6,8 +6,8 @@ dependencies:
       - nrw_image_and_crop_styles
   module:
     - crop
-name: teaser_opinion_4_1
-label: 'Teaser opinion (4:1)'
+name: teaser_opinion_4_1_1280
+label: 'Teaser opinion (4:1) 1280'
 effects:
   edd14441-8a5f-41d2-9544-d42fa733ba80:
     uuid: edd14441-8a5f-41d2-9544-d42fa733ba80
@@ -15,3 +15,11 @@ effects:
     weight: 1
     data:
       crop_type: 4_to_1
+  ab1618eb-c3ef-4838-99fe-5cfb0ebec5ae:
+    uuid: ab1618eb-c3ef-4838-99fe-5cfb0ebec5ae
+    id: image_scale
+    weight: 2
+    data:
+      width: 1280
+      height: null
+      upscale: true
