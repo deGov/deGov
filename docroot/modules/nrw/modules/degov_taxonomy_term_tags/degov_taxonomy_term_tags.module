@@ -6,11 +6,11 @@ use Drupal\degov_content_types_shared_fields\Common;
  * Implements hook_preprocess().
  */
 function degov_taxonomy_term_tags_preprocess(&$variables, $hook, &$info) {
-    // Add template suggestions and libraries implemented in this module.
-    Common::addThemeSuggestions($variables, $hook, $info, [
-        'module_name' => 'degov_taxonomy_term_tags',
-        'entity_type' => 'taxonomy_term',
-        'entity_bundles' => ['tags'],
-        'entity_view_modes' => [],
+  // Add template suggestions and libraries implemented in this module.
+  Common::addThemeSuggestions($variables, $hook, $info, [
+    'module_name' => 'degov_taxonomy_term_tags',
+    'entity_type' => 'taxonomy_term',
+    'entity_bundles' => ['tags'],
+    'entity_view_modes' => [],
   ]);
 }
