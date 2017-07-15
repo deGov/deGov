@@ -17,12 +17,6 @@ dependencies:
     - entity_reference_revisions
     - text
     - user
-third_party_settings:
-  panelizer:
-    enable: false
-    custom: false
-    allow: false
-    default: default
 id: node.press.default
 targetEntityType: node
 bundle: press

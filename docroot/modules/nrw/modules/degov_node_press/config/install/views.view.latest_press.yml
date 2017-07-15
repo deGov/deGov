@@ -6,6 +6,9 @@ dependencies:
     - field.storage.node.field_press_date
     - field.storage.node.field_teaser_title
     - node.type.press
+  enforced:
+    module:
+      - degov_node_press
   module:
     - datetime
     - node

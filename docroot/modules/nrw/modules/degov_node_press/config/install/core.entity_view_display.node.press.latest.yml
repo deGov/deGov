@@ -16,12 +16,6 @@ dependencies:
   module:
     - datetime
     - user
-third_party_settings:
-  panelizer:
-    enable: false
-    custom: false
-    allow: false
-    default: default
 id: node.press.latest
 targetEntityType: node
 bundle: press
