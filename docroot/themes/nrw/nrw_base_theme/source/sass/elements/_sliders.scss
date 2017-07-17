@@ -357,13 +357,60 @@
       line-height: normal;
       font-family: fontawesome;
       text-shadow: none;
+      content: "\f105"; /* For next arrow */
     }
     &.slick-prev {
       right: 130px;
+      &:before {
+        content: "\f104";
+      }
     }
     @media (max-width: $screen-sm-max) {
       display: none !important;
     }
   }
 
+  /* Dots design */
+  .slick-dots {
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 130px;
+    width: 100%;
+    margin: -30px 27px 0 0;
+    padding-left: 0;
+    list-style: none;
+    text-align: center;
+    @media (max-width: $screen-sm-max) {
+      top: auto;
+      bottom: 0;
+      left: 0;
+      max-width: 100%;
+      text-align: center;
+      margin: 0;
+    }
+    li {
+      display: inline-block;
+      margin: 0 3px;
+      &.slick-active {
+        button {
+          background-color: $brand-primary;
+        }
+      }
+      button {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        padding: 0;
+        border: 2px solid $brand-primary;
+        background-color: transparent;
+        font-size: 0;
+        vertical-align: top;
+        border-radius: 1000px;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
 }

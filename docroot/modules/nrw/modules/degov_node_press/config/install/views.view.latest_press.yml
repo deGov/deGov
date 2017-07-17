@@ -6,9 +6,6 @@ dependencies:
     - field.storage.node.field_press_date
     - field.storage.node.field_teaser_title
     - node.type.press
-  enforced:
-    module:
-      - degov_node_press
   module:
     - datetime
     - node
@@ -344,7 +341,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          order: ASC
+          order: DESC
           exposed: false
           expose:
             label: ''
@@ -390,9 +387,9 @@ display:
       tags:
         - 'config:field.storage.node.field_press_date'
         - 'config:field.storage.node.field_teaser_title'
-  block_1:
+  latest_press:
     display_plugin: block
-    id: block_1
+    id: latest_press
     display_title: Block
     position: 1
     display_options:
