@@ -165,6 +165,12 @@
             ]
         },
         "enable-patching": true,
+        "patches": {
+            "drupal/core": {
+                "2893029 - StringTranslationTrait consumers cannot be reliably serialized without DependencySerializationTrait":
+                "https://www.drupal.org/files/issues/2893029-full-fix-test-from-3.patch"
+            }
+        },
         "merge-plugin": {
             "include": [
                 "docroot/modules/nrw/*/*/composer.json",
