@@ -1,0 +1,16 @@
+.view-reference{
+  .slick-track{
+    margin: 0 -1*($grid-gutter-width/4);
+  }
+  article{
+    padding: 0 $grid-gutter-width/4;
+  }
+  .slick-dots{
+      margin: 0 auto;
+      font-size: 0;
+      margin-top: $grid-gutter-width/4;
+    li{
+    display: inline;
+    }
+  }
+}
