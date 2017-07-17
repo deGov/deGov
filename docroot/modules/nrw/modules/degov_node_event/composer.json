@@ -1,10 +1,11 @@
 {
   "name": "degov_node_event",
   "type": "drupal-module",
-  "description": "Adds an event content type.",
+  "description": "Adds creation and listings of events with a calendar overview.",
   "license": "GPL-2.0+",
   "homepage": "https://www.nrwgov.org",
   "require": {
+    "drupal/date_popup": "^1.0",
     "drupal/address": "^1.0"
   }
 }
