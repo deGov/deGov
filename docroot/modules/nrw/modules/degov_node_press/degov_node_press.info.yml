@@ -11,6 +11,7 @@ dependencies:
   - entity_reference_revisions
   - field
   - language
+  - lightning_core
   - menu_ui
   - node
   - paragraphs
