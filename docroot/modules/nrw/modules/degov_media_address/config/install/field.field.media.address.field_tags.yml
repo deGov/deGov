@@ -5,6 +5,9 @@ dependencies:
     - field.storage.media.field_tags
     - media_entity.bundle.address
     - taxonomy.vocabulary.tags
+  enforced:
+    module:
+      - degov_media_address
 id: media.address.field_tags
 field_name: field_tags
 entity_type: media
