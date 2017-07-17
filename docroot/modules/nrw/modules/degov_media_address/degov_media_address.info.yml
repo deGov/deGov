@@ -12,4 +12,5 @@ dependencies:
   - media_entity
   - path
   - spamspan
+  - taxonomy
   - workbench_moderation
