@@ -2,6 +2,7 @@ langcode: de
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.latest
     - field.field.node.press.field_content_paragraphs
     - field.field.node.press.field_press_date
     - field.field.node.press.field_sidebar_right_paragraphs
@@ -14,50 +15,33 @@ dependencies:
       - degov_node_press
   module:
     - datetime
-    - entity_reference_revisions
-    - text
     - user
-id: node.press.default
+id: node.press.latest
 targetEntityType: node
 bundle: press
-mode: default
+mode: latest
 content:
-  field_content_paragraphs:
-    weight: 2
-    label: hidden
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
-    region: content
   field_press_date:
-    weight: 0
+    weight: 1
     label: hidden
     settings:
-      format_type: medium
       timezone_override: ''
+      format_type: medium
     third_party_settings: {  }
     type: datetime_default
     region: content
-  field_sidebar_right_paragraphs:
-    weight: 3
+  field_teaser_title:
+    type: string
+    weight: 0
+    region: content
     label: hidden
     settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
-    region: content
-  field_teaser_text:
-    type: text_default
-    weight: 1
-    region: content
-    label: above
-    settings: {  }
+      link_to_entity: false
     third_party_settings: {  }
 hidden:
+  field_content_paragraphs: true
+  field_sidebar_right_paragraphs: true
   field_teaser_image: true
-  field_teaser_title: true
+  field_teaser_text: true
   langcode: true
   links: true

@@ -1,11 +1,11 @@
 langcode: de
 status: true
 dependencies:
-  module:
-    - menu_ui
   enforced:
     module:
       - degov_node_press
+  module:
+    - menu_ui
 third_party_settings:
   menu_ui:
     available_menus:
