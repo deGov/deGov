@@ -7,6 +7,7 @@ dependencies:
   - block
   - datetime
   - degov_content_types_shared_fields
+  - degov_taxonomy_term_tags
   - entity_browser
   - entity_reference_revisions
   - field
@@ -15,6 +16,7 @@ dependencies:
   - node
   - paragraphs
   - path
+  - taxonomy
   - text
   - user
   - views
