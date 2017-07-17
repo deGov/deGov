@@ -16,18 +16,28 @@
   }
   &__info {
     @include clearfix;
-    background: $brand-primary;
-    padding: $padding-base-vertical*3 0;
+    padding: $padding-base-vertical*3;
     font-size: $font-size-h6;
+    text-align: right;
+    position: absolute;
+    bottom: $vertical-gutter-width*0.75; // to not cover controls
+    left: 0;
+    right: 0;
+    & > div {
+      display: inline;
+    }
   }
   &__caption,
   &__copyright {
-    @include make-sm-column(6);
     * {
       display: inline-block;
     }
   }
   &__copyright {
+    &:before {
+      content: "/";
+      padding-left: $padding-xs-horizontal;
+    }
     @include larger-than($screen-sm-min){
       text-align: right;
     }
@@ -35,5 +45,23 @@
   video {
     width: 100%;
     height: auto;
+  }
+}
+
+// Add alignment exception per region.
+// @todo: will probably need to be done with javascript based on image size.
+.region-sidebar-second,
+.region-sidebar-first {
+  .video__info,
+  .video-upload__info {
+    text-align: left;
+  }
+}
+
+// For teaser mode hide info
+.teaser {
+  .video__info,
+  .video-upload__info {
+    display: none;
   }
 }

@@ -1,0 +1,10 @@
+{
+  "name": "nrw_image_and_crop_styles",
+  "type": "drupal-module",
+  "description": "Adds configuration for image and crop styles.",
+  "license": "GPL-2.0+",
+  "homepage": "https://www.nrwgov.org",
+  "require": {
+    "drupal/image_widget_crop": "^2.0"
+  }
+}

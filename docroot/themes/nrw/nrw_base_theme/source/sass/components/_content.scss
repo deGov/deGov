@@ -1,6 +1,7 @@
 // Styles for content region
 body{
   -webkit-font-smoothing: antialiased;
+  background-color: $background-grey;
 }
 .main-wrapper {
   background-color: $background-grey;
@@ -73,8 +74,13 @@ table {
   padding: 0;
   font-size: $font-size-small;
   margin-bottom: $grid-gutter-width/4;
-   > li + li:before{
+   > li + li:before, li.active{
     color: $color-white;
+
     content: '> ';
   }
+}
+
+.right{
+  float: right;
 }

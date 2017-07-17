@@ -71,12 +71,25 @@
 	    }
 	  };
 
-	  // FAQ
-	  Drupal.behaviors.faq = {
+	  // Footer menu open in responsive
+	  Drupal.behaviors.footerResposive = {
 	    attach: function attach(context, settings) {
-	      $(context).find('.paragraph__content').once('faq-click').click(function () {
-	        var isActive = $(this).children('.field--name-field-faq-element-question').hasClass('active');
-	        $(this).children().toggleClass('active', !isActive);
+	      $('.nrw-menu-footer__header i').once('footer-clic').click(function () {
+	        $(this).closest('.nrw-menu-footer__col').toggleClass('is-open');
+	      });
+	    }
+	  };
+
+	  // upper Menu
+	  Drupal.behaviors.upperMenu = {
+	    attach: function attach(context, settings) {
+	      $(context).find('.header__upper-menu--title').once('upper-menu-click').click(function () {
+	        $(this).parent().toggleClass('is-open');
+	      });
+	      $(window).resize(function () {
+	        if ($(window).width() > 720) {
+	          $('.header__upper-menu').removeClass('is-open');
+	        }
 	      });
 	    }
 	  };
@@ -239,6 +252,22 @@
 	      });
 	    }
 	  };
+
+	  // Slick slider in press list
+	  $('.view-latest-press .view-content').slick({
+	    dots: true,
+	    infinite: false,
+	    speed: 300,
+	    slidesToShow: 3,
+	    slidesToScroll: 3,
+	    responsive: [{
+	      breakpoint: 992,
+	      settings: {
+	        slidesToShow: 1,
+	        slidesToScroll: 1
+	      }
+	    }]
+	  });
 	})(jQuery, window.Drupal);
 
 /***/ }),

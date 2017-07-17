@@ -11,24 +11,16 @@
  *
  * @ingroup themeable
  */
-#}
-
-<article class="image">
-
-    {% if content.image %}
-        <div class="image__image">{{ content.image }}</div>
+ #}
+ <article class="image">
+  <div class="image__image">{{ content.image|field_value }}</div>
+  <div class="image__info">
+    <div class="image__caption">{{ content.field_image_caption|field_value }}</div>
+    {% if content.field_image_copyright|field_value %}
+      <div class="image__copyright">
+        <span class="image__copyright-label">{{ '&copy;'|trans }}</span>
+        {{ content.field_image_copyright|field_value }}
+      </div>
     {% endif %}
-
-    <div class="image__info">
-
-        {% if content.field_image_caption %}
-            <div class="image__caption">{{ content.field_image_caption|field_value }}</div>
-        {%  endif %}
-
-        {% if content.field_image_copyright.value %}
-            <div class="image__copyright"><span class="image__copyright-label">{{ 'Copyright:'|trans }}</span>{{ content.field_image_copyright|field_value }}</div>
-        {% endif %}
-
-    </div>
-
+  </div>
 </article>

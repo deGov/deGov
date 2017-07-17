@@ -66,45 +66,40 @@
  */
 #}
 {%
-set classes = [
-node.bundle|clean_class,
-node.isPromoted() ? 'is-promoted',
-node.isSticky() ? 'is-sticky',
-not node.isPublished() ? 'is-unpublished',
-view_mode ? view_mode|clean_class,
-'clearfix',
-]
+  set classes = [
+    node.bundle|clean_class,
+    node.isPromoted() ? 'is-promoted',
+    node.isSticky() ? 'is-sticky',
+    not node.isPublished() ? 'is-unpublished',
+    view_mode ? view_mode|clean_class,
+    'clearfix',
+  ]
 %}
-
 <article{{ attributes.addClass(classes) }}>
+  <!-- teaser image -->
+  {% if content.field_teaser_image %}
+    <a href="{{ url }}" rel="bookmark">
+      <div class="normal-page__teaser-image teaser-image col-xs-5 col-sm-4 col-md-3 arrow"> <!-- from medium screen up, show on the right sidebar -->
+        {{ content.field_teaser_image }}
+      </div>
+    </a>
+  {% endif %}
 
-    <!-- teaser image -->
-    {% if content.field_teaser_image %}
-        <a href="{{ url }}" rel="bookmark">
-            <div class="normal-page__teaser-image teaser-image col-xs-5 col-sm-4 col-md-3 arrow"> <!-- from medium screen up, show on the right sidebar -->
-                {{ content.field_teaser_image }}
-            </div>
-        </a>
+  <div class="normal-page__teaser-content teaser-content col-xs-7 col-sm-8 col-md-9"> <!-- from medium screen up, show on the right sidebar -->
+    <!-- teaser title -->
+    {% if content.field_teaser_title %}
+      <a href="{{ url }}" rel="bookmark">
+        <div class="normal-page__teaser-title teaser-title">
+          <h3>{{ content.field_teaser_title }}</h3>
+        </div>
+      </a>
     {% endif %}
 
-    <div class="normal-page__teaser-content teaser-content col-xs-7 col-sm-8 col-md-9"> <!-- from medium screen up, show on the right sidebar -->
-
-        <!-- teaser title -->
-        {% if content.field_teaser_title %}
-            <a href="{{ url }}" rel="bookmark">
-                <div class="normal-page__teaser-title teaser-title">
-                    <h3>{{ content.field_teaser_title }}</h3>
-                </div>
-            </a>
-        {% endif %}
-
-        <!-- Teaser text -->
-        {% if content.field_teaser_text %}
-            <div class="normal-page__teaser-text">
-                {{ content.field_teaser_text }}
-            </div>
-        {% endif %}
-
-    </div>
-
+    <!-- Teaser text -->
+    {% if content.field_teaser_text %}
+      <div class="normal-page__teaser-text">
+        {{ content.field_teaser_text }}
+      </div>
+    {% endif %}
+  </div>
 </article>

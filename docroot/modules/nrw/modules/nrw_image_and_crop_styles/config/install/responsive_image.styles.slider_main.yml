@@ -2,10 +2,14 @@ langcode: de
 status: true
 dependencies:
   config:
-    - image.style.slider_main_16_9
+    - image.style.slider_main_16_9_1280
+    - image.style.slider_main_16_9_480
+    - image.style.slider_main_16_9_960
   enforced:
     module:
       - nrw_image_and_crop_styles
+  module:
+    - nrw_image_and_crop_styles
 id: slider_main
 label: 'Slider main'
 image_style_mappings:
@@ -13,46 +17,46 @@ image_style_mappings:
     breakpoint_id: nrw_image_and_crop_styles.media.md
     multiplier: 1.5x
     image_mapping_type: image_style
-    image_mapping: slider_main_16_9
+    image_mapping: slider_main_16_9_1280
   -
     breakpoint_id: nrw_image_and_crop_styles.media.md
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: slider_main_16_9
+    image_mapping: slider_main_16_9_1280
   -
     breakpoint_id: nrw_image_and_crop_styles.media.md
     multiplier: 2x
     image_mapping_type: image_style
-    image_mapping: slider_main_16_9
+    image_mapping: slider_main_16_9_1280
   -
     breakpoint_id: nrw_image_and_crop_styles.media.sm
     multiplier: 1.5x
     image_mapping_type: image_style
-    image_mapping: slider_main_16_9
+    image_mapping: slider_main_16_9_960
   -
     breakpoint_id: nrw_image_and_crop_styles.media.sm
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: slider_main_16_9
+    image_mapping: slider_main_16_9_960
   -
     breakpoint_id: nrw_image_and_crop_styles.media.sm
     multiplier: 2x
     image_mapping_type: image_style
-    image_mapping: slider_main_16_9
+    image_mapping: slider_main_16_9_1280
   -
     breakpoint_id: nrw_image_and_crop_styles.media.xs
     multiplier: 1.5x
     image_mapping_type: image_style
-    image_mapping: slider_main_16_9
+    image_mapping: slider_main_16_9_480
   -
     breakpoint_id: nrw_image_and_crop_styles.media.xs
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: slider_main_16_9
+    image_mapping: slider_main_16_9_480
   -
     breakpoint_id: nrw_image_and_crop_styles.media.xs
     multiplier: 2x
     image_mapping_type: image_style
-    image_mapping: slider_main_16_9
+    image_mapping: slider_main_16_9_960
 breakpoint_group: nrw_image_and_crop_styles.media
-fallback_image_style: slider_main_16_9
+fallback_image_style: slider_main_16_9_960

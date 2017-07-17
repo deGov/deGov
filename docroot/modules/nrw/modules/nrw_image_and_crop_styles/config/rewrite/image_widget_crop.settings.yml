@@ -5,7 +5,7 @@ settings:
   crop_list:
     16_to_9: 16_to_9
     1_to_1: 1_to_1
-    2_zu_1: 2_zu_1
+    2_to_1: 2_to_1
     4_to_1: 4_to_1
     8_to_3: 8_to_3
   warn_multiple_usages: true

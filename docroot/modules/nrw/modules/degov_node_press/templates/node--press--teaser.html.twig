@@ -75,38 +75,31 @@
     'clearfix',
   ]
 %}
-
 <article{{ attributes.addClass(classes) }}>
-
-    <div class="press__teaser-image teaser-image col-xs-5 col-sm-4 col-md-3 arrow">
-        {% if content.field_teaser_image %}
-            <a href="{{ url }}" rel="bookmark">
-                {{ content.field_teaser_image }}
-            </a>
-        {% endif %}
-    </div>
-
-    <div class="press-page__teaser-content teaser-content col-xs-7 col-sm-8 col-md-9">
-        {% if content.field_press_date %}
-            <a href="{{ url }}" rel="bookmark">
-                <div class="press__teaser-date">
-                    {{ content.field_press_date }}
-                </div>
-            </a>
-        {% endif %}
-
-        {% if content.field_teaser_title %}
-            <div class="press__teaser-title teaser-title">
-                <h3>{{ content.field_teaser_title }}</h3>
-            </div>
-        {% endif %}
-
-        {% if content.field_teaser_text %}
-            <div class="press__teaser-text">
-                {{ content.field_teaser_text }}
-            </div>
-        {% endif %}
-
-    </div>
-
+  <div class="press__teaser-image teaser-image col-xs-5 col-sm-4 col-md-3 arrow">
+  {% if content.field_teaser_image %}
+    <a href="{{ url }}" rel="bookmark">
+        {{ content.field_teaser_image }}
+    </a>
+  {% endif %}
+  </div>
+  <div class="press-page__teaser-content teaser-content col-xs-7 col-sm-8 col-md-9">
+    {% if content.field_press_date %}
+      <a href="{{ url }}" rel="bookmark">
+        <div class="press__teaser-date">
+          {{ content.field_press_date }}
+        </div>
+      </a>
+    {% endif %}
+    {% if content.field_teaser_title %}
+      <div class="press__teaser-title teaser-title">
+        <h3>{{ content.field_teaser_title }}</h3>
+      </div>
+    {% endif %}
+    {% if content.field_teaser_text %}
+      <div class="press__teaser-text">
+        {{ content.field_teaser_text }}
+      </div>
+    {% endif %}
+  </div>
 </article>

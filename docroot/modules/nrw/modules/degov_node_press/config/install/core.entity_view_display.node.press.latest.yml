@@ -1,0 +1,47 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.latest
+    - field.field.node.press.field_content_paragraphs
+    - field.field.node.press.field_press_date
+    - field.field.node.press.field_sidebar_right_paragraphs
+    - field.field.node.press.field_teaser_image
+    - field.field.node.press.field_teaser_text
+    - field.field.node.press.field_teaser_title
+    - node.type.press
+  enforced:
+    module:
+      - degov_node_press
+  module:
+    - datetime
+    - user
+id: node.press.latest
+targetEntityType: node
+bundle: press
+mode: latest
+content:
+  field_press_date:
+    weight: 1
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_teaser_title:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  field_content_paragraphs: true
+  field_sidebar_right_paragraphs: true
+  field_teaser_image: true
+  field_teaser_text: true
+  langcode: true
+  links: true

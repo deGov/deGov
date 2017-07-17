@@ -1,0 +1,10 @@
+{
+  "name": "degov_rich_text_format_settings",
+  "type": "drupal-module",
+  "description": "Adds default configuration for rich text format.",
+  "license": "GPL-2.0+",
+  "homepage": "https://www.nrwgov.org",
+  "require": {
+    "drupal/linkit": "^4.3"
+  }
+}

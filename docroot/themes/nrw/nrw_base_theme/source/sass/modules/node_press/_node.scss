@@ -1,0 +1,11 @@
+.press{
+  .date{
+    background: $brand-primary;
+    color: white;
+    font-size: $font-size-h4;
+    font-weight: bold;
+    margin: 0 -1*($grid-gutter-width/2);
+    padding: $grid-gutter-width/4 $grid-gutter-width/2;
+    line-height: $font-size-h1;
+  }
+}

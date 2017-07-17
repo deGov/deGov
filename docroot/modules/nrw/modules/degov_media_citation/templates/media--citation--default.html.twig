@@ -12,9 +12,23 @@
  * @ingroup themeable
  */
 #}
+{% if media.field_citation_image.value %}
+  {% set classes = 'col-sm-6' %}
+{% else %}
+  {% set classes = 'col-sm-12' %}
+{% endif %}
+
 <article class="citation">
-  <div class="citation__text">{{ content.field_citation_text }}</div>
-  <div class="citation__title">{{ content.field_citation_title }}</div>
-  <div class="citation__date">{{ content.field_citation_date }}</div>
-  <div class="citation__image">{{ content.field_citation_image }}</div>
+  <div class="row">
+    <div class="citation__left {{ classes }}">
+      <div class="citation__text">{{ content.field_citation_text|field_value }}</div>
+      <div class="citation__title">{{ content.field_citation_title|field_value }}</div>
+      <div class="citation__date">{{ content.field_citation_date|field_value }}</div>
+    </div>
+    {% if media.field_citation_image.value %}
+    <div class="citation__right {{ classes }}">
+      <div class="citation__image">{{ content.field_citation_image }}</div>
+    </div>
+    {% endif %}
+  </div>
 </article>
