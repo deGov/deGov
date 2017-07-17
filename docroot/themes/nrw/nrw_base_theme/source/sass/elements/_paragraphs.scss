@@ -7,12 +7,14 @@
 
 .paragraph__header{
 	font-size: $font-size-h3;
-  	color: $brand-primary;
+  color: $brand-primary;
 	display: flex;
 	margin: 0 -20px;
 	padding: 20px;
 	background: $nrw-light;
-	word-break: break-all;
+	@include smaller-than($screen-xs-max){
+		word-break: break-all;
+	}
 	i{
 		color: $color-white;
 		background-color: $brand-primary;
@@ -44,8 +46,7 @@
 	&__text {
 		background: $brand-primary;
 		color: $color-white;
-		padding: 0 $grid-gutter-width/2;
-		padding-bottom: $padding-large-vertical;
+		padding: $padding-large-vertical $grid-gutter-width/2;
 		margin: 0 $grid-gutter-width/-2;
 		position: relative;
 		h1, h2, h3, h4, h5, h6 {

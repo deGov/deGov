@@ -15,20 +15,17 @@
     padding: $padding-xs-vertical*3 $padding-small-horizontal;
   }
   &__info {
-    & > div {
-      display: inline;
-      &:nth-child(2) {
-        &:before {
-          content: "/";
-          padding-left: $padding-xs-horizontal;
-        }
-      }
-    }
     @include clearfix;
-    background: $brand-primary;
     padding: $padding-base-vertical*3;
     font-size: $font-size-h6;
     text-align: right;
+    position: absolute;
+    bottom: $vertical-gutter-width*0.75; // to not cover controls
+    left: 0;
+    right: 0;
+    & > div {
+      display: inline;
+    }
   }
   &__caption,
   &__copyright {
@@ -37,6 +34,10 @@
     }
   }
   &__copyright {
+    &:before {
+      content: "/";
+      padding-left: $padding-xs-horizontal;
+    }
     @include larger-than($screen-sm-min){
       text-align: right;
     }
@@ -54,5 +55,13 @@
   .video__info,
   .video-upload__info {
     text-align: left;
+  }
+}
+
+// For teaser mode hide info
+.teaser {
+  .video__info,
+  .video-upload__info {
+    display: none;
   }
 }
