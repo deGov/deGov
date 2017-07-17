@@ -71,6 +71,13 @@
       font-weight: bold;
     }
   }
+  &__footer_menu{
+    @media (max-width: $screen-sm){
+      float: left;
+      padding: 0;
+      margin-top: $grid-gutter-width/4;
+    }
+  }
   &__menu{
     background: $nrw-secondary;
     padding: $padding-base-vertical*4 $padding-base-horizontal $padding-base-vertical*3;
@@ -166,6 +173,11 @@
             a{
               font-weight: bold;
             }
+          }
+          i{
+            transform: rotate(180deg);
+            border-left: 0px solid $color-white;
+            border-right: 1px solid $color-white;
           }
         }
        }

@@ -5,10 +5,10 @@ dependencies:
     module:
       - nrw_image_and_crop_styles
 label: '2 zu 1'
-id: 2_zu_1
+id: 2_to_1
 description: '2:1 Bildzuschnitt, z.B. für Teaser Landscape oder Teaser Topic'
 aspect_ratio: '2:1'
-soft_limit_width: 640
-soft_limit_height: 320
+soft_limit_width: 960
+soft_limit_height: 480
 hard_limit_width: null
 hard_limit_height: null

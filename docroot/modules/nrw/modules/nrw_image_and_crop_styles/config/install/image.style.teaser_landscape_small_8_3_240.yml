@@ -1,0 +1,22 @@
+langcode: de
+status: true
+dependencies:
+  module:
+    - crop
+name: teaser_landscape_small_8_3_240
+label: 'Teaser landscape small (8:3) 240'
+effects:
+  9e8232b9-f78e-42e9-8d4f-1e8635344567:
+    uuid: 9e8232b9-f78e-42e9-8d4f-1e8635344567
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: 8_to_3
+  aa11b06e-07e4-404d-b2a4-e73c4e1f62b3:
+    uuid: aa11b06e-07e4-404d-b2a4-e73c4e1f62b3
+    id: image_scale
+    weight: 2
+    data:
+      width: 240
+      height: null
+      upscale: true

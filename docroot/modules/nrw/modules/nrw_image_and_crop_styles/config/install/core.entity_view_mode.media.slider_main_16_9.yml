@@ -1,12 +1,12 @@
 langcode: de
 status: true
 dependencies:
-  module:
-    - lightning_core
-    - media_entity
   enforced:
     module:
       - nrw_image_and_crop_styles
+  module:
+    - lightning_core
+    - media_entity
 third_party_settings:
   lightning_core:
     description: ''

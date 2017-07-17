@@ -12,6 +12,7 @@
 	margin: 0 -20px;
 	padding: 20px;
 	background: $nrw-light;
+	word-break: break-all;
 	i{
 		color: $color-white;
 		background-color: $brand-primary;
@@ -60,13 +61,7 @@
 			margin-bottom: 0;
 		}
 		&:after{
-			width: 0;
-			height: 0;
-			border-left: 15px solid transparent;
-			border-right: 15px solid transparent;
-			border-top: 15px solid $brand-primary;
-			content: "";
-			position: absolute;
+			@include triangle-down;
 			bottom: -15px;
 			left: $grid-gutter-width/2;
 		}

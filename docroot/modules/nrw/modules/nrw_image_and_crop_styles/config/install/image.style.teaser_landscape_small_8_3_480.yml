@@ -1,0 +1,22 @@
+langcode: de
+status: true
+dependencies:
+  module:
+    - crop
+name: teaser_landscape_small_8_3_480
+label: 'Teaser landscape small (8:3) 480'
+effects:
+  1b13ea11-1741-48ad-adee-53f573f5df49:
+    uuid: 1b13ea11-1741-48ad-adee-53f573f5df49
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: 8_to_3
+  3b9934d8-8cbb-4a6c-a6c4-8b2b3f83f896:
+    uuid: 3b9934d8-8cbb-4a6c-a6c4-8b2b3f83f896
+    id: image_scale
+    weight: 2
+    data:
+      width: 480
+      height: null
+      upscale: true
