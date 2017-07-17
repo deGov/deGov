@@ -9,3 +9,61 @@
     line-height: $font-size-h1;
   }
 }
+
+
+// Press list view - Slick slider
+.press-list {
+  .press__latest_wrapper {
+    a {
+      text-decoration: none;
+      cursor: default;
+      &:focus,
+      &:active {
+        outline: none;
+      }
+    }
+  }
+  .press__teaser-date {
+    color: $text-color;
+    font-size: 12px;
+    font-family: "BentonSans-Regular";
+    time {
+      font-weight: normal;
+    }
+  }
+  .press__teaser-title {
+    color: $brand-primary;
+    font-size: 14px;
+    font-family: "BentonSans-Regular";
+    font-weight: bold;
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+  .view-content {
+    margin: 0 $padding-small-horizontal*-2;
+  }
+  .views-row {
+    padding: $padding-small-horizontal*2;
+  }
+  .view-footer {
+    a {
+      padding-right: 15px;
+      color: #3c506e;
+      font-family: "BentonSans-Regular";
+      font-size: 12px;
+      line-height: 12px;
+      font-weight: bold;
+      .fa {
+        padding-right: 5px;
+        line-height: 12px;
+        &:before {
+          display: inline-block;
+          margin: 0 0 1px;
+          vertical-align: text-bottom;
+        }
+      }
+    }
+  }
+}

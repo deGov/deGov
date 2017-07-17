@@ -147,7 +147,7 @@
   }
 }
 
-// Dots design
+// Styles for Dots
 .slick-dots {
   left: auto;
   right: 120px;
@@ -197,50 +197,63 @@
   }
 }
 
-// Slick Arrows
+// General styles for Slick Arrows
+.slick-arrow {
+  height: auto;
+  width: auto;
+  top: auto;
+  left: auto;
+  @media (max-width: $screen-sm-max) {
+    display: none !important;
+  }
+  &:before {
+    font-family: fontawesome;
+    color: $brand-primary;
+  }
+  &.slick-prev {
+    right: 25%;
+    margin-right: -$padding-small-horizontal*5;
+    &:before {
+      content: "\f104";
+    }
+    @media (max-width: $screen-md-max) {
+      right: 35%;
+    }
+  }
+  &.slick-next {
+    right: 20px;
+    &:before {
+      content: "\f105";
+    }
+  }
+}
+
+// Slider specific styles
 .slideshow {
   .slick-arrow {
-    top: auto;
-    right: 0;
     bottom: -45px;
-    left: auto;
     z-index: 10;
-    height: auto;
-    width: auto;
-    font-weight: 100;
-    @media (max-width: $screen-sm-max) {
-      display: none !important;
-    }
     &:before {
-      height: auto;
-      width: auto;
-      margin: 0 0;
-      opacity: 1;
-      color: $brand-primary;
       font-size: 88px;
       line-height: 88px;
-      font-weight: 100;
-      font-family: fontawesome;
-      text-shadow: none;
-      content: "\f105"; /* For next arrow */
+      margin: 0;
+      opacity: 1;
     }
-    &.slick-prev {
-      right: 25%;
-      margin-right: -$padding-small-horizontal*5;
-      &:before {
-        content: "\f104";
-      }
-      @media (max-width: $screen-md-max) {
-        right: 35%;
-      }
+  }
+}
+
+.press-list {
+  .slick-arrow {
+    top: -51px;
+    &:before {
+      font-size: $font-size-h1;
     }
-    &.slick-next {
-      &:before {
-        margin-right: $padding-small-horizontal*2;
-        margin-left: 0;
-        content: "\f105"; /* For next arrow */
-      }
-    }
+  }
+  .slick-dots {
+    top: -67px;
+    right: 20px;
+    bottom: auto;
+    max-width: 17%;
   }
 }
 
@@ -273,144 +286,3 @@
   right: $grid-gutter-width;
 }
 
-/* Press list - Slick slider */
-.press-list {
-  .view-content {
-    padding-top: $padding-large-vertical*2;
-    padding-bottom: $padding-large-vertical*2;
-    @media (max-width: $screen-sm-max) {
-      padding-bottom: $padding-large-vertical*4;
-    }
-  }
-  .press__latest_wrapper {
-    a {
-      text-decoration: none;
-      cursor: default;
-      &:focus,
-      &:active {
-        outline: none;
-      }
-    }
-  }
-  .press__teaser-date {
-    color: $text-color;
-    font-size: 12px;
-    font-family: "BentonSans-Regular";
-    time {
-      font-weight: normal;
-    }
-  }
-  .press__teaser-title {
-    color: $brand-primary;
-    font-size: 14px;
-    font-family: "BentonSans-Regular";
-    font-weight: bold;
-    &:hover {
-      text-decoration: underline;
-      cursor: pointer;
-    }
-  }
-  .view-footer {
-    a {
-      padding-right: 15px;
-      color: #3c506e;
-      font-family: "BentonSans-Regular";
-      font-size: 12px;
-      line-height: 12px;
-      font-weight: bold;
-      /*vertical-align: top;*/
-      .fa {
-        padding-right: 5px;
-        /*vertical-align: top;*/
-        line-height: 12px;
-        &:before {
-          display: inline-block;
-          margin: 0 0 1px;
-          vertical-align: text-bottom;
-        }
-      }
-    }
-  }
-
-  /* Arrow design */
-  .slick-arrow {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: auto;
-    z-index: 10;
-    height: auto;
-    width: auto;
-    border: none;
-    margin: -43px 20px 0;
-    padding: 0;
-    background-color: transparent;
-    font-weight: 100;
-    font-size: 0;
-    &:focus {
-      outline: none;
-    }
-    &:before {
-      margin: 0;
-      color: $brand-primary;
-      font-size: $font-size-h1 !important;
-      line-height: normal;
-      font-family: fontawesome;
-      text-shadow: none;
-      content: "\f105"; /* For next arrow */
-    }
-    &.slick-prev {
-      right: 130px;
-      &:before {
-        content: "\f104";
-      }
-    }
-    @media (max-width: $screen-sm-max) {
-      display: none !important;
-    }
-  }
-
-  /* Dots design */
-  .slick-dots {
-    position: absolute;
-    top: 0;
-    right: 0;
-    max-width: 130px;
-    width: 100%;
-    margin: -30px 27px 0 0;
-    padding-left: 0;
-    list-style: none;
-    text-align: center;
-    @media (max-width: $screen-sm-max) {
-      top: auto;
-      bottom: 0;
-      left: 0;
-      max-width: 100%;
-      text-align: center;
-      margin: 0;
-    }
-    li {
-      display: inline-block;
-      margin: 0 3px;
-      &.slick-active {
-        button {
-          background-color: $brand-primary;
-        }
-      }
-      button {
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-        padding: 0;
-        border: 2px solid $brand-primary;
-        background-color: transparent;
-        font-size: 0;
-        vertical-align: top;
-        border-radius: 1000px;
-        &:focus {
-          outline: none;
-        }
-      }
-    }
-  }
-}
