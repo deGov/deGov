@@ -7,11 +7,13 @@ dependencies:
   - crop
   - datetime
   - degov_content_types_shared_fields
+  - degov_taxonomy_term_tags
   - entity_browser
   - field
   - file
   - image
   - language
   - media_entity
+  - taxonomy
   - user
   - workbench_moderation
