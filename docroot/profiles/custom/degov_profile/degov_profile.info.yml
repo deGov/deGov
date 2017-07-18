@@ -33,3 +33,7 @@ themes:
 
 base profile:
   name: lightning
+  excluded_dependencies:
+    - lightning_landing_page
+    - lightning_layout
+    - lightning_page
