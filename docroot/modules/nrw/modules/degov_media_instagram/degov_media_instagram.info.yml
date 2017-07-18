@@ -1,0 +1,19 @@
+name: 'deGov - Media Instagram'
+description: 'Dieses Modul erweitert das Media Bundle Instagram.'
+package: deGov
+type: module
+core: 8.x
+dependencies:
+  - crop
+  - degov_content_types_shared_fields
+  - degov_taxonomy_term_tags
+  - entity_browser
+  - field
+  - image
+  - media_entity
+  - media_entity_instagram
+  - path
+  - taxonomy
+  - text
+  - user
+  - workbench_moderation
