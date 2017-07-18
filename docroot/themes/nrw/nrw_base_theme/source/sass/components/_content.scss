@@ -17,10 +17,10 @@ body{
 }
 h1, h2, h3, h4, h5, h6{
   font-family: $font-family-sans-serif;
-  
+
 }
 a{
-  color: $brand-primary;  
+  color: $brand-primary;
 }
 blockquote{
   border-color: $brand-primary;
@@ -83,4 +83,13 @@ table {
 
 .right{
   float: right;
+}
+
+.alert {
+  margin: $grid-gutter-width/-2;
+  margin-bottom: $grid-gutter-width/2;
+  border-radius: 0;
+  a {
+    color: inherit;
+  }
 }

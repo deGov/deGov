@@ -28,7 +28,6 @@
         "acquia/lightning": "~2.1.0",
         "drupal/config_rewrite": "^1.0",
         "drupal/admin_toolbar": "^1.19",
-        "drupal/elasticsearch_connector": "5.x-dev",
         "drupal/entity_reference_revisions": "^1.2",
         "drupal/open_readspeaker": "^1.3",
         "drupal/paragraphs": "^1.1",
@@ -126,6 +125,9 @@
       ],
       "post-update-cmd": [
         "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
+      ],
+      "coder": [
+        "./bin/phpcs --standard=vendor/drupal/coder/coder_sniffer/Drupal --colors --exclude=Drupal.Files.TxtFileLineLength"
       ]
     },
     "config": {

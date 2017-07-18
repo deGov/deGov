@@ -19,15 +19,8 @@ dependencies:
       - degov_node_blog
   module:
     - datetime
-    - panelizer
     - text
     - user
-third_party_settings:
-  panelizer:
-    enable: false
-    custom: false
-    allow: false
-    default: default
 id: node.blog.teaser
 targetEntityType: node
 bundle: blog

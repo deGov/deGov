@@ -4,6 +4,7 @@
     hyphens: auto;
     margin: -1*($grid-gutter-width/2);
     padding: $grid-gutter-width/2;
+    padding-top: 0;
     background-color: $brand-primary;
     color: $color-white;
     &__title{
