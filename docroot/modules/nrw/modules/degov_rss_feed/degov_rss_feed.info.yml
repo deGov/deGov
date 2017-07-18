@@ -1,0 +1,8 @@
+name: 'deGov - RSS Feed'
+description: 'RSS Feed aller Inhalte'
+type: module
+core: 8.x
+dependencies:
+  - node
+  - user
+  - views
