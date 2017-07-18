@@ -41,5 +41,10 @@
 
 <div class="paragraph header-image content-header">
   <div class="header-image__image content-header__media">{{ content.field_header_media }}</div>
-  <div class="header-image__text content-header__text">{{ content.field_header_text|field_value }}</div>
+  <div class="header-image__text content-header__text">
+    {{ content.field_header_text|field_value }}
+    {% if tags %}
+    <p>{{ tags }}</p>
+    {% endif %}
+  </div>
 </div>
