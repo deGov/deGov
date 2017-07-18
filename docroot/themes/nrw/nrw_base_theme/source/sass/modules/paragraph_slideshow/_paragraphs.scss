@@ -1,0 +1,101 @@
+.slideshow {
+  .paragraph-slideshow {
+    position: relative;
+    width: 100%;
+  }
+  .slick-list {
+    @media (max-width: $screen-sm-max) {
+      background-color: $nrw-primary;
+    }
+  }
+  .slick-track {
+    .slick-slide {
+      .slide__link {
+        max-height: 540px;
+        &:hover,
+        &:focus {
+          text-decoration: none;
+          outline: none;
+        }
+        @media (max-width: $screen-sm-max) {
+          max-height: none;
+        }
+      }
+      .slide__media {
+        position: relative;
+        z-index: 11;
+        float: left;
+        width: 75%;
+        .image {
+          margin: 0;
+        }
+        @media (max-width: $screen-md-max) {
+          width: 65%;
+        }
+        @media (max-width: $screen-sm-max) {
+          width: 100%;
+        }
+      }
+      .slide__text {
+        float: left;
+        max-height: 480px;
+        overflow: auto;
+        width: 25%;
+        margin-bottom: $vertical-gutter-width*1.5;
+        padding-top: $grid-gutter-width/2;
+        color: $brand-primary;
+        @media (max-width: $screen-md-max) {
+          max-height: 290px;
+          width: 35%;
+        }
+        @media (max-width: $screen-sm-max) {
+          max-height: none;
+          width: 100%;
+          margin-bottom: 0;
+        }
+        h2 {
+          margin: 0 0 12px;
+          line-height: normal;
+          font-family: $font-family-sans-serif;
+          font-weight: bold;
+        }
+        p {
+          font-size: $font-size-h6;
+          font-weight: normal;
+        }
+        .slide__text__sub {
+          padding-right: $padding-small-horizontal*2;
+          padding-left: $padding-small-horizontal*2;
+        }
+        @media (max-width: $screen-sm-max) {
+          color: $color-white;
+          .slide__text__sub {
+            padding: 22px 25px 70px;
+            .slide__text__sub {
+              padding-right: 0;
+              padding-left: 0;
+            }
+          }
+        }
+      }
+    }
+    .image__caption {
+      position: absolute;
+      display: none;
+    }
+    .image__copyright {
+      position: absolute;
+      display: none;
+    }
+  }
+  .slideshow__slides {
+    margin-bottom: 0;
+    .slide {
+      .slide__link {
+        display: inline-block;
+        width: 100%;
+        vertical-align: top;
+      }
+    }
+  }
+}

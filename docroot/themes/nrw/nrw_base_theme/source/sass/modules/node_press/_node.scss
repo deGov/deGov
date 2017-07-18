@@ -1,17 +1,17 @@
 .press{
   .date{
     background: $brand-primary;
-    color: white;
+    color: $color-white;
     font-size: $font-size-h4;
+    line-height: $font-size-h1;
     font-weight: bold;
     margin: 0 -1*($grid-gutter-width/2);
     padding: $grid-gutter-width/4 $grid-gutter-width/2;
-    line-height: $font-size-h1;
   }
 }
 
 
-// Press list view - Slick slider
+// Press list - slider view
 .press-list {
   .press__latest_wrapper {
     a {
@@ -25,16 +25,17 @@
   }
   .press__teaser-date {
     color: $text-color;
-    font-size: 12px;
-    font-family: "BentonSans-Regular";
+    font-size: $font-size-small;
+    font-family: $font-family-sans-serif;
     time {
       font-weight: normal;
     }
   }
   .press__teaser-title {
     color: $brand-primary;
-    font-size: 14px;
-    font-family: "BentonSans-Regular";
+    font-size: $font-size-h6;
+    line-height: 1.1;
+    font-family: $font-family-sans-serif;
     font-weight: bold;
     &:hover {
       text-decoration: underline;
@@ -46,18 +47,19 @@
   }
   .views-row {
     padding: $padding-small-horizontal*2;
+    padding-top: 0;
   }
   .view-footer {
     a {
-      padding-right: 15px;
-      color: #3c506e;
-      font-family: "BentonSans-Regular";
-      font-size: 12px;
-      line-height: 12px;
+      padding-right: $padding-base-horizontal;
+      color: $brand-primary;
+      font-family: $font-family-sans-serif;
+      font-size: $font-size-small;
+      line-height: 1;
       font-weight: bold;
       .fa {
-        padding-right: 5px;
-        line-height: 12px;
+        padding-right: $padding-xs-horizontal;
+        line-height: 1;
         &:before {
           display: inline-block;
           margin: 0 0 1px;
