@@ -19,16 +19,24 @@
   }
 
   .odd {
-
     .teaser-image {
       float: left;
+    }
+    .arrow:after {
+      @include triangle-left($color-white);
+      top: $vertical-gutter-width/2;
+      right: 0;
     }
   }
 
   .even {
-
     .teaser-image {
       float: right;
+    }
+    .arrow:after {
+      @include triangle-right($color-white);
+      top: $vertical-gutter-width/2;
+      left: 0;
     }
   }
 }
