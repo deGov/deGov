@@ -37,7 +37,8 @@
         "drupal/spamspan": "1.x-dev",
         "drupal/ultimate_cron": "^2.0@alpha",
         "drupal/viewsreference": "^1.0@alpha",
-        "drupal/webform": "^5.0@beta"
+        "drupal/webform": "^5.0@beta",
+        "drupal/shariff": "^1.0"
     },
     "repositories": {
         "drupal": {
@@ -115,6 +116,18 @@
                     "url": "git@bitbucket.org:publicplan/degov_nrw_theme",
                     "type": "git",
                     "reference": "origin/master"
+                }
+            }
+        },
+        "shariff": {
+            "type": "package",
+            "package": {
+                "name": "heiseonline/shariff",
+                "version": "master",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/heiseonline/shariff/archive/master.zip",
+                    "type": "zip"
                 }
             }
         }
