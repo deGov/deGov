@@ -9,13 +9,13 @@ function degov_media_caption_helper_preprocess(&$variables, $hook) {
     if (!empty($variables['elements']['#media']->_referringItem)) {
       $type = $variables['elements']['#media']->bundle();
       // we only preprocess here image and video media entities
-      if (!in_array($type, ['image', 'video'])) {
+      if (!in_array($type, ['image', 'video', 'video_upload'])) {
         return;
       }
       // preprocess field
-      $caption_field = 'field_image_caption';
-      if ($type == 'video') {
-        $caption_field = 'field_video_caption';
+      $caption_field = 'field_video_caption';
+      if ($type == 'image') {
+        $caption_field = 'field_image_caption';
       }
       // add url contexts to cache
       $variables['#cache']['contexts'][] = 'url.path';
