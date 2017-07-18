@@ -30,5 +30,8 @@
       <div class="citation__image">{{ content.field_citation_image }}</div>
     </div>
     {% endif %}
+    {% if content.field_tags|render %}
+      {{ content.field_tags }}
+    {% endif %}
   </div>
 </article>
