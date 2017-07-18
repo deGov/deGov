@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.field.paragraph.image_header.field_header_media
     - field.field.paragraph.image_header.field_header_text
+    - field.field.paragraph.image_header.field_override_caption
     - paragraphs.paragraphs_type.image_header
   enforced:
     module:
@@ -16,7 +17,7 @@ bundle: image_header
 mode: default
 content:
   field_header_media:
-    weight: 2
+    weight: 0
     label: hidden
     settings:
       view_mode: default
@@ -25,10 +26,18 @@ content:
     type: entity_reference_entity_view
     region: content
   field_header_text:
-    weight: 3
+    weight: 1
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
+  field_override_caption:
+    type: string
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
 hidden: {  }

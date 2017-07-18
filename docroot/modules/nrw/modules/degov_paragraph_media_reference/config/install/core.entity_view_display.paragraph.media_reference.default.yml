@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.media_reference.field_media_reference_media
+    - field.field.paragraph.media_reference.field_override_caption
     - field.field.paragraph.media_reference.field_sub_title
     - field.field.paragraph.media_reference.field_title
     - paragraphs.paragraphs_type.media_reference
@@ -23,6 +24,14 @@ content:
     third_party_settings: {  }
     type: entity_reference_entity_view
     region: content
+  field_override_caption:
+    type: string
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
   field_sub_title:
     weight: 1
     label: hidden

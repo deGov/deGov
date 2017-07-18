@@ -1,0 +1,5 @@
+name: 'Media Caption Helper'
+description: 'NRW Bildunterschrift übersteuern'
+type: module
+package: deGov
+core: 8.x
