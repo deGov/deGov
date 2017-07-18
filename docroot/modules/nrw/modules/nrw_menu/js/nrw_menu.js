@@ -5,37 +5,37 @@
  */
 (function ($, Drupal) {
 
-    'use strict';
+  'use strict';
 
-    /**
-     * Collapsible/Expandable menu behaviour
-     */
-    Drupal.behaviors.nrw_menu = {
-        attach: function (context, settings) {
-            // do nothing if there is no menu__header on the page
-            if ($('.nrw-menu__header', context).length == 0) {
-                return;
-            }
-            // on click add the class to siblings
-            $('.nrw-menu-header__col .nrw-menu__header', context).click(function (e) {
-                e.preventDefault();
-                // remove the class from all the content containers in the menu
-                // add the class only to the sibling of the active menu__header                
-                var parent = $(this).closest('.nrw-menu-header__col');
-                if( $(this).siblings('.nrw-menu-header__content').hasClass( "is-expanded" ) ){
-                    $(this).parent().removeClass('is-open');
-                    $(this).siblings('.nrw-menu-header__content').removeClass("is-expanded");
-                }else {
-                    $('.nrw-menu-header__col').removeClass('is-open');
-                    $('.nrw-menu-header__content').removeClass("is-expanded");
-                    $(this).parent().addClass('is-open');
-                    $(this).siblings('.nrw-menu-header__content').addClass("is-expanded");
-                }                
-            });
-            $('.nrw-menu__content-close a', context).click(function (e) {
-                $(this).parent().parent().parent().removeClass('is-expanded');
-            });
+  /**
+   * Collapsible/Expandable menu behaviour
+   */
+  Drupal.behaviors.nrw_menu = {
+    attach: function (context, settings) {
+      // do nothing if there is no menu__header on the page
+      if ($('.nrw-menu__header', context).length == 0) {
+        return;
+      }
+      // on click add the class to siblings
+      $('.nrw-menu-header__col .nrw-menu__header', context).click(function (e) {
+        e.preventDefault();
+        // remove the class from all the content containers in the menu
+        // add the class only to the sibling of the active menu__header
+        var parent = $(this).closest('.nrw-menu-header__col');
+        if ($(this).siblings('.nrw-menu-header__content').hasClass("is-expanded")) {
+          $(this).parent().removeClass('is-open');
+          $(this).siblings('.nrw-menu-header__content').removeClass("is-expanded");
+        } else {
+          $('.nrw-menu-header__col').removeClass('is-open');
+          $('.nrw-menu-header__content').removeClass("is-expanded");
+          $(this).parent().addClass('is-open');
+          $(this).siblings('.nrw-menu-header__content').addClass("is-expanded");
         }
+      });
+      $('.nrw-menu__content-close a', context).click(function (e) {
+        $(this).parent().parent().parent().removeClass('is-expanded');
+      });
     }
+  }
 
 })(jQuery, Drupal);
