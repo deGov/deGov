@@ -1,0 +1,12 @@
+$image-caption-size: 10px;
+
+.image__caption,
+.image__copyright {
+  font-size: $image-caption-size;
+  font-weight: normal;
+  padding: $grid-gutter-width/8;
+}
+
+.image__caption {
+  float: left;
+}
