@@ -144,6 +144,9 @@
     width: 100%;
     background: $color-white;
     margin-bottom: -1*($padding-base-vertical + 2 );
+    @media(max-width: 720px){
+      display: none;
+    }
   }
   &__icon{
     text-decoration: none;
@@ -211,6 +214,9 @@
     -webkit-flex-flow: row wrap;
     justify-content: flex-start;
     background-color: $nrw-secondary;
+    @media(max-width: 720px){
+      display: none;
+    }
     a{
       color: $color-white;
     }
@@ -385,5 +391,98 @@
     &:before {
       color: $gray;
     }
+  }
+}
+
+.nrw-menu-header-responsive{
+  display: none;
+  padding: 0 $grid-gutter-width/2;
+  &__list{
+    list-style: none;
+    display: none;
+    &.is-open{
+      display: block;
+    }
+  }
+  i{
+    font-weight: normal;
+  }
+  &__title, &__list{
+      font-size: $font-size-small;
+      vertical-align: text-top;
+      line-height: $font-size-h2 + 6;
+      text-transform: uppercase;
+      i.is-open{
+        transform: rotate(180deg);
+      }
+  }
+  &__block-title{
+    font-size: $font-size-h2;
+    text-transform: uppercase;
+    span{
+      font-size: $font-size-small;
+      vertical-align: text-top;
+      line-height: $font-size-h2 + 6;
+    }
+  }
+  &__list{
+    i{
+      margin-right: $grid-gutter-width/8;
+    }
+  }
+  &__block{
+    padding: 0 $grid-gutter-width/2;
+  }
+  &__block-title, &__title{
+    padding-bottom: 1px;
+    border-bottom: 1px solid $color-white;
+    line-height: $font-size-h1;
+  }
+  &__content {
+    padding-left: $grid-gutter-width/2.85;
+    &.is-close{
+      display: none;
+    }
+    a{
+      i{
+        margin-right: $grid-gutter-width/8;
+      }
+    }
+  }
+  .action{
+    display: block;
+    float: right;
+    padding: $padding-base-vertical*2 $padding-base-horizontal;
+    
+    cursor: pointer;
+  }
+  &.is-open{
+    display: block;
+  }
+}
+
+.header__menu-icon{
+  display: none;
+  @media(max-width: 720px){
+    display: block;
+  }
+  i{
+    display: block;
+    font-size: $font-size-h2 + 5;
+    padding: $grid-gutter-width/4 - 3;
+    margin: $grid-gutter-width/2 $grid-gutter-width/2 0 $grid-gutter-width/2;
+    background: $brand-primary;
+    color: $color-white;
+    width: 38px;
+  }
+  span{
+    display: inline-block;
+    margin: 0 $grid-gutter-width/2;
+    width: 38px;
+    text-align: center;
+    font-size: $font-size-small;
+    text-transform: uppercase;
+    font-weight: bold;
+
   }
 }

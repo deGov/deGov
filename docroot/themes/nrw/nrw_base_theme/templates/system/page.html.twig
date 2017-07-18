@@ -62,29 +62,35 @@
 {# Navbar #}
 <div class="header-wrapper">
   <header class="header {{ container }}">
+    <div class="row">
 
-  {# TODO: select the correct language for select the template #}
-  {# TODO: create template for other templates #}
+    {# TODO: select the correct language for select the template #}
+    {# TODO: create template for other templates #}
 
-    {% include 'header-intro.html.twig' %}
-    <div class="header__branding">
-        <a href="{{ url('<front>') }}">
-          <div class="col-md-6 header__title">
-              <span>WIR IN NRW</span>
-              DAS LANDESPORTAL
-          </div>
-        </a>
-        <div class="col-md-6 header__logo">
-            <div class="image">
-                <a href="{{ url('<front>') }}"><img src="{{ base_path ~ directory }}/source/images/logo.png"></a>
+      {% include 'header-intro.html.twig' %}
+      <div class="header__branding">
+          <a href="{{ url('<front>') }}">
+            <div class="col-md-6 header__title">
+                <span>WIR IN NRW</span>
+                DAS LANDESPORTAL
             </div>
-        </div>
+          </a>
+          <div class="col-xs-6 header__menu-icon">
+              <i class="fa fa-bars" aria-hidden="true"></i>
+              <span>{% trans %}Menü{% endtrans %}
+          </div>
+          <div class="col-md-6 header__logo">
+              <div class="image">
+                  <a href="{{ url('<front>') }}"><img src="{{ base_path ~ directory }}/source/images/logo.png"></a>
+              </div>
+          </div>
+      </div>
+      {# please Vivek inlude your template here. like the next. #}
+      <div class="header__menu">
+        {{ page_header_menu }}
+      </div>
+      {# include 'header.html.twig' #}
     </div>
-    {# please Vivek inlude your template here. like the next. #}
-     <div class="header__menu">
-      {{ page_header_menu }}
-     </div>
-    {# include 'header.html.twig' #}
   </header>
 
 
@@ -126,19 +132,6 @@
         %}
         <section{{ content_attributes.addClass(content_classes) }}>
 
-          {# Action Links #}
-          {% if action_links %}
-            {% block action_links %}
-              <ul class="action-links">{{ action_links }}</ul>
-            {% endblock %}
-          {% endif %}
-
-          {# Help #}
-          {% if page.help|render|striptags|trim %}
-            {% block help %}
-              {{ page.help }}
-            {% endblock %}
-          {% endif %}
 
           {# Content #}
           {% block content %}
@@ -164,13 +157,6 @@
 {% block footer %}
   {% include 'footer.html.twig' %}
 {% endblock %}
-
-
-  <div class="page-outro-wrapper">
-    <div class="page-outro container">
-
-    </div>
-  </div>
 
 
 <!-- Back to top -->
