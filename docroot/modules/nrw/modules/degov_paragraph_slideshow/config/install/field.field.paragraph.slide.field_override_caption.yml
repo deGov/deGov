@@ -1,0 +1,18 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_override_caption
+    - paragraphs.paragraphs_type.slide
+id: paragraph.slide.field_override_caption
+field_name: field_override_caption
+entity_type: paragraph
+bundle: slide
+label: Bildunterschrift
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
