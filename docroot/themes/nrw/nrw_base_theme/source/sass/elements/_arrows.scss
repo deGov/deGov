@@ -1,0 +1,22 @@
+$arrow-width: 20px;
+
+.arrow {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: $line-height-computed;
+    border: solid $arrow-width transparent;
+  }
+}
+
+.odd .arrow:after {
+  right: 0;
+  border-right-color: $color-white;
+}
+
+.even .arrow:after {
+  left: 0;
+  border-left-color: $color-white;
+}

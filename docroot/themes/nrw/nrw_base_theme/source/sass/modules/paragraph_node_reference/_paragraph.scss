@@ -1,8 +1,34 @@
 .node-reference {
-  .even,
+
+  .teaser {
+    border-bottom: 1px solid $gray-light;
+  }
+
+  .paragraph__content {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .teaser-content {
+    padding: $grid-gutter-width/2;
+  }
+
+  .teaser-title h3 {
+    margin-top: 0;
+    font-weight: bold;
+  }
+
   .odd {
-    padding-bottom: $padding-base-vertical*3;
-    &:last-child
-    { padding-bottom: 0; }
+
+    .teaser-image {
+      float: left;
+    }
+  }
+
+  .even {
+
+    .teaser-image {
+      float: right;
+    }
   }
 }
