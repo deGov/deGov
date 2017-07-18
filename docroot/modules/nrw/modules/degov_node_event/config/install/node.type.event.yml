@@ -8,9 +8,8 @@ dependencies:
     - menu_ui
 third_party_settings:
   menu_ui:
-    available_menus:
-      - main
-    parent: 'main:'
+    available_menus: {  }
+    parent: ''
 name: Veranstaltung
 type: event
 description: 'Erstellen von Veranstaltungen / Events, die in einzeln, in einem Kalender und in Aggregationen angezeigt werden können.'

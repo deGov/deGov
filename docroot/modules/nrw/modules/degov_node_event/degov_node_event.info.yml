@@ -6,7 +6,9 @@ core: 8.x
 dependencies:
   - address
   - datetime
+  - date_popup
   - degov_content_types_shared_fields
+  - degov_taxonomy_term_tags
   - entity_browser
   - entity_reference_revisions
   - field
@@ -16,6 +18,9 @@ dependencies:
   - paragraphs
   - path
   - pathauto
+  - taxonomy
   - text
   - user
+  - views
   - workbench_moderation
+  - views

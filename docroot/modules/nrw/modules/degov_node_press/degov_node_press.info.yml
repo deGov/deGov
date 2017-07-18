@@ -7,14 +7,17 @@ dependencies:
   - block
   - datetime
   - degov_content_types_shared_fields
+  - degov_taxonomy_term_tags
   - entity_browser
   - entity_reference_revisions
   - field
   - language
+  - lightning_core
   - menu_ui
   - node
   - paragraphs
   - path
+  - taxonomy
   - text
   - user
   - views

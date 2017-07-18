@@ -13,12 +13,6 @@
  */
 #}
 <article class="media media-person">
-  <div class="row">
-    <div class="col-md-12 media-person__image-wrapper">
-      <div class="media-person__image">{{ content.field_person_image }}</div>
-    </div>
-    <div class="col-md-12 media-person__info-wrapper">
-      <div class="media-person__info">{{ content.field_person_info|field_value }}</div>
-    </div>
-  </div>
+  <div class="media-person__image">{{ content.field_person_image }}</div>
+  <div class="media-person__info">{{ content.field_person_info|field_value }}</div>
 </article>

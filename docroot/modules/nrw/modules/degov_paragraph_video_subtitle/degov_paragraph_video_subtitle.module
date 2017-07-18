@@ -1,6 +1,8 @@
 <?php
 
 use Drupal\degov_content_types_shared_fields\Common;
+use Drupal\Core\Entity\ContentEntityInterface;
+use Drupal\field\Entity\FieldStorageConfig;
 
 /**
  * Implements hook_preprocess().
@@ -51,4 +53,30 @@ function degov_paragraph_video_subtitle_preprocess_paragraph__video_subtitle(&$v
   }
 
   $variables['attributes'] = $attributes;
+}
+
+/**
+ * Gets the allowed values for the field_subtitle_lang field.
+ *
+ * @param \Drupal\field\Entity\FieldStorageConfig $definition
+ *   The field definition.
+ *
+ * @param \Drupal\Core\Entity\ContentEntityInterface|NULL $entity
+ *   The entity being created or updated.
+ *
+ * @param $cacheable
+ *   Whether or not the results are cacheable.
+ *
+ * @return array
+ *   An array of allowed values.
+ */
+function getLanguageList(FieldStorageConfig $definition, ContentEntityInterface $entity = NULL, $cacheable) {
+  $options = [];
+  $languages = \Drupal::languageManager()->getLanguages();
+
+  foreach ($languages as $language) {
+    $options[$language->getId()] = $language->getName();
+  }
+
+  return $options;
 }
