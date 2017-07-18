@@ -37,3 +37,4 @@ base profile:
     - lightning_landing_page
     - lightning_layout
     - lightning_page
+    - lightning_contact_form
