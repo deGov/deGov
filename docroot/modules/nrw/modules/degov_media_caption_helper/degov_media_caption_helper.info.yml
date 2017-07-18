@@ -1,5 +1,5 @@
-name: Media Caption Helper
-description: Preprocess media caption according to data from referencing entity
+name: 'Media Caption Helper'
+description: 'NRW Bildunterschrift übersteuern'
 type: module
 package: deGov
 core: 8.x
