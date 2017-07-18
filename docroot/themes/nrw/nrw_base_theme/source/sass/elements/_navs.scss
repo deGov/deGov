@@ -333,6 +333,7 @@
   top: 5em;
   right: 0.5em;
   border: none;
+  z-index: 10000;
   li {
     float: none;
     margin: $padding-large-vertical 0;
