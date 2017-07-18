@@ -1,10 +1,11 @@
 name: 'deGov - Paragraph Media Reference'
-description: "Mit diesem Paragraphen können Medienelemente eingebettet werden."
+description: 'Mit diesem Paragraphen können Medienelemente eingebettet werden.'
 type: module
 core: 8.x
 package: deGov
 dependencies:
   - degov_content_types_shared_fields
+  - entity_browser
   - field
   - media_entity
   - paragraphs
