@@ -1,0 +1,54 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.node_reference.field_node_reference_nodes
+    - field.field.paragraph.node_reference.field_node_reference_viewmode
+    - field.field.paragraph.node_reference.field_sub_title
+    - field.field.paragraph.node_reference.field_title
+    - paragraphs.paragraphs_type.node_reference
+  enforced:
+    module:
+      - degov_paragraph_node_reference
+  module:
+    - workbench_moderation
+id: paragraph.node_reference.default
+targetEntityType: paragraph
+bundle: node_reference
+mode: default
+content:
+  field_node_reference_nodes:
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_node_reference_viewmode:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_sub_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

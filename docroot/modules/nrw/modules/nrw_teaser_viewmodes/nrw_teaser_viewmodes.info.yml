@@ -1,0 +1,15 @@
+name: 'NRW - Teaser View Modes'
+type: module
+core: 8.x
+dependencies:
+  - entity_reference_display
+  - field
+  - lightning_core
+  - node
+  - options
+  - panelizer
+  - paragraphs
+  - text
+  - user
+  - views
+  - workbench_moderation
