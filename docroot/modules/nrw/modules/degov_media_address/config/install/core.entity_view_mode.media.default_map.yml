@@ -1,0 +1,13 @@
+langcode: de
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - media_entity
+third_party_settings:
+  lightning_core:
+    description: ''
+id: media.default_map
+label: 'Default Map'
+targetEntityType: media
+cache: true
