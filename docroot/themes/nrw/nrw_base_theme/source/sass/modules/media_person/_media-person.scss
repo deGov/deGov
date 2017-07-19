@@ -1,0 +1,21 @@
+.media-person {
+  padding: $grid-gutter-width/2;
+  color: $color-white;
+  background: $brand-primary;
+  margin-left: $grid-gutter-width/-2;
+  margin-right: $grid-gutter-width/-2;
+  border: 1px solid $nrw-light;
+  border-right: none;
+  &__image {
+    float: left;
+    width: 50%;
+    padding-right: $grid-gutter-width/2;
+    margin: -1*($grid-gutter-width/2);
+  }
+  .image {
+    margin: 0;
+    &__info {
+      display: none;
+    }
+  }
+}
