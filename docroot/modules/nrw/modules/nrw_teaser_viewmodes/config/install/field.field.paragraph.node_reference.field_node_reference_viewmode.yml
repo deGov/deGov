@@ -1,0 +1,36 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_node_reference_viewmode
+    - paragraphs.paragraphs_type.node_reference
+  module:
+    - entity_reference_display
+id: paragraph.node_reference.field_node_reference_viewmode
+field_name: field_node_reference_viewmode
+entity_type: paragraph
+bundle: node_reference
+label: 'Viewmode der Teaser'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  exclude:
+    embedded: embedded
+    compact: compact
+    latest: latest
+    rss: rss
+    slider_main_16_9: slider_main_16_9
+    search_result: search_result
+    search_index: search_index
+    teaser_landscape_2_1: teaser_landscape_2_1
+    teaser_landscape_small_8_3: teaser_landscape_small_8_3
+    teaser_opinion_4_1: teaser_opinion_4_1
+    teaser_squared_1_1: teaser_squared_1_1
+    token: token
+    diff: diff
+    full: full
+    thumbnail: thumbnail
+field_type: entity_reference_display
