@@ -1,0 +1,6 @@
+.region-navigation > .block-social-media-links {
+	display: none;
+  @include larger-than($screen-sm-min) {
+    display: inline-block;
+  }
+}

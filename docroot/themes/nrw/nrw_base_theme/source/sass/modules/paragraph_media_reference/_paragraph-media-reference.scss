@@ -1,0 +1,13 @@
+.media-reference {
+  .paragraph__content  {
+    padding-top: 0;
+    padding-bottom: 0;
+    article.address,
+    .document,
+    .media-tweet,
+    .media-instagram {
+      padding-top: $vertical-gutter-width/2;
+      padding-bottom: $vertical-gutter-width/2;
+    }
+  }
+}
