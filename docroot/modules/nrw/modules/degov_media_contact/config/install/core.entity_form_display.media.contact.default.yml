@@ -6,6 +6,7 @@ dependencies:
     - field.field.media.contact.field_contact_email
     - field.field.media.contact.field_contact_fax
     - field.field.media.contact.field_contact_image
+    - field.field.media.contact.field_contact_position
     - field.field.media.contact.field_contact_tel
     - field.field.media.contact.field_contact_title
     - field.field.media.contact.field_media_in_library
@@ -58,6 +59,14 @@ content:
       open: true
     region: content
     third_party_settings: {  }
+  field_contact_position:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_contact_tel:
     weight: 6
     settings:

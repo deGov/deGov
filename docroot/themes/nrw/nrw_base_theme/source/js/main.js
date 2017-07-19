@@ -224,21 +224,37 @@ const PhotoSwipeUiDefault = require('photoswipe/dist/photoswipe-ui-default');
   };
 
   // Slick slider in press list
-  $('.view-latest-press .view-content').slick({
-    dots: true,
-    infinite: false,
-    speed: 300,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    responsive: [
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  });
+  Drupal.behaviors.slickPress = {
+    attach: function (context, settings) { 
+      $('.view-latest-press .view-content').slick({
+        dots: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        responsive: [
+          {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+    }
+  };
+
+  // Check heigh of image in contact person
+
+  Drupal.behaviors.contactHeight = {
+    attach: function (context, settings) {
+      $('.region-content .media-contact').once('check-height').each(function () {
+        const height = $(this).find('.media-contact__image-wrapper').height();
+        console.info(height);        
+        $(this).find('.media-contact__info').css('height', height + 'px');
+      });
+    }
+  };
 
 })(jQuery, window.Drupal);
