@@ -11,6 +11,6 @@ function degov_node_blog_preprocess(&$variables, $hook, &$info) {
     'module_name' => 'degov_node_blog',
     'entity_type' => 'node',
     'entity_bundles' => ['blog'],
-    'entity_view_modes' => ['teaser']
+      'entity_view_modes' => ['teaser', 'slim', 'long_text', 'small_image', 'preview']
   ]);
 }
