@@ -7,6 +7,7 @@
   "require": {
     "drupal/address": "^1.0",
     "drupal/styled_google_map": "^1.2",
-    "drupal/system_stream_wrapper": "^1.0-alpha2"
+    "drupal/system_stream_wrapper": "^1.0-alpha2",
+    "drupal/geocoder": "^2.0-alpha5"
   }
 }

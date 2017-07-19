@@ -8,6 +8,10 @@ dependencies:
   - crop
   - degov_content_types_shared_fields
   - field
+  - geocoder
+  - geocoder_address
+  - geocoder_field
+  - geocoder_geofield
   - geofield
   - language
   - media_entity
