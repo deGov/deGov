@@ -1,7 +1,11 @@
 .node-reference {
 
-  .teaser {
+  .row > article {
     border-bottom: 1px solid $gray-light;
+
+    &.small-image {
+      padding-left: $grid-gutter-width/2;
+    }
   }
 
   .paragraph__content {
@@ -18,7 +22,8 @@
     font-weight: bold;
   }
 
-  .odd {
+  .odd,
+  .even .small-image {
     .teaser-image {
       float: left;
     }
@@ -38,5 +43,9 @@
       top: $vertical-gutter-width/2;
       left: 0;
     }
+  }
+
+  .small-image .teaser-image {
+    margin: $grid-gutter-width/2 0;
   }
 }
