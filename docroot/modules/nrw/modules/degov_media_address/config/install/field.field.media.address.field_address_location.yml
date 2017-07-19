@@ -1,0 +1,23 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_address_location
+    - media_entity.bundle.address
+  enforced:
+    module:
+      - degov_media_address
+  module:
+    - geofield
+id: media.address.field_address_location
+field_name: field_address_location
+entity_type: media
+bundle: address
+label: Location
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geofield

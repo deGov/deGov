@@ -8,8 +8,11 @@ dependencies:
   - crop
   - degov_content_types_shared_fields
   - field
+  - geofield
   - language
   - media_entity
   - path
   - spamspan
+  - styled_google_map
+  - system_stream_wrapper
   - workbench_moderation
