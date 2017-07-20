@@ -2,44 +2,31 @@ langcode: de
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.webformular.field_sub_title
     - field.field.paragraph.webformular.field_title
     - field.field.paragraph.webformular.field_webform_form
     - paragraphs.paragraphs_type.webformular
-  module:
-    - webform
-    - workbench_moderation
-id: paragraph.webformular.default
+id: paragraph.webformular.preview
 targetEntityType: paragraph
 bundle: webformular
-mode: default
+mode: preview
 content:
   field_sub_title:
     weight: 1
+    label: hidden
     settings:
-      size: 60
-      placeholder: ''
+      link_to_entity: false
     third_party_settings: {  }
-    type: string_textfield
+    type: string
     region: content
   field_title:
     weight: 0
+    label: hidden
     settings:
-      size: 60
-      placeholder: ''
+      link_to_entity: false
     third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_webform_form:
-    weight: 2
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: webform_entity_reference_autocomplete
+    type: string
     region: content
 hidden:
-  created: true
-  status: true
-  uid: true
+  field_webform_form: true
