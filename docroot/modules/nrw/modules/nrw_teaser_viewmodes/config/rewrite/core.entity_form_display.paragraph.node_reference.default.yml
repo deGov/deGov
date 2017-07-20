@@ -2,7 +2,6 @@ langcode: de
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.node_reference.field_node_reference_nodes
     - field.field.paragraph.node_reference.field_node_reference_viewmode
     - field.field.paragraph.node_reference.field_sub_title
@@ -12,42 +11,44 @@ dependencies:
     module:
       - degov_paragraph_node_reference
   module:
-    - options
-id: paragraph.node_reference.preview
+    - workbench_moderation
+id: paragraph.node_reference.default
 targetEntityType: paragraph
 bundle: node_reference
-mode: preview
+mode: default
 content:
   field_node_reference_nodes:
-    weight: 2
-    label: hidden
+    weight: 3
     settings:
-      view_mode: teaser
-      link: false
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_entity_view
+    type: entity_reference_autocomplete
     region: content
   field_node_reference_viewmode:
-    weight: 3
-    label: above
+    type: options_select
+    weight: 2
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: list_default
-    region: content
   field_sub_title:
     weight: 1
-    label: hidden
     settings:
-      link_to_entity: false
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: string
+    type: string_textfield
     region: content
   field_title:
     weight: 0
-    label: hidden
     settings:
-      link_to_entity: false
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: string
+    type: string_textfield
     region: content
-hidden: {  }
+hidden:
+  created: true
+  status: true
+  uid: true
