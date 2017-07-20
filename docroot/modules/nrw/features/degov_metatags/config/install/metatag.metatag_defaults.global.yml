@@ -1,6 +1,8 @@
 langcode: de
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - metatags
 id: global
 label: Global
 tags:
