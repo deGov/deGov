@@ -12,6 +12,7 @@ dependencies:
     - field.field.media.image.field_image_title
     - field.field.media.image.field_image_width
     - field.field.media.image.field_media_in_library
+    - field.field.media.image.field_tags
     - media_entity.bundle.image
   module:
     - workbench_moderation
@@ -22,20 +23,29 @@ mode: media_browser
 content:
   field_media_in_library:
     type: boolean_checkbox
-    weight: 4
+    weight: 5
     settings:
       display_label: true
     third_party_settings: {  }
     region: content
+  field_tags:
+    type: entity_reference_autocomplete
+    weight: 4
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 2
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }
   name:
     type: string_textfield
-    weight: 3
+    weight: 2
     settings:
       size: 60
       placeholder: ''

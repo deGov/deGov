@@ -8,6 +8,8 @@ dependencies:
   - file
   - media_entity
   - media_entity_document
+  - taxonomy
   - workbench_moderation
   - config_rewrite
   - degov_content_types_shared_fields
+  - degov_taxonomy_term_tags

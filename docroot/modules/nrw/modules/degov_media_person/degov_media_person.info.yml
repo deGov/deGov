@@ -5,11 +5,13 @@ type: module
 core: 8.x
 dependencies:
   - crop
+  - degov_taxonomy_term_tags
   - entity_browser
   - field
   - image
   - media_entity
   - path
+  - taxonomy
   - text
   - user
   - workbench_moderation
