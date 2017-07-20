@@ -1,0 +1,18 @@
+.media-gallery__images {
+  position: relative;
+}
+.slick-controls.slick-controls__gallery {
+  text-align: right;
+  position: relative;
+  display: block;
+  bottom: auto;
+  margin-top: 10px;
+}
+
+.slick-controls__gallery .slick__pause.slick__pause--gallery{
+  display: none;
+}
+
+.slick-controls__gallery .slick__play.slick__play--gallery {
+  display: inline-block;
+}

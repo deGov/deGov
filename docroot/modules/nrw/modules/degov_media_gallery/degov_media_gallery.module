@@ -20,3 +20,19 @@ function degov_media_gallery_preprocess(&$variables, $hook, &$info) {
     'entity_view_modes' => [],
   ]);
 }
+
+/**
+ * Implements hook_preprocess_media().
+ */
+function degov_media_gallery_preprocess_media(&$variables) {
+  /** @var \Drupal\media_entity\Entity\Media $media */
+  $media = $variables['media'];
+  if ($media->bundle() === 'gallery') {
+    $display = \Drupal::entityTypeManager()
+      ->getStorage('entity_view_display')
+      ->load('media.gallery.default');
+    $component = $display->getComponent('field_gallery_images');
+    $component['settings']['view_mode'] = 'teaser_squared_1_1';
+    $variables['content']['preview'] = $media->get('field_gallery_images')->view($component);
+  }
+}
