@@ -18,9 +18,8 @@
         dots: false,
         autoplay: false,
         arrows: false,
-        slickGoTo: 0
+        swipeToSlide: true
       });
-      $slider.slick('slickGoTo', 0);
       $('.media-gallery__preview .image').click(function() {
         $slider.slick('slickGoTo', $(this).parent().data('index'));
       });

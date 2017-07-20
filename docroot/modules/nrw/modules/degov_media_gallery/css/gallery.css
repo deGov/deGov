@@ -1,6 +1,11 @@
 .media-gallery__images {
   position: relative;
 }
+
+.media-gallery__images img, .media-gallery__preview img{
+  cursor: pointer;
+}
+
 .slick-controls.slick-controls__gallery {
   text-align: right;
   position: relative;
