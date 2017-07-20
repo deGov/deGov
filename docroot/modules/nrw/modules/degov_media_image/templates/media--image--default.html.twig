@@ -23,4 +23,7 @@
       </div>
     {% endif %}
   </div>
+  {% if content.field_tags|field_value %}
+    <div class="tags">{{ content.field_tags|field_value }}</div>
+  {% endif %}
 </article>

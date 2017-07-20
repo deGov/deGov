@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.field.media.document.field_document
     - field.field.media.document.field_media_in_library
+    - field.field.media.document.field_tags
     - media_entity.bundle.document
   module:
     - file
@@ -19,6 +20,14 @@ content:
     third_party_settings: {  }
     type: file_default
     region: content
+  field_tags:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
 hidden:
   created: true
   field_media_in_library: true
