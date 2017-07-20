@@ -32,13 +32,11 @@ class TwitterBlock extends BlockBase {
     $form['tweets_username'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Twitter username'),
-      '#description' => $this->t(''),
-      '#default_value' => isset($this->configuration['tweets_username']) ? $this->configuration['tweets_username'] : 'tabvn',
+      '#default_value' => isset($this->configuration['tweets_username']) ? $this->configuration['tweets_username'] : 'deGov',
     );
     $form['tweets_limit'] = array(
       '#type' => 'number',
       '#title' => $this->t('Limit'),
-      '#description' => $this->t(''),
       '#default_value' => isset($this->configuration['tweets_limit']) ? $this->configuration['tweets_limit'] : 12,
     );
     $form['tweets_update_every'] = array(
@@ -50,25 +48,21 @@ class TwitterBlock extends BlockBase {
     $form['access_token'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Access token'),
-      '#description' => $this->t(''),
       '#default_value' => isset($this->configuration['access_token']) ? $this->configuration['access_token'] : '',
     );
     $form['token_secret'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Token secret'),
-      '#description' => $this->t(''),
       '#default_value' => isset($this->configuration['token_secret']) ? $this->configuration['token_secret'] : '',
     );
     $form['consumer_key'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Consumer key'),
-      '#description' => $this->t(''),
       '#default_value' => isset($this->configuration['consumer_key']) ? $this->configuration['consumer_key'] : '',
     );
     $form['consumer_secret'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Consumer secret'),
-      '#description' => $this->t(''),
       '#default_value' => isset($this->configuration['consumer_secret']) ? $this->configuration['consumer_secret'] : '',
     );
     return $form;
@@ -112,7 +106,7 @@ class TwitterBlock extends BlockBase {
     if ($response) {
       $tweets = json_decode($response);
       $build = array(
-        '#theme' => 'tweets',
+        '#theme' => 'degov_tweets',
         '#tweets' => $tweets,
         '#cache' => array(
           'max-age' => $this->configuration['tweets_update_every'],

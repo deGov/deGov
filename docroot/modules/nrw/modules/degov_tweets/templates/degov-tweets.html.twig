@@ -1,3 +1,4 @@
+{% if items %}
 <div{{ create_attribute({'class': ['twitter', 'feed']}) }}>
     <div class="row">
         <div class="tweets-slideshow">
@@ -6,8 +7,8 @@
                     <div class="tweet">
                         <div class="avatar">
                             <a alt="{{ tweet.screen_name }}" title="{{ tweet.screen_name }}" href="{{ tweet.user_url }}">
-                                <!-- Changed the author profile image base format from 'http' to 'https'. -->
-                                <img src="https://pbs.twimg.com/profile_images/879704242436624386/yEsvrlJd_normal.jpg"></a>
+                                <img src="{{ tweet.avatar }}">
+                            </a>
                         </div>
 
                         <div class="timestamp">
@@ -16,11 +17,11 @@
 
                         <div class="name-handle">
                             <div class="name">
-                                <a href="{{ tweet.user_url }}">Staatskanzlei NRW</a>
+                                <a href="https://twitter.com/{{ tweet.screen_name }}">{{ tweet.username }}</a>
                             </div>
 
                             <div class="handle">
-                                <a href="{{ tweet.user_url }}">@{{ tweet.screen_name }}</a>
+                                <a href="https://twitter.com/{{ tweet.screen_name }}">@{{ tweet.screen_name }}</a>
                             </div>
                         </div>
 
@@ -29,19 +30,20 @@
                         </div>
 
                         <ul class="actions">
-                            <li><a href="https://twitter.com/intent/tweet?in_reply_to=887688744744177666">{{ Reply|t }}</a></li>
+                            <li><a href="https://twitter.com/intent/tweet?in_reply_to={{ tweet.id }}">{{ 'Reply'|t }}</a></li>
 
-                            <li><a href="https://twitter.com/intent/retweet?tweet_id=887688744744177666">{{ Retweet|t }}</a></li>
+                            <li><a href="https://twitter.com/intent/retweet?tweet_id={{ tweet.id }}">{{ 'Retweet'|t }}</a></li>
 
-                            <li><a href="https://twitter.com/intent/favorite?tweet_id=887688744744177666">{{ Favorite|t }}</a></li>
+                            <li><a href="https://twitter.com/intent/favorite?tweet_id={{ tweet.id }}">{{ 'Favorite'|t }}</a></li>
                         </ul>
                     </div>
                 {% endfor %}
             </div>
             <div class="slick-controls">
-                <button class="slick__pause">{{ Pause|t }}</button>
-                <button class="slick__play">{{ Play|t }}</button>
+                <button class="slick__pause">{{ 'Pause'|t }}</button>
+                <button class="slick__play">{{ 'Play'|t }}</button>
             </div>
         </div>
     </div>
 </div>
+{% endif %}
