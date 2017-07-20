@@ -5,29 +5,32 @@
  */
 function degov_media_caption_helper_preprocess(&$variables, $hook) {
   if ($hook == 'media') {
-    // check if the media is referenced from another entity
+    // Add url contexts to cache.
+    $variables['#cache']['contexts'][] = 'url.path';
+    $variables['elements']['#cache']['contexts'][] = 'url.path';
+    // Сheck if the media is referenced from another entity.
     if (!empty($variables['elements']['#media']->_referringItem)) {
       $type = $variables['elements']['#media']->bundle();
-      // we only preprocess here image and video media entities
+      // We only preprocess here image and video media entities.
       if (!in_array($type, ['image', 'video', 'video_upload'])) {
         return;
       }
-      // preprocess field
+      // Preprocessable field.
       $caption_field = 'field_video_caption';
       if ($type == 'image') {
         $caption_field = 'field_image_caption';
       }
-      // add url contexts to cache
-      $variables['#cache']['contexts'][] = 'url.path';
-      $variables['elements']['#cache']['contexts'][] = 'url.path';
       $referencingEntity = $variables['elements']['#media']->_referringItem->getEntity();
       if ($referencingEntity instanceof \Drupal\Core\Entity\ContentEntityInterface) {
-        // add cache keys and tags, so the media cache depend on the referencing entity
-        $variables['elements']['#cache']['keys'][] = $referencingEntity->getEntityTypeId();
-        $variables['elements']['#cache']['keys'][] = $referencingEntity->id();
+        // Add cache tags, so the media cache depend on the referencing entity.
         $variables['elements']['#cache']['tags'][] = $referencingEntity->getEntityTypeId().':'.$referencingEntity->id();
         $variables['elements']['#cache']['tags'][] = $referencingEntity->getEntityTypeId().'_view';
-        // if referencing entity has overriden caption use it instead
+        _degov_media_caption_add_paragraph_cache_keys($referencingEntity, $variables);
+        if (empty($variables['#cache']['tags'])) {
+          $variables['#cache']['tags'] = [];
+        }
+        $variables['#cache']['tags'] = $variables['#cache']['tags'] + $variables['elements']['#cache']['tags'];
+        // If referencing entity has overriden caption use it instead.
         if ($referencingEntity->hasField('field_override_caption') && !$referencingEntity->get('field_override_caption')->isEmpty()) {
           $variables['content'][$caption_field] = $referencingEntity->get('field_override_caption')->view('full');
         }
@@ -35,9 +38,24 @@ function degov_media_caption_helper_preprocess(&$variables, $hook) {
     }
   }
   if (in_array($hook, ['node', 'paragraph'])) {
-    // unset this field override caption because we don't need in parent entity display
+    // Unset this field override caption because we don't need in parent entity display.
     if (!empty($variables['content']['field_override_caption'])) {
       unset($variables['content']['field_override_caption']);
     }
+  }
+}
+
+/**
+ * Add paragraph cache keys and tags to media.
+ * @param $referencingEntity
+ * @param $variables
+ */
+function _degov_media_caption_add_paragraph_cache_keys($referencingEntity, &$variables) {
+  if ($referencingEntity instanceof \Drupal\paragraphs\ParagraphInterface) {
+    /** @var \Drupal\paragraphs\ParagraphInterface $referencingEntity */
+    $paragraphHost = $referencingEntity->getParentEntity();
+    $variables['elements']['#cache']['tags'][] = $paragraphHost->getEntityTypeId().':'.$paragraphHost->id();
+    $variables['elements']['#cache']['tags'][] = $paragraphHost->getEntityTypeId().'_view';
+    _degov_media_caption_add_paragraph_cache_keys($paragraphHost, $variables);
   }
 }

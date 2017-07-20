@@ -11,6 +11,6 @@ function degov_media_address_preprocess(&$variables, $hook, &$info) {
     'module_name' => 'degov_media_address',
     'entity_type' => 'media',
     'entity_bundles' => ['address'],
-    'entity_view_modes' => [],
+    'entity_view_modes' => ['default_map'],
   ]);
 }

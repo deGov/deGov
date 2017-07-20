@@ -1,0 +1,22 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_in_library
+    - media_entity.bundle.instagram
+id: media.instagram.field_media_in_library
+field_name: field_media_in_library
+entity_type: media
+bundle: instagram
+label: 'Zur Medienverwaltung hinzufügen'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Zur Medienverwaltung hinzufügt'
+  off_label: 'Nicht in der Medienverwaltung'
+field_type: boolean
