@@ -1,0 +1,131 @@
+form.webform-submission-form{
+  float: none;
+  max-width: 50%;
+  margin: 0 auto;
+  @media(max-width: 720px){
+    max-width: 100%;
+  }
+  label{
+    color: $brand-primary;
+    font-size: $font-size-small;
+    font-weight: bold;
+    &:after{
+      content: '*';
+      color: $brand-primary;
+      background-image: none;
+    }
+  }
+  .panel{
+    border: 0;
+    .panel-heading{
+      background: transparent;
+      padding: 0;
+      color: $brand-primary;
+      font-weight: bold;
+      border-bottom: 0;
+    }
+    .panel-body{
+      padding: 0;
+    }
+  }
+  .select-wrapper{
+    &:after{
+      content: ' ';
+    }
+  }
+  input, textarea, select{
+    background-color: rgba($nrw-secondary, 0.1);
+    border-radius: 0;
+    border: 0;
+    &:hover{
+      border: 0;
+    }
+  }
+  .selectric{
+    background-color: rgba($nrw-secondary, 0.1);
+    &:hover{
+      border: 0;
+    }
+    .label{
+      text-align: left;
+    }
+    .button{
+      @include icon-after($fa-var-angle-down);
+      &:after{
+        border:0;
+        font-size: $font-size-h2;
+        color: $brand-primary;
+        width: auto;
+        height: auto;
+        position: relative;
+        top: $grid-gutter-width/7.7;
+      }
+    }
+    &-open{
+      .button{
+        
+        &:after{
+          transform: rotate(180deg);
+        }
+      }
+    }
+    &-items{
+      
+      li{
+        color: $color-white;
+        background-color: rgba($nrw-secondary, 1);
+        &:hover{
+          background-color: rgba($nrw-secondary, 0.1);
+          color: $text-color;
+        }
+        &.selected{
+          background-color: rgba($nrw-secondary, 0.1);
+          color: $text-color;
+        }
+      }
+    }
+  }
+  .btn {
+    &-primary{
+      background: transparent;
+      border: 0px solid $brand-primary;
+      color: $brand-primary;
+      float: right;
+      margin-right: 0;
+      padding-right: 0;
+      font-size: $font-size-small;
+      font-weight: bold;
+      @include icon-after($fa-var-paper-plane);
+      &:after{
+        color: white;
+        padding: $grid-gutter-width/4;
+        background-color: $nrw-green;
+        font-size: $font-size-base;
+      }
+    }
+  }
+}
+
+.reset-form{
+  display: flex;
+  position: relative;
+  top: 15px;
+  span{
+    margin: 0 auto;
+    color: $brand-primary;
+    float: right;
+    margin-right: 0;
+    padding-right: 0;
+    font-size: $font-size-small;
+    font-weight: bold;
+  }
+  i{
+    margin-left: $grid-gutter-width/8;
+    &:before{
+      color: white;
+      padding: $grid-gutter-width/4;
+      background-color: $brand-primary;
+      font-size: $font-size-base;
+    }
+  }
+}
