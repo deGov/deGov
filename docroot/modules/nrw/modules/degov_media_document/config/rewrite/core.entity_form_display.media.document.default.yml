@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.field.media.document.field_document
     - field.field.media.document.field_media_in_library
+    - field.field.media.document.field_tags
     - media_entity.bundle.document
   module:
     - file
@@ -14,7 +15,7 @@ bundle: document
 mode: default
 content:
   field_document:
-    weight: 6
+    weight: 4
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
@@ -27,15 +28,24 @@ content:
     weight: 3
     third_party_settings: {  }
     region: content
+  field_tags:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 2
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
   name:
     type: string_textfield
-    weight: 2
+    weight: 1
     settings:
       size: 60
       placeholder: ''

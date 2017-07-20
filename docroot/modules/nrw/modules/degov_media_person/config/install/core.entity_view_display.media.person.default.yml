@@ -5,17 +5,18 @@ dependencies:
     - field.field.media.person.field_media_in_library
     - field.field.media.person.field_person_image
     - field.field.media.person.field_person_info
+    - field.field.media.person.field_tags
     - image.style.medium
     - image.style.thumbnail
     - media_entity.bundle.person
+  enforced:
+    module:
+      - degov_media_person
   module:
     - image
     - media_entity
     - text
     - user
-  enforced:
-    module:
-      - degov_media_person
 id: media.person.default
 targetEntityType: media
 bundle: person
@@ -24,7 +25,7 @@ content:
   created:
     label: hidden
     type: timestamp
-    weight: 0
+    weight: 2
     region: content
     settings:
       date_format: medium
@@ -32,7 +33,7 @@ content:
       timezone: ''
     third_party_settings: {  }
   field_person_image:
-    weight: 3
+    weight: 5
     label: hidden
     settings:
       image_style: medium
@@ -41,23 +42,31 @@ content:
     type: media_thumbnail
     region: content
   field_person_info:
-    weight: 2
+    weight: 4
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
+  field_tags:
+    type: entity_reference_label
+    weight: 6
+    region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
   name:
     label: hidden
     type: string
-    weight: -5
+    weight: 0
     region: content
     settings:
       link_to_entity: false
     third_party_settings: {  }
   thumbnail:
     type: image
-    weight: 1
+    weight: 3
     label: hidden
     settings:
       image_style: thumbnail
@@ -67,7 +76,7 @@ content:
   uid:
     label: hidden
     type: author
-    weight: 0
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }
