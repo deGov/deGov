@@ -1,0 +1,5 @@
+name: deGov Views Helper
+type: module
+core: 8.x
+dependencies:
+  - viewsreference
