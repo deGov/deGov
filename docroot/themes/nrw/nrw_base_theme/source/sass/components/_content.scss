@@ -3,6 +3,11 @@ body{
   -webkit-font-smoothing: antialiased;
   background-color: $background-grey;
 }
+.container-fluid{
+  max-width: 1280px;
+  margin: 0 auto;
+  
+}
 .main-wrapper {
   background-color: $background-grey;
 }

@@ -253,6 +253,22 @@
 	    }
 	  };
 
+	  // Responsive menu
+	  Drupal.behaviors.responsiveMenu = {
+	    attach: function attach(context, settings) {
+	      $('.header__menu-icon').click(function () {
+	        $('.nrw-menu-header-responsive').toggleClass('is-open');
+	      });
+	      $('.nrw-menu-header-responsive .nrw-menu-header-responsive__block-title').click(function () {
+	        $(this).siblings('.nrw-menu-header-responsive__content').toggleClass('is-close is-open');
+	      });
+	      $('.nrw-menu-header-responsive .action').click(function () {
+	        $(this).parent().siblings('.nrw-menu-header-responsive__list').toggleClass('is-open');
+	        $(this).toggleClass('is-open');
+	      });
+	    }
+	  };
+
 	  // Slick slider in press list
 	  $('.view-latest-press .view-content').slick({
 	    dots: true,

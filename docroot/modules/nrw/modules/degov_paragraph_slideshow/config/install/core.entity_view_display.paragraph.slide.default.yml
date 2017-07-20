@@ -2,6 +2,7 @@ langcode: de
 status: true
 dependencies:
   config:
+    - field.field.paragraph.slide.field_override_caption
     - field.field.paragraph.slide.field_slide_link
     - field.field.paragraph.slide.field_slide_media
     - field.field.paragraph.slide.field_slide_text
@@ -17,6 +18,14 @@ targetEntityType: paragraph
 bundle: slide
 mode: default
 content:
+  field_override_caption:
+    type: string
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
   field_slide_link:
     weight: 2
     label: hidden
