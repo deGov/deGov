@@ -3,9 +3,9 @@ degov.default:
   route_name: 'degov.default_settings'
   parent: 'system.admin_config'
   description: 'Administer deGov.'
-degov_view_helper.settings:
+degov_views_helper.settings:
   title: 'Views Helper Settings'
-  route_name: 'degov_view_helper.settings'
+  route_name: 'degov_views_helper.settings'
   parent: 'degov.default'
   description: 'Administer deGov views reference.'
   weight: -9
