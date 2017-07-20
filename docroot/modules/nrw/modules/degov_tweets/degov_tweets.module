@@ -1,0 +1,47 @@
+<?php
+
+/**
+ * Implements hook_theme()
+ */
+
+function degov_tweets_theme($existing, $type, $theme, $path) {
+  return [
+    'degov_tweets' => [
+      'variables' => [
+        'tweets' => NULL,
+      ],
+    ],
+  ];
+
+}
+
+function template_preprocess_tweets(&$variables) {
+  $variables['attributes']['class'][] = 'tweets';
+  $tweets = $variables['tweets'];
+  $items = array();
+  if (!empty($tweets)) {
+    foreach ($tweets as $tweet) {
+
+      $settings = array(
+        '#type' => 'processed_text',
+        '#text' => $tweet->text,
+        '#format' => NULL,
+        '#filter_types_to_skip' => array(),
+        '#langcode' => '',
+      );
+      $text = \Drupal::service('renderer')->renderPlain($settings);
+
+      $items[] = array(
+        'id' => $tweet->id,
+        'text' => $text,
+        'time' => $tweet->created_at,
+        'time_ago' => \Drupal::service('date.formatter')
+          ->formatInterval(REQUEST_TIME - strtotime($tweet->created_at)),
+        'username' => $tweet->user->screen_name,
+        'screen_name' => $tweet->user->screen_name,
+        'user_url' => $tweet->user->url,
+      );
+    }
+  }
+  $variables['items'] = $items;
+}

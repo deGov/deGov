@@ -1,0 +1,5 @@
+name: Tweets block
+type: module
+description: Twitter feed
+core: 8.x
+package: deGov
