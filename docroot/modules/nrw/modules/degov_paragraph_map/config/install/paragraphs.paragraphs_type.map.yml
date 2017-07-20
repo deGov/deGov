@@ -1,0 +1,9 @@
+langcode: de
+status: true
+dependencies:
+  enforced:
+    module:
+      - degov_paragraph_map
+id: map
+label: 'Map '
+behavior_plugins: {  }

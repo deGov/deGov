@@ -5,16 +5,18 @@ dependencies:
     - field.field.media.address.field_address_address
     - field.field.media.address.field_address_email
     - field.field.media.address.field_address_fax
+    - field.field.media.address.field_address_location
     - field.field.media.address.field_address_phone
     - field.field.media.address.field_address_title
     - field.field.media.address.field_media_in_library
+    - field.field.media.address.field_tags
     - media_entity.bundle.address
   enforced:
     module:
       - degov_media_address
   module:
     - address
-    - path
+    - geofield
     - workbench_moderation
 id: media.address.default
 targetEntityType: media
@@ -23,7 +25,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 9
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -50,6 +52,13 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_address_location:
+    weight: 11
+    settings:
+      html5_geolocation: false
+    third_party_settings: {  }
+    type: geofield_latlon
+    region: content
   field_address_phone:
     weight: 3
     settings:
@@ -70,12 +79,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 6
+    weight: 7
     third_party_settings: {  }
+    region: content
+  field_tags:
+    weight: 6
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   langcode:
     type: language_select
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -89,13 +107,13 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 10
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 8
+    weight: 9
     settings:
       match_operator: CONTAINS
       size: 60

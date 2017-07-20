@@ -1,0 +1,22 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_social_media
+    - node.type.normal_page
+id: node.normal_page.field_social_media
+field_name: field_social_media
+entity_type: node
+bundle: normal_page
+label: 'Social Media Buttons anzeigen'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

@@ -7,9 +7,18 @@ dependencies:
   - address
   - crop
   - degov_content_types_shared_fields
+  - degov_taxonomy_term_tags
   - field
+  - geocoder
+  - geocoder_address
+  - geocoder_field
+  - geocoder_geofield
+  - geofield
   - language
   - media_entity
   - path
   - spamspan
+  - styled_google_map
+  - system_stream_wrapper
+  - taxonomy
   - workbench_moderation

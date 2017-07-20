@@ -6,15 +6,16 @@ dependencies:
     - field.field.media.person.field_media_in_library
     - field.field.media.person.field_person_image
     - field.field.media.person.field_person_info
+    - field.field.media.person.field_tags
     - media_entity.bundle.person
+  enforced:
+    module:
+      - degov_media_person
   module:
     - entity_browser
     - path
     - text
     - workbench_moderation
-  enforced:
-    module:
-      - degov_media_person
 id: media.person.default
 targetEntityType: media
 bundle: person
@@ -30,7 +31,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 6
+    weight: 7
     third_party_settings: {  }
     region: content
   field_person_image:
@@ -54,6 +55,15 @@ content:
     third_party_settings: {  }
     type: text_textarea
     region: content
+  field_tags:
+    type: entity_reference_autocomplete
+    weight: 6
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   langcode:
     type: language_select
     weight: 3
@@ -70,7 +80,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }

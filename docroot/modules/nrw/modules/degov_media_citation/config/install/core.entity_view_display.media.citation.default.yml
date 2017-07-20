@@ -7,6 +7,7 @@ dependencies:
     - field.field.media.citation.field_citation_text
     - field.field.media.citation.field_citation_title
     - field.field.media.citation.field_media_in_library
+    - field.field.media.citation.field_tags
     - image.style.large
     - image.style.thumbnail
     - media_entity.bundle.citation
@@ -26,7 +27,7 @@ content:
   created:
     label: hidden
     type: timestamp
-    weight: 0
+    weight: 2
     region: content
     settings:
       date_format: medium
@@ -59,24 +60,32 @@ content:
     type: basic_string
     region: content
   field_citation_title:
-    weight: 2
+    weight: 4
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
+  field_tags:
+    type: entity_reference_label
+    weight: 8
+    region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
   name:
     label: hidden
     type: string
-    weight: -5
+    weight: 0
     region: content
     settings:
       link_to_entity: false
     third_party_settings: {  }
   thumbnail:
     type: image
-    weight: 1
+    weight: 3
     label: hidden
     settings:
       image_style: thumbnail
@@ -86,7 +95,7 @@ content:
   uid:
     label: hidden
     type: author
-    weight: 0
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }

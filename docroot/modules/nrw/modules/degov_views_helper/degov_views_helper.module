@@ -1,0 +1,66 @@
+<?php
+
+/**
+ * @param $element
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ * @param $context
+ */
+function degov_views_helper_field_widget_form_alter(&$element, \Drupal\Core\Form\FormStateInterface $form_state, $context) {
+  /** @var \Drupal\Core\Field\EntityReferenceFieldItemList $items */
+  $items = $context['items'];
+  // Get the field definition.
+  $field_definition = $items->getFieldDefinition();
+  if ($field_definition->getType() == 'viewsreference') {
+    // Get configuration settings for the form widget.
+    $config = \Drupal::service('config.factory')->getEditable('degov_view_helper.settings');
+    $allowed_forms = $config->get('form_ids');
+    // Get the form renderer array.
+    $form = $form_state->getCompleteForm();
+    // If the form is within the allowed ones - alter.
+    if (in_array($form['#form_id'], $allowed_forms)) {
+      // Get the allowed views list.
+      $allowed_views = $config->get('allowed_views');
+      // Loop through the element options and remove not allowed.
+      foreach ($element['target_id']['#options'] as $key => $view_name) {
+        if (empty($allowed_views[$key])) {
+          unset($element['target_id']['#options'][$key]);
+        }
+      }
+    }
+    // Get extra data from serialized field.
+    $extra_data = [];
+    $values = $items->getValue();
+    if (!empty($values[0]['data'])) {
+      $extra_data = unserialize($values[0]['data']);
+    }
+    $element['page_limit'] = [
+      '#type' => 'number',
+      '#title' => t('Page limit'),
+      '#default_value' => !empty($extra_data['page_limit']) ? $extra_data['page_limit'] : '',
+    ];
+    $entity_type = 'node';
+    if (!empty($values[0]['target_id'])) {
+      /** @var \Drupal\views\Entity\View $view */
+      $view = \Drupal\views\Entity\View::load($values[0]['target_id']);
+      $entity_type = $view->getExecutable()->getBaseEntityType()->id();
+    }
+
+    $view_modes = \Drupal::service('entity_display.repository')->getViewModeOptions($entity_type);
+    $element['view_mode'] = [
+      '#type' => 'select',
+      '#title' => t('Views row view mode'),
+      '#default_value' => !empty($extra_data['view_mode']) ? $extra_data['view_mode'] : '',
+      '#options' => $view_modes,
+    ];
+  }
+}
+
+/**
+ * @param $info
+ */
+function degov_views_helper_field_info_alter(&$info) {
+  // Change the class for viewsreference field type.
+  if (isset($info['viewsreference'])) {
+    $info['viewsreference']['class'] = 'Drupal\degov_views_helper\Plugin\Field\FieldType\ViewsReferenceOverride';
+  }
+}

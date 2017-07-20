@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.event.field_event_date
     - field.field.node.event.field_event_location
     - field.field.node.event.field_sidebar_right_paragraphs
+    - field.field.node.event.field_social_media
     - field.field.node.event.field_tags
     - field.field.node.event.field_teaser_image
     - field.field.node.event.field_teaser_text
@@ -59,6 +60,7 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
 hidden:
+  field_social_media: true
   field_tags: true
   field_teaser_image: true
   field_teaser_text: true
