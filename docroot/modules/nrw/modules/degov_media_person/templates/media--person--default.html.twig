@@ -15,7 +15,7 @@
 <article class="media media-person">
   <div class="media-person__image">{{ content.field_person_image }}</div>
   <div class="media-person__info">{{ content.field_person_info|field_value }}</div>
-  {% if content.field_tags|render %}
-    {{ content.field_tags }}
+  {% if content.field_tags|field_value %}
+    <div class="tags">{{ content.field_tags|field_value }}</div>
   {% endif %}
 </article>
