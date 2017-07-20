@@ -11,6 +11,6 @@ function degov_node_normal_page_preprocess(&$variables, $hook, &$info) {
     'module_name' => 'degov_node_normal_page',
     'entity_type' => 'node',
     'entity_bundles' => ['normal_page'],
-    'entity_view_modes' => ['teaser', 'slim', 'long_text', 'small_image', 'preview']
+    'entity_view_modes' => ['teaser']
   ]);
 }

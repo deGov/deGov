@@ -5,12 +5,12 @@ use Drupal\degov_content_types_shared_fields\Common;
 /**
  * Implements hook_preprocess().
  */
-function degov_node_blog_preprocess(&$variables, $hook, &$info) {
+function nrw_teaser_viewmodes_preprocess(&$variables, $hook, &$info) {
   // Add template suggestions and libraries implemented in this module.
   Common::addThemeSuggestions($variables, $hook, $info, [
-    'module_name' => 'degov_node_blog',
+    'module_name' => 'nrw_teaser_viewmodes',
     'entity_type' => 'node',
-    'entity_bundles' => ['blog'],
-    'entity_view_modes' => ['teaser']
+    'entity_bundles' => ['blog', 'event', 'normal_page', 'press'],
+    'entity_view_modes' => ['slim', 'long_text', 'small_image', 'preview']
   ]);
 }
