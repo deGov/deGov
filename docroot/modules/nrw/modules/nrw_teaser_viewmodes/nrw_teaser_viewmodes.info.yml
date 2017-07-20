@@ -1,7 +1,13 @@
 name: 'NRW - Teaser View Modes'
+package: NRW
 type: module
 core: 8.x
 dependencies:
+  - degov_content_types_shared_fields
+  - degov_node_normal_page
+  - degov_node_blog
+  - degov_node_press
+  - degov_node_event
   - entity_reference_display
   - field
   - lightning_core
