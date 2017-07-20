@@ -65,8 +65,8 @@ class Common {
         $info['theme path'] = $module_path = drupal_get_path('module', $module_name);
         $info['path'] = $module_path . '/templates';
         // Add a template for every defined view mode else add it for the default view mode.
-        if (isset($variables['view_mode']) && in_array($variables['view_mode'], $entity_view_modes)) {
-          $info['template'] = $entity_type . '--' . $entity_bundle . '--' . $variables['view_mode'];
+        if (isset($variables['elements']['#view_mode']) && in_array($variables['elements']['#view_mode'], $entity_view_modes)) {
+          $info['template'] = $entity_type . '--' . $entity_bundle . '--' . $variables['elements']['#view_mode'];
         } else {
           if (isset($entity_bundle)) {
             $info['template'] = $entity_type . '--' . $entity_bundle . '--default';

@@ -1,0 +1,42 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.map.field_map_address_reference
+    - field.field.paragraph.map.field_sub_title
+    - field.field.paragraph.map.field_title
+    - paragraphs.paragraphs_type.map
+  enforced:
+    module:
+      - degov_paragraph_map
+id: paragraph.map.default
+targetEntityType: paragraph
+bundle: map
+mode: default
+content:
+  field_map_address_reference:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default_map
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_sub_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }
