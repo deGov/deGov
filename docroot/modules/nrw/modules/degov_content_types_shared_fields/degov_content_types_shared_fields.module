@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @file
+ * Implements hooks and methods with common functionality.
+ */
+
 use Drupal\node\NodeInterface;
 
 /**
@@ -19,8 +24,8 @@ function degov_content_types_shared_fields_preprocess_node(&$variables) {
  */
 function degov_content_types_shared_fields_preprocess_field(&$variables) {
   $field_name = $variables['field_name'];
-  // Include the shariff sharing libarary in case social media sharing is
-  // enabled on the node in the header or content paragraph.
+  // Include the shariff sharing block buttons if social media sharing is
+  // enabled on the node. Appears on the bottom of both header/content paragraph.
   if (in_array($field_name, ['field_header_paragraphs', 'field_content_paragraphs'])) {
     /* @var \Drupal\node\NodeInterface $node */
     $node = $variables['element']['#object'];

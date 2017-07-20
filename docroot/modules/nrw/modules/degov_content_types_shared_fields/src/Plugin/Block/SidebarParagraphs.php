@@ -2,7 +2,6 @@
 
 namespace Drupal\degov_content_types_shared_fields\Plugin\Block;
 
-
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Cache\Cache;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
@@ -11,7 +10,7 @@ use Drupal\node\NodeInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * Class SidebarParagraphs
+ * Class SidebarParagraphs.
  *
  * @Block(
  *   id = "sidebar_paragraphs",
@@ -78,14 +77,14 @@ class SidebarParagraphs extends BlockBase implements ContainerFactoryPluginInter
    */
   public function build() {
     $build = [];
-    // try to get the node from the route
+    // Try to get the node from the route.
     $node = $this->routeMatcher->getParameter('node');
     if ($node && $node instanceof NodeInterface) {
       if ($node->hasField('field_sidebar_right_paragraphs') && !$node->get('field_sidebar_right_paragraphs')->isEmpty()) {
         $build['sidebar_paragraphs'] = $node->get('field_sidebar_right_paragraphs')->view('full');
         $build['sidebar_paragraphs']['#cache'] = [
           'tags' => [
-            'node:'.$node->id(),
+            'node:' . $node->id(),
             'node_view',
           ],
           'keys' => [
@@ -93,7 +92,7 @@ class SidebarParagraphs extends BlockBase implements ContainerFactoryPluginInter
             'node',
             $node->id(),
             'default',
-          ]
+          ],
         ];
       }
     }
@@ -121,4 +120,5 @@ class SidebarParagraphs extends BlockBase implements ContainerFactoryPluginInter
   public function getCacheContexts() {
     return Cache::mergeContexts(parent::getCacheContexts(), ['url.path']);
   }
+
 }
