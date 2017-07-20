@@ -3914,6 +3914,69 @@
             }
         },
         {
+            "name": "drupal/shariff",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/shariff",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/shariff-8.x-1.2.zip",
+                "reference": null,
+                "shasum": "96fa844342b4763b15d8a14e66dedb7c76f2e567"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "heiseonline/shariff": "master"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1494581885"
+                },
+                "installer-paths": {
+                    "libraries/{$name}": [
+                        "type:drupal-library"
+                    ]
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Christian Ziegler",
+                    "homepage": "https://www.drupal.org/user/80801",
+                    "email": "christian@acolono.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Nebel54",
+                    "homepage": "https://www.drupal.org/user/1781874"
+                },
+                {
+                    "name": "criz",
+                    "homepage": "https://www.drupal.org/user/71764"
+                },
+                {
+                    "name": "sboehlke",
+                    "homepage": "https://www.drupal.org/user/2018454"
+                }
+            ],
+            "description": "Integrating Shariff library and providing some options.",
+            "homepage": "https://www.drupal.org/project/shariff",
+            "support": {
+                "source": "http://cgit.drupalcode.org/shariff"
+            }
+        },
+        {
             "name": "drupal/simple_sitemap",
             "version": "2.9.0",
             "source": {
@@ -5191,6 +5254,17 @@
                 "url"
             ],
             "time": "2017-03-20T17:10:46+00:00"
+        },
+        {
+            "name": "heiseonline/shariff",
+            "version": "master",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/heiseonline/shariff/archive/master.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "drupal-library"
         },
         {
             "name": "html2text/html2text",
