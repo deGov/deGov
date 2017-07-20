@@ -1,0 +1,6 @@
+langcode: de
+status: true
+dependencies: {  }
+id: webformular
+label: Webformular
+behavior_plugins: {  }
