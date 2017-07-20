@@ -1,6 +1,7 @@
 <?php
 
 use Drupal\degov_content_types_shared_fields\Common;
+use Drupal\node\NodeInterface;
 
 /**
  * Implements hook_preprocess().
@@ -13,4 +14,24 @@ function degov_paragraph_header_preprocess(&$variables, $hook, &$info) {
     'entity_bundles' => ['image_header'],
     'entity_view_modes' => [],
   ]);
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function degov_paragraph_header_preprocess_paragraph__image_header(&$variables) {
+  /* @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+  $paragraph = $variables['paragraph'];
+  /* @var \Drupal\node\NodeInterface $node */
+  $node = $paragraph->getParentEntity();
+
+  if ($node instanceof NodeInterface && $node->hasField('field_tags') && !$node->get('field_tags')->isEmpty()) {
+    $variables['tags'] = $node->get('field_tags')->view([
+      'label' => 'hidden',
+      'type' => 'entity_reference_label',
+      'settings' => [
+        'link' => TRUE,
+      ],
+    ]);
+  }
 }

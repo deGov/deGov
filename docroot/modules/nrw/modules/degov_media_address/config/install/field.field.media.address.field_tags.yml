@@ -1,0 +1,30 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_tags
+    - media_entity.bundle.address
+    - taxonomy.vocabulary.tags
+  enforced:
+    module:
+      - degov_media_address
+id: media.address.field_tags
+field_name: field_tags
+entity_type: media
+bundle: address
+label: Schlagwörter
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: copyright
+field_type: entity_reference

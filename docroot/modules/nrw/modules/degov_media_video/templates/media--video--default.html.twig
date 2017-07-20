@@ -28,4 +28,7 @@
     {% endif %}
   </div>
   {% endif %}
+  {% if content.field_tags|render %}
+    {{ content.field_tags }}
+  {% endif %}
 </article>

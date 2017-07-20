@@ -17,4 +17,7 @@
   <div class="document__meta" >
     <span class="mime-{{ media_mime|clean_class }}"></span>{{ media_size }}
   </div>
+  {% if content.field_tags|render %}
+    {{ content.field_tags }}
+  {% endif %}
 </article>

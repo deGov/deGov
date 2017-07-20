@@ -26,4 +26,7 @@
   {% if content.field_address_phone|render %}
     <div class="address__phone"><span>{{ 'Tel:'|trans }} </span>{{ content.field_address_phone|field_value }}</div>
   {% endif %}
+  {% if content.field_tags|render %}
+    {{ content.field_tags }}
+  {% endif %}
 </article>

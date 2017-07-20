@@ -6,11 +6,13 @@ package: deGov
 dependencies:
   - crop
   - degov_content_types_shared_fields
+  - degov_taxonomy_term_tags
   - entity_browser
   - field
   - image
   - language
   - media_entity
   - path
+  - taxonomy
   - user
   - workbench_moderation

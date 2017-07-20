@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.media.video.field_media_in_library
+    - field.field.media.video.field_tags
     - field.field.media.video.field_video_caption
     - field.field.media.video.field_video_copyright
     - field.field.media.video.field_media_video_embed_field
@@ -22,8 +23,16 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_tags:
+    type: entity_reference_label
+    weight: 6
+    region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
   field_video_copyright:
-    weight: 2
+    weight: 5
     label: hidden
     settings:
       link: false
