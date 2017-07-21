@@ -5,6 +5,10 @@ form.webform-submission-form{
   @media(max-width: 720px){
     max-width: 100%;
   }
+  .form-actions{
+    display: flex;
+    float: right;
+  } 
   label{
     color: $brand-primary;
     font-size: $font-size-small;
@@ -107,25 +111,29 @@ form.webform-submission-form{
 }
 
 .reset-form{
-  display: flex;
+  display: inline-block;
   position: relative;
-  top: 15px;
+  top: 2px;
+  cursor: pointer;
   span{
     margin: 0 auto;
     color: $brand-primary;
     float: right;
     margin-right: 0;
-    padding-right: 0;
     font-size: $font-size-small;
     font-weight: bold;
+    padding: $grid-gutter-width/2 - 5;
   }
   i{
     margin-left: $grid-gutter-width/8;
     &:before{
-      color: white;
-      padding: $grid-gutter-width/4;
+      color: $color-white;
       background-color: $brand-primary;
       font-size: $font-size-base;
+      padding: 9px 12px;
+      width: 36px;
+      height: 36px;
+      display: inline-block;
     }
   }
 }
