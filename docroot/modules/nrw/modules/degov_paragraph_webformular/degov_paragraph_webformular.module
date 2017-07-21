@@ -32,3 +32,4 @@ function degov_paragraph_webformular_form_alter(&$form, \Drupal\Core\Form\FormSt
     ];
   }
 }
+
