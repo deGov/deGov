@@ -12,7 +12,7 @@ function degov_views_helper_field_widget_form_alter(&$element, \Drupal\Core\Form
   $field_definition = $items->getFieldDefinition();
   if ($field_definition->getType() == 'viewsreference') {
     // Get configuration settings for the form widget.
-    $config = \Drupal::service('config.factory')->getEditable('degov_view_helper.settings');
+    $config = \Drupal::service('config.factory')->getEditable('degov_views_helper.settings');
     $allowed_forms = $config->get('form_ids');
     // Get the form renderer array.
     $form = $form_state->getCompleteForm();
