@@ -20,3 +20,10 @@ slick:
       https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css: { type: external, minified: true }
   js:
     https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js: { type: external, minified: true }
+
+selectize:
+  css:
+    theme:
+      https://cdn.jsdelivr.net/jquery.selectric/1.11.1/selectric.css: { type: external, minified: true }
+  js:
+    https://cdn.jsdelivr.net/jquery.selectric/1.11.1/jquery.selectric.min.js: { type: external, minified: true }

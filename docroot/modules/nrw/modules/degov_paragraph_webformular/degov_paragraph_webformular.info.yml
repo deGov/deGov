@@ -1,0 +1,13 @@
+name: 'deGov - Paragraph webformular'
+description: 'Mit diesem Paragraphen können an beliebigen Stellen webforms eingeblendet werden. '
+type: module
+package: deGov
+core: 8.x
+dependencies:
+  - degov_content_types_shared_fields
+  - degov_node_normal_page
+  - field
+  - node
+  - paragraphs
+  - webform_ui
+  - workbench_moderation

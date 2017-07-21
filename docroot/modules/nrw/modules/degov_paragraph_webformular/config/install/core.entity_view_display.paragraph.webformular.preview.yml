@@ -1,0 +1,32 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.webformular.field_sub_title
+    - field.field.paragraph.webformular.field_title
+    - field.field.paragraph.webformular.field_webform_form
+    - paragraphs.paragraphs_type.webformular
+id: paragraph.webformular.preview
+targetEntityType: paragraph
+bundle: webformular
+mode: preview
+content:
+  field_sub_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_webform_form: true
