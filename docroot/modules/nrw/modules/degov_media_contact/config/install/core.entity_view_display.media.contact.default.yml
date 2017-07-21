@@ -9,8 +9,7 @@ dependencies:
     - field.field.media.contact.field_contact_tel
     - field.field.media.contact.field_contact_title
     - field.field.media.contact.field_media_in_library
-    - field.field.media.contact.field_tags
-    - image.style.medium
+    - image.style.thumbnail
     - media_entity.bundle.contact
   enforced:
     module:
