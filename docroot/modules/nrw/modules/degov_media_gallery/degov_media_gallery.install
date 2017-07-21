@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @file
+ * Contains un/installation hooks for the degov_media_gallery module.
+ */
+
 use Drupal\degov_content_types_shared_fields\Common;
 
 /**

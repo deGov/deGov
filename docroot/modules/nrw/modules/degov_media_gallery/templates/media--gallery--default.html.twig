@@ -82,7 +82,7 @@
   </div>
   <div class="media-gallery__images">
     <div class="slideshow__slides">
-    {% for key, slideshow_slide in content.field_gallery_images|field_value if key|first != '#' %}
+    {% for key, slideshow_slide in content.field_gallery_images|field_value %}
       {{ slideshow_slide }}
     {% endfor %}
     </div>
@@ -95,7 +95,7 @@
   <div class="media-gallery__sub_title">{{ content.field_gallery_sub_title|field_value }}</div>
   <div class="media-gallery__text">{{ content.field_gallery_text|field_value }}</div>
   <div class="media-gallery__preview">
-    {% for key, preview in content.preview|field_value if key|first != '#' %}
+    {% for key, preview in content.preview|field_value %}
       <div class="col-xs-2 col-md-4 col-sm-2" data-index="{{ key }}"> {{ preview }}</div>
     {% endfor %}
   </div>

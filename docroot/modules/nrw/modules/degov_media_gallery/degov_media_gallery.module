@@ -1,17 +1,16 @@
 <?php
 
+/**
+ * @file
+ * Contains hooks and custom functionds for the degov_media_gallery module.
+ */
+
 use Drupal\degov_content_types_shared_fields\Common;
 
 /**
  * Implements hook_preprocess().
  */
 function degov_media_gallery_preprocess(&$variables, $hook, &$info) {
-  if ($hook === 'media') {
-    /* @var \Drupal\media_entity\Entity\Media $media */
-    $media = $variables['elements']['#media'];
-    $variables['media'] = $media;
-  }
-
   // Add template suggestions and libraries implemented in this module.
   Common::addThemeSuggestions($variables, $hook, $info, [
     'module_name' => 'degov_media_gallery',
@@ -26,7 +25,7 @@ function degov_media_gallery_preprocess(&$variables, $hook, &$info) {
  */
 function degov_media_gallery_preprocess_media(&$variables) {
   /** @var \Drupal\media_entity\Entity\Media $media */
-  $media = $variables['media'];
+  $media = $variables['elements']['#media'];
   if ($media->bundle() === 'gallery') {
     $display = \Drupal::entityTypeManager()
       ->getStorage('entity_view_display')

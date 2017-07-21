@@ -2,7 +2,8 @@
   position: relative;
 }
 
-.media-gallery__images img, .media-gallery__preview img{
+.media-gallery__images img,
+.media-gallery__preview img {
   cursor: pointer;
 }
 
@@ -14,7 +15,7 @@
   margin-top: 10px;
 }
 
-.slick-controls__gallery .slick__pause.slick__pause--gallery{
+.slick-controls__gallery .slick__pause.slick__pause--gallery {
   display: none;
 }
 

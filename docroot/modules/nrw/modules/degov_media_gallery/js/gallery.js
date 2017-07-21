@@ -32,7 +32,6 @@
           src: img.src,
           w:img.naturalWidth,
           h:img.naturalHeight
-
         };
         $pswpItems.push($pswpItem);
       });
@@ -42,7 +41,7 @@
         var $options = {
           index: $index
         };
-        // Initializes and opens PhotoSwipe
+        // Initializes and opens PhotoSwipe.
         var $pswp = new PhotoSwipe($pswpElement, PhotoSwipeUI_Default, $pswpItems, $options);
         $pswp.init();
       });
