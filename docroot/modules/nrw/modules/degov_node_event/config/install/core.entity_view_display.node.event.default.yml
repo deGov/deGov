@@ -16,8 +16,6 @@ dependencies:
     module:
       - degov_node_event
   module:
-    - address
-    - datetime
     - entity_reference_revisions
     - user
 id: node.event.default
@@ -26,7 +24,7 @@ bundle: event
 mode: default
 content:
   field_content_paragraphs:
-    weight: 2
+    weight: 0
     label: hidden
     settings:
       view_mode: default
@@ -34,24 +32,8 @@ content:
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
     region: content
-  field_event_date:
-    weight: 0
-    label: hidden
-    settings:
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_event_location:
-    weight: 1
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: address_default
-    region: content
   field_sidebar_right_paragraphs:
-    weight: 3
+    weight: 1
     label: hidden
     settings:
       view_mode: default
@@ -61,6 +43,8 @@ content:
     region: content
 hidden:
   field_social_media: true
+  field_event_date: true
+  field_event_location: true
   field_tags: true
   field_teaser_image: true
   field_teaser_text: true
