@@ -45,6 +45,7 @@ aside{
         &__image-wrapper{
            @include make-md-column(3);
            margin-bottom: 0;
+           min-height: 200px;
         }
         &__position{
             color: $brand-primary;
