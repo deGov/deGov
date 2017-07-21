@@ -1,0 +1,30 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_map_address_reference
+    - media_entity.bundle.address
+    - paragraphs.paragraphs_type.map
+  enforced:
+    module:
+      - degov_paragraph_map
+id: paragraph.map.field_map_address_reference
+field_name: field_map_address_reference
+entity_type: paragraph
+bundle: map
+label: 'Adresse Referenz'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      address: address
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

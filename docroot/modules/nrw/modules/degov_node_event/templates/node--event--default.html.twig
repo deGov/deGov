@@ -67,6 +67,7 @@
 #}
 {%
   set classes = [
+    'default-mode',
     node.bundle|clean_class,
     node.isPromoted() ? 'is-promoted',
     node.isSticky() ? 'is-sticky',
@@ -78,12 +79,13 @@
 <article{{ attributes.addClass(classes) }}>
 
   <div class="event__content content">
-    {{ content.field_event_date }}
-    {{ content.field_event_location }}
     {% if node.field_content_paragraphs.value %}
       <div class="event__content-paragraphs">
         {{ content.field_content_paragraphs }}
       </div>
+    {% endif %}
+    {% if node.field_sidebar_right_paragraphs.value %}
+      {{ content.field_sidebar_right_paragraphs }}
     {% endif %}
   </div>
 

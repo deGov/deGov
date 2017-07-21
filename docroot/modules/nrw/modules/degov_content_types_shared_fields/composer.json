@@ -5,6 +5,21 @@
   "license": "GPL-2.0+",
   "homepage": "https://www.nrwgov.org",
   "require": {
-    "drupal/twig_field_value": "^1.1"
+    "drupal/twig_field_value": "^1.1",
+    "drupal/shariff": "^1.0"
+  },
+  "repositories": {
+    "shariff": {
+      "type": "package",
+      "package": {
+        "name": "heiseonline/shariff",
+        "version": "master",
+        "type": "drupal-library",
+        "dist": {
+          "url": "https://github.com/heiseonline/shariff/archive/master.zip",
+          "type": "zip"
+        }
+      }
+    }
   }
 }

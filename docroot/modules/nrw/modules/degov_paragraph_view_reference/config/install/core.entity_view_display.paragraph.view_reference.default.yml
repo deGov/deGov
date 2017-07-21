@@ -10,7 +10,7 @@ dependencies:
     - field.field.paragraph.view_reference.field_view_reference_view
     - paragraphs.paragraphs_type.view_reference
   module:
-    - viewsreference
+    - degov_views_helper
 id: paragraph.view_reference.default
 targetEntityType: paragraph
 bundle: view_reference
@@ -39,6 +39,6 @@ content:
       plugin_types:
         - block
     third_party_settings: {  }
-    type: viewsreference_formatter
+    type: degov_viewsreference_formatter
     region: content
 hidden: {  }

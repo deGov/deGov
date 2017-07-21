@@ -1,0 +1,37 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.media.tweet.embed_code
+    - field.field.media.tweet.field_media_in_library
+    - field.field.media.tweet.field_tags
+    - media_entity.bundle.tweet
+  module:
+    - media_entity_twitter
+id: media.tweet.default
+targetEntityType: media
+bundle: tweet
+mode: default
+content:
+  embed_code:
+    type: twitter_embed
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_tags:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_media_in_library: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

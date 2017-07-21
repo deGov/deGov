@@ -126,8 +126,11 @@
       "post-update-cmd": [
         "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
       ],
-      "coder": [
+      "coder-check": [
         "./bin/phpcs --standard=vendor/drupal/coder/coder_sniffer/Drupal --colors --exclude=Drupal.Files.TxtFileLineLength"
+      ],
+      "coder-fix": [
+        "./bin/phpcbf --standard=vendor/drupal/coder/coder_sniffer/Drupal --exclude=Drupal.Files.TxtFileLineLength"
       ]
     },
     "config": {
