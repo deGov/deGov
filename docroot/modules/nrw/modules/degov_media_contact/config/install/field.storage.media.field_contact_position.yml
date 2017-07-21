@@ -1,6 +1,9 @@
 langcode: de
 status: true
 dependencies:
+  enforced:
+    module:
+      - degov_media_contact
   module:
     - media_entity
 id: media.field_contact_position
