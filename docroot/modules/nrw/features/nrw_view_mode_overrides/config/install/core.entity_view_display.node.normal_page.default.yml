@@ -2,29 +2,45 @@ langcode: de
 status: true
 dependencies:
   config:
-    - field.field.node.event.field_content_paragraphs
-    - field.field.node.event.field_event_date
-    - field.field.node.event.field_event_location
-    - field.field.node.event.field_sidebar_right_paragraphs
-    - field.field.node.event.field_tags
-    - field.field.node.event.field_teaser_image
-    - field.field.node.event.field_teaser_text
-    - field.field.node.event.field_teaser_title
-    - node.type.event
+    - field.field.node.normal_page.field_content_paragraphs
+    - field.field.node.normal_page.field_header_paragraphs
+    - field.field.node.normal_page.field_sidebar_right_paragraphs
+    - field.field.node.normal_page.field_social_media
+    - field.field.node.normal_page.field_tags
+    - field.field.node.normal_page.field_teaser_image
+    - field.field.node.normal_page.field_teaser_text
+    - field.field.node.normal_page.field_teaser_title
+    - node.type.normal_page
   enforced:
     module:
-      - degov_node_event
+      - degov_node_normal_page
   module:
-    - address
-    - datetime
     - entity_reference_revisions
     - user
-id: node.event.default
+id: node.normal_page.default
 targetEntityType: node
-bundle: event
+bundle: normal_page
 mode: default
 content:
   field_content_paragraphs:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_header_paragraphs:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_sidebar_right_paragraphs:
     weight: 2
     label: hidden
     settings:
@@ -33,35 +49,12 @@ content:
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
     region: content
-  field_event_date:
-    weight: 0
-    label: hidden
-    settings:
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_event_location:
-    weight: 1
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: address_default
-    region: content
-  field_sidebar_right_paragraphs:
-    weight: 3
-    label: hidden
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
-    region: content
 hidden:
+  field_social_media: true
   field_tags: true
   field_teaser_image: true
   field_teaser_text: true
   field_teaser_title: true
   langcode: true
   links: true
+  shariff_field: true

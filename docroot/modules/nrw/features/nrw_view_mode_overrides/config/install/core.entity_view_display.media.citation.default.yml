@@ -2,23 +2,24 @@ langcode: de
 status: true
 dependencies:
   config:
-    - field.field.media.contact.field_contact_email
-    - field.field.media.contact.field_contact_fax
-    - field.field.media.contact.field_contact_image
-    - field.field.media.contact.field_contact_tel
-    - field.field.media.contact.field_contact_title
-    - field.field.media.contact.field_media_in_library
+    - field.field.media.citation.field_citation_date
+    - field.field.media.citation.field_citation_image
+    - field.field.media.citation.field_citation_text
+    - field.field.media.citation.field_citation_title
+    - field.field.media.citation.field_media_in_library
+    - field.field.media.citation.field_tags
     - image.style.thumbnail
-    - media_entity.bundle.contact
+    - media_entity.bundle.citation
   enforced:
     module:
-      - degov_media_contact
+      - degov_media_citation
   module:
+    - datetime
     - image
     - user
-id: media.contact.default
+id: media.citation.default
 targetEntityType: media
-bundle: contact
+bundle: citation
 mode: default
 content:
   created:
@@ -31,24 +32,17 @@ content:
       custom_date_format: ''
       timezone: ''
     third_party_settings: {  }
-  field_contact_email:
+  field_citation_date:
     weight: 7
-    label: visually_hidden
+    label: above
     settings:
-      link_to_entity: false
+      format_type: short
+      timezone_override: ''
     third_party_settings: {  }
-    type: string
+    type: datetime_default
     region: content
-  field_contact_fax:
+  field_citation_image:
     weight: 6
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_contact_image:
-    weight: 8
     label: hidden
     settings:
       view_mode: teaser_landscape_2_1
@@ -56,15 +50,14 @@ content:
     third_party_settings: {  }
     type: entity_reference_entity_view
     region: content
-  field_contact_tel:
+  field_citation_text:
     weight: 5
-    label: visually_hidden
-    settings:
-      link_to_entity: false
+    label: hidden
+    settings: {  }
     third_party_settings: {  }
-    type: string
+    type: basic_string
     region: content
-  field_contact_title:
+  field_citation_title:
     weight: 4
     label: hidden
     settings:
@@ -72,6 +65,14 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_tags:
+    type: entity_reference_label
+    weight: 8
+    region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
   name:
     label: hidden
     type: string

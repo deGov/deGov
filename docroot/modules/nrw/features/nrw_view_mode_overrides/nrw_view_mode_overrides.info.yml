@@ -5,13 +5,15 @@ core: 8.x
 dependencies:
   - address
   - datetime
+  - entity_browser
   - entity_reference_revisions
   - image
   - image_widget_crop
   - link
   - media_entity
+  - paragraphs
+  - path
   - text
   - user
   - viewsreference
   - workbench_moderation
-  - config_rewrite

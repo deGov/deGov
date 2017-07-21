@@ -2,10 +2,11 @@ langcode: de
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.slim
     - field.field.node.normal_page.field_content_paragraphs
     - field.field.node.normal_page.field_header_paragraphs
     - field.field.node.normal_page.field_sidebar_right_paragraphs
+    - field.field.node.normal_page.field_social_media
     - field.field.node.normal_page.field_tags
     - field.field.node.normal_page.field_teaser_image
     - field.field.node.normal_page.field_teaser_text
@@ -17,10 +18,10 @@ dependencies:
   module:
     - text
     - user
-id: node.normal_page.teaser
+id: node.normal_page.slim
 targetEntityType: node
 bundle: normal_page
-mode: teaser
+mode: slim
 content:
   field_teaser_image:
     type: entity_reference_entity_view
@@ -28,15 +29,16 @@ content:
     region: content
     label: hidden
     settings:
-      view_mode: teaser_squared_1_1
+      view_mode: teaser_landscape_small_8_3
       link: false
     third_party_settings: {  }
   field_teaser_text:
-    type: text_default
+    type: text_trimmed
     weight: 2
     region: content
     label: hidden
-    settings: {  }
+    settings:
+      trim_length: 600
     third_party_settings: {  }
   field_teaser_title:
     type: string
@@ -50,6 +52,8 @@ hidden:
   field_content_paragraphs: true
   field_header_paragraphs: true
   field_sidebar_right_paragraphs: true
+  field_social_media: true
   field_tags: true
   langcode: true
   links: true
+  shariff_field: true
