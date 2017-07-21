@@ -269,7 +269,6 @@
 	    }
 	  };
 
-
 	  Drupal.behaviors.selectize = {
 	    attach: function attach(context, settings) {
 	      $('.webform-submission-form .form-select').selectric();
@@ -282,9 +281,9 @@
 	        $('.reset-form').click(function () {
 	          $(this).closest('.paragraph__content').find('form').trigger('reset');
 	        });
-          });
-        }
-      };
+	      });
+	    }
+	  };
 
 	  // Slick slider in press list
 	  Drupal.behaviors.slickPress = {

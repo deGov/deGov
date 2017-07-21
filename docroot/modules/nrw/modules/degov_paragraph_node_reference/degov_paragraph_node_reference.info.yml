@@ -10,3 +10,4 @@ dependencies:
   - workbench_moderation
   - degov_content_types_shared_fields
   - degov_node_normal_page
+  - entity_reference_display
