@@ -14,3 +14,21 @@ function degov_paragraph_webformular_preprocess(&$variables, $hook, &$info) {
     'entity_view_modes' => [],
   ]);
 }
+
+/**
+ * Implements hook_form_alter().
+ *
+ * @param $form
+ * @param \Drupal\Core\Form\FormState $form_state
+ * @param $form_id
+ */
+function degov_paragraph_webformular_form_alter(&$form, \Drupal\Core\Form\FormState &$form_state, $form_id) {
+  if (strpos($form_id, 'webform_submission_') !== FALSE) {
+    $form['actions']['reset'] = [
+      '#markup' => '<div class="reset-form">'.
+            '<span class="reset">' . t('Zurücksetzen'). '<i class="fa fa-times" aria-hidden="true"></i></span>'.
+        '</div>',
+      '#weight' => -100,
+    ];
+  }
+}
