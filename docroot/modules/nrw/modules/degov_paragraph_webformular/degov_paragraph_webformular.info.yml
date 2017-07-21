@@ -9,5 +9,5 @@ dependencies:
   - field
   - node
   - paragraphs
-  - webform
+  - webform_ui
   - workbench_moderation
