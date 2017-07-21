@@ -63,7 +63,7 @@ aside{
             flex-direction: column;
             justify-content: center;
             align-self: center;
-            @include make-md-column(9);           
+            @include make-md-column(9);         
             a{
                 color: $brand-primary;
                 
