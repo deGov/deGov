@@ -28,7 +28,7 @@ content:
     region: content
     label: hidden
     settings:
-      view_mode: teaser_squared_1_1
+      view_mode: default
       link: false
     third_party_settings: {  }
   field_teaser_text:
