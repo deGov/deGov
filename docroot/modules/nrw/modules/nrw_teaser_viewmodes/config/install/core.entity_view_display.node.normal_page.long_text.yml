@@ -15,15 +15,8 @@ dependencies:
     module:
       - degov_node_normal_page
   module:
-    - panelizer
     - text
     - user
-third_party_settings:
-  panelizer:
-    enable: false
-    custom: false
-    allow: false
-    default: default
 id: node.normal_page.long_text
 targetEntityType: node
 bundle: normal_page

@@ -15,7 +15,6 @@ dependencies:
   - lightning_core
   - node
   - options
-  - panelizer
   - paragraphs
   - text
   - user
