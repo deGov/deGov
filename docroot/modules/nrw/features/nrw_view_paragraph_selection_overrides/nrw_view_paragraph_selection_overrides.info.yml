@@ -1,0 +1,8 @@
+name: 'NRW View Paragraph Selection Overrides'
+description: 'Overrides paragraph selection, so only applicable paragraph types can be selected (e.g. Slideshow but not Slide). '
+type: module
+core: 8.x
+dependencies:
+  - entity_reference_revisions
+  - field
+  - config_rewrite
