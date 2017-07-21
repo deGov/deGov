@@ -269,6 +269,7 @@
 	    }
 	  };
 
+
 	  Drupal.behaviors.selectize = {
 	    attach: function attach(context, settings) {
 	      $('.webform-submission-form .form-select').selectric();
@@ -281,6 +282,26 @@
 	        $('.reset-form').click(function () {
 	          $(this).closest('.paragraph__content').find('form').trigger('reset');
 	        });
+          });
+        }
+      };
+
+	  // Slick slider in press list
+	  Drupal.behaviors.slickPress = {
+	    attach: function attach(context, settings) {
+	      $('.view-latest-press .view-content').slick({
+	        dots: true,
+	        infinite: false,
+	        speed: 300,
+	        slidesToShow: 3,
+	        slidesToScroll: 3,
+	        responsive: [{
+	          breakpoint: 992,
+	          settings: {
+	            slidesToShow: 1,
+	            slidesToScroll: 1
+	          }
+	        }]
 	      });
 	    }
 	  };
