@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @file
+ * Contains un/installation hooks for the degov_media_gallery module.
+ */
+
+use Drupal\degov_content_types_shared_fields\Common;
+
+/**
+ * Implements hook_uninstall().
+ */
+function degov_media_gallery_uninstall() {
+  // Removes all module type defined content when uninstalling the module.
+  Common::removeContent([
+    'entity_type' => 'media',
+    'entity_bundles' => ['gallery'],
+  ]);
+}
