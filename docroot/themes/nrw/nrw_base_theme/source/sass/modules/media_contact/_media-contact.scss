@@ -7,6 +7,9 @@
     padding-top: 0;
     background-color: $brand-primary;
     color: $color-white;
+    &__position{
+       
+    }
     &__title{
         font-weight: bold;
     }
@@ -50,7 +53,9 @@ aside{
         &__position{
             color: $brand-primary;
             font-weight: bold;
-            margin: 0; 
+            padding: 0 $grid-gutter-width/2;
+            margin-bottom: $grid-gutter-width/2;
+            margin-top: 0;
         }
         &__info{
             //margin: $grid-gutter-width/2 0 0  0;
