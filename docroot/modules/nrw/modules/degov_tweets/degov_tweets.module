@@ -1,9 +1,13 @@
 <?php
 
 /**
- * Implements hook_theme()
+ * @file
+ * Contains all hooks and custom functions for the tweets module.
  */
 
+/**
+ * Implements hook_theme().
+ */
 function degov_tweets_theme($existing, $type, $theme, $path) {
   return [
     'degov_tweets' => [
@@ -16,26 +20,24 @@ function degov_tweets_theme($existing, $type, $theme, $path) {
 }
 
 /**
- * Preprocess tweets.
- *
- * @param $variables
+ * Implements template_preprocess_HOOK().
  */
 function template_preprocess_degov_tweets(&$variables) {
   $variables['attributes']['class'][] = 'tweets';
   $tweets = $variables['tweets'];
-  $items = array();
+  $items = [];
   if (!empty($tweets)) {
     foreach ($tweets as $tweet) {
 
-      $settings = array(
+      $settings = [
         '#type' => 'processed_text',
         '#text' => degov_tweets_parse_tweet($tweet->text),
         '#format' => 'rich_text',
-        '#filter_types_to_skip' => array(),
-      );
+        '#filter_types_to_skip' => [],
+      ];
       $text = \Drupal::service('renderer')->renderPlain($settings);
 
-      $items[] = array(
+      $items[] = [
         'id' => $tweet->id,
         'text' => $text,
         'time' => $tweet->created_at,
@@ -45,7 +47,7 @@ function template_preprocess_degov_tweets(&$variables) {
         'screen_name' => $tweet->user->screen_name,
         'user_url' => $tweet->user->url,
         'avatar' => $tweet->user->profile_image_url_https,
-      );
+      ];
     }
   }
   $variables['items'] = $items;
@@ -55,29 +57,19 @@ function template_preprocess_degov_tweets(&$variables) {
 /**
  * Replace hashtags, user mentions and links with appropriate twitter links.
  *
- * @param $text
+ * @param string $text
+ *   Contains text to be replaced.
  *
  * @return string
  *   Return the processed text string.
  */
-function degov_tweets_parse_tweet($text){
-  //links
-  $text = preg_replace(
-    '@(https?://([-\w\.]+)+(/([\w/_\.]*(\?\S+)?(#\S+)?)?)?)@',
-    '<a target="_blank" href="$1">$1</a>',
-    $text);
-
-  //users
-  $text = preg_replace(
-    '/@(\w+)/',
-    '<a target="_blank" href="https://twitter.com/$1">@$1</a>',
-    $text);
-
-  //hashtags
-  $text = preg_replace(
-    '/\s+#(\w+)/',
-    ' <a target="_blank" href="https://twitter.com/hashtag/$1">#$1</a>',
-    $text);
+function degov_tweets_parse_tweet($text) {
+  // Links replacement.
+  $text = preg_replace('@(https?://([-\w\.]+)+(/([\w/_\.]*(\?\S+)?(#\S+)?)?)?)@', '<a target="_blank" href="$1">$1</a>', $text);
+  // User replacement.
+  $text = preg_replace('/@(\w+)/', '<a target="_blank" href="https://twitter.com/$1">@$1</a>', $text);
+  // Hashtag replacement.
+  $text = preg_replace('/\s+#(\w+)/', ' <a target="_blank" href="https://twitter.com/hashtag/$1">#$1</a>', $text);
 
   return $text;
 }

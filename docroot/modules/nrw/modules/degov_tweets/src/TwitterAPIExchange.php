@@ -1,6 +1,8 @@
 <?php
 /**
- * Twitter-API-PHP : Simple PHP wrapper for the v1.1 API
+ * Twitter-API-PHP : Simple PHP wrapper for the v1.1 API.
+ *
+ * An altered version of the Twitter-API-PHP library.
  *
  * PHP version 5.3.10
  *
