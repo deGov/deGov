@@ -18,6 +18,7 @@
       <div class="media-contact__image">{{ content.field_contact_image }}</div>
     </div>
     <div class="col-md-12 media-contact__info">
+      <h2 class="media-contact__position">{{ content.field_contact_position|field_value }}</h2>
       <div class="media-contact__title">{{ content.field_contact_title|field_value }}</div>
       <div class="media-contact__tel">{% trans %}Tel.:{% endtrans %} {{ content.field_contact_tel|field_value }}</div>
       <div class="media-contact__fax">{% trans %}Fax:{% endtrans %} {{ content.field_contact_fax|field_value }}</div>

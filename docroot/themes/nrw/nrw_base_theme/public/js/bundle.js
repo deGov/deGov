@@ -270,20 +270,36 @@
 	  };
 
 	  // Slick slider in press list
-	  $('.view-latest-press .view-content').slick({
-	    dots: true,
-	    infinite: false,
-	    speed: 300,
-	    slidesToShow: 3,
-	    slidesToScroll: 3,
-	    responsive: [{
-	      breakpoint: 992,
-	      settings: {
-	        slidesToShow: 1,
-	        slidesToScroll: 1
-	      }
-	    }]
-	  });
+	  Drupal.behaviors.slickPress = {
+	    attach: function attach(context, settings) {
+	      $('.view-latest-press .view-content').slick({
+	        dots: true,
+	        infinite: false,
+	        speed: 300,
+	        slidesToShow: 3,
+	        slidesToScroll: 3,
+	        responsive: [{
+	          breakpoint: 992,
+	          settings: {
+	            slidesToShow: 1,
+	            slidesToScroll: 1
+	          }
+	        }]
+	      });
+	    }
+	  };
+
+	  // Check heigh of image in contact person
+
+	  Drupal.behaviors.contactHeight = {
+	    attach: function attach(context, settings) {
+	      $('.region-content .media-contact').once('check-height').each(function () {
+	        var height = $(this).find('.media-contact__image-wrapper').height();
+	        console.info(height);
+	        $(this).find('.media-contact__info').css('height', height + 'px');
+	      });
+	    }
+	  };
 	})(jQuery, window.Drupal);
 
 /***/ }),
