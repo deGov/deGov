@@ -1,0 +1,42 @@
+{% if items %}
+<div{{ attributes.addClass(['twitter', 'feed']) }}>
+  <div class="row">
+    <div class="tweets-slideshow">
+      <div class="tweets tweets__slides">
+        {% for tweet in items %}
+          <div class="tweet">
+            <div class="avatar">
+              <a alt="{{ tweet.screen_name }}" title="{{ tweet.screen_name }}" href="{{ tweet.user_url }}">
+                <img src="{{ tweet.avatar }}">
+              </a>
+            </div>
+            <div class="timestamp">
+              {% trans %}<em class="placeholder">{{ tweet.time_ago }}</em> ago{% endtrans %}
+            </div>
+            <div class="name-handle">
+              <div class="name">
+                <a href="https://twitter.com/{{ tweet.screen_name }}">{{ tweet.username }}</a>
+              </div>
+              <div class="handle">
+                <a href="https://twitter.com/{{ tweet.screen_name }}">@{{ tweet.screen_name }}</a>
+              </div>
+            </div>
+            <div class="text">
+              {{ tweet.text }}
+            </div>
+            <ul class="actions">
+              <li><a href="https://twitter.com/intent/tweet?in_reply_to={{ tweet.id }}">{{ 'Reply'|t }}</a></li>
+              <li><a href="https://twitter.com/intent/retweet?tweet_id={{ tweet.id }}">{{ 'Retweet'|t }}</a></li>
+              <li><a href="https://twitter.com/intent/favorite?tweet_id={{ tweet.id }}">{{ 'Favorite'|t }}</a></li>
+            </ul>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="slick-controls">
+        <button class="slick__pause">{{ 'Pause'|t }}</button>
+        <button class="slick__play">{{ 'Play'|t }}</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
