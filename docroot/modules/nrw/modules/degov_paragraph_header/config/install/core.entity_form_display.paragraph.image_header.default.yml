@@ -5,6 +5,7 @@ dependencies:
     - entity_browser.browser.media_browser
     - field.field.paragraph.image_header.field_header_media
     - field.field.paragraph.image_header.field_header_text
+    - field.field.paragraph.image_header.field_override_caption
     - paragraphs.paragraphs_type.image_header
   enforced:
     module:
@@ -20,7 +21,7 @@ mode: default
 content:
   field_header_media:
     type: entity_browser_entity_reference
-    weight: 8
+    weight: 0
     settings:
       entity_browser: media_browser
       field_widget_display: label
@@ -32,13 +33,21 @@ content:
     region: content
     third_party_settings: {  }
   field_header_text:
-    weight: 9
+    weight: 1
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
     region: content
+  field_override_caption:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
 hidden:
   created: true
   status: true

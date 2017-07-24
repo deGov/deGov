@@ -12,6 +12,7 @@ dependencies:
     - field.field.media.image.field_image_title
     - field.field.media.image.field_image_width
     - field.field.media.image.field_media_in_library
+    - field.field.media.image.field_tags
     - media_entity.bundle.image
 id: media.image.thumbnail
 targetEntityType: media
@@ -29,6 +30,7 @@ hidden:
   field_image_title: true
   field_image_width: true
   field_media_in_library: true
+  field_tags: true
   langcode: true
   name: true
   thumbnail: true

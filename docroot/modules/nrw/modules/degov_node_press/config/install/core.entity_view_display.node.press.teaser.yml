@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.press.field_content_paragraphs
     - field.field.node.press.field_press_date
     - field.field.node.press.field_sidebar_right_paragraphs
+    - field.field.node.press.field_tags
     - field.field.node.press.field_teaser_image
     - field.field.node.press.field_teaser_text
     - field.field.node.press.field_teaser_title
@@ -41,6 +42,7 @@ content:
 hidden:
   field_content_paragraphs: true
   field_sidebar_right_paragraphs: true
+  field_tags: true
   field_teaser_image: true
   field_teaser_text: true
   langcode: true

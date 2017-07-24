@@ -9,22 +9,22 @@ core: '8.x'
 dependencies:
   - admin_toolbar
   - admin_toolbar_tools
-  - content_access
-  - entity_reference_revisions
+  - automated_cron
+  - config_rewrite
   - entity_browser
+  - entity_reference_revisions
   - features
   - filter
-  - paragraphs
-  - simple_gmap
-  - social_media_links
-  - spamspan
-  - viewsreference
+  - open_readspeaker
   - pathauto
-  - simple_sitemap
-  - automated_cron
-  - ultimate_cron
+  - paragraphs
+  - piwik
   - scheduled_updates
-  - easy_breadcrumb
+  - sitemap
+  - simple_sitemap
+  - spamspan
+  - ultimate_cron
+  - viewsreference
   - webform
 
 themes:
@@ -33,3 +33,8 @@ themes:
 
 base profile:
   name: lightning
+  excluded_dependencies:
+    - lightning_landing_page
+    - lightning_layout
+    - lightning_page
+    - lightning_contact_form

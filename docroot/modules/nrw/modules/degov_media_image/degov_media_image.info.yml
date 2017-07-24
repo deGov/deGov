@@ -1,4 +1,4 @@
-name: 'deGov - Media Bild'
+name: 'deGov - Media Image'
 description: 'Erweiterung des existierenden Image Bundles um Copyright, Caption und weitere Felder.'
 type: module
 package: deGov
@@ -9,6 +9,7 @@ dependencies:
   - datetime
   - degov_content_types_shared_fields
   - degov_taxonomy_term_copyright
+  - degov_taxonomy_term_tags
   - field
   - file
   - image

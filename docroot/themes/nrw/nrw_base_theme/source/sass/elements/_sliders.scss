@@ -1,55 +1,158 @@
-// Slick arrows are disabled, but if they are enabled these are the styles
-.slick-arrow {
-  background: $color-white-transparent;
-  &:hover,
-  &:focus,
-  &:active {
-    background: $gray-light;
+// Slider controls
+.slick-controls {
+  position: absolute;
+  display: inline-block;
+  top: auto;
+  right: 0;
+  bottom: 28px;
+  left: auto;
+  margin-right: 90px;
+  @media (max-width: $screen-md-max) {
+    margin-right: 80px;
   }
-  &.slick-next {
-    &:before {
-      content: "\f105";
-    }
+  @media (max-width: $screen-sm-max) {
+    display: none;
   }
-  &.slick-prev {
-    &:before {
-      content: "\f104";
-    }
-  }
-  &.slick-next, &.slick-prev {
-    &:before {
-      font-size: $font-size-h3;
-      color: $color-blue;
+  .slick__pause,
+  .slick__play {
+    display: none;
+    height: auto;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    font-size: 0;
+    line-height: 0;
+    text-shadow: none;
+    &::before {
+      position: relative;
+      top: auto;
+      bottom: -3px;
+      color: $brand-primary;
+      font-size: 22px;
+      line-height: 22px;
+      font-family: fontawesome;
       text-shadow: none;
+      content: "\f04b"; // For play button
+    }
+  }
+  .slick__pause {
+    display: inline-block;
+    &::before {
+      content: "\f04c";
     }
   }
 }
 
-// slide arrows which are added in the template
-.inslide-slick-prev,
-.inslide-slick-next {
-  width: $grid-gutter-width;
-  height: $grid-gutter-width;
-  top: 25%; 
-  appearance: none;
-  background:transparent;
-  border: 0;
-  position: absolute;
-  z-index: 9;
-  top: 50%;
-  transform: translate(0,-50%);
-  outline: none;
-  &:before {
-    font-size: $grid-gutter-width;
-    color: $body-bg;
-    text-shadow: 5px 5px 10px rgba(0,0,0,0.75);
+// Slick Dots
+.slick-dots {
+  left: auto;
+  right: 120px;
+  bottom: 33px;
+  width: 100%;
+  margin-right: $padding-small-horizontal*2;
+  text-align: center;
+  @include calc('max-width', '14% - 70px');
+  @media (max-width: $screen-md-max) {
+    @include calc('max-width', '20% - 70px');
+  }
+  @media (max-width: $screen-sm-max) {
+    right: 0;
+    max-width: 100%;
+  }
+  li {
+    height: 11px;
+    width: 11px;
+    margin: 0 2px;
+    button {
+      height: 11px;
+      width: 11px;
+      padding: 0;
+      border: 2px solid $brand-primary;
+      border-radius: 100px;
+      background-color: rgba($color-white, 0.4);
+      &::before {
+        display: none;
+      }
+    }
+    &.slick-active {
+      button {
+        background-color: $brand-primary;
+      }
+    }
+    @media (max-width: $screen-sm-max) {
+      button {
+        border: 2px solid $color-white-transparent;
+        background-color: $brand-primary;
+      }
+      &.slick-active {
+        button {
+          background-color: $color-white-transparent;
+        }
+      }
+    }
   }
 }
-.inslide-slick-prev {
-  @include icon($fa-var-arrow-left);
-  left: $grid-gutter-width;
+
+// Slick Arrows
+.slick-arrow {
+  height: auto;
+  width: auto;
+  top: auto;
+  left: auto;
+  @media (max-width: $screen-sm-max) {
+    display: none !important;
+  }
+  &:before {
+    font-family: fontawesome;
+    color: $brand-primary;
+  }
+  &.slick-prev {
+    right: 25%;
+    margin-right: -$padding-small-horizontal*5;
+    &:before {
+      content: "\f104";
+    }
+    @media (max-width: $screen-md-max) {
+      right: 35%;
+    }
+  }
+  &.slick-next {
+    right: 20px;
+    &:before {
+      content: "\f105";
+    }
+  }
 }
-.inslide-slick-next {
-  @include icon($fa-var-arrow-right);
-  right: $grid-gutter-width;
+
+// Slider specific styles
+.slideshow {
+  .slick-arrow {
+    bottom: -45px;
+    z-index: 10;
+    &:before {
+      font-size: 88px;
+      line-height: 88px;
+      margin: 0;
+      opacity: 1;
+    }
+  }
 }
+
+.press-list {
+  .slick-arrow {
+    top: -51px;
+    &:before {
+      font-size: $font-size-h1;
+    }
+  }
+  .slick-dots {
+    top: -67px;
+    right: 20px;
+    bottom: auto;
+    max-width: 17%;
+  }
+}
+
+

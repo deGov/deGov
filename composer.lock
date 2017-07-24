@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "18a643a5c403b329d14c90199cd5dea7",
+    "content-hash": "d34fb147614f6aa9afa4c1e64aae4bd9",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -1139,17 +1139,17 @@
         },
         {
             "name": "drupal/address",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/address",
-                "reference": "8.x-1.0"
+                "reference": "8.x-1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/address-8.x-1.0.zip",
-                "reference": "8.x-1.0",
-                "shasum": "2be22f841f8e4af2ba23b6bc9983e013c167c520"
+                "url": "https://ftp.drupal.org/files/projects/address-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "b669af5f16b92a0f7df334a3c4118bd2334f2ed2"
             },
             "require": {
                 "commerceguys/addressing": "~1.0",
@@ -1162,8 +1162,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0",
-                    "datestamp": "1495109886"
+                    "version": "8.x-1.1",
+                    "datestamp": "1499893143"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -1455,52 +1455,6 @@
             }
         },
         {
-            "name": "drupal/content_access",
-            "version": "dev-1.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/content_access",
-                "reference": "0e05c3ddde14716a8ea4bbb605b631a7d0470e56"
-            },
-            "require": {
-                "drupal/core": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.x-dev",
-                    "datestamp": "1472027039"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "fago",
-                    "homepage": "https://www.drupal.org/user/16747"
-                },
-                {
-                    "name": "good_man",
-                    "homepage": "https://www.drupal.org/user/265439"
-                },
-                {
-                    "name": "id.tarzanych",
-                    "homepage": "https://www.drupal.org/user/2776543"
-                }
-            ],
-            "description": "Provides flexible content access control.",
-            "homepage": "https://www.drupal.org/project/content_access",
-            "support": {
-                "source": "http://cgit.drupalcode.org/content_access"
-            },
-            "time": "2017-05-12 05:22:07"
-        },
-        {
             "name": "drupal/core",
             "version": "8.3.4",
             "source": {
@@ -1664,6 +1618,7 @@
             "type": "drupal-core",
             "extra": {
                 "patches_applied": {
+                    "2893029 - StringTranslationTrait consumers cannot be reliably serialized without DependencySerializationTrait": "https://www.drupal.org/files/issues/2893029-full-fix-test-from-3.patch",
                     "2652138 - ImageFormatter does not support SVGs": "https://www.drupal.org/files/issues/2652138-41.patch",
                     "1356276 - Allow profiles to provide a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/1356276-303.patch",
                     "2880374 - Experimental modules should not have warnings after being installed": "https://www.drupal.org/files/issues/2880374-remove-experimental-warnings-6.patch",
@@ -1905,6 +1860,49 @@
             }
         },
         {
+            "name": "drupal/date_popup",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/date_popup",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/date_popup-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "7a950c593e185bdf677f87b5d724b55a00768d67"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1496370243"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "benjy",
+                    "homepage": "https://www.drupal.org/user/1852732"
+                }
+            ],
+            "description": "Provides a HTML 5 date popup for all views filters.",
+            "homepage": "https://www.drupal.org/project/date_popup",
+            "support": {
+                "source": "http://cgit.drupalcode.org/date_popup"
+            }
+        },
+        {
             "name": "drupal/diff",
             "version": "1.0.0-rc1",
             "source": {
@@ -1985,115 +1983,6 @@
                 "source": "http://cgit.drupalcode.org/diff",
                 "issues": "https://www.drupal.org/project/issues/diff"
             }
-        },
-        {
-            "name": "drupal/easy_breadcrumb",
-            "version": "1.6.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/easy_breadcrumb",
-                "reference": "8.x-1.6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/easy_breadcrumb-8.x-1.6.zip",
-                "reference": "8.x-1.6",
-                "shasum": "d7e4fcbb76a65bc33230d45c3bf41c4689b8e1a2"
-            },
-            "require": {
-                "drupal/core": "~8.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.6",
-                    "datestamp": "1487359983"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Greg Boggs",
-                    "homepage": "https://www.drupal.org/user/153069"
-                },
-                {
-                    "name": "rakesh.gectcr",
-                    "homepage": "https://www.drupal.org/user/1177822"
-                },
-                {
-                    "name": "sonemonu",
-                    "homepage": "https://www.drupal.org/user/1667988"
-                }
-            ],
-            "description": "Adds configuration to the system breadcrumbs.",
-            "homepage": "https://www.drupal.org/project/easy_breadcrumb",
-            "support": {
-                "source": "http://cgit.drupalcode.org/easy_breadcrumb"
-            }
-        },
-        {
-            "name": "drupal/elasticsearch_connector",
-            "version": "dev-5.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/elasticsearch_connector",
-                "reference": "d827f969003870a094bc5d44a5cff4f62b0bf76e"
-            },
-            "require": {
-                "drupal/core": "~8.0",
-                "nodespark/des-connector": "5.x-dev"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-5.x": "5.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-5.x-dev",
-                    "datestamp": "1497256741"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Nikolay Ignatov",
-                    "homepage": "http://www.nodespark.com",
-                    "email": "nignatov@nodespark.com",
-                    "role": "Creator and Maintainer"
-                },
-                {
-                    "name": "Prateek Sachan",
-                    "homepage": "http://prateek.sachan.co",
-                    "email": "ps@prateeksachan.com",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Lachezar Valchev",
-                    "homepage": "https://drupal.org/u/lachezar.valchev",
-                    "email": "lachezar.valchev@gmail.com",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "See other contributors",
-                    "homepage": "https://www.drupal.org/node/2159059/committers"
-                }
-            ],
-            "description": "Elasticsearch Connector module for Drupal.",
-            "homepage": "https://www.drupal.org/project/elasticsearch_connector",
-            "support": {
-                "source": "https://github.com/nodespark/elasticsearch_connector",
-                "issues": "https://www.drupal.org/project/issues/elasticsearch_connector"
-            },
-            "time": "2017-06-22 11:16:43"
         },
         {
             "name": "drupal/embed",
@@ -2427,6 +2316,57 @@
             }
         },
         {
+            "name": "drupal/entity_reference_display",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/entity_reference_display",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/entity_reference_display-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "9a62b13c0e25318060a6b27b3fe0898507a4cdb8"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1479685139"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "kyberman",
+                    "homepage": "https://www.drupal.org/user/402924"
+                },
+                {
+                    "name": "murrayw",
+                    "homepage": "https://www.drupal.org/user/595658"
+                },
+                {
+                    "name": "wiifm",
+                    "homepage": "https://www.drupal.org/user/358731"
+                }
+            ],
+            "description": "Defines a field type for display mode selection for entity reference fields.",
+            "homepage": "https://www.drupal.org/project/entity_reference_display",
+            "support": {
+                "source": "http://cgit.drupalcode.org/entity_reference_display"
+            }
+        },
+        {
             "name": "drupal/entity_reference_revisions",
             "version": "1.3.0",
             "source": {
@@ -2561,17 +2501,17 @@
         },
         {
             "name": "drupal/facets",
-            "version": "1.0.0-alpha9",
+            "version": "1.0.0-alpha10",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/facets",
-                "reference": "8.x-1.0-alpha9"
+                "reference": "8.x-1.0-alpha10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/facets-8.x-1.0-alpha9.zip",
-                "reference": "8.x-1.0-alpha9",
-                "shasum": "b0b1e1cc57bc2586cf1afb67c3a8ed24771f4738"
+                "url": "https://ftp.drupal.org/files/projects/facets-8.x-1.0-alpha10.zip",
+                "reference": null,
+                "shasum": "3475249f89af0db594a3dd8341ccc6afc6dc532d"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -2585,8 +2525,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-alpha9",
-                    "datestamp": "1492681579"
+                    "version": "8.x-1.0-alpha10",
+                    "datestamp": "1499507343"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -2681,6 +2621,174 @@
             "homepage": "https://www.drupal.org/project/features",
             "support": {
                 "source": "http://cgit.drupalcode.org/features"
+            }
+        },
+        {
+            "name": "drupal/geocoder",
+            "version": "2.0.0-alpha5",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/geocoder",
+                "reference": "8.x-2.0-alpha5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/geocoder-8.x-2.0-alpha5.zip",
+                "reference": "8.x-2.0-alpha5",
+                "shasum": "1cbac01cc6217e17fd53dd8be68d4ad8f018c004"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "willdurand/geocoder": "^3.3"
+            },
+            "require-dev": {
+                "drupal/address": "*",
+                "drupal/geocoder_field": "*",
+                "drupal/geofield": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.0-alpha5",
+                    "datestamp": "1481538483"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Pol Dellaiera (@drupol)",
+                    "homepage": "https://www.drupal.org/u/pol",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Dean Reilly",
+                    "homepage": "https://www.drupal.org/user/336031"
+                },
+                {
+                    "name": "GJdan",
+                    "homepage": "https://www.drupal.org/user/847848"
+                },
+                {
+                    "name": "Pol",
+                    "homepage": "https://www.drupal.org/user/47194"
+                },
+                {
+                    "name": "Simon Georges",
+                    "homepage": "https://www.drupal.org/user/172312"
+                },
+                {
+                    "name": "indytechcook",
+                    "homepage": "https://www.drupal.org/user/245817"
+                },
+                {
+                    "name": "michaelfavia",
+                    "homepage": "https://www.drupal.org/user/49137"
+                },
+                {
+                    "name": "phayes",
+                    "homepage": "https://www.drupal.org/user/47098"
+                },
+                {
+                    "name": "vidhatanand",
+                    "homepage": "https://www.drupal.org/user/585764"
+                }
+            ],
+            "description": "An API to geocode and reverse geocode data into other GIS data types.",
+            "homepage": "https://drupal.org/project/geocoder",
+            "support": {
+                "source": "https://cgit.drupalcode.org/geocoder",
+                "issues": "https://drupal.org/project/issues/geocoder",
+                "irc": "irc://irc.freenode.org/drupal-geo"
+            }
+        },
+        {
+            "name": "drupal/geofield",
+            "version": "1.0.0-alpha4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/geofield",
+                "reference": "8.x-1.0-alpha4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/geofield-8.x-1.0-alpha4.zip",
+                "reference": "8.x-1.0-alpha4",
+                "shasum": "3bd9f6077bfce43631b35bee37e0b0d04c12c0e3"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "phayes/geophp": "dev-master"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha4",
+                    "datestamp": "1496311442"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Brandon Morrison",
+                    "homepage": "https://www.drupal.org/u/brandonian",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Pablo López",
+                    "homepage": "https://www.drupal.org/u/plopesc",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "chachasikes",
+                    "homepage": "https://www.drupal.org/user/50674"
+                },
+                {
+                    "name": "davidseth",
+                    "homepage": "https://www.drupal.org/user/254857"
+                },
+                {
+                    "name": "dtarc",
+                    "homepage": "https://www.drupal.org/user/114087"
+                },
+                {
+                    "name": "jherencia",
+                    "homepage": "https://www.drupal.org/user/360690"
+                },
+                {
+                    "name": "nikhiltri",
+                    "homepage": "https://www.drupal.org/user/270223"
+                },
+                {
+                    "name": "phayes",
+                    "homepage": "https://www.drupal.org/user/47098"
+                },
+                {
+                    "name": "plopesc",
+                    "homepage": "https://www.drupal.org/user/282415"
+                },
+                {
+                    "name": "zzolo",
+                    "homepage": "https://www.drupal.org/user/147331"
+                }
+            ],
+            "description": "Stores geographic and location data (points, lines, and polygons).",
+            "homepage": "https://www.drupal.org/project/geofield",
+            "support": {
+                "source": "http://git.drupal.org/project/geofield.git",
+                "issues": "https://www.drupal.org/project/issues/geofield",
+                "irc": "irc://irc.freenode.org/drupal-contribute"
             }
         },
         {
@@ -3704,66 +3812,6 @@
             }
         },
         {
-            "name": "drupal/password_policy",
-            "version": "3.0.0-alpha3",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/password_policy",
-                "reference": "8.x-3.0-alpha3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/password_policy-8.x-3.0-alpha3.zip",
-                "reference": "8.x-3.0-alpha3",
-                "shasum": "efe3ac404276ab2274b29393e55f6a4b7fb58681"
-            },
-            "require": {
-                "drupal/core": "*",
-                "drupal/ctools": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-3.x": "3.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-3.0-alpha3",
-                    "datestamp": "1488135183"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "AohRveTPV",
-                    "homepage": "https://www.drupal.org/user/2760115"
-                },
-                {
-                    "name": "deekayen",
-                    "homepage": "https://www.drupal.org/user/972"
-                },
-                {
-                    "name": "miglius",
-                    "homepage": "https://www.drupal.org/user/18741"
-                },
-                {
-                    "name": "nerdstein",
-                    "homepage": "https://www.drupal.org/user/1557710"
-                },
-                {
-                    "name": "shrop",
-                    "homepage": "https://www.drupal.org/user/14767"
-                }
-            ],
-            "description": "Sets up constraints and expiration of passwords.",
-            "homepage": "https://www.drupal.org/project/password_policy",
-            "support": {
-                "source": "http://cgit.drupalcode.org/password_policy"
-            }
-        },
-        {
             "name": "drupal/pathauto",
             "version": "1.0.0",
             "source": {
@@ -3917,57 +3965,6 @@
             }
         },
         {
-            "name": "drupal/search404",
-            "version": "1.0.0-beta2",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/search404",
-                "reference": "8.x-1.0-beta2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/search404-8.x-1.0-beta2.zip",
-                "reference": "8.x-1.0-beta2",
-                "shasum": "dc4459654f6d4a133307ff4a5c35981cf5a5d042"
-            },
-            "require": {
-                "drupal/core": "~8.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0-beta2",
-                    "datestamp": "1480048983"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "larssg",
-                    "homepage": "https://www.drupal.org/user/655"
-                },
-                {
-                    "name": "mslabba_zyxware",
-                    "homepage": "https://www.drupal.org/user/3471683"
-                },
-                {
-                    "name": "zyxware",
-                    "homepage": "https://www.drupal.org/user/222163"
-                }
-            ],
-            "description": "Automatically search for the keywords in URLs that result in 404 errors and show results instead of Page-Not-Found.",
-            "homepage": "https://www.drupal.org/project/search404",
-            "support": {
-                "source": "http://cgit.drupalcode.org/search404"
-            }
-        },
-        {
             "name": "drupal/search_api",
             "version": "1.2.0",
             "source": {
@@ -4034,7 +4031,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/search_api_sorts-8.x-1.0-beta1.zip",
-                "reference": null,
+                "reference": "8.x-1.0-beta1",
                 "shasum": "38faddafaaaa4f80ada772c9d58df819a80bacac"
             },
             "require": {
@@ -4143,53 +4140,6 @@
             }
         },
         {
-            "name": "drupal/simple_gmap",
-            "version": "1.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/simple_gmap",
-                "reference": "8.x-1.3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/simple_gmap-8.x-1.3.zip",
-                "reference": "8.x-1.3",
-                "shasum": "c14c6f8eb6f546370424a3ee962448c513ec9712"
-            },
-            "require": {
-                "drupal/core": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.3",
-                    "datestamp": "1494362585"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "jhodgdon",
-                    "homepage": "https://www.drupal.org/user/155601"
-                },
-                {
-                    "name": "martin107",
-                    "homepage": "https://www.drupal.org/user/2659379"
-                }
-            ],
-            "description": "Provides a Google Maps link/map formatter for simple Text fields.",
-            "homepage": "https://www.drupal.org/project/simple_gmap",
-            "support": {
-                "source": "http://cgit.drupalcode.org/simple_gmap"
-            }
-        },
-        {
             "name": "drupal/simple_sitemap",
             "version": "2.9.0",
             "source": {
@@ -4239,69 +4189,6 @@
                 "source": "https://cgit.drupalcode.org/simple_sitemap",
                 "issues": "https://drupal.org/project/issues/simple_sitemap",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
-            }
-        },
-        {
-            "name": "drupal/simplenews",
-            "version": "1.0.0-alpha3",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/simplenews",
-                "reference": "8.x-1.0-alpha3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/simplenews-8.x-1.0-alpha3.zip",
-                "reference": "8.x-1.0-alpha3",
-                "shasum": "1bf5c204d26ade0e56b15426018bc18d3acb0dab"
-            },
-            "require": {
-                "drupal/core": "*"
-            },
-            "require-dev": {
-                "drupal/monitoring": "*",
-                "drupal/simplenews_scheduler": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0-alpha3",
-                    "datestamp": "1487059683"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "AlexisWilke",
-                    "homepage": "https://www.drupal.org/user/356197"
-                },
-                {
-                    "name": "Berdir",
-                    "homepage": "https://www.drupal.org/user/214652"
-                },
-                {
-                    "name": "Simon Georges",
-                    "homepage": "https://www.drupal.org/user/172312"
-                },
-                {
-                    "name": "Sutharsan",
-                    "homepage": "https://www.drupal.org/user/73854"
-                },
-                {
-                    "name": "miro_dietiker",
-                    "homepage": "https://www.drupal.org/user/227761"
-                }
-            ],
-            "description": "Send newsletters to subscribed email addresses. For uninstall go to Configuration > Web services > Simplenews > Settings and hit \"Prepare uninstall\".",
-            "homepage": "https://www.drupal.org/project/simplenews",
-            "support": {
-                "source": "http://cgit.drupalcode.org/simplenews"
             }
         },
         {
@@ -4412,114 +4299,6 @@
             }
         },
         {
-            "name": "drupal/smtp",
-            "version": "1.0.0-beta2",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/smtp",
-                "reference": "8.x-1.0-beta2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/smtp-8.x-1.0-beta2.zip",
-                "reference": "8.x-1.0-beta2",
-                "shasum": "d6c3890dca35264f6f39647527c2e203e9c445bc"
-            },
-            "require": {
-                "drupal/core": "~8.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0-beta2",
-                    "datestamp": "1498667343"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "José San Martin",
-                    "homepage": "https://www.drupal.org/user/72012"
-                },
-                {
-                    "name": "LukeLast",
-                    "homepage": "https://www.drupal.org/user/30151"
-                },
-                {
-                    "name": "japerry",
-                    "homepage": "https://www.drupal.org/user/45640"
-                },
-                {
-                    "name": "oadaeh",
-                    "homepage": "https://www.drupal.org/user/4649"
-                },
-                {
-                    "name": "wundo",
-                    "homepage": "https://www.drupal.org/user/25523"
-                },
-                {
-                    "name": "yettyn",
-                    "homepage": "https://www.drupal.org/user/93281"
-                }
-            ],
-            "description": "Allow for site emails to be sent through an SMTP server of your choice.",
-            "homepage": "https://www.drupal.org/project/smtp",
-            "support": {
-                "source": "http://cgit.drupalcode.org/smtp",
-                "issues": "https://www.drupal.org/project/issues/smtp"
-            }
-        },
-        {
-            "name": "drupal/social_media_links",
-            "version": "2.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/social_media_links",
-                "reference": "8.x-2.4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/social_media_links-8.x-2.4.zip",
-                "reference": "8.x-2.4",
-                "shasum": "7ab7d058884335ec4431d49bbcb205a245ed1655"
-            },
-            "require": {
-                "drupal/core": "~8.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-2.4",
-                    "datestamp": "1495728784"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "cbeier",
-                    "homepage": "https://www.drupal.org/user/1500710"
-                }
-            ],
-            "description": "The module provides a block that display links (icons) to your profiles on various social networking sites.",
-            "homepage": "https://www.drupal.org/project/social_media_links",
-            "support": {
-                "source": "http://cgit.drupalcode.org/social_media_links",
-                "issues": "https://www.drupal.org/project/issues/social_media_links"
-            }
-        },
-        {
             "name": "drupal/spamspan",
             "version": "dev-1.x",
             "source": {
@@ -4564,6 +4343,54 @@
                 "source": "http://cgit.drupalcode.org/spamspan"
             },
             "time": "2017-05-27 08:00:15"
+        },
+        {
+            "name": "drupal/styled_google_map",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/styled_google_map",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/styled_google_map-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "3472ed6267794d423e5c26604df4dea431ad559a"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "drupal/geofield": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1473930839"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "a.dmitriiev",
+                    "homepage": "https://www.drupal.org/user/3235287"
+                },
+                {
+                    "name": "iampuma",
+                    "homepage": "https://www.drupal.org/user/2529238"
+                }
+            ],
+            "description": "Will provide a Geofield field formatter for adding a Styled Google Map",
+            "homepage": "https://www.drupal.org/project/styled_google_map",
+            "support": {
+                "source": "http://cgit.drupalcode.org/styled_google_map"
+            }
         },
         {
             "name": "drupal/swiftmailer",
@@ -4617,6 +4444,53 @@
             "homepage": "https://www.drupal.org/project/swiftmailer",
             "support": {
                 "source": "http://cgit.drupalcode.org/swiftmailer"
+            }
+        },
+        {
+            "name": "drupal/system_stream_wrapper",
+            "version": "1.0.0-alpha2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/system_stream_wrapper",
+                "reference": "8.x-1.0-alpha2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/system_stream_wrapper-8.x-1.0-alpha2.zip",
+                "reference": "8.x-1.0-alpha2",
+                "shasum": "cfe828f4c619d6f904985fce1cd2910cdb56c26a"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha2",
+                    "datestamp": "1497469443"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Dave Reid",
+                    "homepage": "https://www.drupal.org/user/53892"
+                },
+                {
+                    "name": "deviantintegral",
+                    "homepage": "https://www.drupal.org/user/71291"
+                }
+            ],
+            "description": "Provides stream wrappers to access files in module, theme, profile, and library files and directories.",
+            "homepage": "https://www.drupal.org/project/system_stream_wrapper",
+            "support": {
+                "source": "http://cgit.drupalcode.org/system_stream_wrapper"
             }
         },
         {
@@ -4723,65 +4597,6 @@
             "homepage": "https://www.drupal.org/project/twig_field_value",
             "support": {
                 "source": "http://cgit.drupalcode.org/twig_field_value"
-            }
-        },
-        {
-            "name": "drupal/twitter_block",
-            "version": "2.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/twitter_block",
-                "reference": "8.x-2.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/twitter_block-8.x-2.1.zip",
-                "reference": "8.x-2.1",
-                "shasum": "374eff45b257ca112177b38ef040fd2d920c5d16"
-            },
-            "require": {
-                "drupal/core": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-2.1",
-                    "datestamp": "1463644739"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Devin Carlson",
-                    "homepage": "https://www.drupal.org/user/290182"
-                },
-                {
-                    "name": "ZenDoodles",
-                    "homepage": "https://www.drupal.org/user/226976"
-                },
-                {
-                    "name": "cweagans",
-                    "homepage": "https://www.drupal.org/user/404732"
-                },
-                {
-                    "name": "naveenvalecha",
-                    "homepage": "https://www.drupal.org/user/2665733"
-                },
-                {
-                    "name": "subhojit777",
-                    "homepage": "https://www.drupal.org/user/1812492"
-                }
-            ],
-            "description": "Provides configurable blocks for a Twitter feed.",
-            "homepage": "http://drupal.org/project/twitter_block",
-            "support": {
-                "source": "http://cgit.drupalcode.org/twitter_block"
             }
         },
         {
@@ -4898,49 +4713,6 @@
             "homepage": "https://www.drupal.org/project/video_embed_field",
             "support": {
                 "source": "http://cgit.drupalcode.org/video_embed_field"
-            }
-        },
-        {
-            "name": "drupal/views_database_connector",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/views_database_connector",
-                "reference": "8.x-1.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/views_database_connector-8.x-1.0.zip",
-                "reference": "8.x-1.0",
-                "shasum": "b82a93b5729b6d0468038a287ca119f59c6730ae"
-            },
-            "require": {
-                "drupal/core": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0",
-                    "datestamp": "1422414780"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "clayfreeman",
-                    "homepage": "https://www.drupal.org/user/860806"
-                }
-            ],
-            "description": "Gives Views the ability to see each external database's tables from settings.php.",
-            "homepage": "https://www.drupal.org/project/views_database_connector",
-            "support": {
-                "source": "http://cgit.drupalcode.org/views_database_connector"
             }
         },
         {
@@ -5068,7 +4840,7 @@
                 },
                 "drupal": {
                     "version": "8.x-5.0-beta13",
-                    "datestamp": "1498698843"
+                    "datestamp": "1496266200"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -5288,6 +5060,85 @@
             "time": "2015-02-27T09:45:49+00:00"
         },
         {
+            "name": "egeloen/http-adapter",
+            "version": "0.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/egeloen/ivory-http-adapter.git",
+                "reference": "9641f11487ec26b24c6bbcee4f267cf62f60b855"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/egeloen/ivory-http-adapter/zipball/9641f11487ec26b24c6bbcee4f267cf62f60b855",
+                "reference": "9641f11487ec26b24c6bbcee4f267cf62f60b855",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.8",
+                "zendframework/zend-diactoros": "^1.1"
+            },
+            "require-dev": {
+                "cakephp/cakephp": "^3.0.3",
+                "ext-curl": "*",
+                "guzzle/guzzle": "^3.9.4@dev",
+                "guzzlehttp/guzzle": "^4.1.4|^5.0|^6.0",
+                "kriswallsmith/buzz": "^0.13",
+                "nategood/httpful": "^0.2.17",
+                "phpunit/phpunit": "^4.0",
+                "phpunit/phpunit-mock-objects": "dev-matcher-verify as 2.3.x-dev",
+                "psr/log": "^1.0",
+                "react/dns": "^0.4.1",
+                "react/http-client": "^0.4",
+                "satooshi/php-coveralls": "^0.6",
+                "symfony/event-dispatcher": "^2.0",
+                "zendframework/zend-http": "^2.3.4",
+                "zendframework/zendframework1": ">=1.12.9,<=1.12.14|^1.12.16"
+            },
+            "suggest": {
+                "ext-curl": "Allows you to use the cURL adapter",
+                "ext-http": "Allows you to use the PECL adapter",
+                "guzzle/guzzle": "Allows you to use the Guzzle 3 adapter",
+                "guzzlehttp/guzzle": "Allows you to use the Guzzle 4 adapter",
+                "kriswallsmith/buzz": "Allows you to use the Buzz adapter",
+                "nategood/httpful": "Allows you to use the httpful adapter",
+                "psr/log": "Allows you to use the logger event subscriber",
+                "symfony/event-dispatcher": "Allows you to use the event lifecycle",
+                "symfony/stopwatch": "Allows you to use the stopwatch http adapter and event subscriber",
+                "zendframework/zend-http": "Allows you to use the Zend 2 adapter",
+                "zendframework/zendframework1": "Allows you to use the Zend 1 adapter"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.8-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Ivory\\HttpAdapter\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Eric GELOEN",
+                    "email": "geloen.eric@gmail.com"
+                }
+            ],
+            "description": "Issue HTTP request for PHP 5.3+.",
+            "keywords": [
+                "http",
+                "http-adapter",
+                "http-client",
+                "psr-7"
+            ],
+            "abandoned": "php-http/httplug",
+            "time": "2015-08-12T09:35:40+00:00"
+        },
+        {
             "name": "egulias/email-validator",
             "version": "1.2.14",
             "source": {
@@ -5338,61 +5189,6 @@
                 "validator"
             ],
             "time": "2017-02-03T22:48:59+00:00"
-        },
-        {
-            "name": "elasticsearch/elasticsearch",
-            "version": "v5.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/elastic/elasticsearch-php.git",
-                "reference": "dc57bbcd4be2c9061ebe5be59058ea8bdebc904e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/elastic/elasticsearch-php/zipball/dc57bbcd4be2c9061ebe5be59058ea8bdebc904e",
-                "reference": "dc57bbcd4be2c9061ebe5be59058ea8bdebc904e",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/ringphp": "~1.0",
-                "php": "^5.6|^7.0",
-                "psr/log": "~1.0"
-            },
-            "require-dev": {
-                "cpliakas/git-wrapper": "~1.0",
-                "doctrine/inflector": "^1.1",
-                "mockery/mockery": "0.9.4",
-                "phpunit/phpunit": "^4.7|^5.4",
-                "sami/sami": "~3.2",
-                "symfony/finder": "^2.8",
-                "symfony/yaml": "^2.8"
-            },
-            "suggest": {
-                "ext-curl": "*",
-                "monolog/monolog": "Allows for client-level logging and tracing"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Elasticsearch\\": "src/Elasticsearch/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Zachary Tong"
-                }
-            ],
-            "description": "PHP Client for Elasticsearch",
-            "keywords": [
-                "client",
-                "elasticsearch",
-                "search"
-            ],
-            "time": "2017-04-12T20:40:50+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -5623,107 +5419,6 @@
             "time": "2017-03-20T17:10:46+00:00"
         },
         {
-            "name": "guzzlehttp/ringphp",
-            "version": "1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/guzzle/RingPHP.git",
-                "reference": "dbbb91d7f6c191e5e405e900e3102ac7f261bc0b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/RingPHP/zipball/dbbb91d7f6c191e5e405e900e3102ac7f261bc0b",
-                "reference": "dbbb91d7f6c191e5e405e900e3102ac7f261bc0b",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/streams": "~3.0",
-                "php": ">=5.4.0",
-                "react/promise": "~2.0"
-            },
-            "require-dev": {
-                "ext-curl": "*",
-                "phpunit/phpunit": "~4.0"
-            },
-            "suggest": {
-                "ext-curl": "Guzzle will use specific adapters if cURL is present"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Ring\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Michael Dowling",
-                    "email": "mtdowling@gmail.com",
-                    "homepage": "https://github.com/mtdowling"
-                }
-            ],
-            "description": "Provides a simple API and specification that abstracts away the details of HTTP into a single PHP function.",
-            "time": "2015-05-20T03:37:09+00:00"
-        },
-        {
-            "name": "guzzlehttp/streams",
-            "version": "3.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/guzzle/streams.git",
-                "reference": "47aaa48e27dae43d39fc1cea0ccf0d84ac1a2ba5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/streams/zipball/47aaa48e27dae43d39fc1cea0ccf0d84ac1a2ba5",
-                "reference": "47aaa48e27dae43d39fc1cea0ccf0d84ac1a2ba5",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Stream\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Michael Dowling",
-                    "email": "mtdowling@gmail.com",
-                    "homepage": "https://github.com/mtdowling"
-                }
-            ],
-            "description": "Provides a simple abstraction over streams of data",
-            "homepage": "http://guzzlephp.org/",
-            "keywords": [
-                "Guzzle",
-                "stream"
-            ],
-            "time": "2014-10-12T19:18:40+00:00"
-        },
-        {
             "name": "heiseonline/shariff",
             "version": "master",
             "dist": {
@@ -5770,6 +5465,51 @@
             ],
             "description": "Converts HTML to formatted plain text",
             "time": "2016-03-16T23:24:34+00:00"
+        },
+        {
+            "name": "igorw/get-in",
+            "version": "v1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/igorw/get-in.git",
+                "reference": "170ded831f49abc6a6061f655aba9bdbcf7b8111"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/igorw/get-in/zipball/170ded831f49abc6a6061f655aba9bdbcf7b8111",
+                "reference": "170ded831f49abc6a6061f655aba9bdbcf7b8111",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/get_in.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Igor Wiedler",
+                    "email": "igor@wiedler.ch"
+                }
+            ],
+            "description": "Functions for for hash map (assoc array) traversal.",
+            "keywords": [
+                "assoc-array",
+                "hash-map"
+            ],
+            "time": "2014-12-15T23:03:51+00:00"
         },
         {
             "name": "ircmaxell/password-compat",
@@ -6018,51 +5758,6 @@
             "time": "2016-05-25T08:26:02+00:00"
         },
         {
-            "name": "nodespark/des-connector",
-            "version": "5.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nodespark/des-connector.git",
-                "reference": "b6f0a8ae6a200865f57fb0d39e7d80023cc2790d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nodespark/des-connector/zipball/b6f0a8ae6a200865f57fb0d39e7d80023cc2790d",
-                "reference": "b6f0a8ae6a200865f57fb0d39e7d80023cc2790d",
-                "shasum": ""
-            },
-            "require": {
-                "elasticsearch/elasticsearch": "~5.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "nodespark\\DESConnector\\": "src/DESConnector/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "LGPL-2.1"
-            ],
-            "authors": [
-                {
-                    "name": "Nikolay Ignatov",
-                    "email": "nignatov@nodespark.com",
-                    "homepage": "http://www.nodespark.com",
-                    "role": "Creator and Maintainer"
-                },
-                {
-                    "name": "Lachezar Valchev",
-                    "email": "lachezar.valchev@gmail.com",
-                    "homepage": "https://drupal.org/u/lachezar.valchev",
-                    "role": "Maintainer"
-                }
-            ],
-            "description": "An abstraction library for Elasticsearch Connector module for Drupal.",
-            "homepage": "https://github.com/nodespark/des-connector",
-            "time": "2017-05-23 10:55:47"
-        },
-        {
             "name": "paragonie/random_compat",
             "version": "v2.0.10",
             "source": {
@@ -6109,6 +5804,42 @@
                 "random"
             ],
             "time": "2017-03-13T16:27:32+00:00"
+        },
+        {
+            "name": "phayes/geophp",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phayes/geoPHP.git",
+                "reference": "685562416ec6d22b9b3927e02ca0ddacf84ca646"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phayes/geoPHP/zipball/685562416ec6d22b9b3927e02ca0ddacf84ca646",
+                "reference": "685562416ec6d22b9b3927e02ca0ddacf84ca646",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.1.*"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "geoPHP.inc"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2 or New-BSD"
+            ],
+            "authors": [
+                {
+                    "name": "Patrick Hayes"
+                }
+            ],
+            "description": "GeoPHP is a open-source native PHP library for doing geometry operations. It is written entirely in PHP and can therefore run on shared hosts. It can read and write a wide variety of formats: WKT (including EWKT), WKB (including EWKB), GeoJSON, KML, GPX, GeoRSS). It works with all Simple-Feature geometries (Point, LineString, Polygon, GeometryCollection etc.) and can be used to get centroids, bounding-boxes, area, and a wide variety of other useful information.",
+            "homepage": "https://github.com/phayes/geoPHP",
+            "time": "2016-03-04 05:42:29"
         },
         {
             "name": "psr/http-message",
@@ -6206,52 +5937,6 @@
                 "psr-3"
             ],
             "time": "2016-10-10T12:19:37+00:00"
-        },
-        {
-            "name": "react/promise",
-            "version": "v2.5.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/reactphp/promise.git",
-                "reference": "62785ae604c8d69725d693eb370e1d67e94c4053"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/promise/zipball/62785ae604c8d69725d693eb370e1d67e94c4053",
-                "reference": "62785ae604c8d69725d693eb370e1d67e94c4053",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.8"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "React\\Promise\\": "src/"
-                },
-                "files": [
-                    "src/functions_include.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jan Sorgalla",
-                    "email": "jsorgalla@gmail.com"
-                }
-            ],
-            "description": "A lightweight implementation of CommonJS Promises/A for PHP",
-            "keywords": [
-                "promise",
-                "promises"
-            ],
-            "time": "2017-03-25T12:08:31+00:00"
         },
         {
             "name": "stack/builder",
@@ -7729,6 +7414,66 @@
             "time": "2017-03-13T16:52:55+00:00"
         },
         {
+            "name": "willdurand/geocoder",
+            "version": "v3.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/geocoder-php/php-common.git",
+                "reference": "ccc178e2984c0af24881faa0ffe515f20e5e8c23"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/geocoder-php/php-common/zipball/ccc178e2984c0af24881faa0ffe515f20e5e8c23",
+                "reference": "ccc178e2984c0af24881faa0ffe515f20e5e8c23",
+                "shasum": ""
+            },
+            "require": {
+                "egeloen/http-adapter": "~0.8",
+                "igorw/get-in": "~1.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "geoip2/geoip2": "~2.0",
+                "symfony/stopwatch": "~2.5"
+            },
+            "suggest": {
+                "ext-geoip": "Enabling the geoip extension allows you to use the MaxMindProvider.",
+                "geoip/geoip": "If you are going to use the MaxMindBinaryProvider (conflict with geoip extension).",
+                "geoip2/geoip2": "If you are going to use the GeoIP2DatabaseProvider.",
+                "symfony/stopwatch": "If you want to use the TimedGeocoder"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Geocoder": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "William Durand",
+                    "email": "william.durand1@gmail.com"
+                }
+            ],
+            "description": "The almost missing Geocoder PHP 5.4 library.",
+            "homepage": "http://geocoder-php.org",
+            "keywords": [
+                "abstraction",
+                "geocoder",
+                "geocoding",
+                "geoip"
+            ],
+            "time": "2015-12-06T20:17:20+00:00"
+        },
+        {
             "name": "zendframework/zend-diactoros",
             "version": "1.4.0",
             "source": {
@@ -8903,6 +8648,57 @@
             "time": "2017-06-15T13:59:40+00:00"
         },
         {
+            "name": "drupal/easy_breadcrumb",
+            "version": "1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/easy_breadcrumb",
+                "reference": "8.x-1.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/easy_breadcrumb-8.x-1.6.zip",
+                "reference": "8.x-1.6",
+                "shasum": "d7e4fcbb76a65bc33230d45c3bf41c4689b8e1a2"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.6",
+                    "datestamp": "1487359983"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Greg Boggs",
+                    "homepage": "https://www.drupal.org/user/153069"
+                },
+                {
+                    "name": "rakesh.gectcr",
+                    "homepage": "https://www.drupal.org/user/1177822"
+                },
+                {
+                    "name": "sonemonu",
+                    "homepage": "https://www.drupal.org/user/1667988"
+                }
+            ],
+            "description": "Adds configuration to the system breadcrumbs.",
+            "homepage": "https://www.drupal.org/project/easy_breadcrumb",
+            "support": {
+                "source": "http://cgit.drupalcode.org/easy_breadcrumb"
+            }
+        },
+        {
             "name": "drupal/twig_xdebug",
             "version": "1.0.0",
             "source": {
@@ -8913,7 +8709,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/twig_xdebug-8.x-1.0.zip",
-                "reference": null,
+                "reference": "8.x-1.0",
                 "shasum": "f8a5cfef63b427d6b6b428a2c4bd19b19d082037"
             },
             "require": {
@@ -8945,6 +8741,61 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/twig_xdebug"
             }
+        },
+        {
+            "name": "elasticsearch/elasticsearch",
+            "version": "v5.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elastic/elasticsearch-php.git",
+                "reference": "dc57bbcd4be2c9061ebe5be59058ea8bdebc904e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elastic/elasticsearch-php/zipball/dc57bbcd4be2c9061ebe5be59058ea8bdebc904e",
+                "reference": "dc57bbcd4be2c9061ebe5be59058ea8bdebc904e",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/ringphp": "~1.0",
+                "php": "^5.6|^7.0",
+                "psr/log": "~1.0"
+            },
+            "require-dev": {
+                "cpliakas/git-wrapper": "~1.0",
+                "doctrine/inflector": "^1.1",
+                "mockery/mockery": "0.9.4",
+                "phpunit/phpunit": "^4.7|^5.4",
+                "sami/sami": "~3.2",
+                "symfony/finder": "^2.8",
+                "symfony/yaml": "^2.8"
+            },
+            "suggest": {
+                "ext-curl": "*",
+                "monolog/monolog": "Allows for client-level logging and tracing"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Elasticsearch\\": "src/Elasticsearch/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Zachary Tong"
+                }
+            ],
+            "description": "PHP Client for Elasticsearch",
+            "keywords": [
+                "client",
+                "elasticsearch",
+                "search"
+            ],
+            "time": "2017-04-12T20:40:50+00:00"
         },
         {
             "name": "fabpot/goutte",
@@ -8996,6 +8847,107 @@
             "time": "2017-01-03T13:21:43+00:00"
         },
         {
+            "name": "guzzlehttp/ringphp",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/RingPHP.git",
+                "reference": "dbbb91d7f6c191e5e405e900e3102ac7f261bc0b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/RingPHP/zipball/dbbb91d7f6c191e5e405e900e3102ac7f261bc0b",
+                "reference": "dbbb91d7f6c191e5e405e900e3102ac7f261bc0b",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/streams": "~3.0",
+                "php": ">=5.4.0",
+                "react/promise": "~2.0"
+            },
+            "require-dev": {
+                "ext-curl": "*",
+                "phpunit/phpunit": "~4.0"
+            },
+            "suggest": {
+                "ext-curl": "Guzzle will use specific adapters if cURL is present"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Ring\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Provides a simple API and specification that abstracts away the details of HTTP into a single PHP function.",
+            "time": "2015-05-20T03:37:09+00:00"
+        },
+        {
+            "name": "guzzlehttp/streams",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/streams.git",
+                "reference": "47aaa48e27dae43d39fc1cea0ccf0d84ac1a2ba5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/streams/zipball/47aaa48e27dae43d39fc1cea0ccf0d84ac1a2ba5",
+                "reference": "47aaa48e27dae43d39fc1cea0ccf0d84ac1a2ba5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Stream\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Provides a simple abstraction over streams of data",
+            "homepage": "http://guzzlephp.org/",
+            "keywords": [
+                "Guzzle",
+                "stream"
+            ],
+            "time": "2014-10-12T19:18:40+00:00"
+        },
+        {
             "name": "instaclick/php-webdriver",
             "version": "1.4.3",
             "source": {
@@ -9040,7 +8992,7 @@
                 {
                     "name": "Anthon Pang",
                     "email": "apang@softwaredevelopment.ca",
-                    "role": "Fork Maintainer"
+                    "role": "Fork maintainer"
                 }
             ],
             "description": "PHP WebDriver for Selenium 2",
@@ -9222,6 +9174,51 @@
             "description": "Virtual file system to mock the real file system in unit tests.",
             "homepage": "http://vfs.bovigo.org/",
             "time": "2016-07-18T14:02:57+00:00"
+        },
+        {
+            "name": "nodespark/des-connector",
+            "version": "5.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nodespark/des-connector.git",
+                "reference": "b6f0a8ae6a200865f57fb0d39e7d80023cc2790d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nodespark/des-connector/zipball/b6f0a8ae6a200865f57fb0d39e7d80023cc2790d",
+                "reference": "b6f0a8ae6a200865f57fb0d39e7d80023cc2790d",
+                "shasum": ""
+            },
+            "require": {
+                "elasticsearch/elasticsearch": "~5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "nodespark\\DESConnector\\": "src/DESConnector/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1"
+            ],
+            "authors": [
+                {
+                    "name": "Nikolay Ignatov",
+                    "email": "nignatov@nodespark.com",
+                    "homepage": "http://www.nodespark.com",
+                    "role": "Creator and Maintainer"
+                },
+                {
+                    "name": "Lachezar Valchev",
+                    "email": "lachezar.valchev@gmail.com",
+                    "homepage": "https://drupal.org/u/lachezar.valchev",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "An abstraction library for Elasticsearch Connector module for Drupal.",
+            "homepage": "https://github.com/nodespark/des-connector",
+            "time": "2017-05-23 10:55:47"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -9856,6 +9853,52 @@
                 "psr"
             ],
             "time": "2017-02-14T16:28:37+00:00"
+        },
+        {
+            "name": "react/promise",
+            "version": "v2.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/reactphp/promise.git",
+                "reference": "62785ae604c8d69725d693eb370e1d67e94c4053"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/reactphp/promise/zipball/62785ae604c8d69725d693eb370e1d67e94c4053",
+                "reference": "62785ae604c8d69725d693eb370e1d67e94c4053",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "React\\Promise\\": "src/"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jan Sorgalla",
+                    "email": "jsorgalla@gmail.com"
+                }
+            ],
+            "description": "A lightweight implementation of CommonJS Promises/A for PHP",
+            "keywords": [
+                "promise",
+                "promises"
+            ],
+            "time": "2017-03-25T12:08:31+00:00"
         },
         {
             "name": "se/selenium-server-standalone",
@@ -10861,18 +10904,11 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "drupal/eu_cookie_compliance": 10,
-        "drupal/password_policy": 15,
-        "drupal/search404": 10,
-        "drupal/elasticsearch_connector": 20,
-        "drupal/viewsreference": 15,
-        "drupal/simplenews": 15,
-        "drupal/ultimate_cron": 15,
-        "drupal/contact_storage": 10,
         "drupal/spamspan": 20,
-        "drupal/content_access": 20,
-        "drupal/smtp": 10,
+        "drupal/ultimate_cron": 15,
+        "drupal/viewsreference": 15,
         "drupal/webform": 10,
+        "drupal/eu_cookie_compliance": 10,
         "drupal/facets": 15,
         "drupal/search_api_sorts": 10,
         "drupal/simplify_menu": 20

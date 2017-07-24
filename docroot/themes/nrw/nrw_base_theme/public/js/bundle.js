@@ -46,7 +46,7 @@
 
 	'use strict';
 
-	// state class should be ".is-*****" 
+	// state class should be ".is-*****"
 
 	/* eslint-disable no-unused-vars, lines-around-comment*/
 	var Bootstrap = __webpack_require__(1);
@@ -71,16 +71,6 @@
 	    }
 	  };
 
-	  // FAQ
-	  Drupal.behaviors.faq = {
-	    attach: function attach(context, settings) {
-	      $(context).find('.paragraph__content').once('faq-click').click(function () {
-	        var isActive = $(this).children('.field--name-field-faq-element-question').hasClass('active');
-	        $(this).children().toggleClass('active', !isActive);
-	      });
-	    }
-	  };
-
 	  // Footer menu open in responsive
 	  Drupal.behaviors.footerResposive = {
 	    attach: function attach(context, settings) {
@@ -89,6 +79,21 @@
 	      });
 	    }
 	  };
+
+	  // upper Menu
+	  Drupal.behaviors.upperMenu = {
+	    attach: function attach(context, settings) {
+	      $(context).find('.header__upper-menu--title').once('upper-menu-click').click(function () {
+	        $(this).parent().toggleClass('is-open');
+	      });
+	      $(window).resize(function () {
+	        if ($(window).width() > 720) {
+	          $('.header__upper-menu').removeClass('is-open');
+	        }
+	      });
+	    }
+	  };
+
 	  // Language dropdown
 	  Drupal.behaviors.lang = {
 	    attach: function attach(context, settings) {
@@ -185,6 +190,15 @@
 	          $slider.slick('slickNext');
 	        });
 	      });
+
+	      $('.slick__pause').on('click', function () {
+	        $('.slideshow__slides').slick('slickPause');
+	        $(this).hide().siblings('.slick__play').show();
+	      });
+	      $('.slick__play').on('click', function () {
+	        $('.slideshow__slides').slick('slickPlay');
+	        $(this).hide().siblings('.slick__pause').show();
+	      });
 	    }
 	  };
 
@@ -235,6 +249,69 @@
 	            e.preventDefault();
 	          });
 	        });
+	      });
+	    }
+	  };
+
+	  // Responsive menu
+	  Drupal.behaviors.responsiveMenu = {
+	    attach: function attach(context, settings) {
+	      $('.header__menu-icon').click(function () {
+	        $('.nrw-menu-header-responsive').toggleClass('is-open');
+	      });
+	      $('.nrw-menu-header-responsive .nrw-menu-header-responsive__block-title').click(function () {
+	        $(this).siblings('.nrw-menu-header-responsive__content').toggleClass('is-close is-open');
+	      });
+	      $('.nrw-menu-header-responsive .action').click(function () {
+	        $(this).parent().siblings('.nrw-menu-header-responsive__list').toggleClass('is-open');
+	        $(this).toggleClass('is-open');
+	      });
+	    }
+	  };
+
+	  Drupal.behaviors.selectize = {
+	    attach: function attach(context, settings) {
+	      $('.webform-submission-form .form-select').selectric();
+	    }
+	  };
+
+	  Drupal.behaviors.resetform = {
+	    attach: function attach(context, settings) {
+	      $(context).find('.reset-form').once('reset-form').each(function () {
+	        $('.reset-form').click(function () {
+	          $(this).closest('.paragraph__content').find('form').trigger('reset');
+	        });
+	      });
+	    }
+	  };
+
+	  // Slick slider in press list
+	  Drupal.behaviors.slickPress = {
+	    attach: function attach(context, settings) {
+	      $('.view-latest-press .view-content').slick({
+	        dots: true,
+	        infinite: false,
+	        speed: 300,
+	        slidesToShow: 3,
+	        slidesToScroll: 3,
+	        responsive: [{
+	          breakpoint: 992,
+	          settings: {
+	            slidesToShow: 1,
+	            slidesToScroll: 1
+	          }
+	        }]
+	      });
+	    }
+	  };
+
+	  // Check heigh of image in contact person
+
+	  Drupal.behaviors.contactHeight = {
+	    attach: function attach(context, settings) {
+	      $('.region-content .media-contact').once('check-height').each(function () {
+	        var height = $(this).find('.media-contact__image-wrapper').height();
+	        $(this).find('.media-contact__info').css('height', height + 'px');
 	      });
 	    }
 	  };

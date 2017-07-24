@@ -1,0 +1,7 @@
+name: deGov - Views Helper
+description: "Ermöglicht genauere Auswahl von Viewsoptionen."
+package: deGov
+type: module
+core: 8.x
+dependencies:
+  - viewsreference

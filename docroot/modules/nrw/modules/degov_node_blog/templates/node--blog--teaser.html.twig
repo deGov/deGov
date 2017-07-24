@@ -65,15 +65,16 @@
  *   in different view modes.
  */
 #}
-{% set classes = [
-node.bundle|clean_class,
-node.isPromoted() ? 'is-promoted',
-node.isSticky() ? 'is-sticky',
-not node.isPublished() ? 'is-unpublished',
-view_mode ? view_mode|clean_class,
-'clearfix',
-] %}
-
+{%
+  set classes = [
+    node.bundle|clean_class,
+    node.isPromoted() ? 'is-promoted',
+    node.isSticky() ? 'is-sticky',
+    not node.isPublished() ? 'is-unpublished',
+    view_mode ? view_mode|clean_class,
+    'clearfix',
+  ]
+%}
 <article{{ attributes.addClass(classes) }}>
   <!-- teaser image -->
   
@@ -85,7 +86,7 @@ view_mode ? view_mode|clean_class,
     {% endif %}
   </div>
 
-  <div class="blog__teaser-content teaser-content col-md-9"> <!-- from medium screen up, show on the right sidebar -->
+  <div class="blog__teaser-content teaser-content col-sm-9"> <!-- from medium screen up, show on the right sidebar -->
     <!-- teaser title -->
     {% if content.field_teaser_title %}
       <a href="{{ url }}" rel="bookmark">

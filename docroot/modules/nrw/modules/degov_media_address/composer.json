@@ -1,0 +1,13 @@
+{
+  "name": "degov_media_address",
+  "type": "drupal-module",
+  "description": "Adds an address media type.",
+  "license": "GPL-2.0+",
+  "homepage": "https://www.nrwgov.org",
+  "require": {
+    "drupal/address": "^1.0",
+    "drupal/styled_google_map": "^1.2",
+    "drupal/system_stream_wrapper": "^1.0-alpha2",
+    "drupal/geocoder": "^2.0-alpha5"
+  }
+}

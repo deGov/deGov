@@ -5,6 +5,8 @@ dependencies:
     - field.field.node.press.field_content_paragraphs
     - field.field.node.press.field_press_date
     - field.field.node.press.field_sidebar_right_paragraphs
+    - field.field.node.press.field_social_media
+    - field.field.node.press.field_tags
     - field.field.node.press.field_teaser_image
     - field.field.node.press.field_teaser_text
     - field.field.node.press.field_teaser_title
@@ -15,6 +17,7 @@ dependencies:
   module:
     - datetime
     - entity_reference_revisions
+    - text
     - user
 id: node.press.default
 targetEntityType: node
@@ -22,7 +25,7 @@ bundle: press
 mode: default
 content:
   field_content_paragraphs:
-    weight: 1
+    weight: 2
     label: hidden
     settings:
       view_mode: default
@@ -40,7 +43,7 @@ content:
     type: datetime_default
     region: content
   field_sidebar_right_paragraphs:
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       view_mode: default
@@ -48,10 +51,17 @@ content:
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
     region: content
-
+  field_teaser_text:
+    type: text_default
+    weight: 1
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
 hidden:
+  field_social_media: true
+  field_tags: true
   field_teaser_image: true
-  field_teaser_text: true
   field_teaser_title: true
   langcode: true
   links: true

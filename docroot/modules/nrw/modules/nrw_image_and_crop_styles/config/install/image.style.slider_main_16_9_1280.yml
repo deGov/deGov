@@ -1,0 +1,25 @@
+langcode: de
+status: true
+dependencies:
+  enforced:
+    module:
+      - nrw_image_and_crop_styles
+  module:
+    - crop
+name: slider_main_16_9_1280
+label: 'Slider main (16:9) 1280'
+effects:
+  5abeeabf-fe8c-47fe-8cf1-f24ac1cfc26c:
+    uuid: 5abeeabf-fe8c-47fe-8cf1-f24ac1cfc26c
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: 16_to_9
+  65d6572a-eb55-4120-8bf0-f1d82bba1c2b:
+    uuid: 65d6572a-eb55-4120-8bf0-f1d82bba1c2b
+    id: image_scale
+    weight: 2
+    data:
+      width: 1280
+      height: null
+      upscale: true

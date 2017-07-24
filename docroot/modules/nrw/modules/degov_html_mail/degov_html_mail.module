@@ -1,0 +1,26 @@
+<?php
+
+use Drupal\degov_content_types_shared_fields\Common;
+
+/**
+ * Implements hook_preprocess().
+ */
+function degov_html_mail_preprocess(&$variables, $hook, &$info) {
+  // Add template suggestions and libraries implemented in this module.
+  Common::addThemeSuggestions($variables, $hook, $info, [
+    'module_name' => 'degov_html_mail',
+    'entity_type' => 'swiftmailer',
+    'entity_bundles' => [],
+    'entity_view_modes' => [],
+  ]);
+  if ($hook == 'swiftmailer') {
+    /** @var \Drupal\Core\Theme\ActiveTheme $theme */
+    $theme = \Drupal::service('theme.manager')->getActiveTheme();
+    // Check if there is mail.css exists in current active theme.
+    $mailstyle = DRUPAL_ROOT . '/'. drupal_get_path('theme', $theme->getName()) . '/public/css/mail.css';
+    if (is_file($mailstyle)) {
+      // If yes include the content of the file into email message.
+      $variables['css'] = @file_get_contents($mailstyle);
+    }
+  }
+}

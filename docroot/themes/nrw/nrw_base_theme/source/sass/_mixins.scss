@@ -147,3 +147,46 @@
     padding: $vertical-gutter-width $grid-gutter-width;
   }
 }
+
+@mixin calc($property, $expression) {
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}:    -moz-calc(#{$expression});
+  #{$property}:         calc(#{$expression});
+}
+
+// Small triangles
+@mixin triangle-base() {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  z-index: 1;
+}
+
+@mixin triangle-down($color: $brand-primary, $size: 15px) {
+  @include triangle-base();
+  border-left: $size solid transparent;
+  border-right: $size solid transparent;
+  border-top: $size solid $color;
+}
+
+@mixin triangle-up($color: $brand-primary, $size: 15px) {
+  @include triangle-base();
+  border-left: $size solid transparent;
+  border-right: $size solid transparent;
+  border-bottom: $size solid $color;
+}
+
+@mixin triangle-right($color: $brand-primary, $size: 15px) {
+  @include triangle-base();
+  border-top: $size solid transparent;
+  border-bottom: $size solid transparent;
+  border-left: $size solid $color;
+}
+
+@mixin triangle-left($color: $brand-primary, $size: 15px) {
+  @include triangle-base();
+  border-top: $size solid transparent;
+  border-bottom: $size solid transparent;
+  border-right: $size solid $color;
+}

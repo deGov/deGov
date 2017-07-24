@@ -6,9 +6,11 @@ dependencies:
     - field.field.media.contact.field_contact_email
     - field.field.media.contact.field_contact_fax
     - field.field.media.contact.field_contact_image
+    - field.field.media.contact.field_contact_position
     - field.field.media.contact.field_contact_tel
     - field.field.media.contact.field_contact_title
     - field.field.media.contact.field_media_in_library
+    - field.field.media.contact.field_tags
     - media_entity.bundle.contact
   enforced:
     module:
@@ -29,7 +31,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_contact_email:
-    weight: 8
+    weight: 9
     settings:
       size: 60
       placeholder: ''
@@ -37,7 +39,7 @@ content:
     type: string_textfield
     region: content
   field_contact_fax:
-    weight: 7
+    weight: 8
     settings:
       size: 60
       placeholder: ''
@@ -46,7 +48,7 @@ content:
     region: content
   field_contact_image:
     type: entity_browser_entity_reference
-    weight: 9
+    weight: 10
     settings:
       entity_browser: media_browser
       field_widget_display: rendered_entity
@@ -58,8 +60,16 @@ content:
       open: true
     region: content
     third_party_settings: {  }
+  field_contact_position:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_contact_tel:
-    weight: 6
+    weight: 7
     settings:
       size: 60
       placeholder: ''
@@ -67,7 +77,7 @@ content:
     type: string_textfield
     region: content
   field_contact_title:
-    weight: 5
+    weight: 6
     settings:
       size: 60
       placeholder: ''
@@ -78,9 +88,18 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 4
+    weight: 5
     third_party_settings: {  }
     region: content
+  field_tags:
+    type: entity_reference_autocomplete
+    weight: 4
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   langcode:
     type: language_select
     weight: 1
@@ -97,7 +116,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 10
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }

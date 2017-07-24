@@ -1,59 +1,4 @@
 // Styles for intro, header, and top bar regions
-
-/*
-// layout for the navbar
-.header-wrapper .name {
-	display: none;
-}
-
-.region-navigation > .block {
-	display: inline-block;
-	vertical-align: middle;
-}
-
-.navbar-branding {
-	float: left;
-	.logo img {
-		max-width: 120px;
-		height: auto;
-		margin-top: floor($navbar-height*0.225);
-	}
-}
-
-.container > .navbar-header {
-	float: right;
-	margin-left: 0;
-}
-
-.header-wrapper .navbar {
-	margin-bottom: 0;
-}
-
-.header-wrapper .navbar li a {
-	color: $color-gray;
-	&:hover,
-	&:focus,
-	&:active {
-		color: $color-blue;
-		text-decoration: none;
-	}
-}
-.header-wrapper .navbar .fa-2x {
-	font-size: 1.5em;
-}
-.header-wrapper .navbar .region-navigation-collapsible li a {
-	color: $color-blue;
-	&:hover,
-	&:focus,
-	&:active {
-		color: $color-blue;
-	}
-}
-.header-wrapper .navbar .region-navigation-collapsible > nav > ul > li > a {
-	font-weight: bold;
-}
-*/
-
 .header-wrapper{
 	@include larger-than($screen-tablet) {
 		// Right align navigation
@@ -81,20 +26,16 @@
 	}
 }
 
-// larget than mobile
+// larger than mobile
 @include larger-than($screen-sm-min) {
 	body {
 		margin-top: 0;
 	}
 	.header-wrapper {
-		//position: fixed;
-		//z-index: 99;
 		left: 0;
 		right: 0;
 		top: 0;
 		background: $background-grey;
-		//box-shadow: 0px 0px 0px transparent;
-		//transition: box-shadow 200ms ease-in-out;
 	}
 	.header-wrapper .container {
 		padding-left: 0;
@@ -123,9 +64,6 @@
 		max-height: 0;
 	}
 	.is-scrolling {
-		/*.header-wrapper {
-			box-shadow: 0px 0px 10px rgba(0,0,0,.2);
-		}*/
 		.navbar-secondary {
 			margin-top: 0;
 			margin-bottom: 0;
@@ -138,17 +76,22 @@
 	}
 }
 
-
-
 .header{
+	@media(max-width: $screen-sm-min){
+			margin: 0 -1*($grid-gutter-width/2);
+			&  &__title{
+				display: none;
+			}
+	}
 	&__upper-menu{
-		min-height: 42px;
+		min-height: 45px;
 		background-color: $brand-primary;
 		font-size: $font-size-small - 2;
 		color: $color-white;
 		font-weight: bold;
 		text-transform: uppercase;
-		position: relative; 
+		position: relative;
+		
 		> div{
 			display: flex;
 			flex-direction: row ;
@@ -156,19 +99,104 @@
 			height: 100%;
 			width: 100%;
 			align-items: center;
-  
+			.menu{
+				.right{
+					float: right;
+				}
+			}
+			@media(max-width: $screen-sm-min){
+				flex-direction: column;
+				align-items: flex-start;
+				font-size: $font-size-h6;
+				.menu{
+					display: inline-block;
+					width: 100%;
+					float: left;
+					min-height: auto;
+					padding: 0;
+					.right{
+						float: left;
+						ul{
+							float: left;
+						}
+					}
+					ul{
+						float: left;
+						width: 100%;
+						li{
+							width: 100%;
+							border-bottom: 1px solid $brand-primary;
+							padding: $grid-gutter-width/4 0;
+							a,a.gebaerdensprache, a.leichtesprache,a.login, a.kontakt{  padding: 10px 20px 5px 20px;
+								background: none;
+								font-weight: normal;
+							}
+						}
+					}
+					li{
+						width: 100%;
+					}
+				}
+			}
+		}
+		&	> &--elements{
+			.links{
+				float: right;
+			}
+			@media(max-width: $screen-sm-min){
+				top: 40px;
+				background: $color-white;
+				display: none;
+				label{
+					color: $brand-primary;
+					font-weight: normal;
+				}
+			}
+		}
+		&	>  &--title{
+			background: $brand-primary;
+			display: none; 
+			position: relative;
+			text-align: center;
+  		padding: $grid-gutter-width/3.07;
+  		position: relative;
+			width: 100%;
+			i{
+				margin-left: $grid-gutter-width/4;
+			}
+			@media(max-width: $screen-sm-min){
+				display: block ;
+			}
 		}
 		select{
 			border: 0;
 			color: $color-white;
 			background: transparent;
 		}
+		@media(max-width: $screen-sm-min){
+			//min-height: 220px;
+			
+			> div{
+				height: auto;
+			}
+			
+		}
+		&.is-open{
+			min-height: 255px;
+			i{
+				transform: rotate(180deg);
+			}
+			.header__upper-menu--elements{
+				
+				display: block;
+			}
+		}
 	}
 	&__branding{
 		background-color: $color-white;
 		min-height: 100px;
 		position: relative;
-		
+
 		}
 	&__logo{
 		display: flex;
@@ -177,8 +205,13 @@
 		position: absolute;
 		height: 100%;
 		right: 0;
-		img{
+		.image {
+			padding: 0 $grid-gutter-width/2;
+		}
+		.image img{
 			float: right;
+			max-height: 100%;
+			width: auto;
 		}
 	}
 	&__title{
@@ -196,7 +229,7 @@
 		span{
 			font-weight: bold;
 			display: inline-block;
-			width: 100%; 
+			width: 100%;
 		}
 	}
 }

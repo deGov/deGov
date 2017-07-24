@@ -1,0 +1,68 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.media.tweet.embed_code
+    - field.field.media.tweet.field_media_in_library
+    - field.field.media.tweet.field_tags
+    - media_entity.bundle.tweet
+  module:
+    - path
+    - workbench_moderation
+id: media.tweet.default
+targetEntityType: media
+bundle: tweet
+mode: default
+content:
+  embed_code:
+    type: string_textarea
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_media_in_library:
+    type: boolean_checkbox
+    weight: 4
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    region: content
+  field_tags:
+    type: entity_reference_autocomplete
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  path:
+    type: path
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  preview:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  uid: true

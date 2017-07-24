@@ -2,42 +2,61 @@ langcode: de
 status: true
 dependencies:
   config:
-    - image.style.teaser_landscape_small_8_3
+    - image.style.teaser_landscape_small_8_3_240
+    - image.style.teaser_landscape_small_8_3_480
+    - image.style.teaser_landscape_small_8_3_960
   enforced:
     module:
       - nrw_image_and_crop_styles
+  module:
+    - nrw_image_and_crop_styles
 id: teaser_landscape_small
 label: 'Teaser landscape small'
 image_style_mappings:
   -
+    breakpoint_id: nrw_image_and_crop_styles.media.md
+    multiplier: 1.5x
+    image_mapping_type: image_style
+    image_mapping: teaser_landscape_small_8_3_960
+  -
+    breakpoint_id: nrw_image_and_crop_styles.media.md
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: teaser_landscape_small_8_3_960
+  -
+    breakpoint_id: nrw_image_and_crop_styles.media.md
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: teaser_landscape_small_8_3_960
+  -
     breakpoint_id: nrw_image_and_crop_styles.media.sm
     multiplier: 1.5x
     image_mapping_type: image_style
-    image_mapping: teaser_landscape_small_8_3
+    image_mapping: teaser_landscape_small_8_3_480
   -
     breakpoint_id: nrw_image_and_crop_styles.media.sm
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: teaser_landscape_small_8_3
+    image_mapping: teaser_landscape_small_8_3_480
   -
     breakpoint_id: nrw_image_and_crop_styles.media.sm
     multiplier: 2x
     image_mapping_type: image_style
-    image_mapping: teaser_landscape_small_8_3
+    image_mapping: teaser_landscape_small_8_3_960
   -
     breakpoint_id: nrw_image_and_crop_styles.media.xs
     multiplier: 1.5x
     image_mapping_type: image_style
-    image_mapping: teaser_landscape_small_8_3
+    image_mapping: teaser_landscape_small_8_3_240
   -
     breakpoint_id: nrw_image_and_crop_styles.media.xs
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: teaser_landscape_small_8_3
+    image_mapping: teaser_landscape_small_8_3_240
   -
     breakpoint_id: nrw_image_and_crop_styles.media.xs
     multiplier: 2x
     image_mapping_type: image_style
-    image_mapping: teaser_landscape_small_8_3
+    image_mapping: teaser_landscape_small_8_3_480
 breakpoint_group: nrw_image_and_crop_styles.media
-fallback_image_style: teaser_landscape_small_8_3
+fallback_image_style: teaser_landscape_small_8_3_480

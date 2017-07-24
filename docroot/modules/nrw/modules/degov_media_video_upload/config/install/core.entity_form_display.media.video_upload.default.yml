@@ -4,6 +4,7 @@ dependencies:
   config:
     - entity_browser.browser.media_browser
     - field.field.media.video_upload.field_media_in_library
+    - field.field.media.video_upload.field_tags
     - field.field.media.video_upload.field_video_upload_caption
     - field.field.media.video_upload.field_video_upload_copyright
     - field.field.media.video_upload.field_video_upload_mp4
@@ -34,9 +35,18 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 10
+    weight: 11
     third_party_settings: {  }
     region: content
+  field_tags:
+    type: entity_reference_autocomplete
+    weight: 10
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_video_upload_caption:
     weight: 4
     settings:
@@ -66,13 +76,12 @@ content:
     weight: 3
     settings:
       entity_browser: media_browser
-      field_widget_display: rendered_entity
+      field_widget_display: label
       field_widget_edit: true
       field_widget_remove: true
-      selection_mode: selection_append
-      field_widget_display_settings:
-        view_mode: thumbnail
       open: true
+      selection_mode: selection_append
+      field_widget_display_settings: {  }
     region: content
     third_party_settings: {  }
   field_video_upload_subtitle:

@@ -6,6 +6,7 @@ core: 8.x
 dependencies:
   - degov_content_types_shared_fields
   - degov_taxonomy_term_copyright
+  - degov_taxonomy_term_tags
   - config_rewrite
   - field
   - image

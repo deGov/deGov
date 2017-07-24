@@ -1,0 +1,10 @@
+{
+  "name": "degov_eu_cookie_compliance",
+  "type": "drupal-module",
+  "description": "Adds default configuration for the EU Cookie Compliance module.",
+  "license": "GPL-2.0+",
+  "homepage": "https://www.nrwgov.org",
+  "require": {
+    "drupal/eu_cookie_compliance": "^1.0@beta"
+  }
+}

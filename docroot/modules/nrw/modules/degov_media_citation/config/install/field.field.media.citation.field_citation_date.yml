@@ -7,6 +7,8 @@ dependencies:
   enforced:
     module:
       - degov_media_citation
+  module:
+    - datetime
 id: media.citation.field_citation_date
 field_name: field_citation_date
 entity_type: media
@@ -15,7 +17,10 @@ label: Datum
 description: ''
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    default_date_type: now
+    default_date: now
 default_value_callback: ''
 settings: {  }
-field_type: string
+field_type: datetime

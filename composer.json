@@ -23,39 +23,22 @@
         "composer/installers": "^1.0",
         "drupal-composer/drupal-scaffold": "^2.0.0",
         "cweagans/composer-patches": "^1.6.0",
-        "acquia/lightning": "~2.1.0",
         "mnsami/composer-custom-directory-installer": "^1.0",
-        "drupal/bootstrap": "^3.3",
-        "drupal/eu_cookie_compliance": "^1.0@beta",
-        "drupal/simple_sitemap": "^2.9",
-        "drupal/simple_gmap": "^1.2",
-        "drupal/easy_breadcrumb": "^1.6",
-        "drupal/piwik": "^1.1",
-        "drupal/open_readspeaker": "^1.3",
-        "drupal/twitter_block": "^2.1",
-        "drupal/entity_reference_revisions": "^1.2",
-        "drupal/paragraphs": "^1.1",
-        "drupal/admin_toolbar": "^1.19",
-        "drupal/password_policy": "^3.0@alpha",
-        "drupal/sitemap": "^1.3",
-        "drupal/shariff": "^1.1",
-        "drupal/views_database_connector": "^1.0",
-        "drupal/search404": "^1.0@beta",
-        "drupal/elasticsearch_connector": "5.x-dev",
-        "drupal/viewsreference": "^1.0@alpha",
-        "drupal/simplenews": "^1.0@alpha",
-        "drupal/ultimate_cron": "^2.0@alpha",
-        "drupal/contact_storage": "^1.0@beta",
-        "drupal/social_media_links": "^2.2",
-        "drupal/spamspan": "1.x-dev",
-        "drupal/content_access": "1.x-dev",
-        "drupal/smtp": "^1.0@beta",
-        "drupal/webform": "^5.0@beta",
-        "drupal/linkit": "^4.3",
+        "wikimedia/composer-merge-plugin": "^1.4",
+        "acquia/lightning": "~2.1.0",
         "drupal/config_rewrite": "^1.0",
-        "drupal/image_widget_crop": "^2.0",
-        "drupal/address": "^1.0",
-        "wikimedia/composer-merge-plugin": "^1.4"
+        "drupal/admin_toolbar": "^1.19",
+        "drupal/entity_reference_revisions": "^1.2",
+        "drupal/open_readspeaker": "^1.3",
+        "drupal/paragraphs": "^1.1",
+        "drupal/piwik": "^1.1",
+        "drupal/simple_sitemap": "^2.9",
+        "drupal/sitemap": "^1.3",
+        "drupal/spamspan": "1.x-dev",
+        "drupal/ultimate_cron": "^2.0@alpha",
+        "drupal/viewsreference": "^1.0@alpha",
+        "drupal/webform": "^5.0@beta",
+        "drupal/entity_reference_display": "^1.0"
     },
     "repositories": {
         "drupal": {
@@ -91,7 +74,7 @@
             "package": {
                 "name": "nrwgov/nrw_base_theme",
                 "version": "8.x-2.x-dev",
-        "type": "drupal-theme",
+                "type": "drupal-theme",
                 "source": {
                     "url": "https://github.com/NRWgov/nrw_base_theme.git",
                     "type": "git",
@@ -135,18 +118,6 @@
                     "reference": "origin/master"
                 }
             }
-        },
-        "shariff": {
-            "type": "package",
-            "package": {
-                "name": "heiseonline/shariff",
-                "version": "master",
-                "type": "drupal-library",
-                "dist": {
-                    "url": "https://github.com/heiseonline/shariff/archive/master.zip",
-                    "type": "zip"
-                }
-            }
         }
     },
     "scripts": {
@@ -155,6 +126,12 @@
       ],
       "post-update-cmd": [
         "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
+      ],
+      "coder-check": [
+        "./bin/phpcs --standard=vendor/drupal/coder/coder_sniffer/Drupal --colors --exclude=Drupal.Files.TxtFileLineLength"
+      ],
+      "coder-fix": [
+        "./bin/phpcbf --standard=vendor/drupal/coder/coder_sniffer/Drupal --exclude=Drupal.Files.TxtFileLineLength"
       ]
     },
     "config": {
@@ -194,11 +171,19 @@
             ]
         },
         "enable-patching": true,
+        "patches": {
+            "drupal/core": {
+                "2893029 - StringTranslationTrait consumers cannot be reliably serialized without DependencySerializationTrait":
+                "https://www.drupal.org/files/issues/2893029-full-fix-test-from-3.patch"
+            }
+        },
         "merge-plugin": {
             "include": [
                 "docroot/modules/nrw/*/*/composer.json",
                 "docroot/modules/nrwgov/*/*/composer.json",
-                "docroot/modules/custom/*/composer.json"
+                "docroot/modules/custom/*/composer.json",
+                "docroot/themes/nrw/*/composer.json",
+                "docroot/themes/nrwgov/*/composer.json"
             ]
         }
     }

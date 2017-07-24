@@ -65,46 +65,59 @@
  *   in different view modes.
  */
 #}
-{% set classes = [
-node.bundle|clean_class,
-node.isPromoted() ? 'is-promoted',
-node.isSticky() ? 'is-sticky',
-not node.isPublished() ? 'is-unpublished',
-view_mode ? view_mode|clean_class,
-'clearfix',
-] %}
+{%
+  set classes = [
+    'teaser-latest-mode teaser-mode',
+    node.bundle|clean_class,
+    node.isPromoted() ? 'is-promoted',
+    node.isSticky() ? 'is-sticky',
+    not node.isPublished() ? 'is-unpublished',
+    view_mode ? view_mode|clean_class,
+    'clearfix',
+  ]
+%}
 <article{{ attributes.addClass(classes) }}>
   <!-- teaser image -->
-<div class="event__teaser-image col-sm-3">
-    {% if content.field_teaser_image %}
-      <a href="{{ url }}" rel="bookmark">
-          {{ content.field_teaser_image }}
-      </a>
-    {% endif %}
-  </div>
+  {% if node.field_event_date.value %}
+    <div class="teaser-latest__day">{{ node.field_event_date.value|date('d') }}</div>
+  {% endif %}
 
-  <div class="event__teaser-content col-md-9"> <!-- from medium screen up, show on the right sidebar -->
+  <div class="teaser-latest__content"> <!-- from medium screen up, show on the right sidebar -->
+
+    {% if content.field_tags %}
+      {{ content.field_tags }}
+    {% endif %}
+
     <!-- teaser date -->
     {% if content.field_event_date %}
-      <div class="event__teaser-date">
+      <div class="teaser-latest__date">
         {{ content.field_event_date }}
       </div>
     {% endif %}
 
     <!-- teaser title -->
     {% if content.field_teaser_title %}
-      <a href="{{ url }}" rel="bookmark">
-        <div class="event__teaser-title">
-          {{ content.field_teaser_title }}
-        </div>
-      </a>
-    {% endif %}
-
-    <!-- Teaser text -->
-    {% if content.field_teaser_text %}
-      <div class="event__teaser-text">
-        {{ content.field_teaser_text }}
+      <div class="teaser-latest__link">
+        <a href="{{ url }}" rel="bookmark">{{ content.field_teaser_title }}</h3></a>
       </div>
     {% endif %}
+
+    <div class="teaser-latest__info">
+      <!-- Teaser img -->
+      {% if content.field_teaser_image %}
+        <div class="teaser-latest__img">
+          <a href="{{ url }}" rel="bookmark">
+              {{ content.field_teaser_image }}
+          </a>
+        </div>
+      {% endif %}
+      <!-- Teaser text -->
+      {% if content.field_teaser_text %}
+        <div class="teaser-latest__text">
+          {{ content.field_teaser_text }}
+        </div>
+      {% endif %}
+    </div>
+
   </div>
 </article>

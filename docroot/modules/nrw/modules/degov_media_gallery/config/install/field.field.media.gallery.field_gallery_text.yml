@@ -1,0 +1,23 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_gallery_text
+    - media_entity.bundle.gallery
+  enforced:
+    module:
+      - degov_media_gallery
+  module:
+    - text
+id: media.gallery.field_gallery_text
+field_name: field_gallery_text
+entity_type: media
+bundle: gallery
+label: Text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

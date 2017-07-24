@@ -1,0 +1,11 @@
+langcode: de
+status: true
+dependencies:
+  enforced:
+    module:
+      - degov_taxonomy_term_tags
+name: Schlagworte
+vid: tags
+description: ''
+hierarchy: 0
+weight: 0

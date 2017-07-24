@@ -26,6 +26,7 @@ settings:
   handler: 'default:media'
   handler_settings:
     target_bundles:
+      contact: contact
       document: document
       image: image
       instagram: instagram

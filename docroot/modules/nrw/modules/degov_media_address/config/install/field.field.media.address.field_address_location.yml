@@ -1,0 +1,36 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_address_location
+    - media_entity.bundle.address
+  enforced:
+    module:
+      - degov_media_address
+  module:
+    - geocoder_field
+    - geofield
+third_party_settings:
+  geocoder_field:
+    method: source
+    field: field_address_address
+    plugins:
+      - googlemaps
+    dumper: wkt
+    delta_handling: m_to_s
+    failure:
+      handling: preserve
+      status_message: true
+      log: true
+id: media.address.field_address_location
+field_name: field_address_location
+entity_type: media
+bundle: address
+label: Location
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geofield

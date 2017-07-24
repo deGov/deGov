@@ -1,0 +1,378 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.event
+  module:
+    - datetime
+    - node
+    - user
+  enforced:
+    module:
+      - degov_node_event
+id: events
+label: Veranstaltungen
+module: views
+description: 'Auflistungen der Veranstaltungen'
+tag: ''
+base_table: node_field_data
+base_field: nid
+core: 8.x
+display:
+  default:
+    display_plugin: default
+    id: default
+    display_title: Master
+    position: 0
+    display_options:
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+      cache:
+        type: tag
+        options: {  }
+      query:
+        type: views_query
+        options:
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_comment: ''
+          query_tags: {  }
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Zurücksetzen
+          exposed_sorts_label: 'Sortieren nach'
+          expose_sort_order: true
+          sort_asc_label: Aufsteigend
+          sort_desc_label: Absteigend
+      pager:
+        type: mini
+        options:
+          items_per_page: 10
+          offset: 0
+          id: 0
+          total_pages: null
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Elemente pro Seite'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- Alle -'
+            offset: false
+            offset_label: Offset
+          tags:
+            previous: ‹‹
+            next: ››
+      style:
+        type: default
+      row:
+        type: 'entity:node'
+        options:
+          view_mode: teaser
+      fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          entity_type: node
+          entity_field: title
+          label: ''
+          alter:
+            alter_text: false
+            make_link: false
+            absolute: false
+            trim: false
+            word_boundary: false
+            ellipsis: false
+            strip_tags: false
+            html: false
+          hide_empty: false
+          empty_zero: false
+          settings:
+            link_to_entity: true
+          plugin_id: field
+          relationship: none
+          group_type: group
+          admin_label: ''
+          exclude: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            event: event
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: allwords
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: title_op
+            label: 'Suchbegriffe im Titel'
+            description: ''
+            use_operator: false
+            operator: title_op
+            identifier: title
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              page_creator: '0'
+              layout_manager: '0'
+              page_reviewer: '0'
+              landing_page_creator: '0'
+              landing_page_reviewer: '0'
+              media_creator: '0'
+              media_manager: '0'
+              event_creator: '0'
+              event_reviewer: '0'
+              normal_page_creator: '0'
+              normal_page_reviewer: '0'
+              press_creator: '0'
+              press_reviewer: '0'
+              blog_creator: '0'
+              blog_reviewer: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: title
+          plugin_id: string
+        field_event_date_value:
+          id: field_event_date_value
+          table: node__field_event_date
+          field: field_event_date_value
+          relationship: none
+          group_type: group
+          admin_label: 'Veranstaltungsdatum von'
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_event_date_value_op
+            label: Von
+            description: ''
+            use_operator: false
+            operator: field_event_date_value_op
+            identifier: from
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              page_creator: '0'
+              layout_manager: '0'
+              page_reviewer: '0'
+              landing_page_creator: '0'
+              landing_page_reviewer: '0'
+              media_creator: '0'
+              media_manager: '0'
+              event_creator: '0'
+              event_reviewer: '0'
+              normal_page_creator: '0'
+              normal_page_reviewer: '0'
+              press_creator: '0'
+              press_reviewer: '0'
+              blog_creator: '0'
+              blog_reviewer: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: datetime
+        field_event_date_value_1:
+          id: field_event_date_value_1
+          table: node__field_event_date
+          field: field_event_date_value
+          relationship: none
+          group_type: group
+          admin_label: 'Veranstaltungsdatum Bis'
+          operator: '<='
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_event_date_value_1_op
+            label: Bis
+            description: ''
+            use_operator: false
+            operator: field_event_date_value_1_op
+            identifier: to
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              page_creator: '0'
+              layout_manager: '0'
+              page_reviewer: '0'
+              landing_page_creator: '0'
+              landing_page_reviewer: '0'
+              media_creator: '0'
+              media_manager: '0'
+              event_creator: '0'
+              event_reviewer: '0'
+              normal_page_creator: '0'
+              normal_page_reviewer: '0'
+              press_creator: '0'
+              press_reviewer: '0'
+              blog_creator: '0'
+              blog_reviewer: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: datetime
+      sorts:
+        field_event_date_value:
+          id: field_event_date_value
+          table: node__field_event_date
+          field: field_event_date_value
+          relationship: none
+          group_type: group
+          admin_label: Veranstaltungsdatum
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+          plugin_id: datetime
+      title: Veranstaltungen
+      header: {  }
+      footer: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: 'Keine Veranstaltungen mit diesem Kriterium gefunden.'
+            format: rich_text
+          plugin_id: text
+      relationships: {  }
+      arguments: {  }
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  events_page_list:
+    display_plugin: page
+    id: events_page_list
+    display_title: 'Veranstaltungsseite (Liste)'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: veranstaltungen
+      display_description: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
