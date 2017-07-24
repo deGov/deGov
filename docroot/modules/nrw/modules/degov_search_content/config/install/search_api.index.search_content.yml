@@ -114,8 +114,6 @@ processor_settings:
       h3: 2
       strong: 2
       b: 2
-      em: 1
-      u: 1
     weights:
       preprocess_index: -15
       preprocess_query: -15
@@ -165,18 +163,6 @@ processor_settings:
       preprocess_index: -10
       preprocess_query: -10
   rendered_item: {  }
-  stemmer:
-    all_fields: true
-    fields:
-      - title
-      - field_teaser_text
-      - field_teaser_title
-    exceptions:
-      texan: texa
-      mexican: mexic
-    weights:
-      preprocess_index: 0
-      preprocess_query: 0
   stopwords:
     all_fields: true
     fields:
