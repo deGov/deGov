@@ -15,6 +15,7 @@ dependencies:
   - geocoder_geofield
   - geofield
   - language
+  - lightning_core
   - media_entity
   - path
   - spamspan
