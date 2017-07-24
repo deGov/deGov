@@ -2,7 +2,7 @@ langcode: de
 status: true
 dependencies:
   module:
-    - metatags
+    - metatag
 id: global
 label: Global
 tags:
@@ -12,6 +12,7 @@ tags:
   og_description: '[node:field_teaser_text]'
   og_image: '[node:field_teaser_image]'
   og_title: '[node:field_teaser_title]'
-  twitter_cards_description: '[current-page:field_teaser_text]'
-  twitter_cards_image: '[current-page:field_teaser_image]'
-  twitter_cards_title: '[current-page:field_teaser_title]'
+  twitter_cards_description: '[node:field_teaser_text]'
+  twitter_cards_image: '[node:field_teaser_image]'
+  twitter_cards_title: '[node:field_teaser_title]'
+  twitter_cards_type: summary

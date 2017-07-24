@@ -1,7 +1,10 @@
 name: 'DeGov - Metatags'
-description: 'A feature that sets the correct meta tags.'
+description: 'Sets the correct meta tags.'
 type: module
 package: deGov
 core: 8.x
 dependencies:
   - metatag
+  - metatag_dc
+  - metatag_open_graph
+  - metatag_twitter_cards
