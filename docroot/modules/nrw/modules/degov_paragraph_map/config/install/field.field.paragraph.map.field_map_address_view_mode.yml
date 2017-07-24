@@ -4,6 +4,9 @@ dependencies:
   config:
     - field.storage.paragraph.field_map_address_view_mode
     - paragraphs.paragraphs_type.map
+  enforced:
+    module:
+      - degov_paragraph_map
   module:
     - entity_reference_display
 id: paragraph.map.field_map_address_view_mode
