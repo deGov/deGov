@@ -1,17 +1,51 @@
-/*
-// Styles for teasers
-.teaser {
-  @include content-box();
-  margin-bottom: $vertical-gutter-width;
-}
-.teaser h2,
-.teaser h3 {
-  a {
-    &:hover,
-    &:focus {
-      text-decoration: none;
-      color: $color-gray;
+.view-reference,
+.node-reference {
+
+  .row > article {
+    border-bottom: 1px solid $gray-light;
+  }
+
+  .paragraph__content {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .teaser-content {
+    padding: $grid-gutter-width/2;
+  }
+
+  .teaser-title h3 {
+    margin-top: 0;
+    font-weight: bold;
+  }
+
+  .views-row:nth-child(odd),
+  .views-row:nth-child(even) .small-image,
+  .odd,
+  .even .small-image {
+    .teaser-image {
+      float: left;
+    }
+    .arrow:after {
+      @include triangle-left($color-white);
+      top: $vertical-gutter-width/2;
+      right: 0;
     }
   }
+
+  .views-row:nth-child(even),
+  .even {
+    .teaser-image {
+      float: right;
+    }
+    .arrow:after {
+      @include triangle-right($color-white);
+      top: $vertical-gutter-width/2;
+      left: 0;
+    }
+  }
+
+  .small-image .teaser-image {
+    padding-right: 0;
+  }
 }
-*/
