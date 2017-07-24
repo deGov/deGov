@@ -1,0 +1,10 @@
+dependencies:
+  config:
+    - field.field.node.press.field_section
+content:
+  field_section:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }

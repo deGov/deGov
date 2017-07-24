@@ -1,0 +1,13 @@
+scheme: taxonomy
+parents:
+  section: section
+label: Bereich
+plural_label: Bereiche
+fields:
+  node:
+    blog: field_section
+    event: field_section
+    normal_page: field_section
+    press: field_section
+deny_on_empty: false
+langcode: de
