@@ -11,6 +11,6 @@ function degov_node_event_preprocess(&$variables, $hook, &$info) {
     'module_name' => 'degov_node_event',
     'entity_type' => 'node',
     'entity_bundles' => ['event'],
-    'entity_view_modes' => ['teaser', 'latest'],
+    'entity_view_modes' => ['teaser', 'latest', 'long_text', 'preview', 'slim', 'small_image']
   ]);
 }
