@@ -14,14 +14,14 @@ name: Inhaltstyp
 url_alias: type
 weight: 0
 min_count: 1
-show_only_one_result: false
+show_only_one_result: true
 field_identifier: type
 facet_source_id: 'search_api:views_page__search_content__page_1'
 widget:
-  type: links
+  type: dropdown
   config:
     show_numbers: true
-    soft_limit: 0
+    default_option_label: Auswählen
 query_operator: and
 use_hierarchy: false
 expand_hierarchy: false

@@ -20,7 +20,7 @@ facet_source_id: 'search_api:views_page__search_content__page_1'
 widget:
   type: datebasic
   config:
-    show_numbers: false
+    show_numbers: true
     display_relative: false
     granularity: '5'
     date_display: ''
