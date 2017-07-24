@@ -55,6 +55,9 @@
 
 .content-header {
 	padding-bottom: $padding-base-vertical*3;
+	&__media {
+		margin: 0 $grid-gutter-width/-2;
+	}
 	&__text {
 		background: $brand-primary;
 		color: $color-white;
