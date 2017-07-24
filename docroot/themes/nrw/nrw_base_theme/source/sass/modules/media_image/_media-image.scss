@@ -1,5 +1,5 @@
 .image {
-  @include make-row();
+  //@include make-row(); 
   position: relative;
   color: $color-white;
   &__info {

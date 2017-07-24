@@ -9,11 +9,12 @@
  *
  * @see template_preprocess_media()
  *
- * @ingroup themeable
+ * @ingroup themeable 
  */
 #}
 <article class="media media-contact">
   <div class="row">
+    <h3 class="media-contact__position">{{ content.field_contact_position|field_value }}</h3>
     <div class="col-md-12 media-contact__image-wrapper">
       <div class="media-contact__image">{{ content.field_contact_image }}</div>
     </div>

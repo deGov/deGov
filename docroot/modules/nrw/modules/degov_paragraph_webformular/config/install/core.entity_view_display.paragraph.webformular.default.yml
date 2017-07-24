@@ -1,0 +1,40 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.webformular.field_sub_title
+    - field.field.paragraph.webformular.field_title
+    - field.field.paragraph.webformular.field_webform_form
+    - paragraphs.paragraphs_type.webformular
+  module:
+    - webform
+id: paragraph.webformular.default
+targetEntityType: paragraph
+bundle: webformular
+mode: default
+content:
+  field_sub_title:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_webform_form:
+    weight: 0
+    label: hidden
+    settings:
+      source_entity: true
+    third_party_settings: {  }
+    type: webform_entity_reference_entity_view
+    region: content
+hidden: {  }

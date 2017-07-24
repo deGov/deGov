@@ -15,6 +15,18 @@
 	@include smaller-than($screen-xs-max){
 		word-break: break-all;
 	}
+	&.paragraph__header-right {
+		display: inline-block;
+		width: 100%;
+		i {
+			float: right;
+			margin-right: 0;
+			margin-left: 20px;
+		}
+		h2 {
+			float: right;
+		}
+	}
 	i{
 		color: $color-white;
 		background-color: $brand-primary;

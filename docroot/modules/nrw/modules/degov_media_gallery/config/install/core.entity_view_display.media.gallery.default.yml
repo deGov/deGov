@@ -1,0 +1,92 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.media.gallery.field_gallery_images
+    - field.field.media.gallery.field_gallery_sub_title
+    - field.field.media.gallery.field_gallery_text
+    - field.field.media.gallery.field_gallery_title
+    - field.field.media.gallery.field_media_in_library
+    - image.style.thumbnail
+    - media_entity.bundle.gallery
+  enforced:
+    module:
+      - degov_media_gallery
+  module:
+    - image
+    - text
+    - user
+id: media.gallery.default
+targetEntityType: media
+bundle: gallery
+mode: default
+content:
+  created:
+    label: hidden
+    type: timestamp
+    weight: 0
+    region: content
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+  field_gallery_images:
+    weight: 5
+    label: above
+    settings:
+      view_mode: slider_main_16_9
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_gallery_sub_title:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_gallery_text:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_gallery_title:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  name:
+    label: hidden
+    type: string
+    weight: -5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  thumbnail:
+    type: image
+    weight: 1
+    label: hidden
+    settings:
+      image_style: thumbnail
+      image_link: ''
+    region: content
+    third_party_settings: {  }
+  uid:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_media_in_library: true
+  langcode: true

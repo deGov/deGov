@@ -1,0 +1,70 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_paragraphs
+    - node.type.normal_page
+    - paragraphs.paragraphs_type.image_header
+    - paragraphs.paragraphs_type.slideshow
+  enforced:
+    module:
+      - degov_node_normal_page
+  module:
+    - entity_reference_revisions
+id: node.normal_page.field_header_paragraphs
+field_name: field_header_paragraphs
+entity_type: node
+bundle: normal_page
+label: Kopfbereich
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      image_header: image_header
+      slideshow: slideshow
+    target_bundles_drag_drop:
+      downloads:
+        weight: 14
+        enabled: false
+      faq:
+        weight: 15
+        enabled: false
+      faq_list:
+        weight: 16
+        enabled: false
+      iframe:
+        weight: 17
+        enabled: false
+      image_header:
+        enabled: true
+        weight: 18
+      links:
+        weight: 19
+        enabled: false
+      media_reference:
+        weight: 20
+        enabled: false
+      node_reference:
+        weight: 21
+        enabled: false
+      slide:
+        weight: 22
+        enabled: false
+      slideshow:
+        enabled: true
+        weight: 23
+      text:
+        weight: 24
+        enabled: false
+      video_subtitle:
+        weight: 25
+        enabled: false
+      view_reference:
+        weight: 26
+        enabled: false
+field_type: entity_reference_revisions
