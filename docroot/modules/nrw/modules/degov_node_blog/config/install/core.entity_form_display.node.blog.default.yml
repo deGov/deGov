@@ -136,8 +136,6 @@ third_party_settings:
         required_fields: true
       label: Common
       region: content
-_core:
-  default_config_hash: 6EP9sRz58daemRL1Oax25Mnk2t4fFMSxuKgaZV4XMvc
 id: node.blog.default
 targetEntityType: node
 bundle: blog
