@@ -103,8 +103,6 @@ third_party_settings:
         required_fields: true
       label: Content
       region: content
-_core:
-  default_config_hash: hDLQkQeaSICKpUMkjYNsizFE4GYqTGddbi8Z_VrPiXQ
 id: node.event.default
 targetEntityType: node
 bundle: event

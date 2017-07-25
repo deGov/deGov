@@ -11,6 +11,6 @@ function degov_paragraph_view_reference_preprocess(&$variables, $hook, &$info) {
     'module_name' => 'degov_paragraph_view_reference',
     'entity_type' => 'paragraph',
     'entity_bundles' => ['view_reference'],
-    'entity_view_modes' => [],
+    'entity_view_modes' => ['default', 'preview'],
   ]);
 }
