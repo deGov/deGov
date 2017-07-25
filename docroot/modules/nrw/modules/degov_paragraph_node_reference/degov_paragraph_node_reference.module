@@ -11,6 +11,6 @@ function degov_paragraph_node_reference_preprocess(&$variables, $hook, &$info) {
     'module_name' => 'degov_paragraph_node_reference',
     'entity_type' => 'paragraph',
     'entity_bundles' => ['node_reference'],
-    'entity_view_modes' => [],
+    'entity_view_modes' => ['default', 'preview'],
   ]);
 }

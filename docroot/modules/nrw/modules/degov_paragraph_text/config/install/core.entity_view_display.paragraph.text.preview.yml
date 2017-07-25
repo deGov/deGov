@@ -3,15 +3,18 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
-    - field.field.paragraph.webformular.field_sub_title
-    - field.field.paragraph.webformular.field_title
-    - field.field.paragraph.webformular.field_webform_form
-    - paragraphs.paragraphs_type.webformular
+    - field.field.paragraph.text.field_sub_title
+    - field.field.paragraph.text.field_text_text
+    - field.field.paragraph.text.field_title
+    - paragraphs.paragraphs_type.text
+  enforced:
+    module:
+      - degov_paragraph_text
   module:
-    - webform
-id: paragraph.webformular.preview
+    - text
+id: paragraph.text.preview
 targetEntityType: paragraph
-bundle: webformular
+bundle: text
 mode: preview
 content:
   field_sub_title:
@@ -22,6 +25,14 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_text_text:
+    weight: 2
+    label: inline
+    settings:
+      trim_length: 100
+    third_party_settings: {  }
+    type: text_trimmed
+    region: content
   field_title:
     weight: 0
     label: inline
@@ -30,12 +41,4 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-  field_webform_form:
-    type: webform_entity_reference_link
-    weight: 2
-    region: content
-    label: inline
-    settings:
-      label: '[webform:title] webform anschauen'
-    third_party_settings: {  }
 hidden: {  }
