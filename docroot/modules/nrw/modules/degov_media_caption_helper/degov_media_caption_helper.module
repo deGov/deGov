@@ -54,8 +54,10 @@ function _degov_media_caption_add_paragraph_cache_keys($referencingEntity, &$var
   if ($referencingEntity instanceof \Drupal\paragraphs\ParagraphInterface) {
     /** @var \Drupal\paragraphs\ParagraphInterface $referencingEntity */
     $paragraphHost = $referencingEntity->getParentEntity();
-    $variables['elements']['#cache']['tags'][] = $paragraphHost->getEntityTypeId().':'.$paragraphHost->id();
-    $variables['elements']['#cache']['tags'][] = $paragraphHost->getEntityTypeId().'_view';
-    _degov_media_caption_add_paragraph_cache_keys($paragraphHost, $variables);
+    if ($paragraphHost && $paragraphHost instanceof \Drupal\Core\Entity\ContentEntityInterface) {
+      $variables['elements']['#cache']['tags'][] = $paragraphHost->getEntityTypeId() . ':' . $paragraphHost->id();
+      $variables['elements']['#cache']['tags'][] = $paragraphHost->getEntityTypeId() . '_view';
+      _degov_media_caption_add_paragraph_cache_keys($paragraphHost, $variables);
+    }
   }
 }
