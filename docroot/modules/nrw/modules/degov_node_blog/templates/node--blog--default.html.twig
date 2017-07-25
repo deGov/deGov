@@ -78,7 +78,12 @@
 %}
 
 <article{{ attributes.addClass(classes) }}>
-  <div class="blog__header-image content-header__media">{{ content.field_blog_image }}</div>
+  {% if node.field_header_paragraphs.value %}
+    <div class="blog__header-paragraphs">
+      {{ content.field_header_paragraphs }}
+    </div>
+  {% endif %}
+
   <div class="blog__header content-header__text">
     <div class="blog__header-date">{{ content.field_blog_date|field_value }}</div>
     <div class="blog__header-title">{{ content.field_blog_sub_title|field_value }}</div>
