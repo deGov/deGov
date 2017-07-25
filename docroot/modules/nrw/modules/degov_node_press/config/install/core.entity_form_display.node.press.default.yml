@@ -101,8 +101,6 @@ third_party_settings:
         required_fields: true
       label: Content
       region: content
-_core:
-  default_config_hash: Zh-urDUmCun_uvXghnBfyGwKMytT6T7ISvRDM6msZ4k
 id: node.press.default
 targetEntityType: node
 bundle: press

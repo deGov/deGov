@@ -114,8 +114,6 @@ third_party_settings:
         required_fields: true
       label: Header
       region: content
-_core:
-  default_config_hash: HFG9K83p9C-uSZjAVpEsmimLbjGdmLPlQ4DjD3vmRSc
 id: node.normal_page.default
 targetEntityType: node
 bundle: normal_page
