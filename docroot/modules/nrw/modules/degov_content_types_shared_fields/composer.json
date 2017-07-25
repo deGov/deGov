@@ -9,8 +9,8 @@
     "drupal/shariff": "^1.0",
     "drupal/field_group": "3.x-dev"
   },
-  "repositories": {
-    "shariff": {
+  "repositories": [
+    {
       "type": "package",
       "package": {
         "name": "heiseonline/shariff",
@@ -22,5 +22,5 @@
         }
       }
     }
-  }
+  ]
 }
