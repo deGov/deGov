@@ -37,8 +37,13 @@ function degov_media_address_preprocess_paragraph__map(&$variables) {
         $variables['elements']['#cache']['contexts'][] = 'url.path';
         $variables['elements']['#cache']['tags'][] = 'paragraph:' . $paragraph->id();
         $variables['elements']['#cache']['tags'][] = $paragraph->getEntityTypeId().'_view';
-        $variables['elements']['#cache']['tags'][] = $paragraph->getParentEntity()->getEntityTypeId() . ':' . $paragraph->getParentEntity()->id();
-        $variables['elements']['#cache']['tags'][] = $paragraph->getParentEntity()->getEntityTypeId() . '_view';
+        $parentEntity = $paragraph->getParentEntity();
+        if ($parentEntity && $parentEntity instanceof \Drupal\Core\Entity\ContentEntityInterface) {
+          $variables['elements']['#cache']['tags'][] = $paragraph->getParentEntity()
+              ->getEntityTypeId() . ':' . $paragraph->getParentEntity()->id();
+          $variables['elements']['#cache']['tags'][] = $paragraph->getParentEntity()
+              ->getEntityTypeId() . '_view';
+        }
         if (empty($variables['#cache']['tags'])) {
           $variables['#cache']['tags'] = [];
         }
