@@ -23,7 +23,8 @@ function degov_media_address_preprocess_paragraph__map(&$variables) {
   /** @var \Drupal\paragraphs\ParagraphInterface $paragraph */
   $paragraph = $variables['paragraph'];
   if ($paragraph->hasField('field_map_address_reference')
-    && !$paragraph->get('field_map_address_reference')->isEmpty()) {
+    && !$paragraph->get('field_map_address_reference')->isEmpty()
+  ) {
     $address_reference = $paragraph->get('field_map_address_reference')->entity;
     if (!empty($address_reference)) {
       $location = $address_reference->get('field_address_location');
@@ -36,12 +37,12 @@ function degov_media_address_preprocess_paragraph__map(&$variables) {
 
         $variables['elements']['#cache']['contexts'][] = 'url.path';
         $variables['elements']['#cache']['tags'][] = 'paragraph:' . $paragraph->id();
-        $variables['elements']['#cache']['tags'][] = $paragraph->getEntityTypeId().'_view';
+        $variables['elements']['#cache']['tags'][] = $paragraph->getEntityTypeId() . '_view';
         $parentEntity = $paragraph->getParentEntity();
         if ($parentEntity && $parentEntity instanceof \Drupal\Core\Entity\ContentEntityInterface) {
-          $variables['elements']['#cache']['tags'][] = $paragraph->getParentEntity()
-              ->getEntityTypeId() . ':' . $paragraph->getParentEntity()->id();
-          $variables['elements']['#cache']['tags'][] = $paragraph->getParentEntity()
+          $variables['elements']['#cache']['tags'][] = $parentEntity
+              ->getEntityTypeId() . ':' . $parentEntity->id();
+          $variables['elements']['#cache']['tags'][] = $parentEntity
               ->getEntityTypeId() . '_view';
         }
         if (empty($variables['#cache']['tags'])) {
@@ -50,7 +51,9 @@ function degov_media_address_preprocess_paragraph__map(&$variables) {
         $variables['#cache']['tags'] = $variables['#cache']['tags'] + $variables['elements']['#cache']['tags'];
         // Override map rendering based on view mode selection.
         if (!empty($variables['content']['field_map_address_reference'][0]['#view_mode'])
-          && !$variables['paragraph']->get('field_map_address_view_mode')->isEmpty()) {
+          && !$variables['paragraph']->get('field_map_address_view_mode')
+            ->isEmpty()
+        ) {
           $variables['content']['field_map_address_reference'][0]['#cache']['contexts'][] = 'url.path';
           $variables['content']['field_map_address_reference'][0]['#view_mode'] = $paragraph->field_map_address_view_mode->value;
           $variables['content']['field_map_address_reference'][0]['#cache']['tags'] = $variables['content']['field_map_address_reference'][0]['#cache']['tags'] + $variables['elements']['#cache']['tags'];
