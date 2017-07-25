@@ -17,7 +17,7 @@
       $slider.slick({
         dots: false,
         autoplay: false,
-        arrows: false,
+        arrows: true,
         swipeToSlide: true
       });
       $('.media-gallery__preview .image').click(function() {

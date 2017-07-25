@@ -91,12 +91,17 @@
       <button class="slick__play slick__play--gallery">Play</button>
     </div>
   </div>
-  <div class="media-gallery__title">{{ content.field_gallery_title|field_value }}</div>
-  <div class="media-gallery__sub_title">{{ content.field_gallery_sub_title|field_value }}</div>
-  <div class="media-gallery__text">{{ content.field_gallery_text|field_value }}</div>
-  <div class="media-gallery__preview">
+  <div class="media-gallery__info">
+    <div class="media-gallery__tag">
+      {{ 'Galerie'|t }}
+    </div>
+    <h2 class="media-gallery__title">{{ content.field_gallery_title|field_value }}</h2>
+    <div class="media-gallery__sub_title"><strong>{{ content.field_gallery_sub_title|field_value }}</strong></div>
+    <div class="media-gallery__text">{{ content.field_gallery_text|field_value }}</div>
+  </div>
+  <div class="media-gallery__preview clearfix">
     {% for key, preview in content.preview|field_value %}
-      <div class="col-xs-2 col-md-4 col-sm-2" data-index="{{ key }}"> {{ preview }}</div>
+      <div class="col-xs-6 col-md-3" data-index="{{ key }}"> {{ preview }}</div>
     {% endfor %}
   </div>
 </article>

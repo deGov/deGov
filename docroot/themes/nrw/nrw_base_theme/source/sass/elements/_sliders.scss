@@ -155,4 +155,51 @@
   }
 }
 
+.media-gallery {
+  .slick-controls__gallery {
+    @include calc('width', '100% - 40px');
+    right: auto;
+    bottom: 38px;
+    margin: 0 $grid-gutter-width/2;
+    height: 44px;
+    background: rgba($brand-primary,0.9);
+    button {
+      position: absolute;
+      left: 100px;
+      bottom: $padding-base-vertical;
+      z-index: 1;
+      &:before{
+        display: block;
+        background: $color-white;
+        padding: $padding-large-vertical $padding-large-horizontal*0.75;
+        height: 40px;
+        color: rgba($brand-primary, 0.75);
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        &:before {
+          color: $brand-primary;
+        }
+      }
+    }
+  }
+  .slick-arrow {
+    background: $color-white;
+    bottom: $padding-large-vertical*2;
+    z-index: 1;
+    padding: 0 $padding-large-horizontal*0.75;
+    &:before {
+      font-size: 50px;
+      line-height: 0.8;
+    }
+  }
+  .slick-prev {
+    left: 23px;
+  }
+  .slick-next {
+    left: 69px;
+  }
+}
+
 
