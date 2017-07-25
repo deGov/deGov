@@ -11,7 +11,7 @@ function degov_paragraph_webformular_preprocess(&$variables, $hook, &$info) {
     'module_name' => 'degov_paragraph_webformular',
     'entity_type' => 'paragraph',
     'entity_bundles' => ['webformular'],
-    'entity_view_modes' => [],
+    'entity_view_modes' => ['preview'],
   ]);
 }
 
