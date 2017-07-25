@@ -9,7 +9,6 @@ dependencies:
     - field.field.media.image.field_image_description
     - field.field.media.image.field_image_height
     - field.field.media.image.field_image_mime
-    - field.field.media.image.field_image_title
     - field.field.media.image.field_image_width
     - field.field.media.image.field_media_in_library
     - field.field.media.image.field_tags
@@ -59,6 +58,5 @@ hidden:
   field_image_description: true
   field_image_height: true
   field_image_mime: true
-  field_image_title: true
   field_image_width: true
   uid: true
