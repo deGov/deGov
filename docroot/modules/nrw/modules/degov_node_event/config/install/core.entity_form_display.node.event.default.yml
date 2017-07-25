@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - entity_browser.browser.media_browser
+    - field.field.node.event.field_header_paragraphs
     - field.field.node.event.field_content_paragraphs
     - field.field.node.event.field_event_date
     - field.field.node.event.field_event_location
@@ -35,6 +36,18 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_header_paragraphs:
+    weight: 12
+    settings:
+      title: Absatz
+      title_plural: Paragraphs
+      edit_mode: preview
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
   field_content_paragraphs:
     weight: 13
     settings:
