@@ -1,0 +1,13 @@
+langcode: de
+status: false
+dependencies:
+  enforced:
+    module:
+      - degov_search_content
+id: views_page---search_content__page_1_status
+display_id: views_page---search_content__page_1
+field_identifier: status
+default_sort: false
+default_order: asc
+label: ''
+weight: 0
