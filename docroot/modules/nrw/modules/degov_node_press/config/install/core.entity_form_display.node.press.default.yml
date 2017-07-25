@@ -94,7 +94,7 @@ content:
     region: content
   field_teaser_image:
     type: entity_browser_entity_reference
-    weight: 3
+    weight: 2
     settings:
       entity_browser: media_browser
       field_widget_display: rendered_entity

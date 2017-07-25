@@ -22,5 +22,52 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    target_bundles: null
+    target_bundles:
+      image_header: image_header
+    target_bundles_drag_drop:
+      downloads:
+        weight: 16
+        enabled: false
+      faq:
+        weight: 17
+        enabled: false
+      faq_list:
+        weight: 18
+        enabled: false
+      iframe:
+        weight: 19
+        enabled: false
+      image_header:
+        enabled: true
+        weight: 20
+      links:
+        weight: 21
+        enabled: false
+      map:
+        weight: 22
+        enabled: false
+      media_reference:
+        weight: 23
+        enabled: false
+      node_reference:
+        weight: 24
+        enabled: false
+      slide:
+        weight: 25
+        enabled: false
+      slideshow:
+        weight: 26
+        enabled: false
+      text:
+        weight: 27
+        enabled: false
+      video_subtitle:
+        weight: 28
+        enabled: false
+      view_reference:
+        weight: 29
+        enabled: false
+      webformular:
+        weight: 30
+        enabled: false
 field_type: entity_reference_revisions

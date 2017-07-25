@@ -5,7 +5,6 @@ dependencies:
     - entity_browser.browser.media_browser
     - field.field.node.blog.field_blog_author
     - field.field.node.blog.field_blog_date
-    - field.field.node.blog.field_blog_image
     - field.field.node.blog.field_blog_sub_title
     - field.field.node.blog.field_content_paragraphs
     - field.field.node.blog.field_header_paragraphs
@@ -57,19 +56,6 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
-  field_blog_image:
-    type: entity_browser_entity_reference
-    weight: 6
-    settings:
-      entity_browser: media_browser
-      field_widget_display: label
-      field_widget_edit: true
-      field_widget_remove: true
-      open: true
-      selection_mode: selection_append
-      field_widget_display_settings: {  }
-    region: content
-    third_party_settings: {  }
   field_blog_sub_title:
     weight: 1
     settings:
