@@ -4,6 +4,7 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.media_reference.field_media_reference_media
+    - field.field.paragraph.media_reference.field_override_caption
     - field.field.paragraph.media_reference.field_sub_title
     - field.field.paragraph.media_reference.field_title
     - paragraphs.paragraphs_type.media_reference
@@ -16,16 +17,24 @@ bundle: media_reference
 mode: preview
 content:
   field_media_reference_media:
-    weight: 2
-    label: above
+    weight: 0
+    label: hidden
     settings:
       view_mode: thumbnail
       link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
     region: content
+  field_override_caption:
+    type: string
+    weight: 3
+    region: content
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
   field_sub_title:
-    weight: 1
+    weight: 2
     label: inline
     settings:
       link_to_entity: false
@@ -33,7 +42,7 @@ content:
     type: string
     region: content
   field_title:
-    weight: 0
+    weight: 1
     label: inline
     settings:
       link_to_entity: false
