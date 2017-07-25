@@ -15,7 +15,7 @@ entity_type: node
 bundle: event
 label: Kopfbereich
 description: ''
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
