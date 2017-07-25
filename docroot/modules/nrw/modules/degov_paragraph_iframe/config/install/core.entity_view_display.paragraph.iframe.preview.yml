@@ -4,9 +4,9 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.iframe.field_iframe_height
-    - field.field.paragraph.iframe.field_iframe_sub_title
-    - field.field.paragraph.iframe.field_iframe_title
     - field.field.paragraph.iframe.field_iframe_url
+    - field.field.paragraph.iframe.field_sub_title
+    - field.field.paragraph.iframe.field_title
     - paragraphs.paragraphs_type.iframe
   enforced:
     module:
