@@ -7,15 +7,65 @@ dependencies:
     - field.field.media.document.field_tags
     - media_entity.bundle.document
   module:
+    - field_group
     - file
+    - path
     - workbench_moderation
+third_party_settings:
+  field_group:
+    group_vertical:
+      children:
+        - group_media
+        - group_common
+      parent_name: ''
+      weight: 5
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: Vertical
+      region: content
+    group_common:
+      children:
+        - langcode
+        - field_tags
+        - field_media_in_library
+        - path
+      parent_name: group_vertical
+      weight: 9
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Common
+      region: content
+    group_media:
+      children:
+        - field_document
+      parent_name: group_vertical
+      weight: 7
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Media
+      region: content
+_core:
+  default_config_hash: K5QiIC30jxqja4WpUuubIcbFH-oyKadFhtPNyw-zQjw
 id: media.document.default
 targetEntityType: media
 bundle: document
 mode: default
 content:
   field_document:
-    weight: 4
+    weight: 8
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
@@ -25,12 +75,12 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 3
+    weight: 2
     third_party_settings: {  }
     region: content
   field_tags:
     type: entity_reference_autocomplete
-    weight: 2
+    weight: 1
     region: content
     settings:
       match_operator: CONTAINS
@@ -51,6 +101,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
+  path:
+    type: path
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
   uid: true

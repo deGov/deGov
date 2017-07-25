@@ -17,21 +17,83 @@ dependencies:
       - degov_media_contact
   module:
     - entity_browser
+    - field_group
     - path
     - workbench_moderation
+third_party_settings:
+  field_group:
+    group_vertical:
+      children:
+        - group_contact_details
+        - group_media
+        - group_common
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: Vertical
+      region: content
+    group_media:
+      children:
+        - field_contact_image
+      parent_name: group_vertical
+      weight: 14
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Media
+      region: content
+    group_contact_details:
+      children:
+        - field_contact_position
+        - field_contact_title
+        - field_contact_tel
+        - field_contact_fax
+        - field_contact_email
+      parent_name: group_vertical
+      weight: 13
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Contact details'
+      region: content
+    group_common:
+      children:
+        - langcode
+        - field_tags
+        - field_media_in_library
+        - path
+      parent_name: group_vertical
+      weight: 15
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Common
+      region: content
+_core:
+  default_config_hash: QDHousJZ5GWZl7ZckInuhfaKGLO1_j4cAup-zv6E2YU
 id: media.contact.default
 targetEntityType: media
 bundle: contact
 mode: default
 content:
-  created:
-    type: datetime_timestamp
-    weight: 3
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_contact_email:
-    weight: 9
+    weight: 15
     settings:
       size: 60
       placeholder: ''
@@ -39,7 +101,7 @@ content:
     type: string_textfield
     region: content
   field_contact_fax:
-    weight: 8
+    weight: 14
     settings:
       size: 60
       placeholder: ''
@@ -48,7 +110,7 @@ content:
     region: content
   field_contact_image:
     type: entity_browser_entity_reference
-    weight: 10
+    weight: 9
     settings:
       entity_browser: media_browser
       field_widget_display: rendered_entity
@@ -69,7 +131,7 @@ content:
     type: string_textfield
     region: content
   field_contact_tel:
-    weight: 7
+    weight: 13
     settings:
       size: 60
       placeholder: ''
@@ -77,7 +139,7 @@ content:
     type: string_textfield
     region: content
   field_contact_title:
-    weight: 6
+    weight: 12
     settings:
       size: 60
       placeholder: ''
@@ -88,12 +150,12 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 5
+    weight: 4
     third_party_settings: {  }
     region: content
   field_tags:
     type: entity_reference_autocomplete
-    weight: 4
+    weight: 3
     region: content
     settings:
       match_operator: CONTAINS
@@ -102,7 +164,7 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 1
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -116,17 +178,10 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 11
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
-  uid:
-    type: entity_reference_autocomplete
-    weight: 2
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    region: content
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  created: true
+  uid: true

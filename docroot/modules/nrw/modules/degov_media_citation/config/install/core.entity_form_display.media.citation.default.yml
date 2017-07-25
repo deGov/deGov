@@ -16,27 +16,88 @@ dependencies:
   module:
     - datetime
     - entity_browser
+    - field_group
+    - path
     - workbench_moderation
+third_party_settings:
+  field_group:
+    group_vertical:
+      children:
+        - group_media
+        - group_description
+        - group_common
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: Vertical
+      region: content
+    group_common:
+      children:
+        - langcode
+        - field_tags
+        - field_media_in_library
+        - path
+      parent_name: group_vertical
+      weight: 13
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Common
+      region: content
+    group_media:
+      children:
+        - field_citation_image
+      parent_name: group_vertical
+      weight: 11
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Media
+      region: content
+    group_description:
+      children:
+        - field_citation_title
+        - field_citation_text
+        - field_citation_date
+      parent_name: group_vertical
+      weight: 12
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Description
+      region: content
+_core:
+  default_config_hash: 1bLNaerUCPdQ0Uf3KtzKfBJjwdtNKecqSzijry2Fkw8
 id: media.citation.default
 targetEntityType: media
 bundle: citation
 mode: default
 content:
-  created:
-    type: datetime_timestamp
-    weight: 3
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_citation_date:
-    weight: 9
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
   field_citation_image:
     type: entity_browser_entity_reference
-    weight: 8
+    weight: 7
     settings:
       entity_browser: media_browser
       field_widget_display: label
@@ -48,7 +109,7 @@ content:
     region: content
     third_party_settings: {  }
   field_citation_text:
-    weight: 7
+    weight: 6
     settings:
       rows: 5
       placeholder: ''
@@ -56,7 +117,7 @@ content:
     type: string_textarea
     region: content
   field_citation_title:
-    weight: 6
+    weight: 5
     settings:
       size: 60
       placeholder: ''
@@ -67,12 +128,12 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 5
+    weight: 4
     third_party_settings: {  }
     region: content
   field_tags:
     type: entity_reference_autocomplete
-    weight: 4
+    weight: 3
     region: content
     settings:
       match_operator: CONTAINS
@@ -81,7 +142,7 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 1
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -93,13 +154,12 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  uid:
-    type: entity_reference_autocomplete
-    weight: 2
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+  path:
+    type: path
+    weight: 5
     region: content
+    settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  created: true
+  uid: true
