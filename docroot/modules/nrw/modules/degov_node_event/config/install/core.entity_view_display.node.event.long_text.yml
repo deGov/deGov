@@ -3,25 +3,37 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.long_text
-    - field.field.node.normal_page.field_content_paragraphs
-    - field.field.node.normal_page.field_header_paragraphs
-    - field.field.node.normal_page.field_sidebar_right_paragraphs
-    - field.field.node.normal_page.field_tags
-    - field.field.node.normal_page.field_teaser_image
-    - field.field.node.normal_page.field_teaser_text
-    - field.field.node.normal_page.field_teaser_title
-    - node.type.normal_page
+    - field.field.node.event.field_content_paragraphs
+    - field.field.node.event.field_event_date
+    - field.field.node.event.field_event_location
+    - field.field.node.event.field_sidebar_right_paragraphs
+    - field.field.node.event.field_social_media
+    - field.field.node.event.field_tags
+    - field.field.node.event.field_teaser_image
+    - field.field.node.event.field_teaser_text
+    - field.field.node.event.field_teaser_title
+    - node.type.event
   enforced:
     module:
-      - degov_node_normal_page
+      - degov_node_event
   module:
+    - datetime
     - text
     - user
-id: node.normal_page.long_text
+id: node.event.long_text
 targetEntityType: node
-bundle: normal_page
+bundle: event
 mode: long_text
 content:
+  field_event_date:
+    type: datetime_default
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
   field_teaser_image:
     type: entity_reference_entity_view
     weight: 0
@@ -33,7 +45,7 @@ content:
     third_party_settings: {  }
   field_teaser_text:
     type: text_trimmed
-    weight: 2
+    weight: 3
     region: content
     label: hidden
     settings:
@@ -49,8 +61,10 @@ content:
     third_party_settings: {  }
 hidden:
   field_content_paragraphs: true
-  field_header_paragraphs: true
+  field_event_location: true
   field_sidebar_right_paragraphs: true
+  field_social_media: true
   field_tags: true
   langcode: true
   links: true
+  shariff_field: true
