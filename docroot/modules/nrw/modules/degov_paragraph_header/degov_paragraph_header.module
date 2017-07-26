@@ -29,6 +29,9 @@ function degov_paragraph_header_preprocess_paragraph__image_header(&$variables) 
     $variables['tags'] = $node->get('field_tags')->view([
       'label' => 'hidden',
       'type' => 'taxonomy_term_search',
+      'settings' => [
+        'route_name' => 'view.search_content.page_1',
+      ],
     ]);
   }
 }
