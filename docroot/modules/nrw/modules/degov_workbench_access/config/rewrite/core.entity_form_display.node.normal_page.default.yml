@@ -1,0 +1,15 @@
+dependencies:
+  config:
+    - field.field.node.normal_page.field_section
+third_party_settings:
+  field_group:
+    group_common:
+      children:
+        - field_section
+content:
+  field_section:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
