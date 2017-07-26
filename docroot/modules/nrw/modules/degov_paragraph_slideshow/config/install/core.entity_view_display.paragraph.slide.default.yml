@@ -42,8 +42,8 @@ content:
     weight: 0
     label: hidden
     settings:
-      link: true
-      view_mode: default
+      view_mode: slider_main_16_9
+      link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
     region: content
