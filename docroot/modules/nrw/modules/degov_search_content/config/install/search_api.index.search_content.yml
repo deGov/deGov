@@ -7,6 +7,7 @@ dependencies:
   config:
     - field.storage.node.field_teaser_text
     - field.storage.node.field_teaser_title
+    - field.storage.node.field_tags
     - search_api.server.database
   module:
     - search_api
@@ -68,6 +69,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_teaser_title
+  field_tags:
+    label: Schlagworte
+    datasource_id: 'entity:node'
+    property_path: field_tags
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_tags
 datasource_settings:
   'entity:node':
     bundles:
