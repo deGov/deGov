@@ -68,12 +68,11 @@ content:
     type: string
     region: content
   field_tags:
-    type: entity_reference_label
+    type: taxonomy_term_search
     weight: 8
     region: content
     label: hidden
-    settings:
-      link: false
+    settings: {  }
     third_party_settings: {  }
   name:
     label: hidden
