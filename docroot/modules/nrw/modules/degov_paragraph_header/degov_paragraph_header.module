@@ -28,10 +28,7 @@ function degov_paragraph_header_preprocess_paragraph__image_header(&$variables) 
   if ($node instanceof NodeInterface && $node->hasField('field_tags') && !$node->get('field_tags')->isEmpty()) {
     $variables['tags'] = $node->get('field_tags')->view([
       'label' => 'hidden',
-      'type' => 'entity_reference_label',
-      'settings' => [
-        'link' => TRUE,
-      ],
+      'type' => 'taxonomy_term_search',
     ]);
   }
 }
