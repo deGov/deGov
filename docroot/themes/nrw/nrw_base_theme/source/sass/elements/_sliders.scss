@@ -152,6 +152,40 @@
     right: 20px;
     bottom: auto;
     max-width: 17%;
+    @include smaller-than($screen-sm-max) {
+      max-width: 30%;
+      right: $grid-gutter-width/2;
+      text-align: right;
+    }
+  }
+}
+
+.tweets {
+  .slick-arrow {
+    top: -27px;
+    &:before {
+      font-size: $font-size-h1;
+    }
+  }
+  .slick-dots {
+    top: -44px;
+    right: 70px;
+    max-width: 14%;
+    bottom: auto;
+    margin-right: 0;
+    @include smaller-than($screen-sm-max) {
+      max-width: 50%;
+      right: $grid-gutter-width/2;
+      text-align: right;
+    }
+  }
+  .slick-controls {
+    top: -46px;
+    bottom: auto;
+    margin-right: $padding-base-horizontal*2;
+    button:before {
+      font-size: $font-size-base;
+    }
   }
 }
 

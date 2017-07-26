@@ -1,0 +1,11 @@
+langcode: de
+status: true
+dependencies:
+  enforced:
+    module:
+      - degov_taxonomy_term_section
+name: Bereich
+vid: section
+description: 'Enthält die verschiedenen redaktionellen Bereiche'
+hierarchy: 0
+weight: 0

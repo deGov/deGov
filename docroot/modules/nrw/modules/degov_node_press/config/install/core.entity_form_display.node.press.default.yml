@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - entity_browser.browser.media_browser
+    - field.field.node.press.field_header_paragraphs
     - field.field.node.press.field_content_paragraphs
     - field.field.node.press.field_press_date
     - field.field.node.press.field_sidebar_right_paragraphs
@@ -31,6 +32,7 @@ third_party_settings:
         - group_preview
         - group_right_sidebar
         - group_content
+        - group_header
       parent_name: ''
       weight: 1
       format_type: tabs
@@ -47,7 +49,7 @@ third_party_settings:
         - langcode
         - field_social_media
       parent_name: group_vertical
-      weight: 15
+      weight: 16
       format_type: tab
       format_settings:
         id: ''
@@ -63,7 +65,7 @@ third_party_settings:
         - field_teaser_title
         - field_teaser_text
       parent_name: group_vertical
-      weight: 16
+      weight: 15
       format_type: tab
       format_settings:
         id: ''
@@ -101,6 +103,20 @@ third_party_settings:
         required_fields: true
       label: Content
       region: content
+    group_header:
+      children:
+        - field_header_paragraphs
+      parent_name: group_vertical
+      weight: 16
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Header
+      region: content
 id: node.press.default
 targetEntityType: node
 bundle: press
@@ -112,6 +128,18 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_header_paragraphs:
+    weight: 3
+    settings:
+      title: Absatz
+      title_plural: Paragraphs
+      edit_mode: preview
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
   field_content_paragraphs:
     weight: 5
     settings:
@@ -160,7 +188,7 @@ content:
     region: content
   field_teaser_image:
     type: entity_browser_entity_reference
-    weight: 4
+    weight: 6
     settings:
       entity_browser: media_browser
       field_widget_display: rendered_entity
@@ -173,7 +201,7 @@ content:
     region: content
     third_party_settings: {  }
   field_teaser_text:
-    weight: 6
+    weight: 5
     settings:
       rows: 5
       placeholder: ''
@@ -181,7 +209,7 @@ content:
     type: text_textarea
     region: content
   field_teaser_title:
-    weight: 5
+    weight: 4
     settings:
       size: 60
       placeholder: ''

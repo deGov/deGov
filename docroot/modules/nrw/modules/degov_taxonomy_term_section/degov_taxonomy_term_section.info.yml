@@ -1,0 +1,11 @@
+name: 'deGov - Taxonomy Term Bereich'
+package: deGov
+description: 'Enthält die redaktionellen Bereiche'
+type: module
+core: 8.x
+dependencies:
+  - degov_content_types_shared_fields
+  - language
+  - path
+  - taxonomy
+  - text
