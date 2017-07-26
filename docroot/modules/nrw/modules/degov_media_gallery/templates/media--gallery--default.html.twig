@@ -85,10 +85,17 @@
     {% for key, slideshow_slide in content.field_gallery_images|field_value %}
       {{ slideshow_slide }}
     {% endfor %}
+
     </div>
     <div class="slick-controls slick-controls__gallery">
-      <button class="slick__pause slick__pause--gallery">Pause</button>
-      <button class="slick__play slick__play--gallery">Play</button>
+      <button class="slick__pause slick__pause--gallery">{{ 'Pause'|t }}</button>
+      <button class="slick__play slick__play--gallery">{{ 'Play'|t }}</button>
+      <button class="slick__lightroom media-gallery-js-open-lightroom">{{ 'Open image in a lightroom'|t }}</button>
+      <span class="slick__counter">
+        <span class="slick__counter__current">1</span>
+        <span>{{ 'of'|t }}</span>
+        <span class="slick__counter__total">{{ content.totalImages }}</span>
+      </span>
     </div>
   </div>
   <div class="media-gallery__info">
