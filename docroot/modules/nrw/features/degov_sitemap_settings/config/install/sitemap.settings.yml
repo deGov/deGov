@@ -1,0 +1,37 @@
+page_title: Sitemap
+message:
+  value: "<p>Inhaltverzeichnis</p>\r\n"
+  format: rich_text
+show_front: true
+show_titles: true
+show_books: {  }
+books_expanded: true
+show_menus:
+  main: main
+  account: '0'
+  admin: '0'
+  footer: '0'
+  tools: '0'
+show_menus_hidden: false
+show_vocabularies:
+  copyright: '0'
+  tags: '0'
+show_description: false
+show_count: false
+vocabulary_depth: -1
+term_threshold: 0
+forum_threshold: -1
+rss_front: feed.rss
+show_rss_links: 1
+rss_taxonomy: -1
+css: false
+order:
+  front: -50
+  menus_account: -50
+  menus_admin: -50
+  menus_footer: -50
+  menus_main: -50
+  menus_tools: -50
+  vocabularies_copyright: -50
+  vocabularies_tags: -50
+langcode: de

@@ -1,0 +1,7 @@
+name: 'deGov Sitemap Settings'
+package: deGov
+type: module
+core: 8.x
+dependencies:
+  - sitemap
+  - simple_sitemap
