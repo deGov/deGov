@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d34fb147614f6aa9afa4c1e64aae4bd9",
+    "content-hash": "faa35d60ac1f706eedb8c92de83ad014",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -2510,7 +2510,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/facets-8.x-1.0-alpha10.zip",
-                "reference": null,
+                "reference": "8.x-1.0-alpha10",
                 "shasum": "3475249f89af0db594a3dd8341ccc6afc6dc532d"
             },
             "require": {
@@ -2526,7 +2526,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.0-alpha10",
-                    "datestamp": "1499507343"
+                    "datestamp": "1500888543"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -10963,9 +10963,9 @@
         "drupal/viewsreference": 15,
         "drupal/webform": 10,
         "drupal/eu_cookie_compliance": 10,
+        "drupal/field_group": 20,
         "drupal/facets": 15,
         "drupal/search_api_sorts": 10,
-        "drupal/field_group": 20,
         "drupal/simplify_menu": 20
     },
     "prefer-stable": true,
