@@ -95,8 +95,7 @@ class TaxonomyTermSearchFormatter extends EntityReferenceFormatterBase implement
       }
       else {
         $content = [
-          '#type' => 'markup',
-          '#markup' => $entity->label(),
+          '#plain_text' => $entity->label(),
         ];
       }
 
