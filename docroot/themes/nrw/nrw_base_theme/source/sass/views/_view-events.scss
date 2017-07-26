@@ -1,0 +1,53 @@
+.view-events {
+  &__sidebar-left {
+    background: $nrw-secondary;
+    color: $color-white;
+    padding-top: $vertical-gutter-width/2;
+    padding-bottom: $vertical-gutter-width/2;
+    .form-item {
+      margin-bottom: $vertical-gutter-width/2;
+      display: block;
+    }
+    label {
+      display: block;
+      font-size: $font-size-small;
+      margin-bottom: $padding-base-vertical;
+    }
+    input.form-control {
+      width: 100%;
+      border-radius: 0;
+    }
+    input.form-date {
+      @include icon-after($fa-var-calendar);
+      &:after {
+        color: $nrw-secondary;
+        font-size: $font-size-h3;
+      }
+    }
+    .form-actions {
+      float: right;
+    }
+    button.form-submit {
+      padding: 0;
+      padding-left: $padding-xs-horizontal;
+      margin: 0;
+      &,
+      &:active,
+      &:hover,
+      &:focus {
+        background: transparent;
+        border: none;
+      }
+      font-size: $font-size-small;
+      font-weight: bold;
+      @include icon-after($fa-var-search, $padding-large-vertical);
+      &:after {
+        font-size: $font-size-h2;
+        padding: $padding-small-vertical*1.5;
+        padding-top: $padding-small-vertical;
+        background: $nrw-green;
+        vertical-align: middle;
+      }
+    }
+  }
+}
