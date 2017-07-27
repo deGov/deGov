@@ -7,6 +7,7 @@ dependencies:
   - datetime
   - entity_browser
   - entity_reference_revisions
+  - field_group
   - image
   - image_widget_crop
   - link
