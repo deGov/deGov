@@ -1,7 +1,7 @@
-faq:
+search_faq:
   version: 1.0
   js:
-    js/faq.js: {}
+    js/search_faq.js: {}
   dependencies:
     - core/jquery
     - core/drupal

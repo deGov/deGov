@@ -33,6 +33,6 @@ function degov_node_faq_views_pre_render(ViewExecutable $view) {
     }
 
     $view->element['#attached']['drupalSettings']['degov_node_faq']['search_faq'] = $terms;
-    $view->element['#attached']['library'][] = 'degov_node_faq/faq';
+    $view->element['#attached']['library'][] = 'degov_node_faq/search_faq';
   }
 }
