@@ -5,6 +5,7 @@ dependencies:
     - entity_browser.browser.media_browser
     - field.field.node.normal_page.field_content_paragraphs
     - field.field.node.normal_page.field_header_paragraphs
+    - field.field.node.normal_page.field_section
     - field.field.node.normal_page.field_sidebar_right_paragraphs
     - field.field.node.normal_page.field_social_media
     - field.field.node.normal_page.field_tags
@@ -12,7 +13,6 @@ dependencies:
     - field.field.node.normal_page.field_teaser_text
     - field.field.node.normal_page.field_teaser_title
     - node.type.normal_page
-    - field.field.node.normal_page.field_section
   enforced:
     module:
       - degov_node_normal_page
