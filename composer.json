@@ -186,5 +186,8 @@
                 "docroot/themes/nrwgov/*/composer.json"
             ]
         }
+    },
+    "autoload-dev": {
+        "psr-4": { "BeHat\\Feature\\" : "features/src/"}
     }
 }
