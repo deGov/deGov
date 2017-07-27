@@ -11,14 +11,7 @@ dependencies:
       - degov_node_faq
   module:
     - entity_reference_revisions
-    - panelizer
     - user
-third_party_settings:
-  panelizer:
-    enable: false
-    custom: false
-    allow: false
-    default: default
 id: node.faq.default
 targetEntityType: node
 bundle: faq
