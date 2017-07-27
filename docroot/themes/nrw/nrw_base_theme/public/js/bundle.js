@@ -260,6 +260,7 @@
 	        $('.nrw-menu-header-responsive').toggleClass('is-open');
 	      });
 	      $('.nrw-menu-header-responsive .nrw-menu-header-responsive__block-title').click(function () {
+	        $(this).toggleClass('is-close is-open');
 	        $(this).siblings('.nrw-menu-header-responsive__content').toggleClass('is-close is-open');
 	      });
 	      $('.nrw-menu-header-responsive .action').click(function () {
