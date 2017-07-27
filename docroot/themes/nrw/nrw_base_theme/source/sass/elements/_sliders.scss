@@ -177,12 +177,12 @@
         position: absolute;
         top: auto;
         right: 0;
-        bottom: 0;
+        bottom: $vertical-gutter-width/2;
         left: 0;
         height: 172px;
         @include calc('width', '100% - 384px');
-        margin: 0 auto 20px;
-        padding: 30px 190px;
+        margin: 0 auto;
+        padding: 30px 150px;
         overflow: auto;
         background-color: rgba($nrw-primary, .8);
         color: $color-white;
@@ -195,8 +195,8 @@
           height: auto;
           width: 100%;
           margin-bottom: 0;
-          padding: 20px 20px 40px;
-          background-color: transparent; 
+          padding: $grid-gutter-width/2 $grid-gutter-width/2 $grid-gutter-width;
+          background-color: transparent;
         }
         h2 { margin: 0; }
         p { margin-bottom: 0; }
@@ -219,22 +219,21 @@
       position: absolute;
       top: auto;
       right: auto;
-      bottom: 0;
+      bottom: -29px;
       left: 0;
       z-index: 10;
-      margin: 0 0 -42px 255px;
       &::before {
         color: $color-white;
-        font-size: 156px;
+        font-size: 140px;
       }
       &.slick-next {
-        right: 0;
+        right: 225px;
         left: auto;
-        margin-right: 275px;
-        margin-left: 0;
+      }
+      &.slick-prev {
+        left: 225px;
       }
       @include smaller-than($screen-md-max) {
-        margin-left: 225px;
         &.slick-next {
           margin-right: 225px;
         }
