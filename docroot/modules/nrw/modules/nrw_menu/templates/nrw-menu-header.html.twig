@@ -84,10 +84,22 @@
 
   </div>
   <div class="nrw-menu-header-responsive">
+    <div class="nrw-menu-header-responsive__block nrw-menu-header-responsive__block--search">
+      <div class="nrw-menu-header-responsive__item">
+        <form method="get" action="/suche" id="nrw-menu-header-responsive__search" class="nrw-menu-header-responsive__search">
+          <input type="text" name="header-responsive__search-text" placeholder="{% trans %}Suchbegriff eingeben{% endtrans %}" title="{% trans %}Bitte geben Sie einen Suchbegriff ein{% endtrans %}" id="nrw-menu-header-responsive__search-text" class="nrw-menu-header-responsive__search-text">
+          <button type="submit" class="nrw-menu-header-responsive__search-submit">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            {% trans %}Search{% endtrans %}
+          </button>
+        </form>
+      </div>
+    </div>
     <div class="nrw-menu-header-responsive__block">
-      <div class="nrw-menu-header-responsive__block-title">
+      <div class="nrw-menu-header-responsive__block-title is-close">
         <i class="fa fa-list" aria-hidden="true"></i>
         <span>{% trans %}Menü Landesportal{% endtrans %}</span>
+        <i class="fa fa-angle-down pull-right action" aria-hidden="true"></i>
       </div>
       <div class="nrw-menu-header-responsive__content is-close">
         {% for menu_item in menu_items.menu_tree %}
@@ -120,9 +132,17 @@
       </div>
     </div>
     <div class="nrw-menu-header-responsive__block">
-      <div class="nrw-menu-header-responsive__block-title">
+      <div class="nrw-menu-header-responsive__block-title is-close">
         <i class="fa fa-list" aria-hidden="true"></i>
         <span>{% trans %}FAQ{% endtrans %}</span>
+      </div>
+    </div>
+    <div class="nrw-menu-header-responsive__block nrw-menu-header-responsive__block--social-media">
+      <div class="nrw-menu-header-responsive__item">
+        <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
+        <a href="/" class="link" title="Social media">
+          {% trans %}Social Media{% endtrans %}
+        </a>
       </div>
     </div>
   </div>
