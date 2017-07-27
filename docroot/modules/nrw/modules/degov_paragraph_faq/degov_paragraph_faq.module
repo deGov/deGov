@@ -11,6 +11,6 @@ function degov_paragraph_faq_preprocess(&$variables, $hook, &$info) {
     'module_name' => 'degov_paragraph_faq',
     'entity_type' => 'paragraph',
     'entity_bundles' => ['faq', 'faq_list'],
-    'entity_view_modes' => [],
+    'entity_view_modes' => ['default', 'preview'],
   ]);
 }

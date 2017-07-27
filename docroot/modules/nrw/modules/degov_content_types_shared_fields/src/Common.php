@@ -1,7 +1,6 @@
 <?php
 
 namespace Drupal\degov_content_types_shared_fields;
-use phpDocumentor\Reflection\Types\String_;
 
 /**
  * Class Common.
@@ -31,7 +30,7 @@ class Common {
    *   - entity_bundles: optional array of entity bundles created, could be empty.
    *   - entity_view_modes: optional array of entity view modes that need templates, could be empty.
    */
-  public static function addThemeSuggestions(&$variables, $hook, &$info, $options) {
+  public static function addThemeSuggestions(array &$variables, $hook, array &$info, array $options) {
     /* @var $entity_type string */
     /* @var $entity_bundles array */
     /* @var $module_name string*/
@@ -44,7 +43,8 @@ class Common {
       if ($entity_bundles) {
         if ($hook === 'media') {
           $entity = $variables['elements']['#media'];
-        } else {
+        }
+        else {
           $entity = $variables[$entity_type];
         }
         $entity_bundle = $entity->bundle();
@@ -52,7 +52,8 @@ class Common {
         if (in_array($entity_bundle, $entity_bundles)) {
           $add_suggestion = TRUE;
         }
-      } else {
+      }
+      else {
         // In case no entity bundles are defined, we still include the default template override.
         $add_suggestion = TRUE;
       }
@@ -67,16 +68,20 @@ class Common {
         // Add a template for every defined view mode else add it for the default view mode.
         if (isset($variables['elements']['#view_mode']) && in_array($variables['elements']['#view_mode'], $entity_view_modes)) {
           $info['template'] = $entity_type . '--' . $entity_bundle . '--' . $variables['elements']['#view_mode'];
-        } else {
+        }
+        else {
           if (isset($entity_bundle)) {
             $info['template'] = $entity_type . '--' . $entity_bundle . '--default';
-            // Include defined entity bundle libraries.
-            $library = \Drupal::service('library.discovery')->getLibraryByName($module_name, $entity_bundle);
-            if ($library) {
-              $variables['#attached']['library'][] = $module_name . '/' . $entity_bundle;
-            }
-          } else {
+          }
+          else {
             $info['template'] = $entity_type . '--default';
+          }
+        }
+        // Include defined entity bundle libraries.
+        if (isset($entity_bundle)) {
+          $library = \Drupal::service('library.discovery')->getLibraryByName($module_name, $entity_bundle);
+          if ($library) {
+            $variables['#attached']['library'][] = $module_name . '/' . $entity_bundle;
           }
         }
       }
@@ -113,7 +118,7 @@ class Common {
       // 3. Do the same for revision tables.
     }
     foreach ($entity_bundles as $entity_bundle) {
-      \Drupal::logger($entity_bundle)->notice(t('Removing all content of type @bundle', array('@bundle' => $entity_bundle)));
+      \Drupal::logger($entity_bundle)->notice(t('Removing all content of type @bundle', ['@bundle' => $entity_bundle]));
       $entity_ids = \Drupal::entityQuery($entity_type)
         ->condition($entity_bundle_name, $entity_bundle)
         ->execute();

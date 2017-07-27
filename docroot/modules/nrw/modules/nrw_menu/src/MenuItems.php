@@ -55,3 +55,4 @@ class MenuItems extends SimplifiedMenuItems {
   }
 
 }
+

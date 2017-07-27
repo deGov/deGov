@@ -1,0 +1,30 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - facets.facet.search_content_changed
+  enforced:
+    module:
+      - degov_search_content
+  module:
+    - facets
+    - system
+  theme:
+    - nrw_base_theme
+id: search_content_node_changed
+theme: nrw_base_theme
+region: content
+weight: -6
+provider: null
+plugin: 'facet_block:search_content_changed'
+settings:
+  id: 'facet_block:search_content_changed'
+  label: Änderungsdatum
+  provider: facets
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: /suche
+    negate: false
+    context_mapping: {  }

@@ -9,6 +9,8 @@ dependencies:
   - media_entity
   - node
   - paragraphs
+  - shariff
   - taxonomy
   - text
+  - field_group
   - twig_field_value

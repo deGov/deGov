@@ -4,11 +4,11 @@ dependencies:
   config:
     - field.field.node.blog.field_blog_author
     - field.field.node.blog.field_blog_date
-    - field.field.node.blog.field_blog_image
     - field.field.node.blog.field_blog_sub_title
     - field.field.node.blog.field_content_paragraphs
-    - field.field.node.blog.field_override_caption
+    - field.field.node.blog.field_header_paragraphs
     - field.field.node.blog.field_sidebar_right_paragraphs
+    - field.field.node.blog.field_social_media
     - field.field.node.blog.field_tags
     - field.field.node.blog.field_teaser_image
     - field.field.node.blog.field_teaser_text
@@ -26,6 +26,15 @@ targetEntityType: node
 bundle: blog
 mode: default
 content:
+  field_header_paragraphs:
+    weight: -1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
   field_blog_date:
     weight: 1
     label: hidden
@@ -34,15 +43,6 @@ content:
       format_type: short
     third_party_settings: {  }
     type: datetime_default
-    region: content
-  field_blog_image:
-    weight: 2
-    label: hidden
-    settings:
-      link: true
-      view_mode: default
-    third_party_settings: {  }
-    type: entity_reference_entity_view
     region: content
   field_blog_sub_title:
     type: string
@@ -61,14 +61,6 @@ content:
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
     region: content
-  field_override_caption:
-    type: string
-    weight: 3
-    region: content
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
   field_sidebar_right_paragraphs:
     type: entity_reference_revisions_entity_view
     weight: 5
@@ -80,6 +72,7 @@ content:
     third_party_settings: {  }
 hidden:
   field_blog_author: true
+  field_social_media: true
   field_tags: true
   field_teaser_image: true
   field_teaser_text: true

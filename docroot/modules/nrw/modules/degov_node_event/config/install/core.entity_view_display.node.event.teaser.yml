@@ -4,6 +4,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.event.field_content_paragraphs
+    - field.field.node.event.field_header_paragraphs
     - field.field.node.event.field_event_date
     - field.field.node.event.field_event_location
     - field.field.node.event.field_sidebar_right_paragraphs
@@ -25,13 +26,21 @@ bundle: event
 mode: teaser
 content:
   field_event_date:
-    type: datetime_default
+    type: datetime_custom
     weight: 3
     region: content
     label: hidden
     settings:
-      format_type: medium
       timezone_override: ''
+      date_format: 'd.m.Y h:i'
+    third_party_settings: {  }
+  field_tags:
+    type: entity_reference_label
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      link: true
     third_party_settings: {  }
   field_teaser_image:
     type: entity_reference_entity_view
@@ -58,9 +67,10 @@ content:
       link_to_entity: false
     third_party_settings: {  }
 hidden:
+  field_social_media: true
   field_content_paragraphs: true
+  field_header_paragraphs: true
   field_event_location: true
   field_sidebar_right_paragraphs: true
-  field_tags: true
   langcode: true
   links: true

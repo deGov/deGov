@@ -1,0 +1,16 @@
+name: 'deGov - Workbench Access'
+description: 'Enthält Konfiguration für das Workbench Access Modul.'
+package: deGov
+type: module
+core: 8.x
+dependencies:
+  - config_rewrite
+  - degov_node_blog
+  - degov_node_event
+  - degov_node_normal_page
+  - degov_node_press
+  - degov_taxonomy_term_section
+  - field
+  - node
+  - taxonomy
+  - workbench_access

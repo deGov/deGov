@@ -157,9 +157,9 @@ const PhotoSwipeUiDefault = require('photoswipe/dist/photoswipe-ui-default');
 
   // language selector
   Drupal.behaviors.languageSelector = {
-    attach: function (context, settings) { 
+    attach: function (context, settings) {
       $('.language').once('language-selector').each(function () {
-        $(this).find('a.selector').click(function () {    
+        $(this).find('a.selector').click(function () {
           $('.language .options').toggleClass('is-open is-hidden');
         });
       });
@@ -205,11 +205,11 @@ const PhotoSwipeUiDefault = require('photoswipe/dist/photoswipe-ui-default');
       });
     }
   };
-  
-  
+
+
   // Responsive menu
   Drupal.behaviors.responsiveMenu = {
-    attach: function (context, settings) { 
+    attach: function (context, settings) {
       $('.header__menu-icon').click(function () {
         $('.nrw-menu-header-responsive').toggleClass('is-open');
       });
@@ -223,22 +223,85 @@ const PhotoSwipeUiDefault = require('photoswipe/dist/photoswipe-ui-default');
     }
   };
 
+  Drupal.behaviors.selectize = {
+    attach: function (context, settings) {
+      $('.webform-submission-form .form-select').selectric();
+    }
+  };
+
+  Drupal.behaviors.resetform = {
+    attach: function (context, settings) {
+      $(context).find('.reset-form').once('reset-form').each(function () {
+        $('.reset-form').click(function () {
+          $(this).closest('.paragraph__content').find('form').trigger('reset');
+        });
+      });
+    }
+  };
+
   // Slick slider in press list
-  $('.view-latest-press .view-content').slick({
-    dots: true,
-    infinite: false,
-    speed: 300,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    responsive: [
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  });
+  Drupal.behaviors.slickPress = {
+    attach: function (context, settings) {
+      $('.view-latest-press .view-content').slick({
+        dots: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        responsive: [
+          {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+    }
+  };
+
+  // Slick slider in Twitter block
+  Drupal.behaviors.slickTweets = {
+    attach: function (context, settings) {
+      $('.tweets-slideshow .tweets').slick({
+        dots: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        autoplay: true,
+        responsive: [
+          {
+            breakpoint: 720,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+
+      $('.slick__pause').on('click', function () {
+        $('.tweets__slides').slick('slickPause');
+        $(this).hide().siblings('.slick__play').show();
+      });
+      $('.slick__play').on('click', function () {
+        $('.tweets__slides').slick('slickPlay');
+        $(this).hide().siblings('.slick__pause').show();
+      });
+    }
+  };
+
+  // Check heigh of image in contact person
+
+  Drupal.behaviors.contactHeight = {
+    attach: function (context, settings) {
+      $('.region-content .media-contact').once('check-height').each(function () {
+        const height = $(this).find('.media-contact__image-wrapper').height();
+        $(this).find('.media-contact__info').css('height', height + 'px');
+      });
+    }
+  };
 
 })(jQuery, window.Drupal);

@@ -22,7 +22,7 @@ class ViewsSettingsForm extends ConfigFormBase {
    */
   protected function getEditableConfigNames() {
     return [
-      'degov_view_helper.settings',
+      'degov_views_helper.settings',
     ];
   }
 
@@ -33,7 +33,7 @@ class ViewsSettingsForm extends ConfigFormBase {
    *   The unique string identifying the form.
    */
   public function getFormId() {
-    return 'degov_view_helper_settings';
+    return 'degov_views_helper_settings';
   }
 
   /**
@@ -45,7 +45,7 @@ class ViewsSettingsForm extends ConfigFormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
     // Get the current configuration settings.
-    $config = $this->config('degov_view_helper.settings');
+    $config = $this->config('degov_views_helper.settings');
 
     // Get the list of all view names available in the system.
     $view_list = $this->getAllViewsNames();
@@ -74,7 +74,7 @@ class ViewsSettingsForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $config = \Drupal::service('config.factory')->getEditable('degov_view_helper.settings');
+    $config = \Drupal::service('config.factory')->getEditable('degov_views_helper.settings');
     $config->set('allowed_views', $form_state->getValue('allowed_views'))
       ->save();
     $form_ids = $form_state->getValue('form_ids');

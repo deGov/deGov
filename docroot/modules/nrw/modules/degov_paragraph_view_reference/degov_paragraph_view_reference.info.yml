@@ -7,6 +7,6 @@ dependencies:
   - field
   - paragraphs
   - views
-  - viewsreference
+  - degov_views_helper
   - workbench_moderation
   - degov_content_types_shared_fields

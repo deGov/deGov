@@ -3,12 +3,15 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.map.field_map_address_reference
+    - field.field.paragraph.map.field_map_address_view_mode
     - field.field.paragraph.map.field_sub_title
     - field.field.paragraph.map.field_title
     - paragraphs.paragraphs_type.map
   enforced:
     module:
       - degov_paragraph_map
+  module:
+    - options
 id: paragraph.map.default
 targetEntityType: paragraph
 bundle: map
@@ -22,6 +25,13 @@ content:
       link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
+    region: content
+  field_map_address_view_mode:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_sub_title:
     weight: 1

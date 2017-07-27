@@ -5,6 +5,7 @@ dependencies:
     - field.field.node.normal_page.field_content_paragraphs
     - field.field.node.normal_page.field_header_paragraphs
     - field.field.node.normal_page.field_sidebar_right_paragraphs
+    - field.field.node.normal_page.field_social_media
     - field.field.node.normal_page.field_tags
     - field.field.node.normal_page.field_teaser_image
     - field.field.node.normal_page.field_teaser_text
@@ -49,6 +50,7 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
 hidden:
+  field_social_media: true
   field_tags: true
   field_teaser_image: true
   field_teaser_text: true
