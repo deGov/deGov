@@ -36,6 +36,9 @@
   &__preview {
     padding-top: $padding-base-vertical*5;
     padding-bottom: $padding-base-vertical*5;
+    .image__image {
+      padding-bottom: $vertical-gutter-width;
+    }
     .image__info {
       display: none;
     }
