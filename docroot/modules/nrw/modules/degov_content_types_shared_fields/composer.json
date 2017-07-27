@@ -6,10 +6,11 @@
   "homepage": "https://www.nrwgov.org",
   "require": {
     "drupal/twig_field_value": "^1.1",
-    "drupal/shariff": "^1.0"
+    "drupal/shariff": "^1.0",
+    "drupal/field_group": "3.x-dev"
   },
-  "repositories": {
-    "shariff": {
+  "repositories": [
+    {
       "type": "package",
       "package": {
         "name": "heiseonline/shariff",
@@ -21,5 +22,5 @@
         }
       }
     }
-  }
+  ]
 }

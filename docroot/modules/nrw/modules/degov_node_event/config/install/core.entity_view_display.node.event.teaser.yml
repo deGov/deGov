@@ -4,6 +4,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.event.field_content_paragraphs
+    - field.field.node.event.field_header_paragraphs
     - field.field.node.event.field_event_date
     - field.field.node.event.field_event_location
     - field.field.node.event.field_sidebar_right_paragraphs
@@ -68,6 +69,7 @@ content:
 hidden:
   field_social_media: true
   field_content_paragraphs: true
+  field_header_paragraphs: true
   field_event_location: true
   field_sidebar_right_paragraphs: true
   langcode: true

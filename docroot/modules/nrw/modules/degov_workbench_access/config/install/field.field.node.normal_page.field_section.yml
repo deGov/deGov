@@ -2,27 +2,27 @@ langcode: de
 status: true
 dependencies:
   config:
-    - field.storage.node.field_blog_image
-    - media_entity.bundle.image
-    - node.type.blog
+    - field.storage.node.field_section
+    - node.type.normal_page
+    - taxonomy.vocabulary.section
   enforced:
     module:
-      - degov_node_blog
-id: node.blog.field_blog_image
-field_name: field_blog_image
+      - degov_workbench_access
+id: node.normal_page.field_section
+field_name: field_section
 entity_type: node
-bundle: blog
-label: Bild
+bundle: normal_page
+label: Bereich
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:media'
+  handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      image: image
+      section: section
     sort:
       field: _none
     auto_create: false

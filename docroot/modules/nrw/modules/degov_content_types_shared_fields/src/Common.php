@@ -72,14 +72,16 @@ class Common {
         else {
           if (isset($entity_bundle)) {
             $info['template'] = $entity_type . '--' . $entity_bundle . '--default';
-            // Include defined entity bundle libraries.
-            $library = \Drupal::service('library.discovery')->getLibraryByName($module_name, $entity_bundle);
-            if ($library) {
-              $variables['#attached']['library'][] = $module_name . '/' . $entity_bundle;
-            }
           }
           else {
             $info['template'] = $entity_type . '--default';
+          }
+        }
+        // Include defined entity bundle libraries.
+        if (isset($entity_bundle)) {
+          $library = \Drupal::service('library.discovery')->getLibraryByName($module_name, $entity_bundle);
+          if ($library) {
+            $variables['#attached']['library'][] = $module_name . '/' . $entity_bundle;
           }
         }
       }

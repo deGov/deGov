@@ -4,27 +4,29 @@
     <div class="tweets-slideshow">
       <div class="tweets tweets__slides">
         {% for tweet in items %}
-          <div class="tweet">
-            <div class="avatar">
+          {% set parity = cycle(['odd', 'even'], loop.index0) %}
+          <div class="tweet {{ parity }}">
+            <div class="tweet__follow"><a href="https://twitter.com/intent/user?screen_name={{ tweet.screen_name }}">{{ 'Follow'|t }}</a></div>
+            <div class="tweet__avatar">
               <a alt="{{ tweet.screen_name }}" title="{{ tweet.screen_name }}" href="{{ tweet.user_url }}">
                 <img src="{{ tweet.avatar }}">
               </a>
             </div>
-            <div class="timestamp">
+            <div class="tweet__timestamp">
               {% trans %}<em class="placeholder">{{ tweet.time_ago }}</em> ago{% endtrans %}
             </div>
-            <div class="name-handle">
-              <div class="name">
+            <div class="tweet__name-handle">
+              <div class="tweet__name">
                 <a href="https://twitter.com/{{ tweet.screen_name }}">{{ tweet.username }}</a>
               </div>
-              <div class="handle">
+              <div class="tweet__handle">
                 <a href="https://twitter.com/{{ tweet.screen_name }}">@{{ tweet.screen_name }}</a>
               </div>
             </div>
-            <div class="text">
+            <div class="tweet__text">
               {{ tweet.text }}
             </div>
-            <ul class="actions">
+            <ul class="tweet__actions">
               <li><a href="https://twitter.com/intent/tweet?in_reply_to={{ tweet.id }}">{{ 'Reply'|t }}</a></li>
               <li><a href="https://twitter.com/intent/retweet?tweet_id={{ tweet.id }}">{{ 'Retweet'|t }}</a></li>
               <li><a href="https://twitter.com/intent/favorite?tweet_id={{ tweet.id }}">{{ 'Favorite'|t }}</a></li>

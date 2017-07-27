@@ -13,7 +13,7 @@ function degov_paragraph_video_subtitle_preprocess(&$variables, $hook, &$info) {
     'module_name' => 'degov_paragraph_video_subtitle',
     'entity_type' => 'paragraph',
     'entity_bundles' => ['video_subtitle'],
-    'entity_view_modes' => [],
+    'entity_view_modes' => ['preview'],
   ]);
 }
 

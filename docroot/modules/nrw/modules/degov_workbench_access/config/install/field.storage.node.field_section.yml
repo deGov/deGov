@@ -1,18 +1,18 @@
 langcode: de
 status: true
 dependencies:
+  module:
+    - node
+    - taxonomy
   enforced:
     module:
-      - degov_node_blog
-  module:
-    - media_entity
-    - node
-id: node.field_blog_image
-field_name: field_blog_image
+      - degov_workbench_access
+id: node.field_section
+field_name: field_section
 entity_type: node
 type: entity_reference
 settings:
-  target_type: media
+  target_type: taxonomy_term
 module: core
 locked: false
 cardinality: 1

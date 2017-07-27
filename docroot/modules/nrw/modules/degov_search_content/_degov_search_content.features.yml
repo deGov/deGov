@@ -1,0 +1,7 @@
+excluded:
+  - views.view.search
+  - block.block.bartik_search
+  - block.block.nrw_base_theme_search
+  - search_api.server.database
+  - search_api.index.content
+required: true

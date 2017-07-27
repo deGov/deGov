@@ -1,0 +1,9 @@
+langcode: de
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.preview
+label: Vorschau
+targetEntityType: paragraph
+cache: true

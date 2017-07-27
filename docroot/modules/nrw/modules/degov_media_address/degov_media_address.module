@@ -11,6 +11,55 @@ function degov_media_address_preprocess(&$variables, $hook, &$info) {
     'module_name' => 'degov_media_address',
     'entity_type' => 'media',
     'entity_bundles' => ['address'],
-    'entity_view_modes' => ['default_map'],
+    'entity_view_modes' => ['default_map', 'osm_map'],
   ]);
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function degov_media_address_preprocess_paragraph__map(&$variables) {
+  // Pass map arguments for the rendered map through javascript.
+  /** @var \Drupal\paragraphs\ParagraphInterface $paragraph */
+  $paragraph = $variables['paragraph'];
+  if ($paragraph->hasField('field_map_address_reference')
+    && !$paragraph->get('field_map_address_reference')->isEmpty()
+  ) {
+    $address_reference = $paragraph->get('field_map_address_reference')->entity;
+    if (!empty($address_reference)) {
+      $location = $address_reference->get('field_address_location');
+      if (!$location->isEmpty()) {
+        // Add latitude and longitude.
+        $variables['#attached']['drupalSettings']['map']['lat'] = $location->lat;
+        $variables['#attached']['drupalSettings']['map']['lon'] = $location->lon;
+        // Add pin image location.
+        $variables['#attached']['drupalSettings']['map']['pin'] = '/' . drupal_get_path('module', 'degov_media_address') . '/images/map-icon.png';
+
+        $variables['elements']['#cache']['contexts'][] = 'url.path';
+        $variables['elements']['#cache']['tags'][] = 'paragraph:' . $paragraph->id();
+        $variables['elements']['#cache']['tags'][] = $paragraph->getEntityTypeId() . '_view';
+        $parentEntity = $paragraph->getParentEntity();
+        if ($parentEntity && $parentEntity instanceof \Drupal\Core\Entity\ContentEntityInterface) {
+          $variables['elements']['#cache']['tags'][] = $parentEntity
+              ->getEntityTypeId() . ':' . $parentEntity->id();
+          $variables['elements']['#cache']['tags'][] = $parentEntity
+              ->getEntityTypeId() . '_view';
+        }
+        if (empty($variables['#cache']['tags'])) {
+          $variables['#cache']['tags'] = [];
+        }
+        $variables['#cache']['tags'] = $variables['#cache']['tags'] + $variables['elements']['#cache']['tags'];
+        // Override map rendering based on view mode selection.
+        if (!empty($variables['content']['field_map_address_reference'][0]['#view_mode'])
+          && !$variables['paragraph']->get('field_map_address_view_mode')
+            ->isEmpty()
+        ) {
+          $variables['content']['field_map_address_reference'][0]['#cache']['contexts'][] = 'url.path';
+          $variables['content']['field_map_address_reference'][0]['#view_mode'] = $paragraph->field_map_address_view_mode->value;
+          $variables['content']['field_map_address_reference'][0]['#cache']['tags'] = $variables['content']['field_map_address_reference'][0]['#cache']['tags'] + $variables['elements']['#cache']['tags'];
+          $variables['content']['field_map_address_reference']['#cache']['tags'] = $variables['content']['field_map_address_reference']['#cache']['tags'] + $variables['elements']['#cache']['tags'];
+        }
+      }
+    }
+  }
 }
