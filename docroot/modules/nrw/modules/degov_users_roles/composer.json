@@ -1,0 +1,10 @@
+{
+  "name": "degov_users_roles",
+  "type": "drupal-module",
+  "description": "Adds base configuration for roles.",
+  "license": "GPL-2.0+",
+  "homepage": "https://www.degov.org",
+  "require": {
+    "drupal/role_delegation": "^1.0.0"
+  }
+}
