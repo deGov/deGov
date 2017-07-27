@@ -2,6 +2,7 @@
 
 use Drupal\degov_content_types_shared_fields\Common;
 use Drupal\views\ViewExecutable;
+use Drupal\Component\Utility\Unicode;
 
 /**
  * Implements hook_preprocess().
@@ -21,6 +22,17 @@ function degov_node_faq_preprocess(&$variables, $hook, &$info) {
  */
 function degov_node_faq_views_pre_render(ViewExecutable $view) {
   if (isset($view) && ($view->storage->id() == 'search_faq')) {
+    $input = $view->getExposedInput();
+    $terms = trim(strip_tags($input['volltext']));
+
+    if (!empty($terms)) {
+      $terms = array_unique(preg_split('/\s+/', Unicode::strtolower($terms)));
+    }
+    else {
+      $terms = [];
+    }
+
+    $view->element['#attached']['drupalSettings']['degov_node_faq']['search_faq'] = $terms;
     $view->element['#attached']['library'][] = 'degov_node_faq/faq';
   }
 }
