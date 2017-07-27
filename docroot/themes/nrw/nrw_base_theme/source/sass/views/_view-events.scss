@@ -16,12 +16,29 @@
     input.form-control {
       width: 100%;
       border-radius: 0;
+      box-shadow: none;
     }
-    input.form-date {
-      @include icon-after($fa-var-calendar);
-      &:after {
+    input.form-control,
+    i.fa {
+      border: 2px solid $color-white;
+      line-height: $font-size-h3;
+      height: $vertical-gutter-width;
+    }
+    .form-type-date {
+      @include clearfix;
+      display: block;
+      input.form-date {
+        float: left;
+        width: 90%;
+      }
+      i.fa {
+        width: 10%;
+        float: left;
+        padding: 7.5px;
+        padding-left: 0;
         color: $nrw-secondary;
         font-size: $font-size-h3;
+        background: $color-white;
       }
     }
     .form-actions {

@@ -285,6 +285,16 @@
 	    }
 	  };
 
+	  Drupal.behaviors.datePopup = {
+	    attach: function attach(context, settings) {
+	      $(context).find('.form-type-date').once('date-popup').each(function () {
+	        $('i', this).click(function () {
+	          $(this).siblings('.form-date').focus();
+	        });
+	      });
+	    }
+	  };
+
 	  // Slick slider in press list
 	  Drupal.behaviors.slickPress = {
 	    attach: function attach(context, settings) {

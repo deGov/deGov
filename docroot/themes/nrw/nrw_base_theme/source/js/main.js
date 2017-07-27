@@ -239,6 +239,17 @@ const PhotoSwipeUiDefault = require('photoswipe/dist/photoswipe-ui-default');
     }
   };
 
+  Drupal.behaviors.datePopup = {
+    attach: function (context, settings) {
+      $(context).find('.form-type-date').once('date-popup').each(function () {
+        $('i', this).click(function () {
+          $(this).siblings('.form-date').focus();
+        });
+      });
+    }
+  };
+
+
   // Slick slider in press list
   Drupal.behaviors.slickPress = {
     attach: function (context, settings) {
