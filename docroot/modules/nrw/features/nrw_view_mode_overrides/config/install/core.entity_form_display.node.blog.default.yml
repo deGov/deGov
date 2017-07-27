@@ -199,6 +199,12 @@ content:
     third_party_settings: {  }
     type: entity_reference_paragraphs
     region: content
+  field_section:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_sidebar_right_paragraphs:
     weight: 9
     settings:
@@ -300,9 +306,6 @@ content:
       placeholder: ''
     region: content
     third_party_settings: {  }
-  field_section:
-    type: options_select
-    weight: 10
-    region: content
-    settings: {  }
-    third_party_settings: {  }
+hidden:
+  field_blog_image: true
+  field_override_caption: true
