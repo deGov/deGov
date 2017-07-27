@@ -134,7 +134,19 @@ display:
           min_length: null
           fields: {  }
           plugin_id: search_api_fulltext
-      sorts: {  }
+      sorts:
+        title:
+          id: title
+          table: search_api_index_search_faq
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: search_api
       title: FAQ-Suche
       header: {  }
       footer: {  }
