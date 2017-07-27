@@ -12,17 +12,15 @@
         display: none;
     }
     label{
-      @media(max-width: $screen-sm-min){   
+      @media(max-width: $screen-sm-min){
           float: left;
           padding-right: $grid-gutter-width/4;
       }
     }
     .selector{
-      //background: url(../images/language-block.png) no-repeat scroll right 3px transparent;
       padding-right:  $padding-large-vertical*1.5;
       @media(max-width: $screen-sm-min){
         flex: 1;
-        //background: url(../images/language-block.png) no-repeat scroll right 7px transparent;
         i{
           float: right;
           font-weight: bold;
@@ -82,12 +80,6 @@
       }
     }
   }
-  #secondary-menu{
-    ul{
-      //float: right;
-    }
-
-  }
   .menu{
     padding-left: 0;
     ul{
@@ -138,13 +130,16 @@
     -webkit-filter: blur(10px);
     -webkit-transform: scale(1, 0.1);
     margin-bottom: -1*($padding-base-vertical);
+    @media(max-width: $screen-sm){
+      display: none;
+    }
   }
   &__icons{
     display: inline-block;
     width: 100%;
     background: $color-white;
     margin-bottom: -1*($padding-base-vertical + 2 );
-    @media(max-width: 720px){
+    @media(max-width: $screen-sm){
       display: none;
     }
   }
@@ -438,6 +433,10 @@
     border-bottom: 1px solid $color-white;
     line-height: $font-size-h1;
   }
+  &__block--social-media {
+    margin: $grid-gutter-width/-2 0;
+    background: $nrw-light;
+  }
   &__content {
     padding-left: $grid-gutter-width/2.85;
     &.is-close{
@@ -453,7 +452,7 @@
     display: block;
     float: right;
     padding: $padding-base-vertical*2 $padding-base-horizontal;
-    
+
     cursor: pointer;
   }
   &.is-open{
@@ -463,8 +462,13 @@
 
 .header__menu-icon{
   display: none;
-  @media(max-width: 720px){
+  @media(max-width: $screen-sm){
     display: block;
+  }
+  i,
+  span {
+    width: 43px;
+    text-align: center;
   }
   i{
     display: block;
@@ -473,13 +477,10 @@
     margin: $grid-gutter-width/2 $grid-gutter-width/2 0 $grid-gutter-width/2;
     background: $brand-primary;
     color: $color-white;
-    width: 38px;
   }
   span{
     display: inline-block;
     margin: 0 $grid-gutter-width/2;
-    width: 38px;
-    text-align: center;
     font-size: $font-size-small;
     text-transform: uppercase;
     font-weight: bold;

@@ -78,7 +78,6 @@
 
 .header{
 	@media(max-width: $screen-sm-min){
-			margin: 0 -1*($grid-gutter-width/2);
 			&  &__title{
 				display: none;
 			}
@@ -91,7 +90,7 @@
 		font-weight: bold;
 		text-transform: uppercase;
 		position: relative;
-		
+
 		> div{
 			display: flex;
 			flex-direction: row ;
@@ -155,7 +154,7 @@
 		}
 		&	>  &--title{
 			background: $brand-primary;
-			display: none; 
+			display: none;
 			position: relative;
 			text-align: center;
   		padding: $grid-gutter-width/3.07;
@@ -175,11 +174,11 @@
 		}
 		@media(max-width: $screen-sm-min){
 			//min-height: 220px;
-			
+
 			> div{
 				height: auto;
 			}
-			
+
 		}
 		&.is-open{
 			min-height: 255px;
@@ -187,7 +186,7 @@
 				transform: rotate(180deg);
 			}
 			.header__upper-menu--elements{
-				
+
 				display: block;
 			}
 		}
