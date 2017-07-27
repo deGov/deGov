@@ -80,7 +80,7 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-    field_image_width:
+  field_image_width:
     weight: 6
     label: above
     settings:

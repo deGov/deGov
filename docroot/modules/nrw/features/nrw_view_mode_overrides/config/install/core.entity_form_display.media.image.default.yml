@@ -8,7 +8,7 @@ dependencies:
     - field.field.media.image.field_image_description
     - field.field.media.image.field_image_height
     - field.field.media.image.field_image_mime
-     - field.field.media.image.field_image_width
+    - field.field.media.image.field_image_width
     - field.field.media.image.field_media_in_library
     - field.field.media.image.field_tags
     - field.field.media.image.image
