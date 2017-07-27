@@ -1,6 +1,6 @@
 name: 'deGov - FAQ'
 description: 'Dieses Modul stellt einen Inhaltstyp für die FAQ-Datenbank bereit.'
-package: 'deGov'
+package: deGov
 type: module
 core: 8.x
 dependencies:
@@ -14,5 +14,7 @@ dependencies:
   - panelizer
   - paragraphs
   - path
+  - search_api
   - user
+  - views
   - workbench_moderation
