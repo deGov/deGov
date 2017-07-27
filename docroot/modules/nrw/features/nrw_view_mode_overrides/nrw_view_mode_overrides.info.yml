@@ -12,6 +12,7 @@ dependencies:
   - image_widget_crop
   - link
   - media_entity
+  - nrw_view_paragraph_selection_overrides
   - paragraphs
   - path
   - text

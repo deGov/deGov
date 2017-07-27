@@ -151,6 +151,12 @@ content:
     third_party_settings: {  }
     type: entity_reference_paragraphs
     region: content
+  field_section:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_sidebar_right_paragraphs:
     weight: 4
     settings:
@@ -251,11 +257,5 @@ content:
       size: 60
       placeholder: ''
     region: content
-    third_party_settings: {  }
-  field_section:
-    type: options_select
-    weight: 10
-    region: content
-    settings: {  }
     third_party_settings: {  }
 hidden: {  }

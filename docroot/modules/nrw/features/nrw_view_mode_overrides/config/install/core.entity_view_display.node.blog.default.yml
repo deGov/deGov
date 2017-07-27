@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.blog.field_blog_sub_title
     - field.field.node.blog.field_content_paragraphs
     - field.field.node.blog.field_header_paragraphs
+    - field.field.node.blog.field_section
     - field.field.node.blog.field_sidebar_right_paragraphs
     - field.field.node.blog.field_social_media
     - field.field.node.blog.field_tags
@@ -72,6 +73,7 @@ content:
     third_party_settings: {  }
 hidden:
   field_blog_author: true
+  field_section: true
   field_social_media: true
   field_tags: true
   field_teaser_image: true

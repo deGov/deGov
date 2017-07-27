@@ -8,7 +8,9 @@ dependencies:
     - field.field.node.blog.field_blog_sub_title
     - field.field.node.blog.field_content_paragraphs
     - field.field.node.blog.field_header_paragraphs
+    - field.field.node.blog.field_section
     - field.field.node.blog.field_sidebar_right_paragraphs
+    - field.field.node.blog.field_social_media
     - field.field.node.blog.field_tags
     - field.field.node.blog.field_teaser_image
     - field.field.node.blog.field_teaser_text
@@ -66,6 +68,7 @@ hidden:
   field_content_paragraphs: true
   field_header_paragraphs: true
   field_override_caption: true
+  field_section: true
   field_sidebar_right_paragraphs: true
   field_social_media: true
   field_tags: true
