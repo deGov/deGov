@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.node.event.field_content_paragraphs
+    - field.field.node.event.field_header_paragraphs
     - field.field.node.event.field_event_date
     - field.field.node.event.field_event_location
     - field.field.node.event.field_sidebar_right_paragraphs
@@ -23,6 +24,15 @@ targetEntityType: node
 bundle: event
 mode: default
 content:
+  field_header_paragraphs:
+    weight: -1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
   field_content_paragraphs:
     weight: 0
     label: hidden

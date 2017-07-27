@@ -1,0 +1,15 @@
+name: 'deGov - Inhaltssuche'
+description: 'Allgemeine Konfiguration für die Suche.'
+type: module
+core: 8.x
+package: deGov
+dependencies:
+  - block
+  - degov_node_normal_page
+  - facets
+  - node
+  - search_api
+  - search_api_db
+  - search_api_sorts
+  - system
+  - views

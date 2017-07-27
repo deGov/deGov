@@ -1,0 +1,13 @@
+langcode: de
+status: true
+dependencies:
+  enforced:
+    module:
+      - degov_search_content
+id: search_api__views_page__search_content__page_1
+name: 'search_api:views_page__search_content__page_1'
+filter_key: ''
+url_processor: query_string
+breadcrumb:
+  active: false
+  group: false

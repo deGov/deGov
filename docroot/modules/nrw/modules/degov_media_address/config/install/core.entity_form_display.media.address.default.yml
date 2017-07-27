@@ -16,23 +16,84 @@ dependencies:
       - degov_media_address
   module:
     - address
+    - field_group
     - geofield
+    - path
     - workbench_moderation
+third_party_settings:
+  field_group:
+    group_vertical:
+      children:
+        - group_address
+        - group_contact_details
+        - group_common
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: Vertical
+      region: content
+    group_common:
+      children:
+        - langcode
+        - field_tags
+        - field_media_in_library
+        - path
+      parent_name: group_vertical
+      weight: 17
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Common
+      region: content
+    group_address:
+      children:
+        - field_address_address
+        - field_address_location
+      parent_name: group_vertical
+      weight: 15
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Address
+      region: content
+    group_contact_details:
+      children:
+        - field_address_title
+        - field_address_phone
+        - field_address_fax
+        - field_address_email
+      parent_name: group_vertical
+      weight: 16
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Contact details'
+      region: content
 id: media.address.default
 targetEntityType: media
 bundle: address
 mode: default
 content:
-  created:
-    type: datetime_timestamp
-    weight: 10
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_address_address:
-    weight: 2
+    weight: 3
     settings:
-      default_country: null
+      default_country: DE
     third_party_settings: {  }
     type: address_default
     region: content
@@ -53,7 +114,7 @@ content:
     type: string_textfield
     region: content
   field_address_location:
-    weight: 11
+    weight: 4
     settings:
       html5_geolocation: false
     third_party_settings: {  }
@@ -68,7 +129,7 @@ content:
     type: string_textfield
     region: content
   field_address_title:
-    weight: 1
+    weight: 2
     settings:
       size: 60
       placeholder: ''
@@ -79,11 +140,11 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 7
+    weight: 11
     third_party_settings: {  }
     region: content
   field_tags:
-    weight: 6
+    weight: 10
     settings:
       match_operator: CONTAINS
       size: 60
@@ -93,7 +154,7 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 8
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -107,17 +168,10 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 11
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
-  uid:
-    type: entity_reference_autocomplete
-    weight: 9
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    region: content
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  created: true
+  uid: true

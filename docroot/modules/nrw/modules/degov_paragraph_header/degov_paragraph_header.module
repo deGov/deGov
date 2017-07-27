@@ -12,7 +12,7 @@ function degov_paragraph_header_preprocess(&$variables, $hook, &$info) {
     'module_name' => 'degov_paragraph_header',
     'entity_type' => 'paragraph',
     'entity_bundles' => ['image_header'],
-    'entity_view_modes' => [],
+    'entity_view_modes' => ['default', 'preview'],
   ]);
 }
 
