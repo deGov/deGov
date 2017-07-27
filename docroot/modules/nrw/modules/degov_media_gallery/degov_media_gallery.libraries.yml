@@ -3,5 +3,7 @@ gallery:
   js:
     js/gallery.js: {}
   css:
-    custom:
-      css/gallery.css: {}
+    base:
+      libraries/slick/slick.css: {}
+    theme:
+      libraries/slick/slick-theme.css: {}
