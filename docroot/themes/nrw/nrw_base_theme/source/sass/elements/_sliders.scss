@@ -126,6 +126,56 @@
   }
 }
 
+// Other control icons
+.slick__lightroom,
+.slick__download {
+  position: absolute;
+  background: $color-white;
+  padding: $padding-base-vertical;
+  i.fa {
+    color: rgba($brand-primary, 0.9);
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    i.fa {
+      color: $brand-primary;
+    }
+  }
+}
+.slick__lightroom {
+  font-size: 0px;
+  color: transparent;
+  letter-spacing: -1px;
+  border: none;
+  height: 44px;
+  padding-left: $padding-base-horizontal;
+  padding-right: $padding-base-horizontal;
+  i.fa {
+    font-size: $font-size-h3;
+  }
+}
+.slick__download {
+  font-size: $font-size-small;
+  line-height: 2.9;
+  a {
+    text-decoration: underline;
+    color: $brand-primary;
+  }
+  i.fa {
+    font-size: $font-size-h2;
+    margin-right: $padding-small-horizontal;
+    vertical-align: middle;
+  }
+}
+
+.slick__counter {
+  color: $color-white;
+  position: absolute;
+  font-size: 12px;
+  font-weight: bold;
+}
+
 // Slider specific styles
 .slideshow {
   .slick-arrow {
@@ -165,7 +215,7 @@
     background: rgba($brand-primary,0.9);
     button {
       position: absolute;
-      left: 100px;
+      left: 95px;
       bottom: $padding-base-vertical;
       z-index: 1;
       &:before{
@@ -182,6 +232,19 @@
           color: $brand-primary;
         }
       }
+    }
+    .slick__download {
+      right: 0;
+      top: 0;
+    }
+    .slick__lightroom {
+      right: 129px;
+      top: 0;
+      left: auto;
+    }
+    .slick__counter {
+      left: 160px;
+      top: 13px;
     }
   }
   .slick-arrow {
