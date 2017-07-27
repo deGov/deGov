@@ -11,6 +11,6 @@ function degov_node_faq_preprocess(&$variables, $hook, &$info) {
     'module_name' => 'degov_node_faq',
     'entity_type' => 'node',
     'entity_bundles' => ['faq'],
-    'entity_view_modes' => ['teaser']
+    'entity_view_modes' => []
   ]);
 }
