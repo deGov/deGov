@@ -38,7 +38,11 @@ function degov_media_gallery_preprocess_media(&$variables) {
     /** @var \Drupal\Core\Field\Plugin\Field\FieldType\EntityReferenceItem $item */
     foreach ($media->get('field_gallery_images') as $item) {
       $uri = $item->entity->image->get(0)->entity->uri->value;
-      $variables['#attached']['drupalSettings']['degov_media_gallery']['imagesDownloadLinks'][] = file_create_url($uri);
+      $variables['#attached']['drupalSettings']['degov_media_gallery']['imagesDownloadLinks'][] = [
+        'uri' => file_create_url($uri),
+        'width' => $item->entity->image->get(0)->width,
+        'height' => $item->entity->image->get(0)->height
+      ];
     }
   }
 }

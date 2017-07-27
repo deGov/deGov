@@ -16,7 +16,7 @@
       var $images = $slider.find('img');
       $slider.slick({
         dots: false,
-        autoplay: false,
+        autoplay: true,
         arrows: true,
         swipeToSlide: true
       });
@@ -29,9 +29,9 @@
       var $pswpItems = [];
       $.each($images, function(k, img) {
         var $pswpItem = {
-          src: img.src,
-          w: img.width,
-          h: img.height
+          src: drupalSettings.degov_media_gallery.imagesDownloadLinks[k].uri,
+          w: drupalSettings.degov_media_gallery.imagesDownloadLinks[k].width,
+          h: drupalSettings.degov_media_gallery.imagesDownloadLinks[k].height
         };
         $pswpItems.push($pswpItem);
       });
@@ -49,9 +49,10 @@
       $('.media-gallery-js-open-lightroom').click(function() {
         $images.get($slider.slick('slickCurrentSlide')).click();
       });
-      $('.media-gallery__images button').click(function() {
-        $('.slick__counter__current').text(parseInt($slider.slick('slickCurrentSlide')) + 1);
-        $('.slick-controls__gallery').find('a').attr('href', drupalSettings.degov_media_gallery.imagesDownloadLinks[$slider.slick('slickCurrentSlide')]);
+      $slider.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
+        var i = (currentSlide ? currentSlide : 0) + 1;
+        $('.slick__counter__current').text(i);
+        $('.slick__counter__total').text(slick.slideCount);
       });
 
     }
