@@ -1,6 +1,7 @@
 <?php
 
 use Drupal\degov_content_types_shared_fields\Common;
+use Drupal\views\ViewExecutable;
 
 /**
  * Implements hook_preprocess().
@@ -13,4 +14,13 @@ function degov_node_faq_preprocess(&$variables, $hook, &$info) {
     'entity_bundles' => ['faq'],
     'entity_view_modes' => []
   ]);
+}
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function degov_node_faq_views_pre_render(ViewExecutable $view) {
+  if (isset($view) && ($view->storage->id() == 'search_faq')) {
+    $view->element['#attached']['library'][] = 'degov_node_faq/faq';
+  }
 }
