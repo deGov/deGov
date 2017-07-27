@@ -43,7 +43,7 @@ content:
     region: content
   field_faq_related:
     weight: 2
-    label: hidden
+    label: above
     settings:
       link: true
     third_party_settings: {  }
