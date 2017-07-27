@@ -5,6 +5,7 @@ dependencies:
     - core.entity_view_mode.node.small_image
     - field.field.node.normal_page.field_content_paragraphs
     - field.field.node.normal_page.field_header_paragraphs
+    - field.field.node.normal_page.field_section
     - field.field.node.normal_page.field_sidebar_right_paragraphs
     - field.field.node.normal_page.field_social_media
     - field.field.node.normal_page.field_tags
@@ -51,6 +52,7 @@ content:
 hidden:
   field_content_paragraphs: true
   field_header_paragraphs: true
+  field_section: true
   field_sidebar_right_paragraphs: true
   field_social_media: true
   field_tags: true
