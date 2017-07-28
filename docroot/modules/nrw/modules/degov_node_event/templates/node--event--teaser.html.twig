@@ -77,6 +77,7 @@
   ]
 %}
 <article{{ attributes.addClass(classes) }}>
+  {{ title_suffix }}
   <!-- teaser image -->
   {% if node.field_event_date.value %}
     <div class="teaser-latest__day">{{ node.field_event_date.value|date('d') }}</div>
@@ -90,15 +91,15 @@
 
     <!-- teaser date -->
     {% if content.field_event_date %}
-      <div class="teaser-latest__date">
-        {{ content.field_event_date }}
+      <div class="teaser-latest__date"{{ content.field_event_date|quickedit_attr }}>
+        {{ content.field_event_date|field_value }}
       </div>
     {% endif %}
 
     <!-- teaser title -->
     {% if content.field_teaser_title %}
       <div class="teaser-latest__link">
-        <a href="{{ url }}" rel="bookmark">{{ content.field_teaser_title }}</h3></a>
+        <a href="{{ url }}" rel="bookmark"><h3{{ content.field_teaser_title|quickedit_attr }}>{{ content.field_teaser_title|field_value }}</h3></a>
       </div>
     {% endif %}
 
@@ -107,14 +108,14 @@
       {% if content.field_teaser_image %}
         <div class="teaser-latest__img">
           <a href="{{ url }}" rel="bookmark">
-              {{ content.field_teaser_image }}
+              {{ content.field_teaser_image|field_value }}
           </a>
         </div>
       {% endif %}
       <!-- Teaser text -->
       {% if content.field_teaser_text %}
-        <div class="teaser-latest__text">
-          {{ content.field_teaser_text }}
+        <div class="teaser-latest__text"{{ content.field_teaser_text|quickedit_attr }}>
+          {{ content.field_teaser_text|field_value }}
         </div>
       {% endif %}
     </div>

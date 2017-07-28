@@ -76,18 +76,18 @@
   ]
 %}
 <article{{ attributes.addClass(classes) }}>
-
+  {{ title_suffix }}
   <!-- header paragraphs -->
   {% if node.field_header_paragraphs.value %}
     <div class="normal-page__header-paragraphs">
-      {{ content.field_header_paragraphs }}
+      {{ content.field_header_paragraphs|field_value }}
     </div>
   {% endif %}
 
   <!-- content paragraphs -->
   {% if node.field_content_paragraphs.value %}
     <div class="normal-page__content-paragraphs">
-      {{ content.field_content_paragraphs }}
+      {{ content.field_content_paragraphs|field_value }}
     </div>
   {% endif %}
 

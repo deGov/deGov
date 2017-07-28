@@ -81,20 +81,20 @@
   {{ title_suffix }}
   {% if node.field_header_paragraphs.value %}
     <div class="blog__header-paragraphs">
-      {{ content.field_header_paragraphs }}
+      {{ content.field_header_paragraphs|field_value }}
     </div>
   {% endif %}
 
   <div class="blog__header content-header__text">
-    <div class="blog__header-date">{{ content.field_blog_date }}</div>
-    <div class="blog__header-title">{{ content.field_blog_sub_title|field_value }}</div>
+    <div class="blog__header-date"{{ content.field_blog_date|quickedit_attr }}>{{ content.field_blog_date|field_value }}</div>
+    <div class="blog__header-title"{{ content.field_blog_sub_title|quickedit_attr }}>{{ content.field_blog_sub_title|field_value }}</div>
   </div>
 
   <div class="blog__content content">
-     <div class="blog__content-author">{{ content.field_blog_author }}</div>
+     <div class="blog__content-author">{{ content.field_blog_author|field_value }}</div>
     {% if node.field_content_paragraphs.value %}
       <div class="blog__content-paragraphs">
-        {{ content.field_content_paragraphs }}
+        {{ content.field_content_paragraphs|field_value }}
       </div>
     {% endif %}
   </div>

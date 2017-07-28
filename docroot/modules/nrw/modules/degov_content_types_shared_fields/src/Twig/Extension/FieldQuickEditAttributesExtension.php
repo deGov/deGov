@@ -2,6 +2,8 @@
 
 namespace Drupal\degov_content_types_shared_fields\Twig\Extension;
 
+use Drupal\Core\Template\Attribute;
+
 /**
  * Provides field value filters for Twig templates.
  */
@@ -30,9 +32,8 @@ class FieldQuickEditAttributesExtension extends \Twig_Extension {
    * @param $build
    *   Render array of a field.
    *
-   * @return array
-   *   Array of render array(s) of field value(s). If $build is not the render
-   *   array of a field, NULL is returned.
+   * @return \Drupal\Core\Template\Attribute
+   *   Rendered attributes.
    */
   public function getQuickEdit($build) {
 
@@ -48,8 +49,7 @@ class FieldQuickEditAttributesExtension extends \Twig_Extension {
       return;
     }
 
-    $element = $build['element'];
-    /** @var $entity \Drupal\Core\Entity\EntityInterface */
+    /** @var $entity \Drupal\Core\Entity\FieldableEntityInterface */
     $entity = $build['#object'];
 
     // Quick Edit module only supports view modes, not dynamically defined
@@ -61,16 +61,20 @@ class FieldQuickEditAttributesExtension extends \Twig_Extension {
       return;
     }
 
+    if (!$entity->hasField($build['#field_name'])) {
+      return;
+    }
+
     $attributes = [];
 
     // Fields that are computed fields are not editable.
-    $definition = $entity->getFieldDefinition($element['#field_name']);
+    $definition = $entity->getFieldDefinition($build['#field_name']);
     if (!$definition->isComputed()) {
-      $attributes['data-quickedit-field-id'] = $entity->getEntityTypeId() . '/' . $entity->id() . '/' . $element['#field_name'] . '/' . $element['#language'] . '/' . $element['#view_mode'];
+      $attributes['data-quickedit-field-id'] = $entity->getEntityTypeId() . '/' . $entity->id() . '/' . $build['#field_name'] . '/' . $build['#language'] . '/' . $build['#view_mode'];
     }
 
     if (!empty($attributes)) {
-      return $attributes;
+      return new Attribute($attributes);
     }
 
     return NULL;

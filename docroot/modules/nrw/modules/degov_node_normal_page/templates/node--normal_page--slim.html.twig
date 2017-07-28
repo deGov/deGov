@@ -78,11 +78,12 @@
 
 
 <article{{ attributes.addClass(classes) }}>
+  {{ title_suffix }}
   <!-- teaser image -->
   {% if content.field_teaser_image %}
     <a href="{{ url }}" rel="bookmark">
       <div class="normal-page__teaser-image teaser-image col-xs-12 col-sm-6 arrow"> <!-- from medium screen up, show on the right sidebar -->
-        {{ content.field_teaser_image }}
+        {{ content.field_teaser_image|field_value }}
       </div>
     </a>
   {% endif %}
@@ -92,15 +93,15 @@
     {% if content.field_teaser_title %}
       <a href="{{ url }}" rel="bookmark">
         <div class="normal-page__teaser-title teaser-title">
-          <h3>{{ content.field_teaser_title }}</h3>
+          <h3{{ content.field_teaser_title|quickedit_attr }}>{{ content.field_teaser_title|field_value }}</h3>
         </div>
       </a>
     {% endif %}
 
     <!-- Teaser text -->
     {% if content.field_teaser_text %}
-      <div class="normal-page__teaser-text">
-        {{ content.field_teaser_text }}
+      <div class="normal-page__teaser-text"{{ content.field_teaser_text|quickedit_attr }}>
+        {{ content.field_teaser_text|field_value }}
       </div>
     {% endif %}
   </div>
