@@ -19,7 +19,7 @@ bundle: links
 mode: default
 content:
   field_links_links:
-    weight: 8
+    weight: 9
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -43,7 +43,7 @@ content:
     type: string_textfield
     region: content
   field_title_link:
-    weight: 9
+    weight: 8
     settings:
       placeholder_url: ''
       placeholder_title: ''
