@@ -1,6 +1,6 @@
 $tag-font-size: 10px;
 
-.field--name-field-tags {
+.tags {
   position: relative;
   padding-left: 25px;
 
@@ -18,7 +18,7 @@ $tag-font-size: 10px;
     margin-right: $padding-xs-horizontal;
   }
 
-  a {
+  .field--item, a {
     font-size: $tag-font-size;
     color: $color-white;
     font-weight: normal;
