@@ -25,13 +25,30 @@ function degov_paragraph_header_preprocess_paragraph__image_header(&$variables) 
   /* @var \Drupal\node\NodeInterface $node */
   $node = $paragraph->getParentEntity();
 
-  if ($node instanceof NodeInterface && $node->hasField('field_tags') && !$node->get('field_tags')->isEmpty()) {
-    $variables['tags'] = $node->get('field_tags')->view([
-      'label' => 'hidden',
-      'type' => 'taxonomy_term_search',
-      'settings' => [
-        'route_name' => 'view.search_content.page_1',
-      ],
-    ]);
+  if ($node instanceof NodeInterface) {
+    // Display tags if there are any and link them to the default search page.
+    if ($node->hasField('field_tags') && !$node->get('field_tags')->isEmpty()) {
+      $variables['tags'] = $node->get('field_tags')->view([
+        'label' => 'hidden',
+        'type' => 'taxonomy_term_search',
+        'settings' => [
+          'route_name' => 'view.search_content.page_1',
+        ],
+      ]);
+    }
+
+    // Include the shariff sharing block buttons if social media sharing is
+    // enabled on the node.
+    if ($node->hasField('field_social_media') && $node->field_social_media->value == '1') {
+      $variables['sharing'] = [
+        '#theme' => 'block_shariff',
+        '#blocksettings' => [],
+        '#attached' => [
+          'library' => [
+            'shariff/shariff',
+          ],
+        ],
+      ];
+    }
   }
 }
