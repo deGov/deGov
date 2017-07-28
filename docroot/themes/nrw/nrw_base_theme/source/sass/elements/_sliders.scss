@@ -192,13 +192,15 @@
         }
         @include smaller-than($screen-sm-max) {
           position: relative;
+          bottom: 0;
           height: auto;
           width: 100%;
           margin-bottom: 0;
           padding: $grid-gutter-width/2 $grid-gutter-width/2 $grid-gutter-width;
           background-color: transparent;
         }
-        h2 { margin: 0; }
+        .slide__text__sub { padding-left: 10px; }
+        h1, h2, h3, h4, h5, h6 { margin: 0; }
         p { margin-bottom: 0; }
       }
     }
@@ -227,15 +229,18 @@
         font-size: 140px;
       }
       &.slick-next {
-        right: 225px;
+        right: 245px;
         left: auto;
       }
       &.slick-prev {
-        left: 225px;
+        left: 245px;
       }
       @include smaller-than($screen-md-max) {
         &.slick-next {
-          margin-right: 225px;
+          right: 235px;
+        }
+        &.slick-prev {
+          left: 235px;
         }
       }
     }
