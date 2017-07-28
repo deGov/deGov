@@ -39,7 +39,7 @@
  */
 #}
 
-<div class="paragraph node-reference">
+<div class="paragraph node-reference teaser-listing">
   {% if content.field_title|field_value or content.field_sub_title|field_value %}
     <div class="paragraph__header">
       <i class="fa fa-arrow-right" aria-hidden="true"></i>
@@ -52,7 +52,7 @@
   {% endif %}
   <div class="paragraph__content">
     {% for key, teaser in content.field_node_reference_nodes if key|first != '#' %}
-    <div class="{{ cycle(['odd', 'even'], loop.index0) }} row">
+    <div class="row">
       {{ teaser }}
     </div>
     {% endfor %}

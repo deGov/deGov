@@ -1,12 +1,24 @@
-.node-reference {
+.teaser-listing {
 
-  .teaser {
+  .row > article {
     border-bottom: 1px solid $gray-light;
+  }
+
+  .views-row {
+    padding-bottom: 0;
   }
 
   .paragraph__content {
     padding-top: 0;
     padding-bottom: 0;
+  }
+
+  .teaser-image {
+    padding: 0;
+  }
+
+  .small-image article {
+    padding: $grid-gutter-width/2 0 $grid-gutter-width/2 $grid-gutter-width/2;
   }
 
   .teaser-content {
@@ -18,7 +30,8 @@
     font-weight: bold;
   }
 
-  .odd {
+  .row:nth-child(odd),
+  .row:nth-child(even) .small-image {
     .teaser-image {
       float: left;
     }
@@ -29,7 +42,7 @@
     }
   }
 
-  .even {
+  .row:nth-child(even) {
     .teaser-image {
       float: right;
     }
