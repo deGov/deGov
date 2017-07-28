@@ -1,0 +1,13 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.faq
+  enforced:
+    module:
+      - degov_node_faq
+id: node.faq
+target_entity_type_id: node
+target_bundle: faq
+default_langcode: site_default
+language_alterable: false
