@@ -24,7 +24,7 @@
         autoplay: false
       });
       setTimeout(function() {
-        $('.slideshow-with-prev-next .slides_prev_next').prepend('<div class="prev-slick-img slick-thumb-nav"><img src="/degov_july/docroot/sites/default/files/styles/medium/public/Free-Wallpaper-Nature-Scenes_0.jpg" class="img-responsive"></div>').append('<div class="next-slick-img slick-thumb-nav"><img src="/degov_july/docroot/sites/default/files/styles/medium/public/Free-Wallpaper-Nature-Scenes_0.jpg" class="img-responsive"></div>');
+        $('.slideshow-with-prev-next .slides_prev_next').prepend('<div class="prev-slick-img slick-thumb-nav"><img src="/prev.jpg" class="img-responsive"></div>').append('<div class="next-slick-img slick-thumb-nav"><img src="/next.jpg" class="img-responsive"></div>');
         get_prev_slick_img();
         get_next_slick_img();
       }, 500);
@@ -47,17 +47,21 @@
         // For prev img
         var prev_slick_img = $('.slick-current').prev('.slide').find('.slide__media img').attr('src');
         $('.prev-slick-img img').attr('src', prev_slick_img);
+        $('.prev-slick-img').css('background-image', 'url(' + prev_slick_img + ')');
         // For next img
         var prev_next_slick_img = $('.slick-current').next('.slide').find('.slide__media img').attr('src');
         $('.next-slick-img img').attr('src', prev_next_slick_img);
+        $('.next-slick-img').css('background-image', 'url(' + prev_next_slick_img + ')');
       }
       function get_next_slick_img() {
         // For next img
         var next_slick_img = $('.slick-current').next('.slide').find('.slide__media img').attr('src');
         $('.next-slick-img img').attr('src', next_slick_img);
+        $('.next-slick-img').css('background-image', 'url(' + next_slick_img + ')');
         // For prev img
         var next_prev_slick_img = $('.slick-current').prev('.slide').find('.slide__media img').attr('src');
         $('.prev-slick-img img').attr('src', next_prev_slick_img);
+        $('.prev-slick-img').css('background-image', 'url(' + next_prev_slick_img + ')');
       }
       // End
     }
