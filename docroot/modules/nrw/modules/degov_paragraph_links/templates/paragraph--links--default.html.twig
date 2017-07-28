@@ -41,6 +41,9 @@
 
 <div class="paragraph links">
   {% if content.field_title|field_value or content.field_sub_title|field_value %}
+    {% if content.field_title_link|field_value %}
+    <a href="{{ content.field_title_link|field_value }}">
+    {% endif %}
     <div class="paragraph__header">
       <i class="fa fa-arrow-right" aria-hidden="true"></i>
       <h2>{{ content.field_title|field_value }}
@@ -49,6 +52,9 @@
         {% endif %}
       </h2>
     </div>
+    {% if content.field_title_link|field_value %}
+    </a>
+    {% endif %}
   {% endif %}
   <div class="paragraph__content">
     {{ content.field_links_links|field_value }}

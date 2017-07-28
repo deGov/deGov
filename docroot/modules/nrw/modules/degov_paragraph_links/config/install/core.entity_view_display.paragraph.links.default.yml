@@ -50,8 +50,8 @@ content:
     label: above
     settings:
       trim_length: 80
-      url_only: false
-      url_plain: false
+      url_only: true
+      url_plain: true
       rel: ''
       target: ''
     third_party_settings: {  }
