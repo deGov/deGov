@@ -12,7 +12,7 @@ function degov_paragraph_header_preprocess(&$variables, $hook, &$info) {
     'module_name' => 'degov_paragraph_header',
     'entity_type' => 'paragraph',
     'entity_bundles' => ['image_header'],
-    'entity_view_modes' => [],
+    'entity_view_modes' => ['default', 'preview'],
   ]);
 }
 
@@ -28,9 +28,9 @@ function degov_paragraph_header_preprocess_paragraph__image_header(&$variables) 
   if ($node instanceof NodeInterface && $node->hasField('field_tags') && !$node->get('field_tags')->isEmpty()) {
     $variables['tags'] = $node->get('field_tags')->view([
       'label' => 'hidden',
-      'type' => 'entity_reference_label',
+      'type' => 'taxonomy_term_search',
       'settings' => [
-        'link' => TRUE,
+        'route_name' => 'view.search_content.page_1',
       ],
     ]);
   }

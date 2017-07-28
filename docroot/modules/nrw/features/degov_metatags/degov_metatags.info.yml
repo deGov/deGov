@@ -1,0 +1,10 @@
+name: 'deGov - Metatags'
+description: 'Standardeinstellungen für das Metatag Modul.'
+type: module
+package: deGov
+core: 8.x
+dependencies:
+  - metatag
+  - metatag_dc
+  - metatag_open_graph
+  - metatag_twitter_cards

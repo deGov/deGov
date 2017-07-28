@@ -17,30 +17,93 @@ dependencies:
       - degov_media_video_upload
   module:
     - entity_browser
+    - field_group
     - file
     - paragraphs
+    - path
     - workbench_moderation
+third_party_settings:
+  field_group:
+    group_vertical:
+      children:
+        - group_media
+        - group_description
+        - group_common
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: Vertical
+      region: content
+    group_media:
+      children:
+        - field_video_upload_preview
+        - field_video_upload_mp4
+        - field_video_upload_webm
+      parent_name: group_vertical
+      weight: 14
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Media
+      region: content
+    group_description:
+      children:
+        - field_video_upload_subtitle
+        - field_video_upload_caption
+        - field_video_upload_copyright
+      parent_name: group_vertical
+      weight: 15
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Description
+      region: content
+    group_common:
+      children:
+        - langcode
+        - field_tags
+        - field_media_in_library
+        - path
+      parent_name: group_vertical
+      weight: 16
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Common
+      region: content
+_core:
+  default_config_hash: z2Wpn7xtrYgNFzQ0C5HmWB8UMN_jrrCnysQ-rcYROQ8
 id: media.video_upload.default
 targetEntityType: media
 bundle: video_upload
 mode: default
 content:
-  created:
-    type: datetime_timestamp
-    weight: 9
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_media_in_library:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 11
+    weight: 10
     third_party_settings: {  }
     region: content
   field_tags:
     type: entity_reference_autocomplete
-    weight: 10
+    weight: 9
     region: content
     settings:
       match_operator: CONTAINS
@@ -48,7 +111,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_video_upload_caption:
-    weight: 4
+    weight: 8
     settings:
       size: 60
       placeholder: ''
@@ -56,7 +119,7 @@ content:
     type: string_textfield
     region: content
   field_video_upload_copyright:
-    weight: 5
+    weight: 9
     settings:
       match_operator: CONTAINS
       size: 60
@@ -65,7 +128,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_video_upload_mp4:
-    weight: 1
+    weight: 5
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
@@ -73,7 +136,7 @@ content:
     region: content
   field_video_upload_preview:
     type: entity_browser_entity_reference
-    weight: 3
+    weight: 4
     settings:
       entity_browser: media_browser
       field_widget_display: label
@@ -86,7 +149,7 @@ content:
     third_party_settings: {  }
   field_video_upload_subtitle:
     type: entity_reference_paragraphs
-    weight: 6
+    weight: 7
     settings:
       title: Absatz
       title_plural: Paragraphs
@@ -97,7 +160,7 @@ content:
     third_party_settings: {  }
     region: content
   field_video_upload_webm:
-    weight: 2
+    weight: 6
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
@@ -105,7 +168,7 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -117,13 +180,12 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  uid:
-    type: entity_reference_autocomplete
-    weight: 8
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+  path:
+    type: path
+    weight: 11
     region: content
+    settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  created: true
+  uid: true

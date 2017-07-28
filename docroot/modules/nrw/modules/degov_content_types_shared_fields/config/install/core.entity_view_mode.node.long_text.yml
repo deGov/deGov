@@ -1,0 +1,13 @@
+langcode: de
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - node
+third_party_settings:
+  lightning_core:
+    description: 'Bild/Text 1:2'
+id: node.long_text
+label: 'Teaser langer Text'
+targetEntityType: node
+cache: true

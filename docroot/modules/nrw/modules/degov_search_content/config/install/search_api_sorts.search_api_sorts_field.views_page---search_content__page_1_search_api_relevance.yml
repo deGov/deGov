@@ -1,0 +1,13 @@
+langcode: de
+status: true
+dependencies:
+  enforced:
+    module:
+      - degov_search_content
+id: views_page---search_content__page_1_search_api_relevance
+display_id: views_page---search_content__page_1
+field_identifier: search_api_relevance
+default_sort: false
+default_order: desc
+label: Relevanz
+weight: 0

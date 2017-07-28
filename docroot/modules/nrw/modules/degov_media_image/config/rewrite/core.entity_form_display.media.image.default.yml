@@ -12,20 +12,107 @@ dependencies:
     - field.field.media.image.field_image_width
     - field.field.media.image.field_media_in_library
     - field.field.media.image.field_tags
-    - image.style.thumbnail
+    - field.field.media.image.image
+    - image.style.crop_thumbnail
     - media_entity.bundle.image
   module:
     - datetime
-    - image
+    - field_group
+    - image_widget_crop
+    - path
     - text
     - workbench_moderation
+third_party_settings:
+  field_group:
+    group_vertical:
+      children:
+        - group_media
+        - group_ima
+        - group_description
+        - group_common
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: Vertical
+      region: content
+    group_description:
+      children:
+        - field_image_title
+        - field_image_caption
+        - field_image_description
+        - field_image_copyright
+      parent_name: group_vertical
+      weight: 18
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Description
+      region: content
+    group_common:
+      children:
+        - field_image_date
+        - field_tags
+        - langcode
+        - field_media_in_library
+        - path
+      parent_name: group_vertical
+      weight: 19
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Common
+      region: content
+    group_ima:
+      children:
+        - field_image_width
+        - field_image_height
+        - field_image_mime
+      parent_name: group_vertical
+      weight: 17
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Image details'
+      region: content
+    group_media:
+      children:
+        - image
+      parent_name: group_vertical
+      weight: 16
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Media
+      region: content
+_core:
+  default_config_hash: i8n8ZG9FN7dla2mgdxzezUBX7qa1Y7wIuh_yKNHnv8c
 id: media.image.default
 targetEntityType: media
 bundle: image
 mode: default
 content:
   field_image_caption:
-    weight: 10
+    weight: 11
     settings:
       size: 60
       placeholder: ''
@@ -33,7 +120,7 @@ content:
     type: string_textfield
     region: content
   field_image_copyright:
-    weight: 12
+    weight: 13
     settings:
       match_operator: CONTAINS
       size: 60
@@ -42,13 +129,13 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_image_date:
-    weight: 13
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
   field_image_description:
-    weight: 9
+    weight: 12
     settings:
       rows: 5
       placeholder: ''
@@ -56,7 +143,7 @@ content:
     type: text_textarea
     region: content
   field_image_height:
-    weight: 7
+    weight: 5
     settings:
       size: 60
       placeholder: ''
@@ -64,7 +151,7 @@ content:
     type: string_textfield
     region: content
   field_image_mime:
-    weight: 8
+    weight: 6
     settings:
       size: 60
       placeholder: ''
@@ -72,7 +159,7 @@ content:
     type: string_textfield
     region: content
   field_image_title:
-    weight: 11
+    weight: 10
     settings:
       size: 60
       placeholder: ''
@@ -80,7 +167,7 @@ content:
     type: string_textfield
     region: content
   field_image_width:
-    weight: 5
+    weight: 4
     settings:
       size: 60
       placeholder: ''
@@ -89,34 +176,58 @@ content:
     region: content
   field_media_in_library:
     type: boolean_checkbox
-    weight: 4
+    weight: 6
     settings:
       display_label: true
     third_party_settings: {  }
     region: content
   field_tags:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 4
     region: content
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  image:
+    type: image_widget_crop
+    weight: 1
+    region: content
+    settings:
+      show_default_crop: true
+      warn_multiple_usages: true
+      preview_image_style: crop_thumbnail
+      crop_preview_image_style: crop_thumbnail
+      crop_list:
+        - 16_to_9
+        - 1_to_1
+        - 2_zu_1
+        - 4_to_1
+        - 8_to_3
+      progress_indicator: throbber
+      show_crop_area: false
+    third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 1
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   name:
     type: string_textfield
-    weight: 2
+    weight: 0
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     region: content
+  path:
+    type: path
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
   uid: true

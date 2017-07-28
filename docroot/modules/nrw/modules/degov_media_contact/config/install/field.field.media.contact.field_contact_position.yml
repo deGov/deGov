@@ -1,0 +1,18 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_contact_position
+    - media_entity.bundle.contact
+id: media.contact.field_contact_position
+field_name: field_contact_position
+entity_type: media
+bundle: contact
+label: Position
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
