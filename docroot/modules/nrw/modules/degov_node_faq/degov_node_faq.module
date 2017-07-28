@@ -21,7 +21,7 @@ function degov_node_faq_preprocess(&$variables, $hook, &$info) {
  * Implements hook_views_pre_render().
  */
 function degov_node_faq_views_pre_render(ViewExecutable $view) {
-  if (isset($view) && ($view->storage->id() == 'search_faq')) {
+  if ($view->storage->id() == 'search_faq') {
     $input = $view->getExposedInput();
     $terms = trim(strip_tags($input['volltext']));
 
