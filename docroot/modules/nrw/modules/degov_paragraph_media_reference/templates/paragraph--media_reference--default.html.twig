@@ -49,7 +49,7 @@ set classes = [
 ]
 %}
 
-<div class="paragraph media-reference">
+<div{{ attributes.addClass(classes) }}>
   {{ content.contextual_links }}
   {% if content.field_title|field_value or content.field_sub_title|field_value %}
     <div class="paragraph__header">
