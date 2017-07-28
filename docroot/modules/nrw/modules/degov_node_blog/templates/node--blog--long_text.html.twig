@@ -76,31 +76,29 @@
   ]
 %}
 <article{{ attributes.addClass(classes) }}>
-  <!-- teaser image -->
-  
-  <div class="nblog__teaser-image teaser-image col-xs-12 col-sm-4 arrow">
+
+  <div class="blog__teaser-image teaser-image col-xs-12 col-sm-4 arrow">
     {% if content.field_teaser_image %}
       <a href="{{ url }}" rel="bookmark">
-          {{ content.field_teaser_image }}
+        {{ content.field_teaser_image }}
       </a>
     {% endif %}
   </div>
 
-  <div class="blog__teaser-content teaser-content col-xs-12 col-sm-8"> <!-- from medium screen up, show on the right sidebar -->
-    <!-- teaser title -->
+  <div class="blog__teaser-content teaser-content col-xs-12 col-sm-8">
     {% if content.field_teaser_title %}
       <a href="{{ url }}" rel="bookmark">
         <div class="blog__teaser-title teaser-title">
-            <h3>{{ content.field_teaser_title }}</h3>
+          <h3>{{ content.field_teaser_title }}</h3>
         </div>
       </a>
     {% endif %}
 
-    <!-- Teaser text -->
     {% if content.field_teaser_text %}
       <div class="blog__teaser-text">
         {{ content.field_teaser_text }}
       </div>
     {% endif %}
   </div>
+
 </article>
