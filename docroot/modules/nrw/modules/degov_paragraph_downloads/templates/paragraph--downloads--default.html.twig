@@ -39,18 +39,30 @@
  */
 #}
 
-<div class="paragraph downloads nav-list">
+{%
+set classes = [
+  'paragraph',
+  'nav-list',
+  paragraph.bundle|clean_class,
+  view_mode ? view_mode|clean_class,
+  'clearfix',
+  'content-header',
+]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+  {{ content.contextual_links }}
   {% if content.field_title|field_value or content.field_sub_title|field_value %}
     <div class="paragraph__header">
       <i class="fa fa-arrow-right" aria-hidden="true"></i>
       <h2>{{ content.field_title|field_value }}
         {% if content.field_sub_title|field_value %}
-          <span class="sub-title">{{ content.field_sub_title|field_value }}</span>
+          <span class="sub-title">{{ content.field_sub_title }}</span>
         {% endif %}
       </h2>
     </div>
   {% endif %}
   <div class="paragraph__content">
-    {{ content.field_downloads_files|field_value }}
+    {{ content.field_downloads_files }}
   </div>
 </div>
