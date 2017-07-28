@@ -35,12 +35,11 @@ content:
       date_format: 'd.m.Y h:i'
     third_party_settings: {  }
   field_tags:
-    type: entity_reference_label
+    type: taxonomy_term_search
     weight: 4
     region: content
     label: hidden
-    settings:
-      link: true
+    settings: {  }
     third_party_settings: {  }
   field_teaser_image:
     type: entity_reference_entity_view
