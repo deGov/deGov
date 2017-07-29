@@ -7,6 +7,7 @@ dependencies:
   config:
     - field.field.paragraph.view_reference.field_sub_title
     - field.field.paragraph.view_reference.field_title
+    - field.field.paragraph.view_reference.field_title_link
     - field.field.paragraph.view_reference.field_view_reference_view
     - paragraphs.paragraphs_type.view_reference
   module:
@@ -33,12 +34,24 @@ content:
     type: string
     region: content
   field_view_reference_view:
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       plugin_types:
         - block
     third_party_settings: {  }
     type: degov_viewsreference_formatter
+    region: content
+  field_title_link:
+    weight: 2
+    label: above
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
     region: content
 hidden: {  }

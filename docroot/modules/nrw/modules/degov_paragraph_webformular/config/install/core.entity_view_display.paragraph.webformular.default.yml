@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.field.paragraph.webformular.field_sub_title
     - field.field.paragraph.webformular.field_title
+    - field.field.paragraph.webformular.field_title_link
     - field.field.paragraph.webformular.field_webform_form
     - paragraphs.paragraphs_type.webformular
   module:
@@ -36,5 +37,17 @@ content:
       source_entity: true
     third_party_settings: {  }
     type: webform_entity_reference_entity_view
+    region: content
+  field_title_link:
+    weight: 3
+    label: above
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
     region: content
 hidden: {  }

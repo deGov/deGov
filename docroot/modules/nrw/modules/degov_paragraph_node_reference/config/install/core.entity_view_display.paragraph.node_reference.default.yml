@@ -6,6 +6,7 @@ dependencies:
     - field.field.paragraph.node_reference.field_node_reference_viewmode
     - field.field.paragraph.node_reference.field_sub_title
     - field.field.paragraph.node_reference.field_title
+    - field.field.paragraph.node_reference.field_title_link
     - paragraphs.paragraphs_type.node_reference
   enforced:
     module:
@@ -18,7 +19,7 @@ bundle: node_reference
 mode: default
 content:
   field_node_reference_nodes:
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       view_mode: teaser
@@ -42,6 +43,18 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_title_link:
+    weight: 2
+    label: above
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
     region: content
 hidden:
   field_node_reference_viewmode: true

@@ -5,6 +5,7 @@ dependencies:
     - field.field.paragraph.faq_list.field_faq_list_inner_paragraphs
     - field.field.paragraph.faq_list.field_sub_title
     - field.field.paragraph.faq_list.field_title
+    - field.field.paragraph.faq_list.field_title_link
     - paragraphs.paragraphs_type.faq_list
   enforced:
     module:
@@ -19,7 +20,7 @@ mode: default
 content:
   field_faq_list_inner_paragraphs:
     type: entity_reference_paragraphs
-    weight: 2
+    weight: 3
     settings:
       title: Absatz
       title_plural: Paragraphs
@@ -44,6 +45,18 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_title_link:
+    weight: 2
+    label: above
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
     region: content
 hidden:
   created: true
