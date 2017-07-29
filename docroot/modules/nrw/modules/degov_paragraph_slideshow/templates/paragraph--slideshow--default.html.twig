@@ -38,6 +38,7 @@
  * @ingroup themeable
  */
 #}
+{% if slideshow_type == "type_1" %}
 <div{{ create_attribute({'class': ['slideshow', 'default', 'slideshow--' ~ slideshow_type|clean_class ]}) }}>
   <div class="row">
     <div class="paragraph-slideshow">
@@ -53,3 +54,21 @@
     </div>
   </div>
 </div>
+{% else %}
+  <div{{ create_attribute({'class': ['slideshow-with-prev-next ' ~ slideshow_type|clean_class ]}) }}>
+    <div class="row">
+      <div class="paragraph-slideshow">
+        <div class="slides_prev_next">
+          {% for key, slideshow_slide in content.field_slideshow_slides if key|first != '#' %}
+            {{ slideshow_slide }}
+          {% endfor %}
+        </div>
+        <div class="slick-controls">
+          <button class="slick__pause">Pause</button>
+          <button class="slick__play">Play</button>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
+

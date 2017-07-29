@@ -75,20 +75,17 @@
     'clearfix',
   ]
 %}
-
-
 <article{{ attributes.addClass(classes) }}>
-  <!-- teaser image -->
+
   {% if content.field_teaser_image %}
     <a href="{{ url }}" rel="bookmark">
-      <div class="normal-page__teaser-image teaser-image col-xs-12 col-sm-4 arrow"> <!-- from medium screen up, show on the right sidebar -->
+      <div class="normal-page__teaser-image teaser-image col-xs-12 col-sm-4 arrow">
         {{ content.field_teaser_image }}
       </div>
     </a>
   {% endif %}
 
-  <div class="normal-page__teaser-content teaser-content col-xs-12 col-sm-8"> <!-- from medium screen up, show on the right sidebar -->
-    <!-- teaser title -->
+  <div class="normal-page__teaser-content teaser-content col-xs-12 col-sm-8">
     {% if content.field_teaser_title %}
       <a href="{{ url }}" rel="bookmark">
         <div class="normal-page__teaser-title teaser-title">
@@ -97,12 +94,12 @@
       </a>
     {% endif %}
 
-    <!-- Teaser text -->
     {% if content.field_teaser_text %}
       <div class="normal-page__teaser-text">
         {{ content.field_teaser_text }}
       </div>
     {% endif %}
   </div>
+
 </article>
 

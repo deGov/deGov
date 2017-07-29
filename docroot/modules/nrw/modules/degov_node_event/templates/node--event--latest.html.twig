@@ -78,13 +78,17 @@
   ]
 %}
 <article{{ attributes.addClass(classes) }}>
-    {{ title_prefix }}
-    {{ title_suffix }}
+
+  {{ title_prefix }}
+  {{ title_suffix }}
+
   <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
+
     {% if node.field_event_date.value %}
       <div class="teaser-latest__day">{{ node.field_event_date.value|date('d') }}</div>
       {#{ node.field_event_date.value|date('h:i') }#}
     {% endif %}
+
     <div class="teaser-latest__content">
       {% if node.field_event_date.value %}
         <div class="teaser-latest__day-name">{{ node.field_event_date.value|date('l') }}</div>
@@ -93,4 +97,5 @@
       <div class="teaser-latest__title"> <a href="{{ url }}">{{ content.field_teaser_title }}</a></div>
     </div>
   </div>
+
 </article>

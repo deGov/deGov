@@ -347,7 +347,6 @@
 	  };
 
 	  // Check heigh of image in contact person
-
 	  Drupal.behaviors.contactHeight = {
 	    attach: function attach(context, settings) {
 	      $('.region-content .media-contact').once('check-height').each(function () {

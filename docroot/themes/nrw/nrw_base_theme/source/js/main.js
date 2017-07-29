@@ -250,7 +250,6 @@ const PhotoSwipeUiDefault = require('photoswipe/dist/photoswipe-ui-default');
     }
   };
 
-
   // Slick slider in press list
   Drupal.behaviors.slickPress = {
     attach: function (context, settings) {
@@ -306,7 +305,6 @@ const PhotoSwipeUiDefault = require('photoswipe/dist/photoswipe-ui-default');
   };
 
   // Check heigh of image in contact person
-
   Drupal.behaviors.contactHeight = {
     attach: function (context, settings) {
       $('.region-content .media-contact').once('check-height').each(function () {
