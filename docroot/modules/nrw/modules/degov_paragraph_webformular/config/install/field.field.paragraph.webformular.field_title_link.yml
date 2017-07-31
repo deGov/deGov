@@ -4,6 +4,9 @@ dependencies:
   config:
     - field.storage.paragraph.field_title_link
     - paragraphs.paragraphs_type.webformular
+  enforced:
+    module:
+      - degov_paragraph_webformular
   module:
     - link
 id: paragraph.webformular.field_title_link

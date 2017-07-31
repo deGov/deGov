@@ -4,6 +4,9 @@ dependencies:
   config:
     - field.storage.paragraph.field_title_link
     - paragraphs.paragraphs_type.iframe
+  enforced:
+    module:
+      - degov_paragraph_iframe
   module:
     - link
 id: paragraph.iframe.field_title_link

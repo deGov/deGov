@@ -4,6 +4,9 @@ dependencies:
   config:
     - field.storage.paragraph.field_title_link
     - paragraphs.paragraphs_type.links
+  enforced:
+    module:
+      - degov_paragraph_links
   module:
     - link
 id: paragraph.links.field_title_link
