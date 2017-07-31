@@ -17,7 +17,7 @@ bundle: iframe
 mode: default
 content:
   field_sub_title:
-    weight: 4
+    weight: 3
     label: hidden
     settings:
       link_to_entity: false
@@ -33,7 +33,7 @@ content:
     type: string
     region: content
   field_title_link:
-    weight: 3
+    weight: 4
     label: hidden
     settings:
       trim_length: 80

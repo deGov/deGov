@@ -31,7 +31,7 @@ content:
     type: string
     region: content
   field_webform_form:
-    weight: 0
+    weight: 4
     label: hidden
     settings:
       source_entity: true

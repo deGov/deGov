@@ -18,7 +18,7 @@ bundle: links
 mode: default
 content:
   field_links_links:
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       trim_length: ''
@@ -46,7 +46,7 @@ content:
     type: string
     region: content
   field_title_link:
-    weight: 3
+    weight: 2
     label: hidden
     settings:
       trim_length: 80
