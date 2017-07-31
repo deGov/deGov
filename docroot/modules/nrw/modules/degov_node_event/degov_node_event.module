@@ -20,14 +20,8 @@ function degov_node_event_preprocess(&$variables, $hook, &$info) {
  * Implements hook_views_pre_render().
  */
 function degov_node_event_views_pre_render(ViewExecutable $view) {
-  if ($view->storage->id() == "events" && $view->current_display == 'attachment_1') {
+  if ($view->storage->id() == "events" && $view->current_display == 'calendar_widget') {
     $view->element['#attached']['library'][] = 'degov_node_event/degov_events';
   }
 }
 
-/**
- * Implements hook_views_pre_build().
- */
-function degov_node_event_views_pre_build(ViewExecutable $view) {
-  $view->usePager(TRUE);
-}
