@@ -1,0 +1,34 @@
+<?php
+
+use Drupal\node\NodeTypeInterface;
+use Drupal\user\Entity\Role;
+
+/**
+ * @param NodeTypeInterface $node_type
+ */
+function degov_delete_lightning_roles(NodeTypeInterface $node_type) {
+  // Don't do anything during config sync.
+  if (\Drupal::isConfigSyncing()) {
+    return;
+  }
+
+  if (\Drupal::moduleHandler()->moduleExists('lightning_roles')) {
+    // Get the configuration of the content roles.
+    $config = \Drupal::config('lightning_roles.settings')->get('content_roles');
+    if (empty($config)) {
+      return;
+    }
+    // Loop through the config to find the machine names of roles.
+    foreach ($config as $key => $info) {
+      if (empty($info['enabled'])) {
+        continue;
+      }
+
+      $role_id = $node_type->id() . '_' . $key;
+      $role = Role::load($role_id);
+      // Delete the role.
+      $role->delete();
+    }
+  }
+
+}
