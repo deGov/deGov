@@ -1,0 +1,7 @@
+langcode: de
+status: true
+id: editor
+label: Editor
+weight: 16
+is_admin: null
+permissions: {  }
