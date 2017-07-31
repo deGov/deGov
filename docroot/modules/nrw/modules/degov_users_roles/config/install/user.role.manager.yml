@@ -1,0 +1,15 @@
+langcode: de
+status: true
+dependencies:
+  enforced:
+    module:
+      - degov_users_roles
+id: manager
+label: Manager
+weight: 15
+is_admin: null
+permissions:
+  - 'access user profiles'
+  - 'administer users'
+  - 'assign editor role'
+  - 'assign manager role'

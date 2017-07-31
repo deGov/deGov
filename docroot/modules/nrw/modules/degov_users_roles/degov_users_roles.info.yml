@@ -1,0 +1,6 @@
+name: 'deGov - User Permissions / Roles'
+type: module
+core: 8.x
+package: 'deGov'
+dependencies:
+  - role_delegation
