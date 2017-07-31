@@ -6,6 +6,7 @@ dependencies:
     - field.field.paragraph.map.field_map_address_view_mode
     - field.field.paragraph.map.field_sub_title
     - field.field.paragraph.map.field_title
+    - field.field.paragraph.map.field_title_link
     - paragraphs.paragraphs_type.map
   enforced:
     module:
@@ -18,7 +19,7 @@ bundle: map
 mode: default
 content:
   field_map_address_reference:
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       view_mode: default_map
@@ -48,5 +49,17 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_title_link:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
     region: content
 hidden: {  }

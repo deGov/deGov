@@ -5,6 +5,7 @@ dependencies:
     - field.field.paragraph.webformular.field_sub_title
     - field.field.paragraph.webformular.field_title
     - field.field.paragraph.webformular.field_webform_form
+    - field.field.paragraph.webformular.field_title_link
     - paragraphs.paragraphs_type.webformular
   module:
     - webform
@@ -31,13 +32,21 @@ content:
     type: string_textfield
     region: content
   field_webform_form:
-    weight: 2
+    weight: 3
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: webform_entity_reference_autocomplete
+    region: content
+  field_title_link:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
     region: content
 hidden:
   created: true

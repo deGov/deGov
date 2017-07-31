@@ -7,6 +7,7 @@ dependencies:
     - field.field.paragraph.media_reference.field_override_caption
     - field.field.paragraph.media_reference.field_sub_title
     - field.field.paragraph.media_reference.field_title
+    - field.field.paragraph.media_reference.field_title_link
     - paragraphs.paragraphs_type.media_reference
   enforced:
     module:
@@ -21,7 +22,7 @@ mode: default
 content:
   field_media_reference_media:
     type: entity_browser_entity_reference
-    weight: 2
+    weight: 3
     settings:
       entity_browser: media_browser
       field_widget_display: label
@@ -34,7 +35,7 @@ content:
     third_party_settings: {  }
   field_override_caption:
     type: string_textfield
-    weight: 3
+    weight: 4
     region: content
     settings:
       size: 60
@@ -55,6 +56,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_title_link:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
     region: content
 hidden:
   created: true

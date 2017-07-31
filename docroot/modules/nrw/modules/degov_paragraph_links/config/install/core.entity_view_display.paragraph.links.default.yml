@@ -5,6 +5,7 @@ dependencies:
     - field.field.paragraph.links.field_links_links
     - field.field.paragraph.links.field_sub_title
     - field.field.paragraph.links.field_title
+    - field.field.paragraph.links.field_title_link
     - paragraphs.paragraphs_type.links
   module:
     - link
@@ -17,7 +18,7 @@ bundle: links
 mode: default
 content:
   field_links_links:
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       trim_length: ''
@@ -43,5 +44,17 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_title_link:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
     region: content
 hidden: {  }

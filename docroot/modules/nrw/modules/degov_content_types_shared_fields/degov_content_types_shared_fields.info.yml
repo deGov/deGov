@@ -6,6 +6,7 @@ core: 8.x
 dependencies:
   - entity_reference_revisions
   - field
+  - link
   - media_entity
   - node
   - paragraphs
