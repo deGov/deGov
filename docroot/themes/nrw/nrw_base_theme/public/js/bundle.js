@@ -260,6 +260,7 @@
 	        $('.nrw-menu-header-responsive').toggleClass('is-open');
 	      });
 	      $('.nrw-menu-header-responsive .nrw-menu-header-responsive__block-title').click(function () {
+	        $(this).toggleClass('is-close is-open');
 	        $(this).siblings('.nrw-menu-header-responsive__content').toggleClass('is-close is-open');
 	      });
 	      $('.nrw-menu-header-responsive .action').click(function () {
@@ -285,6 +286,16 @@
 	    }
 	  };
 
+	  Drupal.behaviors.datePopup = {
+	    attach: function attach(context, settings) {
+	      $(context).find('.form-type-date').once('date-popup').each(function () {
+	        $('i', this).click(function () {
+	          $(this).siblings('.form-date').focus();
+	        });
+	      });
+	    }
+	  };
+
 	  // Slick slider in press list
 	  Drupal.behaviors.slickPress = {
 	    attach: function attach(context, settings) {
@@ -305,8 +316,37 @@
 	    }
 	  };
 
-	  // Check heigh of image in contact person
+	  // Slick slider in Twitter block
+	  Drupal.behaviors.slickTweets = {
+	    attach: function attach(context, settings) {
+	      $('.tweets-slideshow .tweets').slick({
+	        dots: true,
+	        infinite: false,
+	        speed: 300,
+	        slidesToShow: 2,
+	        slidesToScroll: 2,
+	        autoplay: true,
+	        responsive: [{
+	          breakpoint: 720,
+	          settings: {
+	            slidesToShow: 1,
+	            slidesToScroll: 1
+	          }
+	        }]
+	      });
 
+	      $('.slick__pause').on('click', function () {
+	        $('.tweets__slides').slick('slickPause');
+	        $(this).hide().siblings('.slick__play').show();
+	      });
+	      $('.slick__play').on('click', function () {
+	        $('.tweets__slides').slick('slickPlay');
+	        $(this).hide().siblings('.slick__pause').show();
+	      });
+	    }
+	  };
+
+	  // Check heigh of image in contact person
 	  Drupal.behaviors.contactHeight = {
 	    attach: function attach(context, settings) {
 	      $('.region-content .media-contact').once('check-height').each(function () {

@@ -1,0 +1,70 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.small_image
+    - field.field.node.event.field_content_paragraphs
+    - field.field.node.event.field_event_date
+    - field.field.node.event.field_event_location
+    - field.field.node.event.field_sidebar_right_paragraphs
+    - field.field.node.event.field_social_media
+    - field.field.node.event.field_tags
+    - field.field.node.event.field_teaser_image
+    - field.field.node.event.field_teaser_text
+    - field.field.node.event.field_teaser_title
+    - node.type.event
+  enforced:
+    module:
+      - degov_node_event
+  module:
+    - datetime
+    - text
+    - user
+id: node.event.small_image
+targetEntityType: node
+bundle: event
+mode: small_image
+content:
+  field_event_date:
+    type: datetime_default
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+  field_teaser_image:
+    type: entity_reference_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      view_mode: teaser_squared_1_1
+      link: false
+    third_party_settings: {  }
+  field_teaser_text:
+    type: text_trimmed
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      trim_length: 100
+    third_party_settings: {  }
+  field_teaser_title:
+    type: string
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  field_content_paragraphs: true
+  field_event_location: true
+  field_sidebar_right_paragraphs: true
+  field_social_media: true
+  field_tags: true
+  langcode: true
+  links: true
+  shariff_field: true

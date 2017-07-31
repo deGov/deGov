@@ -12,4 +12,6 @@ dependencies:
   - shariff
   - taxonomy
   - text
+  - field_group
   - twig_field_value
+  - paragraphs_edit

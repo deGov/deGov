@@ -77,20 +77,23 @@
   ]
 %}
 <article{{ attributes.addClass(classes) }}>
+  {{ title_suffix }}
+
   {% if node.field_header_paragraphs.value %}
     <div class="event__header-paragraphs">
-      {{ content.field_header_paragraphs }}
+      {{ content.field_header_paragraphs|field_value }}
     </div>
   {% endif %}
 
   <div class="event__content content">
     {% if node.field_content_paragraphs.value %}
       <div class="event__content-paragraphs">
-        {{ content.field_content_paragraphs }}
+        {{ content.field_content_paragraphs|field_value }}
       </div>
     {% endif %}
+
     {% if node.field_sidebar_right_paragraphs.value %}
-      {{ content.field_sidebar_right_paragraphs }}
+      {{ content.field_sidebar_right_paragraphs|field_value }}
     {% endif %}
   </div>
 

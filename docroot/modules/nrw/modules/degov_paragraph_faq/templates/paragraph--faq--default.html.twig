@@ -38,8 +38,16 @@
  * @ingroup themeable
  */
 #}
-
-<div class="faq">
-  <div class="faq_question">{{ content.field_faq_title|field_value }}</div>
-  <div class="faq_answer">{{ content.field_faq_text|field_value }}</div>
+{%
+set classes = [
+  'paragraph',
+  paragraph.bundle|clean_class,
+  view_mode ? view_mode|clean_class,
+  'clearfix',
+]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ content.contextual_links }}
+  <div class="faq_question"{{ content.field_faq_title|quickedit_attr }}>{{ content.field_faq_title|field_value }}</div>
+  <div class="faq_answer"{{ content.field_faq_text|quickedit_attr }}>{{ content.field_faq_text|field_value }}</div>
 </div>

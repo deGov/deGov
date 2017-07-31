@@ -1,0 +1,19 @@
+langcode: de
+status: true
+dependencies:
+  module:
+    - menu_ui
+  enforced:
+    module:
+      - degov_node_faq
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: FAQ
+type: faq
+description: 'Mit diesem Inhaltstyp wird die FAQ-Datenbank befüllt.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

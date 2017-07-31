@@ -76,21 +76,27 @@
   ]
 %}
 <article{{ attributes.addClass(classes) }}>
+  {{ title_suffix }}
+
   <div class="press__latest_wrapper">
     {% if content.field_press_date or content.field_teaser_title %}
       <a href="{{ url }}" rel="bookmark">
         {% if content.field_press_date %}
-            <div class="press__teaser-date">
-              {{ content.field_press_date }}
-            </div>
+          <div class="press__teaser-date">
+            {{ content.field_press_date }}
+          </div>
         {% endif %}
 
         {% if content.field_teaser_title %}
-            <div class="press__teaser-title">
-              {{ content.field_teaser_title }}
-            </div>
+          <div class="press__teaser-title">
+            {{ content.field_teaser_title }}
+          </div>
+          <div class="press__teaser-date"{{ content.field_press_date|quickedit_attr }}>
+            {{ content.field_press_date|field_value }}
+          </div>
         {% endif %}
       </a>
     {% endif %}
   </div>
+
 </article>

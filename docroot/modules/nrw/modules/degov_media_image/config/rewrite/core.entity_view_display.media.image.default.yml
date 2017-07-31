@@ -8,7 +8,6 @@ dependencies:
     - field.field.media.image.field_image_description
     - field.field.media.image.field_image_height
     - field.field.media.image.field_image_mime
-    - field.field.media.image.field_image_title
     - field.field.media.image.field_image_width
     - field.field.media.image.field_media_in_library
     - field.field.media.image.field_tags
@@ -70,14 +69,6 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-  field_image_title:
-    weight: 6
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_image_width:
     weight: 1
     label: above
@@ -87,12 +78,11 @@ content:
     type: string
     region: content
   field_tags:
-    type: entity_reference_label
+    type: taxonomy_term_search
     weight: 8
     region: content
     label: above
-    settings:
-      link: false
+    settings: {  }
     third_party_settings: {  }
 hidden:
   created: true

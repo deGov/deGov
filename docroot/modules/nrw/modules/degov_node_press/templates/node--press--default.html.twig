@@ -76,18 +76,18 @@
   ]
 %}
 <article{{ attributes.addClass(classes) }}>
-
-  <div class="date">{{ content.field_press_date|field_value }}</div>
+  {{ title_suffix }}
+  <div class="date"{{ content.field_press_date|quickedit_attr }}>{{ content.field_press_date|field_value }}</div>
 
   {% if node.field_header_paragraphs.value %}
     <div class="press__header-paragraphs">
-      {{ content.field_header_paragraphs }}
+      {{ content.field_header_paragraphs|field_value }}
     </div>
   {% endif %}
 
   {% if node.field_content_paragraphs.value %}
     <div class="press__content-paragraphs">
-      {{ content.field_content_paragraphs }}
+      {{ content.field_content_paragraphs|field_value }}
     </div>
   {% endif %}
 
