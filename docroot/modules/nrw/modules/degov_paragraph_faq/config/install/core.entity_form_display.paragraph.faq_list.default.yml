@@ -48,15 +48,11 @@ content:
     region: content
   field_title_link:
     weight: 2
-    label: above
     settings:
-      trim_length: 80
-      url_only: true
-      url_plain: true
-      rel: ''
-      target: ''
+      placeholder_url: ''
+      placeholder_title: ''
     third_party_settings: {  }
-    type: link
+    type: link_default
     region: content
 hidden:
   created: true
