@@ -47,7 +47,7 @@ content:
     region: content
   field_title_link:
     weight: 3
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: true
