@@ -1,5 +1,9 @@
 langcode: de
 status: true
+dependencies:
+  enforced:
+    module:
+      - degov_users_roles
 id: editor
 label: Editor
 weight: 16

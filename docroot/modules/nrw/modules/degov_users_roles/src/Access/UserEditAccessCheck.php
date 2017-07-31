@@ -27,6 +27,7 @@ class UserEditAccessCheck implements AccessInterface {
    */
   public function access(AccountProxy $account, RouteMatch $route_match) {
     /** @var \Drupal\user\UserInterface $userToEdit */
+    // Only allow users with the administrator role to edit users with the administrator role.
     $userToEdit = $route_match->getParameter('user');
     if ($userToEdit && $userToEdit instanceof UserInterface && $userToEdit->hasRole('administrator')) {
       $current_user_roles = $account->getAccount()->getRoles();
