@@ -1,7 +1,6 @@
 .blog{
   &__header{
     background-color: $brand-primary;
-    
     padding-bottom: $grid-gutter-width/2;
     &-title{
       margin: 0 -1*($grid-gutter-width/2);
