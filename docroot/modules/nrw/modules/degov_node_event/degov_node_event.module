@@ -1,6 +1,7 @@
 <?php
 
 use Drupal\degov_content_types_shared_fields\Common;
+use Drupal\views\ViewExecutable;
 
 /**
  * Implements hook_preprocess().
@@ -14,3 +15,13 @@ function degov_node_event_preprocess(&$variables, $hook, &$info) {
     'entity_view_modes' => ['teaser', 'latest', 'long_text', 'preview', 'slim', 'small_image']
   ]);
 }
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function degov_node_event_views_pre_render(ViewExecutable $view) {
+  if ($view->storage->id() == "events" && $view->current_display == 'calendar_widget') {
+    $view->element['#attached']['library'][] = 'degov_node_event/degov_events';
+  }
+}
+

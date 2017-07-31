@@ -48,19 +48,23 @@
     {{ title }}
   {% endif %}
   {{ title_suffix }}
+  {% if header or exposed %}
   <aside class="view-events__sidebar-left col-sm-3">
+    {% if header %}
+      <div class="view-header">
+        {{ header }}
+      </div>
+    {% endif %}
+
     {% if exposed %}
       <div class="view-filters form-group">
         {{ exposed }}
       </div>
     {% endif %}
   </aside>
-  <div class="view-events__main-content col-sm-9">
-    {% if header %}
-      <div class="view-header">
-        {{ header }}
-      </div>
-    {% endif %}
+  {% endif %}
+  <div class="view-events__main-content{% if header or exposed %} col-sm-9{% endif %}">
+
     {% if attachment_before %}
       <div class="attachment attachment-before">
         {{ attachment_before }}
