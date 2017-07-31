@@ -5,6 +5,7 @@ dependencies:
     - field.field.paragraph.faq_list.field_faq_list_inner_paragraphs
     - field.field.paragraph.faq_list.field_sub_title
     - field.field.paragraph.faq_list.field_title
+    - field.field.paragraph.faq_list.field_title_link
     - paragraphs.paragraphs_type.faq_list
   enforced:
     module:
@@ -18,7 +19,7 @@ mode: default
 content:
   field_faq_list_inner_paragraphs:
     type: entity_reference_revisions_entity_view
-    weight: 2
+    weight: 4
     label: hidden
     settings:
       view_mode: default
@@ -40,5 +41,17 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_title_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
     region: content
 hidden: {  }

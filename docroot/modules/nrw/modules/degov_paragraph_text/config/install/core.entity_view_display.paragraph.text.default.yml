@@ -5,6 +5,7 @@ dependencies:
     - field.field.paragraph.text.field_sub_title
     - field.field.paragraph.text.field_text_text
     - field.field.paragraph.text.field_title
+    - field.field.paragraph.text.field_title_link
     - paragraphs.paragraphs_type.text
   module:
     - text
@@ -25,7 +26,7 @@ content:
     type: string
     region: content
   field_text_text:
-    weight: 2
+    weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -38,5 +39,17 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_title_link:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
     region: content
 hidden: {  }

@@ -6,6 +6,7 @@ dependencies:
     - field.field.paragraph.node_reference.field_node_reference_viewmode
     - field.field.paragraph.node_reference.field_sub_title
     - field.field.paragraph.node_reference.field_title
+    - field.field.paragraph.node_reference.field_title_link
     - paragraphs.paragraphs_type.node_reference
   enforced:
     module:
@@ -18,7 +19,7 @@ bundle: node_reference
 mode: default
 content:
   field_node_reference_nodes:
-    weight: 3
+    weight: 4
     settings:
       match_operator: CONTAINS
       size: 60
@@ -28,7 +29,7 @@ content:
     region: content
   field_node_reference_viewmode:
     type: options_select
-    weight: 2
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -47,6 +48,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_title_link:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
     region: content
 hidden:
   created: true

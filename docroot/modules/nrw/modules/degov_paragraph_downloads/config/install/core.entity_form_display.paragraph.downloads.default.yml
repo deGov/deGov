@@ -6,6 +6,7 @@ dependencies:
     - field.field.paragraph.downloads.field_downloads_files
     - field.field.paragraph.downloads.field_sub_title
     - field.field.paragraph.downloads.field_title
+    - field.field.paragraph.downloads.field_title_link
     - paragraphs.paragraphs_type.downloads
   enforced:
     module:
@@ -20,7 +21,7 @@ mode: default
 content:
   field_downloads_files:
     type: entity_browser_entity_reference
-    weight: 8
+    weight: 9
     settings:
       entity_browser: media_browser
       field_widget_display: label
@@ -46,6 +47,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_title_link:
+    weight: 8
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
     region: content
 hidden:
   created: true

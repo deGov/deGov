@@ -5,6 +5,7 @@ dependencies:
     - field.field.paragraph.links.field_links_links
     - field.field.paragraph.links.field_sub_title
     - field.field.paragraph.links.field_title
+    - field.field.paragraph.links.field_title_link
     - paragraphs.paragraphs_type.links
   module:
     - link
@@ -18,7 +19,7 @@ bundle: links
 mode: default
 content:
   field_links_links:
-    weight: 8
+    weight: 9
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -40,6 +41,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_title_link:
+    weight: 8
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
     region: content
 hidden:
   created: true
