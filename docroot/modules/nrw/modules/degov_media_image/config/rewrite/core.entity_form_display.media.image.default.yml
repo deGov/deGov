@@ -8,7 +8,6 @@ dependencies:
     - field.field.media.image.field_image_description
     - field.field.media.image.field_image_height
     - field.field.media.image.field_image_mime
-    - field.field.media.image.field_image_title
     - field.field.media.image.field_image_width
     - field.field.media.image.field_media_in_library
     - field.field.media.image.field_tags
@@ -41,7 +40,6 @@ third_party_settings:
       region: content
     group_description:
       children:
-        - field_image_title
         - field_image_caption
         - field_image_description
         - field_image_copyright
@@ -152,14 +150,6 @@ content:
     region: content
   field_image_mime:
     weight: 6
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_image_title:
-    weight: 10
     settings:
       size: 60
       placeholder: ''
