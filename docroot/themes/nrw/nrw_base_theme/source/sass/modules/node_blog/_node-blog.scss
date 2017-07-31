@@ -1,15 +1,22 @@
 .blog{
   &__header{
     background-color: $brand-primary;
-    margin: 0 -1*($grid-gutter-width/2);
-    color: $color-white;
+    
     padding-bottom: $grid-gutter-width/2;
     &-title{
+      margin: 0 -1*($grid-gutter-width/2);
+      padding: 0 $grid-gutter-width/2 $grid-gutter-width/2 $grid-gutter-width/2;
       font-size: $font-size-h1;
+      color: $color-white;
+      background-color: $brand-primary;
       line-height:  $font-size-h1;
       font-weight: bold;
     }
     &-date{
+      padding: 0 $grid-gutter-width/2;
+      margin: 0 -1*($grid-gutter-width/2);
+      background-color: $brand-primary;
+      color: $color-white;
       font-size: $font-size-h4;
       font-weight: bold;
     }

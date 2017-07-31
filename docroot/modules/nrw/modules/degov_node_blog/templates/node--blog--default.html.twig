@@ -80,14 +80,11 @@
 <article{{ attributes.addClass(classes) }}>
   {% if node.field_header_paragraphs.value %}
     <div class="blog__header-paragraphs">
+    <div class="blog__header-date">{{ content.field_blog_date|field_value }}</div>
+    <div class="blog__header-title">{{ node.title.value }}</div>
       {{ content.field_header_paragraphs }}
     </div>
   {% endif %}
-
-  <div class="blog__header content-header__text">
-    <div class="blog__header-date">{{ content.field_blog_date|field_value }}</div>
-    <div class="blog__header-title">{{ content.field_blog_sub_title|field_value }}</div>
-  </div>
 
   <div class="blog__content content">
      <div class="blog__content-author">{{ content.field_blog_author }}</div>
