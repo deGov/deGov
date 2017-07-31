@@ -35,7 +35,7 @@
         };
         $pswpItems.push($pswpItem);
       });
-      $('.slick-controls__gallery').append('<span class="slick__download"><a href="' + drupalSettings.degov_media_gallery.imagesDownloadLinks[$slider.slick('slickCurrentSlide')] + '"><i class="fa fa-download"></i>' + Drupal.t('Download') + '</a></span>');
+      $('.slick-controls__gallery').append('<span class="slick__download"><a href="' + drupalSettings.degov_media_gallery.imagesDownloadLinks[$slider.slick('slickCurrentSlide')].uri + '"><i class="fa fa-download"></i>' + Drupal.t('Download') + '</a></span>');
 
       $slider.find('article').click(function() {
         var $index = parseInt($slider.slick('slickCurrentSlide'));
