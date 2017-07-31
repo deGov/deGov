@@ -76,11 +76,12 @@
   ]
 %}
 <article{{ attributes.addClass(classes) }}>
+  {{ title_suffix }}
 
   <div class="press__teaser-image teaser-image col-xs-5 col-sm-4 col-md-3 arrow">
   {% if content.field_teaser_image %}
     <a href="{{ url }}" rel="bookmark">
-      {{ content.field_teaser_image }}
+      {{ content.field_teaser_image|field_value }}
     </a>
   {% endif %}
   </div>
@@ -88,21 +89,21 @@
   <div class="press-page__teaser-content teaser-content col-xs-7 col-sm-8 col-md-9">
     {% if content.field_press_date %}
       <a href="{{ url }}" rel="bookmark">
-        <div class="press__teaser-date">
-          {{ content.field_press_date }}
+        <div class="press__teaser-date"{{ content.field_press_date|quickedit_attr }}>
+          {{ content.field_press_date|field_value }}
         </div>
       </a>
     {% endif %}
 
     {% if content.field_teaser_title %}
       <div class="press__teaser-title teaser-title">
-        <h3>{{ content.field_teaser_title }}</h3>
+        <h3{{ content.field_teaser_title|quickedit_attr }}>{{ content.field_teaser_title|field_value }}</h3>
       </div>
     {% endif %}
 
     {% if content.field_teaser_text %}
-      <div class="press__teaser-text">
-        {{ content.field_teaser_text }}
+      <div class="press__teaser-text"{{ content.field_teaser_text|quickedit_attr }}>
+        {{ content.field_teaser_text|field_value }}
       </div>
     {% endif %}
   </div>

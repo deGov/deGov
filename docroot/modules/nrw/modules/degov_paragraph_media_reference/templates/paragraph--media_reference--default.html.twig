@@ -38,13 +38,25 @@
  * @ingroup themeable
  */
 #}
-<div class="paragraph media-reference">
+
+{%
+set classes = [
+  'paragraph',
+  'media-reference',
+  paragraph.bundle|clean_class,
+  view_mode ? view_mode|clean_class,
+  'clearfix',
+]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+  {{ content.contextual_links }}
   {% if content.field_title|field_value or content.field_sub_title|field_value %}
     <div class="paragraph__header">
       <i class="fa fa-arrow-right" aria-hidden="true"></i>
-      <h2>{{ content.field_title|field_value }}
+      <h2{{ content.field_title|quickedit_attr }}>{{ content.field_title|field_value }}
         {% if content.field_sub_title|field_value %}
-          <span class="sub-title">{{ content.field_sub_title|field_value }}</span>
+          <span class="sub-title"{{ content.field_sub_title|quickedit_attr }}>{{ content.field_sub_title|field_value }}</span>
         {% endif %}
       </h2>
     </div>

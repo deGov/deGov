@@ -18,8 +18,14 @@
 {% set copyright %}
   {{- content.field_video_upload_copyright -}}
 {% endset %}
-
-<article class="video-upload">
+{%
+set media_classes = [
+  'video-upload',
+  'clearfix',
+]
+%}
+<article{{ attributes.addClass(media_classes) }}>
+  {{ content.contextual_links }}
   <div class="video-upload__type-text">{{ 'Video'|t }}</div>
   <div class="video-upload__video">
     <video{{ video_attributes }}>
@@ -36,17 +42,17 @@
   {% if content.field_video_upload_caption|field_value or content.field_video_upload_copyright|field_value %}
     <div class="video-upload__info">
       {% if content.field_video_upload_caption|field_value %}
-        <div class="video-upload__caption">{{ content.field_video_upload_caption|field_value }}</div>
+        <div class="video-upload__caption"{{ content.field_video_upload_caption|quickedit_attr }}>{{ content.field_video_upload_caption|field_value }}</div>
       {% endif %}
       {% if content.field_video_upload_copyright|field_value %}
         <div class="video-upload__copyright">
-          <span class="video-upload__copyright-label">{{ '&copy;'|trans }}</span>
+          <span class="video-upload__copyright-label"{{ content.field_video_upload_copyright|quickedit_attr }}>{{ '&copy;'|trans }}</span>
           {{ content.field_video_upload_copyright|field_value }}
         </div>
       {% endif %}
     </div>
   {% endif %}
   {% if content.field_tags|field_value %}
-    <div class="tags">{{ content.field_tags|field_value }}</div>
+    <div class="tags"{{ content.field_tags|quickedit_attr }}>{{ content.field_tags|field_value }}</div>
   {% endif %}
 </article>

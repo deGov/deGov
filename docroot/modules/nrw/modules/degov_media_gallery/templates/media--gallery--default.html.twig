@@ -12,8 +12,15 @@
  * @ingroup themeable
  */
 #}
-<article class="media media-gallery">
-
+{%
+set media_classes = [
+  'media',
+  'media-gallery',
+  'clearfix',
+]
+%}
+<article{{ attributes.addClass(media_classes) }}>
+  {{ content.contextual_links }}
   <!-- Root element of PhotoSwipe. Must have class pswp. -->
   <div class="pswp pswp__media-gallery" tabindex="-1" role="dialog" aria-hidden="true">
 
@@ -102,9 +109,9 @@
     <div class="media-gallery__tag">
       {{ 'Galerie'|t }}
     </div>
-    <h2 class="media-gallery__title">{{ content.field_gallery_title|field_value }}</h2>
-    <div class="media-gallery__sub_title"><strong>{{ content.field_gallery_sub_title|field_value }}</strong></div>
-    <div class="media-gallery__text">{{ content.field_gallery_text|field_value }}</div>
+    <h2 class="media-gallery__title"{{ content.field_gallery_title|quickedit_attr }}>{{ content.field_gallery_title|field_value }}</h2>
+    <div class="media-gallery__sub_title"{{ content.field_gallery_sub_title|quickedit_attr }}><strong>{{ content.field_gallery_sub_title|field_value }}</strong></div>
+    <div class="media-gallery__text"{{ content.field_gallery_text|quickedit_attr }}>{{ content.field_gallery_text|field_value }}</div>
   </div>
   <div class="media-gallery__preview clearfix">
     {% for key, preview in content.preview|field_value %}

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "faa35d60ac1f706eedb8c92de83ad014",
+    "content-hash": "d34fb147614f6aa9afa4c1e64aae4bd9",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -3866,6 +3866,45 @@
             }
         },
         {
+            "name": "drupal/paragraphs_edit",
+            "version": "dev-2.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/paragraphs_edit",
+                "reference": "92a4b6827fef50fef62a7d1e43290b86e6ed111c"
+            },
+            "require": {
+                "drupal/core": "*",
+                "drupal/paragraphs": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.x-dev",
+                    "datestamp": "1495506185"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "casey",
+                    "homepage": "https://www.drupal.org/user/32403"
+                }
+            ],
+            "description": "Allows users to edit/clone and delete paragraphs.",
+            "homepage": "https://www.drupal.org/project/paragraphs_edit",
+            "support": {
+                "source": "http://cgit.drupalcode.org/paragraphs_edit"
+            },
+            "time": "2017-05-23 02:16:39"
+        },
+        {
             "name": "drupal/pathauto",
             "version": "1.0.0",
             "source": {
@@ -4958,7 +4997,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/workbench_access-8.x-1.0-alpha5.zip",
-                "reference": null,
+                "reference": "8.x-1.0-alpha5",
                 "shasum": "1567e36f14464f55796e47c45e41319eed945021"
             },
             "require": {
@@ -11023,6 +11062,7 @@
         "drupal/webform": 10,
         "drupal/eu_cookie_compliance": 10,
         "drupal/field_group": 20,
+        "drupal/paragraphs_edit": 20,
         "drupal/facets": 15,
         "drupal/search_api_sorts": 10,
         "drupal/simplify_menu": 20

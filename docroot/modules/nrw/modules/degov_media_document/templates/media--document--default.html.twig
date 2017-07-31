@@ -12,12 +12,19 @@
  * @ingroup themeable
  */
 #}
-<article class="document">
+{%
+set media_classes = [
+  'document',
+  'clearfix',
+]
+%}
+<article{{ attributes.addClass(media_classes) }}>
+  {{ content.contextual_links }}
   <div class="document__title"><a type="{{ media_mime }}; length={{ media_bytes }}" href="{{ media_url }}">{{ name }}</a></div>
   <div class="document__meta" >
     <span class="mime-{{ media_mime|clean_class }}"></span>{{ media_size }}
   </div>
   {% if content.field_tags|field_value %}
-    <div class="tags">{{ content.field_tags|field_value }}</div>
+    <div class="tags"{{ content.field_tags|quickedit_attr }}>{{ content.field_tags|field_value }}</div>
   {% endif %}
 </article>
