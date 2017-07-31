@@ -4,7 +4,6 @@ dependencies:
   config:
     - field.field.paragraph.faq.field_faq_text
     - field.field.paragraph.faq.field_faq_title
-    - field.field.paragraph.faq.field_title_link
     - paragraphs.paragraphs_type.faq
   enforced:
     module:
@@ -18,7 +17,7 @@ bundle: faq
 mode: default
 content:
   field_faq_text:
-    weight: 8
+    weight: 7
     settings:
       rows: 5
       placeholder: ''
@@ -32,14 +31,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-    region: content
-  field_title_link:
-    weight: 7
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
     region: content
 hidden:
   created: true
