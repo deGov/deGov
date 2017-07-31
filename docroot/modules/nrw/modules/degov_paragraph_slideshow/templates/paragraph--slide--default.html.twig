@@ -38,12 +38,21 @@
  * @ingroup themeable
  */
 #}
-<div class="slide">
+{%
+set classes = [
+  'paragraph',
+  paragraph.bundle|clean_class,
+  view_mode ? view_mode|clean_class,
+  'clearfix',
+]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ content.contextual_links }}
   <!-- <div class="row"> -->
     {% if slide_link %}<a class="slide__link" href="{{ slide_link }}">{% endif %}
-      <div class="slide__media">{{ content.field_slide_media }}</div>
+      <div class="slide__media">{{ content.field_slide_media|field_value }}</div>
       <div class="slide__text">
-        <div class="slide__text__sub">{{ content.field_slide_text }}</div>
+        <div class="slide__text__sub"{{ content.field_slide_text|quickedit_attr }}>{{ content.field_slide_text|field_value }}</div>
       </div>
     {% if slide_link %}</a>{% endif %}
   <!-- </div> -->

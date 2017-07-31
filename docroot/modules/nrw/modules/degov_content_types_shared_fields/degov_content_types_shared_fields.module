@@ -6,6 +6,8 @@
  */
 
 use Drupal\node\NodeInterface;
+use Drupal\media_entity\MediaInterface;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
 
 /**
  * Implements hook_preprocess_node().
@@ -16,5 +18,66 @@ function degov_content_types_shared_fields_preprocess_node(&$variables) {
   // Remove the right sidebar paragraph in case no content exists.
   if ($node->hasField('field_sidebar_right_paragraphs') && !empty($variables['content']['field_sidebar_right_paragraphs'])) {
     unset($variables['content']['field_sidebar_right_paragraphs']);
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function degov_content_types_shared_fields_preprocess_field(&$variables) {
+  $field_name = $variables['field_name'];
+  // Include the shariff sharing block buttons if social media sharing is
+  // enabled on the node. Appears on the bottom of both header/content paragraph.
+  if (in_array($field_name, ['field_header_paragraphs', 'field_content_paragraphs'])) {
+    /* @var \Drupal\node\NodeInterface $node */
+    $node = $variables['element']['#object'];
+
+    if ($node instanceof NodeInterface && $node->hasField('field_social_media') && $node->field_social_media->value == '1') {
+      $variables['items'][] = [
+        'content' => [
+          '#theme' => 'block_shariff',
+          '#blocksettings' => [],
+          '#attached' => [
+            'library' => [
+              'shariff/shariff',
+            ],
+          ],
+        ],
+      ];
+    }
+  }
+}
+
+
+/**
+ * Implements hook_ENTITY_TYPE_view_alter() for media entities.
+ */
+function degov_content_types_shared_fields_media_view_alter(array &$build, MediaInterface $entity, EntityViewDisplayInterface $display) {
+  // Skip adding contextual links if the Paragraph is in a QuickEdit form context
+  // to avoid causing conflicts with Quickedit JS
+  if (\Drupal::routeMatch()->getRouteName() == 'quickedit.field_form') {
+    return;
+  }
+
+  $build['#contextual_links']['media'] = [
+    'route_parameters' => [
+      'media' => $entity->id(),
+    ],
+    'metadata' => ['changed' => $entity->getChangedTime()],
+  ];
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for media.html.twig.
+ *
+ * @see contextual_preprocess()
+ * @see template_preprocess_paragraph()
+ */
+function degov_content_types_shared_fields_preprocess_media(&$variables) {
+  // Media templates don't normally print the title_suffix, so add the
+  // contextual links to the content render array.
+  if (isset($variables['title_suffix']['contextual_links'])) {
+    $variables['content']['contextual_links'] = $variables['title_suffix']['contextual_links'];
+    $variables['content']['contextual_links']['#weight'] = -100;
   }
 }
