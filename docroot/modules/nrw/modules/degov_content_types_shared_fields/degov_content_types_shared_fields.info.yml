@@ -4,6 +4,7 @@ package: deGov
 type: module
 core: 8.x
 dependencies:
+  - degov_common
   - entity_reference_revisions
   - field
   - link

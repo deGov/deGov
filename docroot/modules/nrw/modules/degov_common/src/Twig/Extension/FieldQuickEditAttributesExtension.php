@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\degov_content_types_shared_fields\Twig\Extension;
+namespace Drupal\degov_common\Twig\Extension;
 
 use Drupal\Core\Template\Attribute;
 

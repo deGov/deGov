@@ -5,10 +5,7 @@
   "license": "GPL-2.0+",
   "homepage": "https://www.nrwgov.org",
   "require": {
-    "drupal/twig_field_value": "^1.1",
-    "drupal/shariff": "^1.0",
-    "drupal/field_group": "3.x-dev",
-    "drupal/paragraphs_edit": "2.x-dev"
+    "drupal/shariff": "^1.0"
   },
   "repositories": [
     {

@@ -1,5 +1,0 @@
-services:
-  degov_content_types_shared_fields.quickedit.twig.extension:
-    class: Drupal\degov_content_types_shared_fields\Twig\Extension\FieldQuickEditAttributesExtension
-    tags:
-      - { name: twig.extension }
