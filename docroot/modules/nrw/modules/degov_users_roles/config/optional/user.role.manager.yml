@@ -92,6 +92,7 @@ permissions:
   - 'use published_draft transition'
   - 'use published_published transition'
   - 'use text format rich_text'
+  - 'use workbench access'
   - 'view all revisions'
   - 'view any unpublished content'
   - 'view blog revisions'

@@ -35,6 +35,7 @@ permissions:
   - 'use draft_draft transition'
   - 'use draft_needs_review transition'
   - 'use text format rich_text'
+  - 'use workbench access'
   - 'view all revisions'
   - 'view blog revisions'
   - 'view event revisions'
@@ -43,4 +44,3 @@ permissions:
   - 'view normal_page revisions'
   - 'view own unpublished content'
   - 'view press revisions'
-
