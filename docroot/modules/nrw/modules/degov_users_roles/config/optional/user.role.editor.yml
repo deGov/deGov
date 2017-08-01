@@ -1,0 +1,52 @@
+langcode: de
+status: true
+dependencies:
+  module:
+    - lightning_core
+  enforced:
+    module:
+      - degov_users_roles
+third_party_settings:
+  lightning_core:
+    description: ''
+id: editor
+label: Editor
+weight: 16
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access in-place editing'
+  - 'access media overview'
+  - 'access media_browser entity browser pages'
+  - 'access toolbar'
+  - 'create blog content'
+  - 'create event content'
+  - 'create faq content'
+  - 'create media'
+  - 'create normal_page content'
+  - 'create press content'
+  - 'delete media'
+  - 'delete own blog content'
+  - 'delete own event content'
+  - 'delete own faq content'
+  - 'delete own normal_page content'
+  - 'delete own press content'
+  - 'edit own blog content'
+  - 'edit own event content'
+  - 'edit own faq content'
+  - 'edit own normal_page content'
+  - 'edit own press content'
+  - 'update media'
+  - 'use draft_draft transition'
+  - 'use draft_needs_review transition'
+  - 'use published_published transition'
+  - 'use text format rich_text'
+  - 'use workbench access'
+  - 'view all revisions'
+  - 'view blog revisions'
+  - 'view event revisions'
+  - 'view faq revisions'
+  - 'view media'
+  - 'view normal_page revisions'
+  - 'view own unpublished content'
+  - 'view press revisions'

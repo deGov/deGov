@@ -5,14 +5,13 @@ dependencies:
     module:
       - degov_node_blog
   module:
-    - menu_ui
+    - workbench_access
     - workbench_moderation
 third_party_settings:
-  menu_ui:
-    available_menus: {  }
-    parent: ''
+  workbench_access:
+    workbench_access_status: true
   workbench_moderation:
-    enabled: false
+    enabled: true
     allowed_moderation_states:
       - published
       - archived
