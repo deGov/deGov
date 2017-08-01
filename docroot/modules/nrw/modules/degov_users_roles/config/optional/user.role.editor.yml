@@ -3,6 +3,9 @@ status: true
 dependencies:
   module:
     - lightning_core
+  enforced:
+    module:
+      - degov_users_roles
 third_party_settings:
   lightning_core:
     description: ''

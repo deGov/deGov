@@ -26,8 +26,10 @@ function degov_delete_lightning_roles(NodeTypeInterface $node_type) {
 
       $role_id = $node_type->id() . '_' . $key;
       $role = Role::load($role_id);
-      // Delete the role.
-      $role->delete();
+      if ($role) {
+        // Delete the role.
+        $role->delete();
+      }
     }
   }
 
