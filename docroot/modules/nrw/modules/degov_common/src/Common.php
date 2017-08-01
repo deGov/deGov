@@ -1,13 +1,13 @@
 <?php
 
-namespace Drupal\degov_content_types_shared_fields;
+namespace Drupal\degov_common;
 
 /**
  * Class Common.
  *
  * Contains all common function implementations.
  *
- * @package Drupal\degov_content_types_shared_fields
+ * @package Drupal\degov_common
  */
 class Common {
 
