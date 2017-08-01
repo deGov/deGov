@@ -192,7 +192,7 @@ content:
       crop_list:
         - 16_to_9
         - 1_to_1
-        - 2_zu_1
+        - 2_to_1
         - 4_to_1
         - 8_to_3
       progress_indicator: throbber
