@@ -65,3 +65,4 @@ hidden:
   field_teaser_title: true
   langcode: true
   links: true
+  shariff_field: true

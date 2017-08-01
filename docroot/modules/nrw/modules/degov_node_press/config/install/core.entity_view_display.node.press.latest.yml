@@ -41,7 +41,10 @@ content:
 hidden:
   field_content_paragraphs: true
   field_sidebar_right_paragraphs: true
+  field_social_media: true
+  field_tags: true
   field_teaser_image: true
   field_teaser_text: true
   langcode: true
   links: true
+  shariff_field: true
