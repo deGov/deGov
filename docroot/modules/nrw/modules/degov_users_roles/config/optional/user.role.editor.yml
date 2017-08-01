@@ -50,3 +50,4 @@ permissions:
   - 'view normal_page revisions'
   - 'view own unpublished content'
   - 'view press revisions'
+  - 'view the administration theme'
