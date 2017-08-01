@@ -7,5 +7,6 @@ function degov_search_content_install() {
   // Flush plugin caches so our facets will be shown.
   \Drupal::service('plugin.cache_clearer')->clearCachedDefinitions();
   // Start indexing.
+  module_load_include('inc', 'search_api', 'search_api.drush');
   drush_search_api_index();
 }
