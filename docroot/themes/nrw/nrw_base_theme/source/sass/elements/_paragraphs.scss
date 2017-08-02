@@ -2,6 +2,7 @@
 .paragraph{
 	a{
 		font-weight: bold;
+		color: $brand-primary;
 	}
 }
 
@@ -12,6 +13,7 @@
 	margin: 0 -20px;
 	padding: 20px;
 	background: $nrw-light;
+	
 	@include smaller-than($screen-xs-max){
 		word-break: break-all;
 	}
