@@ -2,6 +2,7 @@ langcode: de
 status: true
 dependencies:
   config:
+    - field.field.media.person.field_include_search
     - field.field.media.person.field_media_in_library
     - field.field.media.person.field_person_image
     - field.field.media.person.field_person_info
@@ -22,16 +23,6 @@ targetEntityType: media
 bundle: person
 mode: default
 content:
-  created:
-    label: hidden
-    type: timestamp
-    weight: 2
-    region: content
-    settings:
-      date_format: medium
-      custom_date_format: ''
-      timezone: ''
-    third_party_settings: {  }
   field_person_image:
     weight: 5
     label: hidden
@@ -80,5 +71,7 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  created: true
+  field_include_search: true
   field_media_in_library: true
   langcode: true

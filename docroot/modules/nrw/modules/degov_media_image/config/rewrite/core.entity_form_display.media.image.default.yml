@@ -9,6 +9,7 @@ dependencies:
     - field.field.media.image.field_image_height
     - field.field.media.image.field_image_mime
     - field.field.media.image.field_image_width
+    - field.field.media.image.field_include_search
     - field.field.media.image.field_media_in_library
     - field.field.media.image.field_tags
     - field.field.media.image.image
@@ -59,6 +60,7 @@ third_party_settings:
         - field_image_date
         - field_tags
         - langcode
+        - field_include_search
         - field_media_in_library
         - path
       parent_name: group_vertical
@@ -102,8 +104,6 @@ third_party_settings:
         required_fields: true
       label: Media
       region: content
-_core:
-  default_config_hash: i8n8ZG9FN7dla2mgdxzezUBX7qa1Y7wIuh_yKNHnv8c
 id: media.image.default
 targetEntityType: media
 bundle: image
@@ -164,9 +164,16 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_include_search:
+    weight: 6
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_media_in_library:
     type: boolean_checkbox
-    weight: 6
+    weight: 7
     settings:
       display_label: true
     third_party_settings: {  }
@@ -214,7 +221,7 @@ content:
     region: content
   path:
     type: path
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }

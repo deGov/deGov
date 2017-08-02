@@ -8,6 +8,7 @@ dependencies:
     - field.field.media.address.field_address_location
     - field.field.media.address.field_address_phone
     - field.field.media.address.field_address_title
+    - field.field.media.address.field_include_search
     - field.field.media.address.field_media_in_library
     - field.field.media.address.field_tags
     - media_entity.bundle.address
@@ -40,6 +41,7 @@ third_party_settings:
       children:
         - langcode
         - field_tags
+        - field_include_search
         - field_media_in_library
         - path
       parent_name: group_vertical
@@ -136,15 +138,22 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_include_search:
+    weight: 21
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_media_in_library:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 11
+    weight: 22
     third_party_settings: {  }
     region: content
   field_tags:
-    weight: 10
+    weight: 20
     settings:
       match_operator: CONTAINS
       size: 60
@@ -154,7 +163,7 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 9
+    weight: 19
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -168,7 +177,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 12
+    weight: 23
     region: content
     settings: {  }
     third_party_settings: {  }

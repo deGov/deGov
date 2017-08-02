@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - entity_browser.browser.media_browser
+    - field.field.media.video_upload.field_include_search
     - field.field.media.video_upload.field_media_in_library
     - field.field.media.video_upload.field_tags
     - field.field.media.video_upload.field_video_upload_caption
@@ -74,6 +75,7 @@ third_party_settings:
       children:
         - langcode
         - field_tags
+        - field_include_search
         - field_media_in_library
         - path
       parent_name: group_vertical
@@ -87,18 +89,23 @@ third_party_settings:
         required_fields: true
       label: Common
       region: content
-_core:
-  default_config_hash: z2Wpn7xtrYgNFzQ0C5HmWB8UMN_jrrCnysQ-rcYROQ8
 id: media.video_upload.default
 targetEntityType: media
 bundle: video_upload
 mode: default
 content:
+  field_include_search:
+    weight: 10
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_media_in_library:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 10
+    weight: 11
     third_party_settings: {  }
     region: content
   field_tags:
@@ -182,7 +189,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 11
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }

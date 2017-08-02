@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - entity_browser.browser.media_browser
+    - field.field.media.person.field_include_search
     - field.field.media.person.field_media_in_library
     - field.field.media.person.field_person_image
     - field.field.media.person.field_person_info
@@ -37,6 +38,7 @@ third_party_settings:
       children:
         - langcode
         - field_tags
+        - field_include_search
         - field_media_in_library
         - path
       parent_name: group_vertical
@@ -83,11 +85,18 @@ targetEntityType: media
 bundle: person
 mode: default
 content:
+  field_include_search:
+    weight: 6
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_media_in_library:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 6
+    weight: 7
     third_party_settings: {  }
     region: content
   field_person_image:
@@ -136,7 +145,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }

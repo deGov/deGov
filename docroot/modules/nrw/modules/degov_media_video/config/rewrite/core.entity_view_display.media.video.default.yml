@@ -2,6 +2,7 @@ langcode: de
 status: true
 dependencies:
   config:
+    - field.field.media.video.field_include_search
     - field.field.media.video.field_media_in_library
     - field.field.media.video.field_tags
     - field.field.media.video.field_video_caption
@@ -51,6 +52,7 @@ content:
     region: content
 hidden:
   created: true
+  field_include_search: true
   field_media_in_library: true
   langcode: true
   name: true

@@ -6,6 +6,7 @@ dependencies:
     - field.field.media.gallery.field_gallery_sub_title
     - field.field.media.gallery.field_gallery_text
     - field.field.media.gallery.field_gallery_title
+    - field.field.media.gallery.field_include_search
     - field.field.media.gallery.field_media_in_library
     - image.style.thumbnail
     - media_entity.bundle.gallery
@@ -21,16 +22,6 @@ targetEntityType: media
 bundle: gallery
 mode: default
 content:
-  created:
-    label: hidden
-    type: timestamp
-    weight: 0
-    region: content
-    settings:
-      date_format: medium
-      custom_date_format: ''
-      timezone: ''
-    third_party_settings: {  }
   field_gallery_images:
     weight: 5
     label: above
@@ -80,13 +71,9 @@ content:
       image_link: ''
     region: content
     third_party_settings: {  }
-  uid:
-    label: hidden
-    type: author
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
+  created: true
+  uid: true
+  field_include_search: true
   field_media_in_library: true
   langcode: true
