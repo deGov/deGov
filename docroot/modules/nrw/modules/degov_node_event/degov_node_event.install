@@ -3,6 +3,13 @@
 use Drupal\degov_common\Common;
 
 /**
+ * Set Monday as the first day of the week.
+ */
+function degov_node_event_update_8001() {
+  \Drupal::config('system.date')->set('first_day', 1);
+}
+
+/**
  * Implements hook_uninstall().
  */
 function degov_node_event_uninstall() {
