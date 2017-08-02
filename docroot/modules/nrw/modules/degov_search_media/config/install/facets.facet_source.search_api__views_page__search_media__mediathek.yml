@@ -1,0 +1,11 @@
+langcode: de
+status: true
+dependencies:
+  enforced:
+    module:
+      - degov_search_media
+id: search_api__views_page__search_media__mediathek
+name: 'search_api:views_page__search_media__mediathek'
+filter_key: null
+url_processor: query_string
+breadcrumb: {  }
