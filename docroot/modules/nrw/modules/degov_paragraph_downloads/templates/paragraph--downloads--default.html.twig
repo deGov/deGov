@@ -53,20 +53,20 @@ set classes = [
 <div{{ attributes.addClass(classes) }}>
   {{ content.contextual_links }}
   {% if content.field_title|field_value or content.field_sub_title|field_value %}
-    {% if content.field_title_link|field_value %}
-    <a href="{{ content.field_title_link|field_value }}"{{ content.field_title_link|quickedit_attr }}>
-    {% endif %}
     <div class="paragraph__header">
       <i class="fa fa-arrow-right" aria-hidden="true"></i>
+      {% if content.field_title_link|field_value %}
+        <a href="{{ content.field_title_link|field_value }}"{{ content.field_title_link|quickedit_attr }}>
+      {% endif %}
       <h2{{ content.field_title|quickedit_attr }}>{{ content.field_title|field_value }}
         {% if content.field_sub_title|field_value %}
           <span class="sub-title"{{ content.field_sub_title|quickedit_attr }}>{{ content.field_sub_title|field_value }}</span>
         {% endif %}
       </h2>
+      {% if content.field_title_link|field_value %}
+        </a>
+      {% endif %}
     </div>
-    {% if content.field_title_link|field_value %}
-    </a>
-    {% endif %}
   {% endif %}
   <div class="paragraph__content">
     {{ content.field_downloads_files|field_value }}
