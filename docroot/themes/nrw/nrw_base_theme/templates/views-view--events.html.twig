@@ -64,7 +64,12 @@
   </aside>
   {% endif %}
   <div class="view-events__main-content{% if header or exposed %} col-sm-9{% endif %}">
-
+    <div class="view-calendar__header">
+      <i class="fa fa-calendar" aria-hidden="true"></i>
+      <h2>{% trans %}AKTUELLE{% endtrans %}
+          <span class="sub-title">{% trans %}PRESSETERMINE{% endtrans %}</span>
+      </h2>
+    </div>
     {% if attachment_before %}
       <div class="attachment attachment-before">
         {{ attachment_before }}

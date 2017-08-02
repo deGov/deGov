@@ -80,6 +80,16 @@
 	    }
 	  };
 
+	  // Add current week in calendar
+	  Drupal.behaviors.currentWeek = {
+	    attach: function attach(context, settings) {
+	      $('.calendar--widget td.today').once('change-background').each(function () {
+	        console.log('today');
+	        $(this).closest('tr').children('.future').addClass('current-week');
+	      });
+	    }
+	  };
+
 	  // upper Menu
 	  Drupal.behaviors.upperMenu = {
 	    attach: function attach(context, settings) {

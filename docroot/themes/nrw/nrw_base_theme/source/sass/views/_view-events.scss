@@ -1,5 +1,6 @@
 .view-events {
   &__sidebar-left {
+    border-right: 1px solid $brand-info;
     background: $nrw-secondary;
     color: $color-white;
     padding-top: $vertical-gutter-width/2;
@@ -19,7 +20,7 @@
       box-shadow: none;
     }
     input.form-control,
-    i.fa {
+    .form--inline i.fa {
       border: 2px solid $color-white;
       line-height: $font-size-h3;
       height: $vertical-gutter-width;
@@ -67,4 +68,38 @@
       }
     }
   }
+}
+.view-calendar__header{
+	font-size: $font-size-h3;
+  color: $brand-primary;
+	display: flex;
+	padding: 20px;
+	background: $nrw-light;
+	margin: 0 $grid-gutter-width/-2;
+	@include smaller-than($screen-xs-max){
+		word-break: break-all;
+	}
+	i{
+		color: $color-white;
+		background-color: $brand-primary;
+		min-width: 45px; // To always keep width - responsive
+		width: 45px;
+		height: 45px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		float: left;
+		margin-right: $padding-base-horizontal + 5;
+    .fa{
+      border: 0;
+    }
+	}
+	h2{
+		margin: 0;
+		line-height: 1;
+	}
+	.sub-title{
+		font-weight: bold;
+		display: block;
+	}
 }

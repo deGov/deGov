@@ -33,6 +33,17 @@ const PhotoSwipeUiDefault = require('photoswipe/dist/photoswipe-ui-default');
     }
   };
 
+  // Add current week in calendar
+  Drupal.behaviors.currentWeek = {
+    attach: function (context, settings) {
+      $('.calendar--widget td.today').once('change-background').each(function () {
+        console.log('today');
+        $(this).closest('tr').children('.future').addClass('current-week');
+      });
+    }
+  };
+
+
   // upper Menu
   Drupal.behaviors.upperMenu = {
     attach: function (context, settings) {
