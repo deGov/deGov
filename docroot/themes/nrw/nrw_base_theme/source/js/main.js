@@ -37,7 +37,7 @@ const PhotoSwipeUiDefault = require('photoswipe/dist/photoswipe-ui-default');
   Drupal.behaviors.currentWeek = {
     attach: function (context, settings) {
       $('.calendar--widget td.today').once('change-background').each(function () {
-        $(this).closest('tr').children('.future').addClass('current-week');
+        $(this).closest('tr').children('td').addClass('current-week');
       });
     }
   };
