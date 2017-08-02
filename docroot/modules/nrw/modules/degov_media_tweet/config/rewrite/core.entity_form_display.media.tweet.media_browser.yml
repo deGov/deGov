@@ -1,9 +1,10 @@
 langcode: de
-status: false
+status: true
 dependencies:
   config:
     - core.entity_form_mode.media.media_browser
     - field.field.media.tweet.embed_code
+    - field.field.media.tweet.field_include_search
     - field.field.media.tweet.field_media_in_library
     - field.field.media.tweet.field_tags
     - media_entity.bundle.tweet
@@ -18,6 +19,13 @@ content:
   field_media_in_library:
     type: boolean_checkbox
     weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    region: content
+  field_include_search:
+    type: boolean_checkbox
+    weight: 3
     settings:
       display_label: true
     third_party_settings: {  }

@@ -1,7 +1,12 @@
+uuid: 6973ef04-4a49-40a7-a619-3148923e19ad
 langcode: de
 status: true
 dependencies:
   config:
+    - core.entity_form_mode.media.media_browser
+    - field.field.media.image.field_media_in_library
+    - image.style.medium
+    - media_entity.bundle.image
     - core.entity_form_mode.media.media_browser
     - field.field.media.image.field_image_caption
     - field.field.media.image.field_image_copyright
@@ -14,6 +19,7 @@ dependencies:
     - field.field.media.image.field_tags
     - media_entity.bundle.image
   module:
+    - lightning_media
     - workbench_moderation
 id: media.image.media_browser
 targetEntityType: media
@@ -27,15 +33,14 @@ content:
       display_label: true
     third_party_settings: {  }
     region: content
-  field_tags:
-    type: entity_reference_autocomplete
-    weight: 4
-    region: content
+  image:
+    type: image_immutable
+    weight: 0
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      preview_image_style: medium
+      progress_indicator: throbber
     third_party_settings: {  }
+    region: content
   langcode:
     type: language_select
     weight: 1
@@ -50,8 +55,18 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
+  field_tags:
+    type: entity_reference_autocomplete
+    weight: 4
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
 hidden:
   created: true
+  uid: true
   field_image_caption: true
   field_image_copyright: true
   field_image_date: true
@@ -59,4 +74,3 @@ hidden:
   field_image_height: true
   field_image_mime: true
   field_image_width: true
-  uid: true

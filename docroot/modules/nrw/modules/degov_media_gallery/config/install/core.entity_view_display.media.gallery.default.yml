@@ -8,15 +8,16 @@ dependencies:
     - field.field.media.gallery.field_gallery_title
     - field.field.media.gallery.field_include_search
     - field.field.media.gallery.field_media_in_library
+    - field.field.media.gallery.field_tags
     - image.style.thumbnail
     - media_entity.bundle.gallery
   enforced:
     module:
       - degov_media_gallery
   module:
+    - degov_common
     - image
     - text
-    - user
 id: media.gallery.default
 targetEntityType: media
 bundle: gallery
@@ -54,6 +55,14 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_tags:
+    weight: 7
+    label: above
+    settings:
+      route_name: ''
+    third_party_settings: {  }
+    type: taxonomy_term_search
+    region: content
   name:
     label: hidden
     type: string
@@ -73,7 +82,7 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  uid: true
   field_include_search: true
   field_media_in_library: true
   langcode: true
+  uid: true

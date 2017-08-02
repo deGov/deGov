@@ -2,6 +2,7 @@ langcode: de
 status: true
 dependencies:
   config:
+    - core.entity_form_mode.media.media_browser
     - entity_browser.browser.media_browser
     - field.field.media.gallery.field_gallery_images
     - field.field.media.gallery.field_gallery_sub_title
@@ -17,8 +18,8 @@ dependencies:
   module:
     - entity_browser
     - field_group
-    - path
     - text
+    - path
     - workbench_moderation
 third_party_settings:
   field_group:
@@ -84,10 +85,10 @@ third_party_settings:
         required_fields: true
       label: Common
       region: content
-id: media.gallery.default
+id: media.gallery.media_browser
 targetEntityType: media
 bundle: gallery
-mode: default
+mode: media_browser
 content:
   field_gallery_images:
     type: entity_browser_entity_reference
@@ -142,14 +143,14 @@ content:
     third_party_settings: {  }
     region: content
   field_tags:
+    type: entity_reference_autocomplete
     weight: 6
+    region: content
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   langcode:
     type: language_select
     weight: 5

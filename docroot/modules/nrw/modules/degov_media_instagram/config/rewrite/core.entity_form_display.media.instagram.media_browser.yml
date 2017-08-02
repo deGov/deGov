@@ -1,9 +1,10 @@
 langcode: de
-status: false
+status: true
 dependencies:
   config:
     - core.entity_form_mode.media.media_browser
     - field.field.media.instagram.embed_code
+    - field.field.media.instagram.field_include_search
     - field.field.media.instagram.field_media_in_library
     - field.field.media.instagram.field_tags
     - media_entity.bundle.instagram
@@ -56,6 +57,13 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_include_search:
+    type: boolean_checkbox
+    weight: 5
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    region: content
 hidden:
   created: true
   embed_code: true

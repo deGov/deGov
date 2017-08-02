@@ -2,30 +2,31 @@ langcode: de
 status: true
 dependencies:
   config:
-    - entity_browser.browser.media_browser
-    - field.field.media.gallery.field_gallery_images
-    - field.field.media.gallery.field_gallery_sub_title
-    - field.field.media.gallery.field_gallery_text
-    - field.field.media.gallery.field_gallery_title
-    - field.field.media.gallery.field_include_search
-    - field.field.media.gallery.field_media_in_library
-    - field.field.media.gallery.field_tags
-    - media_entity.bundle.gallery
+    - core.entity_form_mode.media.media_browser
+    - field.field.media.address.field_address_address
+    - field.field.media.address.field_address_email
+    - field.field.media.address.field_address_fax
+    - field.field.media.address.field_address_location
+    - field.field.media.address.field_address_phone
+    - field.field.media.address.field_address_title
+    - field.field.media.address.field_include_search
+    - field.field.media.address.field_media_in_library
+    - field.field.media.address.field_tags
+    - media_entity.bundle.address
   enforced:
     module:
-      - degov_media_gallery
+      - degov_media_address
   module:
-    - entity_browser
+    - address
     - field_group
-    - path
-    - text
+    - geofield
     - workbench_moderation
 third_party_settings:
   field_group:
     group_vertical:
       children:
-        - group_media
-        - group_description
+        - group_address
+        - group_contact_details
         - group_common
       parent_name: ''
       weight: 1
@@ -36,45 +37,14 @@ third_party_settings:
         direction: vertical
       label: Vertical
       region: content
-    group_media:
-      children:
-        - field_gallery_images
-      parent_name: group_vertical
-      weight: 2
-      format_type: tab
-      format_settings:
-        id: ''
-        classes: ''
-        formatter: closed
-        description: ''
-        required_fields: true
-      label: Media
-      region: content
-    group_description:
-      children:
-        - field_gallery_title
-        - field_gallery_sub_title
-        - field_gallery_text
-      parent_name: group_vertical
-      weight: 3
-      format_type: tab
-      format_settings:
-        id: ''
-        classes: ''
-        formatter: closed
-        description: ''
-        required_fields: true
-      label: Description
-      region: content
     group_common:
       children:
         - langcode
-        - path
         - field_tags
         - field_include_search
         - field_media_in_library
       parent_name: group_vertical
-      weight: 4
+      weight: 17
       format_type: tab
       format_settings:
         id: ''
@@ -84,43 +54,85 @@ third_party_settings:
         required_fields: true
       label: Common
       region: content
-id: media.gallery.default
+    group_address:
+      children:
+        - field_address_address
+        - field_address_location
+      parent_name: group_vertical
+      weight: 15
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Address
+      region: content
+    group_contact_details:
+      children:
+        - field_address_title
+        - field_address_phone
+        - field_address_fax
+        - field_address_email
+      parent_name: group_vertical
+      weight: 16
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Contact details'
+      region: content
+_core:
+  default_config_hash: Fa5EMxJpGwuWAD5DL0J43ztiAOuo11EXG9vH4MsLZ-0
+id: media.address.media_browser
 targetEntityType: media
-bundle: gallery
-mode: default
+bundle: address
+mode: media_browser
 content:
-  field_gallery_images:
-    type: entity_browser_entity_reference
-    weight: 12
+  field_address_address:
+    weight: 3
     settings:
-      entity_browser: media_browser
-      field_widget_display: rendered_entity
-      field_widget_edit: true
-      field_widget_remove: true
-      selection_mode: selection_append
-      field_widget_display_settings:
-        view_mode: thumbnail
-      open: true
-    region: content
+      default_country: DE
     third_party_settings: {  }
-  field_gallery_sub_title:
-    weight: 11
+    type: address_default
+    region: content
+  field_address_email:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_address_fax:
+    weight: 4
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_gallery_text:
-    weight: 12
+  field_address_location:
+    weight: 4
     settings:
-      rows: 5
+      html5_geolocation: false
+    third_party_settings: {  }
+    type: geofield_latlon
+    region: content
+  field_address_phone:
+    weight: 3
+    settings:
+      size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
+    type: string_textfield
     region: content
-  field_gallery_title:
-    weight: 10
+  field_address_title:
+    weight: 2
     settings:
       size: 60
       placeholder: ''
@@ -128,7 +140,7 @@ content:
     type: string_textfield
     region: content
   field_include_search:
-    weight: 7
+    weight: 21
     settings:
       display_label: true
     third_party_settings: {  }
@@ -138,11 +150,11 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 8
+    weight: 22
     third_party_settings: {  }
     region: content
   field_tags:
-    weight: 6
+    weight: 20
     settings:
       match_operator: CONTAINS
       size: 60
@@ -152,7 +164,7 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 5
+    weight: 19
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -166,7 +178,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 6
+    weight: 23
     region: content
     settings: {  }
     third_party_settings: {  }
