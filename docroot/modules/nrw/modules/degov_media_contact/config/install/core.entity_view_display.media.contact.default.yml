@@ -8,6 +8,7 @@ dependencies:
     - field.field.media.contact.field_contact_position
     - field.field.media.contact.field_contact_tel
     - field.field.media.contact.field_contact_title
+    - field.field.media.contact.field_include_search
     - field.field.media.contact.field_media_in_library
     - field.field.media.contact.field_tags
     - image.style.thumbnail
@@ -23,16 +24,6 @@ targetEntityType: media
 bundle: contact
 mode: default
 content:
-  created:
-    label: hidden
-    type: timestamp
-    weight: 2
-    region: content
-    settings:
-      date_format: medium
-      custom_date_format: ''
-      timezone: ''
-    third_party_settings: {  }
   field_contact_email:
     weight: 7
     label: visually_hidden
@@ -106,13 +97,9 @@ content:
       image_link: ''
     region: content
     third_party_settings: {  }
-  uid:
-    label: hidden
-    type: author
-    weight: 1
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
+  created: true
+  uid: true
+  field_include_search: true
   field_media_in_library: true
   langcode: true

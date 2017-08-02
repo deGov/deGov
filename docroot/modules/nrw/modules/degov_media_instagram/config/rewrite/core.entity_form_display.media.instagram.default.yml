@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.media.instagram.embed_code
+    - field.field.media.instagram.field_include_search
     - field.field.media.instagram.field_media_in_library
     - field.field.media.instagram.field_tags
     - media_entity.bundle.instagram
@@ -43,6 +44,7 @@ third_party_settings:
       children:
         - field_tags
         - langcode
+        - field_include_search
         - field_media_in_library
         - path
       parent_name: group_vertikal
@@ -56,8 +58,6 @@ third_party_settings:
         required_fields: true
       label: Common
       region: content
-_core:
-  default_config_hash: 3iEda9a4O9kdUm0srWixIp38YeSTbmYgKoaq143S34c
 id: media.instagram.default
 targetEntityType: media
 bundle: instagram
@@ -71,9 +71,16 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
+  field_include_search:
+    weight: 6
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_media_in_library:
     type: boolean_checkbox
-    weight: 6
+    weight: 7
     settings:
       display_label: true
     third_party_settings: {  }
@@ -103,7 +110,7 @@ content:
     region: content
   path:
     type: path
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }

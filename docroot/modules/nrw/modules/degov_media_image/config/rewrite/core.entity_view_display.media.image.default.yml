@@ -9,6 +9,7 @@ dependencies:
     - field.field.media.image.field_image_height
     - field.field.media.image.field_image_mime
     - field.field.media.image.field_image_width
+    - field.field.media.image.field_include_search
     - field.field.media.image.field_media_in_library
     - field.field.media.image.field_tags
     - media_entity.bundle.image
@@ -86,6 +87,7 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_include_search: true
   field_media_in_library: true
   langcode: true
   name: true

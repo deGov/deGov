@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.media.tweet.embed_code
+    - field.field.media.tweet.field_include_search
     - field.field.media.tweet.field_media_in_library
     - field.field.media.tweet.field_tags
     - media_entity.bundle.tweet
@@ -29,6 +30,7 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_include_search: true
   field_media_in_library: true
   langcode: true
   name: true
