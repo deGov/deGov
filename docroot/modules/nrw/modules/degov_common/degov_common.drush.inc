@@ -17,6 +17,9 @@ function degov_common_drush_command() {
   return $items;
 }
 
+/**
+ * Implements hook_scheduled_updates().
+ */
 function drush_degov_common_scheduled_updates() {
   if (\Drupal::moduleHandler()->moduleExists('scheduled_updates')) {
     \Drupal::service('scheduled_updates.update_runner')->runAllUpdates();
