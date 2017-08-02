@@ -81,7 +81,13 @@ class SidebarParagraphs extends BlockBase implements ContainerFactoryPluginInter
     $node = $this->routeMatcher->getParameter('node');
     if ($node && $node instanceof NodeInterface) {
       if ($node->hasField('field_sidebar_right_paragraphs') && !$node->get('field_sidebar_right_paragraphs')->isEmpty()) {
-        $build['sidebar_paragraphs'] = $node->get('field_sidebar_right_paragraphs')->view('full');
+        $field_rendered_array = $node->get('field_sidebar_right_paragraphs')
+          ->view('full');
+        if (!$node->isPublished()) {
+          $build['sidebar_paragraphs']['#markup'] = render($field_rendered_array);
+        } else {
+          $build['sidebar_paragraphs'] = $field_rendered_array;
+        }
         $build['sidebar_paragraphs']['#cache'] = [
           'tags' => [
             'node:' . $node->id(),
@@ -92,6 +98,9 @@ class SidebarParagraphs extends BlockBase implements ContainerFactoryPluginInter
             'node',
             $node->id(),
             'default',
+          ],
+          'contexts' => [
+            'user.permissions'
           ],
         ];
       }
@@ -118,7 +127,7 @@ class SidebarParagraphs extends BlockBase implements ContainerFactoryPluginInter
    * {@inheritdoc}
    */
   public function getCacheContexts() {
-    return Cache::mergeContexts(parent::getCacheContexts(), ['url.path']);
+    return Cache::mergeContexts(parent::getCacheContexts(), ['url.path', 'user.permissions']);
   }
 
 }
