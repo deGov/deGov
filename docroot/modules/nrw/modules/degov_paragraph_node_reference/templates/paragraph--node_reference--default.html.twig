@@ -69,9 +69,7 @@
 
   <div class="paragraph__content">
     {% for key, teaser in content.field_node_reference_nodes if key|first != '#' %}
-    <div class="row">
       {{ teaser }}
-    </div>
     {% endfor %}
   </div>
 </div>
