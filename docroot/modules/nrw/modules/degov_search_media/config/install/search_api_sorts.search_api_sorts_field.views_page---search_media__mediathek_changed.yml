@@ -1,0 +1,13 @@
+langcode: de
+status: true
+dependencies:
+  enforced:
+    module:
+      - degov_search_media
+id: views_page---search_media__mediathek_changed
+display_id: views_page---search_media__mediathek
+field_identifier: changed
+default_sort: true
+default_order: desc
+label: Änderungsdatum
+weight: 0
