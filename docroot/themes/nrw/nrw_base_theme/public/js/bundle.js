@@ -84,7 +84,7 @@
 	  Drupal.behaviors.currentWeek = {
 	    attach: function attach(context, settings) {
 	      $('.calendar--widget td.today').once('change-background').each(function () {
-	        $(this).closest('tr').children('.future').addClass('current-week');
+	        $(this).closest('tr').children('td').addClass('current-week');
 	      });
 	    }
 	  };

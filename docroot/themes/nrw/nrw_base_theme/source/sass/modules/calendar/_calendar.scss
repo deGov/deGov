@@ -48,25 +48,24 @@
         text-align: center;
         border: 0;
         font-size: $font-size-h3;
-        &.has_events{
-          &:hover{
-            background: $nrw-green;
-          }
+        &.current-week{
+          background: $brand-primary;
+          color: $color-white;
         }
         &.days{
           font-size: $font-size-small;
           font-weight: bold;
           padding: $grid-gutter-width/4;
           color: $brand-primary;
-
         }
         &.today{
           background: $nrw-green;
           color: $color-white;
         }
-        &.current-week{
-          background: $brand-primary;
-          color: $color-white;
+        &.has-events{
+          &:hover{
+            background: $nrw-green;
+          }
         }
       }
     }
