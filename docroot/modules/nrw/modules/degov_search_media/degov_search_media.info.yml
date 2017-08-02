@@ -1,0 +1,13 @@
+name: 'deGov - Mediensuche'
+description: 'Allgemeine Konfiguration für die Mediensuche.'
+type: module
+core: 8.x
+package: deGov
+dependencies:
+  - block
+  - facets
+  - media_entity
+  - search_api
+  - search_api_sorts
+  - system
+  - views
