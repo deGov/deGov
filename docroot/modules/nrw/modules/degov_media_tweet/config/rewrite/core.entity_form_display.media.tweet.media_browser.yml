@@ -9,30 +9,93 @@ dependencies:
     - field.field.media.tweet.field_tags
     - media_entity.bundle.tweet
   module:
-    - path
+    - field_group
     - workbench_moderation
+third_party_settings:
+  field_group:
+    group_vertical:
+      children:
+        - group_media
+        - group_common
+      parent_name: ''
+      weight: 2
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: Vertical
+      region: content
+    group_media:
+      children:
+        - embed_code
+      parent_name: group_vertical
+      weight: 3
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Media
+      region: content
+    group_common:
+      children:
+        - langcode
+        - field_tags
+        - field_include_search
+        - field_media_in_library
+      parent_name: group_vertical
+      weight: 4
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Common
+      region: content
 id: media.tweet.media_browser
 targetEntityType: media
 bundle: tweet
 mode: media_browser
 content:
-  field_media_in_library:
-    type: boolean_checkbox
-    weight: 1
-    settings:
-      display_label: true
-    third_party_settings: {  }
+  embed_code:
+    type: string_textarea
+    weight: 9
     region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
   field_include_search:
     type: boolean_checkbox
-    weight: 3
+    weight: 8
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_media_in_library:
+    type: boolean_checkbox
+    weight: 9
     settings:
       display_label: true
     third_party_settings: {  }
     region: content
+  field_tags:
+    type: entity_reference_autocomplete
+    weight: 7
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 2
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -51,12 +114,10 @@ content:
     settings: {  }
     third_party_settings: {  }
   preview:
-    weight: null
+    weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   created: true
-  embed_code: true
-  field_tags: true
   uid: true
