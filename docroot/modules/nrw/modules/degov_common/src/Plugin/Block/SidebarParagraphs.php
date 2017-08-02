@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\degov_content_types_shared_fields\Plugin\Block;
+namespace Drupal\degov_common\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Cache\Cache;

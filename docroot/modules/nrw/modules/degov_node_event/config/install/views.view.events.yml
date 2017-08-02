@@ -11,6 +11,7 @@ dependencies:
   module:
     - calendar
     - datetime
+    - degov_node_event
     - node
     - user
 id: events
@@ -576,18 +577,18 @@ display:
       link_display: events_page_list
       link_url: ''
       header:
-        calendar_header:
-          id: calendar_header
+        degov_calendar_widget_header:
+          id: degov_calendar_widget_header
           table: views
-          field: calendar_header
+          field: degov_calendar_widget_header
           relationship: none
           group_type: group
           admin_label: ''
           empty: true
           tokenize: 1
-          content: '{{ field_event_date }}'
+          content: ''
           pager_embed: 1
-          plugin_id: calendar_header
+          plugin_id: degov_calendar_widget_header
       use_ajax: true
       display_description: ''
       allow:

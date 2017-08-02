@@ -1,18 +1,40 @@
 <?php
 
-/**
- * @file
- * Implements hooks and methods with common functionality.
- */
-
-use Drupal\node\NodeInterface;
-use Drupal\media_entity\MediaInterface;
 use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\degov_common\DegovOverride;
+use Drupal\degov_common\Plugin\views\filter\DegovBundle;
+use Drupal\media_entity\MediaInterface;
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_views_plugins_filter_alter().
+ */
+function degov_common_views_plugins_filter_alter(array &$plugins) {
+  DegovOverride::pluginClass($plugins['bundle'], DegovBundle::class);
+}
+
+/**
+ * Set degov_common module to run the last on views_plugins_filter_alter.
+ * @param $implementations
+ * @param $hook
+ */
+function degov_common_module_implements_alter(&$implementations, $hook) {
+  if ($hook == 'views_plugins_filter_alter') {
+    // Move my_module_form_alter() to the end of the list.
+    // \Drupal::moduleHandler()->getImplementations()
+    // iterates through $implementations with a foreach loop which PHP iterates
+    // in the order that the items were added, so to move an item to the end of
+    // the array, we remove it and then add it.
+    $group = $implementations['degov_common'];
+    unset($implementations['degov_common']);
+    $implementations['degov_common'] = $group;
+  }
+}
 
 /**
  * Implements hook_preprocess_node().
  */
-function degov_content_types_shared_fields_preprocess_node(&$variables) {
+function degov_common_preprocess_node(&$variables) {
   /** @var \Drupal\node\NodeInterface $node */
   $node = $variables['node'];
   // Remove the right sidebar paragraph in case no content exists.
@@ -24,7 +46,7 @@ function degov_content_types_shared_fields_preprocess_node(&$variables) {
 /**
  * Implements hook_preprocess_HOOK().
  */
-function degov_content_types_shared_fields_preprocess_field(&$variables) {
+function degov_common_preprocess_field(&$variables) {
   $field_name = $variables['field_name'];
   // Include the shariff sharing block buttons if social media sharing is
   // enabled on the node. Appears on the bottom of both header/content paragraph.
@@ -51,8 +73,12 @@ function degov_content_types_shared_fields_preprocess_field(&$variables) {
 
 /**
  * Implements hook_ENTITY_TYPE_view_alter() for media entities.
+ *
+ * @param array $build
+ * @param \Drupal\media_entity\MediaInterface $entity
+ * @param \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display
  */
-function degov_content_types_shared_fields_media_view_alter(array &$build, MediaInterface $entity, EntityViewDisplayInterface $display) {
+function degov_common_media_view_alter(array &$build, MediaInterface $entity, EntityViewDisplayInterface $display) {
   // Skip adding contextual links if the Paragraph is in a QuickEdit form context
   // to avoid causing conflicts with Quickedit JS
   if (\Drupal::routeMatch()->getRouteName() == 'quickedit.field_form') {
@@ -73,7 +99,7 @@ function degov_content_types_shared_fields_media_view_alter(array &$build, Media
  * @see contextual_preprocess()
  * @see template_preprocess_paragraph()
  */
-function degov_content_types_shared_fields_preprocess_media(&$variables) {
+function degov_common_preprocess_media(&$variables) {
   // Media templates don't normally print the title_suffix, so add the
   // contextual links to the content render array.
   if (isset($variables['title_suffix']['contextual_links'])) {
@@ -81,3 +107,4 @@ function degov_content_types_shared_fields_preprocess_media(&$variables) {
     $variables['content']['contextual_links']['#weight'] = -100;
   }
 }
+

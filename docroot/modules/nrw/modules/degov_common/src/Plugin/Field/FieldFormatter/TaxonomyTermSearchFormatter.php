@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\degov_content_types_shared_fields\Plugin\Field\FieldFormatter;
+namespace Drupal\degov_common\Plugin\Field\FieldFormatter;
 
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Field\FieldDefinitionInterface;
