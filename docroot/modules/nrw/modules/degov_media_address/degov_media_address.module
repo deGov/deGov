@@ -16,6 +16,28 @@ function degov_media_address_preprocess(&$variables, $hook, &$info) {
 }
 
 /**
+ *
+ */
+function degov_media_address_preprocess_media__address(&$variables) {
+  if (!empty($variables['elements']['#view_mode']) && $variables['elements']['#view_mode'] == 'osm_map') {
+    $address = $variables['media'];
+    if ($address instanceof \Drupal\media_entity\MediaInterface) {
+      $location = $address->get('field_address_location');
+      if (!$location->isEmpty()) {
+        // Assign the unique ID for every map paragraph we have.
+        $map_id = uniqid('leaflet-');
+        // Add latitude and longitude.
+        $variables['#attached']['drupalSettings']['maps'][$map_id]['lat'] = $location->lat;
+        $variables['#attached']['drupalSettings']['maps'][$map_id]['lon'] = $location->lon;
+        // Add pin image location.
+        $variables['#attached']['drupalSettings']['maps'][$map_id]['pin'] = '/' . drupal_get_path('module', 'degov_media_address') . '/images/map-icon.png';
+        $variables['content']['map_id'] = $map_id;
+      }
+    }
+  }
+}
+
+/**
  * Implements hook_preprocess_HOOK().
  */
 function degov_media_address_preprocess_paragraph__map(&$variables) {
@@ -29,12 +51,6 @@ function degov_media_address_preprocess_paragraph__map(&$variables) {
     if (!empty($address_reference)) {
       $location = $address_reference->get('field_address_location');
       if (!$location->isEmpty()) {
-        // Add latitude and longitude.
-        $variables['#attached']['drupalSettings']['map']['lat'] = $location->lat;
-        $variables['#attached']['drupalSettings']['map']['lon'] = $location->lon;
-        // Add pin image location.
-        $variables['#attached']['drupalSettings']['map']['pin'] = '/' . drupal_get_path('module', 'degov_media_address') . '/images/map-icon.png';
-
         $variables['elements']['#cache']['contexts'][] = 'url.path';
         $variables['elements']['#cache']['tags'][] = 'paragraph:' . $paragraph->id();
         $variables['elements']['#cache']['tags'][] = $paragraph->getEntityTypeId() . '_view';
