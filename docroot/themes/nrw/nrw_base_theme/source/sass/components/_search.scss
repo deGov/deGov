@@ -78,6 +78,12 @@
 }
 
 .nrw-menu-header__search{
+  &.is-close{
+    display: none;
+  }
+  &.is-open{
+    display: flex;
+  }
   position: absolute;
   z-index: 1;
   width: 100%;

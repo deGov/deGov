@@ -103,6 +103,18 @@
 	    }
 	  };
 
+	  // Open/close search
+	  Drupal.behaviors.openSearch = {
+	    attach: function attach(context, settings) {
+	      $(context).find('.nrw-menu-header__icon.menu-search').once('upper-menu-click').click(function () {
+	        $('.nrw-menu-header__search').toggleClass('is-open is-close');
+	      });
+	      $('.nrw-menu-header__search-close a', context).click(function (e) {
+	        $('.nrw-menu-header__search').toggleClass('is-open is-close');
+	      });
+	    }
+	  };
+
 	  // Language dropdown
 	  Drupal.behaviors.lang = {
 	    attach: function attach(context, settings) {
