@@ -75,6 +75,17 @@
     'clearfix',
   ]
 %}
+
+{% if content.field_teaser_image %}
+  {% set class_sidebar = 'col-xs-12 col-sm-6'  %}
+  {% set class_content = 'col-xs-12 col-sm-6' %}
+  
+{% else %}
+  {%  set class_sidebar = 'invisible' %}
+  {%  set class_content = 'col-xs-12 col-sm-12' %}
+{% endif %}
+
+
 <article{{ attributes.addClass(classes) }}>
   {{ title_suffix }}
 

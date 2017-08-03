@@ -75,10 +75,19 @@
     'clearfix',
   ]
 %}
+{% if content.field_teaser_image %}
+  {% set class_sidebar = 'col-sm-3'  %}
+  {% set class_content = 'col-sm-9' %}
+  
+{% else %}
+  {%  set class_sidebar = 'invisible' %}
+  {%  set class_content = 'col-sm-12' %}
+{% endif %}
+
 <article{{ attributes.addClass(classes) }}>
   {{ title_suffix }}
 
-  <div class="nblog__teaser-image col-sm-3">
+  <div class="nblog__teaser-image {{ class_sidebar }}">
     {% if content.field_teaser_image %}
       <a href="{{ url }}" rel="bookmark">
         {{ content.field_teaser_image|field_value }}
@@ -86,7 +95,7 @@
     {% endif %}
   </div>
 
-  <div class="blog__teaser-content teaser-content col-sm-9">
+  <div class="blog__teaser-content teaser-content {{ class_content }}">
     {% if content.field_teaser_title %}
       <a href="{{ url }}" rel="bookmark">
         <div class="blog__teaser-title"{{ content.field_teaser_title|quickedit_attr }}>
