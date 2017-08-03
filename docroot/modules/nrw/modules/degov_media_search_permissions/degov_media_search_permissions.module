@@ -1,2 +1,12 @@
 <?php
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\degov_media_search_permissions\FormAlter;
 
+/**
+ * Implements hook_form_alter().
+ */
+function degov_media_search_permissions_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  \Drupal::service('class_resolver')
+    ->getInstanceFromDefinition(FormAlter::class)
+    ->formAlter($form, $form_state, $form_id);
+}
