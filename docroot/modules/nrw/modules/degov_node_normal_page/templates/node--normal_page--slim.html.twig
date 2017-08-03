@@ -75,18 +75,27 @@
     'clearfix',
   ]
 %}
+
+{% if content.field_teaser_image|field_value %}
+  {% set class_sidebar = 'col-xs-12 col-sm-6' %}
+  {% set class_content = 'col-xs-12 col-sm-6' %}
+{% else %}
+  {% set class_sidebar = 'invisible' %}
+  {% set class_content = 'col-xs-12 col-sm-12' %}
+{% endif %}
+
 <article{{ attributes.addClass(classes) }}>
   {{ title_suffix }}
 
   {% if content.field_teaser_image %}
     <a href="{{ url }}" rel="bookmark">
-      <div class="normal-page__teaser-image teaser-image col-xs-12 col-sm-6 arrow">
+      <div class="normal-page__teaser-image teaser-image {{ class_sidebar }} arrow">
         {{ content.field_teaser_image|field_value }}
       </div>
     </a>
   {% endif %}
 
-  <div class="normal-page__teaser-content teaser-content col-xs-12 col-sm-6">
+  <div class="normal-page__teaser-content teaser-content {{ class_content }}">
     {% if content.field_teaser_title %}
       <a href="{{ url }}" rel="bookmark">
         <div class="normal-page__teaser-title teaser-title">
