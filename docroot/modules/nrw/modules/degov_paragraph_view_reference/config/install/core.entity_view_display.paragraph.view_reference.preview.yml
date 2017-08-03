@@ -5,6 +5,7 @@ dependencies:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.view_reference.field_sub_title
     - field.field.paragraph.view_reference.field_title
+    - field.field.paragraph.view_reference.field_title_link
     - field.field.paragraph.view_reference.field_view_reference_view
     - paragraphs.paragraphs_type.view_reference
   enforced:
@@ -12,8 +13,6 @@ dependencies:
       - degov_paragraph_view_reference
   module:
     - degov_views_helper
-_core:
-  default_config_hash: Q88QkZIsRzrRgowVxzdbQI4ll4nrD7vbZFaeyvhWLcU
 id: paragraph.view_reference.preview
 targetEntityType: paragraph
 bundle: view_reference
@@ -42,4 +41,5 @@ content:
     third_party_settings: {  }
     type: degov_viewsreference_label
     region: content
-hidden: {  }
+hidden:
+  field_title_link: true

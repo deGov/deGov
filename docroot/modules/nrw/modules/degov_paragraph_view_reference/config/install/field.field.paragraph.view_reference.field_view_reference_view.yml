@@ -1,12 +1,12 @@
 langcode: de
 status: true
 dependencies:
-  enforced:
-    module:
-      - degov_paragraph_view_reference
   config:
     - field.storage.paragraph.field_view_reference_view
     - paragraphs.paragraphs_type.view_reference
+  enforced:
+    module:
+      - degov_paragraph_view_reference
   module:
     - viewsreference
 id: paragraph.view_reference.field_view_reference_view
