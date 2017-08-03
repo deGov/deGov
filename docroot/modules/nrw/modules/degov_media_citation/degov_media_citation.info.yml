@@ -6,10 +6,12 @@ package: deGov
 dependencies:
   - crop
   - datetime
+  - degov_common
   - degov_content_types_shared_fields
   - degov_taxonomy_term_tags
   - entity_browser
   - field
+  - field_group
   - file
   - image
   - language
