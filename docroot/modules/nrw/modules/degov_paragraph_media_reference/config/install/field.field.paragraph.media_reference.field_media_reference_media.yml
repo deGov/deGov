@@ -25,12 +25,7 @@ default_value_callback: ''
 settings:
   handler: 'default:media'
   handler_settings:
-    target_bundles:
-      document: document
-      image: image
-      instagram: instagram
-      tweet: tweet
-      video: video
+    target_bundles: {  }
     sort:
       field: _none
     auto_create: false
