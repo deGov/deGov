@@ -11,6 +11,8 @@ dependencies:
   enforced:
     module:
       - degov_paragraph_iframe
+  module:
+    - link
 id: paragraph.iframe.default
 targetEntityType: paragraph
 bundle: iframe
