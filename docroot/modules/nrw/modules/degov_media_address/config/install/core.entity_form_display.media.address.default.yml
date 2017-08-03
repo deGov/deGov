@@ -19,7 +19,6 @@ dependencies:
     - address
     - field_group
     - geofield
-    - path
     - workbench_moderation
 third_party_settings:
   field_group:

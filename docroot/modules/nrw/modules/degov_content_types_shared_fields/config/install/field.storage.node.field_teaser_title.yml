@@ -1,11 +1,11 @@
 langcode: de
 status: true
 dependencies:
+  enforced:
+    module:
+      - degov_content_types_shared_fields
   module:
     - node
-  enforced:
-   module:
-   - degov_content_types_shared_fields
 id: node.field_teaser_title
 field_name: field_teaser_title
 entity_type: node

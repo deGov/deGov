@@ -6,6 +6,7 @@ dependencies:
     - field.field.paragraph.faq_list.field_faq_list_inner_paragraphs
     - field.field.paragraph.faq_list.field_sub_title
     - field.field.paragraph.faq_list.field_title
+    - field.field.paragraph.faq_list.field_title_link
     - paragraphs.paragraphs_type.faq_list
   enforced:
     module:
@@ -42,4 +43,5 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-hidden: {  }
+hidden:
+  field_title_link: true

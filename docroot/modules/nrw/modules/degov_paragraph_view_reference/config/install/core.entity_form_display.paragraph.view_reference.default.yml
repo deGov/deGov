@@ -1,16 +1,17 @@
 langcode: de
 status: true
 dependencies:
-  enforced:
-    module:
-      - degov_paragraph_view_reference
   config:
     - field.field.paragraph.view_reference.field_sub_title
     - field.field.paragraph.view_reference.field_title
     - field.field.paragraph.view_reference.field_title_link
     - field.field.paragraph.view_reference.field_view_reference_view
     - paragraphs.paragraphs_type.view_reference
+  enforced:
+    module:
+      - degov_paragraph_view_reference
   module:
+    - link
     - viewsreference
     - workbench_moderation
 id: paragraph.view_reference.default
@@ -34,12 +35,6 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_view_reference_view:
-    weight: 9
-    settings: {  }
-    third_party_settings: {  }
-    type: viewsreference_select
-    region: content
   field_title_link:
     weight: 8
     settings:
@@ -47,6 +42,12 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
+  field_view_reference_view:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: viewsreference_select
     region: content
 hidden:
   created: true

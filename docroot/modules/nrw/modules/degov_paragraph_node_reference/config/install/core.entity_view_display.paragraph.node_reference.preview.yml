@@ -4,8 +4,10 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.node_reference.field_node_reference_nodes
+    - field.field.paragraph.node_reference.field_node_reference_viewmode
     - field.field.paragraph.node_reference.field_sub_title
     - field.field.paragraph.node_reference.field_title
+    - field.field.paragraph.node_reference.field_title_link
     - paragraphs.paragraphs_type.node_reference
   enforced:
     module:
@@ -39,4 +41,6 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-hidden: {  }
+hidden:
+  field_node_reference_viewmode: true
+  field_title_link: true

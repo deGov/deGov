@@ -16,7 +16,6 @@ dependencies:
   module:
     - image
     - text
-    - user
 id: media.gallery.default
 targetEntityType: media
 bundle: gallery
@@ -26,7 +25,7 @@ content:
     weight: 5
     label: above
     settings:
-      view_mode: slider_main_16_9
+      view_mode: default
       link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
@@ -73,7 +72,7 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  uid: true
   field_include_search: true
   field_media_in_library: true
   langcode: true
+  uid: true

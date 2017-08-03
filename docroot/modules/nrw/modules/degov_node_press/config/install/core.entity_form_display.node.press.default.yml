@@ -3,8 +3,8 @@ status: true
 dependencies:
   config:
     - entity_browser.browser.media_browser
-    - field.field.node.press.field_header_paragraphs
     - field.field.node.press.field_content_paragraphs
+    - field.field.node.press.field_header_paragraphs
     - field.field.node.press.field_press_date
     - field.field.node.press.field_sidebar_right_paragraphs
     - field.field.node.press.field_social_media
@@ -128,8 +128,8 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_header_paragraphs:
-    weight: 3
+  field_content_paragraphs:
+    weight: 5
     settings:
       title: Absatz
       title_plural: Paragraphs
@@ -140,8 +140,8 @@ content:
     third_party_settings: {  }
     type: entity_reference_paragraphs
     region: content
-  field_content_paragraphs:
-    weight: 5
+  field_header_paragraphs:
+    weight: 3
     settings:
       title: Absatz
       title_plural: Paragraphs

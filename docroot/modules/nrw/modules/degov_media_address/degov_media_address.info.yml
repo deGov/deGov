@@ -6,9 +6,11 @@ core: 8.x
 dependencies:
   - address
   - crop
+  - degov_common
   - degov_content_types_shared_fields
   - degov_taxonomy_term_tags
   - field
+  - field_group
   - geocoder
   - geocoder_address
   - geocoder_field

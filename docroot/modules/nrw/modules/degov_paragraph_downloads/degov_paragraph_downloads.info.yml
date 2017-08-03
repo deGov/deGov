@@ -6,7 +6,9 @@ core: 8.x
 dependencies:
   - degov_content_types_shared_fields
   - degov_media_document
+  - entity_browser
   - field
+  - link
   - media_entity
   - paragraphs
   - workbench_moderation

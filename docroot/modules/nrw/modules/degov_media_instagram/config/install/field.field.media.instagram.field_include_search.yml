@@ -4,9 +4,7 @@ dependencies:
   config:
     - field.storage.media.field_include_search
     - media_entity.bundle.instagram
-  module:
-    - degov_content_types_shared_fields
-  endforced:
+  enforced:
     module:
       - degov_media_instagram
 id: media.instagram.field_include_search

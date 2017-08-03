@@ -4,14 +4,14 @@ dependencies:
   config:
     - media_entity.bundle.person
     - node.type.blog
-  module:
-    - media_entity
-    - node
-    - user
   enforced:
     module:
       - degov_node_blog
       - degov_media_person
+  module:
+    - media_entity
+    - node
+    - user
 id: blog_author
 label: 'Blog author'
 module: views

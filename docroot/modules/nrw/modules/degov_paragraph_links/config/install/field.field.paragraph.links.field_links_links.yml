@@ -4,11 +4,11 @@ dependencies:
   config:
     - field.storage.paragraph.field_links_links
     - paragraphs.paragraphs_type.links
-  module:
-    - link
   enforced:
     module:
       - degov_paragraph_links
+  module:
+    - link
 id: paragraph.links.field_links_links
 field_name: field_links_links
 entity_type: paragraph

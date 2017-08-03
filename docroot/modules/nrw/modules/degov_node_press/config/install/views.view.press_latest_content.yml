@@ -8,7 +8,6 @@ dependencies:
     module:
       - degov_node_press
   module:
-    - datetime
     - node
     - taxonomy
     - user

@@ -13,6 +13,7 @@ dependencies:
       - degov_paragraph_downloads
   module:
     - entity_browser
+    - link
     - workbench_moderation
 id: paragraph.downloads.default
 targetEntityType: paragraph

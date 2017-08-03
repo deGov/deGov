@@ -1,15 +1,17 @@
 langcode: de
 status: true
 dependencies:
-  enforced:
-    module:
-      - degov_paragraph_downloads
   config:
     - field.field.paragraph.downloads.field_downloads_files
     - field.field.paragraph.downloads.field_sub_title
     - field.field.paragraph.downloads.field_title
     - field.field.paragraph.downloads.field_title_link
     - paragraphs.paragraphs_type.downloads
+  enforced:
+    module:
+      - degov_paragraph_downloads
+  module:
+    - link
 id: paragraph.downloads.default
 targetEntityType: paragraph
 bundle: downloads

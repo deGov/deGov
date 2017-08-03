@@ -4,10 +4,11 @@ type: module
 package: deGov
 core: 8.x
 dependencies:
-  - field
-  - node
-  - paragraphs
-  - workbench_moderation
   - degov_content_types_shared_fields
   - degov_node_normal_page
   - entity_reference_display
+  - field
+  - link
+  - node
+  - paragraphs
+  - workbench_moderation

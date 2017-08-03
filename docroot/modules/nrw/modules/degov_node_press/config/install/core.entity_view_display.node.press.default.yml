@@ -25,8 +25,8 @@ targetEntityType: node
 bundle: press
 mode: default
 content:
-  field_header_paragraphs:
-    weight: -1
+  field_content_paragraphs:
+    weight: 2
     label: hidden
     settings:
       view_mode: default
@@ -34,8 +34,8 @@ content:
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
     region: content
-  field_content_paragraphs:
-    weight: 2
+  field_header_paragraphs:
+    weight: -1
     label: hidden
     settings:
       view_mode: default
@@ -75,3 +75,4 @@ hidden:
   field_teaser_title: true
   langcode: true
   links: true
+  shariff_field: true

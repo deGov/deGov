@@ -18,7 +18,6 @@ dependencies:
     - datetime
     - entity_browser
     - field_group
-    - path
     - workbench_moderation
 third_party_settings:
   field_group:
@@ -100,12 +99,13 @@ content:
     weight: 7
     settings:
       entity_browser: media_browser
-      field_widget_display: label
+      field_widget_display: rendered_entity
       field_widget_edit: true
       field_widget_remove: true
-      open: true
       selection_mode: selection_append
-      field_widget_display_settings: {  }
+      field_widget_display_settings:
+        view_mode: thumbnail
+      open: true
     region: content
     third_party_settings: {  }
   field_citation_text:

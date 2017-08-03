@@ -12,6 +12,7 @@ dependencies:
     module:
       - degov_paragraph_map
   module:
+    - link
     - options
 id: paragraph.map.default
 targetEntityType: paragraph

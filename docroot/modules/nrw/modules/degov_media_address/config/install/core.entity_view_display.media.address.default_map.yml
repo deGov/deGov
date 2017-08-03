@@ -9,6 +9,7 @@ dependencies:
     - field.field.media.address.field_address_location
     - field.field.media.address.field_address_phone
     - field.field.media.address.field_address_title
+    - field.field.media.address.field_include_search
     - field.field.media.address.field_media_in_library
     - media_entity.bundle.address
   enforced:
@@ -82,6 +83,7 @@ hidden:
   field_address_fax: true
   field_address_phone: true
   field_address_title: true
+  field_include_search: true
   field_media_in_library: true
   field_tags: true
   langcode: true

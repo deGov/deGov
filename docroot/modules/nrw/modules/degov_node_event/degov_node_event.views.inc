@@ -11,5 +11,4 @@ function degov_node_event_views_data_alter(array &$data) {
       'id' => 'degov_calendar_widget_header',
     ),
   );
-
 }
