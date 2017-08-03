@@ -4,6 +4,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.slim
     - field.field.node.press.field_content_paragraphs
+    - field.field.node.press.field_header_paragraphs
     - field.field.node.press.field_press_date
     - field.field.node.press.field_sidebar_right_paragraphs
     - field.field.node.press.field_social_media
@@ -60,6 +61,7 @@ content:
     third_party_settings: {  }
 hidden:
   field_content_paragraphs: true
+  field_header_paragraphs: true
   field_sidebar_right_paragraphs: true
   field_social_media: true
   field_tags: true
