@@ -66,7 +66,16 @@ const PhotoSwipeUiDefault = require('photoswipe/dist/photoswipe-ui-default');
       $('.nrw-menu-header__search-close a', context).click(function (e) {
         $('.nrw-menu-header__search').toggleClass('is-open is-close');
       });
-      
+       $('.nrw-menu-header__search-close i', context).click(function (e) {
+        $('.nrw-menu-header__search').toggleClass('is-open is-close');
+      });
+      $(document).once('press-enter').keypress(function(e) {
+          if(e.which == 13) {
+              var value = $('input.nrw-menu-header__search-text').val();
+              console.log(value);
+              window.location.href = "/suche?volltext=" + value;
+          }
+      });
     }
   };
 
