@@ -8,12 +8,14 @@ dependencies:
     - field.field.media.gallery.field_gallery_title
     - field.field.media.gallery.field_include_search
     - field.field.media.gallery.field_media_in_library
+    - field.field.media.gallery.field_tags
     - image.style.thumbnail
     - media_entity.bundle.gallery
   enforced:
     module:
       - degov_media_gallery
   module:
+    - degov_common
     - image
     - text
 id: media.gallery.default
@@ -52,6 +54,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_tags:
+    weight: 7
+    label: above
+    settings:
+      route_name: ''
+    third_party_settings: {  }
+    type: taxonomy_term_search
     region: content
   name:
     label: hidden
