@@ -26,15 +26,6 @@ targetEntityType: node
 bundle: blog
 mode: default
 content:
-  field_header_paragraphs:
-    weight: -1
-    label: hidden
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
-    region: content
   field_blog_date:
     weight: 1
     label: hidden
@@ -61,6 +52,15 @@ content:
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
     region: content
+  field_header_paragraphs:
+    weight: -1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
   field_sidebar_right_paragraphs:
     type: entity_reference_revisions_entity_view
     weight: 5
@@ -79,3 +79,4 @@ hidden:
   field_teaser_title: true
   langcode: true
   links: true
+  shariff_field: true
