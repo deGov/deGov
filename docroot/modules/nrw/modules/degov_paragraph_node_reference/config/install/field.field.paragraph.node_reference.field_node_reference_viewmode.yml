@@ -4,6 +4,9 @@ dependencies:
   config:
     - field.storage.paragraph.field_node_reference_viewmode
     - paragraphs.paragraphs_type.node_reference
+  enforced:
+    module:
+      - degov_paragraph_node_reference
   module:
     - entity_reference_display
 id: paragraph.node_reference.field_node_reference_viewmode
