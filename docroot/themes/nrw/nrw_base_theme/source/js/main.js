@@ -242,7 +242,7 @@ const PhotoSwipeUiDefault = require('photoswipe/dist/photoswipe-ui-default');
   // Slick slider in press list
   Drupal.behaviors.slickPress = {
     attach: function (context, settings) { 
-      $('.view-latest-press .view-content').slick({
+      $('.press-list .view-content').slick({
         dots: true,
         infinite: false,
         speed: 300,

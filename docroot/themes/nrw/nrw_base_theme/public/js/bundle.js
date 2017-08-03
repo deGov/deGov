@@ -288,7 +288,7 @@
 	  // Slick slider in press list
 	  Drupal.behaviors.slickPress = {
 	    attach: function attach(context, settings) {
-	      $('.view-latest-press .view-content').slick({
+	      $('.press-list .view-content').slick({
 	        dots: true,
 	        infinite: false,
 	        speed: 300,
