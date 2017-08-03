@@ -4,9 +4,7 @@ dependencies:
   config:
     - field.storage.media.field_include_search
     - media_entity.bundle.tweet
-  module:
-    - degov_content_types_shared_fields
-  endforced:
+  enforced:
     module:
       - degov_media_tweet
 id: media.tweet.field_include_search
