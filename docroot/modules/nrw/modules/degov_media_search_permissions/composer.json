@@ -1,0 +1,10 @@
+{
+  "name": "degov_media_search_permissions",
+  "type": "drupal-module",
+  "description": ".",
+  "license": "GPL-2.0+",
+  "homepage": "https://www.nrwgov.org",
+  "require": {
+    "drupal/entity_reference_integrity": "^1.0"
+  }
+}
