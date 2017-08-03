@@ -2,22 +2,23 @@ langcode: de
 status: true
 dependencies:
   config:
+    - core.entity_form_mode.media.media_browser
     - entity_browser.browser.media_browser
-    - field.field.media.gallery.field_gallery_images
-    - field.field.media.gallery.field_gallery_sub_title
-    - field.field.media.gallery.field_gallery_text
-    - field.field.media.gallery.field_gallery_title
-    - field.field.media.gallery.field_include_search
-    - field.field.media.gallery.field_media_in_library
-    - field.field.media.gallery.field_tags
-    - media_entity.bundle.gallery
+    - field.field.media.citation.field_citation_date
+    - field.field.media.citation.field_citation_image
+    - field.field.media.citation.field_citation_text
+    - field.field.media.citation.field_citation_title
+    - field.field.media.citation.field_include_search
+    - field.field.media.citation.field_media_in_library
+    - field.field.media.citation.field_tags
+    - media_entity.bundle.citation
   enforced:
     module:
-      - degov_media_gallery
+      - degov_media_citation
   module:
+    - datetime
     - entity_browser
     - field_group
-    - text
     - workbench_moderation
 third_party_settings:
   field_group:
@@ -35,11 +36,28 @@ third_party_settings:
         direction: vertical
       label: Vertical
       region: content
+    group_common:
+      children:
+        - langcode
+        - field_tags
+        - field_include_search
+        - field_media_in_library
+      parent_name: group_vertical
+      weight: 13
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Common
+      region: content
     group_media:
       children:
-        - field_gallery_images
+        - field_citation_image
       parent_name: group_vertical
-      weight: 2
+      weight: 11
       format_type: tab
       format_settings:
         id: ''
@@ -51,11 +69,11 @@ third_party_settings:
       region: content
     group_description:
       children:
-        - field_gallery_title
-        - field_gallery_sub_title
-        - field_gallery_text
+        - field_citation_title
+        - field_citation_text
+        - field_citation_date
       parent_name: group_vertical
-      weight: 3
+      weight: 12
       format_type: tab
       format_settings:
         id: ''
@@ -65,32 +83,20 @@ third_party_settings:
         required_fields: true
       label: Description
       region: content
-    group_common:
-      children:
-        - langcode
-        - path
-        - field_tags
-        - field_include_search
-        - field_media_in_library
-      parent_name: group_vertical
-      weight: 4
-      format_type: tab
-      format_settings:
-        id: ''
-        classes: ''
-        formatter: closed
-        description: ''
-        required_fields: true
-      label: Common
-      region: content
-id: media.gallery.default
+id: media.citation.media_browser
 targetEntityType: media
-bundle: gallery
-mode: default
+bundle: citation
+mode: media_browser
 content:
-  field_gallery_images:
+  field_citation_date:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_citation_image:
     type: entity_browser_entity_reference
-    weight: 12
+    weight: 7
     settings:
       entity_browser: media_browser
       field_widget_display: rendered_entity
@@ -102,24 +108,16 @@ content:
       open: true
     region: content
     third_party_settings: {  }
-  field_gallery_sub_title:
-    weight: 11
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_gallery_text:
-    weight: 12
+  field_citation_text:
+    weight: 6
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
+    type: string_textarea
     region: content
-  field_gallery_title:
-    weight: 10
+  field_citation_title:
+    weight: 5
     settings:
       size: 60
       placeholder: ''
@@ -127,7 +125,7 @@ content:
     type: string_textfield
     region: content
   field_include_search:
-    weight: 7
+    weight: 4
     settings:
       display_label: true
     third_party_settings: {  }
@@ -137,21 +135,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 8
+    weight: 5
     third_party_settings: {  }
     region: content
   field_tags:
-    weight: 6
+    type: entity_reference_autocomplete
+    weight: 3
+    region: content
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   langcode:
     type: language_select
-    weight: 5
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
