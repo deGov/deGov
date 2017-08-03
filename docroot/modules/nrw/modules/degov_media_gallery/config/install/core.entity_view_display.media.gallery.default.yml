@@ -1,4 +1,4 @@
-langcode: de
+§§langcode: de
 status: true
 dependencies:
   config:
@@ -26,7 +26,7 @@ content:
     weight: 5
     label: above
     settings:
-      view_mode: slider_main_16_9
+      view_mode: default
       link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
