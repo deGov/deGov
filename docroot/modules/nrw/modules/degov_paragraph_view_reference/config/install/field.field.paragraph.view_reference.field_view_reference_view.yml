@@ -30,18 +30,5 @@ settings:
     page: 0
     feed: 0
     entity_browser: 0
-  preselect_views:
-    block_content: 0
-    contact_messages: 0
-    content: 0
-    content_recent: 0
-    files: 0
-    frontpage: 0
-    media: 0
-    moderation_history: 0
-    search: 0
-    taxonomy_term: 0
-    user_admin_people: 0
-    who_s_new: 0
-    who_s_online: 0
+  preselect_views: {  }
 field_type: viewsreference
