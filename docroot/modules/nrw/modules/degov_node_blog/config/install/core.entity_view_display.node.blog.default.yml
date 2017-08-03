@@ -80,3 +80,4 @@ hidden:
   langcode: true
   links: true
   shariff_field: true
+  workbench_moderation_control: true

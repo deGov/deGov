@@ -9,7 +9,6 @@ dependencies:
       - degov_node_normal_page
   module:
     - node
-    - taxonomy
     - user
 id: normal_page_latest_content
 label: 'Neuste Inhaltsseite'
