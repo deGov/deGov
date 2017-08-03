@@ -16,9 +16,10 @@ function degov_media_address_preprocess(&$variables, $hook, &$info) {
 }
 
 /**
- *
+ * Preprocess address media entity.
  */
 function degov_media_address_preprocess_media__address(&$variables) {
+  // Checj if the view mode is osm_map.
   if (!empty($variables['elements']['#view_mode']) && $variables['elements']['#view_mode'] == 'osm_map') {
     $address = $variables['media'];
     if ($address instanceof \Drupal\media_entity\MediaInterface) {
