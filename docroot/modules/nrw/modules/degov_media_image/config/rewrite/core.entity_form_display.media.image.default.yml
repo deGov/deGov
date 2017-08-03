@@ -13,12 +13,10 @@ dependencies:
     - field.field.media.image.field_media_in_library
     - field.field.media.image.field_tags
     - field.field.media.image.image
-    - image.style.crop_thumbnail
     - media_entity.bundle.image
   module:
     - datetime
     - field_group
-    - image_widget_crop
     - path
     - text
     - workbench_moderation
