@@ -4,9 +4,6 @@ dependencies:
   config:
     - field.storage.media.field_include_search
     - media_entity.bundle.gallery
-  enforced:
-    module:
-      - degov_media_gallery
 id: media.gallery.field_include_search
 field_name: field_include_search
 entity_type: media
