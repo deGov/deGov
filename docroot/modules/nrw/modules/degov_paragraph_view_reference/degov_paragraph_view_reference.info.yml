@@ -4,9 +4,11 @@ package: deGov
 type: module
 core: 8.x
 dependencies:
+  - degov_content_types_shared_fields
+  - degov_views_helper
   - field
+  - link
   - paragraphs
   - views
-  - degov_views_helper
+  - viewsreference
   - workbench_moderation
-  - degov_content_types_shared_fields

@@ -1,11 +1,11 @@
 langcode: de
 status: true
 dependencies:
+  config:
+    - media_entity.bundle.video
   enforced:
     module:
       - degov_media_video
-  config:
-    - media_entity.bundle.video
 id: media.video
 target_entity_type_id: media
 target_bundle: video

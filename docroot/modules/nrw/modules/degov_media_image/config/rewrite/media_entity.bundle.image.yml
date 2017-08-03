@@ -2,7 +2,6 @@ langcode: und
 status: true
 dependencies:
   module:
-    - crop
     - media_entity_image
     - workbench_moderation
 third_party_settings:

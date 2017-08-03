@@ -4,9 +4,7 @@ dependencies:
   config:
     - field.storage.media.field_include_search
     - media_entity.bundle.contact
-  module:
-    - degov_content_types_shared_fields
-  endforced:
+  enforced:
     module:
       - degov_media_contact
 id: media.contact.field_include_search

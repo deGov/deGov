@@ -4,9 +4,7 @@ dependencies:
   config:
     - field.storage.media.field_include_search
     - media_entity.bundle.citation
-  module:
-    - degov_content_types_shared_fields
-  endforced:
+  enforced:
     module:
       - degov_media_citation
 id: media.citation.field_include_search

@@ -1,8 +1,6 @@
 langcode: de
 status: true
 dependencies:
-  module:
-    - crop
   enforced:
     module:
       - degov_media_person

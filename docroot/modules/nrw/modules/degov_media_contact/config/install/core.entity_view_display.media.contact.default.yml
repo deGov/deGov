@@ -17,8 +17,8 @@ dependencies:
     module:
       - degov_media_contact
   module:
+    - degov_common
     - image
-    - user
 id: media.contact.default
 targetEntityType: media
 bundle: contact
@@ -99,7 +99,7 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  uid: true
   field_include_search: true
   field_media_in_library: true
   langcode: true
+  uid: true

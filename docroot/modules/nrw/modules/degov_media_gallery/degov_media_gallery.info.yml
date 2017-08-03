@@ -8,6 +8,7 @@ dependencies:
   - degov_content_types_shared_fields
   - entity_browser
   - field
+  - field_group
   - image
   - language
   - media_entity

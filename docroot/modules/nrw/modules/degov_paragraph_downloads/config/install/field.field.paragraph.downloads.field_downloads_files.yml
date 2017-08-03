@@ -1,13 +1,13 @@
 langcode: de
 status: true
 dependencies:
-  enforced:
-    module:
-      - degov_paragraph_downloads
   config:
     - field.storage.paragraph.field_downloads_files
     - media_entity.bundle.document
     - paragraphs.paragraphs_type.downloads
+  enforced:
+    module:
+      - degov_paragraph_downloads
 id: paragraph.downloads.field_downloads_files
 field_name: field_downloads_files
 entity_type: paragraph
