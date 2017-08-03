@@ -5,8 +5,12 @@ dependencies:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.webformular.field_sub_title
     - field.field.paragraph.webformular.field_title
+    - field.field.paragraph.webformular.field_title_link
     - field.field.paragraph.webformular.field_webform_form
     - paragraphs.paragraphs_type.webformular
+  enforced:
+    module:
+      - degov_paragraph_webformular
   module:
     - webform
 id: paragraph.webformular.preview
@@ -38,4 +42,5 @@ content:
     settings:
       label: '[webform:title] webform anschauen'
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_title_link: true
