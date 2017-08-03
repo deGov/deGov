@@ -4,7 +4,7 @@ dependencies:
   config:
     - field.storage.media.field_include_search
     - media_entity.bundle.video
-  endforced:
+  enforced:
     module:
       - degov_media_video
 id: media.video.field_include_search
