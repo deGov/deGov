@@ -1,0 +1,131 @@
+  .event__teaser{
+    &-date-left{
+      text-align: center;
+      font-size: 54px;
+      line-height: 43px;
+      color: $brand-primary;
+    } 
+    &__day-of-week{
+      font-weight: bold;
+      color: $brand-primary;
+      font-size: $font-size-base;
+    }
+    &__month{
+      font-weight: bold;
+      color: $brand-primary;
+      margin-bottom: $grid-gutter-width/8;
+      font-size: $font-size-h2;
+    }
+    h3{
+      font-weight: bold;
+    }
+    
+  }
+  .field--name-field-teaser-title{}
+
+/* Teaser & Latest mode */
+.teaser-latest-mode {
+  display: inline-block;
+  @include calc('width', '100% + 40px');
+  margin: 0 -20px;
+  padding: 0 20px 20px;
+  border-bottom: 1px solid $nrw-light;
+  color: $nrw-primary;
+  font-family: $font-family-sans-serif;
+  vertical-align: top;
+  @include smaller-than($screen-desktop) {
+    padding-bottom: 10px;
+  }
+  .teaser-latest__day {
+    float: left;
+    width: 17.75%;
+    padding: 5px 40px 40px 40px;
+    font-size: 54px;
+    text-align: right;
+    @include smaller-than($screen-desktop) {
+      width: 100%;
+      padding: 0;
+      text-align: left;
+    }
+  }
+  .teaser-latest__content {
+    float: left;
+    width: 82.25%;
+    padding: 20px 0;
+    @include smaller-than($screen-desktop) {
+      width: 100%;
+      padding: 0;
+    }
+    .teaser-latest__date {
+      font-weight: bold;
+    }
+    .teaser-latest__link {
+      a {
+        display: inline-block;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-size: $font-size-h2;
+        line-height: 30px;
+        font-weight: bold;
+      }
+    }
+
+    .teaser-latest__info {
+      display: inline-block;
+      width: 100%;
+    }
+    .teaser-latest__img {
+      float: left;
+      width: 120px;
+      padding-right: 20px;
+      .image {
+        margin: 0;
+        img { width: 100%; }
+      }
+    }
+    .teaser-latest__text {
+      float: left;
+      @include calc('width', '100% - 140px');
+    }
+
+    .teaser-latest__day-name {
+      font-size: $font-size-small;
+      font-weight: bold;
+    }
+    .teaser-latest__date-year {
+      display: inline-block;
+      font-size: $font-size-h3;
+      line-height: 20px;
+      font-weight: bold;
+    }
+    .teaser-latest__title {
+      font-size: $font-size-h6;
+      line-height: 21px;
+      font-weight: bold;
+    }
+  }
+}
+
+/* Latest mode */
+.latest-mode {
+  padding-bottom: 0;
+  border-bottom: none;
+  .teaser-latest__day {
+    padding: 0 20px 0 0;
+    font-size: 40px;
+    @include smaller-than($screen-desktop) {
+      width: 90px;
+      text-align: right;
+    }
+  }
+  .teaser-latest__date-year {
+    margin-bottom: 10px;
+  }
+  .teaser-latest__content {
+    padding: 12px 0;
+    @include smaller-than($screen-desktop) {
+      @include calc('width', '100% - 90px');
+    }
+  }
+}
