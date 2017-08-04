@@ -9,6 +9,7 @@ dependencies:
   - degov_node_event
   - degov_node_normal_page
   - degov_node_press
+  - degov_node_faq
   - degov_taxonomy_term_section
   - field
   - node
