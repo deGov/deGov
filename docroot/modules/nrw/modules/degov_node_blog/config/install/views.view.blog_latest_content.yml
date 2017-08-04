@@ -9,7 +9,6 @@ dependencies:
       - degov_node_blog
   module:
     - node
-    - taxonomy
     - user
 id: blog_latest_content
 label: 'Neuste Blogartikel'
