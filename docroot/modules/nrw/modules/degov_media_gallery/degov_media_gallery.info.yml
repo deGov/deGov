@@ -5,6 +5,7 @@ core: 8.x
 package: deGov
 dependencies:
   - degov_content_types_shared_fields
+  - degov_common
   - entity_browser
   - field
   - field_group
