@@ -14,11 +14,13 @@ dependencies:
     - field.field.node.blog.field_teaser_image
     - field.field.node.blog.field_teaser_text
     - field.field.node.blog.field_teaser_title
+    - image.style.large
     - node.type.blog
   enforced:
     module:
       - degov_node_blog
   module:
+    - media_entity
     - datetime
     - text
     - user
@@ -37,13 +39,13 @@ content:
       format_type: short
     third_party_settings: {  }
   field_teaser_image:
-    type: entity_reference_entity_view
+    type: media_thumbnail
     weight: 2
     region: content
     label: hidden
     settings:
-      link: true
-      view_mode: default
+      image_style: large
+      image_link: ''
     third_party_settings: {  }
   field_teaser_text:
     type: text_default

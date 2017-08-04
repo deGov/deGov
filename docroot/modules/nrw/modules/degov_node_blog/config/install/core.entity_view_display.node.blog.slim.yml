@@ -14,11 +14,13 @@ dependencies:
     - field.field.node.blog.field_teaser_image
     - field.field.node.blog.field_teaser_text
     - field.field.node.blog.field_teaser_title
+    - image.style.large
     - node.type.blog
   enforced:
     module:
       - degov_node_blog
   module:
+    - media_entity
     - text
     - user
 id: node.blog.slim
@@ -27,13 +29,13 @@ bundle: blog
 mode: slim
 content:
   field_teaser_image:
-    type: entity_reference_entity_view
+    type: media_thumbnail
     weight: 0
     region: content
     label: hidden
     settings:
-      view_mode: teaser_landscape_small_8_3
-      link: false
+      image_style: large
+      image_link: ''
     third_party_settings: {  }
   field_teaser_text:
     type: text_trimmed
