@@ -4,7 +4,6 @@ type: module
 core: 8.x
 package: deGov
 dependencies:
-  - crop
   - datetime
   - degov_common
   - degov_content_types_shared_fields

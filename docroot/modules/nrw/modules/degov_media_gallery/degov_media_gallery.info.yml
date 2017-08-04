@@ -4,7 +4,6 @@ type: module
 core: 8.x
 package: deGov
 dependencies:
-  - crop
   - degov_content_types_shared_fields
   - entity_browser
   - field

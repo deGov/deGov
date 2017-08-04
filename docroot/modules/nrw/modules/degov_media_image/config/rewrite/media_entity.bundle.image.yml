@@ -13,8 +13,6 @@ third_party_settings:
       - draft
       - needs_review
     default_moderation_state: draft
-  crop:
-    image_field: image
 id: image
 label: Image
 description: 'Locally hosted images.'

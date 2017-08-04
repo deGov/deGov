@@ -44,10 +44,10 @@ content:
     weight: 8
     label: hidden
     settings:
-      view_mode: teaser_landscape_2_1
+      image_style: large
       link: false
     third_party_settings: {  }
-    type: entity_reference_entity_view
+    type: media_thumbnail
     region: content
   field_contact_position:
     weight: 9
