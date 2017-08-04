@@ -49,6 +49,8 @@ function template_preprocess_degov_tweets(&$variables) {
     }
   }
   $variables['items'] = $items;
+  // Attach slider library.
+  $variables['#attached']['library'][] = 'degov_tweets/tweets_slider';
 }
 
 /**
