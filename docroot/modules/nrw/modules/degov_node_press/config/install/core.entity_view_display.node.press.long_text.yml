@@ -40,8 +40,8 @@ content:
     region: content
     label: hidden
     settings:
-      view_mode: teaser_squared_1_1
       link: false
+      view_mode: default
     third_party_settings: {  }
   field_teaser_text:
     type: text_trimmed
