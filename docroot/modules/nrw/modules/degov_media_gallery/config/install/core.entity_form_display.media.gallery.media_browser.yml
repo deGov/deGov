@@ -19,7 +19,6 @@ dependencies:
     - entity_browser
     - field_group
     - text
-    - path
     - workbench_moderation
 third_party_settings:
   field_group:

@@ -11,6 +11,7 @@ dependencies:
     - field.field.media.contact.field_include_search
     - field.field.media.contact.field_media_in_library
     - field.field.media.contact.field_tags
+    - image.style.large
     - image.style.thumbnail
     - media_entity.bundle.contact
   enforced:
@@ -19,6 +20,7 @@ dependencies:
   module:
     - degov_common
     - image
+    - media_entity
 id: media.contact.default
 targetEntityType: media
 bundle: contact
