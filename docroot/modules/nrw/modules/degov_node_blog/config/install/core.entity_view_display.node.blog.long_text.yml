@@ -29,13 +29,13 @@ bundle: blog
 mode: long_text
 content:
   field_teaser_image:
-    type: media_thumbnail
+    type: entity_reference_entity_view
     weight: 0
     region: content
     label: hidden
     settings:
-      image_style: large
-      image_link: ''
+      link: false
+      view_mode: default
     third_party_settings: {  }
   field_teaser_text:
     type: text_trimmed

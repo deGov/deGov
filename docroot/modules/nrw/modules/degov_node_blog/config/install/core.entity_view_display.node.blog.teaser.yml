@@ -39,13 +39,13 @@ content:
       format_type: short
     third_party_settings: {  }
   field_teaser_image:
-    type: media_thumbnail
-    weight: 2
+    type: entity_reference_entity_view
+    weight: 0
     region: content
     label: hidden
     settings:
-      image_style: large
-      image_link: ''
+      link: true
+      view_mode: default
     third_party_settings: {  }
   field_teaser_text:
     type: text_default

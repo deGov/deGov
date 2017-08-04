@@ -1,5 +1,4 @@
 content:
   field_teaser_image:
-    type: entity_reference_entity_view
     settings:
       view_mode: teaser_squared_1_1
