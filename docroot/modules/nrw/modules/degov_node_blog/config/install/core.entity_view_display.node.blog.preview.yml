@@ -14,13 +14,11 @@ dependencies:
     - field.field.node.blog.field_teaser_image
     - field.field.node.blog.field_teaser_text
     - field.field.node.blog.field_teaser_title
-    - image.style.large
     - node.type.blog
   enforced:
     module:
       - degov_node_blog
   module:
-    - media_entity
     - text
     - user
 id: node.blog.preview
