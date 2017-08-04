@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - entity_browser.browser.media_browser
+    - field.field.media.person.field_include_search
     - field.field.media.person.field_media_in_library
     - field.field.media.person.field_person_image
     - field.field.media.person.field_person_info
@@ -13,20 +14,83 @@ dependencies:
       - degov_media_person
   module:
     - entity_browser
-    - path
+    - field_group
     - text
     - workbench_moderation
+third_party_settings:
+  field_group:
+    group_vertical:
+      children:
+        - group_description
+        - group_media
+        - group_common
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: Vertical
+      region: content
+    group_common:
+      children:
+        - langcode
+        - field_tags
+        - field_include_search
+        - field_media_in_library
+        - path
+      parent_name: group_vertical
+      weight: 14
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Common
+      region: content
+    group_media:
+      children:
+        - field_person_image
+      parent_name: group_vertical
+      weight: 13
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Media
+      region: content
+    group_description:
+      children:
+        - field_person_info
+      parent_name: group_vertical
+      weight: 12
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Description
+      region: content
 id: media.person.default
 targetEntityType: media
 bundle: person
 mode: default
 content:
-  created:
-    type: datetime_timestamp
-    weight: 5
-    region: content
-    settings: {  }
+  field_include_search:
+    weight: 6
+    settings:
+      display_label: true
     third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_media_in_library:
     type: boolean_checkbox
     settings:
@@ -36,19 +100,20 @@ content:
     region: content
   field_person_image:
     type: entity_browser_entity_reference
-    weight: 1
+    weight: 2
     settings:
       entity_browser: media_browser
-      field_widget_display: label
+      field_widget_display: rendered_entity
       field_widget_edit: true
       field_widget_remove: true
-      open: true
       selection_mode: selection_append
-      field_widget_display_settings: {  }
+      field_widget_display_settings:
+        view_mode: thumbnail
+      open: true
     region: content
     third_party_settings: {  }
   field_person_info:
-    weight: 2
+    weight: 3
     settings:
       rows: 5
       placeholder: ''
@@ -57,7 +122,7 @@ content:
     region: content
   field_tags:
     type: entity_reference_autocomplete
-    weight: 6
+    weight: 5
     region: content
     settings:
       match_operator: CONTAINS
@@ -66,7 +131,7 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 3
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -84,13 +149,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  uid:
-    type: entity_reference_autocomplete
-    weight: 4
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    region: content
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  created: true
+  uid: true

@@ -17,10 +17,103 @@ dependencies:
       - degov_node_normal_page
   module:
     - entity_browser
+    - field_group
     - paragraphs
     - path
     - text
     - workbench_moderation
+third_party_settings:
+  field_group:
+    group_vertical:
+      children:
+        - group_preview
+        - group_common
+        - group_header
+        - group_righ
+        - group_content
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: Vertical
+      region: content
+    group_preview:
+      children:
+        - field_teaser_title
+        - field_teaser_text
+        - field_teaser_image
+      parent_name: group_vertical
+      weight: 14
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Preview
+      region: content
+    group_common:
+      children:
+        - field_tags
+        - langcode
+        - field_social_media
+      parent_name: group_vertical
+      weight: 15
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Common
+      region: content
+    group_content:
+      children:
+        - field_content_paragraphs
+      parent_name: group_vertical
+      weight: 18
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Content
+      region: content
+    group_righ:
+      children:
+        - field_sidebar_right_paragraphs
+      parent_name: group_vertical
+      weight: 17
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Right Sidebar'
+      region: content
+    group_header:
+      children:
+        - field_header_paragraphs
+      parent_name: group_vertical
+      weight: 16
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Header
+      region: content
 id: node.normal_page.default
 targetEntityType: node
 bundle: normal_page
@@ -28,12 +121,12 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   field_content_paragraphs:
-    weight: 5
+    weight: 3
     settings:
       title: Absatz
       title_plural: Paragraphs
@@ -45,7 +138,7 @@ content:
     type: entity_reference_paragraphs
     region: content
   field_header_paragraphs:
-    weight: 4
+    weight: 2
     settings:
       title: Absatz
       title_plural: Paragraphs
@@ -57,7 +150,7 @@ content:
     type: entity_reference_paragraphs
     region: content
   field_sidebar_right_paragraphs:
-    weight: 6
+    weight: 4
     settings:
       title: Absatz
       title_plural: Paragraphs
@@ -69,14 +162,14 @@ content:
     type: entity_reference_paragraphs
     region: content
   field_social_media:
-    weight: 26
+    weight: 7
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_tags:
-    weight: 7
+    weight: 5
     settings:
       match_operator: CONTAINS
       size: 60
@@ -86,19 +179,20 @@ content:
     region: content
   field_teaser_image:
     type: entity_browser_entity_reference
-    weight: 3
+    weight: 4
     settings:
       entity_browser: media_browser
-      field_widget_display: label
+      field_widget_display: rendered_entity
       field_widget_edit: true
       field_widget_remove: true
       open: true
       selection_mode: selection_append
-      field_widget_display_settings: {  }
+      field_widget_display_settings:
+        view_mode: thumbnail
     region: content
     third_party_settings: {  }
   field_teaser_text:
-    weight: 2
+    weight: 3
     settings:
       rows: 5
       placeholder: ''
@@ -106,7 +200,7 @@ content:
     type: text_textarea
     region: content
   field_teaser_title:
-    weight: 1
+    weight: 2
     settings:
       size: 60
       placeholder: ''
@@ -115,13 +209,13 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 8
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 13
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -129,14 +223,14 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 11
+    weight: 9
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 12
+    weight: 10
     region: content
     third_party_settings: {  }
   title:
@@ -149,7 +243,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 9
+    weight: 7
     settings:
       match_operator: CONTAINS
       size: 60

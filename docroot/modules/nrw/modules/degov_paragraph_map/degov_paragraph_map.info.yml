@@ -5,9 +5,12 @@ type: module
 core: 8.x
 dependencies:
   - degov_content_types_shared_fields
+  - degov_media_address
   - entity_browser
+  - entity_reference_display
   - field
+  - link
   - media_entity
+  - options
   - paragraphs
   - workbench_moderation
-  - degov_media_address

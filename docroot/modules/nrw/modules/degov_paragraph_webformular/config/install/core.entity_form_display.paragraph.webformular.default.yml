@@ -4,9 +4,14 @@ dependencies:
   config:
     - field.field.paragraph.webformular.field_sub_title
     - field.field.paragraph.webformular.field_title
+    - field.field.paragraph.webformular.field_title_link
     - field.field.paragraph.webformular.field_webform_form
     - paragraphs.paragraphs_type.webformular
+  enforced:
+    module:
+      - degov_paragraph_webformular
   module:
+    - link
     - webform
     - workbench_moderation
 id: paragraph.webformular.default
@@ -30,8 +35,16 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_webform_form:
+  field_title_link:
     weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_webform_form:
+    weight: 3
     settings:
       match_operator: CONTAINS
       size: 60

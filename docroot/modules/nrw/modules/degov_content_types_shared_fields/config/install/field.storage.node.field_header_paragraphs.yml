@@ -1,13 +1,13 @@
 langcode: de
 status: true
 dependencies:
+  enforced:
+    module:
+      - degov_content_types_shared_fields
   module:
     - entity_reference_revisions
     - node
     - paragraphs
-  enforced:
-   module:
-   - degov_content_types_shared_fields
 id: node.field_header_paragraphs
 field_name: field_header_paragraphs
 entity_type: node
@@ -16,7 +16,7 @@ settings:
   target_type: paragraph
 module: entity_reference_revisions
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

@@ -1,12 +1,12 @@
 langcode: de
 status: true
 dependencies:
+  enforced:
+    module:
+      - degov_content_types_shared_fields
   module:
     - media_entity
     - node
-  enforced:
-   module:
-   - degov_content_types_shared_fields
 id: node.field_teaser_image
 field_name: field_teaser_image
 entity_type: node

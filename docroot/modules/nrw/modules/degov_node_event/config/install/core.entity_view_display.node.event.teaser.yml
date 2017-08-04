@@ -6,7 +6,9 @@ dependencies:
     - field.field.node.event.field_content_paragraphs
     - field.field.node.event.field_event_date
     - field.field.node.event.field_event_location
+    - field.field.node.event.field_header_paragraphs
     - field.field.node.event.field_sidebar_right_paragraphs
+    - field.field.node.event.field_social_media
     - field.field.node.event.field_tags
     - field.field.node.event.field_teaser_image
     - field.field.node.event.field_teaser_text
@@ -17,6 +19,7 @@ dependencies:
       - degov_node_event
   module:
     - datetime
+    - degov_common
     - text
     - user
 id: node.event.teaser
@@ -34,12 +37,11 @@ content:
       date_format: 'd.m.Y h:i'
     third_party_settings: {  }
   field_tags:
-    type: entity_reference_label
+    type: taxonomy_term_search
     weight: 4
     region: content
     label: hidden
-    settings:
-      link: true
+    settings: {  }
     third_party_settings: {  }
   field_teaser_image:
     type: entity_reference_entity_view
@@ -66,9 +68,12 @@ content:
       link_to_entity: false
     third_party_settings: {  }
 hidden:
-  field_social_media: true
   field_content_paragraphs: true
   field_event_location: true
+  field_header_paragraphs: true
   field_sidebar_right_paragraphs: true
+  field_social_media: true
   langcode: true
   links: true
+  shariff_field: true
+  workbench_moderation_control: true

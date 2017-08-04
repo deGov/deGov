@@ -5,11 +5,8 @@ dependencies:
     module:
       - degov_media_video_upload
   module:
-    - crop
     - workbench_moderation
 third_party_settings:
-  crop:
-    image_field: null
   workbench_moderation:
     enabled: 0
     allowed_moderation_states:

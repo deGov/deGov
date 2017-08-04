@@ -7,6 +7,7 @@ dependencies:
   - degov_content_types_shared_fields
   - entity_browser
   - field
+  - link
   - media_entity
   - paragraphs
   - workbench_moderation

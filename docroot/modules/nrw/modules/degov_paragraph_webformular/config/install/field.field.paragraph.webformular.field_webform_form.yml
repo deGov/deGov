@@ -4,6 +4,9 @@ dependencies:
   config:
     - field.storage.paragraph.field_webform_form
     - paragraphs.paragraphs_type.webformular
+  enforced:
+    module:
+      - degov_paragraph_webformular
   module:
     - webform
 id: paragraph.webformular.field_webform_form

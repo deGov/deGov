@@ -1,0 +1,27 @@
+$tag-font-size: 12px;
+
+.tags {
+  position: relative;
+  padding-left: 25px;
+
+  &:before {
+    content: '\f02c';
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: FontAwesome;
+    color: $color-white;
+  }
+
+  .field--item {
+    display: inline-block;
+    margin-right: $padding-xs-horizontal;
+  }
+
+  .field--item, a {
+    font-size: $tag-font-size;
+    color: $color-white;
+    font-weight: normal;
+    text-decoration: $link-hover-decoration;
+  }
+}

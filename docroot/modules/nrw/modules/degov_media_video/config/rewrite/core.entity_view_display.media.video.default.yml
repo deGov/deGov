@@ -2,6 +2,7 @@ langcode: de
 status: true
 dependencies:
   config:
+    - field.field.media.video.field_include_search
     - field.field.media.video.field_media_in_library
     - field.field.media.video.field_tags
     - field.field.media.video.field_video_caption
@@ -24,12 +25,11 @@ content:
     type: string
     region: content
   field_tags:
-    type: entity_reference_label
+    type: taxonomy_term_search
     weight: 6
     region: content
     label: hidden
-    settings:
-      link: false
+    settings: {  }
     third_party_settings: {  }
   field_video_copyright:
     weight: 5
@@ -52,6 +52,7 @@ content:
     region: content
 hidden:
   created: true
+  field_include_search: true
   field_media_in_library: true
   langcode: true
   name: true

@@ -1,0 +1,68 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_paragraphs
+    - node.type.faq
+    - paragraphs.paragraphs_type.faq_list
+  enforced:
+    module:
+      - degov_node_faq
+  module:
+    - entity_reference_revisions
+id: node.faq.field_content_paragraphs
+field_name: field_content_paragraphs
+entity_type: node
+bundle: faq
+label: Inhaltsbereich
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      faq_list: faq_list
+    target_bundles_drag_drop:
+      downloads:
+        weight: 14
+        enabled: false
+      faq:
+        weight: 15
+        enabled: false
+      faq_list:
+        enabled: true
+        weight: 16
+      iframe:
+        weight: 17
+        enabled: false
+      image_header:
+        weight: 18
+        enabled: false
+      links:
+        weight: 19
+        enabled: false
+      media_reference:
+        weight: 20
+        enabled: false
+      node_reference:
+        weight: 21
+        enabled: false
+      slide:
+        weight: 22
+        enabled: false
+      slideshow:
+        weight: 23
+        enabled: false
+      text:
+        weight: 24
+        enabled: false
+      video_subtitle:
+        weight: 25
+        enabled: false
+      view_reference:
+        weight: 26
+        enabled: false
+field_type: entity_reference_revisions

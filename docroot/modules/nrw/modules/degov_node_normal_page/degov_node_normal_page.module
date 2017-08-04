@@ -1,6 +1,6 @@
 <?php
 
-use Drupal\degov_content_types_shared_fields\Common;
+use Drupal\degov_common\Common;
 
 /**
  * Implements hook_preprocess().
@@ -11,6 +11,6 @@ function degov_node_normal_page_preprocess(&$variables, $hook, &$info) {
     'module_name' => 'degov_node_normal_page',
     'entity_type' => 'node',
     'entity_bundles' => ['normal_page'],
-    'entity_view_modes' => ['teaser']
+    'entity_view_modes' => ['teaser', 'long_text', 'preview', 'slim', 'small_image']
   ]);
 }

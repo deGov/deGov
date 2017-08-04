@@ -6,6 +6,7 @@ dependencies:
     - field.field.media.citation.field_citation_image
     - field.field.media.citation.field_citation_text
     - field.field.media.citation.field_citation_title
+    - field.field.media.citation.field_include_search
     - field.field.media.citation.field_media_in_library
     - field.field.media.citation.field_tags
     - image.style.large
@@ -16,24 +17,14 @@ dependencies:
       - degov_media_citation
   module:
     - datetime
+    - degov_common
     - image
     - media_entity
-    - user
 id: media.citation.default
 targetEntityType: media
 bundle: citation
 mode: default
 content:
-  created:
-    label: hidden
-    type: timestamp
-    weight: 2
-    region: content
-    settings:
-      date_format: medium
-      custom_date_format: ''
-      timezone: ''
-    third_party_settings: {  }
   field_citation_date:
     weight: 7
     label: above
@@ -68,12 +59,11 @@ content:
     type: string
     region: content
   field_tags:
-    type: entity_reference_label
+    type: taxonomy_term_search
     weight: 8
     region: content
     label: hidden
-    settings:
-      link: false
+    settings: {  }
     third_party_settings: {  }
   name:
     label: hidden
@@ -92,13 +82,9 @@ content:
       image_link: ''
     region: content
     third_party_settings: {  }
-  uid:
-    label: hidden
-    type: author
-    weight: 1
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
+  created: true
+  field_include_search: true
   field_media_in_library: true
   langcode: true
+  uid: true

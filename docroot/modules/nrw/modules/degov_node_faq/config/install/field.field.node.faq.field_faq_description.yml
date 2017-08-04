@@ -1,0 +1,21 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_faq_description
+    - node.type.faq
+  enforced:
+    module:
+      - degov_node_faq
+id: node.faq.field_faq_description
+field_name: field_faq_description
+entity_type: node
+bundle: faq
+label: Beschreibung
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

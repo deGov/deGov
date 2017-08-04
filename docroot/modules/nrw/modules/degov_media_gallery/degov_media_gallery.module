@@ -5,7 +5,7 @@
  * Contains hooks and custom functionds for the degov_media_gallery module.
  */
 
-use Drupal\degov_content_types_shared_fields\Common;
+use Drupal\degov_common\Common;
 
 /**
  * Implements hook_preprocess().
@@ -27,11 +27,22 @@ function degov_media_gallery_preprocess_media(&$variables) {
   /** @var \Drupal\media_entity\Entity\Media $media */
   $media = $variables['elements']['#media'];
   if ($media->bundle() === 'gallery') {
+    /** @var \Drupal\Core\Entity\Entity\EntityViewDisplay $display */
     $display = \Drupal::entityTypeManager()
       ->getStorage('entity_view_display')
       ->load('media.gallery.default');
     $component = $display->getComponent('field_gallery_images');
     $component['settings']['view_mode'] = 'teaser_squared_1_1';
     $variables['content']['preview'] = $media->get('field_gallery_images')->view($component);
+    $variables['content']['totalImages'] = $media->get('field_gallery_images')->count();
+    /** @var \Drupal\Core\Field\Plugin\Field\FieldType\EntityReferenceItem $item */
+    foreach ($media->get('field_gallery_images') as $item) {
+      $uri = $item->entity->image->get(0)->entity->uri->value;
+      $variables['#attached']['drupalSettings']['degov_media_gallery']['imagesDownloadLinks'][] = [
+        'uri' => file_create_url($uri),
+        'width' => $item->entity->image->get(0)->width,
+        'height' => $item->entity->image->get(0)->height
+      ];
+    }
   }
 }

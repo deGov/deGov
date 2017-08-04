@@ -1,0 +1,16 @@
+<?php
+
+use Drupal\degov_common\Common;
+
+/**
+ * Implements hook_preprocess().
+ */
+function degov_taxonomy_term_section_preprocess(&$variables, $hook, &$info) {
+  // Add template suggestions and libraries implemented in this module.
+  Common::addThemeSuggestions($variables, $hook, $info, [
+    'module_name' => 'degov_taxonomy_term_section',
+    'entity_type' => 'taxonomy_term',
+    'entity_bundles' => ['section'],
+    'entity_view_modes' => [],
+  ]);
+}

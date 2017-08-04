@@ -1,0 +1,5 @@
+content:
+  field_citation_image:
+    settings:
+      view_mode: teaser_landscape_2_1
+    type: entity_reference_entity_view

@@ -4,6 +4,9 @@ dependencies:
   config:
     - field.storage.node.field_social_media
     - node.type.normal_page
+  enforced:
+    module:
+      - degov_node_normal_page
 id: node.normal_page.field_social_media
 field_name: field_social_media
 entity_type: node

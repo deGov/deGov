@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.slide.field_override_caption
     - field.field.paragraph.slide.field_slide_link
     - field.field.paragraph.slide.field_slide_media
     - field.field.paragraph.slide.field_slide_text
@@ -48,4 +49,5 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
-hidden: {  }
+hidden:
+  field_override_caption: true

@@ -1,11 +1,11 @@
 langcode: de
 status: true
 dependencies:
-  module:
-    - media_entity
   enforced:
     module:
       - degov_media_contact
+  module:
+    - media_entity
 id: media.field_contact_fax
 field_name: field_contact_fax
 entity_type: media

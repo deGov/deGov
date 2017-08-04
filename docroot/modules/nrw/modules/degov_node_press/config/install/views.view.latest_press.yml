@@ -3,11 +3,9 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.latest
-    - field.storage.node.field_press_date
     - field.storage.node.field_teaser_title
     - node.type.press
   module:
-    - datetime
     - node
     - user
 id: latest_press
@@ -57,6 +55,10 @@ display:
           offset: 0
       style:
         type: default
+        options:
+          row_class: row
+          default_row_class: true
+          uses_fields: false
       row:
         type: 'entity:node'
         options:
@@ -374,7 +376,6 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_press_date'
         - 'config:field.storage.node.field_teaser_title'
   latest_press:
     display_plugin: block
@@ -391,5 +392,4 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_press_date'
         - 'config:field.storage.node.field_teaser_title'

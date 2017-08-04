@@ -6,7 +6,9 @@ dependencies:
     - field.field.node.event.field_content_paragraphs
     - field.field.node.event.field_event_date
     - field.field.node.event.field_event_location
+    - field.field.node.event.field_header_paragraphs
     - field.field.node.event.field_sidebar_right_paragraphs
+    - field.field.node.event.field_social_media
     - field.field.node.event.field_tags
     - field.field.node.event.field_teaser_image
     - field.field.node.event.field_teaser_text
@@ -41,12 +43,15 @@ content:
       link_to_entity: false
     third_party_settings: {  }
 hidden:
-  field_social_media: true
   field_content_paragraphs: true
   field_event_location: true
+  field_header_paragraphs: true
   field_sidebar_right_paragraphs: true
+  field_social_media: true
   field_tags: true
   field_teaser_image: true
   field_teaser_text: true
   langcode: true
   links: true
+  shariff_field: true
+  workbench_moderation_control: true

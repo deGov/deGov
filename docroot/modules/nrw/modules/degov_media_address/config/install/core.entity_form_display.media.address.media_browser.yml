@@ -1,0 +1,187 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_browser
+    - field.field.media.address.field_address_address
+    - field.field.media.address.field_address_email
+    - field.field.media.address.field_address_fax
+    - field.field.media.address.field_address_location
+    - field.field.media.address.field_address_phone
+    - field.field.media.address.field_address_title
+    - field.field.media.address.field_include_search
+    - field.field.media.address.field_media_in_library
+    - field.field.media.address.field_tags
+    - media_entity.bundle.address
+  enforced:
+    module:
+      - degov_media_address
+  module:
+    - address
+    - field_group
+    - geofield
+    - workbench_moderation
+third_party_settings:
+  field_group:
+    group_vertical:
+      children:
+        - group_address
+        - group_contact_details
+        - group_common
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: Vertical
+      region: content
+    group_common:
+      children:
+        - langcode
+        - field_tags
+        - field_include_search
+        - field_media_in_library
+      parent_name: group_vertical
+      weight: 17
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Common
+      region: content
+    group_address:
+      children:
+        - field_address_address
+        - field_address_location
+      parent_name: group_vertical
+      weight: 15
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Address
+      region: content
+    group_contact_details:
+      children:
+        - field_address_title
+        - field_address_phone
+        - field_address_fax
+        - field_address_email
+      parent_name: group_vertical
+      weight: 16
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Contact details'
+      region: content
+_core:
+  default_config_hash: Fa5EMxJpGwuWAD5DL0J43ztiAOuo11EXG9vH4MsLZ-0
+id: media.address.media_browser
+targetEntityType: media
+bundle: address
+mode: media_browser
+content:
+  field_address_address:
+    weight: 3
+    settings:
+      default_country: DE
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_address_email:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_address_fax:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_address_location:
+    weight: 4
+    settings:
+      html5_geolocation: false
+    third_party_settings: {  }
+    type: geofield_latlon
+    region: content
+  field_address_phone:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_address_title:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_include_search:
+    weight: 21
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_media_in_library:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 22
+    third_party_settings: {  }
+    region: content
+  field_tags:
+    weight: 20
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  langcode:
+    type: language_select
+    weight: 19
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 23
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  uid: true

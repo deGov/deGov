@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * Set module weight.
+ */
+function degov_common_update_8001() {
+  module_set_weight('degov_common', 100);
+}

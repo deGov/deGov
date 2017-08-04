@@ -2,6 +2,7 @@ langcode: de
 status: true
 dependencies:
   config:
+    - field.field.media.video_upload.field_include_search
     - field.field.media.video_upload.field_media_in_library
     - field.field.media.video_upload.field_tags
     - field.field.media.video_upload.field_video_upload_caption
@@ -15,6 +16,7 @@ dependencies:
     module:
       - degov_media_video_upload
   module:
+    - degov_common
     - entity_reference_revisions
 id: media.video_upload.default
 targetEntityType: media
@@ -22,12 +24,11 @@ bundle: video_upload
 mode: default
 content:
   field_tags:
-    type: entity_reference_label
+    type: taxonomy_term_search
     weight: 3
     region: content
     label: hidden
-    settings:
-      link: false
+    settings: {  }
     third_party_settings: {  }
   field_video_upload_caption:
     type: string
@@ -56,6 +57,7 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_include_search: true
   field_media_in_library: true
   field_video_upload_mp4: true
   field_video_upload_preview: true

@@ -22,12 +22,11 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_tags:
-    type: entity_reference_label
+    type: taxonomy_term_search
     weight: 1
     region: content
     label: hidden
-    settings:
-      link: false
+    settings: {  }
     third_party_settings: {  }
 hidden:
   created: true

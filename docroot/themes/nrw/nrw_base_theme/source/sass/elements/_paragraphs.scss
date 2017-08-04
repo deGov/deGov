@@ -2,6 +2,7 @@
 .paragraph{
 	a{
 		font-weight: bold;
+		color: $brand-primary;
 	}
 }
 
@@ -12,6 +13,7 @@
 	margin: 0 -20px;
 	padding: 20px;
 	background: $nrw-light;
+	
 	@include smaller-than($screen-xs-max){
 		word-break: break-all;
 	}
@@ -55,6 +57,9 @@
 
 .content-header {
 	padding-bottom: $padding-base-vertical*3;
+	&__media {
+		margin: 0 $grid-gutter-width/-2;
+	}
 	&__text {
 		background: $brand-primary;
 		color: $color-white;
@@ -77,6 +82,16 @@
 			@include triangle-down;
 			bottom: -15px;
 			left: $grid-gutter-width/2;
+		}
+	}
+}
+
+@media(max-width: 720px){
+	.node-reference{
+		.small-image{
+			.teaser-image {
+				display: none;
+			}
 		}
 	}
 }

@@ -1,0 +1,27 @@
+<?php
+
+use Drupal\node\Entity\NodeType;
+
+/**
+ * Uninstall lightning_roles module and remove all roles that were created by it.
+ */
+function degov_users_roles_update_8002($sandbox) {
+  // Delete content roles for all existing node types.
+  $node_types = NodeType::loadMultiple();
+  array_walk($node_types, 'degov_delete_lightning_roles');
+
+  // Remove media roles created by lightning_media module.
+  $media_roles = ['media_creator', 'media_manager'];
+  foreach ($media_roles as $role_id) {
+    $role = \Drupal\user\Entity\Role::load($role_id);
+    if ($role) {
+      $role->delete();
+    }
+  }
+
+  /** @var \Drupal\Core\Extension\ModuleInstaller $module_installer */
+  $module_installer = \Drupal::service('module_installer');
+  // Uninstall the module, because we don't need it anymore.
+  $module_installer->uninstall(['lightning_roles']);
+  return t('Lightning roles and module were removed from the installation');
+}

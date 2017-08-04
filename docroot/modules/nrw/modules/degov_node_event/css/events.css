@@ -1,0 +1,4 @@
+.calendar-calendar .has-events {
+    text-decoration: underline;
+    cursor: pointer;
+}

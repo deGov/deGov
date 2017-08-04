@@ -1,0 +1,18 @@
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.image_header
+    - paragraphs.paragraphs_type.slideshow
+  module:
+    - entity_reference_revisions
+settings:
+  handler_settings:
+    target_bundles:
+      image_header: image_header
+      slideshow: slideshow
+    target_bundles_drag_drop:
+      image_header:
+        enabled: true
+        weight: 18
+      slideshow:
+        enabled: true
+        weight: 23

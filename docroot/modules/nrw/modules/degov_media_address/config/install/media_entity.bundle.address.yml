@@ -4,11 +4,6 @@ dependencies:
   enforced:
     module:
       - degov_media_address
-  module:
-    - crop
-third_party_settings:
-  crop:
-    image_field: null
 id: address
 label: Adresse
 description: 'Ein Media-Bundle für Adressen.'

@@ -8,6 +8,7 @@ dependencies:
     - field.field.media.address.field_address_location
     - field.field.media.address.field_address_phone
     - field.field.media.address.field_address_title
+    - field.field.media.address.field_include_search
     - field.field.media.address.field_media_in_library
     - field.field.media.address.field_tags
     - media_entity.bundle.address
@@ -16,6 +17,7 @@ dependencies:
       - degov_media_address
   module:
     - address
+    - degov_common
     - spamspan
 id: media.address.default
 targetEntityType: media
@@ -69,16 +71,16 @@ content:
     type: string
     region: content
   field_tags:
-    type: entity_reference_label
+    type: taxonomy_term_search
     weight: 5
     region: content
     label: hidden
-    settings:
-      link: false
+    settings: {  }
     third_party_settings: {  }
 hidden:
   created: true
   field_address_location: true
+  field_include_search: true
   field_media_in_library: true
   langcode: true
   name: true

@@ -1,0 +1,10 @@
+{
+  "name": "degov_workbench_access",
+  "type": "drupal-module",
+  "description": "Adds base configuration for the Workbench Access module.",
+  "license": "GPL-2.0+",
+  "homepage": "https://www.degov.org",
+  "require": {
+    "drupal/workbench_access": "^1.0"
+  }
+}

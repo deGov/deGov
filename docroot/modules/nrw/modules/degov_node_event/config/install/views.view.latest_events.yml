@@ -5,7 +5,6 @@ dependencies:
     - core.entity_view_mode.node.latest
     - node.type.event
   module:
-    - datetime
     - node
     - user
 id: latest_events
@@ -55,6 +54,10 @@ display:
           offset: 0
       style:
         type: default
+        options:
+          row_class: row
+          default_row_class: true
+          uses_fields: false
       row:
         type: 'entity:node'
         options:

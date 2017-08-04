@@ -4,14 +4,17 @@ dependencies:
   config:
     - entity_browser.browser.media_browser
     - field.field.paragraph.map.field_map_address_reference
+    - field.field.paragraph.map.field_map_address_view_mode
     - field.field.paragraph.map.field_sub_title
     - field.field.paragraph.map.field_title
+    - field.field.paragraph.map.field_title_link
     - paragraphs.paragraphs_type.map
   enforced:
     module:
       - degov_paragraph_map
   module:
     - entity_browser
+    - link
     - workbench_moderation
 id: paragraph.map.default
 targetEntityType: paragraph
@@ -20,7 +23,7 @@ mode: default
 content:
   field_map_address_reference:
     type: entity_browser_entity_reference
-    weight: 8
+    weight: 9
     settings:
       entity_browser: media_browser
       field_widget_display: rendered_entity
@@ -32,6 +35,12 @@ content:
       open: true
     region: content
     third_party_settings: {  }
+  field_map_address_view_mode:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_sub_title:
     weight: 7
     settings:
@@ -47,6 +56,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_title_link:
+    weight: 8
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
     region: content
 hidden:
   created: true
