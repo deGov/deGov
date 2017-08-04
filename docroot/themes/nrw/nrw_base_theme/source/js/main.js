@@ -2,7 +2,6 @@
 
 /* eslint-disable no-unused-vars, lines-around-comment*/
 const Bootstrap = require('bootstrap-sass');
-const Slick = require('slick-carousel');
 /* eslint-enable no-unused-vars, lines-around-comment */
 
 const PhotoSwipe = require('photoswipe');
@@ -136,35 +135,6 @@ const PhotoSwipeUiDefault = require('photoswipe/dist/photoswipe-ui-default');
     }
   };
 
-  Drupal.behaviors.sliderParagraph = {
-    attach: function (context, settings) {
-      $(context).find('.banner-wrapper').once('slider-paragraph-frontpage').each(function () {
-        const $slider = $(this);
-        $slider.slick({
-          arrows: false
-        });
-
-        // arrows are within the slide, which is why we need to hook them up to
-        // the slick nav methods
-        $slider.find('.inslide-slider-prev').click(function () {
-          $slider.slick('slickPrev');
-        });
-        $slider.find('.inslide-slider-next').click(function () {
-          $slider.slick('slickNext');
-        });
-      });
-
-      $('.slick__pause').on('click', function () {
-        $('.slideshow__slides').slick('slickPause');
-        $(this).hide().siblings('.slick__play').show();
-      });
-      $('.slick__play').on('click', function () {
-        $('.slideshow__slides').slick('slickPlay');
-        $(this).hide().siblings('.slick__pause').show();
-      });
-    }
-  };
-
   // language selector
   Drupal.behaviors.languageSelector = {
     attach: function (context, settings) {
@@ -256,60 +226,6 @@ const PhotoSwipeUiDefault = require('photoswipe/dist/photoswipe-ui-default');
         $('i', this).click(function () {
           $(this).siblings('.form-date').focus();
         });
-      });
-    }
-  };
-
-  // Slick slider in press list
-  Drupal.behaviors.slickPress = {
-    attach: function (context, settings) {
-      $('.view-latest-press .view-content').slick({
-        dots: true,
-        infinite: false,
-        speed: 300,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        responsive: [
-          {
-            breakpoint: 992,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
-        ]
-      });
-    }
-  };
-
-  // Slick slider in Twitter block
-  Drupal.behaviors.slickTweets = {
-    attach: function (context, settings) {
-      $('.tweets-slideshow .tweets').slick({
-        dots: true,
-        infinite: false,
-        speed: 300,
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        autoplay: true,
-        responsive: [
-          {
-            breakpoint: 720,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
-        ]
-      });
-
-      $('.slick__pause').on('click', function () {
-        $('.tweets__slides').slick('slickPause');
-        $(this).hide().siblings('.slick__play').show();
-      });
-      $('.slick__play').on('click', function () {
-        $('.tweets__slides').slick('slickPlay');
-        $(this).hide().siblings('.slick__pause').show();
       });
     }
   };
