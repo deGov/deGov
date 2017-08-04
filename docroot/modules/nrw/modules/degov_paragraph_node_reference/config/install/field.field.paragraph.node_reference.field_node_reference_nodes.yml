@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_node_reference_nodes
-    - node.type.normal_page
     - paragraphs.paragraphs_type.node_reference
   enforced:
     module:
