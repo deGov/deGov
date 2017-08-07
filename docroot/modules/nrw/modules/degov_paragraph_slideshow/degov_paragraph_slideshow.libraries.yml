@@ -3,7 +3,7 @@ slideshow:
   js:
     js/slideshow.js: {}
   css:
-    custom:
+    theme:
       css/slideshow.css: {}
   dependencies:
     - degov_common/slick
