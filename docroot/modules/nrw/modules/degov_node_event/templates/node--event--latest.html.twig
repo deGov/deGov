@@ -1,20 +1,13 @@
 {#
 /**
  * @file
- * Bartik's theme implementation to display a node.
+ * Theme override to display a node.
  *
  * Available variables:
  * - node: The node entity with limited access to object properties and methods.
- *   Only method names starting with "get", "has", or "is" and a few common
- *   methods such as "id", "label", and "bundle" are available. For example:
- *   - node.getCreatedTime() will return the node creation timestamp.
- *   - node.hasField('field_example') returns TRUE if the node bundle includes
- *     field_example. (This does not indicate the presence of a value in this
- *     field.)
- *   - node.isPublished() will return whether the node is published or not.
- *   Calling other methods, such as node.delete(), will result in an exception.
- *   See \Drupal\node\Entity\Node for a full list of public properties and
- *   methods for the node object.
+     Only "getter" methods (method names starting with "get", "has", or "is")
+     and a few common methods such as "id" and "label" are available. Calling
+     other methods (such as node.delete) will result in an exception.
  * - label: The title of the node.
  * - content: All node items. Use {{ content }} to print them all,
  *   or print a subset such as {{ content.field_example }}. Use
@@ -63,40 +56,52 @@
  * - is_admin: Flag for admin user status. Will be true when the current user
  *   is an administrator.
  *
+ * @ingroup templates
+ *
  * @see template_preprocess_node()
+ *
+ * @todo Remove the id attribute (or make it a class), because if that gets
+ *   rendered twice on a page this is invalid CSS for example: two lists
+ *   in different view modes.
  */
 #}
+ 
 {%
   set classes = [
-    'teaser-latest-mode latest-mode node',
-    'node--type-' ~ node.bundle|clean_class,
-    node.isPromoted() ? 'node--promoted',
-    node.isSticky() ? 'node--sticky',
-    not node.isPublished() ? 'node--unpublished',
-    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'event__teaser',
+    node.bundle|clean_class,
+    node.isPromoted() ? 'is-promoted',
+    node.isSticky() ? 'is-sticky',
+    not node.isPublished() ? 'is-unpublished',
+    view_mode ? view_mode|clean_class,
     'clearfix',
   ]
 %}
 
-
 <article{{ attributes.addClass(classes) }}>
-  {{ title_prefix }}
   {{ title_suffix }}
 
-  <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
-
-    {% if node.field_event_date.value %}
-      <div class="teaser-latest__day">{{ node.field_event_date.value|date('d') }}</div>
-      {#{ node.field_event_date.value|date('h:i') }#}
-    {% endif %}
-
-    <div class="teaser-latest__content">
-      {% if node.field_event_date.value %}
-        <div class="teaser-latest__day-name"{{ content.field_event_date|quickedit_attr }}>{{ node.field_event_date.value|date('l') }}</div>
-        <div class="teaser-latest__date-year">{{ node.field_event_date.value|date('F Y') }}</div>
-      {% endif %}
-      <div class="teaser-latest__title"{{ content.field_teaser_title|quickedit_attr }}> <a href="{{ url }}">{{ content.field_teaser_title|field_value }}</a></div>
-    </div>
+  <!-- teaser image -->
+  <div class="event__latest-date-left teaser-date col-xs-5 col-sm-4 col-md-3 arrow">
+    <div class="event__latest__day">{{ node.field_event_date.value|date('d') }}</div>
   </div>
 
+  <div class="event__latest-content teaser-content col-xs-7 col-sm-8 col-md-9"> <!-- from medium screen up, show on the right sidebar -->
+    <!-- teaser date -->
+    {% if content.field_event_date %}
+      <div class="event__latest-date" {{ content.field_event_date|quickedit_attr }}>
+        <div class="event__latest__day-of-week">{{ node.field_event_date.value|date('l') }}</div>
+        <div class="event__latest__month">{{ node.field_event_date.value|date('F') }} {{ node.field_event_date.value|date('Y') }}</div>
+      </div>
+    {% endif %}
+
+    <!-- teaser title -->
+    {% if content.field_teaser_title %}
+      <a href="{{ url }}" rel="bookmark">
+        <div class="event__latest-title teaser-title">
+        <h3 {{ content.field_teaser_title|quickedit_attr }}>{{ content.field_teaser_title }}</h3>
+        </div>
+      </a>
+    {% endif %}
+  </div>
 </article>

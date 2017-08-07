@@ -78,7 +78,19 @@
   ]
 %}
 
+{% if content.field_teaser_image %}
+  {% set class_sidebar = 'col-sm-3'  %}
+  {% set class_content = 'col-sm-9' %}
+  
+{% else %}
+  {%  set class_sidebar = 'invisible' %}
+  {%  set class_content = 'col-sm-12' %}
+{% endif %}
+
+
 <article{{ attributes.addClass(classes) }}>
+  {{ title_suffix }}
+
   <!-- teaser image -->
   <div class="event__teaser-date-left teaser-date col-xs-5 col-sm-4 col-md-3 arrow">
     <div class="event__teaser__day">{{ node.field_event_date.value|date('d') }}</div>
@@ -86,10 +98,12 @@
 
   <div class="event__teaser-content teaser-content col-xs-7 col-sm-8 col-md-9"> <!-- from medium screen up, show on the right sidebar -->
     <!-- teaser date -->
+    {% if content.field_tags %}
+      {{ content.field_tags }}
+    {% endif %}
     {% if content.field_event_date %}
-      <div class="event__teaser-date">
-        <div class="event__teaser__day-of-week">{{ node.field_event_date.value|date('l') }}</div>
-        <div class="event__teaser__month">{{ node.field_event_date.value|date('F') }} {{ node.field_event_date.value|date('Y') }}</div>
+      <div class="event__teaser__month"{{ content.field_event_date|quickedit_attr }}>
+        {{ content.field_event_date|field_value }}
       </div>
     {% endif %}
 
@@ -97,16 +111,24 @@
     {% if content.field_teaser_title %}
       <a href="{{ url }}" rel="bookmark">
         <div class="event__teaser-title teaser-title">
-        <h3>{{ content.field_teaser_title }}</h3>
+        <h3 {{ content.field_teaser_title|quickedit_attr }}>{{ content.field_teaser_title }}</h3>
         </div>
       </a>
     {% endif %}
-
-    <!-- Teaser text -->
-    {% if content.field_teaser_text %}
-      <div class="event__teaser-text">
-        {{ content.field_teaser_text }}
-      </div>
-    {% endif %}
+    <div class="row">
+      {% if content.field_teaser_image %}
+        <div class="event__teaser__img {{ class_sidebar }}"{{ content.field_teaser_image|quickedit_attr }}>
+          <a href="{{ url }}" rel="bookmark">
+            {{ content.field_teaser_image|field_value }}
+          </a>
+        </div>
+      {% endif %}
+      <!-- Teaser text -->
+      {% if content.field_teaser_text %}
+        <div class="event__teaser-text {{ class_content }}"{{ content.field_teaser_text|quickedit_attr }}>
+          {{ content.field_teaser_text }}
+        </div>
+      {% endif %}
+    </div>
   </div>
 </article>

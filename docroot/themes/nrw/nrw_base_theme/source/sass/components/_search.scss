@@ -106,6 +106,7 @@
       color: $color-white;
       font-size: $font-size-h2;
       padding: 9px;
+      cursor: pointer;
     }
   }
   input{
@@ -142,6 +143,19 @@
       color: $color-white;
       line-height: 1.6;
       margin-left: $padding-base-horizontal/3;
+    }
+  }
+}
+
+.view-search-content{
+  .views-row{
+    margin-bottom: $grid-gutter-width/2;
+    padding: $grid-gutter-width/2 0;
+    &:nth-child(odd){
+      background-color: rgba($brand-primary, 0.2);
+    }
+    h3{
+      font-weight: bold; 
     }
   }
 }
