@@ -17,6 +17,7 @@ dependencies:
       - degov_media_address
   module:
     - address
+    - degov_common
     - spamspan
 id: media.address.default
 targetEntityType: media

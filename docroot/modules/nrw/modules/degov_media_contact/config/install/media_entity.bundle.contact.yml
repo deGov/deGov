@@ -4,11 +4,6 @@ dependencies:
   enforced:
     module:
       - degov_media_contact
-  module:
-    - crop
-third_party_settings:
-  crop:
-    image_field: null
 id: contact
 label: Kontakt
 description: 'Dient der Erstellung einer Kontaktperson/-stelle.'

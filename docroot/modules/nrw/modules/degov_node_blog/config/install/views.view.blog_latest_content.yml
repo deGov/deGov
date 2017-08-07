@@ -8,9 +8,7 @@ dependencies:
     module:
       - degov_node_blog
   module:
-    - datetime
     - node
-    - taxonomy
     - user
 id: blog_latest_content
 label: 'Neuste Blogartikel'

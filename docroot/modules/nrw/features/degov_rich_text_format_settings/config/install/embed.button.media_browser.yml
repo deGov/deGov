@@ -1,8 +1,6 @@
 langcode: de
 status: true
 dependencies:
-  content:
-    - 'file:file:45927269-657e-487b-9fd4-ca7071cb6510'
   module:
     - entity_embed
     - media_entity

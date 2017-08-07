@@ -6,6 +6,7 @@ dependencies:
     - field.field.paragraph.downloads.field_downloads_files
     - field.field.paragraph.downloads.field_sub_title
     - field.field.paragraph.downloads.field_title
+    - field.field.paragraph.downloads.field_title_link
     - paragraphs.paragraphs_type.downloads
   enforced:
     module:
@@ -39,4 +40,5 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-hidden: {  }
+hidden:
+  field_title_link: true

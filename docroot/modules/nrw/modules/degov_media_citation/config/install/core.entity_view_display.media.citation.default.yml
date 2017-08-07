@@ -17,9 +17,9 @@ dependencies:
       - degov_media_citation
   module:
     - datetime
+    - degov_common
     - image
     - media_entity
-    - user
 id: media.citation.default
 targetEntityType: media
 bundle: citation
@@ -83,8 +83,8 @@ content:
     region: content
     third_party_settings: {  }
 hidden:
-  uid: true
   created: true
   field_include_search: true
   field_media_in_library: true
   langcode: true
+  uid: true

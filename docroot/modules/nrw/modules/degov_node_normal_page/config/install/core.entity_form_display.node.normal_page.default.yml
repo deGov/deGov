@@ -26,8 +26,8 @@ third_party_settings:
   field_group:
     group_vertical:
       children:
-        - group_common
         - group_preview
+        - group_common
         - group_header
         - group_righ
         - group_content
@@ -43,8 +43,8 @@ third_party_settings:
     group_preview:
       children:
         - field_teaser_title
-        - field_teaser_image
         - field_teaser_text
+        - field_teaser_image
       parent_name: group_vertical
       weight: 14
       format_type: tab
@@ -188,7 +188,7 @@ content:
       open: true
       selection_mode: selection_append
       field_widget_display_settings:
-        view_mode: embedded
+        view_mode: thumbnail
     region: content
     third_party_settings: {  }
   field_teaser_text:

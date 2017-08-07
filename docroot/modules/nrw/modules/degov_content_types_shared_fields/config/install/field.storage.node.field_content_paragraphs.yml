@@ -1,13 +1,13 @@
 langcode: de
 status: true
 dependencies:
+  enforced:
+    module:
+      - degov_content_types_shared_fields
   module:
     - entity_reference_revisions
     - node
     - paragraphs
-  enforced:
-   module:
-   - degov_content_types_shared_fields
 id: node.field_content_paragraphs
 field_name: field_content_paragraphs
 entity_type: node

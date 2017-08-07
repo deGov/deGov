@@ -1,12 +1,12 @@
 langcode: de
 status: true
 dependencies:
-  module:
-    - link
-    - paragraphs
   enforced:
     module:
       - degov_paragraph_links
+  module:
+    - link
+    - paragraphs
 id: paragraph.field_links_links
 field_name: field_links_links
 entity_type: paragraph

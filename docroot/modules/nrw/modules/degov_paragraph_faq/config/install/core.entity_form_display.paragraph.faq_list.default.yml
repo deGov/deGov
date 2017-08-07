@@ -11,6 +11,7 @@ dependencies:
     module:
       - degov_paragraph_faq
   module:
+    - link
     - paragraphs
     - workbench_moderation
 id: paragraph.faq_list.default

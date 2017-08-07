@@ -1,12 +1,12 @@
 langcode: de
 status: true
 dependencies:
-  module:
-    - media_entity
-    - text
   enforced:
     module:
       - degov_media_person
+  module:
+    - media_entity
+    - text
 id: media.field_person_info
 field_name: field_person_info
 entity_type: media

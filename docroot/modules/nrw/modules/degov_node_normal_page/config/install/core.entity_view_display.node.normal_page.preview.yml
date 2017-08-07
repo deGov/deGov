@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.normal_page.field_content_paragraphs
     - field.field.node.normal_page.field_header_paragraphs
     - field.field.node.normal_page.field_sidebar_right_paragraphs
+    - field.field.node.normal_page.field_social_media
     - field.field.node.normal_page.field_tags
     - field.field.node.normal_page.field_teaser_image
     - field.field.node.normal_page.field_teaser_text
@@ -28,8 +29,8 @@ content:
     region: content
     label: hidden
     settings:
-      view_mode: teaser_squared_1_1
       link: false
+      view_mode: default
     third_party_settings: {  }
   field_teaser_text:
     type: text_trimmed
@@ -51,6 +52,9 @@ hidden:
   field_content_paragraphs: true
   field_header_paragraphs: true
   field_sidebar_right_paragraphs: true
+  field_social_media: true
   field_tags: true
   langcode: true
   links: true
+  shariff_field: true
+  workbench_moderation_control: true

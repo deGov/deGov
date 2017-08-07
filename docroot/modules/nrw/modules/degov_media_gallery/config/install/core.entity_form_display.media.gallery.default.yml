@@ -9,6 +9,7 @@ dependencies:
     - field.field.media.gallery.field_gallery_title
     - field.field.media.gallery.field_include_search
     - field.field.media.gallery.field_media_in_library
+    - field.field.media.gallery.field_tags
     - media_entity.bundle.gallery
   enforced:
     module:
@@ -16,7 +17,6 @@ dependencies:
   module:
     - entity_browser
     - field_group
-    - path
     - text
     - workbench_moderation
 third_party_settings:
@@ -69,6 +69,7 @@ third_party_settings:
       children:
         - langcode
         - path
+        - field_tags
         - field_include_search
         - field_media_in_library
       parent_name: group_vertical
@@ -138,6 +139,15 @@ content:
       display_label: true
     weight: 8
     third_party_settings: {  }
+    region: content
+  field_tags:
+    weight: 6
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   langcode:
     type: language_select

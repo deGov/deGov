@@ -7,6 +7,7 @@ dependencies:
     - field.field.paragraph.media_reference.field_override_caption
     - field.field.paragraph.media_reference.field_sub_title
     - field.field.paragraph.media_reference.field_title
+    - field.field.paragraph.media_reference.field_title_link
     - paragraphs.paragraphs_type.media_reference
   enforced:
     module:
@@ -49,4 +50,5 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-hidden: {  }
+hidden:
+  field_title_link: true

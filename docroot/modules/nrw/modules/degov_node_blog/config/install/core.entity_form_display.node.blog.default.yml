@@ -173,7 +173,7 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_header_paragraphs:
+  field_content_paragraphs:
     weight: 8
     settings:
       title: Absatz
@@ -185,7 +185,7 @@ content:
     third_party_settings: {  }
     type: entity_reference_paragraphs
     region: content
-  field_content_paragraphs:
+  field_header_paragraphs:
     weight: 8
     settings:
       title: Absatz

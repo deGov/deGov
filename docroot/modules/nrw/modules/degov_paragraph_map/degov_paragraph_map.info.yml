@@ -9,6 +9,7 @@ dependencies:
   - entity_browser
   - entity_reference_display
   - field
+  - link
   - media_entity
   - options
   - paragraphs
