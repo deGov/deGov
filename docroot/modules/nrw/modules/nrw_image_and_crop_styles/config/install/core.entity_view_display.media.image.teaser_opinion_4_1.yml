@@ -12,8 +12,14 @@ dependencies:
     - field.field.media.image.field_image_width
     - field.field.media.image.field_media_in_library
     - field.field.media.image.image
+    - image.style.teaser_opinion_4_1_480
+    - image.style.teaser_opinion_4_1_960
+    - image.style.teaser_opinion_4_1_1280
     - media_entity.bundle.image
     - responsive_image.styles.teaser_opinion
+  enforced:
+    module:
+      - nrw_image_and_crop_styles
   module:
     - datetime
     - responsive_image

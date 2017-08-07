@@ -1,6 +1,9 @@
 langcode: de
 status: true
 dependencies:
+  enforced:
+    module:
+      - nrw_image_and_crop_styles
   module:
     - crop
 name: teaser_opinion_4_1_480
