@@ -5,6 +5,6 @@
   "license": "GPL-2.0+",
   "homepage": "https://www.degov.org",
   "require": {
-    "drupal/simplenews": "^1.0@alpha"
+    "drupal/simplenews": "^1.0"
   }
 }
