@@ -175,6 +175,10 @@
             "drupal/core": {
                 "2893029 - StringTranslationTrait consumers cannot be reliably serialized without DependencySerializationTrait":
                 "https://www.drupal.org/files/issues/2893029-full-fix-test-from-3.patch"
+            },
+            "drupal/paragraphs" : {
+                "2788607 - Empty required fields not providing meaningful error messages" :
+                "https://www.drupal.org/files/issues/empty_required_fields-2788607-81.patch"
             }
         },
         "merge-plugin": {
