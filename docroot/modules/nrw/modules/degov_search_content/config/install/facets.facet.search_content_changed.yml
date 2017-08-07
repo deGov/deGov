@@ -18,7 +18,7 @@ show_only_one_result: false
 field_identifier: changed
 facet_source_id: 'search_api:views_page__search_content__page_1'
 widget:
-  type: datebasic
+  type: degov_date_range_picker
   config:
     show_numbers: true
     display_relative: false

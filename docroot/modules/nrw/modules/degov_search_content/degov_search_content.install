@@ -7,3 +7,15 @@ function degov_search_content_install() {
   // Flush plugin caches so our facets will be shown.
   \Drupal::service('plugin.cache_clearer')->clearCachedDefinitions();
 }
+
+/**
+ * Add fruit to the default configuration for example.module.
+ */
+function degov_search_content_update_8001() {
+  $config_factory = \Drupal::configFactory();
+  $config = $config_factory->getEditable('facets.facet.search_content_changed');
+  $widget = $config->get('widget');
+  $widget['type'] = 'degov_date_range_picker';
+  $config->set('widget', $widget);
+  $config->save(TRUE);
+}
