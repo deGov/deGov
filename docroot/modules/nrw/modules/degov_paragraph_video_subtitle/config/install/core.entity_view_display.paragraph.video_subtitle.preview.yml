@@ -1,0 +1,62 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.video_subtitle.field_subtitle_default
+    - field.field.paragraph.video_subtitle.field_subtitle_file
+    - field.field.paragraph.video_subtitle.field_subtitle_kind
+    - field.field.paragraph.video_subtitle.field_subtitle_label
+    - field.field.paragraph.video_subtitle.field_subtitle_lang
+    - paragraphs.paragraphs_type.video_subtitle
+  enforced:
+    module:
+      - degov_paragraph_video_subtitle
+  module:
+    - file
+    - options
+id: paragraph.video_subtitle.preview
+targetEntityType: paragraph
+bundle: video_subtitle
+mode: preview
+content:
+  field_subtitle_default:
+    type: boolean
+    weight: 3
+    region: content
+    label: inline
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+  field_subtitle_file:
+    type: file_url_plain
+    weight: 2
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_subtitle_kind:
+    type: list_default
+    weight: 1
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_subtitle_label:
+    type: string
+    weight: 0
+    region: content
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_subtitle_lang:
+    type: list_default
+    weight: 4
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

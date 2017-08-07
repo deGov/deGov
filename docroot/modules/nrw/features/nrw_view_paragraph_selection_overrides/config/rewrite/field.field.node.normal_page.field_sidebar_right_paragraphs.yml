@@ -1,0 +1,53 @@
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.downloads
+    - paragraphs.paragraphs_type.iframe
+    - paragraphs.paragraphs_type.links
+    - paragraphs.paragraphs_type.node_reference
+    - paragraphs.paragraphs_type.map
+    - paragraphs.paragraphs_type.media_reference
+    - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.view_reference
+    - paragraphs.paragraphs_type.webformular
+  module:
+    - entity_reference_revisions
+settings:
+  handler_settings:
+    target_bundles:
+      downloads: downloads
+      iframe: iframe
+      links: links
+      node_reference: node_reference
+      map: map
+      media_reference: media_reference
+      text: text
+      view_reference: view_reference
+      webformular: webformular
+    target_bundles_drag_drop:
+      text:
+        weight: -27
+        enabled: true
+      node_reference:
+        weight: -26
+        enabled: true
+      view_reference:
+        weight: -25
+        enabled: true
+      media_reference:
+        enabled: true
+        weight: -24
+      downloads:
+        enabled: true
+        weight: -19
+      iframe:
+        enabled: true
+        weight: -18
+      links:
+        enabled: true
+        weight: -16
+      map:
+        weight: -14
+        enabled: true
+      webformular:
+        weight: -13
+        enabled: true

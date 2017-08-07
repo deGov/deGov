@@ -1,0 +1,10 @@
+services:
+  degov_users_roles.access_checker:
+    class: Drupal\degov_users_roles\Access\UserEditAccessCheck
+    arguments: ['@current_user']
+    tags:
+      - { name: access_check, applies_to: _degov_role_access }
+  degov_users_roles.route_subscriber:
+    class: '\Drupal\degov_users_roles\Routing\RouteSubscriber'
+    tags:
+      - { name: 'event_subscriber' }

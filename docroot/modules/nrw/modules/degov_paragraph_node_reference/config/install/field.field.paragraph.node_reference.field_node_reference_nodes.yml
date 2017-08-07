@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_node_reference_nodes
-    - node.type.normal_page
     - paragraphs.paragraphs_type.node_reference
   enforced:
     module:
@@ -21,8 +20,7 @@ default_value_callback: ''
 settings:
   handler: 'default:node'
   handler_settings:
-    target_bundles:
-      normal_page: normal_page
+    target_bundles: {  }
     sort:
       field: _none
     auto_create: false

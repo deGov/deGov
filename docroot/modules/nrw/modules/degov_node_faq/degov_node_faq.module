@@ -1,0 +1,38 @@
+<?php
+
+use Drupal\degov_common\Common;
+use Drupal\views\ViewExecutable;
+use Drupal\Component\Utility\Unicode;
+
+/**
+ * Implements hook_preprocess().
+ */
+function degov_node_faq_preprocess(&$variables, $hook, &$info) {
+  // Add template suggestions and libraries implemented in this module.
+  Common::addThemeSuggestions($variables, $hook, $info, [
+    'module_name' => 'degov_node_faq',
+    'entity_type' => 'node',
+    'entity_bundles' => ['faq'],
+    'entity_view_modes' => []
+  ]);
+}
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function degov_node_faq_views_pre_render(ViewExecutable $view) {
+  if ($view->storage->id() == 'search_faq') {
+    $input = $view->getExposedInput();
+    $terms = trim(strip_tags($input['volltext']));
+
+    if (!empty($terms)) {
+      $terms = array_unique(preg_split('/\s+/', Unicode::strtolower($terms)));
+    }
+    else {
+      $terms = [];
+    }
+
+    $view->element['#attached']['drupalSettings']['degov_node_faq']['search_faq'] = $terms;
+    $view->element['#attached']['library'][] = 'degov_node_faq/search_faq';
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "degov_sitemap_settings",
+  "type": "drupal-module",
+  "description": "Adds sitemaps to the site.",
+  "license": "GPL-2.0+",
+  "homepage": "https://www.nrwgov.org",
+  "require": {
+    "drupal/simple_sitemap": "^2.9",
+    "drupal/sitemap": "^1.3"
+  }
+}

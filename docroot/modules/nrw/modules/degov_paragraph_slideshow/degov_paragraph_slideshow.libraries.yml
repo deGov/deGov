@@ -1,12 +1,9 @@
 slideshow:
   version: 1.0
   js:
-    libraries/slick/slick.min.js: {}
     js/slideshow.js: {}
   css:
-    base:
-      libraries/slick/slick.css: {}
-    theme:
-      libraries/slick/slick-theme.css: {}
     custom:
       css/slideshow.css: {}
+  dependencies:
+    - degov_common/slick

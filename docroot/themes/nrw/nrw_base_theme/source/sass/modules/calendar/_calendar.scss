@@ -1,0 +1,108 @@
+.calendar--widget{
+  margin: 0 $grid-gutter-width/-2 $grid-gutter-width/2;
+  background-color: $color-white;
+  padding-bottom: $grid-gutter-width/2;
+  .pager{
+    margin-top: 0;
+    margin-bottom: $grid-gutter-width/4;
+    padding-top: $grid-gutter-width/4;
+    &__item--current{
+      color: $brand-primary;
+        font-size: $font-size-h2;
+    }
+  }
+  ul{
+    padding: 0;
+    margin:0;
+  }
+  .pager__item{
+    a{border: 0;}
+    &--previous{
+      font-size: 0;
+      float: left;
+      a{
+        @include icon-before($fa-var-angle-double-left);
+        &:before{
+          font-size: $font-size-small;
+          line-height: $font-size-h2;
+        }
+      }
+    }
+    &--next{
+      float: right;
+      font-size: 0;
+      a{
+        @include icon-before($fa-var-angle-double-right);
+        &:before{
+          font-size: $font-size-small;
+          line-height: $font-size-h2;
+        }
+      } 
+    }
+  }
+  table{
+    tr{
+      background: $color-white;
+      border-bottom: 0;
+      td{
+        text-align: center;
+        border: 0;
+        font-size: $font-size-h3;
+        &.current-week{
+          background: $brand-primary;
+          color: $color-white;
+        }
+        &.days{
+          font-size: $font-size-small;
+          font-weight: bold;
+          padding: $grid-gutter-width/4;
+          color: $brand-primary;
+        }
+        &.today{
+          background: $nrw-green;
+          color: $color-white;
+        }
+        &.has-events{
+          &:hover{
+            background: $nrw-green;
+          }
+        }
+      }
+    }
+  }
+}
+
+.calendar__title{
+	font-size: $font-size-h3;
+  color: $brand-primary;
+	display: flex;
+	padding: 20px;
+	background: $nrw-light;
+	margin-top: $grid-gutter-width/-2;
+	@include smaller-than($screen-xs-max){
+		word-break: break-all;
+	}
+	i{
+		color: $color-white;
+		background-color: $brand-primary;
+		min-width: 45px; // To always keep width - responsive
+		width: 45px;
+		height: 45px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		float: left;
+		margin-right: $padding-base-horizontal + 5;
+    .fa{
+      border: 0;
+    }
+	}
+	h2{
+		margin: 0;
+		line-height: 1;
+	}
+	.sub-title{
+		font-weight: bold;
+		display: block;
+	}
+}

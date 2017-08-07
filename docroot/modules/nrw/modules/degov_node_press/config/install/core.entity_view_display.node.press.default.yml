@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.node.press.field_content_paragraphs
+    - field.field.node.press.field_header_paragraphs
     - field.field.node.press.field_press_date
     - field.field.node.press.field_sidebar_right_paragraphs
     - field.field.node.press.field_social_media
@@ -26,6 +27,15 @@ mode: default
 content:
   field_content_paragraphs:
     weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_header_paragraphs:
+    weight: -1
     label: hidden
     settings:
       view_mode: default
@@ -66,3 +76,4 @@ hidden:
   langcode: true
   links: true
   shariff_field: true
+  workbench_moderation_control: true

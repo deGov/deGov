@@ -1,0 +1,193 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_browser
+    - entity_browser.browser.media_browser
+    - field.field.media.contact.field_contact_email
+    - field.field.media.contact.field_contact_fax
+    - field.field.media.contact.field_contact_image
+    - field.field.media.contact.field_contact_position
+    - field.field.media.contact.field_contact_tel
+    - field.field.media.contact.field_contact_title
+    - field.field.media.contact.field_include_search
+    - field.field.media.contact.field_media_in_library
+    - field.field.media.contact.field_tags
+    - media_entity.bundle.contact
+  enforced:
+    module:
+      - degov_media_contact
+  module:
+    - entity_browser
+    - field_group
+    - workbench_moderation
+third_party_settings:
+  field_group:
+    group_vertical:
+      children:
+        - group_contact_details
+        - group_media
+        - group_common
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: Vertical
+      region: content
+    group_media:
+      children:
+        - field_contact_image
+      parent_name: group_vertical
+      weight: 14
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Media
+      region: content
+    group_contact_details:
+      children:
+        - field_contact_position
+        - field_contact_title
+        - field_contact_tel
+        - field_contact_fax
+        - field_contact_email
+      parent_name: group_vertical
+      weight: 13
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Contact details'
+      region: content
+    group_common:
+      children:
+        - langcode
+        - field_tags
+        - field_include_search
+        - field_media_in_library
+      parent_name: group_vertical
+      weight: 15
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Common
+      region: content
+id: media.contact.media_browser
+targetEntityType: media
+bundle: contact
+mode: media_browser
+content:
+  field_contact_email:
+    weight: 15
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_contact_fax:
+    weight: 14
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_contact_image:
+    type: entity_browser_entity_reference
+    weight: 9
+    settings:
+      entity_browser: media_browser
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_display_settings:
+        view_mode: thumbnail
+      open: true
+    region: content
+    third_party_settings: {  }
+  field_contact_position:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_contact_tel:
+    weight: 13
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_contact_title:
+    weight: 12
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_include_search:
+    weight: 4
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_media_in_library:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 5
+    third_party_settings: {  }
+    region: content
+  field_tags:
+    type: entity_reference_autocomplete
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  uid: true

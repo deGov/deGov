@@ -1,0 +1,5 @@
+services:
+  degov_common.quickedit.twig.extension:
+    class: Drupal\degov_common\Twig\Extension\FieldQuickEditAttributesExtension
+    tags:
+      - { name: twig.extension }

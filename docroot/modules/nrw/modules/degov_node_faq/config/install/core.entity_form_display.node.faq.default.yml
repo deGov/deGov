@@ -1,0 +1,159 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.faq.field_content_paragraphs
+    - field.field.node.faq.field_faq_description
+    - field.field.node.faq.field_faq_related
+    - node.type.faq
+  enforced:
+    module:
+      - degov_node_faq
+  module:
+    - field_group
+    - paragraphs
+    - path
+    - workbench_moderation
+third_party_settings:
+  field_group:
+    group_vertical:
+      children:
+        - group_description
+        - group_content
+        - group_common
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: Vertical
+      region: content
+    group_description:
+      children:
+        - field_faq_description
+      parent_name: group_vertical
+      weight: 2
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Description
+      region: content
+    group_content:
+      children:
+        - field_content_paragraphs
+        - field_faq_related
+      parent_name: group_vertical
+      weight: 3
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Content
+      region: content
+    group_common:
+      children:
+        - langcode
+      parent_name: group_vertical
+      weight: 4
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Common
+      region: content
+id: node.faq.default
+targetEntityType: node
+bundle: faq
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_content_paragraphs:
+    weight: 6
+    settings:
+      title: Absatz
+      title_plural: Paragraphs
+      edit_mode: preview
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: faq_list
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_faq_description:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_faq_related:
+    weight: 7
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  langcode:
+    type: language_select
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 11
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 12
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 9
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }

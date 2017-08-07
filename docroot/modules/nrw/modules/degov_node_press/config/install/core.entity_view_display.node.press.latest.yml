@@ -4,8 +4,11 @@ dependencies:
   config:
     - core.entity_view_mode.node.latest
     - field.field.node.press.field_content_paragraphs
+    - field.field.node.press.field_header_paragraphs
     - field.field.node.press.field_press_date
     - field.field.node.press.field_sidebar_right_paragraphs
+    - field.field.node.press.field_social_media
+    - field.field.node.press.field_tags
     - field.field.node.press.field_teaser_image
     - field.field.node.press.field_teaser_text
     - field.field.node.press.field_teaser_title
@@ -40,6 +43,7 @@ content:
     third_party_settings: {  }
 hidden:
   field_content_paragraphs: true
+  field_header_paragraphs: true
   field_sidebar_right_paragraphs: true
   field_social_media: true
   field_tags: true
@@ -48,3 +52,4 @@ hidden:
   langcode: true
   links: true
   shariff_field: true
+  workbench_moderation_control: true

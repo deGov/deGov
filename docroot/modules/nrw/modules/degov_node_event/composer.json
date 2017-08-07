@@ -6,6 +6,7 @@
   "homepage": "https://www.nrwgov.org",
   "require": {
     "drupal/date_popup": "^1.0",
-    "drupal/address": "^1.0"
+    "drupal/address": "^1.0",
+    "drupal/calendar": "1.x-dev"
   }
 }

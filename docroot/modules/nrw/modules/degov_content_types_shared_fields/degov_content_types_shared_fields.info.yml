@@ -4,11 +4,16 @@ package: deGov
 type: module
 core: 8.x
 dependencies:
+  - degov_common
   - entity_reference_revisions
   - field
+  - field_group
+  - lightning_core
+  - link
   - media_entity
   - node
   - paragraphs
+  - paragraphs_edit
   - shariff
   - taxonomy
   - text

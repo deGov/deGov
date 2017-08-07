@@ -1,0 +1,47 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.faq_list.field_faq_list_inner_paragraphs
+    - field.field.paragraph.faq_list.field_sub_title
+    - field.field.paragraph.faq_list.field_title
+    - field.field.paragraph.faq_list.field_title_link
+    - paragraphs.paragraphs_type.faq_list
+  enforced:
+    module:
+      - degov_paragraph_faq
+  module:
+    - entity_reference_revisions
+id: paragraph.faq_list.preview
+targetEntityType: paragraph
+bundle: faq_list
+mode: preview
+content:
+  field_faq_list_inner_paragraphs:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: above
+    settings:
+      view_mode: preview
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_sub_title:
+    weight: 1
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_title:
+    weight: 0
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_title_link: true

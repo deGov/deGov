@@ -1,0 +1,12 @@
+address:
+  version: 1.1.0
+  css:
+    theme:
+      libraries/leaflet/leaflet.css: {}
+    custom:
+      css/map.css: {}
+  js:
+    libraries/leaflet/leaflet.js: {}
+    js/map.js: {}
+  dependencies:
+    - core/jquery

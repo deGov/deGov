@@ -1,0 +1,154 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_browser
+    - entity_browser.browser.media_browser
+    - field.field.media.person.field_include_search
+    - field.field.media.person.field_media_in_library
+    - field.field.media.person.field_person_image
+    - field.field.media.person.field_person_info
+    - field.field.media.person.field_tags
+    - media_entity.bundle.person
+  enforced:
+    module:
+      - degov_media_person
+  module:
+    - entity_browser
+    - field_group
+    - text
+    - workbench_moderation
+third_party_settings:
+  field_group:
+    group_vertical:
+      children:
+        - group_description
+        - group_media
+        - group_common
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: Vertical
+      region: content
+    group_common:
+      children:
+        - langcode
+        - field_tags
+        - field_include_search
+        - field_media_in_library
+      parent_name: group_vertical
+      weight: 14
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Common
+      region: content
+    group_media:
+      children:
+        - field_person_image
+      parent_name: group_vertical
+      weight: 13
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Media
+      region: content
+    group_description:
+      children:
+        - field_person_info
+      parent_name: group_vertical
+      weight: 12
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Description
+      region: content
+id: media.person.media_browser
+targetEntityType: media
+bundle: person
+mode: media_browser
+content:
+  field_include_search:
+    weight: 6
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_media_in_library:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 7
+    third_party_settings: {  }
+    region: content
+  field_person_image:
+    type: entity_browser_entity_reference
+    weight: 2
+    settings:
+      entity_browser: media_browser
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_display_settings:
+        view_mode: thumbnail
+      open: true
+    region: content
+    third_party_settings: {  }
+  field_person_info:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_tags:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  uid: true

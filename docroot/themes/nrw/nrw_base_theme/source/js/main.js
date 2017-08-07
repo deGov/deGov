@@ -2,7 +2,6 @@
 
 /* eslint-disable no-unused-vars, lines-around-comment*/
 const Bootstrap = require('bootstrap-sass');
-const Slick = require('slick-carousel');
 /* eslint-enable no-unused-vars, lines-around-comment */
 
 const PhotoSwipe = require('photoswipe');
@@ -32,6 +31,16 @@ const PhotoSwipeUiDefault = require('photoswipe/dist/photoswipe-ui-default');
       });
     }
   };
+
+  // Add current week in calendar
+  Drupal.behaviors.currentWeek = {
+    attach: function (context, settings) {
+      $('.calendar--widget td.today').once('change-background').each(function () {
+        $(this).closest('tr').children('td').addClass('current-week');
+      });
+    }
+  };
+
 
   // upper Menu
   Drupal.behaviors.upperMenu = {
@@ -126,40 +135,11 @@ const PhotoSwipeUiDefault = require('photoswipe/dist/photoswipe-ui-default');
     }
   };
 
-  Drupal.behaviors.sliderParagraph = {
-    attach: function (context, settings) {
-      $(context).find('.banner-wrapper').once('slider-paragraph-frontpage').each(function () {
-        const $slider = $(this);
-        $slider.slick({
-          arrows: false
-        });
-
-        // arrows are within the slide, which is why we need to hook them up to
-        // the slick nav methods
-        $slider.find('.inslide-slider-prev').click(function () {
-          $slider.slick('slickPrev');
-        });
-        $slider.find('.inslide-slider-next').click(function () {
-          $slider.slick('slickNext');
-        });
-      });
-
-      $('.slick__pause').on('click', function () {
-        $('.slideshow__slides').slick('slickPause');
-        $(this).hide().siblings('.slick__play').show();
-      });
-      $('.slick__play').on('click', function () {
-        $('.slideshow__slides').slick('slickPlay');
-        $(this).hide().siblings('.slick__pause').show();
-      });
-    }
-  };
-
   // language selector
   Drupal.behaviors.languageSelector = {
-    attach: function (context, settings) { 
+    attach: function (context, settings) {
       $('.language').once('language-selector').each(function () {
-        $(this).find('a.selector').click(function () {    
+        $(this).find('a.selector').click(function () {
           $('.language .options').toggleClass('is-open is-hidden');
         });
       });
@@ -205,15 +185,16 @@ const PhotoSwipeUiDefault = require('photoswipe/dist/photoswipe-ui-default');
       });
     }
   };
-  
-  
+
+
   // Responsive menu
   Drupal.behaviors.responsiveMenu = {
-    attach: function (context, settings) { 
+    attach: function (context, settings) {
       $('.header__menu-icon').click(function () {
         $('.nrw-menu-header-responsive').toggleClass('is-open');
       });
       $('.nrw-menu-header-responsive .nrw-menu-header-responsive__block-title').click(function () {
+        $(this).toggleClass('is-close is-open');
         $(this).siblings('.nrw-menu-header-responsive__content').toggleClass('is-close is-open');
       });
       $('.nrw-menu-header-responsive .action').click(function () {
@@ -224,45 +205,32 @@ const PhotoSwipeUiDefault = require('photoswipe/dist/photoswipe-ui-default');
   };
 
   Drupal.behaviors.selectize = {
-    attach: function (context, settings) { 
+    attach: function (context, settings) {
       $('.webform-submission-form .form-select').selectric();
     }
   };
 
   Drupal.behaviors.resetform = {
     attach: function (context, settings) {
-      $(context).find('.reset-form').once('reset-form').each(function () { 
+      $(context).find('.reset-form').once('reset-form').each(function () {
         $('.reset-form').click(function () {
-          $(this).closest('.paragraph__content').find('form').trigger('reset'); 
+          $(this).closest('.paragraph__content').find('form').trigger('reset');
         });
       });
     }
   };
-
-  // Slick slider in press list
-  Drupal.behaviors.slickPress = {
-    attach: function (context, settings) { 
-      $('.press-list .view-content').slick({
-        dots: true,
-        infinite: false,
-        speed: 300,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        responsive: [
-          {
-            breakpoint: 992,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
-        ]
+  
+  Drupal.behaviors.datePopup = {
+    attach: function (context, settings) {
+      $(context).find('.form-type-date').once('date-popup').each(function () {
+        $('i', this).click(function () {
+          $(this).siblings('.form-date').focus();
+        });
       });
     }
   };
-
+  
   // Check heigh of image in contact person
-
   Drupal.behaviors.contactHeight = {
     attach: function (context, settings) {
       $('.region-content .media-contact').once('check-height').each(function () {

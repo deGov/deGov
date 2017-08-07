@@ -1,6 +1,9 @@
 langcode: de
 status: true
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - degov_date_formats
 id: long
 label: Lang
 locked: false

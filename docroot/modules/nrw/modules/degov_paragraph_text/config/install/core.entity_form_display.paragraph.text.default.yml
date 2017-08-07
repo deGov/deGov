@@ -5,13 +5,15 @@ dependencies:
     - field.field.paragraph.text.field_sub_title
     - field.field.paragraph.text.field_text_text
     - field.field.paragraph.text.field_title
+    - field.field.paragraph.text.field_title_link
     - paragraphs.paragraphs_type.text
-  module:
-    - text
-    - workbench_moderation
   enforced:
     module:
       - degov_paragraph_text
+  module:
+    - link
+    - text
+    - workbench_moderation
 id: paragraph.text.default
 targetEntityType: paragraph
 bundle: text
@@ -26,7 +28,7 @@ content:
     type: string_textfield
     region: content
   field_text_text:
-    weight: 8
+    weight: 9
     settings:
       rows: 5
       placeholder: ''
@@ -40,6 +42,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_title_link:
+    weight: 8
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
     region: content
 hidden:
   created: true

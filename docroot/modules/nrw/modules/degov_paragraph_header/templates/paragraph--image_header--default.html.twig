@@ -38,13 +38,31 @@
  * @ingroup themeable
  */
 #}
+{%
+set classes = [
+  'paragraph',
+  'header-image',
+  paragraph.bundle|clean_class,
+  view_mode ? view_mode|clean_class,
+  'clearfix',
+  'content-header',
+]
+%}
 
-<div class="paragraph header-image content-header">
+<div{{ attributes.addClass(classes) }}>
+  {{ content.contextual_links }}
   <div class="header-image__image content-header__media">{{ content.field_header_media }}</div>
-  <div class="header-image__text content-header__text">
+  <div class="header-image__text content-header__text"{{ content.field_header_text|quickedit_attr }}>
     {{ content.field_header_text|field_value }}
+    {% if sharing %}
+    <div class="sharing">
+      {{ sharing }}
+    </div>
+    {% endif %}
     {% if tags %}
-      <p class="tags">{{ tags }}</p>
+    <div class="tags">
+      {{ tags }}
+    </div>
     {% endif %}
   </div>
 </div>

@@ -9,12 +9,17 @@ dependencies:
     - field.field.media.image.field_image_description
     - field.field.media.image.field_image_height
     - field.field.media.image.field_image_mime
-    - field.field.media.image.field_image_title
     - field.field.media.image.field_image_width
     - field.field.media.image.field_media_in_library
     - field.field.media.image.image
+    - image.style.teaser_squared_1_1_120
+    - image.style.teaser_squared_1_1_240
+    - image.style.teaser_squared_1_1_480
     - media_entity.bundle.image
     - responsive_image.styles.teaser_squared
+  enforced:
+    module:
+      - nrw_image_and_crop_styles
   module:
     - datetime
     - responsive_image
@@ -75,14 +80,6 @@ content:
     region: content
   field_image_mime:
     weight: 8
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_image_title:
-    weight: 11
     label: above
     settings:
       link_to_entity: false

@@ -4,6 +4,9 @@ dependencies:
   config:
     - field.storage.media.field_contact_position
     - media_entity.bundle.contact
+  enforced:
+    module:
+      - degov_media_contact
 id: media.contact.field_contact_position
 field_name: field_contact_position
 entity_type: media

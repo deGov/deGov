@@ -73,24 +73,27 @@
     not node.isPublished() ? 'is-unpublished',
     view_mode ? view_mode|clean_class,
     'clearfix',
+    'content-header',
   ]
 %}
-
 <article{{ attributes.addClass(classes) }}>
-  <div class="blog__header-image">{{ content.field_blog_image }}</div>
-  <div class="blog__header content-header">
-    <div class="blog__header-date">{{ content.field_blog_date|field_value }}</div>
-    <div class="blog__header-title">{{ content.field_blog_sub_title|field_value }}</div>
-  </div>
-  
+  {{ title_suffix }}
+
+  {% if node.field_header_paragraphs.value %}
+    <div class="blog__header-paragraphs">
+      <div class="blog__header-date"{{ content.field_blog_date|quickedit_attr }}>{{ content.field_blog_date|field_value }}</div>
+      <div class="blog__header-title">{{ node.title.value }}</div>
+      {{ content.field_header_paragraphs }}
+    </div>
+  {% endif %}
+
   <div class="blog__content content">
-     <div class="blog__content-author">{{ content.field_blog_author }}</div>
+    <div class="blog__content-author">{{ content.field_blog_author|field_value }}</div>
     {% if node.field_content_paragraphs.value %}
       <div class="blog__content-paragraphs">
-        {{ content.field_content_paragraphs }}
+        {{ content.field_content_paragraphs|field_value }}
       </div>
     {% endif %}
-   
   </div>
 
 </article>

@@ -1,0 +1,6 @@
+tweets_slider:
+  version: 1.0
+  js:
+    js/tweets_slider.js: {}
+  dependencies:
+    - degov_common/slick

@@ -1,0 +1,66 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.small_image
+    - field.field.node.blog.field_blog_author
+    - field.field.node.blog.field_blog_date
+    - field.field.node.blog.field_blog_sub_title
+    - field.field.node.blog.field_content_paragraphs
+    - field.field.node.blog.field_header_paragraphs
+    - field.field.node.blog.field_sidebar_right_paragraphs
+    - field.field.node.blog.field_social_media
+    - field.field.node.blog.field_tags
+    - field.field.node.blog.field_teaser_image
+    - field.field.node.blog.field_teaser_text
+    - field.field.node.blog.field_teaser_title
+    - node.type.blog
+  enforced:
+    module:
+      - degov_node_blog
+  module:
+    - text
+    - user
+id: node.blog.small_image
+targetEntityType: node
+bundle: blog
+mode: small_image
+content:
+  field_teaser_image:
+    type: entity_reference_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link: false
+      view_mode: default
+    third_party_settings: {  }
+  field_teaser_text:
+    type: text_trimmed
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      trim_length: 100
+    third_party_settings: {  }
+  field_teaser_title:
+    type: string
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  field_blog_author: true
+  field_blog_date: true
+  field_blog_sub_title: true
+  field_content_paragraphs: true
+  field_header_paragraphs: true
+  field_sidebar_right_paragraphs: true
+  field_social_media: true
+  field_tags: true
+  langcode: true
+  links: true
+  shariff_field: true
+  workbench_moderation_control: true

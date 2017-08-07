@@ -8,31 +8,24 @@ dependencies:
     - field.field.media.contact.field_contact_position
     - field.field.media.contact.field_contact_tel
     - field.field.media.contact.field_contact_title
+    - field.field.media.contact.field_include_search
     - field.field.media.contact.field_media_in_library
     - field.field.media.contact.field_tags
+    - image.style.large
     - image.style.thumbnail
     - media_entity.bundle.contact
   enforced:
     module:
       - degov_media_contact
   module:
+    - degov_common
     - image
-    - user
+    - media_entity
 id: media.contact.default
 targetEntityType: media
 bundle: contact
 mode: default
 content:
-  created:
-    label: hidden
-    type: timestamp
-    weight: 2
-    region: content
-    settings:
-      date_format: medium
-      custom_date_format: ''
-      timezone: ''
-    third_party_settings: {  }
   field_contact_email:
     weight: 7
     label: visually_hidden
@@ -53,10 +46,10 @@ content:
     weight: 8
     label: hidden
     settings:
-      view_mode: teaser_landscape_2_1
+      image_style: large
       link: false
     third_party_settings: {  }
-    type: entity_reference_entity_view
+    type: media_thumbnail
     region: content
   field_contact_position:
     weight: 9
@@ -83,12 +76,11 @@ content:
     type: string
     region: content
   field_tags:
-    type: entity_reference_label
+    type: taxonomy_term_search
     weight: 9
     region: content
     label: hidden
-    settings:
-      link: false
+    settings: {  }
     third_party_settings: {  }
   name:
     label: hidden
@@ -107,13 +99,9 @@ content:
       image_link: ''
     region: content
     third_party_settings: {  }
-  uid:
-    label: hidden
-    type: author
-    weight: 1
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
+  created: true
+  field_include_search: true
   field_media_in_library: true
   langcode: true
+  uid: true

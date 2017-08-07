@@ -46,10 +46,19 @@
   {% set classes = classes|merge(['iframe--autoheight']) %}
 {% endif %}
 
-<div{{ create_attribute({'class': classes}) }}>
+<div{{ attributes.addClass(classes) }}>
+  {{ content.contextual_links }}
   {% if paragraph.field_title.value or paragraph.field_sub_title.value %}
-    <h2>{{ paragraph.field_title.value }}<br><span class="subtitle">{{ paragraph.field_sub_title.value }}</span></h2>
+    {% if content.field_title_link|field_value %}
+    <a href="{{ content.field_title_link|field_value }}"{{ content.field_title_link|quickedit_attr }}>
+    {% endif %}
+    <h2{{ content.field_title|quickedit_attr }}>{{ content.field_title|field_value }}<br><span class="subtitle"{{ content.field_sub_title|quickedit_attr }}>{{ content.field_sub_title|field_value }}</span></h2>
+    {% if content.field_title_link|field_value %}
+    </a>
+    {% endif %}
   {% endif %}
-  <iframe height="{{ paragraph.field_iframe_height.value }}" src="{{ paragraph.field_iframe_url.uri }}"></iframe>
+  <div{{ content.field_iframe_height|quickedit_attr }}>
+    <iframe height="{{ paragraph.field_iframe_height.value }}" src="{{ paragraph.field_iframe_url.uri }}"></iframe>
+  </div>
 </div>
 

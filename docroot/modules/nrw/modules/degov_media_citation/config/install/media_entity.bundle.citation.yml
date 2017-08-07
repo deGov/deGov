@@ -4,11 +4,6 @@ dependencies:
   enforced:
     module:
       - degov_media_citation
-  module:
-    - crop
-third_party_settings:
-  crop:
-    image_field: null
 id: citation
 label: Citation
 description: 'Ein Media-Bundle mit einem Zitat sowie einem optionalen Bild.'

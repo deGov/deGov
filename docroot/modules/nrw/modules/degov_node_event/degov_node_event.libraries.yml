@@ -1,0 +1,12 @@
+degov_events:
+  version: 1.0
+  js:
+    js/events.js: {}
+  css:
+    theme:
+      css/events.css: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once

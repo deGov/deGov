@@ -3,12 +3,61 @@ status: true
 dependencies:
   config:
     - field.field.media.tweet.embed_code
+    - field.field.media.tweet.field_include_search
     - field.field.media.tweet.field_media_in_library
     - field.field.media.tweet.field_tags
     - media_entity.bundle.tweet
   module:
+    - field_group
     - path
     - workbench_moderation
+third_party_settings:
+  field_group:
+    group_vertical:
+      children:
+        - group_media
+        - group_common
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: Vertical
+      region: content
+    group_media:
+      children:
+        - embed_code
+      parent_name: group_vertical
+      weight: 7
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Media
+      region: content
+    group_common:
+      children:
+        - langcode
+        - field_tags
+        - field_include_search
+        - field_media_in_library
+        - path
+      parent_name: group_vertical
+      weight: 8
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Common
+      region: content
 id: media.tweet.default
 targetEntityType: media
 bundle: tweet
@@ -22,16 +71,23 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
+  field_include_search:
+    weight: 7
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_media_in_library:
     type: boolean_checkbox
-    weight: 4
+    weight: 8
     settings:
       display_label: true
     third_party_settings: {  }
     region: content
   field_tags:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 6
     region: content
     settings:
       match_operator: CONTAINS
@@ -54,15 +110,11 @@ content:
     region: content
   path:
     type: path
-    weight: 6
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  preview:
-    weight: 1
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   created: true
+  preview: true
   uid: true

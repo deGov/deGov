@@ -4,14 +4,6 @@ dependencies:
   config:
     - field.storage.node.field_content_paragraphs
     - node.type.press
-    - paragraphs.paragraphs_type.downloads
-    - paragraphs.paragraphs_type.faq_list
-    - paragraphs.paragraphs_type.iframe
-    - paragraphs.paragraphs_type.links
-    - paragraphs.paragraphs_type.media_reference
-    - paragraphs.paragraphs_type.node_reference
-    - paragraphs.paragraphs_type.text
-    - paragraphs.paragraphs_type.view_reference
   enforced:
     module:
       - degov_node_press
@@ -30,53 +22,6 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    target_bundles:
-      text: text
-      node_reference: node_reference
-      view_reference: view_reference
-      media_reference: media_reference
-      downloads: downloads
-      faq_list: faq_list
-      iframe: iframe
-      links: links
-    target_bundles_drag_drop:
-      text:
-        enabled: true
-        weight: -27
-      node_reference:
-        enabled: true
-        weight: -26
-      view_reference:
-        enabled: true
-        weight: -25
-      media_reference:
-        enabled: true
-        weight: -24
-      downloads:
-        enabled: true
-        weight: -23
-      faq:
-        weight: -22
-        enabled: false
-      faq_list:
-        enabled: true
-        weight: -21
-      iframe:
-        enabled: true
-        weight: -20
-      image_header:
-        weight: -19
-        enabled: false
-      links:
-        enabled: true
-        weight: -18
-      slide:
-        weight: -17
-        enabled: false
-      slideshow:
-        weight: -16
-        enabled: false
-      video_subtitle:
-        weight: -15
-        enabled: false
+    target_bundles: { }
+    target_bundles_drag_drop: { }
 field_type: entity_reference_revisions

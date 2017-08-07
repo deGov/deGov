@@ -6,10 +6,13 @@ dependencies:
     - field.field.paragraph.iframe.field_iframe_url
     - field.field.paragraph.iframe.field_sub_title
     - field.field.paragraph.iframe.field_title
+    - field.field.paragraph.iframe.field_title_link
     - paragraphs.paragraphs_type.iframe
   enforced:
     module:
       - degov_paragraph_iframe
+  module:
+    - link
 id: paragraph.iframe.default
 targetEntityType: paragraph
 bundle: iframe
@@ -30,6 +33,18 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_title_link:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
     region: content
 hidden:
   field_iframe_height: true
