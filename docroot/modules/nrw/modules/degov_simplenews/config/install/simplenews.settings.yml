@@ -1,0 +1,33 @@
+hash_expiration: 86400
+newsletter:
+  format: html
+  priority: 3
+  receipt: false
+  from_address: newsletter@degov.org
+  from_name: deGov
+subscriber:
+  sync_fields: true
+subscription:
+  use_combined: multiple
+  confirm_subscribe_subject: 'Bestätigung für [simplenews-newsletter:name] von [site:name]'
+  confirm_subscribe_unsubscribed: "Wir haben eine Anmeldung der E-Mail Adresse [simplenews-subscriber:mail] für den Newsletter [simplenews-newsletter:name] auf [site:name] / [site:url] erhalten. \r\n\r\nBitte bestätigen Sie die Anmeldung über unten stehenden Link.\r\n\r\n[simplenews-subscriber:subscribe-url]"
+  confirm_subscribe_subscribed: 'Für die E-Mail Adresse [simplenews-subscriber:mail] wurde der Newsletter [simplenews-newsletter:name] auf [site:url] / [site:name] bestellt. Diese Adresse bekommt den Newsletter aber schon. Zum Abbestellen klicken Sie den entsprechenden Link am Fuß jedes Newsletters.'
+  confirm_unsubscribe_subscribed: "Für die E-Mail Adresse [simplenews-subscriber:mail] wurde der Newsletter [simplenews-newsletter:name] auf [site:url] / [site:name] abbestellt.\r\n\r\nBitte bestätigen Sie die Abmeldung über unten stehenden Link.\r\n\r\n[simplenews-subscriber:unsubscribe-url]"
+  confirm_unsubscribe_unsubscribed: "Für die E-Mail Adresse [simplenews-subscriber:mail] wurde der Newsletter [simplenews-newsletter:name] auf [site:url] / [site:name] abbestellt. Jedoch wurde der Newsletter für diese E-Mail Adresse nicht bestellt.\r\n\r\nWenn Sie den Newsletter bestellen wollen besuchen Sie bitte [site:url]."
+  confirm_combined_subject: 'Bestätigung für [site:name]'
+  confirm_combined_body: "Folgende Änderungen wurden von [simplenews-subscriber:mail] auf [site:url] bestellt:\r\n\r\n[changes-list]\r\n\r\nBitte bestätigen Sie die Änderungen über unten stehenden Link.\r\n\r\n[simplenews-subscriber:combined-url]"
+  confirm_combined_body_unchanged: "Folgende Änderungen wurden von [simplenews-subscriber:mail] auf [site:url] bestellt:\r\n\r\n[changes-list]\r\n\r\nEs ist keine Bestätigung notwendig, weil keine Änderungen vorgenommen werden."
+  confirm_combined_line_subscribe_unsubscribed: 'Anmeldung Newsletter [simplenews-newsletter:name]'
+  confirm_combined_line_subscribe_subscribed: 'Bereits angemeldet für [simplenews-newsletter:name]'
+  confirm_combined_line_unsubscribe_subscribed: 'Abmeldung von [simplenews-newsletter:name]'
+  confirm_combined_line_unsubscribe_unsubscribed: 'Bereits abgemeldet von [simplenews-newsletter:name]'
+  confirm_subscribe_page: ''
+  confirm_unsubscribe_page: ''
+mail:
+  use_cron: false
+  throttle: 20
+  spool_progress_expiration: 3600
+  spool_expire: 0
+  debug: false
+  source_cache: null
+langcode: de

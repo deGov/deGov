@@ -1,0 +1,16 @@
+langcode: de
+status: true
+dependencies: {  }
+name: 'deGov - Newsletter'
+id: default
+description: 'Das ist ein Beispielnewsletter'
+format: html
+priority: 3
+receipt: false
+from_name: 'deGov - Newsletter'
+subject: '[[simplenews-newsletter:name]] [node:title]'
+from_address: newsletter@degov.org
+hyperlinks: false
+new_account: 'on'
+opt_inout: double
+weight: 0
