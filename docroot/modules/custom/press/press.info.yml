@@ -1,0 +1,9 @@
+name: Pressemitteilung
+description: 'Provides Pressemitteilung content type and related configuration. Erstellen von Pressemitteilungen.'
+type: module
+core: 8.x
+dependencies:
+  - datetime
+  - node
+  - user
+  - views
