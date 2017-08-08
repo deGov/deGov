@@ -10,7 +10,9 @@ use Drupal\user\PrivateTempStoreFactory;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * Alter entity delete forms to provide some warning deletes will fail.
+ * The entity_reference_integrity module does not prevent the removal of media
+ * entities that are referenced by other entities during batch deletion.
+ * This class adds the missing functionality.
  */
 class FormAlter extends \Drupal\entity_reference_integrity_enforce\FormAlter {
 
