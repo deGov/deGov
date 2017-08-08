@@ -1,3 +1,4 @@
+config_rewrite: replace
 hash_expiration: 86400
 newsletter:
   format: html

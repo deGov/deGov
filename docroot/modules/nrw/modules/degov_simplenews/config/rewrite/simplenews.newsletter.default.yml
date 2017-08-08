@@ -1,6 +1,6 @@
+config_rewrite: replace
 langcode: de
 status: true
-dependencies: {  }
 name: 'deGov - Newsletter'
 id: default
 description: 'Das ist ein Beispielnewsletter'

@@ -21,12 +21,19 @@ Newsletter issues can be sent on the newsletter tab of simplenews_issue nodes. W
 recommend sending a test newsletter from there before sending out the newsletter to all
 recipients.
 
+To see the list of all subscribers one need to follow this link
+/admin/people/simplenews
+
+Here would be the list with filters where administrator can controll the subscribers status
+
 By default, newsletters are sent immediately. However, we recommend setting up cron and
 enabling the "use cron" checkbox in the settings for sending of newsletter.
 
 You can add a newsletter subscription for on the block layout page:
  
-/a0dmin/structure/block
+/admin/structure/block
+
+Only users with 'subscribe to newsletters' permission are allowed to subscribe via the block.
 
 Also, make sure that your webserver is allowed to use the configured sender addresses
 of your newsletter issues. You might need additional settings in your server setup or
