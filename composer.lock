@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d34fb147614f6aa9afa4c1e64aae4bd9",
+    "content-hash": "dc2fbd0a637e26f829401d4071754fe9",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -1364,7 +1364,7 @@
                 "source": "http://cgit.drupalcode.org/calendar",
                 "issues": "https://www.drupal.org/project/issues/calendar"
             },
-            "time": "2017-06-02 07:50:40"
+            "time": "2017-06-02T07:50:40+00:00"
         },
         {
             "name": "drupal/calendar_datetime",
@@ -2786,7 +2786,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/field_group"
             },
-            "time": "2017-07-13 22:41:32"
+            "time": "2017-07-13T22:41:32+00:00"
         },
         {
             "name": "drupal/geocoder",
@@ -3936,12 +3936,55 @@
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
+                "installer-paths": {
+                    "docroot/core": [
+                        "type:drupal-core"
+                    ],
+                    "docroot/modules/contrib/{$name}": [
+                        "type:drupal-module"
+                    ],
+                    "docroot/profiles/contrib/{$name}": [
+                        "type:drupal-profile"
+                    ],
+                    "docroot/themes/contrib/{$name}": [
+                        "type:drupal-theme"
+                    ],
+                    "drush/contrib/{$name}": [
+                        "type:drupal-drush"
+                    ],
+                    "docroot/libraries/{$name}": [
+                        "type:drupal-library"
+                    ],
+                    "./docroot/modules/nrwgov/modules/": [
+                        "nrwgov/modules"
+                    ],
+                    "./docroot/modules/nrwgov/features/": [
+                        "nrwgov/features"
+                    ],
+                    "./docroot/modules/nrw/modules/": [
+                        "nrw/modules"
+                    ],
+                    "./docroot/modules/nrw/features/": [
+                        "nrw/features"
+                    ]
                 },
-                "drupal": {
-                    "version": "8.x-1.1",
-                    "datestamp": "1487331784"
+                "enable-patching": true,
+                "patches": {
+                    "drupal/core": {
+                        "2893029 - StringTranslationTrait consumers cannot be reliably serialized without DependencySerializationTrait": "https://www.drupal.org/files/issues/2893029-full-fix-test-from-3.patch"
+                    },
+                    "drupal/paragraphs": {
+                        "2788607 - Empty required fields not providing meaningful error messages": "https://www.drupal.org/files/issues/empty_required_fields-2788607-81.patch"
+                    }
+                },
+                "merge-plugin": {
+                    "include": [
+                        "docroot/modules/nrw/*/*/composer.json",
+                        "docroot/modules/nrwgov/*/*/composer.json",
+                        "docroot/modules/custom/*/composer.json",
+                        "docroot/themes/nrw/*/composer.json",
+                        "docroot/themes/nrwgov/*/composer.json"
+                    ]
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -4013,7 +4056,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/paragraphs_edit"
             },
-            "time": "2017-05-23 02:16:39"
+            "time": "2017-05-23T02:16:39+00:00"
         },
         {
             "name": "drupal/pathauto",
@@ -4490,7 +4533,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/simplify_menu"
             },
-            "time": "2017-06-16 01:01:50"
+            "time": "2017-06-16T01:01:50+00:00"
         },
         {
             "name": "drupal/sitemap",
@@ -4660,7 +4703,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/spamspan"
             },
-            "time": "2017-05-27 08:00:15"
+            "time": "2017-05-27T08:00:15+00:00"
         },
         {
             "name": "drupal/styled_google_map",
@@ -6263,7 +6306,7 @@
             ],
             "description": "GeoPHP is a open-source native PHP library for doing geometry operations. It is written entirely in PHP and can therefore run on shared hosts. It can read and write a wide variety of formats: WKT (including EWKT), WKB (including EWKB), GeoJSON, KML, GPX, GeoRSS). It works with all Simple-Feature geometries (Point, LineString, Polygon, GeometryCollection etc.) and can be used to get centroids, bounding-boxes, area, and a wide variety of other useful information.",
             "homepage": "https://github.com/phayes/geoPHP",
-            "time": "2016-03-04 05:42:29"
+            "time": "2016-03-04T05:42:29+00:00"
         },
         {
             "name": "psr/http-message",
@@ -9642,7 +9685,7 @@
             ],
             "description": "An abstraction library for Elasticsearch Connector module for Drupal.",
             "homepage": "https://github.com/nodespark/des-connector",
-            "time": "2017-05-23 10:55:47"
+            "time": "2017-05-23T10:55:47+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
