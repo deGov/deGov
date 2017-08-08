@@ -3,14 +3,12 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.storage.node.field_event_date
     - node.type.event
   enforced:
     module:
       - degov_node_event
   module:
     - calendar
-    - datetime
     - degov_node_event
     - node
     - user
@@ -601,8 +599,7 @@ display:
         - url
         - 'user.node_grants:view'
         - user.permissions
-      tags:
-        - 'config:field.storage.node.field_event_date'
+      tags: {  }
   events_page_list:
     display_plugin: page
     id: events_page_list

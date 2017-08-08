@@ -4,11 +4,6 @@ dependencies:
   enforced:
     module:
       - degov_media_gallery
-  module:
-    - crop
-third_party_settings:
-  crop:
-    image_field: null
 id: gallery
 label: Bildergalerie
 description: 'Ein Media-Bundle zur Erstellung einer Bildergalerie'

@@ -1,0 +1,6 @@
+slider:
+  version: 1.0
+  js:
+    js/slider.js: {}
+  dependecies:
+    - degov_common/slick

@@ -2,7 +2,6 @@
 
 /* eslint-disable no-unused-vars, lines-around-comment*/
 const Bootstrap = require('bootstrap-sass');
-const Slick = require('slick-carousel');
 /* eslint-enable no-unused-vars, lines-around-comment */
 
 const PhotoSwipe = require('photoswipe');
@@ -53,6 +52,33 @@ const PhotoSwipeUiDefault = require('photoswipe/dist/photoswipe-ui-default');
         if ($(window).width() > 720) {
           $('.header__upper-menu').removeClass('is-open');
         }
+      });
+    }
+  };
+
+  // Open/close search
+  Drupal.behaviors.openSearch = {
+    attach: function (context, settings) {
+      $(context).find('.nrw-menu-header__icon.menu-search').once('upper-menu-click').click(function () {
+        $('.nrw-menu-header__search').toggleClass('is-open is-close');
+      });
+      $('.nrw-menu-header__search-close a', context).click(function (e) {
+        $('.nrw-menu-header__search').toggleClass('is-open is-close');
+      });
+      $('.nrw-menu-header__search-close i', context).click(function (e) {
+        $('.nrw-menu-header__search').toggleClass('is-open is-close');
+      });
+      $('.nrw-menu-header__search .fa-search', context).click(function (e) {
+        var value = $('input.nrw-menu-header__search-text').val();
+        console.log(value);
+        window.location.href = "/suche?volltext=" + value;
+      });
+      $(document).once('press-enter').keypress(function(e) {
+          if(e.which == 13) {
+              var value = $('input.nrw-menu-header__search-text').val();
+              console.log(value);
+              window.location.href = "/suche?volltext=" + value;
+          }
       });
     }
   };
@@ -132,35 +158,6 @@ const PhotoSwipeUiDefault = require('photoswipe/dist/photoswipe-ui-default');
           $('.header-wrapper').css('top', offset);
           $('body').attr('style', 'padding-top: ' + (offset + paddingTop) + 'px !important;');
         }, 100);
-      });
-    }
-  };
-
-  Drupal.behaviors.sliderParagraph = {
-    attach: function (context, settings) {
-      $(context).find('.banner-wrapper').once('slider-paragraph-frontpage').each(function () {
-        const $slider = $(this);
-        $slider.slick({
-          arrows: false
-        });
-
-        // arrows are within the slide, which is why we need to hook them up to
-        // the slick nav methods
-        $slider.find('.inslide-slider-prev').click(function () {
-          $slider.slick('slickPrev');
-        });
-        $slider.find('.inslide-slider-next').click(function () {
-          $slider.slick('slickNext');
-        });
-      });
-
-      $('.slick__pause').on('click', function () {
-        $('.slideshow__slides').slick('slickPause');
-        $(this).hide().siblings('.slick__play').show();
-      });
-      $('.slick__play').on('click', function () {
-        $('.slideshow__slides').slick('slickPlay');
-        $(this).hide().siblings('.slick__pause').show();
       });
     }
   };
@@ -256,60 +253,6 @@ const PhotoSwipeUiDefault = require('photoswipe/dist/photoswipe-ui-default');
         $('i', this).click(function () {
           $(this).siblings('.form-date').focus();
         });
-      });
-    }
-  };
-
-  // Slick slider in press list
-  Drupal.behaviors.slickPress = {
-    attach: function (context, settings) {
-      $('.view-latest-press .view-content').slick({
-        dots: true,
-        infinite: false,
-        speed: 300,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        responsive: [
-          {
-            breakpoint: 992,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
-        ]
-      });
-    }
-  };
-
-  // Slick slider in Twitter block
-  Drupal.behaviors.slickTweets = {
-    attach: function (context, settings) {
-      $('.tweets-slideshow .tweets').slick({
-        dots: true,
-        infinite: false,
-        speed: 300,
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        autoplay: true,
-        responsive: [
-          {
-            breakpoint: 720,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
-        ]
-      });
-
-      $('.slick__pause').on('click', function () {
-        $('.tweets__slides').slick('slickPause');
-        $(this).hide().siblings('.slick__play').show();
-      });
-      $('.slick__play').on('click', function () {
-        $('.tweets__slides').slick('slickPlay');
-        $(this).hide().siblings('.slick__pause').show();
       });
     }
   };

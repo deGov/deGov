@@ -5,14 +5,16 @@ package: deGov
 core: 8.x
 dependencies:
   - address
+  - calendar
   - date_popup
   - datetime
-  - calendar
+  - degov_common
   - degov_content_types_shared_fields
   - degov_taxonomy_term_tags
   - entity_browser
   - entity_reference_revisions
   - field
+  - field_group
   - language
   - menu_ui
   - node

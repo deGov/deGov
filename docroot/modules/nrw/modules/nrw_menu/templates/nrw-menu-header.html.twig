@@ -13,7 +13,7 @@
         <span>{% trans %}faq{% endtrans %}</span>
       </div>
     </a>
-    <a href="/" class="nrw-menu-header__icon menu-search">
+    <a href="#" class="nrw-menu-header__icon menu-search">
       <div>
         <i class="fa fa-search" aria-hidden="true"></i>
         <span>{% trans %}Suche{% endtrans %}</span>
@@ -144,6 +144,16 @@
           {% trans %}Social Media{% endtrans %}
         </a>
       </div>
+    </div>
+  </div>
+  <div class="nrw-menu-header__search is-close">
+    <div class="nrw-menu-header__search__content">
+      <div class="nrw-menu-header__search-close">
+        <a class="link link--nolink" href="javascript:;">{{ 'Schliessen'|trans }}</a>
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </div>
+      <input type="text" name="header__search-text" placeholder="{% trans %}Suchbegriff eingeben{% endtrans %}" title="{% trans %}Bitte geben Sie einen Suchbegriff ein{% endtrans %}" id="nrw-menu-header__search-text" class="nrw-menu-header__search-text">
+      <i class="fa fa-search" aria-hidden="true"></i>
     </div>
   </div>
 </div>

@@ -1,6 +1,9 @@
 langcode: de
 status: true
 dependencies:
+  enforced:
+    module:
+      - degov_content_types_shared_fields
   module:
     - lightning_core
     - node

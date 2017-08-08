@@ -1,12 +1,12 @@
 langcode: de
 status: true
 dependencies:
-  enforced:
-    module:
-      - degov_paragraph_downloads
   config:
     - field.storage.paragraph.field_sub_title
     - paragraphs.paragraphs_type.downloads
+  enforced:
+    module:
+      - degov_paragraph_downloads
 id: paragraph.downloads.field_sub_title
 field_name: field_sub_title
 entity_type: paragraph

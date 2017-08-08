@@ -85,3 +85,13 @@
 		}
 	}
 }
+
+@media(max-width: 720px){
+	.node-reference{
+		.small-image{
+			.teaser-image {
+				display: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,24 @@
+dependencies:
+  config:
+    - image.style.crop_thumbnail
+  module:
+    - image_widget_crop
+content:
+  image:
+    type: image_widget_crop
+    weight: 1
+    region: content
+    settings:
+      show_default_crop: true
+      warn_multiple_usages: true
+      preview_image_style: crop_thumbnail
+      crop_preview_image_style: crop_thumbnail
+      crop_list:
+        - 16_to_9
+        - 1_to_1
+        - 2_to_1
+        - 4_to_1
+        - 8_to_3
+      progress_indicator: throbber
+      show_crop_area: false
+    third_party_settings: {  }

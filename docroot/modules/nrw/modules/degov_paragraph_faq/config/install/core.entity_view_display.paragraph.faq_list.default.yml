@@ -12,6 +12,7 @@ dependencies:
       - degov_paragraph_faq
   module:
     - entity_reference_revisions
+    - link
 id: paragraph.faq_list.default
 targetEntityType: paragraph
 bundle: faq_list

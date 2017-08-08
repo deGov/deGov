@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.blog.field_content_paragraphs
     - field.field.node.blog.field_header_paragraphs
     - field.field.node.blog.field_sidebar_right_paragraphs
+    - field.field.node.blog.field_social_media
     - field.field.node.blog.field_tags
     - field.field.node.blog.field_teaser_image
     - field.field.node.blog.field_teaser_text
@@ -37,7 +38,7 @@ content:
     third_party_settings: {  }
   field_teaser_image:
     type: entity_reference_entity_view
-    weight: 2
+    weight: 0
     region: content
     label: hidden
     settings:
@@ -65,6 +66,9 @@ hidden:
   field_content_paragraphs: true
   field_header_paragraphs: true
   field_sidebar_right_paragraphs: true
+  field_social_media: true
   field_tags: true
   langcode: true
   links: true
+  shariff_field: true
+  workbench_moderation_control: true

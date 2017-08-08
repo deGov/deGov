@@ -16,6 +16,7 @@ dependencies:
     module:
       - degov_media_video_upload
   module:
+    - degov_common
     - entity_reference_revisions
 id: media.video_upload.default
 targetEntityType: media

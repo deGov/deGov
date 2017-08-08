@@ -4,6 +4,9 @@ dependencies:
   config:
     - field.storage.paragraph.field_override_caption
     - paragraphs.paragraphs_type.media_reference
+  enforced:
+    module:
+      - degov_paragraph_media_reference
 id: paragraph.media_reference.field_override_caption
 field_name: field_override_caption
 entity_type: paragraph
