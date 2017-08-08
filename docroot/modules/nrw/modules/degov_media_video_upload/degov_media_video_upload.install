@@ -12,3 +12,11 @@ function degov_media_video_upload_uninstall() {
     'entity_bundles' => ['video_upload'],
   ]);
 }
+
+/**
+ * Update media_browser configuration.
+ */
+function degov_media_video_upload_update_8001() {
+  // Add the document upload tab to media browser.
+  \Drupal::service('config_rewrite.config_rewriter')->rewriteModuleConfig('degov_media_video_upload');
+}
