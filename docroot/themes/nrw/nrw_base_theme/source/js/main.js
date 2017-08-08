@@ -219,7 +219,7 @@ const PhotoSwipeUiDefault = require('photoswipe/dist/photoswipe-ui-default');
       });
     }
   };
-  
+
   Drupal.behaviors.datePopup = {
     attach: function (context, settings) {
       $(context).find('.form-type-date').once('date-popup').each(function () {
@@ -229,7 +229,7 @@ const PhotoSwipeUiDefault = require('photoswipe/dist/photoswipe-ui-default');
       });
     }
   };
-  
+
   // Check heigh of image in contact person
   Drupal.behaviors.contactHeight = {
     attach: function (context, settings) {
