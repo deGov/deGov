@@ -1,2 +1,3 @@
 access media manager:
-    title: 'Medienverwaltung benutzen'
+  title: 'Medienverwaltung benutzen'
+  description: 'Mit dieser Berechtigung können Benutzer die Medienverwaltung aufrufen.'

@@ -1,5 +1,5 @@
-name: 'deGov - Media search permissions'
-description: ''
+name: 'deGov - Medienverwaltungsberechtigung'
+description: 'Dieses Modul stellt eine Berechtigung zur Medienverwaltung bereit.'
 package: deGov
 type: module
 core: 8.x
