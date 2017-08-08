@@ -1,0 +1,10 @@
+{
+  "name": "degov_simplenews",
+  "type": "drupal-module",
+  "description": "Adds standard configuration for simplenews.",
+  "license": "GPL-2.0+",
+  "homepage": "https://www.degov.org",
+  "require": {
+    "drupal/simplenews": "^1.0"
+  }
+}
