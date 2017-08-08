@@ -1,6 +1,9 @@
 langcode: de
 status: true
 dependencies:
+  enforced:
+    module:
+      - degov_paragraph_webformular
   module:
     - paragraphs
     - webform

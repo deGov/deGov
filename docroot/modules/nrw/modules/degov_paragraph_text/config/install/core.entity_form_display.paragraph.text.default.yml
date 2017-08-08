@@ -7,12 +7,13 @@ dependencies:
     - field.field.paragraph.text.field_title
     - field.field.paragraph.text.field_title_link
     - paragraphs.paragraphs_type.text
-  module:
-    - text
-    - workbench_moderation
   enforced:
     module:
       - degov_paragraph_text
+  module:
+    - link
+    - text
+    - workbench_moderation
 id: paragraph.text.default
 targetEntityType: paragraph
 bundle: text

@@ -2,8 +2,5 @@ gallery:
   version: 1.0
   js:
     js/gallery.js: {}
-  css:
-    base:
-      libraries/slick/slick.css: {}
-    theme:
-      libraries/slick/slick-theme.css: {}
+  dependecies:
+    - degov_common/slick

@@ -1,6 +1,7 @@
 <?php
 
 use Drupal\degov_common\Common;
+use Drupal\views\ViewExecutable;
 
 /**
  * Implements hook_preprocess().
@@ -13,4 +14,13 @@ function degov_node_press_preprocess(&$variables, $hook, &$info) {
     'entity_bundles' => ['press'],
     'entity_view_modes' => ['teaser', 'latest', 'long_text', 'preview', 'slim', 'small_image']
   ]);
+}
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function degov_node_press_views_pre_render(ViewExecutable $view) {
+  if (isset($view) && ($view->storage->id() == 'latest_press')) {
+    $view->element['#attached']['library'][] = 'degov_node_press/slider';
+  }
 }

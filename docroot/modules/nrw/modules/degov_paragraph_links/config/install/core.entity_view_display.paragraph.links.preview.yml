@@ -6,6 +6,7 @@ dependencies:
     - field.field.paragraph.links.field_links_links
     - field.field.paragraph.links.field_sub_title
     - field.field.paragraph.links.field_title
+    - field.field.paragraph.links.field_title_link
     - paragraphs.paragraphs_type.links
   enforced:
     module:
@@ -45,4 +46,5 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-hidden: {  }
+hidden:
+  field_title_link: true

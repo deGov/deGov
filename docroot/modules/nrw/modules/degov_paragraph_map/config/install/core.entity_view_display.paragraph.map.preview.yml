@@ -4,8 +4,10 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.map.field_map_address_reference
+    - field.field.paragraph.map.field_map_address_view_mode
     - field.field.paragraph.map.field_sub_title
     - field.field.paragraph.map.field_title
+    - field.field.paragraph.map.field_title_link
     - paragraphs.paragraphs_type.map
   enforced:
     module:
@@ -39,4 +41,6 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-hidden: {  }
+hidden:
+  field_map_address_view_mode: true
+  field_title_link: true

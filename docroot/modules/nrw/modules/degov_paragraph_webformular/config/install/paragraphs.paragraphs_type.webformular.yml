@@ -1,6 +1,9 @@
 langcode: de
 status: true
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - degov_paragraph_webformular
 id: webformular
 label: Webformular
 behavior_plugins: {  }

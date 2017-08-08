@@ -6,6 +6,7 @@ dependencies:
     - field.field.paragraph.text.field_sub_title
     - field.field.paragraph.text.field_text_text
     - field.field.paragraph.text.field_title
+    - field.field.paragraph.text.field_title_link
     - paragraphs.paragraphs_type.text
   enforced:
     module:
@@ -41,4 +42,5 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-hidden: {  }
+hidden:
+  field_title_link: true

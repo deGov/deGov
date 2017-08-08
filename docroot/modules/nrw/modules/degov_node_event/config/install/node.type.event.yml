@@ -5,11 +5,8 @@ dependencies:
     module:
       - degov_node_event
   module:
-    - workbench_access
     - workbench_moderation
 third_party_settings:
-  workbench_access:
-    workbench_access_status: true
   workbench_moderation:
     enabled: true
     allowed_moderation_states:

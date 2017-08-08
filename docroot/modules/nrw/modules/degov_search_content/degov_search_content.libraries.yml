@@ -1,0 +1,4 @@
+facet.date_range:
+  version: 1.0
+  js:
+    js/date_range.js: {}

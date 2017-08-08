@@ -7,13 +7,14 @@ dependencies:
   - degov_common
   - entity_reference_revisions
   - field
+  - field_group
+  - lightning_core
   - link
   - media_entity
   - node
   - paragraphs
+  - paragraphs_edit
   - shariff
   - taxonomy
   - text
-  - field_group
   - twig_field_value
-  - paragraphs_edit

@@ -1,11 +1,11 @@
 langcode: de
 status: true
 dependencies:
-  module:
-    - workbench_moderation
   enforced:
     module:
       - degov_paragraph_links
+  module:
+    - workbench_moderation
 third_party_settings:
   workbench_moderation:
     enabled: 0

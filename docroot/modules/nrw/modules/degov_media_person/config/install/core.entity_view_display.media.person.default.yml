@@ -14,6 +14,7 @@ dependencies:
     module:
       - degov_media_person
   module:
+    - degov_common
     - image
     - media_entity
     - text

@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * Implements hook_facets_search_api_query_type_mapping_alter().
+ */
+function degov_search_content_facets_search_api_query_type_mapping_alter($backend_plugin_id, array &$query_types) {
+  $query_types['degov_date_range'] = 'search_api_degov_date_range';
+}

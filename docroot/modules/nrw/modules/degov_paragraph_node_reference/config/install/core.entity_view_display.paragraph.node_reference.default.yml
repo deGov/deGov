@@ -13,6 +13,7 @@ dependencies:
       - degov_paragraph_node_reference
   module:
     - entity_reference_display
+    - link
 id: paragraph.node_reference.default
 targetEntityType: paragraph
 bundle: node_reference
