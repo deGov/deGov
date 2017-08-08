@@ -22,7 +22,7 @@ widget:
   config:
     show_numbers: true
     display_relative: false
-    granularity: '5'
+    granularity: '4'
     date_display: ''
 query_operator: or
 use_hierarchy: false
