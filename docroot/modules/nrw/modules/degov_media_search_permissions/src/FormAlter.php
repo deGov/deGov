@@ -84,7 +84,7 @@ class FormAlter extends \Drupal\entity_reference_integrity_enforce\FormAlter {
           '#weight' => -10,
           'explanation' => [
             '#prefix' => '<p><i>',
-            '#markup' => $entity->label(),
+            '#plain_text' => $entity->label(),
             '#suffix' => '</i><p>',
           ],
           'entities' => $this->buildReferencingEntitiesList($referencing_entities),
