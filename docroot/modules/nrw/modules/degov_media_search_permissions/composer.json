@@ -1,7 +1,7 @@
 {
   "name": "degov_media_search_permissions",
   "type": "drupal-module",
-  "description": ".",
+  "description": "Provides media permission handling.",
   "license": "GPL-2.0+",
   "homepage": "https://www.nrwgov.org",
   "require": {
