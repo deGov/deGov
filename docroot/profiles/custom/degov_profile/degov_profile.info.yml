@@ -39,3 +39,4 @@ base profile:
     - lightning_page
     - lightning_contact_form
     - lightning_roles
+    - lightning_search
