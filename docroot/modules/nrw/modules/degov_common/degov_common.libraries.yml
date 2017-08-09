@@ -1,9 +1,9 @@
 slick:
   version: 1.6.0
   js:
-    libraries/slick/slick.min.js: {}
+    /libraries/slick/slick/slick.min.js: {}
   css:
     base:
-      libraries/slick/slick.css: {}
+      /libraries/slick/slick/slick.css: {}
     theme:
-      libraries/slick/slick-theme.css: {}
+      /libraries/slick/slick/slick-theme.css: {}

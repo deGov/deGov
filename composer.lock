@@ -5331,7 +5331,7 @@
                 },
                 "drupal": {
                     "version": "8.x-5.0-beta13",
-                    "datestamp": "1496266200"
+                    "datestamp": "1498698843"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -6162,6 +6162,16 @@
                 "twitter"
             ],
             "time": "2017-05-08T12:10:56+00:00"
+        },
+        {
+            "name": "kenwheeler/slick",
+            "version": "1.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kenwheeler/slick",
+                "reference": "master"
+            },
+            "type": "drupal-library"
         },
         {
             "name": "masterminds/html5",
@@ -9552,7 +9562,7 @@
                 {
                     "name": "Anthon Pang",
                     "email": "apang@softwaredevelopment.ca",
-                    "role": "Fork maintainer"
+                    "role": "Fork Maintainer"
                 }
             ],
             "description": "PHP WebDriver for Selenium 2",
