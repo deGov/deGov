@@ -1,0 +1,20 @@
+dependencies:
+  config:
+    - media_entity.bundle.video_upload
+  module:
+    - dropzonejs_eb_widget
+    - media_entity
+widgets:
+  d6d67ff3-ab4f-482c-bf0f-aa21ef912d26:
+    settings:
+      form_mode: media_browser
+      media_entity_bundle: video_upload
+      upload_location: 'public://[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Drop files here to upload them'
+      max_filesize: 320M
+      extensions: 'mp4 avi mpeg flv mkv webm mov wmv'
+      submit_text: 'Select entities'
+    uuid: d6d67ff3-ab4f-482c-bf0f-aa21ef912d26
+    weight: -7
+    label: 'Video Hochladen'
+    id: dropzonejs_media_entity_inline_entity_form

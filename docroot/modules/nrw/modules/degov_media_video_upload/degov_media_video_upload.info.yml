@@ -19,3 +19,4 @@ dependencies:
   - paragraphs
   - taxonomy
   - workbench_moderation
+  - dropzonejs_eb_widget
