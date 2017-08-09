@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "dc2fbd0a637e26f829401d4071754fe9",
+    "content-hash": "3ca590c8538e74181d4cc001fd320959",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -1728,8 +1728,58 @@
             },
             "type": "drupal-core",
             "extra": {
+                "installer-paths": {
+                    "docroot/core": [
+                        "type:drupal-core"
+                    ],
+                    "docroot/modules/contrib/{$name}": [
+                        "type:drupal-module"
+                    ],
+                    "docroot/profiles/contrib/{$name}": [
+                        "type:drupal-profile"
+                    ],
+                    "docroot/themes/contrib/{$name}": [
+                        "type:drupal-theme"
+                    ],
+                    "drush/contrib/{$name}": [
+                        "type:drupal-drush"
+                    ],
+                    "docroot/libraries/{$name}": [
+                        "type:drupal-library"
+                    ],
+                    "./docroot/modules/nrwgov/modules/": [
+                        "nrwgov/modules"
+                    ],
+                    "./docroot/modules/nrwgov/features/": [
+                        "nrwgov/features"
+                    ],
+                    "./docroot/modules/nrw/modules/": [
+                        "nrw/modules"
+                    ],
+                    "./docroot/modules/nrw/features/": [
+                        "nrw/features"
+                    ]
+                },
+                "enable-patching": true,
+                "patches": {
+                    "drupal/core": {
+                        "2893029 - StringTranslationTrait consumers cannot be reliably serialized without DependencySerializationTrait": "https://www.drupal.org/files/issues/2893029-full-fix-test-from-3.patch",
+                        "2652542 - Add .install file abilities for Themes": "https://www.drupal.org/files/issues/2652542-add-theme-ability-install-file-and-hook-29-D8.3.patch"
+                    },
+                    "drupal/paragraphs": {
+                        "2788607 - Empty required fields not providing meaningful error messages": "https://www.drupal.org/files/issues/empty_required_fields-2788607-81.patch"
+                    }
+                },
+                "merge-plugin": {
+                    "include": [
+                        "docroot/modules/nrw/*/*/composer.json",
+                        "docroot/modules/nrwgov/*/*/composer.json",
+                        "docroot/modules/custom/*/composer.json",
+                        "docroot/themes/nrw/*/composer.json",
+                        "docroot/themes/nrwgov/*/composer.json"
+                    ]
+                },
                 "patches_applied": {
-                    "2893029 - StringTranslationTrait consumers cannot be reliably serialized without DependencySerializationTrait": "https://www.drupal.org/files/issues/2893029-full-fix-test-from-3.patch",
                     "2652138 - ImageFormatter does not support SVGs": "https://www.drupal.org/files/issues/2652138-41.patch",
                     "1356276 - Allow profiles to provide a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/1356276-303.patch",
                     "2880374 - Experimental modules should not have warnings after being installed": "https://www.drupal.org/files/issues/2880374-remove-experimental-warnings-6.patch",
@@ -4054,7 +4104,8 @@
                 "enable-patching": true,
                 "patches": {
                     "drupal/core": {
-                        "2893029 - StringTranslationTrait consumers cannot be reliably serialized without DependencySerializationTrait": "https://www.drupal.org/files/issues/2893029-full-fix-test-from-3.patch"
+                        "2893029 - StringTranslationTrait consumers cannot be reliably serialized without DependencySerializationTrait": "https://www.drupal.org/files/issues/2893029-full-fix-test-from-3.patch",
+                        "2652542 - Add .install file abilities for Themes": "https://www.drupal.org/files/issues/2652542-add-theme-ability-install-file-and-hook-29-D8.3.patch"
                     },
                     "drupal/paragraphs": {
                         "2788607 - Empty required fields not providing meaningful error messages": "https://www.drupal.org/files/issues/empty_required_fields-2788607-81.patch"
@@ -5331,7 +5382,7 @@
                 },
                 "drupal": {
                     "version": "8.x-5.0-beta13",
-                    "datestamp": "1496266200"
+                    "datestamp": "1498698843"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -9552,7 +9603,7 @@
                 {
                     "name": "Anthon Pang",
                     "email": "apang@softwaredevelopment.ca",
-                    "role": "Fork maintainer"
+                    "role": "Fork Maintainer"
                 }
             ],
             "description": "PHP WebDriver for Selenium 2",

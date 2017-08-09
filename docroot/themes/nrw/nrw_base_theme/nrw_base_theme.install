@@ -4,5 +4,24 @@
  * Implements hook_install().
  */
 function nrw_base_theme_install() {
-  \Drupal::service('config_rewrite.config_rewriter')->rewriteModuleConfig('nrw_base_theme');
+  // Set default settings.
+  \Drupal::configFactory()->getEditable('nrw_base_theme.settings')
+    ->set('fluid_container', '1')
+    ->set('breadcrumb_home', '0')
+    ->set('breadcrumb_title', '1')
+    ->save();
+  // Set default blocks configuration.
+  // Disable unneeded default blocks.
+  \Drupal::configFactory()->getEditable('block.block.nrw_base_theme_account_menu')->set('status', 'false')->save();
+  \Drupal::configFactory()->getEditable('block.block.nrw_base_theme_branding')->set('status', 'false')->save();
+  \Drupal::configFactory()->getEditable('block.block.nrw_base_theme_footer')->set('status', 'false')->save();
+  \Drupal::configFactory()->getEditable('block.block.nrw_base_theme_main_menu')->set('status', 'false')->save();
+  \Drupal::configFactory()->getEditable('block.block.nrw_base_theme_powered')->set('status', 'false')->save();
+  // Set blocks in their regions and set their weight.
+  \Drupal::configFactory()->getEditable('block.block.nrw_base_theme_breadcrumbs')->set('weight', '-4')->save();
+  \Drupal::configFactory()->getEditable('block.block.nrw_base_theme_messages')->set('weight', '-5')->save();
+  \Drupal::configFactory()->getEditable('block.block.nrw_base_theme_page_title')
+    ->set('region', 'header_region')
+    ->set('weight', '-3')
+    ->save();
 }
