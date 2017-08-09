@@ -20,3 +20,6 @@ libraries:
 
 breadcrumb_home: 1
 breadcrumb_title: 0 
+
+dependencies:
+  - config_rewrite
