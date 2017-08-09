@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function nrw_base_theme_install() {
+  \Drupal::service('config_rewrite.config_rewriter')->rewriteModuleConfig('nrw_base_theme');
+}
