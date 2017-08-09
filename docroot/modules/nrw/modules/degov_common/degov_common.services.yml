@@ -3,3 +3,6 @@ services:
     class: Drupal\degov_common\Twig\Extension\FieldQuickEditAttributesExtension
     tags:
       - { name: twig.extension }
+  degov_config.updater:
+    class: Drupal\degov_common\DegovConfigUpdate
+    arguments: ['@config.storage', '@event_dispatcher', '@config.manager', '@lock', '@config.typed', '@module_handler', '@module_installer', '@theme_handler', '@string_translation']
