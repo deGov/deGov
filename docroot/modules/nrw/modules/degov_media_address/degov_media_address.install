@@ -12,3 +12,10 @@ function degov_media_address_uninstall() {
     'entity_bundles' => ['address'],
   ]);
 }
+
+/**
+ * Enable the usage view mode.
+ */
+function degov_media_address_update_8001() {
+  \Drupal::service('degov_config.updater')->configPartialImport('degov_media_address');
+}

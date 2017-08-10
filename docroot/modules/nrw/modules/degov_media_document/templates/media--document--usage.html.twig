@@ -1,0 +1,36 @@
+{#
+/**
+ * @file
+ * Default theme implementation to present a media entity.
+ *
+ * Available variables:
+ * - name: Name of the media.
+ * - content: Media content.
+ *
+ * @see template_preprocess_media()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+set media_classes = [
+  'document',
+  'clearfix',
+]
+%}
+<article{{ attributes.addClass(media_classes) }}>
+  {{ content.contextual_links }}
+  <div class="document__title"><a type="{{ media_mime }}; length={{ media_bytes }}" href="{{ media_url }}">{{ name }}</a></div>
+  <div class="document__meta" >
+    <span class="mime-{{ media_mime|clean_class }}"></span>{{ media_size }}
+  </div>
+  {% if content.field_tags|field_value %}
+    <div class="tags"{{ content.field_tags|quickedit_attr }}>{{ content.field_tags|field_value }}</div>
+  {% endif %}
+  {% if content.usage %}
+    <div class="document__usage">
+      <h2>{{ 'Usage'|trans }}</h2>
+      {{  content.usage }}
+    </div>
+  {% endif %}
+</article>

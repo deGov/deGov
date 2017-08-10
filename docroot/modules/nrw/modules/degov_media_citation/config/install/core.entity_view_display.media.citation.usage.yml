@@ -1,0 +1,90 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.media.citation.field_citation_date
+    - field.field.media.citation.field_citation_image
+    - field.field.media.citation.field_citation_text
+    - field.field.media.citation.field_citation_title
+    - field.field.media.citation.field_include_search
+    - field.field.media.citation.field_media_in_library
+    - field.field.media.citation.field_tags
+    - image.style.large
+    - image.style.thumbnail
+    - media_entity.bundle.citation
+  enforced:
+    module:
+      - degov_media_citation
+  module:
+    - datetime
+    - degov_common
+    - image
+    - media_entity
+id: media.citation.usage
+targetEntityType: media
+bundle: citation
+mode: usage
+content:
+  field_citation_date:
+    weight: 7
+    label: above
+    settings:
+      format_type: short
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_citation_image:
+    weight: 6
+    label: hidden
+    settings:
+      image_style: large
+      image_link: ''
+    third_party_settings: {  }
+    type: media_thumbnail
+    region: content
+  field_citation_text:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_citation_title:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tags:
+    type: taxonomy_term_search
+    weight: 8
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    label: hidden
+    type: string
+    weight: 0
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  thumbnail:
+    type: image
+    weight: 3
+    label: hidden
+    settings:
+      image_style: thumbnail
+      image_link: ''
+    region: content
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_include_search: true
+  field_media_in_library: true
+  langcode: true
+  uid: true

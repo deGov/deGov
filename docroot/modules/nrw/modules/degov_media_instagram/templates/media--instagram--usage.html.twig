@@ -1,0 +1,25 @@
+{#
+/**
+ * @file
+ * Default theme implementation to present a media entity.
+ *
+ * Available variables:
+ * - name: Name of the media.
+ * - content: Media content.
+ *
+ * @see template_preprocess_media()
+ *
+ * @ingroup themeable
+ */
+#}
+<article{{ attributes }}>
+  {% if content %}
+    {{ content }}
+  {% endif %}
+  {% if content.usage %}
+    <div class="instagram__usage">
+      <h2>{{ 'Usage'|trans }}</h2>
+      {{  content.usage }}
+    </div>
+  {% endif %}
+</article>

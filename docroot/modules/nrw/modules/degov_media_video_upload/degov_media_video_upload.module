@@ -12,7 +12,7 @@ function degov_media_video_upload_preprocess(&$variables, $hook, &$info) {
     'module_name' => 'degov_media_video_upload',
     'entity_type' => 'media',
     'entity_bundles' => ['video_upload'],
-    'entity_view_modes' => [],
+    'entity_view_modes' => ['usage'],
   ]);
 }
 
