@@ -27,10 +27,10 @@ set media_classes = [
       <div class="media-contact__image">{{ content.field_contact_image|field_value }}</div>
     </div>
     <div class="col-md-12 media-contact__info">
-      <div class="media-contact__title"{{ content.field_contact_title|quickedit_attr }}>{{ content.field_contact_title|field_value }}</div>
-      <div class="media-contact__tel"{{ content.field_contact_tel|quickedit_attr }}>{% trans %}Tel.:{% endtrans %} {{ content.field_contact_tel|field_value }}</div>
-      <div class="media-contact__fax"{{ content.field_contact_fax|quickedit_attr }}>{% trans %}Fax:{% endtrans %} {{ content.field_contact_fax|field_value }}</div>
-      <div class="media-contact__email"{{ content.field_contact_email|quickedit_attr }}>{% trans %}E-Mail:{% endtrans %} <a href="mailto:{{ content.field_contact_email|field_value }}">{{ content.field_contact_email|field_value }}</a></div>
+      {% if content.field_contact_title|field_value %}<div class="media-contact__title"{{ content.field_contact_title|quickedit_attr }}>{{ content.field_contact_title|field_value }}</div> {% endif %}
+      {% if content.field_contact_tel|field_value %}<div class="media-contact__tel"{{ content.field_contact_tel|quickedit_attr }}>{% trans %}Tel.:{% endtrans %} {{ content.field_contact_tel|field_value }}</div>{% endif  %}
+      {% if content.field_contact_fax|field_value %}<div class="media-contact__fax"{{ content.field_contact_fax|quickedit_attr }}>{% trans %}Fax:{% endtrans %} {{ content.field_contact_fax|field_value }}</div>{% endif  %}
+      {% if content.field_contact_email|field_value %}<div class="media-contact__email"{{ content.field_contact_email|quickedit_attr }}>{% trans %}E-Mail:{% endtrans %} <a href="mailto:{{ content.field_contact_email|field_value }}">{{ content.field_contact_email|field_value }}</a></div>{% endif  %}
     </div>
     {% if content.field_tags|field_value %}
       <div class="tags"{{ content.field_tags|quickedit_attr }}>{{ content.field_tags|field_value }}</div>
