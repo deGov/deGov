@@ -20,7 +20,7 @@ function degov_node_press_preprocess(&$variables, $hook, &$info) {
  * Implements hook_views_pre_render().
  */
 function degov_node_press_views_pre_render(ViewExecutable $view) {
-  if (isset($view) && ($view->storage->id() == 'latest_press')) {
+  if (isset($view) && ($view->storage->id() == 'press_latest_content')) {
     $view->element['#attached']['library'][] = 'degov_node_press/slider';
   }
 }

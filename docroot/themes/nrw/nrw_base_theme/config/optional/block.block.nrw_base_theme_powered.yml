@@ -1,0 +1,22 @@
+langcode: de
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - nrw_base_theme
+  enforced:
+    theme:
+      - nrw_base_theme
+id: nrw_base_theme_powered
+theme: nrw_base_theme
+region: header_region
+weight: 1
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

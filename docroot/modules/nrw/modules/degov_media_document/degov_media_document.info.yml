@@ -13,3 +13,4 @@ dependencies:
   - media_entity_document
   - taxonomy
   - workbench_moderation
+  - dropzonejs_eb_widget

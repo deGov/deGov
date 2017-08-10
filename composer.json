@@ -174,7 +174,13 @@
         "patches": {
             "drupal/core": {
                 "2893029 - StringTranslationTrait consumers cannot be reliably serialized without DependencySerializationTrait":
-                "https://www.drupal.org/files/issues/2893029-full-fix-test-from-3.patch"
+                "https://www.drupal.org/files/issues/2893029-full-fix-test-from-3.patch",
+                "2652542 - Add .install file abilities for Themes":
+                "https://www.drupal.org/files/issues/2652542-add-theme-ability-install-file-and-hook-29-D8.3.patch"
+            },
+            "drupal/paragraphs" : {
+                "2788607 - Empty required fields not providing meaningful error messages" :
+                "https://www.drupal.org/files/issues/empty_required_fields-2788607-81.patch"
             }
         },
         "merge-plugin": {

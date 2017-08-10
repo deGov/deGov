@@ -1,0 +1,20 @@
+dependencies:
+  config:
+    - media_entity.bundle.document
+  module:
+    - dropzonejs_eb_widget
+    - media_entity
+widgets:
+  88a662a5-10c0-4229-b807-07b76e36b771:
+    settings:
+      form_mode: media_browser
+      media_entity_bundle: document
+      upload_location: 'public://documents/[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Drop files here to upload them'
+      max_filesize: 50M
+      extensions: 'txt doc xls pdf ppt pps odt ods odp'
+      submit_text: 'Select entities'
+    uuid: 88a662a5-10c0-4229-b807-07b76e36b771
+    weight: -8
+    label: 'Dokumente Hochladen'
+    id: dropzonejs_media_entity_inline_entity_form

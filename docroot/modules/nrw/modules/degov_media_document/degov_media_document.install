@@ -1,29 +1,16 @@
 <?php
 
-use Drupal\degov_common\Common;
-
-/**
- * Implements hook_uninstall().
- */
-function degov_media_video_upload_uninstall() {
-  // Removes all module type defined content when uninstalling the module.
-  Common::removeContent([
-    'entity_type' => 'media',
-    'entity_bundles' => ['video_upload'],
-  ]);
-}
-
 /**
  * Update media_browser configuration.
  */
-function degov_media_video_upload_update_8001() {
+function degov_media_document_update_8001() {
   // Check if module dropzonejs_eb_widget is enabled.
   if (!\Drupal::moduleHandler()->moduleExists('dropzonejs_eb_widget')) {
     // If not install it.
     \Drupal::service('module_installer')->install(['dropzonejs','dropzonejs_eb_widget']);
   }
   // Add the document upload tab to media browser.
-  \Drupal::service('config_rewrite.config_rewriter')->rewriteModuleConfig('degov_media_video_upload');
+  \Drupal::service('config_rewrite.config_rewriter')->rewriteModuleConfig('degov_media_document');
   // Clear plugin manager caches.
   \Drupal::getContainer()->get('plugin.cache_clearer')->clearCachedDefinitions();
 }
