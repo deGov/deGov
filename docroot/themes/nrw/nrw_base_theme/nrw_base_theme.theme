@@ -15,3 +15,17 @@
  * @param $variables
  */
 
+function nrw_base_theme_theme_suggestions_input_alter(&$suggestions, &$vars, $hook) {
+  $element = $vars['element'];
+  if (isset($element['#attributes']['data-twig-suggestion'])) {
+    $suggestions[] = 'input__' . $element['#type'] . '__' . $element['#attributes']['data-twig-suggestion'];
+  }
+}
+
+
+function nrw_base_theme_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+   if ($form['#id'] == 'views-exposed-form-search-content-page-1') {  
+    $form['actions']['submit']['#attributes']['data-twig-suggestion'] = 'search_results_submit';
+    $form['actions']['submit']['#attributes']['class'][] = 'search-box__button';
+  }
+}
