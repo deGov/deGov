@@ -63,6 +63,14 @@
         $('.prev-slick-img img').attr('src', next_prev_slick_img);
         $('.prev-slick-img').css('background-image', 'url(' + next_prev_slick_img + ')');
       }
+      $('.slick__pause').on('click', function () {
+          $('.slideshow__slides').slick('slickPause');
+          $(this).hide().siblings('.slick__play').show();
+      });
+      $('.slick__play').on('click', function () {
+          $('.slideshow__slides').slick('slickPlay');
+          $(this).hide().siblings('.slick__pause').show();
+      });
       // End
     }
   }

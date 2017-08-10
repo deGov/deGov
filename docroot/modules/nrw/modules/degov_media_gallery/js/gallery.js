@@ -54,7 +54,14 @@
         $('.slick__counter__current').text(i);
         $('.slick__counter__total').text(slick.slideCount);
       });
-
+      $('.slick__pause').on('click', function () {
+          $('.slideshow__slides').slick('slickPause');
+          $(this).hide().siblings('.slick__play').show();
+      });
+      $('.slick__play').on('click', function () {
+          $('.slideshow__slides').slick('slickPlay');
+          $(this).hide().siblings('.slick__pause').show();
+      });
     }
   }
 
