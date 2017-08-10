@@ -1,0 +1,22 @@
+langcode: de
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - nrw_base_theme
+  enforced:
+    theme:
+      - nrw_base_theme
+id: nrw_base_theme_help
+theme: nrw_base_theme
+region: content
+weight: -5
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Hilfe
+  provider: help
+  label_display: '0'
+visibility: {  }

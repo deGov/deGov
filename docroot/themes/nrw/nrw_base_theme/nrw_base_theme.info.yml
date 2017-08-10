@@ -3,7 +3,7 @@ type: theme
 base theme: bootstrap
 
 name: 'NRW - Base theme'
-description: 'Base theme for the deGov distribution. Depends on Bootstrap theme.'
+description: 'Base theme for the NRW distribution. Depends on Bootstrap theme.'
 package: 'Bootstrap'
 
 regions:
@@ -16,6 +16,3 @@ libraries:
   - 'nrw_base_theme/theme-assets'
   - 'nrw_base_theme/photoswipe'
   - 'nrw_base_theme/selectize'
-
-breadcrumb_home: 1
-breadcrumb_title: 0 
