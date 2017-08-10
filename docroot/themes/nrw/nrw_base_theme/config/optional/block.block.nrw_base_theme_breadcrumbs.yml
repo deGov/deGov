@@ -11,7 +11,7 @@ dependencies:
 id: nrw_base_theme_breadcrumbs
 theme: nrw_base_theme
 region: header_region
-weight: -100
+weight: -5
 provider: null
 plugin: system_breadcrumb_block
 settings:
