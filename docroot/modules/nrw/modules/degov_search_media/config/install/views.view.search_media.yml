@@ -8,6 +8,7 @@ dependencies:
       - degov_search_media
   module:
     - search_api
+    - user
 id: search_media
 label: Mediensuche
 module: views
@@ -24,8 +25,9 @@ display:
     position: 0
     display_options:
       access:
-        type: none
-        options: {  }
+        type: perm
+        options:
+          perm: 'view media'
       cache:
         type: tag
         options: {  }
@@ -65,7 +67,21 @@ display:
       style:
         type: default
       row:
-        type: fields
+        type: search_api
+        options:
+          view_modes:
+            'entity:media':
+              address: default
+              citation: default
+              contact: default
+              document: default
+              gallery: default
+              image: default
+              instagram: default
+              person: default
+              tweet: default
+              video: default
+              video_upload: default
       fields:
         changed:
           table: search_api_index_search_media
@@ -402,6 +418,7 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - user.permissions
       tags: {  }
   mediathek:
     display_plugin: page
@@ -640,6 +657,7 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - user.permissions
       tags: {  }
   medienverwaltung:
     display_plugin: page
@@ -655,7 +673,9 @@ display:
         title: false
         filters: false
         filter_groups: false
-        access: true
+        access: false
+        style: false
+        row: false
       filters:
         search_api_fulltext:
           id: search_api_fulltext
@@ -717,6 +737,29 @@ display:
         operator: AND
         groups:
           1: AND
+      access:
+        type: perm
+        options:
+          perm: 'access media manager'
+      style:
+        type: default
+        options: {  }
+      row:
+        type: search_api
+        options:
+          view_modes:
+            'entity:media':
+              address: usage
+              citation: usage
+              contact: usage
+              document: usage
+              gallery: usage
+              image: usage
+              instagram: usage
+              person: usage
+              tweet: usage
+              video: usage
+              video_upload: usage
     cache_metadata:
       max-age: -1
       contexts:
@@ -724,4 +767,5 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - user.permissions
       tags: {  }
