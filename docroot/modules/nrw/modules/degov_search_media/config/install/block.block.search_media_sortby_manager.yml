@@ -9,20 +9,20 @@ dependencies:
     - system
   theme:
     - nrw_base_theme
-id: search_media_sortby
+id: search_media_sortby_manager
 theme: nrw_base_theme
 region: content
-weight: -10
+weight: -15
 provider: null
-plugin: 'search_api_sorts_block:views_page:search_media__mediathek'
+plugin: 'search_api_sorts_block:views_page:search_media__medienverwaltung'
 settings:
-  id: 'search_api_sorts_block:views_page:search_media__mediathek'
-  label: 'Sort by (View Mediensuche, display Mediathek)'
+  id: 'search_api_sorts_block:views_page:search_media__medienverwaltung'
+  label: 'Sort by (View Mediensuche, display Medienverwaltung)'
   provider: search_api_sorts
-  label_display: 0
+  label_display: '0'
 visibility:
   request_path:
     id: request_path
-    pages: /mediathek
+    pages: /medienverwaltung
     negate: false
     context_mapping: {  }

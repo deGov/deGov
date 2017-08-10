@@ -1,27 +1,25 @@
 langcode: de
 status: true
 dependencies:
-  config:
-    - facets.facet.search_media_bundle
   enforced:
     module:
       - degov_search_media
   module:
-    - facets
+    - search_api_sorts
     - system
   theme:
     - nrw_base_theme
-id: search_media_bundle
+id: search_media_sortby
 theme: nrw_base_theme
 region: content
-weight: -8
+weight: -15
 provider: null
-plugin: 'facet_block:search_media_bundle'
+plugin: 'search_api_sorts_block:views_page:search_media__mediathek'
 settings:
-  id: 'facet_block:search_media_bundle'
-  label: Medientyp
-  provider: facets
-  label_display: visible
+  id: 'search_api_sorts_block:views_page:search_media__mediathek'
+  label: 'Sort by (View Mediensuche, display Mediathek)'
+  provider: search_api_sorts
+  label_display: '0'
 visibility:
   request_path:
     id: request_path
