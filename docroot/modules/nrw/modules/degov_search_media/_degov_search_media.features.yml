@@ -1,9 +1,1 @@
-excluded:
-  - facets.facet_source.search_api__views_page__search_content__page_1
-  - search_api_sorts.search_api_sorts_field.views_page---search_content__page_1_changed
-  - search_api_sorts.search_api_sorts_field.views_page---search_content__page_1_node_grants
-  - search_api_sorts.search_api_sorts_field.views_page---search_content__page_1_search_api_relevance
-  - search_api_sorts.search_api_sorts_field.views_page---search_content__page_1_status
-  - search_api_sorts.search_api_sorts_field.views_page---search_content__page_1_type
-  - search_api_sorts.search_api_sorts_field.views_page---search_content__page_1_uid
 required: true

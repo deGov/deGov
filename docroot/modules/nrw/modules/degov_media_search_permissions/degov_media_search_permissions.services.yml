@@ -1,5 +1,0 @@
-services:
-  media_access:
-    class: '\Drupal\degov_media_search_permissions\EventSubscriber\MediaPermissionSubscriber'
-    tags:
-      - { name: 'event_subscriber' }

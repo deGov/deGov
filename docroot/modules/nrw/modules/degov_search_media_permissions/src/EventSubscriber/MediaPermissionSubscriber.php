@@ -2,10 +2,10 @@
 
 /**
  * @file
- * Contains \Drupal\degov_media_search_permissions\EventSubscriber\MediaPermissionSubscriber
+ * Contains \Drupal\degov_search_media_permissions\EventSubscriber\MediaPermissionSubscriber
  */
 
-namespace Drupal\degov_media_search_permissions\EventSubscriber;
+namespace Drupal\degov_search_media_permissions\EventSubscriber;
 
 use Drupal\Core\Url;
 use Drupal\media_entity\MediaInterface;
