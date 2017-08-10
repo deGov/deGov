@@ -234,6 +234,7 @@ const PhotoSwipeUiDefault = require('photoswipe/dist/photoswipe-ui-default');
   Drupal.behaviors.selectize = {
     attach: function (context, settings) {
       $('.webform-submission-form .form-select').selectric();
+      $('.block-facets .facets-dropdown').selectric();
     }
   };
 
