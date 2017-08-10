@@ -3,7 +3,7 @@ status: true
 dependencies:
   enforced:
     module:
-      - degov_media_search_permissions
+      - degov_content_types_shared_fields
   module:
     - lightning_core
     - media_entity
