@@ -279,6 +279,7 @@
 	  Drupal.behaviors.selectize = {
 	    attach: function attach(context, settings) {
 	      $('.webform-submission-form .form-select').selectric();
+	      $('.block-facets .facets-dropdown').selectric();
 	    }
 	  };
 
