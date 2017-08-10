@@ -137,3 +137,48 @@ form.webform-submission-form{
     }
   }
 }
+.selectric-wrapper{
+  .selectric{
+    background-color: rgba($nrw-secondary, 0);
+    &:hover{
+      border: 0;
+    }
+    .label{
+      text-align: left;
+    }
+    .button{
+      @include icon-after($fa-var-angle-down);
+      &:after{
+        border:0;
+        font-size: $font-size-h2;
+        color: $brand-primary;
+        width: auto;
+        height: auto;
+        position: relative;
+        top: $grid-gutter-width/7.7;
+      }
+    }
+    &-open{
+      .button{
+        
+        &:after{
+          transform: rotate(180deg);
+        }
+      }
+    }
+    &-items{
+      li{
+        color: $color-white;
+        background-color: rgba($nrw-secondary, 1);
+        &:hover{
+          background-color: rgba($nrw-secondary, 0.1);
+          color: $text-color;
+        }
+        &.selected{
+          background-color: rgba($nrw-secondary, 0.1);
+          color: $text-color;
+        }
+      }
+    }
+  }
+}
