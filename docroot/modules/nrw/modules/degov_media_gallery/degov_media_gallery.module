@@ -16,7 +16,7 @@ function degov_media_gallery_preprocess(&$variables, $hook, &$info) {
     'module_name' => 'degov_media_gallery',
     'entity_type' => 'media',
     'entity_bundles' => ['gallery'],
-    'entity_view_modes' => [],
+    'entity_view_modes' => ['usage'],
   ]);
 }
 

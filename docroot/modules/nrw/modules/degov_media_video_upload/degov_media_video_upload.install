@@ -27,3 +27,10 @@ function degov_media_video_upload_update_8001() {
   // Clear plugin manager caches.
   \Drupal::getContainer()->get('plugin.cache_clearer')->clearCachedDefinitions();
 }
+
+/**
+ * Enable the usage view mode.
+ */
+function degov_media_video_upload_update_8002() {
+  \Drupal::service('degov_config.updater')->configPartialImport('degov_media_video_upload');
+}

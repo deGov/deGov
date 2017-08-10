@@ -11,6 +11,6 @@ function degov_media_tweet_preprocess(&$variables, $hook, &$info) {
     'module_name' => 'degov_media_tweet',
     'entity_type' => 'media',
     'entity_bundles' => ['tweet'],
-    'entity_view_modes' => [],
+    'entity_view_modes' => ['usage'],
   ]);
 }

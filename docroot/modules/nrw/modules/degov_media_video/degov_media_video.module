@@ -11,6 +11,6 @@ function degov_media_video_preprocess(&$variables, $hook, &$info) {
     'module_name' => 'degov_media_video',
     'entity_type' => 'media',
     'entity_bundles' => ['video'],
-    'entity_view_modes' => [],
+    'entity_view_modes' => ['usage'],
   ]);
 }
