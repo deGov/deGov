@@ -60,6 +60,7 @@
 	&__media {
 		margin: 0 $grid-gutter-width/-2;
 	}
+
 	&__text {
 		background: $brand-primary;
 		color: $color-white;
@@ -82,6 +83,12 @@
 			@include triangle-down;
 			bottom: -15px;
 			left: $grid-gutter-width/2;
+		}
+		.tags{
+			margin-top: $grid-gutter-width/3;
+		}
+		.sharing{
+			margin-top: $grid-gutter-width/3;
 		}
 	}
 }

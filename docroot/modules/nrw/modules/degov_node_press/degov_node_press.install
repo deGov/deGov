@@ -12,3 +12,13 @@ function degov_node_press_uninstall() {
     'entity_bundles' => ['press'],
   ]);
 }
+
+/**
+ * Update and merges the latest press views.
+ */
+function degov_node_press_update_8001() {
+  \Drupal::service('degov_config.updater')->configPartialImport('degov_node_press');
+  // Remove deprecated and merged latest_press view.
+  $view = \Drupal\Views\Views::getView('latest_press');
+  $view->storage->delete();
+}

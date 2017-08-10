@@ -2,12 +2,13 @@ langcode: de
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.latest
     - node.type.press
   enforced:
     module:
       - degov_node_press
   module:
+    - datetime
     - node
     - taxonomy
     - user
@@ -59,14 +60,14 @@ display:
       style:
         type: default
         options:
-          row_class: row
+          row_class: ''
           default_row_class: true
           uses_fields: false
       row:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: teaser
+          view_mode: latest
       fields:
         title:
           id: title
@@ -168,7 +169,18 @@ display:
           plugin_id: datetime
       title: 'Neuste Pressemitteilung'
       header: {  }
-      footer: {  }
+      footer:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content: "<p> <a href=\"/de/pressetermine\"><i class=\"fa fa-arrow-right\" aria-hidden=\"true\"></i>PRESSETERMINE</a>\n<a href=\"/de/aktuelles-und-presse/pressekontakt\"><i class=\"fa fa-arrow-right\" aria-hidden=\"true\"></i>PRESSEKONTAKT</a></p>"
+          plugin_id: text_custom
       empty: {  }
       relationships:
         field_tags:
@@ -261,6 +273,7 @@ display:
           entity_field: nid
           plugin_id: node_nid
       display_extenders: {  }
+      css_class: press-list
     cache_metadata:
       max-age: -1
       contexts:
