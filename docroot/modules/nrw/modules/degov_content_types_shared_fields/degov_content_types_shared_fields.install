@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * Add the usage view mode.
+ */
+function degov_media_video_upload_update_8002() {
+  \Drupal::service('degov_config.updater')->configPartialImport('degov_content_types_shared_fields');
+}
