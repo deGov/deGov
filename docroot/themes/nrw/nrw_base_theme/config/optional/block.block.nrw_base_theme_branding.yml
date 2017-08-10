@@ -1,0 +1,25 @@
+langcode: de
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - nrw_base_theme
+  enforced:
+    theme:
+      - nrw_base_theme
+id: nrw_base_theme_branding
+theme: nrw_base_theme
+region: header_region
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

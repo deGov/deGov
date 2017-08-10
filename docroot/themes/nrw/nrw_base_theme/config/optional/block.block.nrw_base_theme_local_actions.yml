@@ -1,0 +1,22 @@
+langcode: de
+status: true
+dependencies:
+  theme:
+    - nrw_base_theme
+  theme:
+    - nrw_base_theme
+  enforced:
+    theme:
+      - nrw_base_theme
+id: nrw_base_theme_local_actions
+theme: nrw_base_theme
+region: content
+weight: -4
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primäre Admin-Aktionen'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - nrw_base_theme
+  enforced:
+    theme:
+      - nrw_base_theme
+id: nrw_base_theme_breadcrumbs
+theme: nrw_base_theme
+region: header_region
+weight: -100
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }
