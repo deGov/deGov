@@ -2,7 +2,7 @@ langcode: de
 status: true
 dependencies:
   config:
-    - facets.facet.search_media_changed
+    - facets.facet.search_media_bundle
   enforced:
     module:
       - degov_search_media
@@ -11,20 +11,20 @@ dependencies:
     - system
   theme:
     - nrw_base_theme
-id: search_media_changed
+id: search_media_bundle
 theme: nrw_base_theme
 region: content
-weight: -13
+weight: -14
 provider: null
-plugin: 'facet_block:search_media_changed'
+plugin: 'facet_block:search_media_bundle'
 settings:
-  id: 'facet_block:search_media_changed'
-  label: Änderungsdatum
+  id: 'facet_block:search_media_bundle'
+  label: Medientyp
   provider: facets
   label_display: visible
 visibility:
   request_path:
     id: request_path
-    pages: /mediathek
+    pages: "/mediathek\r\n/medienverwaltung"
     negate: false
     context_mapping: {  }
