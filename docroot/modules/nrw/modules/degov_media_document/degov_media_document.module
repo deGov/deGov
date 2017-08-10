@@ -26,6 +26,6 @@ function degov_media_document_preprocess(&$variables, $hook, &$info) {
     'module_name' => 'degov_media_document',
     'entity_type' => 'media',
     'entity_bundles' => ['document'],
-    'entity_view_modes' => [],
+    'entity_view_modes' => ['usage'],
   ]);
 }

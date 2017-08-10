@@ -14,3 +14,10 @@ function degov_media_document_update_8001() {
   // Clear plugin manager caches.
   \Drupal::getContainer()->get('plugin.cache_clearer')->clearCachedDefinitions();
 }
+
+/**
+ * Enable the usage view mode.
+ */
+function degov_media_document_update_8002() {
+  \Drupal::service('config_rewrite.config_rewriter')->rewriteModuleConfig('degov_media_document');
+}

@@ -1,0 +1,88 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.media.gallery.field_gallery_images
+    - field.field.media.gallery.field_gallery_sub_title
+    - field.field.media.gallery.field_gallery_text
+    - field.field.media.gallery.field_gallery_title
+    - field.field.media.gallery.field_include_search
+    - field.field.media.gallery.field_media_in_library
+    - field.field.media.gallery.field_tags
+    - image.style.thumbnail
+    - media_entity.bundle.gallery
+  enforced:
+    module:
+      - degov_media_gallery
+  module:
+    - degov_common
+    - image
+    - text
+id: media.gallery.usage
+targetEntityType: media
+bundle: gallery
+mode: usage
+content:
+  field_gallery_images:
+    weight: 5
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_gallery_sub_title:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_gallery_text:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_gallery_title:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tags:
+    weight: 7
+    label: above
+    settings:
+      route_name: ''
+    third_party_settings: {  }
+    type: taxonomy_term_search
+    region: content
+  name:
+    label: hidden
+    type: string
+    weight: -5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  thumbnail:
+    type: image
+    weight: 1
+    label: hidden
+    settings:
+      image_style: thumbnail
+      image_link: ''
+    region: content
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_include_search: true
+  field_media_in_library: true
+  langcode: true
+  uid: true

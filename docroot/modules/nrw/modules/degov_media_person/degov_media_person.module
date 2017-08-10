@@ -17,6 +17,6 @@ function degov_media_person_preprocess(&$variables, $hook, &$info) {
     'module_name' => 'degov_media_person',
     'entity_type' => 'media',
     'entity_bundles' => ['person'],
-    'entity_view_modes' => [],
+    'entity_view_modes' => ['usage'],
   ]);
 }
