@@ -1,12 +1,12 @@
 <?php
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\degov_media_search_permissions\FormAlter;
+use Drupal\degov_search_media_permissions\FormAlter;
 use Drupal\media_entity\MediaInterface;
 
 /**
  * Implements hook_form_alter().
  */
-function degov_media_search_permissions_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+function degov_search_media_permissions_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   \Drupal::service('class_resolver')
     ->getInstanceFromDefinition(FormAlter::class)
     ->formAlter($form, $form_state, $form_id);
@@ -15,7 +15,7 @@ function degov_media_search_permissions_form_alter(&$form, FormStateInterface $f
 /**
  * Implements hook_preprocess_media().
  */
-function degov_media_search_permissions_preprocess_media(&$variables) {
+function degov_search_media_permissions_preprocess_media(&$variables) {
   $view_mode = $variables['elements']['#view_mode'];
   $media = $variables['media'];
 
