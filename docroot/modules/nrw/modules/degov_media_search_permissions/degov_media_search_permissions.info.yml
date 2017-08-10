@@ -4,5 +4,6 @@ package: deGov
 type: module
 core: 8.x
 dependencies:
+  - degov_media_search
   - entity_reference_integrity
   - entity_reference_integrity_enforce
