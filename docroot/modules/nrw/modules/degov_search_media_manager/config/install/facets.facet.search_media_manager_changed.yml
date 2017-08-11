@@ -3,26 +3,28 @@ status: true
 dependencies:
   config:
     - search_api.index.search_media
-    - views.view.search_media
+    - views.view.search_media_manager
   enforced:
     module:
-      - degov_search_media
+      - degov_search_media_manager
   module:
     - search_api
-id: search_media_bundle
-name: Medientyp
-url_alias: type
+id: search_media_manager_changed
+name: Änderungsdatum
+url_alias: changed
 weight: 0
 min_count: 1
-show_only_one_result: true
-field_identifier: bundle
-facet_source_id: 'search_api:views_page__search_media__page'
+show_only_one_result: false
+field_identifier: changed
+facet_source_id: 'search_api:views_page__search_media_manager__page'
 widget:
-  type: dropdown
+  type: degov_date_range_picker
   config:
     show_numbers: true
-    default_option_label: Auswählen
-query_operator: and
+    display_relative: false
+    granularity: '4'
+    date_display: ''
+query_operator: or
 use_hierarchy: false
 expand_hierarchy: false
 enable_parent_when_child_gets_disabled: true
@@ -48,11 +50,6 @@ processor_configs:
       sort: -10
     settings:
       sort: ASC
-  list_item:
-    processor_id: list_item
-    weights:
-      build: 5
-    settings: {  }
   url_processor_handler:
     processor_id: url_processor_handler
     weights:

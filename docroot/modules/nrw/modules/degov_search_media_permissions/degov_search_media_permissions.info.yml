@@ -1,9 +1,0 @@
-name: 'deGov - Medienverwaltungsberechtigung'
-description: 'Dieses Modul stellt eine Berechtigung zur Medienverwaltung bereit.'
-package: deGov
-type: module
-core: 8.x
-dependencies:
-  - degov_search_media
-  - entity_reference_integrity
-  - entity_reference_integrity_enforce

@@ -3,20 +3,20 @@ status: true
 dependencies:
   config:
     - search_api.index.search_media
-    - views.view.search_media
+    - views.view.search_media_manager
   enforced:
     module:
-      - degov_search_media
+      - degov_search_media_manager
   module:
     - search_api
-id: search_media_bundle
+id: search_media_manager_bundle
 name: Medientyp
 url_alias: type
 weight: 0
 min_count: 1
 show_only_one_result: true
 field_identifier: bundle
-facet_source_id: 'search_api:views_page__search_media__page'
+facet_source_id: 'search_api:views_page__search_media_manager__page'
 widget:
   type: dropdown
   config:
