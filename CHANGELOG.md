@@ -28,3 +28,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Fix wrong attribute usages in the slideshow module libraries.
 - Required empty paragraph fields now show a meaningfull error message.
 - Socials media buttons show under the content tags.
+- Missing functionality fixes for pause/play in slick sliders.
