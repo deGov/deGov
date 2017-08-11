@@ -46,8 +46,8 @@ class DateRangePicker extends WidgetPluginBase {
         if (count($value) != 2) {
           continue;
         }
-        $startDate = $value[0];
-        $endDate = $value[1];
+        $startDate = ($value[0] != '*') ? $value[0] : '';
+        $endDate = ($value[1] != '*') ? $value[1] : '';
       }
     }
 
