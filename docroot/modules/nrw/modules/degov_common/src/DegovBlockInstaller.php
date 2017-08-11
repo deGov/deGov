@@ -5,6 +5,7 @@ namespace Drupal\degov_common;
 
 use Drupal\config\Form\ConfigSync;
 use Drupal\config\StorageReplaceDataWrapper;
+use Drupal\Core\Config\ConfigException;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Config\ConfigImporter;
 use Drupal\Core\Config\ConfigImporterException;
@@ -169,7 +170,7 @@ class DegovBlockInstaller implements DegovBlockInstallerInterface {
           // If not, set the theme to currently active.
           $currentActiveThemeName = $this->themeHandler->getDefault();
           $block['theme'] = $currentActiveThemeName;
-          $block['dependecies']['theme'] = [$currentActiveThemeName];
+          $block['dependencies']['theme'] = [$currentActiveThemeName];
         }
         // Get the list of all the regions provided from the theme.
         $regions = system_region_list($block['theme']);
@@ -230,27 +231,38 @@ class DegovBlockInstaller implements DegovBlockInstallerInterface {
     }
     else {
       try {
-        $sync_steps = $config_importer->initialize();
-        $batch = [
-          'operations' => [],
-          'finished' => [ConfigSync::class, 'finishBatch'],
-          'title' => t('Importing configuration'),
-          'init_message' => t('Starting configuration import.'),
-          'progress_message' => t('Completed @current step of @total.'),
-          'error_message' => t('Configuration import has encountered an error.'),
-        ];
-        foreach ($sync_steps as $sync_step) {
-          $batch['operations'][] = [[ConfigSync::class, 'processBatch'], [$config_importer, $sync_step]];
+        // This is the contents of \Drupal\Core\Config\ConfigImporter::import.
+        // Copied here so we can log progress.
+        if ($config_importer->hasUnprocessedConfigurationChanges()) {
+          $sync_steps = $config_importer->initialize();
+          foreach ($sync_steps as $step) {
+            $context = array();
+            do {
+              $config_importer->doSyncStep($step, $context);
+              if (isset($context['message'])) {
+                drupal_set_message(str_replace('Synchronizing', 'Synchronized', (string)$context['message']), 'info');
+              }
+            } while ($context['finished'] < 1);
+          }
         }
-
-        batch_set($batch);
+        if ($config_importer->getErrors()) {
+          throw new ConfigException('Errors occurred during import');
+        }
+        else {
+          drupal_set_message('The configuration was imported successfully.', 'success');
+        }
       }
-      catch (ConfigImporterException $e) {
-        // There are validation errors.
-        drupal_set_message(t('The configuration import failed for the following reasons:'), 'error');
-        foreach ($config_importer->getErrors() as $message) {
-          drupal_set_message($message, 'error');
-        }
+      catch (ConfigException $e) {
+        // Return a negative result for UI purposes. We do not differentiate
+        // between an actual synchronization error and a failed lock, because
+        // concurrent synchronizations are an edge-case happening only when
+        // multiple developers or site builders attempt to do it without
+        // coordinating.
+        $message = 'The import failed due for the following reasons:' . "\n";
+        $message .= implode("\n", $config_importer->getErrors());
+
+        watchdog_exception('config_import', $e);
+        drupal_set_message($message, 'error');
       }
     }
   }
