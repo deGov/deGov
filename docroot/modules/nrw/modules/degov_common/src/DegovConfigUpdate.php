@@ -87,7 +87,8 @@ class DegovConfigUpdate {
    * @param \Drupal\Core\Config\ConfigManagerInterface $config_manager
    *   The configuration manager.
    * @param \Drupal\Core\Lock\LockBackendInterface $lock
-   *   The lock backend to ensure multiple imports do not occur at the same time.
+   *   The lock backend to ensure multiple imports do not occur at the same
+   *   time.
    * @param \Drupal\Core\Config\TypedConfigManagerInterface $typed_config
    *   The typed configuration manager.
    * @param \Drupal\Core\Extension\ModuleHandlerInterface $module_handler
@@ -118,7 +119,7 @@ class DegovConfigUpdate {
    * @return array|null|void
    */
   public function configPartialImport($module, $config_type = 'install') {
-    $source_dir = drupal_get_path('module', $module) . '/config/'.$config_type;
+    $source_dir = drupal_get_path('module', $module) . '/config/' . $config_type;
     $source_storage = new FileStorage($source_dir);
 
     // Determine $source_storage in partial and non-partial cases.
@@ -182,18 +183,18 @@ class DegovConfigUpdate {
     if ($config_importer->alreadyImporting()) {
       drupal_set_message(t('Another request may be synchronizing configuration already.'), 'warning');
     }
-    else{
+    else {
       try {
         // This is the contents of \Drupal\Core\Config\ConfigImporter::import.
         // Copied here so we can log progress.
         if ($config_importer->hasUnprocessedConfigurationChanges()) {
           $sync_steps = $config_importer->initialize();
           foreach ($sync_steps as $step) {
-            $context = array();
+            $context = [];
             do {
               $config_importer->doSyncStep($step, $context);
               if (isset($context['message'])) {
-                drupal_set_message(str_replace('Synchronizing', 'Synchronized', (string)$context['message']), 'info');
+                drupal_set_message(str_replace('Synchronizing', 'Synchronized', (string) $context['message']), 'info');
               }
             } while ($context['finished'] < 1);
           }
@@ -204,8 +205,7 @@ class DegovConfigUpdate {
         else {
           drupal_set_message('The configuration was imported successfully.', 'success');
         }
-      }
-      catch (ConfigException $e) {
+      } catch (ConfigException $e) {
         // Return a negative result for UI purposes. We do not differentiate
         // between an actual synchronization error and a failed lock, because
         // concurrent synchronizations are an edge-case happening only when

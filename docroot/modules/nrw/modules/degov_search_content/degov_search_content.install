@@ -23,3 +23,17 @@ function degov_search_content_update_8001() {
   // Flush plugin caches so our facets will be shown.
   \Drupal::service('plugin.cache_clearer')->clearCachedDefinitions();
 }
+
+/**
+ * Set default block configuration.
+ */
+function degov_search_content_update_8002() {
+  // Expose the current view search filters as a block.
+  $search_config = \Drupal::configFactory()->getEditable('views.view.search_content');
+  $search_config->set('display.page_1.display_options.exposed_block', TRUE);
+  $search_config->save(TRUE);
+  // Add default block configuration.
+  \Drupal::service('degov_config.block_installer')->placeBlockConfig('degov_search_content');
+  // Flush plugin caches so our facets will be shown.
+  \Drupal::service('plugin.cache_clearer')->clearCachedDefinitions();
+}

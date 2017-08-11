@@ -177,7 +177,8 @@ class DegovBlockInstaller implements DegovBlockInstallerInterface {
         if (empty($regions[$block['region']])) {
           if (!empty($regions['content'])) {
             $block['region'] = 'content';
-          } else {
+          }
+          else {
             $region_ids = array_keys($regions);
             $block['region'] = $region_ids[0];
           }
@@ -210,8 +211,7 @@ class DegovBlockInstaller implements DegovBlockInstallerInterface {
       // Validate the new configuration.
       try {
         $config_importer->validate();
-      }
-      catch (ConfigImporterException $e) {
+      } catch (ConfigImporterException $e) {
         $reasons = implode("\n", $config_importer->getErrors());
         drupal_set_message(t('The configuration cannot be imported because it failed validation for the following reasons: @reasons', ['@reasons' => $reasons]));
       }
@@ -236,11 +236,11 @@ class DegovBlockInstaller implements DegovBlockInstallerInterface {
         if ($config_importer->hasUnprocessedConfigurationChanges()) {
           $sync_steps = $config_importer->initialize();
           foreach ($sync_steps as $step) {
-            $context = array();
+            $context = [];
             do {
               $config_importer->doSyncStep($step, $context);
               if (isset($context['message'])) {
-                drupal_set_message(str_replace('Synchronizing', 'Synchronized', (string)$context['message']), 'info');
+                drupal_set_message(str_replace('Synchronizing', 'Synchronized', (string) $context['message']), 'info');
               }
             } while ($context['finished'] < 1);
           }
@@ -251,8 +251,7 @@ class DegovBlockInstaller implements DegovBlockInstallerInterface {
         else {
           drupal_set_message('The configuration was imported successfully.', 'success');
         }
-      }
-      catch (ConfigException $e) {
+      } catch (ConfigException $e) {
         // Return a negative result for UI purposes. We do not differentiate
         // between an actual synchronization error and a failed lock, because
         // concurrent synchronizations are an edge-case happening only when
@@ -281,7 +280,7 @@ class DegovBlockInstaller implements DegovBlockInstallerInterface {
    *   An associative array (keyed on the chosen key) of objects with 'uri',
    *   'filename', and 'name' properties corresponding to the matched files.
    */
-  protected function fileScanDirectory($dir, $mask, $options = array()) {
+  protected function fileScanDirectory($dir, $mask, $options = []) {
     return file_scan_directory($dir, $mask, $options);
   }
 }

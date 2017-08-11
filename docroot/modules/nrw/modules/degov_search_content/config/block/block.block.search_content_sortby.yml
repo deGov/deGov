@@ -11,7 +11,7 @@ dependencies:
     - active_theme
 id: search_content_sortby
 theme: active_theme
-region: sidebar_first
+region: content
 weight: -8
 provider: null
 plugin: 'search_api_sorts_block:views_page:search_content__page_1'

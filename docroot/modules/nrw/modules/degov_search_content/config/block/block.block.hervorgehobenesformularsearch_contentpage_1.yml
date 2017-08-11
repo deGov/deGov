@@ -1,0 +1,30 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - views.view.search_content
+  enforced:
+    module:
+      - degov_search_content
+  module:
+    - views
+  theme:
+    - active_theme
+id: hervorgehobenesformularsearch_contentpage_1
+theme: active_theme
+region: sidebar_first
+weight: -9
+provider: null
+plugin: 'views_exposed_filter_block:search_content-page_1'
+settings:
+  id: 'views_exposed_filter_block:search_content-page_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: /suche
+    negate: false
+    context_mapping: {  }
