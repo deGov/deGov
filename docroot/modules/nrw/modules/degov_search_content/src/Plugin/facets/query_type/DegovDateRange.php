@@ -43,8 +43,12 @@ class DegovDateRange extends SearchApiDate {
           $range = $this->calculateRange($value);
 
           $item_filter = $query->createConditionGroup('AND', ['facet:' . $field_identifier]);
-          $item_filter->addCondition($this->facet->getFieldIdentifier(), $range['start'], $exclude ? '<' : '>=');
-          $item_filter->addCondition($this->facet->getFieldIdentifier(), $range['stop'], $exclude ? '>' : '<=');
+          if ($range['start']) {
+            $item_filter->addCondition($this->facet->getFieldIdentifier(), $range['start'], $exclude ? '<' : '>=');
+          }
+          if ($range['stop']) {
+            $item_filter->addCondition($this->facet->getFieldIdentifier(), $range['stop'], $exclude ? '>' : '<=');
+          }
 
           $filter->addConditionGroup($item_filter);
         }
@@ -76,42 +80,70 @@ class DegovDateRange extends SearchApiDate {
     if (empty($value) || count($value) != 2) {
       return;
     }
+    // Check if the date in query string is valid.
+    $isValidStartDate = strtotime($value[0]);
+    $isValidEndDate = strtotime($value[1]);
+
     switch ($this->getGranularity()) {
       case static::FACETAPI_DATE_YEAR:
-        $startDate = $dateTime::createFromFormat('Y-m-d\TH:i:s', $value[0] . '-01-01T00:00:00');
-        $stopDate = $dateTime::createFromFormat('Y-m-d\TH:i:s', $value[1] . '-12-31T23:59:59');
+        if ($isValidStartDate) {
+          $startDate = $dateTime::createFromFormat('Y-m-d\TH:i:s', $value[0] . '-01-01T00:00:00');
+        }
+        if ($isValidEndDate) {
+          $stopDate = $dateTime::createFromFormat('Y-m-d\TH:i:s', $value[1] . '-12-31T23:59:59');
+        }
         break;
 
       case static::FACETAPI_DATE_MONTH:
-        $startDate = $dateTime::createFromFormat('Y-m-d\TH:i:s', $value[0] . '-01T00:00:00');
-        $stopDate = $dateTime::createFromFormat('Y-m-d\TH:i:s', $value[1] . '-' . $startDate->format('t') . 'T23:59:59');
+        if ($isValidStartDate) {
+          $startDate = $dateTime::createFromFormat('Y-m-d\TH:i:s', $value[0] . '-01T00:00:00');
+        }
+        if ($isValidEndDate) {
+          $stopDate = $dateTime::createFromFormat('Y-m-d\TH:i:s', $value[1] . '-' . $startDate->format('t') . 'T23:59:59');
+        }
         break;
 
       case static::FACETAPI_DATE_DAY:
-        $startDate = $dateTime::createFromFormat('Y-m-d\TH:i:s', $value[0] . 'T00:00:00');
-        $stopDate = $dateTime::createFromFormat('Y-m-d\TH:i:s', $value[1] . 'T23:59:59');
+        if ($isValidStartDate) {
+          $startDate = $dateTime::createFromFormat('Y-m-d\TH:i:s', $value[0] . 'T00:00:00');
+        }
+        if ($isValidEndDate) {
+          $stopDate = $dateTime::createFromFormat('Y-m-d\TH:i:s', $value[1] . 'T23:59:59');
+        }
         break;
 
       case static::FACETAPI_DATE_HOUR:
-        $startDate = $dateTime::createFromFormat('Y-m-d\TH:i:s', $value[0] . '00:00');
-        $stopDate = $dateTime::createFromFormat('Y-m-d\TH:i:s', $value[1] . '59:59');
+        if ($isValidStartDate) {
+          $startDate = $dateTime::createFromFormat('Y-m-d\TH:i:s', $value[0] . '00:00');
+        }
+        if ($isValidEndDate) {
+          $stopDate = $dateTime::createFromFormat('Y-m-d\TH:i:s', $value[1] . '59:59');
+        }
         break;
 
       case static::FACETAPI_DATE_MINUTE:
-        $startDate = $dateTime::createFromFormat('Y-m-d\TH:i:s', $value[0] . ':00');
-        $stopDate = $dateTime::createFromFormat('Y-m-d\TH:i:s', $value[1] . ':59');
+        if ($isValidStartDate) {
+          $startDate = $dateTime::createFromFormat('Y-m-d\TH:i:s', $value[0] . ':00');
+        }
+        if ($isValidEndDate) {
+          $stopDate = $dateTime::createFromFormat('Y-m-d\TH:i:s', $value[1] . ':59');
+        }
         break;
 
       case static::FACETAPI_DATE_SECOND:
-        $startDate = $dateTime::createFromFormat('Y-m-d\TH:i:s', $value[0]);
-        $stopDate = $dateTime::createFromFormat('Y-m-d\TH:i:s', $value[1]);
+        if ($isValidStartDate) {
+          $startDate = $dateTime::createFromFormat('Y-m-d\TH:i:s', $value[0]);
+        }
+        if ($isValidEndDate) {
+          $stopDate = $dateTime::createFromFormat('Y-m-d\TH:i:s', $value[1]);
+        }
         break;
 
     }
 
     return [
-      'start' => $startDate->format('U'),
-      'stop' => $stopDate->format('U'),
+      'start' => $startDate ? $startDate->format('U') : FALSE,
+      'stop' => $stopDate ? $stopDate->format('U') : FALSE,
     ];
   }
 

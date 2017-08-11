@@ -1,17 +1,27 @@
 <?php
 /**
  * @file
- * Bootstrap sub-theme.
- *
- * Place your custom PHP code in this file.
+ * Bootstrap sub-theme for nrwGov.
  */
 
-//@TODO: Remove commented code when all have seen it.
-
-// Add image field as variable to the page template for content type home_page
 /**
- * hook_preprocess_node (hook for template_preprocess_node in core/modules/node/node.module)
- *
- * @param $variables
+ * Implements hook_theme_suggestion_input_alter().
  */
+function nrw_base_theme_theme_suggestions_input_alter(&$suggestions, &$vars, $hook) {
+  // Add addition template suggestion for input fields.
+  $element = $vars['element'];
+  if (isset($element['#attributes']['data-twig-suggestion'])) {
+    $suggestions[] = 'input__' . $element['#type'] . '__' . $element['#attributes']['data-twig-suggestion'];
+  }
+}
 
+/**
+ * Implements hook_form_alter().
+ */
+function nrw_base_theme_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  // Add additional attributes to the search page elements.
+  if ($form['#id'] == 'views-exposed-form-search-content-page-1') {
+    $form['actions']['submit']['#attributes']['data-twig-suggestion'] = 'search_results_submit';
+    $form['actions']['submit']['#attributes']['class'][] = 'search-box__button';
+  }
+}

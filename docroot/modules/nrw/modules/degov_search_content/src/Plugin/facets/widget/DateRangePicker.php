@@ -46,8 +46,8 @@ class DateRangePicker extends WidgetPluginBase {
         if (count($value) != 2) {
           continue;
         }
-        $startDate = $value[0];
-        $endDate = $value[1];
+        $startDate = ($value[0] != '*') ? $value[0] : '';
+        $endDate = ($value[1] != '*') ? $value[1] : '';
       }
     }
 
@@ -81,7 +81,7 @@ class DateRangePicker extends WidgetPluginBase {
     $form['date_filter_wrapper']['date_from'] = [
       '#type' => 'date',
       '#date_date_format' => 'Y-m-d',
-      '#date_date_element' => 'date',
+      '#date_date_element' => 'text',
       '#date_time_element' => 'none',
       '#date_increment' => 1,
       '#date_time_format' => '',
@@ -94,7 +94,7 @@ class DateRangePicker extends WidgetPluginBase {
     $form['date_filter_wrapper']['date_to'] = [
       '#type' => 'date',
       '#date_date_format' => 'Y-m-d',
-      '#date_date_element' => 'date',
+      '#date_date_element' => 'text',
       '#date_time_element' => 'none',
       '#date_increment' => 1,
       '#date_time_format' => '',
