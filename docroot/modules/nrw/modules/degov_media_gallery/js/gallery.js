@@ -14,20 +14,20 @@
     attach: function (context, settings) {
       var $slider = $('.media-gallery__images .slideshow__slides');
       var $images = $slider.find('img');
-      $slider.slick({
+      $slider.once().slick({
         dots: false,
         autoplay: true,
         arrows: true,
         swipeToSlide: true
       });
-      $('.media-gallery__preview .image').click(function() {
-        $slider.slick('slickGoTo', $(this).parent().data('index'));
+      $('.media-gallery__preview .image').click(function () {
+        $slider.once().slick('slickGoTo', $(this).parent().data('index'));
       });
 
       var $pswpElement = document.querySelectorAll('.pswp__media-gallery')[0];
 
       var $pswpItems = [];
-      $.each($images, function(k, img) {
+      $.each($images, function (k, img) {
         var $pswpItem = {
           src: drupalSettings.degov_media_gallery.imagesDownloadLinks[k].uri,
           w: drupalSettings.degov_media_gallery.imagesDownloadLinks[k].width,
@@ -35,10 +35,10 @@
         };
         $pswpItems.push($pswpItem);
       });
-      $('.slick-controls__gallery').append('<span class="slick__download"><a href="' + drupalSettings.degov_media_gallery.imagesDownloadLinks[$slider.slick('slickCurrentSlide')].uri + '"><i class="fa fa-download"></i>' + Drupal.t('Download') + '</a></span>');
+      $('.slick-controls__gallery').append('<span class="slick__download"><a href="' + drupalSettings.degov_media_gallery.imagesDownloadLinks[$slider.once().slick('slickCurrentSlide')].uri + '"><i class="fa fa-download"></i>' + Drupal.t('Download') + '</a></span>');
 
-      $slider.find('article').click(function() {
-        var $index = parseInt($slider.slick('slickCurrentSlide'));
+      $slider.find('article').click(function () {
+        var $index = parseInt($slider.once().slick('slickCurrentSlide'));
         var $options = {
           index: $index
         };
@@ -46,21 +46,21 @@
         var $pswp = new PhotoSwipe($pswpElement, PhotoSwipeUI_Default, $pswpItems, $options);
         $pswp.init();
       });
-      $('.media-gallery-js-open-lightroom').click(function() {
-        $images.get($slider.slick('slickCurrentSlide')).click();
+      $('.media-gallery-js-open-lightroom').click(function () {
+        $images.get($slider.once().slick('slickCurrentSlide')).click();
       });
-      $slider.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
+      $slider.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
         var i = (currentSlide ? currentSlide : 0) + 1;
         $('.slick__counter__current').text(i);
         $('.slick__counter__total').text(slick.slideCount);
       });
       $('.slick__pause').on('click', function () {
-          $('.slideshow__slides').slick('slickPause');
-          $(this).hide().siblings('.slick__play').show();
+        $('.slideshow__slides').once().slick('slickPause');
+        $(this).hide().siblings('.slick__play').show();
       });
       $('.slick__play').on('click', function () {
-          $('.slideshow__slides').slick('slickPlay');
-          $(this).hide().siblings('.slick__pause').show();
+        $('.slideshow__slides').once().slick('slickPlay');
+        $(this).hide().siblings('.slick__pause').show();
       });
     }
   }
