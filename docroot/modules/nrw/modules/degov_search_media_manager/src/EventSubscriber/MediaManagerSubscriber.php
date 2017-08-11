@@ -2,10 +2,10 @@
 
 /**
  * @file
- * Contains \Drupal\degov_search_media_permissions\EventSubscriber\MediaPermissionSubscriber
+ * Contains \Drupal\degov_search_media_manager\EventSubscriber\MediaPermissionSubscriber
  */
 
-namespace Drupal\degov_search_media_permissions\EventSubscriber;
+namespace Drupal\degov_search_media_manager\EventSubscriber;
 
 use Drupal\Core\Url;
 use Drupal\media_entity\MediaInterface;
@@ -18,7 +18,7 @@ use Symfony\Component\HttpKernel\Event\GetResponseEvent;
  * Redirect to front page if user should not be allowed to access
  * canonical route of media entity.
  */
-class MediaPermissionSubscriber implements EventSubscriberInterface {
+class MediaManagerSubscriber implements EventSubscriberInterface {
 
   /**
    * @param GetResponseEvent $event

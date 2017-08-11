@@ -3,20 +3,20 @@ status: true
 dependencies:
   config:
     - search_api.index.search_media
-    - views.view.search_media
+    - views.view.search_media_manager
   enforced:
     module:
-      - degov_search_media
+      - degov_search_media_manager
   module:
     - search_api
-id: search_media_bundle
-name: Medientyp
-url_alias: type
+id: search_media_manager_tags
+name: Schlagworte
+url_alias: tags
 weight: 0
 min_count: 1
 show_only_one_result: true
-field_identifier: bundle
-facet_source_id: 'search_api:views_page__search_media__page'
+field_identifier: field_tags
+facet_source_id: 'search_api:views_page__search_media_manager__page'
 widget:
   type: dropdown
   config:
@@ -50,6 +50,11 @@ processor_configs:
       sort: ASC
   list_item:
     processor_id: list_item
+    weights:
+      build: 5
+    settings: {  }
+  translate_entity:
+    processor_id: translate_entity
     weights:
       build: 5
     settings: {  }
