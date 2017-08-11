@@ -12,9 +12,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - New module to override image styles and view modes.
 - Dropzonejs support in the media browser.
 - New tabs in the media browser for uploading image, video and documents.
-- Custom configuration updater service for modules.
+- Custom configuration update service for modules config and block config.
 - Patched core to use an install hook in theme and added default theme settings.
 - New module 'deGov - Password Policy' added.
+- Default block configuration for 'deGov - Inhaltssuche'.
 
 ### Changed
 - Refactoring and styling of the event teaser.
@@ -27,5 +28,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Removed Slick as local library and replaced it with a composer drupal-library.
 - Fix wrong attribute usages in the slideshow module libraries.
 - Required empty paragraph fields now show a meaningfull error message.
-- Socials media buttons show under the content tags.
+- Social media buttons show under the content tags.
 - Missing functionality fixes for pause/play in slick sliders.
