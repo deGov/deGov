@@ -108,3 +108,14 @@ function degov_common_preprocess_media(&$variables) {
   }
 }
 
+/**
+ * @param $modules
+ */
+function degov_common_modules_installed($modules) {
+  foreach ($modules as $module) {
+    \Drupal::service('degov_config.block_installer')->placeBlockConfig($module);
+  }
+  // Flush plugin caches so our facets will be shown.
+  \Drupal::service('plugin.cache_clearer')->clearCachedDefinitions();
+}
+
