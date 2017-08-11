@@ -1,5 +1,6 @@
 .tweets-slideshow {
-  margin-top: -$padding-base-vertical;
+  margin-top: $padding-base-vertical*11;
+  position: relative;
 }
 .tweets.slick-slider {
   margin-bottom: 0;
