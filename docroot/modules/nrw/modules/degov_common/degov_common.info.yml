@@ -3,3 +3,5 @@ description: "Dieses Modul enthält alle gemeinsamen funktionalität für alle M
 package: deGov
 type: module
 core: 8.x
+dependencies:
+  - config_rewrite

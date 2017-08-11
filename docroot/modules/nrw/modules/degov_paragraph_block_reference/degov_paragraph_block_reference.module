@@ -1,0 +1,16 @@
+<?php
+
+use Drupal\degov_common\Common;
+
+/**
+ * Implements hook_preprocess().
+ */
+function degov_paragraph_block_reference_preprocess(&$variables, $hook, &$info) {
+  // Add template suggestions and libraries implemented in this module.
+  Common::addThemeSuggestions($variables, $hook, $info, [
+    'module_name' => 'degov_paragraph_block_reference',
+    'entity_type' => 'paragraph',
+    'entity_bundles' => ['block_reference'],
+    'entity_view_modes' => ['default', 'preview'],
+  ]);
+}

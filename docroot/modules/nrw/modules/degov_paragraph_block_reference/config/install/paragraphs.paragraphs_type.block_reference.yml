@@ -1,0 +1,9 @@
+langcode: de
+status: true
+dependencies:
+  enforced:
+    module:
+      - degov_paragraph_block_reference
+id: block_reference
+label: 'Block Referenz'
+behavior_plugins: {  }
