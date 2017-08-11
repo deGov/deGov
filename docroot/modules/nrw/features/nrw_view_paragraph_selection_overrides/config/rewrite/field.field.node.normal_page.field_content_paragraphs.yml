@@ -1,5 +1,6 @@
 dependencies:
   config:
+    - paragraphs.paragraphs_type.block_reference
     - paragraphs.paragraphs_type.downloads
     - paragraphs.paragraphs_type.faq
     - paragraphs.paragraphs_type.faq_list
@@ -16,6 +17,7 @@ dependencies:
 settings:
   handler_settings:
     target_bundles:
+      block_reference: block_reference
       downloads: downloads
       faq_list: faq_list
       iframe: iframe
@@ -59,4 +61,7 @@ settings:
         enabled: true
       webformular:
         weight: -13
+        enabled: true
+      block_reference:
+        weight: -12
         enabled: true
