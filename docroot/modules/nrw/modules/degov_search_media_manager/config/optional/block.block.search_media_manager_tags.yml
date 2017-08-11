@@ -2,29 +2,29 @@ langcode: de
 status: true
 dependencies:
   config:
-    - facets.facet.search_media_tags
+    - facets.facet.search_media_manager_tags
   enforced:
     module:
-      - degov_search_media
+      - degov_search_media_manager
   module:
     - facets
     - system
   theme:
     - nrw_base_theme
-id: search_media_tags
+id: search_media_manager_tags
 theme: nrw_base_theme
 region: content
 weight: -12
 provider: null
-plugin: 'facet_block:search_media_tags'
+plugin: 'facet_block:search_media_manager_tags'
 settings:
-  id: 'facet_block:search_media_tags'
+  id: 'facet_block:search_media_manager_tags'
   label: Schlagworte
   provider: facets
   label_display: visible
 visibility:
   request_path:
     id: request_path
-    pages: "/mediathek\r\n/medienverwaltung"
+    pages: /medienverwaltung
     negate: false
     context_mapping: {  }

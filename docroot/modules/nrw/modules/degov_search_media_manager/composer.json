@@ -1,5 +1,5 @@
 {
-  "name": "degov_search_media_permissions",
+  "name": "degov_search_media_manager",
   "type": "drupal-module",
   "description": "Provides media permission handling.",
   "license": "GPL-2.0+",

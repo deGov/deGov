@@ -5,7 +5,6 @@ core: 8.x
 package: deGov
 dependencies:
   - block
-  - degov_search_media_permissions
   - facets
   - media_entity
   - search_api

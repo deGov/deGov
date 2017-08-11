@@ -16,7 +16,7 @@ weight: 0
 min_count: 1
 show_only_one_result: true
 field_identifier: field_tags
-facet_source_id: 'search_api:views_page__search_media__mediathek'
+facet_source_id: 'search_api:views_page__search_media__page'
 widget:
   type: dropdown
   config:

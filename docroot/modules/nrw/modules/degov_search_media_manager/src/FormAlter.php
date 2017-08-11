@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\degov_search_media_permissions;
+namespace Drupal\degov_search_media_manager;
 
 use Drupal\Core\Entity\EntityFormInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
