@@ -25,6 +25,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/mediathek\r\n/medienverwaltung"
+    pages: /mediathek
     negate: false
     context_mapping: {  }
