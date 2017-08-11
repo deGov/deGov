@@ -1,0 +1,10 @@
+{
+  "name": "degov_password_policy",
+  "type": "drupal-module",
+  "description": "Adds common configuration for password policy.",
+  "license": "GPL-2.0+",
+  "homepage": "https://www.nrwgov.org",
+  "require": {
+    "drupal/password_policy": "^3.0.0"
+  }
+}
