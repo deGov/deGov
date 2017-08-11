@@ -230,9 +230,10 @@
     }
   }
   .slick-controls {
-    top: -46px;
+    top: -42px;
     bottom: auto;
-    margin-right: $padding-base-horizontal*2;
+    margin-right: 0;
+    right: $grid-gutter-width + 5;
     button:before {
       font-size: $font-size-base;
     }
