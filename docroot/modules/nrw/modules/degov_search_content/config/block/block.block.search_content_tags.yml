@@ -10,10 +10,10 @@ dependencies:
     - facets
     - system
   theme:
-    - nrw_base_theme
+    - active_theme
 id: search_content_tags
-theme: nrw_base_theme
-region: content
+theme: active_theme
+region: sidebar_first
 weight: -7
 provider: null
 plugin: 'facet_block:search_content_tags'

@@ -2,7 +2,7 @@ langcode: de
 status: true
 dependencies:
   config:
-    - facets.facet.search_content_changed
+    - facets.facet.search_content_node_bundle
   enforced:
     module:
       - degov_search_content
@@ -10,16 +10,16 @@ dependencies:
     - facets
     - system
   theme:
-    - nrw_base_theme
-id: search_content_node_changed
-theme: nrw_base_theme
-region: content
-weight: -6
+    - active_theme
+id: search_content_node_bundle
+theme: active_theme
+region: sidebar_first
+weight: -7
 provider: null
-plugin: 'facet_block:search_content_changed'
+plugin: 'facet_block:search_content_node_bundle'
 settings:
-  id: 'facet_block:search_content_changed'
-  label: Änderungsdatum
+  id: 'facet_block:search_content_node_bundle'
+  label: Inhaltstyp
   provider: facets
   label_display: visible
 visibility:
