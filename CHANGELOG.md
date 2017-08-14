@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Patched core to use an install hook in theme and added default theme settings.
 - New module 'deGov - Password Policy' added.
 - Default block configuration for 'deGov - Inhaltssuche'.
+- Block reference paragraph.
 
 ### Changed
 - Refactoring and styling of the event teaser.
@@ -30,3 +31,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Required empty paragraph fields now show a meaningfull error message.
 - Social media buttons show under the content tags.
 - Missing functionality fixes for pause/play in slick sliders.
+- Warning on pages where an OSM map is included.
