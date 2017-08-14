@@ -5,6 +5,7 @@ namespace Drupal\degov_search_media_manager;
 use Drupal\Core\Entity\EntityFormInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Form\FormStateInterface;
+
 use Drupal\Core\Session\AccountInterface;
 use Drupal\entity_reference_integrity\EntityReferenceDependencyManagerInterface;
 use Drupal\user\PrivateTempStoreFactory;
@@ -39,6 +40,7 @@ class FormAlter extends \Drupal\entity_reference_integrity_enforce\FormAlter {
   protected $storage;
 
   /**
+<<<<<<< HEAD
    * Current user object.
    *
    * @var \Drupal\Core\Session\AccountInterface
@@ -54,6 +56,7 @@ class FormAlter extends \Drupal\entity_reference_integrity_enforce\FormAlter {
     $this->storage = $manager->getStorage('media');
     $this->tempStoreFactory = $temp_store_factory;
     $this->currentUser = $current_user;
+
     parent::__construct($calculator, $enabled_entity_type_ids);
   }
 
