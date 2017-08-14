@@ -4,5 +4,10 @@
  * Reset the paragraphs bundles for field_content_paragraphs.
  */
 function nrw_view_paragraph_selection_overrides_update_8001() {
+  // Check if module paragraph block reference is enabled.
+  if (!\Drupal::moduleHandler()->moduleExists('degov_paragraph_block_reference')) {
+    // If not install it.
+    \Drupal::service('module_installer')->install(['degov_paragraph_block_reference']);
+  }
   \Drupal::service('config_rewrite.config_rewriter')->rewriteModuleConfig('nrw_view_paragraph_selection_overrides');
 }
