@@ -19,7 +19,7 @@ function degov_media_address_preprocess(&$variables, $hook, &$info) {
  * Preprocess address media entity.
  */
 function degov_media_address_preprocess_media__address(&$variables) {
-  // Checj if the view mode is osm_map.
+  // Check if the view mode is osm_map.
   if (!empty($variables['elements']['#view_mode']) && $variables['elements']['#view_mode'] == 'osm_map') {
     $address = $variables['media'];
     if ($address instanceof \Drupal\media_entity\MediaInterface) {
@@ -32,6 +32,7 @@ function degov_media_address_preprocess_media__address(&$variables) {
         $variables['#attached']['drupalSettings']['maps'][$map_id]['lon'] = $location->lon;
         // Add pin image location.
         $variables['#attached']['drupalSettings']['maps'][$map_id]['pin'] = '/' . drupal_get_path('module', 'degov_media_address') . '/images/map-icon.png';
+        $variables['#attached']['drupalSettings']['maps'][$map_id]['type'] = 'leaflet';
         $variables['content']['map_id'] = $map_id;
       }
     }
