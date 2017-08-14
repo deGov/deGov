@@ -1,0 +1,28 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - views.view.search_media
+  module:
+    - system
+    - views
+  theme:
+    - active_theme
+id: fulltext_search_mediapage
+theme: active_theme
+region: sidebar_first
+weight: -10
+provider: null
+plugin: 'views_exposed_filter_block:search_media-page'
+settings:
+  id: 'views_exposed_filter_block:search_media-page'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: /mediathek
+    negate: false
+    context_mapping: {  }
