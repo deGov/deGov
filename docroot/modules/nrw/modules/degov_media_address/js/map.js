@@ -19,20 +19,23 @@
       var maps = [];
 
       // Loop through all available maps.
-      $.each( settings.maps, function( index, value ){
+      $.each(settings.maps, function (index, value) {
         var selector = '#' + index;
+        if (typeof value.type == "undefined") {
+          return;
+        }
         if (!$(selector).hasClass('leaflet-container')) {
           // Create map and set center and zoom.
-          maps[index] = L.map( index, {
-              scrollWheelZoom: true,
-              zoomControl: false,
-              center: [value.lat, value.lon],
-              zoom: 18
+          maps[index] = L.map(index, {
+            scrollWheelZoom: true,
+            zoomControl: false,
+            center: [value.lat, value.lon],
+            zoom: 18
           });
 
           // Add basemap tiles and attribution.
           L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
-              attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
           }).addTo(maps[index]);
 
           // Add pin.
