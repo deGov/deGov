@@ -2,7 +2,7 @@ langcode: de
 status: true
 dependencies:
   config:
-    - facets.facet.search_media_changed
+    - facets.facet.search_media_tags
   enforced:
     module:
       - degov_search_media
@@ -10,16 +10,16 @@ dependencies:
     - facets
     - system
   theme:
-    - nrw_base_theme
-id: search_media_changed
-theme: nrw_base_theme
-region: content
-weight: -13
+    - active_theme
+id: search_media_tags
+theme: active_theme
+region: sidebar_first
+weight: -12
 provider: null
-plugin: 'facet_block:search_media_changed'
+plugin: 'facet_block:search_media_tags'
 settings:
-  id: 'facet_block:search_media_changed'
-  label: Änderungsdatum
+  id: 'facet_block:search_media_tags'
+  label: Schlagworte
   provider: facets
   label_display: visible
 visibility:
