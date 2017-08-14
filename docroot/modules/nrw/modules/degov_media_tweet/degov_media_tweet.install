@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * Enable the usage view mode.
+ */
+function degov_media_tweet_update_8001() {
+  \Drupal::service('config_rewrite.config_rewriter')->rewriteModuleConfig('degov_media_tweet');
+}

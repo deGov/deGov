@@ -1,0 +1,64 @@
+{#
+/**
+ * @file
+ * Default theme implementation to present a media entity.
+ *
+ * Available variables:
+ * - name: Name of the media.
+ * - content: Media content.
+ *
+ * @see template_preprocess_media()
+ *
+ * @ingroup themeable
+ */
+#}
+{% set caption %}
+  {{- content.field_video_upload_caption -}}
+{% endset %}
+{% set copyright %}
+  {{- content.field_video_upload_copyright -}}
+{% endset %}
+{%
+set media_classes = [
+  'video-upload',
+  'clearfix',
+]
+%}
+<article{{ attributes.addClass(media_classes) }}>
+  {{ content.contextual_links }}
+  <div class="video-upload__type-text">{{ 'Video'|t }}</div>
+  <div class="video-upload__video">
+    <video{{ video_attributes }}>
+      <source src="{{ video_mp4 }}" type="video/mp4">
+      <source src="{{ video_webm }}" type="video/webm">
+      {% trans %}
+      I'm sorry; your browser doesn't support HTML5 video in WebM with VP8/VP9 or MP4 with H.264.
+      {% endtrans %}
+      {% for key, subtitle in content.field_video_upload_subtitle if key|first != '#' %}
+      {{ subtitle }}
+      {% endfor %}
+    </video>
+  </div>
+  {% if content.field_video_upload_caption|field_value or content.field_video_upload_copyright|field_value %}
+    <div class="video-upload__info">
+      {% if content.field_video_upload_caption|field_value %}
+        <div class="video-upload__caption"{{ content.field_video_upload_caption|quickedit_attr }}>{{ content.field_video_upload_caption|field_value }}</div>
+      {% endif %}
+      {% if content.field_video_upload_copyright|field_value %}
+        <div class="video-upload__copyright">
+          <span class="video-upload__copyright-label"{{ content.field_video_upload_copyright|quickedit_attr }}>{{ '&copy;'|trans }}</span>
+          {{ content.field_video_upload_copyright|field_value }}
+        </div>
+      {% endif %}
+    </div>
+  {% endif %}
+  {% if content.field_tags|field_value %}
+    <div class="tags"{{ content.field_tags|quickedit_attr }}>{{ content.field_tags|field_value }}</div>
+  {% endif %}
+  {% if content.usage %}
+    <div class="video-upload__usage">
+      <h2>{{ 'Usage'|trans }}</h2>
+      {{  content.usage }}
+    </div>
+  {% endif %}
+</article>

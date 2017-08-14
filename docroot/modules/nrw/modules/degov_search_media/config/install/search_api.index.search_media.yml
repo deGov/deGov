@@ -1,0 +1,219 @@
+langcode: de
+status: true
+dependencies:
+  enforced:
+    module:
+      - degov_search_media
+  config:
+    - field.storage.media.field_tags
+    - field.storage.media.field_include_search
+    - search_api.server.database
+  module:
+    - search_api
+    - media_entity
+id: search_media
+name: Mediensuche
+description: ''
+read_only: false
+field_settings:
+  rendered_item:
+    label: 'Rendered HTML output'
+    property_path: rendered_item
+    type: text
+    configuration:
+      roles:
+        anonymous: anonymous
+      view_mode:
+        'entity:media':
+          address: default
+          citation: default
+          contact: default
+          document: default
+          gallery: default
+          image: default
+          instagram: default
+          person: default
+          tweet: default
+          video: default
+          video_upload: default
+  changed:
+    label: Änderungsdatum
+    datasource_id: 'entity:media'
+    property_path: changed
+    type: date
+  field_tags:
+    label: Schlagwörter
+    datasource_id: 'entity:media'
+    property_path: field_tags
+    type: integer
+    dependencies:
+      config:
+        - field.storage.media.field_tags
+  bundle:
+    label: Medientyp
+    datasource_id: 'entity:media'
+    property_path: bundle
+    type: string
+  name:
+    label: 'Media name'
+    datasource_id: 'entity:media'
+    property_path: name
+    type: string
+  field_include_search:
+    label: 'In Mediensuche anzeigen'
+    datasource_id: 'entity:media'
+    property_path: field_include_search
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.media.field_include_search
+datasource_settings:
+  'entity:media':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  transliteration:
+    all_fields: true
+    fields:
+      - rendered_item
+      - bundle
+      - name
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  stopwords:
+    all_fields: true
+    fields:
+      - rendered_item
+    stopwords:
+      - a
+      - an
+      - and
+      - are
+      - as
+      - at
+      - be
+      - but
+      - by
+      - for
+      - if
+      - in
+      - into
+      - is
+      - it
+      - 'no'
+      - not
+      - of
+      - 'on'
+      - or
+      - s
+      - such
+      - t
+      - that
+      - the
+      - their
+      - then
+      - there
+      - these
+      - they
+      - this
+      - to
+      - was
+      - will
+      - with
+    weights:
+      preprocess_index: -5
+      preprocess_query: -2
+  html_filter:
+    all_fields: true
+    fields:
+      - rendered_item
+      - bundle
+      - name
+    title: true
+    alt: true
+    tags:
+      h1: 5
+      h2: 3
+      h3: 2
+      strong: 2
+      b: 2
+      em: 1
+      u: 1
+    weights:
+      preprocess_index: -15
+      preprocess_query: -15
+  aggregated_field: {  }
+  ignore_character:
+    all_fields: true
+    fields:
+      - rendered_item
+      - bundle
+      - name
+    ignorable: '[''¿¡!?,.:;]'
+    strip:
+      character_sets:
+        Pc: Pc
+        Pd: Pd
+        Pe: Pe
+        Pf: Pf
+        Pi: Pi
+        Po: Po
+        Ps: Ps
+        Cc: 0
+        Cf: 0
+        Co: 0
+        Mc: 0
+        Me: 0
+        Mn: 0
+        Sc: 0
+        Sk: 0
+        Sm: 0
+        So: 0
+        Zl: 0
+        Zp: 0
+        Zs: 0
+    weights:
+      preprocess_index: -10
+      preprocess_query: -10
+  rendered_item: {  }
+  ignorecase:
+    all_fields: true
+    fields:
+      - rendered_item
+      - bundle
+      - name
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  highlight:
+    highlight: always
+    highlight_partial: false
+    excerpt: true
+    excerpt_length: 256
+    exclude_fields: {  }
+    prefix: '<strong>'
+    suffix: '</strong>'
+    weights:
+      postprocess_query: 0
+  add_url: {  }
+  tokenizer:
+    all_fields: true
+    fields:
+      - rendered_item
+    spaces: ''
+    overlap_cjk: 1
+    minimum_word_size: '3'
+    weights:
+      preprocess_index: -6
+      preprocess_query: -6
+tracker_settings:
+  default: {  }
+options:
+  index_directly: true
+  cron_limit: 50
+server: database

@@ -11,6 +11,6 @@ function degov_media_instagram_preprocess(&$variables, $hook, &$info) {
     'module_name' => 'degov_media_instagram',
     'entity_type' => 'media',
     'entity_bundles' => ['instagram'],
-    'entity_view_modes' => [],
+    'entity_view_modes' => ['usage'],
   ]);
 }
