@@ -1,0 +1,25 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title_link
+    - paragraphs.paragraphs_type.block_reference
+  enforced:
+    module:
+      - degov_paragraph_block_reference
+  module:
+    - link
+id: paragraph.block_reference.field_title_link
+field_name: field_title_link
+entity_type: paragraph
+bundle: block_reference
+label: Titellink
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

@@ -1,0 +1,12 @@
+name: 'deGov - Paragraph Block Referenz'
+description: 'Dieser Paragraph stellt Block Referenz bereit.'
+package: deGov
+type: module
+core: 8.x
+dependencies:
+  - degov_content_types_shared_fields
+  - field
+  - link
+  - block
+  - paragraphs
+  - workbench_moderation

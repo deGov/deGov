@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * Reset the paragraphs bundles for field_content_paragraphs.
+ */
+function nrw_view_paragraph_selection_overrides_update_8001() {
+  \Drupal::service('config_rewrite.config_rewriter')->rewriteModuleConfig('nrw_view_paragraph_selection_overrides');
+}
