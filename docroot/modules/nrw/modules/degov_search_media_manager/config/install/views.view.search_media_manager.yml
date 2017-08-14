@@ -305,6 +305,7 @@ display:
         filter_groups: true
       cache:
         type: none
+      exposed_block: true
     cache_metadata:
       max-age: -1
       contexts:

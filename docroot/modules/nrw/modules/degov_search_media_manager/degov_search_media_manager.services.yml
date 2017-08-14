@@ -1,6 +1,11 @@
 services:
-  degov_media_access:
-    class: '\Drupal\degov_search_media_manager\EventSubscriber\MediaManagerSubscriber'
+  degov_media_manager.route_subscriber:
+    class: Drupal\degov_search_media_manager\Routing\MediaManagerSubscriber
     arguments: ['@current_user']
     tags:
       - { name: 'event_subscriber' }
+  degov_media_manager.access_checker:
+    class: Drupal\degov_search_media_manager\Access\MediaAccessCheck
+    arguments: ['@current_user']
+    tags:
+      - { name: access_check, applies_to: _degov_media_access }
