@@ -2,7 +2,7 @@ langcode: de
 status: true
 dependencies:
   config:
-    - facets.facet.search_media_manager_changed
+    - facets.facet.search_media_manager_bundle
   enforced:
     module:
       - degov_search_media_manager
@@ -10,16 +10,16 @@ dependencies:
     - facets
     - system
   theme:
-    - nrw_base_theme
-id: search_media_manager_changed
-theme: nrw_base_theme
-region: content
+    - active_theme
+id: search_media_manager_bundle
+theme: active_theme
+region: sidebar_first
 weight: -13
 provider: null
-plugin: 'facet_block:search_media_manager_changed'
+plugin: 'facet_block:search_media_manager_bundle'
 settings:
-  id: 'facet_block:search_media_manager_changed'
-  label: Änderungsdatum
+  id: 'facet_block:search_media_manager_bundle'
+  label: Medientyp
   provider: facets
   label_display: visible
 visibility:

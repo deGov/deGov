@@ -8,9 +8,9 @@ dependencies:
     - search_api_sorts
     - system
   theme:
-    - nrw_base_theme
+    - active_theme
 id: search_media_manager_sortby
-theme: nrw_base_theme
+theme: active_theme
 region: content
 weight: -15
 provider: null

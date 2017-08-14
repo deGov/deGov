@@ -5,6 +5,7 @@ namespace Drupal\degov_search_media_manager;
 use Drupal\Core\Entity\EntityFormInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Session\AccountInterface;
 use Drupal\entity_reference_integrity\EntityReferenceDependencyManagerInterface;
 use Drupal\user\PrivateTempStoreFactory;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -38,13 +39,21 @@ class FormAlter extends \Drupal\entity_reference_integrity_enforce\FormAlter {
   protected $storage;
 
   /**
+   * Current user object.
+   *
+   * @var \Drupal\Core\Session\AccountInterface
+   */
+  protected $currentUser;
+
+  /**
    * {@inheritdoc}
    */
-  public function __construct(EntityReferenceDependencyManagerInterface $calculator, $enabled_entity_type_ids, PrivateTempStoreFactory $temp_store_factory, EntityTypeManagerInterface $manager) {
+  public function __construct(EntityReferenceDependencyManagerInterface $calculator, $enabled_entity_type_ids, PrivateTempStoreFactory $temp_store_factory, EntityTypeManagerInterface $manager, AccountInterface $current_user) {
     $this->dependencyManager = $calculator;
     $this->enabledEntityTypeIds = $enabled_entity_type_ids;
     $this->storage = $manager->getStorage('media');
     $this->tempStoreFactory = $temp_store_factory;
+    $this->currentUser = $current_user;
     parent::__construct($calculator, $enabled_entity_type_ids);
   }
 
@@ -56,7 +65,8 @@ class FormAlter extends \Drupal\entity_reference_integrity_enforce\FormAlter {
       $container->get('entity_reference_integrity.dependency_manager'),
       $container->get('config.factory')->get('entity_reference_integrity_enforce.settings')->get('enabled_entity_type_ids'),
       $container->get('user.private_tempstore'),
-      $container->get('entity_type.manager')
+      $container->get('entity_type.manager'),
+      $container->get('current_user')
     );
   }
 
@@ -69,7 +79,7 @@ class FormAlter extends \Drupal\entity_reference_integrity_enforce\FormAlter {
     if (!$this->isDeleteForm($form_object)) {
       return;
     }
-    $this->entityInfo = $this->tempStoreFactory->get('media_multiple_delete_confirm')->get(\Drupal::currentUser()->id());
+    $this->entityInfo = $this->tempStoreFactory->get('media_multiple_delete_confirm')->get($this->currentUser->id());
     /** @var \Drupal\media_entity\MediaInterface[] $entities */
     $entities = $this->storage->loadMultiple(array_keys($this->entityInfo));
     foreach ($entities as $entity) {
