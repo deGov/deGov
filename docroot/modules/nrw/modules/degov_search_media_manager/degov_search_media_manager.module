@@ -1,10 +1,15 @@
 <?php
+
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\degov_search_media_manager\FormAlter;
 use Drupal\media_entity\MediaInterface;
 
 /**
  * Implements hook_form_alter().
+ *
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ * @param $form_id
  */
 function degov_search_media_manager_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   \Drupal::service('class_resolver')
@@ -14,6 +19,8 @@ function degov_search_media_manager_form_alter(&$form, FormStateInterface $form_
 
 /**
  * Implements hook_preprocess_media().
+ *
+ * @param $variables
  */
 function degov_search_media_manager_preprocess_media(&$variables) {
   $view_mode = $variables['elements']['#view_mode'];

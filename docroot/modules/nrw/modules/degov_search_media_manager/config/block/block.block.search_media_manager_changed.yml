@@ -1,0 +1,30 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - facets.facet.search_media_manager_changed
+  enforced:
+    module:
+      - degov_search_media_manager
+  module:
+    - facets
+    - system
+  theme:
+    - active_theme
+id: search_media_manager_changed
+theme: active_theme
+region: sidebar_first
+weight: -13
+provider: null
+plugin: 'facet_block:search_media_manager_changed'
+settings:
+  id: 'facet_block:search_media_manager_changed'
+  label: Änderungsdatum
+  provider: facets
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: /medienverwaltung
+    negate: false
+    context_mapping: {  }

@@ -1,12 +1,8 @@
 <?php
 
-/**
- * @file
- * Contains \Drupal\degov_search_media_manager\EventSubscriber\MediaPermissionSubscriber
- */
-
 namespace Drupal\degov_search_media_manager\EventSubscriber;
 
+use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Url;
 use Drupal\media_entity\MediaInterface;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
@@ -21,6 +17,20 @@ use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 class MediaManagerSubscriber implements EventSubscriberInterface {
 
   /**
+   * @var  AccountInterface
+   */
+  protected $currentUser;
+
+  /**
+   * MediaManagerSubscriber constructor.
+   *
+   * @param \Drupal\Core\Session\AccountInterface $current_user
+   */
+  public function __construct(AccountInterface $current_user) {
+    $this->currentUser = $current_user;
+  }
+
+  /**
    * @param GetResponseEvent $event
    * @return void
    */
@@ -29,9 +39,12 @@ class MediaManagerSubscriber implements EventSubscriberInterface {
     $route = $request->attributes->get('_route');
     $media = $request->attributes->get('media');
 
-    if ($route === 'entity.media.canonical' && $media instanceof MediaInterface && $media->hasField('field_include_search') && $media->field_include_search->value === '0' && !\Drupal::currentUser()->getAccount()->hasPermission('access media manager')) {
+    // Check if the user tries to access the media canonical route.
+    if ($route === 'entity.media.canonical' && $media instanceof MediaInterface && $media->hasField('field_include_search') && $media->get('field_include_search')->getValue() === '0' && !$this->currentUser->hasPermission('access media manager')) {
+      // Redirect the user to the front page with status 403 if the media is not
+      // for search and user has no permissions to access.
       $url = Url::fromRoute('<front>');
-      $response = new RedirectResponse($url->toString(), 301);
+      $response = new RedirectResponse($url->toString(), 403);
       $event->setResponse($response);
     }
   }
