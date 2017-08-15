@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * Removes field_block_reference.
+ */
+function degov_paragraph_block_reference_update_8001() {
+  /* @var $entityFieldManager Drupal\Core\Entity\EntityFieldManager */
+  $entityFieldManager = \Drupal::service('entity_field.manager');
+  // Get the fields for block reference paragraph.
+  $fields = $entityFieldManager->getFieldDefinitions('paragraph', 'block_reference');
+  // Delete the field if it exists.
+  if (isset($fields['field_block_reference'])) {
+    $fields['field_block_reference']->delete();
+  }
+  // Do partial import because the field name for block was changed.
+  \Drupal::service('degov_config.updater')->configPartialImport('degov_paragraph_block_reference');
+}
+
