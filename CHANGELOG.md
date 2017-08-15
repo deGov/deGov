@@ -21,12 +21,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   (special permission added), the other for all users to search media elements. 
   Only the elements that have field_include_search checkbox enabled are allowed 
   to be searchable for all.
+- New field for ogg video files in the video_upload media entity.
 
 ### Changed
 - Refactoring and styling of the event teaser.
 - Updated paragraph selection field settings with new added paragraph modules.
 - Exclude Lightning search from the installation profile.
 - Replaced logo, favicon and description in theme.
+- Video files in the video_upload media entity are not required anymore.
 
 ### Fixed
 - Merged duplicate press views in a single latest press view.

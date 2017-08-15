@@ -2,18 +2,18 @@ langcode: de
 status: true
 dependencies:
   config:
-    - field.storage.media.field_video_upload_mp4
+    - field.storage.media.field_video_upload_ogg
     - media_entity.bundle.video_upload
   enforced:
     module:
       - degov_media_video_upload
   module:
     - file
-id: media.video_upload.field_video_upload_mp4
-field_name: field_video_upload_mp4
+id: media.video_upload.field_video_upload_ogg
+field_name: field_video_upload_ogg
 entity_type: media
 bundle: video_upload
-label: MP4
+label: OGG
 description: ''
 required: false
 translatable: false
@@ -21,7 +21,7 @@ default_value: {  }
 default_value_callback: ''
 settings:
   file_directory: media/video_upload
-  file_extensions: mp4
+  file_extensions: ogv
   max_filesize: ''
   description_field: false
   handler: 'default:file'

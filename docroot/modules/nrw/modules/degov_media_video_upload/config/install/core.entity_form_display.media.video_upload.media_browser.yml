@@ -10,6 +10,7 @@ dependencies:
     - field.field.media.video_upload.field_video_upload_caption
     - field.field.media.video_upload.field_video_upload_copyright
     - field.field.media.video_upload.field_video_upload_mp4
+    - field.field.media.video_upload.field_video_upload_ogg
     - field.field.media.video_upload.field_video_upload_preview
     - field.field.media.video_upload.field_video_upload_subtitle
     - field.field.media.video_upload.field_video_upload_webm
@@ -43,6 +44,7 @@ third_party_settings:
       children:
         - field_video_upload_preview
         - field_video_upload_mp4
+        - field_video_upload_ogg
         - field_video_upload_webm
       parent_name: group_vertical
       weight: 14
@@ -134,6 +136,13 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_video_upload_mp4:
+    weight: 5
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_video_upload_ogg:
     weight: 5
     settings:
       progress_indicator: throbber
