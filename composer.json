@@ -38,7 +38,8 @@
         "drupal/ultimate_cron": "^2.0@alpha",
         "drupal/viewsreference": "^1.0@alpha",
         "drupal/webform": "^5.0@beta",
-        "drupal/entity_reference_display": "^1.0"
+        "drupal/entity_reference_display": "^1.0",
+	"phpdocumentor/reflection-docblock": "2.0.*"
     },
     "repositories": {
         "drupal": {

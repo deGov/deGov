@@ -8,7 +8,8 @@ use Behat\Mink\Element\NodeElement;
 use Behat\Mink\Exception\ElementNotFoundException;
 use Behat\Mink\Exception\UnsupportedDriverActionException;
 use Drupal\DrupalExtension\Context\RawDrupalContext;
-use Symfony\Component\Validator\Constraints\True;
+use Symfony\Component\Validator\Constraints\IsTrue;
+use Behat\MinkExtension\Context\MinkContext;
 
 class DeGovContext  extends RawDrupalContext implements TranslatableContext {
 
@@ -75,4 +76,34 @@ class DeGovContext  extends RawDrupalContext implements TranslatableContext {
   public function iSetBrowserWindowSizeToX($width, $height) {
     $this->getSession()->resizeWindow((int)$width, (int)$height, 'current');
   }
+
+    /**
+     * @When I click on :arg1 with selector :arg2
+     */
+    public function iClickOn($arg1, $arg2)
+    {
+        $session = $this->getSession();
+        $element = $session->getPage()->find('css', $arg2);
+        if ($element) {
+            $element->click();
+        }
+        else {
+            throw new ElementNotFoundException($session, 'element', 'css', $arg2);
+        }
+    }
+
+    /**
+     * @Then I click a link :arg1 with selector :arg2
+     */
+    public function iClickALinkWithSelector($arg1, $arg2)
+
+    {
+
+        $session = $this->getSession();
+        $element = $session->getPage()->find('css', $arg2);
+        print_r($element);
+        throw new PendingException();
+    }
+
+
 }
