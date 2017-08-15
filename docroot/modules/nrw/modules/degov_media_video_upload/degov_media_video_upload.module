@@ -40,6 +40,11 @@ function degov_media_video_upload_preprocess_media__video_upload(&$variables) {
     $variables['video_webm'] = file_create_url($file->getFileUri());
   }
 
+  $file = $media->field_video_upload_ogg->entity;
+  if (!empty($file)) {
+    $variables['video_ogg'] = file_create_url($file->getFileUri());
+  }
+
   /* @var \Drupal\media_entity\Entity\Media $poster */
   $image = $media->field_video_upload_preview->entity;
   if (!empty($image)) {
