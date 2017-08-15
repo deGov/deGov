@@ -1,5 +1,6 @@
 <?php
 
+use Drupal\Component\Utility\NestedArray;
 use Drupal\Core\Ajax\AjaxResponse;
 use Drupal\Core\Ajax\HtmlCommand;
 use Drupal\Core\Form\FormStateInterface;
@@ -43,6 +44,8 @@ function degov_views_helper_field_widget_form_alter(&$element, \Drupal\Core\Form
         'message' => t('Loading view details ...'),
       ],
       'callback' => 'degov_views_argument_getter',
+      'wrapper' => $arguments_wrapper_selector,
+      'method' => 'replace',
     ];
     // Fix state for argument.
     // Get correct field name including parents.
@@ -83,10 +86,10 @@ function degov_views_helper_field_widget_form_alter(&$element, \Drupal\Core\Form
           break;
         }
         if ($argument_name == 'tid' && $argument_value['table'] == 'taxonomy_index') {
-          $element['argument'][$num] = [
+          $element['argument'] = [
             '#type' => 'entity_autocomplete',
             '#title' => t('Taxonomy term'),
-            '#default_value' => $values[0]['argument'],
+            '#default_value' => \Drupal\taxonomy\Entity\Term::load($values[0]['argument']),
             '#target_type' => 'taxonomy_term',
             '#selection_handler' => 'default:taxonomy_term',
             '#selection_settings' => [],
@@ -99,7 +102,7 @@ function degov_views_helper_field_widget_form_alter(&$element, \Drupal\Core\Form
         $field_info = $info['info'];
         $bundle_info = $info['bundle_info'];
         if ($field_info) {
-          $element['argument'][$num] = [
+          $element['argument'] = [
             '#type' => ($field_info->getType() == 'entity_reference') ? 'entity_autocomplete' : 'textfield',
             '#title' => empty($bundle_info) ? $field_info->getLabel() : $bundle_info->getLabel(),
             '#description' => empty($bundle_info) ? $field_info->getDescription() : $bundle_info->getDescription(),
@@ -109,19 +112,19 @@ function degov_views_helper_field_widget_form_alter(&$element, \Drupal\Core\Form
           if (($field_info->getType() == 'entity_reference')) {
             $info_settings = $field_info->getSettings();
             $bundle_settings = $bundle_info->getSettings();
-            $element['argument'][$num]['#target_type'] = $info_settings['target_type'];
-            $element['argument'][$num]['#selection_handler'] = $bundle_settings['handler'];
-            $element['argument'][$num]['#selection_settings'] = array();
-            $element['argument'][$num]['#selection_settings']['target_bundles'] = $bundle_settings['handler_settings']['target_bundles'];
+            $element['argument']['#target_type'] = $info_settings['target_type'];
+            $element['argument']['#selection_handler'] = $bundle_settings['handler'];
+            $element['argument']['#selection_settings'] = array();
+            $element['argument']['#selection_settings']['target_bundles'] = $bundle_settings['handler_settings']['target_bundles'];
             // default value could be only entity, let's load one
             $entity_storage = \Drupal::entityManager()->getStorage($info_settings['target_type']);
-            $entity = $entity_storage->load($element['argument'][$num]['#default_value']);
-            $element['argument'][$num]['#default_value'] = $entity;
+            $entity = $entity_storage->load($element['argument']['#default_value']);
+            $element['argument']['#default_value'] = $entity;
           }
         } else {
           // this is not field but property of the entity
           $property = array_shift($argument);
-          $element['argument'][$num] = [
+          $element['argument'] = [
             '#type' => 'textfield',
             '#title' => $property['field'],
             '#default_value' => $values[0]['argument'],
@@ -130,7 +133,8 @@ function degov_views_helper_field_widget_form_alter(&$element, \Drupal\Core\Form
         $num++;
       }
     }
-
+    $element['argument']['#prefix'] = '<div id="'. $arguments_wrapper_selector .'">';
+    $element['argument']['#suffix'] = '</div>';
     $view_modes = \Drupal::service('entity_display.repository')->getViewModeOptions($entity_type);
     $element['view_mode'] = [
       '#type' => 'select',
@@ -198,9 +202,10 @@ function _views_selector_get_state_name($dependee, $element, $field_definition) 
  */
 function degov_views_argument_getter(array &$form, FormStateInterface $form_state) {
   $trigger = $form_state->getTriggeringElement();
-  $response = new AjaxResponse();
-  $response->addCommand(new HtmlCommand('asdasd', render($html)));
-  return $response;
+  $parents = $trigger['#array_parents'];
+  $triggered_element = array_pop($parents);
+  $parents[] = 'argument';
+  return NestedArray::getValue($form, $parents);
 }
 
 /**
