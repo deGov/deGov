@@ -11,4 +11,4 @@ services:
     arguments: ['@config.storage', '@event_dispatcher', '@config.manager', '@lock', '@config.typed', '@module_handler', '@module_installer', '@theme_handler', '@string_translation']
   degov_config.module_updater:
     class: Drupal\degov_common\DegovModuleUpdater
-    arguments: ['@config.storage', '@event_dispatcher', '@config.manager', '@lock', '@config.typed', '@module_handler', '@module_installer', '@theme_handler', '@string_translation']
+    arguments: ['@config.factory', '@module_handler', '@logger.channel.config_rewrite', '@?language.config_factory_override']
