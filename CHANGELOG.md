@@ -33,6 +33,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   reference widget.
 - Added scripts to execute tests(BeHat, PHPUnit) in a unified fashion, added small tech. documentation for setup
 - Added degov_media_audio module for audio files (mp3, ogg) 
+- Change block reference paragraph in the way that it can reference any block,
+  not only the ones that were already placed into the layout of the theme.
 
 ### Changed
 - Refactoring and styling of the event teaser.
