@@ -1,0 +1,65 @@
+{#
+/**
+ * @file
+ * Default theme implementation to present a media entity.
+ *
+ * Available variables:
+ * - name: Name of the media.
+ * - content: Media content.
+ *
+ * @see template_preprocess_media()
+ *
+ * @ingroup themeable
+ */
+#}
+{% set caption %}
+  {{- content.field_audio_caption -}}
+{% endset %}
+{% set copyright %}
+  {{- content.field_audio_copyright -}}
+{% endset %}
+{%
+set media_classes = [
+  'audio',
+  'clearfix',
+]
+%}
+<article{{ attributes.addClass(media_classes) }}>
+  {{ content.contextual_links }}
+  <div class="audio__type-text">{{ 'Audio'|t }}</div>
+  <div class="audio__audio">
+    <audio{{ audio_attributes }}>
+      {% if audio_mp3 %}
+      <source src="{{ audio_mp3 }}" type="audio/mpeg">
+      {% endif %}
+      {% if audio_ogg %}
+      <source src="{{ audio_ogg }}" type="audio/ogg">
+      {% endif %}
+      {% trans %}
+      I'm sorry; your browser doesn't support HTML5 audio in OGG or MP3 format.
+      {% endtrans %}
+    </audio>
+  </div>
+  {% if content.field_audio_caption|field_value or content.field_audio_copyright|field_value %}
+    <div class="audio__info">
+      {% if content.field_audio_caption|field_value %}
+        <div class="audio__caption"{{ content.field_audio_caption|quickedit_attr }}>{{ content.field_audio_caption|field_value }}</div>
+      {% endif %}
+      {% if content.field_audio_copyright|field_value %}
+        <div class="audio__copyright">
+          <span class="audio__copyright-label"{{ content.field_audio_copyright|quickedit_attr }}>{{ '&copy;'|trans }}</span>
+          {{ content.field_audio_copyright|field_value }}
+        </div>
+      {% endif %}
+    </div>
+  {% endif %}
+  {% if content.field_tags|field_value %}
+    <div class="tags"{{ content.field_tags|quickedit_attr }}>{{ content.field_tags|field_value }}</div>
+  {% endif %}
+  {% if content.usage %}
+    <div class="audio__usage">
+      <h2>{{ 'Usage'|trans }}</h2>
+      {{  content.usage }}
+    </div>
+  {% endif %}
+</article>

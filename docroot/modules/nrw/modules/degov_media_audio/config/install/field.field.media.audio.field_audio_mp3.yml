@@ -1,0 +1,29 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_audio_mp3
+    - media_entity.bundle.audio
+  enforced:
+    module:
+      - degov_media_audio
+  module:
+    - file
+id: media.audio.field_audio_mp3
+field_name: field_audio_mp3
+entity_type: media
+bundle: audio
+label: MP3
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: media/audio_upload
+  file_extensions: mp3
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file
