@@ -12,7 +12,8 @@ default:
     Behat\MinkExtension:
       goutte: ~
       selenium2: ~
-      base_url: http://degov.dev/  # Replace with your site's URL
+      base_url: http://degov.local.com/  # Replace with your site's URL
+      files_path: %paths.base%/media/dummy/
     Drupal\DrupalExtension:
       blackbox: ~
       api_driver: 'drush'
