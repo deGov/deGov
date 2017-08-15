@@ -21,6 +21,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   (special permission added), the other for all users to search media elements. 
   Only the elements that have field_include_search checkbox enabled are allowed 
   to be searchable for all.
+- Change block reference paragraph in the way that it can reference any block,
+  not only the ones that were already placed into the layout of the theme.
 
 ### Changed
 - Refactoring and styling of the event teaser.
