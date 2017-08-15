@@ -9,7 +9,7 @@
       {% else %}
         {% set url = menu_item.url %}
       {% endif %}
-      <a href="{{ url }}" class="nrw-menu-header__icon menu-icon {{ menu_item.class.options.attributes.class }} link{{ element }}">
+      <a href=" {{ url }}" class="link{{ element }} nrw-menu-header__icon menu-icon {{ menu_item.class.options.attributes.class }} ">
         <div>
           <i class="fa fa-list" aria-hidden="true"></i>
           <span>{{ menu_item.text }}</span>
@@ -33,7 +33,7 @@
           {% else %}
             {% set active = "" %}
           {% endif %}
-          <div class="nrw-menu-header__col link{{ element }} {{ active }}">
+          <div class="link{{ element }} nrw-menu-header__col  {{ active }}">
             <div class="nrw-menu__header">
               <!-- First level of main menu-->
               <div class="nrw-menu__header-link-area">

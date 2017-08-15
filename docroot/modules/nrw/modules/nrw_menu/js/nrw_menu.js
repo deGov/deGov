@@ -59,12 +59,10 @@
       //clic on first level to open menu
       $('.nrw-menu-header__icon').click(function(){
         var classes = $(this).prop("classList");
-        var lastEl = classes[classes.length-1];
+        var lastEl = classes[0];
     
         $('.nrw-menu-header__col').removeClass('is-active');
         if($('.nrw-menu-header__col').hasClass(lastEl)){
-          console.log(lastEl);
-          console.log($(this));
           $('.nrw-menu-header__col.'+lastEl).addClass('is-active')
         }
 
@@ -75,7 +73,22 @@
       });
     }
   }
+  Drupal.behaviors.doubleTap = {
+    attach: function (context, settings) {
+      $('.nrw-menu-header__icon').each(
+      function(i) {
+          var classes = this.className.split(/\s+/);
+          for (var i=0,len=classes.length; i<len; i++){
+              if ($('.nrw-menu-header__col').hasClass(classes[i])){
+                  $(this).addClass('has-children');
+              }
+          }
+      });
 
+      $('.has-children').doubleTapToGo();
+      $('.nrw-menu__header-link-area').doubleTapToGo();
+    }
+  };
   // Responsive menu
   Drupal.behaviors.responsiveMenu = {
     attach: function (context, settings) {
