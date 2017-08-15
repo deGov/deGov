@@ -9,9 +9,16 @@
       {% else %}
         {% set url = menu_item.url %}
       {% endif %}
-      <a href=" {{ url }}" class="link{{ element }} nrw-menu-header__icon menu-icon {{ menu_item.class.options.attributes.class }} ">
+
+      {% if  menu_item.class.options.attributes.class is not empty %}
+        {% set icon = menu_item.class.options.attributes.class %}
+      {% else %}
+        {% set icon = 'fa-list' %}
+      {% endif %}
+
+      <a href=" {{ url }}" class="link{{ element }} nrw-menu-header__icon menu-icon  ">
         <div>
-          <i class="fa fa-list" aria-hidden="true"></i>
+          <i class="fa {{ icon }}" aria-hidden="true"></i>
           <span>{{ menu_item.text }}</span>
         </div>
       </a>
