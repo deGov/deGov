@@ -17,7 +17,7 @@
         return;
       }
       // on click add the class to siblings
-      $('.nrw-menu-header__col .nrw-menu__header', context).click(function (e) {
+      /*$('.nrw-menu-header__col .nrw-menu__header', context).click(function (e) {
         e.preventDefault();
         // remove the class from all the content containers in the menu
         // add the class only to the sibling of the active menu__header
@@ -32,10 +32,65 @@
           $(this).siblings('.nrw-menu-header__content').addClass("is-expanded");
         }
       });
+        */
+      //hover in first level to open menu
+
+      /*
+      $('.nrw-menu-header__icon').hover(function(){
+        var classes = $(this).prop("classList");
+        var lastEl = classes[classes.length-1];
+        
+        $('.nrw-menu-header__col').removeClass('is-active');
+        if($('.nrw-menu-header__col').hasClass(lastEl)){
+          console.log(lastEl);
+          console.log($(this));
+          $('.nrw-menu-header__col.'+lastEl).addClass('is-active')
+        }
+
+      });
+
+      */
+
+      //hover in second level to open menu
+      $('.nrw-menu-header__col').hover(function(){
+        $(this).toggleClass('is-open');
+        $(this).find('.nrw-menu-header__content').toggleClass('is-expanded');
+      });
+      //clic on first level to open menu
+      $('.nrw-menu-header__icon').click(function(){
+        var classes = $(this).prop("classList");
+        var lastEl = classes[classes.length-1];
+    
+        $('.nrw-menu-header__col').removeClass('is-active');
+        if($('.nrw-menu-header__col').hasClass(lastEl)){
+          console.log(lastEl);
+          console.log($(this));
+          $('.nrw-menu-header__col.'+lastEl).addClass('is-active')
+        }
+
+      });
+      // close menu
       $('.nrw-menu__content-close a', context).click(function (e) {
         $(this).parent().parent().parent().removeClass('is-expanded');
       });
     }
   }
+
+  // Responsive menu
+  Drupal.behaviors.responsiveMenu = {
+    attach: function (context, settings) {
+      $('.header__menu-icon').click(function () {
+        $('.nrw-menu-header-responsive').toggleClass('is-open');
+      });
+      $('.nrw-menu-header-responsive .nrw-menu-header-responsive__block-title').click(function () {
+        $(this).toggleClass('is-close is-open');
+        $(this).siblings('.nrw-menu-header-responsive__content').toggleClass('is-close is-open');
+      });
+      $('.nrw-menu-header-responsive .action').click(function () {
+        $(this).parent().siblings('.nrw-menu-header-responsive__list').toggleClass('is-open');
+        $(this).toggleClass('is-open');
+      });
+    }
+  };
 
 })(jQuery, Drupal);
