@@ -1,6 +1,8 @@
 <?php
 
+use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\degov_common\Common;
+use Drupal\field\Entity\FieldStorageConfig;
 
 /**
  * Implements hook_preprocess().
@@ -13,4 +15,25 @@ function degov_paragraph_block_reference_preprocess(&$variables, $hook, &$info) 
     'entity_bundles' => ['block_reference'],
     'entity_view_modes' => ['default', 'preview'],
   ]);
+}
+
+/**
+ * @param FieldStorageConfig $definition
+ * @param ContentEntityInterface|NULL $entity
+ * @param $cacheable
+ *
+ * @return array
+ */
+function degov_block_reference_widget_list(FieldStorageConfig $definition, ContentEntityInterface $entity = NULL, $cacheable) {
+  $options = [];
+  $manager = \Drupal::service('plugin.manager.block');
+  $blocks = $manager->getDefinitions();
+  foreach ($blocks as $plugin_id => $plugin_definition) {
+    // We do not need the blocks from the views, there is view reference field for that.
+    if (!in_array($plugin_definition['provider'], ['views', 'entity_block', 'ctools', 'facets', 'search_api_sorts'])) {
+      $options[$plugin_id] = $plugin_definition['admin_label'];
+    }
+  }
+  // @TODO maybe need to alter the list with Events?
+  return $options;
 }

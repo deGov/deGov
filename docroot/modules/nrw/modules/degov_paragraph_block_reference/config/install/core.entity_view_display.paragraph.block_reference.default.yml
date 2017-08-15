@@ -2,7 +2,7 @@ langcode: de
 status: true
 dependencies:
   config:
-    - field.field.paragraph.block_reference.field_block_reference
+    - field.field.paragraph.block_reference.field_block
     - field.field.paragraph.block_reference.field_sub_title
     - field.field.paragraph.block_reference.field_title
     - field.field.paragraph.block_reference.field_title_link
@@ -11,21 +11,20 @@ dependencies:
     module:
       - degov_paragraph_block_reference
   module:
+    - degov_paragraph_block_reference
     - link
 id: paragraph.block_reference.default
 targetEntityType: paragraph
 bundle: block_reference
 mode: default
 content:
-  field_block_reference:
+  field_block:
+    type: degov_block_render
     weight: 3
-    label: hidden
-    settings:
-      link: true
-      view_mode: default
-    third_party_settings: {  }
-    type: entity_reference_entity_view
     region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
   field_sub_title:
     weight: 1
     label: hidden
