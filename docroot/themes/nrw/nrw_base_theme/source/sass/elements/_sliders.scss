@@ -324,7 +324,7 @@
         bottom: $vertical-gutter-width/2;
         left: 0;
         height: 172px;
-        over
+        overflow: hidden;
         @include calc('width', '100% - 384px');
         margin: 0 auto;
         padding: 30px 150px;
