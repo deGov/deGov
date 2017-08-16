@@ -2,6 +2,9 @@
 
 namespace Drupal\degov_common;
 
+use Drupal\Core\Controller\ControllerBase;
+use Symfony\Component\HttpFoundation\JsonResponse;
+
 /**
  * Class Common.
  *
@@ -9,7 +12,7 @@ namespace Drupal\degov_common;
  *
  * @package Drupal\degov_common
  */
-class Common {
+class Common extends ControllerBase {
 
   /**
    * Adds template suggestions and library implementations.
