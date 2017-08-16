@@ -1,0 +1,21 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_reference_view_mode
+    - paragraphs.paragraphs_type.media_reference
+  module:
+    - entity_reference_display
+id: paragraph.media_reference.field_media_reference_view_mode
+field_name: field_media_reference_view_mode
+entity_type: paragraph
+bundle: media_reference
+label: Anzeigemodus
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  exclude: {  }
+field_type: entity_reference_display

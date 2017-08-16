@@ -4,6 +4,7 @@ dependencies:
   config:
     - entity_browser.browser.media_browser
     - field.field.paragraph.media_reference.field_media_reference_media
+    - field.field.paragraph.media_reference.field_media_reference_view_mode
     - field.field.paragraph.media_reference.field_override_caption
     - field.field.paragraph.media_reference.field_sub_title
     - field.field.paragraph.media_reference.field_title
@@ -34,6 +35,12 @@ content:
       field_widget_display_settings: {  }
     region: content
     third_party_settings: {  }
+  field_media_reference_view_mode:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_override_caption:
     type: string_textfield
     weight: 4

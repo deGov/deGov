@@ -1,0 +1,6 @@
+degov_paragraph_media_reference.ajax_load_entity:
+  path: '/ajax-load-entity/{entity_type}/{entity_id}'
+  defaults:
+    _controller: '\Drupal\degov_paragraph_media_reference\Controller\Response::ajaxEntityLoad'
+  requirements:
+    _permission: 'access content'

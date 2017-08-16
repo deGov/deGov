@@ -12,3 +12,10 @@ function degov_paragraph_media_reference_uninstall() {
     'entity_bundles' => ['media_reference'],
   ]);
 }
+
+/**
+ * Update media reference field to a single instance selection field.
+ */
+function degov_paragraph_media_reference_update_8001() {
+  \Drupal::service('degov_config.updater')->configPartialImport('degov_paragraph_media_reference');
+}
