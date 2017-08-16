@@ -1,8 +1,6 @@
 <?php
 
 use Drupal\Component\Utility\NestedArray;
-use Drupal\Core\Ajax\AjaxResponse;
-use Drupal\Core\Ajax\HtmlCommand;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\field\Entity\FieldConfig;
 use Drupal\field\Entity\FieldStorageConfig;
@@ -19,7 +17,8 @@ function degov_views_helper_field_widget_form_alter(&$element, \Drupal\Core\Form
   $field_definition = $items->getFieldDefinition();
   if ($field_definition->getType() == 'viewsreference') {
     // Get configuration settings for the form widget.
-    $config = \Drupal::service('config.factory')->getEditable('degov_views_helper.settings');
+    $config = \Drupal::service('config.factory')
+      ->getEditable('degov_views_helper.settings');
     $allowed_forms = $config->get('form_ids');
     // Get the form renderer array.
     $form = $form_state->getCompleteForm();
@@ -34,7 +33,9 @@ function degov_views_helper_field_widget_form_alter(&$element, \Drupal\Core\Form
         }
       }
     }
-    $arguments_wrapper_selector = implode('_', $element['target_id']['#field_parents']).'_arguments';
+    // Create the selector for the arguments fields for the ajax response.
+    $arguments_wrapper_selector = implode('_', $element['target_id']['#field_parents']) . '_arguments';
+    $arguments_weight = !empty($element['argument']['#weight']) ? $element['argument']['#weight'] : 10;
     // Add empty option and ajax callback for the display_id field.
     $element['display_id']['#options'] = ['_none' => t('-- Choose view display --')] + $element['display_id']['#options'];
     $element['display_id']['#ajax'] = [
@@ -55,9 +56,11 @@ function degov_views_helper_field_widget_form_alter(&$element, \Drupal\Core\Form
     ];
     $display_selector = _views_selector_get_state_name('display_id', $element, $field_definition);
     $element['argument']['#states']['visible'] = [
-      ':input[name="' . $view_selector . '"]' => ['!value' => '_none'],
+      ':input[name="' . $display_selector . '"]' => ['!value' => 'default'],
       ':input[name="' . $display_selector . '"]' => ['!value' => '_none'],
     ];
+    // Get arguments states to set them to entity reference field too.
+    $argument_states = $element['argument']['#states'];
     // Get extra data from serialized field.
     $extra_data = [];
     $values = $items->getValue();
@@ -79,63 +82,76 @@ function degov_views_helper_field_widget_form_alter(&$element, \Drupal\Core\Form
       if (!empty($values[0]['display_id']) && $values[0]['display_id'] != '_none') {
         $display_id = $values[0]['display_id'];
       }
+      // Get the view display.
       $display = $view->getDisplay($display_id);
-      $num = 0;
-      foreach ($display['display_options']['arguments'] as $argument_name => $argument_value) {
-        if ($num >= 1) {
-          break;
-        }
-        if ($argument_name == 'tid' && $argument_value['table'] == 'taxonomy_index') {
-          $element['argument'] = [
-            '#type' => 'entity_autocomplete',
-            '#title' => t('Taxonomy term'),
-            '#default_value' => \Drupal\taxonomy\Entity\Term::load($values[0]['argument']),
-            '#target_type' => 'taxonomy_term',
-            '#selection_handler' => 'default:taxonomy_term',
-            '#selection_settings' => [],
-          ];
-          $num++;
-          continue;
-        }
-        // get field info
-        $info = _views_argument_field_info($argument_value);
-        $field_info = $info['info'];
-        $bundle_info = $info['bundle_info'];
-        if ($field_info) {
-          $element['argument'] = [
-            '#type' => ($field_info->getType() == 'entity_reference') ? 'entity_autocomplete' : 'textfield',
-            '#title' => empty($bundle_info) ? $field_info->getLabel() : $bundle_info->getLabel(),
-            '#description' => empty($bundle_info) ? $field_info->getDescription() : $bundle_info->getDescription(),
-            '#default_value' => $values[0]['argument'],
-          ];
-          // if it is entity reference and some more settings
-          if (($field_info->getType() == 'entity_reference')) {
-            $info_settings = $field_info->getSettings();
-            $bundle_settings = $bundle_info->getSettings();
-            $element['argument']['#target_type'] = $info_settings['target_type'];
-            $element['argument']['#selection_handler'] = $bundle_settings['handler'];
-            $element['argument']['#selection_settings'] = array();
-            $element['argument']['#selection_settings']['target_bundles'] = $bundle_settings['handler_settings']['target_bundles'];
-            // default value could be only entity, let's load one
-            $entity_storage = \Drupal::entityManager()->getStorage($info_settings['target_type']);
-            $entity = $entity_storage->load($element['argument']['#default_value']);
-            $element['argument']['#default_value'] = $entity;
+      // Contexual arguments if they are not overriden are set only in default.
+      if (empty($display['display_options']['arguments'])) {
+        // If no arguments found try to get the ones from default display.
+        $display = $view->getDisplay('default');
+      }
+      if (!empty($display['display_options']['arguments'])) {
+        $num = 0;
+        foreach ($display['display_options']['arguments'] as $argument_name => $argument_value) {
+          if ($num >= 1) {
+            break;
           }
-        } else {
-          // this is not field but property of the entity
-          $property = array_shift($argument);
-          $element['argument'] = [
-            '#type' => 'textfield',
-            '#title' => $property['field'],
-            '#default_value' => $values[0]['argument'],
-          ];
+          if ($argument_name == 'tid' && $argument_value['table'] == 'taxonomy_index') {
+            $element['argument'] = [
+              '#type' => 'entity_autocomplete',
+              '#title' => t('Taxonomy term'),
+              '#default_value' => \Drupal\taxonomy\Entity\Term::load($values[0]['argument']),
+              '#target_type' => 'taxonomy_term',
+              '#selection_handler' => 'default:taxonomy_term',
+              '#selection_settings' => [],
+            ];
+            $num++;
+            continue;
+          }
+          // get field info
+          $info = _views_argument_field_info($argument_value);
+          $field_info = $info['info'];
+          $bundle_info = $info['bundle_info'];
+          if ($field_info) {
+            $element['argument'] = [
+              '#type' => ($field_info->getType() == 'entity_reference') ? 'entity_autocomplete' : 'textfield',
+              '#title' => empty($bundle_info) ? $field_info->getLabel() : $bundle_info->getLabel(),
+              '#description' => empty($bundle_info) ? $field_info->getDescription() : $bundle_info->getDescription(),
+              '#default_value' => $values[0]['argument'],
+            ];
+            // if it is entity reference and some more settings
+            if (($field_info->getType() == 'entity_reference')) {
+              $info_settings = $field_info->getSettings();
+              $bundle_settings = $bundle_info->getSettings();
+              $element['argument']['#target_type'] = $info_settings['target_type'];
+              $element['argument']['#selection_handler'] = $bundle_settings['handler'];
+              $element['argument']['#selection_settings'] = [];
+              $element['argument']['#selection_settings']['target_bundles'] = $bundle_settings['handler_settings']['target_bundles'];
+              // default value could be only entity, let's load one
+              $entity_storage = \Drupal::entityManager()
+                ->getStorage($info_settings['target_type']);
+              $entity = $entity_storage->load($element['argument']['#default_value']);
+              $element['argument']['#default_value'] = $entity;
+            }
+          }
+          else {
+            // this is not field but property of the entity
+            $property = array_shift($argument);
+            $element['argument'] = [
+              '#type' => 'textfield',
+              '#title' => $property['field'],
+              '#default_value' => $values[0]['argument'],
+            ];
+          }
+          $num++;
         }
-        $num++;
       }
     }
-    $element['argument']['#prefix'] = '<div id="'. $arguments_wrapper_selector .'">';
+    $element['argument']['#prefix'] = '<div id="' . $arguments_wrapper_selector . '">';
+    $element['argument']['#weight'] = $arguments_weight;
+    $element['argument']['#states'] = $argument_states;
     $element['argument']['#suffix'] = '</div>';
-    $view_modes = \Drupal::service('entity_display.repository')->getViewModeOptions($entity_type);
+    $view_modes = \Drupal::service('entity_display.repository')
+      ->getViewModeOptions($entity_type);
     $element['view_mode'] = [
       '#type' => 'select',
       '#title' => t('Views row view mode'),
@@ -145,7 +161,7 @@ function degov_views_helper_field_widget_form_alter(&$element, \Drupal\Core\Form
       '#states' => [
         'visible' => [
           ':input[name="' . $view_selector . '"]' => ['!value' => '_none'],
-        ]
+        ],
       ],
     ];
   }
@@ -168,12 +184,13 @@ function _views_argument_field_info($argument) {
         $bundles = $info->getBundles();
         $bundles_machine_names = array_keys($bundles);
         $bundle_info = FieldConfig::loadByName($keys[0], $bundles_machine_names[0], $keys[1]);
-      } else {
-        $bundle_info = array();
+      }
+      else {
+        $bundle_info = [];
       }
     }
   }
-  return array('info' => $info, 'bundle_info' => $bundle_info);
+  return ['info' => $info, 'bundle_info' => $bundle_info];
 }
 
 /**
@@ -191,7 +208,7 @@ function _views_selector_get_state_name($dependee, $element, $field_definition) 
   $selector[] = '0';
   $selector[] = $dependee;
   $start = array_shift($selector);
-  return $start . '['. implode('][', $selector).']';
+  return $start . '[' . implode('][', $selector) . ']';
 }
 
 /**
