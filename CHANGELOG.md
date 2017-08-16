@@ -21,13 +21,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   (special permission added), the other for all users to search media elements. 
   Only the elements that have field_include_search checkbox enabled are allowed 
   to be searchable for all.
-- New field for ogg video files in the video_upload media entity.
-- New service "degov_config.module_updater" for applying the updates from update 
-  hook. Now in update hook call \Drupal::service('degov_config.module_updater')->applyUpdates('module_name', 'update_version')
-  In config/update_N folder you can place install folder for new configurations,
-  block folder for new blocks and rewrite folder for configuration updates.
-  Don't forget to update config/install folder for freshly installed module to
-  work properly.
+- New field to support ogg video files in the video_upload media entity.
+- New service "degov_config.module_updater" for config updates from an update hook.
+  Use the service by adding \Drupal::service('degov_config.module_updater')->applyUpdates('module_name', 'update_version')
+  to your update hook and add a 'config/update_N' folder. In the folder
+  create a place an 'install' folder for new configurations, a 'block' folder
+  for new blocks and a 'rewrite' folder for configuration updates.
+  Updating the 'config/install' folder is still required for fresh installations.
 
 ### Changed
 - Refactoring and styling of the event teaser.
