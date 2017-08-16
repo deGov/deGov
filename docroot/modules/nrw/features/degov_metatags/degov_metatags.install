@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * Add meta tag field.
+ */
+function degov_metatags_update_8001() {
+  \Drupal::service('degov_config.updater')->configPartialImport('degov_metatags');
+}

@@ -4,7 +4,9 @@ type: module
 package: deGov
 core: 8.x
 dependencies:
+  - field
   - metatag
   - metatag_dc
   - metatag_open_graph
   - metatag_twitter_cards
+  - node
