@@ -44,3 +44,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Social media buttons show under the content tags.
 - Missing functionality fixes for pause/play in slick sliders.
 - Warning on pages where an OSM map is included.
+- Small styling changes in the slider to prevent overflows.
+- Small styling changes in footer for headers.
