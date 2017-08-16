@@ -73,6 +73,10 @@ function degov_views_helper_field_widget_form_alter(&$element, \Drupal\Core\Form
       '#default_value' => !empty($extra_data['page_limit']) ? $extra_data['page_limit'] : '',
       '#weight' => 10,
     ];
+    $element['argument'] = [
+      '#tree' => TRUE,
+      '0' => $element['argument'],
+    ];
     $entity_type = 'node';
     if (!empty($values[0]['target_id'])) {
       /** @var \Drupal\views\Entity\View $view */
@@ -89,19 +93,44 @@ function degov_views_helper_field_widget_form_alter(&$element, \Drupal\Core\Form
         // If no arguments found try to get the ones from default display.
         $display = $view->getDisplay('default');
       }
+      $argument_values = explode('/', $values[0]['argument']);
       if (!empty($display['display_options']['arguments'])) {
         $num = 0;
         foreach ($display['display_options']['arguments'] as $argument_name => $argument_value) {
-          if ($num >= 1) {
+          /*if ($num >= 1) {
             break;
-          }
+          }*/
           if ($argument_name == 'tid' && $argument_value['table'] == 'taxonomy_index') {
-            $element['argument'] = [
+            $element['argument'][$num] = [
               '#type' => 'entity_autocomplete',
               '#title' => t('Taxonomy term'),
-              '#default_value' => \Drupal\taxonomy\Entity\Term::load($values[0]['argument']),
+              '#default_value' => \Drupal\taxonomy\Entity\Term::load($argument_values[$num]),
               '#target_type' => 'taxonomy_term',
               '#selection_handler' => 'default:taxonomy_term',
+              '#selection_settings' => [],
+            ];
+            $num++;
+            continue;
+          }
+          if ($argument_name == 'nid' && $argument_value['table'] == 'node_field_data') {
+            $element['argument'][$num] = [
+              '#type' => 'entity_autocomplete',
+              '#title' => t('Node'),
+              '#default_value' => \Drupal\node\Entity\Node::load($argument_values[$num]),
+              '#target_type' => 'node',
+              '#selection_handler' => 'default:node',
+              '#selection_settings' => [],
+            ];
+            $num++;
+            continue;
+          }
+          if ($argument_name == 'uid' && $argument_value['table'] == 'node_field_data') {
+            $element['argument'][$num] = [
+              '#type' => 'entity_autocomplete',
+              '#title' => t('User'),
+              '#default_value' => \Drupal\user\Entity\User::load($argument_values[$num]),
+              '#target_type' => 'user',
+              '#selection_handler' => 'default:user',
               '#selection_settings' => [],
             ];
             $num++;
@@ -112,44 +141,45 @@ function degov_views_helper_field_widget_form_alter(&$element, \Drupal\Core\Form
           $field_info = $info['info'];
           $bundle_info = $info['bundle_info'];
           if ($field_info) {
-            $element['argument'] = [
+            $element['argument'][$num] = [
               '#type' => ($field_info->getType() == 'entity_reference') ? 'entity_autocomplete' : 'textfield',
               '#title' => empty($bundle_info) ? $field_info->getLabel() : $bundle_info->getLabel(),
               '#description' => empty($bundle_info) ? $field_info->getDescription() : $bundle_info->getDescription(),
-              '#default_value' => $values[0]['argument'],
+              '#default_value' => !empty($argument_values[$num]) ? $argument_values[$num] : '',
             ];
             // if it is entity reference and some more settings
             if (($field_info->getType() == 'entity_reference')) {
               $info_settings = $field_info->getSettings();
               $bundle_settings = $bundle_info->getSettings();
-              $element['argument']['#target_type'] = $info_settings['target_type'];
-              $element['argument']['#selection_handler'] = $bundle_settings['handler'];
-              $element['argument']['#selection_settings'] = [];
-              $element['argument']['#selection_settings']['target_bundles'] = $bundle_settings['handler_settings']['target_bundles'];
+              $element['argument'][$num]['#target_type'] = $info_settings['target_type'];
+              $element['argument'][$num]['#selection_handler'] = $bundle_settings['handler'];
+              $element['argument'][$num]['#selection_settings'] = [];
+              $element['argument'][$num]['#selection_settings']['target_bundles'] = $bundle_settings['handler_settings']['target_bundles'];
               // default value could be only entity, let's load one
               $entity_storage = \Drupal::entityManager()
                 ->getStorage($info_settings['target_type']);
-              $entity = $entity_storage->load($element['argument']['#default_value']);
-              $element['argument']['#default_value'] = $entity;
+              $entity = $entity_storage->load($element['argument'][$num]['#default_value']);
+              $element['argument'][$num]['#default_value'] = $entity ? $entity : '';
             }
           }
           else {
             // this is not field but property of the entity
             $property = array_shift($argument);
-            $element['argument'] = [
+            $element['argument'][$num] = [
               '#type' => 'textfield',
               '#title' => $property['field'],
-              '#default_value' => $values[0]['argument'],
+              '#default_value' => !empty($argument_values[$num]) ? $argument_values[$num] : '',
             ];
           }
           $num++;
         }
       }
     }
-    $element['argument']['#prefix'] = '<div id="' . $arguments_wrapper_selector . '">';
+    $element['argument']['#prefix'] = '<details id="' . $arguments_wrapper_selector . '" class="form-wrapper">';
+    $element['argument']['#prefix'] .= '<summary role="button" aria-controls="' . $arguments_wrapper_selector . '" aria-expanded="false" aria-pressed="false">' . t('View areguments') . '</summary>';
     $element['argument']['#weight'] = $arguments_weight;
     $element['argument']['#states'] = $argument_states;
-    $element['argument']['#suffix'] = '</div>';
+    $element['argument']['#suffix'] = '</details>';
     $view_modes = \Drupal::service('entity_display.repository')
       ->getViewModeOptions($entity_type);
     $element['view_mode'] = [
