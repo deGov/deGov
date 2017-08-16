@@ -29,6 +29,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Exclude Lightning search from the installation profile.
 - Replaced logo, favicon and description in theme.
 - Video files in the video_upload media entity are not required anymore.
+- Enable all available node types for paragraph node_reference.
+- Enable all available media bundles for paragraph media_reference.
+- Change "NRW View Paragraph Selection Overrides" module name to "NRW Field Configuration Overrides"
 
 ### Fixed
 - Merged duplicate press views in a single latest press view.
