@@ -14,3 +14,16 @@ function degov_paragraph_media_reference_preprocess(&$variables, $hook, &$info) 
     'entity_view_modes' => ['default', 'preview'],
   ]);
 }
+
+/**
+ * @param $element
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ * @param $context
+ */
+function degov_paragraph_media_reference_field_widget_form_alter(&$element, \Drupal\Core\Form\FormStateInterface $form_state, $context) {
+  /** @var \Drupal\Core\Field\WidgetBase $widget */
+  $widget = $context['widget'];
+  if ($widget->getPluginId() == 'entity_reference_paragraphs' && !empty($element['subform']['field_media_reference_media'])) {
+    $element['#attached']['library'][] = 'degov_paragraph_media_reference/media_reference';
+  }
+}
