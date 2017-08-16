@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - New module 'deGov - Password Policy' added.
 - Default block configuration for 'deGov - Inhaltssuche'.
 - Block reference paragraph.
+- View mode selection for media reference.
 
 ### Changed
 - Refactoring and styling of the event teaser.
