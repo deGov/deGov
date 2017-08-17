@@ -3,20 +3,21 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_metatags
-    - node.type.blog
+    - node.type.simplenews_issue
+  enforced:
+    module:
+      - degov_metatags
   module:
     - metatag
-id: node.blog.field_metatags
+id: node.simplenews_issue.field_metatags
 field_name: field_metatags
 entity_type: node
-bundle: blog
+bundle: simplenews_issue
 label: 'Meta Tags'
 description: ''
 required: false
-translatable: false
-default_value:
-  -
-    value: 'a:0:{}'
+translatable: true
+default_value: {  }
 default_value_callback: ''
 settings: {  }
 field_type: metatag

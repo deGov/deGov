@@ -4,6 +4,9 @@ dependencies:
   module:
     - metatag
     - node
+  enforced:
+    module:
+      - degov_metatags
 id: node.field_metatags
 field_name: field_metatags
 entity_type: node

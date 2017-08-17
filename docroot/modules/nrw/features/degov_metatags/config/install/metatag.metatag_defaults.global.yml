@@ -1,6 +1,9 @@
 langcode: de
 status: true
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - degov_metatags
 id: global
 label: Global
 tags:

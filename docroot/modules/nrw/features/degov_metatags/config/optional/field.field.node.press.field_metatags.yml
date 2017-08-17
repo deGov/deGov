@@ -4,6 +4,9 @@ dependencies:
   config:
     - field.storage.node.field_metatags
     - node.type.press
+  enforced:
+    module:
+      - degov_metatags
   module:
     - metatag
 id: node.press.field_metatags

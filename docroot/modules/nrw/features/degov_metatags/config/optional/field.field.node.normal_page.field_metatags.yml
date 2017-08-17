@@ -3,13 +3,16 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_metatags
-    - node.type.faq
+    - node.type.normal_page
+  enforced:
+    module:
+      - degov_metatags
   module:
     - metatag
-id: node.faq.field_metatags
+id: node.normal_page.field_metatags
 field_name: field_metatags
 entity_type: node
-bundle: faq
+bundle: normal_page
 label: 'Meta Tags'
 description: ''
 required: false
