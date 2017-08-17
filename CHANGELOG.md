@@ -57,4 +57,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Small styling changes in the slider to prevent overflows.
 - Small styling changes in footer for headers.
 - Links in header paragraphs are now white to contrast the background.
+- The tags field is moved to be hidden from display.
 - Module 'degov - Paragraph Inhaltsreferenz' now only allows view modes whose machine names begin with 'teaser'
