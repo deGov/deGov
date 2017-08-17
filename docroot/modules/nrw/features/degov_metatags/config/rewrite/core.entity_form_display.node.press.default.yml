@@ -1,6 +1,6 @@
 dependencies:
   config:
-    - field.field.node.blog.field_metatags
+    - field.field.node.press.field_metatags
   module:
     - metatag
 content:
