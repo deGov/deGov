@@ -18,6 +18,8 @@ function degov_paragraph_block_reference_preprocess(&$variables, $hook, &$info) 
 }
 
 /**
+ * Returns an array of allowed block names.
+ *
  * @param FieldStorageConfig $definition
  * @param ContentEntityInterface|NULL $entity
  * @param $cacheable
