@@ -27,6 +27,19 @@ function degov_paragraph_media_reference_modules_installed($modules) {
 }
 
 /**
+ * Implements hook_modules_installed().
+ *
+ * @param $modules
+ *   An array of the modules that were installed.
+ */
+function degov_paragraph_media_reference_modules_installed($modules) {
+  if (in_array('degov_paragraph_media_reference', $modules)) {
+    // Set target bundles.
+    _degov_media_reference_bundle_list();
+  }
+}
+
+/**
  * Update field reference target bundles.
  */
 function _degov_media_reference_bundle_list() {
