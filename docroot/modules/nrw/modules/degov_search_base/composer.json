@@ -1,5 +1,5 @@
 {
-    "name": "degov_search_content",
+    "name": "degov_search_base",
     "type": "drupal-module",
     "description": "Basiseinstellungen für die Suche.",
     "license": "GPL-2.0+",
