@@ -51,3 +51,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Warning on pages where an OSM map is included.
 - Small styling changes in the slider to prevent overflows.
 - Small styling changes in footer for headers.
+- Links in header paragraphs are now white to contrast the background.
