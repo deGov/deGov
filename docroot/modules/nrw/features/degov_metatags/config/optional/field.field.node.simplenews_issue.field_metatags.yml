@@ -1,0 +1,23 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatags
+    - node.type.simplenews_issue
+  enforced:
+    module:
+      - degov_metatags
+  module:
+    - metatag
+id: node.simplenews_issue.field_metatags
+field_name: field_metatags
+entity_type: node
+bundle: simplenews_issue
+label: 'Meta Tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

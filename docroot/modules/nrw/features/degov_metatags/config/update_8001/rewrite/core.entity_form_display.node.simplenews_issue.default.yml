@@ -1,0 +1,12 @@
+dependencies:
+  config:
+    - field.field.node.simplenews_issue.field_metatags
+  module:
+    - metatag
+content:
+  field_metatags:
+    type: metatag_firehose
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
