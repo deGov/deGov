@@ -17,5 +17,5 @@ function degov_paragraph_media_reference_uninstall() {
  * Update media reference field to a single instance selection field and add view modes selection.
  */
 function degov_paragraph_media_reference_update_8001() {
-  \Drupal::service('degov_config.updater')->configPartialImport('degov_paragraph_media_reference');
+  \Drupal::service('degov_config.module_updater')->applyUpdates('degov_paragraph_media_reference', '8001');
 }

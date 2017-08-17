@@ -34,3 +34,10 @@ function degov_media_video_upload_update_8001() {
 function degov_media_video_upload_update_8002() {
   \Drupal::service('degov_config.updater')->configPartialImport('degov_media_video_upload');
 }
+
+/**
+ * Add new field for ogg videos.
+ */
+function degov_media_video_upload_update_8003() {
+  \Drupal::service('degov_config.updater')->configPartialImport('degov_media_video_upload');
+}

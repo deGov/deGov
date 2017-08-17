@@ -18,12 +18,28 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Default block configuration for 'deGov - Inhaltssuche'.
 - Block reference paragraph.
 - View mode selection for media reference.
+- Media entities search. Two different views were added for media management 
+  (special permission added), the other for all users to search media elements. 
+  Only the elements that have field_include_search checkbox enabled are allowed 
+  to be searchable for all.
+- New field to support ogg video files in the video_upload media entity.
+- New service "degov_config.module_updater" for config updates from an update hook.
+  Use the service by adding \Drupal::service('degov_config.module_updater')->applyUpdates('module_name', 'update_version')
+  to your update hook and add a 'config/update_N' folder. In the folder
+  create a place an 'install' folder for new configurations, a 'block' folder
+  for new blocks and a 'rewrite' folder for configuration updates.
+  Updating the 'config/install' folder is still required for fresh installations.
+- Adds opportunity to use separate fields for each view argument in views
+  reference widget.
 
 ### Changed
 - Refactoring and styling of the event teaser.
 - Updated paragraph selection field settings with new added paragraph modules.
 - Exclude Lightning search from the installation profile.
 - Replaced logo, favicon and description in theme.
+- Video files in the video_upload media entity are not required anymore.
+- The field type of the argument to would be changed to entity reference if it
+  is applicable to make it easy to find the correct filter in views reference widget.
 
 ### Fixed
 - Merged duplicate press views in a single latest press view.
@@ -33,3 +49,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Social media buttons show under the content tags.
 - Missing functionality fixes for pause/play in slick sliders.
 - Warning on pages where an OSM map is included.
+- Small styling changes in the slider to prevent overflows.
+- Small styling changes in footer for headers.
