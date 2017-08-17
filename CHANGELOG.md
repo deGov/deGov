@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - New module 'deGov - Password Policy' added.
 - Default block configuration for 'deGov - Inhaltssuche'.
 - Block reference paragraph.
+- View mode selection for media reference.
 - Media entities search. Two different views were added for media management 
   (special permission added), the other for all users to search media elements. 
   Only the elements that have field_include_search checkbox enabled are allowed 
@@ -29,7 +30,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   for new blocks and a 'rewrite' folder for configuration updates.
   Updating the 'config/install' folder is still required for fresh installations.
 - Adds opportunity to use separate fields for each view argument in views
-  reference widget. 
+  reference widget.
 
 ### Changed
 - Refactoring and styling of the event teaser.

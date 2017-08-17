@@ -1,19 +1,18 @@
 langcode: de
 status: true
 dependencies:
+  module:
+    - entity_reference_display
+    - paragraphs
   enforced:
     module:
       - degov_paragraph_media_reference
-  module:
-    - media_entity
-    - paragraphs
-id: paragraph.field_media_reference_media
-field_name: field_media_reference_media
+id: paragraph.field_media_reference_view_mode
+field_name: field_media_reference_view_mode
 entity_type: paragraph
-type: entity_reference
-settings:
-  target_type: media
-module: core
+type: entity_reference_display
+settings: {  }
+module: entity_reference_display
 locked: false
 cardinality: 1
 translatable: true

@@ -6,8 +6,10 @@ package: deGov
 dependencies:
   - degov_content_types_shared_fields
   - entity_browser
+  - entity_reference_display
   - field
   - link
   - media_entity
+  - options
   - paragraphs
   - workbench_moderation
