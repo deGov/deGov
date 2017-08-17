@@ -38,14 +38,4 @@ function degov_media_audio_preprocess_media__audio(&$variables) {
   if (!empty($file)) {
     $variables['audio_ogg'] = file_create_url($file->getFileUri());
   }
-
-  /* @var \Drupal\media_entity\Entity\Media $poster */
-  $image = $media->field_audio_preview->entity;
-  if (!empty($image)) {
-    $file = $image->image->entity;
-    if (!empty($file)) {
-      // @todo The audio tag does not have a poster attribute.
-      // $variables['audio_attributes']['poster'] = file_create_url($file->getFileUri());
-    }
-  }
 }

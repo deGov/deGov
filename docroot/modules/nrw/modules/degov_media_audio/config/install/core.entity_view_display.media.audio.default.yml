@@ -45,13 +45,21 @@ content:
     settings:
       link: false
     third_party_settings: {  }
+  field_audio_preview:
+    weight: 4
+    label: hidden
+    settings:
+      image_style: large
+      link: false
+    third_party_settings: {  }
+    type: media_thumbnail
+    region: content
 hidden:
   created: true
   field_include_search: true
   field_media_in_library: true
   field_audio_mp3: true
   field_audio_ogg: true
-  field_audio_preview: true
   langcode: true
   name: true
   thumbnail: true

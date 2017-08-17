@@ -27,6 +27,9 @@ set media_classes = [
 <article{{ attributes.addClass(media_classes) }}>
   {{ content.contextual_links }}
   <div class="audio__type-text">{{ 'Audio'|t }}</div>
+  <div class="audio__image-wrapper">
+    <div class="audio__image">{{ content.field_audio_preview|field_value }}</div>
+  </div>
   <div class="audio__audio">
     <audio{{ audio_attributes }}>
       {% if audio_mp3 %}
