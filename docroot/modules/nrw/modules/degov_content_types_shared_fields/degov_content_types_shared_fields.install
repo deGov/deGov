@@ -6,10 +6,3 @@
 function degov_content_types_shared_fields_update_8001() {
   \Drupal::service('degov_config.updater')->configPartialImport('degov_content_types_shared_fields');
 }
-
-/**
- * Add metatag field.
- */
-function degov_content_types_shared_fields_update_8002() {
-  \Drupal::service('degov_config.updater')->configPartialImport('degov_content_types_shared_fields');
-}
