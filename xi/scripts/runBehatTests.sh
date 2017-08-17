@@ -4,7 +4,7 @@
 tagsToRun=""
 
 # getting nice path for projectroot
-projectRoot=$(dirname "${BASH_SOURCE[0]}")
+projectRoot="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 projectRoot=$(dirname $projectRoot)
 projectRoot=$(dirname $projectRoot)
 
