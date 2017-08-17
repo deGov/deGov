@@ -12,3 +12,10 @@ function degov_paragraph_node_reference_uninstall() {
     'entity_bundles' => ['node_reference'],
   ]);
 }
+
+/**
+ * Enable all node bundles for node reference field inside the paragraph.
+ */
+function degov_paragraph_node_reference_update_8001() {
+  _degov_node_reference_bundle_list();
+}

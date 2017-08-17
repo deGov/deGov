@@ -40,6 +40,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Video files in the video_upload media entity are not required anymore.
 - The field type of the argument to would be changed to entity reference if it
   is applicable to make it easy to find the correct filter in views reference widget.
+- Changes argument fields of type textfield in the views reference paragraph
+  to an entity reference auto-completion field if applicable.
+- Enable all available node types for paragraph node_reference.
+- Enable all available media bundles for paragraph media_reference.
+- Change "NRW View Paragraph Selection Overrides" module name to "NRW Field Configuration Overrides"
 
 ### Fixed
 - Merged duplicate press views in a single latest press view.
