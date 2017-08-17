@@ -1,2 +1,139 @@
 // Styles for nodes
 
+article.long-text {
+  border-bottom: 1px solid #dde6f0;
+  .teaser-content{
+    padding: $grid-gutter-width/2;
+  }
+  .teaser-image{
+    padding: 0;
+  }
+  &:nth-child(odd){
+    .teaser-image{
+      float: right;      
+      &:after{
+        @include triangle-right($color-white);
+        top: 15px;
+      }
+    }
+  }
+  &:nth-child(even){
+    .teaser-image{  
+      &:after{
+        @include triangle-left($color-white);
+        top: 15px;
+        right: 0px;
+      }
+    }
+  }
+}
+
+.node-reference{
+  .paragraph__content{
+    padding: 0;
+    margin: 0 -1*($grid-gutter-width/2);
+  }
+}
+
+/*
+
+
+article.long-text {
+  border-bottom: 1px solid #dde6f0;
+  &:nth-child(4n-1), &:nth-child(4n){
+    .teaser-image{
+      float: right;      
+      &:after{
+        @include triangle-right($color-white);
+        top: 15px;
+      }
+    }
+  }
+  &:nth-child(4n-3), &:nth-child(4n-2){
+    .teaser-image{  
+      &:after{
+        @include triangle-left($color-white);
+        top: 15px;
+        right: 20px;
+      }
+    }
+  }
+}
+
+*/
+article.preview{
+  padding: 0;
+  .teaser-image{
+    padding: 0;
+  }
+  .teaser-content{
+    max-height: 320px;
+    padding: 20px;
+    overflow: hidden;
+    h3{
+      font-weight: bold;
+    }
+  }
+  &:nth-child(4n-2),&:nth-child(4n-3){
+    .teaser-image{
+      &:after{
+        @include triangle-left($color-white);
+        top: 15px;
+        right: 0;
+      }
+    }
+  }
+   &:nth-child(4n-1),&:nth-child(4n){
+    .teaser-image{
+      float: right;
+      &:after{
+        @include triangle-right($color-white);
+        top: 15px;
+      }
+    }
+  }
+}
+
+.slim{
+  .teaser-image{
+    padding: 0;
+  }
+  .teaser-content{
+    padding: $grid-gutter-width/2;
+    h3{
+      font-weight: bold;
+    }
+  }
+  &:nth-child(odd){
+    .teaser-image{
+      float: right;      
+      &:after{
+        @include triangle-right($color-white);
+        top: 15px;
+      }
+    }
+  }
+  &:nth-child(even){
+    .teaser-image{  
+      &:after{
+        @include triangle-left($color-white);
+        top: 15px;
+        right: 0px;
+      }
+    }
+  }
+}
+
+.small-image{
+  border-bottom: 1px solid #dde6f0;
+  .teaser-image{
+    padding: $grid-gutter-width/2;
+  }
+  .teaser-content{
+    padding: $grid-gutter-width/2;
+    h3{
+      font-weight: bold;
+    }
+  }
+  
+}
