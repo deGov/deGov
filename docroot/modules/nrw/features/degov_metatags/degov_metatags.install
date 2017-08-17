@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * Add optional overwrite metatag fields to all installed deGov content types.
+ */
+function degov_metatags_update_8001() {
+  \Drupal::service('degov_config.module_updater')->applyUpdates('degov_metatags', '8001');
+}

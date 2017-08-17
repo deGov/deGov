@@ -14,3 +14,51 @@ function degov_paragraph_media_reference_preprocess(&$variables, $hook, &$info) 
     'entity_view_modes' => ['default', 'preview'],
   ]);
 }
+
+/**
+ * Implements hook_field_widget_form_alter().
+ */
+function degov_paragraph_media_reference_field_widget_form_alter(&$element, \Drupal\Core\Form\FormStateInterface $form_state, $context) {
+  /** @var \Drupal\Core\Field\WidgetBase $widget */
+  $widget = $context['widget'];
+  // Add media_reference library on every media reference paragraph.
+  if ($widget->getPluginId() == 'entity_reference_paragraphs' && !empty($element['subform']['field_media_reference_media'])) {
+    $element['#attached']['library'][] = 'degov_paragraph_media_reference/media_reference';
+  }
+}
+
+/**
+ * Implements hook_modules_installed().
+ *
+ * @param $modules
+ *   An array of the modules that were installed.
+ */
+function degov_paragraph_media_reference_modules_installed($modules) {
+  if (in_array('degov_paragraph_media_reference', $modules)) {
+    // Set target bundles.
+    _degov_media_reference_bundle_list();
+  }
+}
+
+/**
+ * Update field reference target bundles.
+ */
+function _degov_media_reference_bundle_list() {
+  $enabled_bundles = [];
+  $media_types = \Drupal\media_entity\Entity\MediaBundle::loadMultiple();
+  /** @var \Drupal\media_entity\Entity\MediaBundle $media_type */
+  foreach ($media_types as $media_type) {
+    $enabled_bundles[$media_type->id()] = $media_type->id();
+  }
+  if (!empty($enabled_bundles)) {
+    // Load the configuration for node_reference field storage.
+    $config = \Drupal::configFactory()
+      ->getEditable('field.field.paragraph.media_reference.field_media_reference_media');
+    $settings = $config->get('settings');
+    $settings['handler_settings']['target_bundles'] = $enabled_bundles;
+    $config->set('settings', $settings);
+    $config->save(TRUE);
+  } else {
+    drupal_set_message(t('There are no media bundles available'), 'warning');
+  }
+}

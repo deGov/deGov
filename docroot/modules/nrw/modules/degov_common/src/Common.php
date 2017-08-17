@@ -2,6 +2,9 @@
 
 namespace Drupal\degov_common;
 
+use Drupal\Core\Controller\ControllerBase;
+use Symfony\Component\HttpFoundation\JsonResponse;
+
 /**
  * Class Common.
  *

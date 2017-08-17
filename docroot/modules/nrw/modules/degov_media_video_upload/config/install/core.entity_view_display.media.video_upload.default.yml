@@ -8,6 +8,7 @@ dependencies:
     - field.field.media.video_upload.field_video_upload_caption
     - field.field.media.video_upload.field_video_upload_copyright
     - field.field.media.video_upload.field_video_upload_mp4
+    - field.field.media.video_upload.field_video_upload_ogg
     - field.field.media.video_upload.field_video_upload_preview
     - field.field.media.video_upload.field_video_upload_subtitle
     - field.field.media.video_upload.field_video_upload_webm
@@ -60,6 +61,7 @@ hidden:
   field_include_search: true
   field_media_in_library: true
   field_video_upload_mp4: true
+  field_video_upload_ogg: true
   field_video_upload_preview: true
   field_video_upload_webm: true
   langcode: true

@@ -29,8 +29,15 @@ set media_classes = [
   <div class="video-upload__type-text">{{ 'Video'|t }}</div>
   <div class="video-upload__video">
     <video{{ video_attributes }}>
+      {% if video_mp4 %}
       <source src="{{ video_mp4 }}" type="video/mp4">
+      {% endif %}
+      {% if video_ogg %}
+      <source src="{{ video_ogg }}" type="video/ogg">
+      {% endif %}
+      {% if video_webm %}
       <source src="{{ video_webm }}" type="video/webm">
+      {% endif %}
       {% trans %}
       I'm sorry; your browser doesn't support HTML5 video in WebM with VP8/VP9 or MP4 with H.264.
       {% endtrans %}

@@ -12,7 +12,7 @@ widgets:
       upload_location: 'public://[date:custom:Y]-[date:custom:m]'
       dropzone_description: 'Drop files here to upload them'
       max_filesize: 320M
-      extensions: 'mp4 avi mpeg flv mkv webm mov wmv'
+      extensions: 'mp4 ogv avi mpeg flv mkv webm mov wmv'
       submit_text: 'Select entities'
     uuid: d6d67ff3-ab4f-482c-bf0f-aa21ef912d26
     weight: -7

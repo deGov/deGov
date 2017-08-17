@@ -9,6 +9,7 @@ dependencies:
     - field.field.paragraph.media_reference.field_title
     - field.field.paragraph.media_reference.field_title_link
     - paragraphs.paragraphs_type.media_reference
+    - field.field.paragraph.media_reference.field_media_reference_view_mode
   enforced:
     module:
       - degov_paragraph_media_reference
@@ -65,6 +66,12 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
+  field_media_reference_view_mode:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
 hidden:
   created: true

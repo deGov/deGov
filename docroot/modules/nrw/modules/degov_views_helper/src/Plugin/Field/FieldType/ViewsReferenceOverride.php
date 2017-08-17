@@ -26,6 +26,9 @@ class ViewsReferenceOverride extends ViewsReferenceItem {
     if (!empty($additional_settings)) {
       $values['data'] = serialize($additional_settings);
     }
+    if (is_array($values['argument'])) {
+      $values['argument'] = implode('/', $values['argument']);
+    }
     parent::setValue($values, FALSE);
   }
 

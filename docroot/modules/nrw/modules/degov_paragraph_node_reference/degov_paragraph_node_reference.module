@@ -1,6 +1,7 @@
 <?php
 
 use Drupal\degov_common\Common;
+use Drupal\node\Entity\NodeType;
 
 /**
  * Implements hook_preprocess().
@@ -13,4 +14,38 @@ function degov_paragraph_node_reference_preprocess(&$variables, $hook, &$info) {
     'entity_bundles' => ['node_reference'],
     'entity_view_modes' => ['default', 'preview'],
   ]);
+}
+
+/**
+ * Implements hook_modules_installed().
+ * @param $modules
+ */
+function degov_paragraph_node_reference_modules_installed($modules) {
+  if (in_array('degov_paragraph_node_reference', $modules)) {
+    // Set target bundles.
+    _degov_node_reference_bundle_list();
+  }
+}
+
+/**
+ * Update field reference target bundles.
+ */
+function _degov_node_reference_bundle_list() {
+  $enabled_bundles = [];
+  $node_types = NodeType::loadMultiple();
+  /** @var \Drupal\node\NodeTypeInterface $node_type */
+  foreach ($node_types as $node_type) {
+    $enabled_bundles[$node_type->id()] = $node_type->id();
+  }
+  if (!empty($enabled_bundles)) {
+    // Load the configuration for node_reference field storage.
+    $config = \Drupal::configFactory()
+      ->getEditable('field.field.paragraph.node_reference.field_node_reference_nodes');
+    $settings = $config->get('settings');
+    $settings['handler_settings']['target_bundles'] = $enabled_bundles;
+    $config->set('settings', $settings);
+    $config->save(TRUE);
+  } else {
+    drupal_set_message(t('There are no content types available'), 'warning');
+  }
 }

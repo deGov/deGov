@@ -6,3 +6,10 @@
 function degov_common_update_8001() {
   module_set_weight('degov_common', 100);
 }
+
+/**
+ * Install the latest_content view.
+ */
+function degov_common_update_8002() {
+  \Drupal::service('degov_config.updater')->configPartialImport('degov_common');
+}
