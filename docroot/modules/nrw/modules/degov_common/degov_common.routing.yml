@@ -1,0 +1,6 @@
+degov_common.ajax_load_entity:
+  path: '/ajax-load-entity/{entity_type}/{entity_id}'
+  defaults:
+    _controller: '\Drupal\degov_common\Common::ajaxEntityLoad'
+  requirements:
+    _permission: 'access content'
