@@ -6,6 +6,7 @@ core: 8.x
 dependencies:
   - degov_content_types_shared_fields
   - degov_paragraph_faq
+  - degov_search_base
   - entity_reference_revisions
   - field
   - language
@@ -13,6 +14,5 @@ dependencies:
   - node
   - paragraphs
   - path
-  - search_api
   - user
   - views
