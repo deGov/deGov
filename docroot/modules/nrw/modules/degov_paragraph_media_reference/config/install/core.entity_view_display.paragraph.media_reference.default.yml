@@ -3,12 +3,12 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.media_reference.field_media_reference_media
-    - field.field.paragraph.media_reference.field_media_reference_view_mode
     - field.field.paragraph.media_reference.field_override_caption
     - field.field.paragraph.media_reference.field_sub_title
     - field.field.paragraph.media_reference.field_title
     - field.field.paragraph.media_reference.field_title_link
     - paragraphs.paragraphs_type.media_reference
+    - field.field.paragraph.media_reference.field_media_reference_view_mode
   enforced:
     module:
       - degov_paragraph_media_reference
@@ -28,13 +28,6 @@ content:
       link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
-    region: content
-  field_media_reference_view_mode:
-    weight: 5
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
     region: content
   field_override_caption:
     type: string
@@ -71,5 +64,12 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
+    region: content
+  field_media_reference_view_mode:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
 hidden: {  }
