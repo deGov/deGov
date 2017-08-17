@@ -4,6 +4,8 @@
  * Removes field_block_reference.
  */
 function degov_paragraph_block_reference_update_8001() {
+  // Clear the plugin caches, so the new Field Formatter is detected.
+  \Drupal::service('plugin.cache_clearer')->clearCachedDefinitions();
   /* @var $entityFieldManager Drupal\Core\Entity\EntityFieldManager */
   $entityFieldManager = \Drupal::service('entity_field.manager');
   // Get the fields for block reference paragraph.
