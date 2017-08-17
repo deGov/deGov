@@ -1,42 +1,35 @@
 #!/bin/bash
 
-unitTestsToRun="--all"
-dataBaseToUse="--sqlite /tmpfs/test.sqlite"
+testSuiteToRun="--testsuite unit"
 
 # getting nice path for projectroot
-projectRoot=$(dirname $(realpath $0))
-projectRoot=$(dirname $projectRoot)
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+projectRoot=$(dirname $DIR)
 projectRoot=$(dirname $projectRoot)
 
-parameters=($dataBaseToUse)
+parameters=($testSuiteToRun)
 
 printHelp() {
   echo "bash runUnitTests.sh [-x][-h][-v][-f <arg>][-d <arg>][-c <arg>][*]"
   echo ""
-  echo "  Wrapper for Drupalscript degove/docroot/core/scripts/run-tests.sh"
+  echo "  Wrapper for phpunit"
   echo "  -h prints this help"
-  echo "  -v verbose output"
-  echo "  -f <arg> tests only unit-tests in file"
-  echo "  -d <arg> tests only unit-tests in directory"
-  echo "  -c <arg> tests only unit-tests in class"
+  echo "  -g group of unit-tests to run (e.g. user)"
+  echo "  -p <arg> path to UnitTest/Directory to test, relative from core-directory"
   echo "  -x enables xml-reporting"
-  echo "  All subsequent parameters(first unknown switch onwards) are passed to the drupal-script-unchanged"
-  echo "  To pass all parameters on to the wrapped script (e.g. --help) use the parameters '- --help'"
+  echo "  All subsequent parameters(first unknown switch onwards) are passed to PHPUnit"
+  echo "  To see all paramters available run 'phpunit -h'"
 }
 
 # processing switches in silentmode, -f and -c are expected to have parameters
 # man bash searching for getopts will explain best
-while getopts :f:d:c:xvh opt; do
-  if [[ "$opt" == "f" ]]; then
-    unitTestsToRun="--file ${OPTARG}"
-  elif [[ "$opt" == "d" ]]; then
-    unitTestsToRun="--directory ${OPTARG}"
-  elif [[ "$opt" == "c" ]]; then
-    unitTestsToRun="--class ${OPTARG}"
-  elif [[ "$opt" == "v" ]]; then
-    parameters+=("--verbose")
+while getopts :g:p:xh opt; do
+  if [[ "$opt" == "p" ]]; then
+    unitTestsToRun=" ${OPTARG}"
+  elif [[ "$opt" == "g" ]]; then
+    parameters+=("--group ${OPTARG}")
   elif [[ "$opt" == "x" ]]; then
-    parameters+=("--xml ${projectRoot}/testreports")
+    parameters+=("--log-junit ${projectRoot}/testreports")
   elif [[ "$opt" == "h" ]]; then
     printHelp
     exit 0
@@ -58,6 +51,6 @@ shift $elementsToShift
 pushd $projectRoot
 cd docroot/core
 
-php -f ./scripts/run-tests.sh -- ${parameters[@]} $@
+phpunit ${parameters[@]} $@
 
 popd

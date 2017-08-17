@@ -4,7 +4,7 @@
 tagsToRun=""
 
 # getting nice path for projectroot
-projectRoot=$(dirname $(realpath $0))
+projectRoot=$(dirname "${BASH_SOURCE[0]}")
 projectRoot=$(dirname $projectRoot)
 projectRoot=$(dirname $projectRoot)
 
