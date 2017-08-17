@@ -20,6 +20,18 @@ function degov_media_contact_update_8001() {
   \Drupal::service('degov_config.updater')->configPartialImport('degov_media_contact');
 }
 
+/**
+ * Hide the tags field from the embedded view displays.
+ */
 function degov_media_contact_update_8002() {
-  \Drupal::service('degov_config.updater')->configPartialImport('degov_media_contact');
+  // Hide tags field from the default view display.
+  $entity_display = \Drupal::entityTypeManager()
+    ->getStorage('entity_view_display')
+    ->load('media.contact.default');
+  $entity_display->removeComponent('field_tags')->save();
+  // Hide tags field from the usage view display.
+  $entity_display = \Drupal::entityTypeManager()
+    ->getStorage('entity_view_display')
+    ->load('media.contact.usage');
+  $entity_display->removeComponent('field_tags')->save();
 }
