@@ -88,7 +88,8 @@ class SettingsForm extends ConfigFormBase {
 
     $form['enabled_view_modes'] = [
       '#type' => 'checkboxes',
-      '#title' => t('Enabled view modes'),
+      '#title' => $this->t('Enabled view modes'),
+      '#description' => $this->t('Check the view modes that should be available when adding a node reference paragraph.'),
       '#options' => $options,
       '#default_value' => $config->get('enabled_view_modes'),
     ];
