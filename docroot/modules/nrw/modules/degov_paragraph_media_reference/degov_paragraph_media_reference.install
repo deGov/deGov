@@ -16,6 +16,13 @@ function degov_paragraph_media_reference_uninstall() {
 /**
  * Update media reference field to a single instance selection field and add view modes selection.
  */
-function degov_paragraph_media_reference_update_8001() {
-  \Drupal::service('degov_config.module_updater')->applyUpdates('degov_paragraph_media_reference', '8001');
+function degov_paragraph_media_reference_update_8002() {
+  \Drupal::service('degov_config.module_updater')->applyUpdates('degov_paragraph_media_reference', '8002');
+}
+
+/**
+ * Enable all node bundles for node reference field inside the paragraph.
+ */
+function degov_paragraph_media_reference_update_8003() {
+  _degov_media_reference_bundle_list();
 }

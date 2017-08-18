@@ -1,0 +1,25 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatags
+    - node.type.faq
+  enforced:
+    module:
+      - degov_metatags
+  module:
+    - metatag
+id: node.faq.field_metatags
+field_name: field_metatags
+entity_type: node
+bundle: faq
+label: 'Meta Tags'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'a:0:{}'
+default_value_callback: ''
+settings: {  }
+field_type: metatag

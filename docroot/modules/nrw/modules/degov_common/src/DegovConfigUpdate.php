@@ -6,6 +6,7 @@ use Drupal\config\StorageReplaceDataWrapper;
 use Drupal\Core\Config\ConfigImporter;
 use Drupal\Core\Config\FileStorage;
 use Drupal\Core\Config\StorageComparer;
+use Drupal\Core\Config\StorageInterface;
 
 /**
  * Class DegovOverride
@@ -84,6 +85,20 @@ class DegovConfigUpdate extends DegovConfigManagerBase {
       $this->stringTranslation
     );
     $this->configImport($config_importer);
+  }
+
+  /**
+   * Check optional directory for configuration changes.
+   *
+   * @param $source_dir
+   */
+  public function checkOptional($source_dir) {
+    $optional_install_path = $source_dir;
+    if (is_dir($optional_install_path)) {
+      // Install any optional config the module provides.
+      $storage = new FileStorage($optional_install_path, StorageInterface::DEFAULT_COLLECTION);
+      \Drupal::service('config.installer')->installOptionalConfig($storage, '');
+    }
   }
 
 }

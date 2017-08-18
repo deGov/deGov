@@ -6,6 +6,11 @@
 	}
 }
 
+// Change link color on blue background from blue to white
+div[class*="__header-paragraphs"] .paragraph a {
+  color: $color-white;
+}
+
 .paragraph__header{
 	font-size: $font-size-h3;
   color: $brand-primary;

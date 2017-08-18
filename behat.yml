@@ -1,0 +1,33 @@
+default:
+  suites:
+    default:
+      contexts:
+        - '\Drupal\DrupalExtension\Context\DrupalContext'
+        - '\Drupal\DrupalExtension\Context\MinkContext'
+        - '\Drupal\DrupalExtension\Context\MessageContext'
+        - '\Drupal\DrupalExtension\Context\DrushContext'
+        - '\BeHat\Feature\Context\DeGovContext'
+      paths: [ %paths.base%/features ]
+  extensions:
+    Behat\MinkExtension:
+      goutte: ~
+      selenium2: ~
+      base_url: http://degov.local.com/  # Replace with your site's URL
+      files_path: %paths.base%/media/dummy/
+    Drupal\DrupalExtension:
+      blackbox: ~
+      api_driver: 'drush'
+      region_map:
+        page_intro: '.page-intro'
+        navigation: '.navbar-secondary'
+        navigation_collapsible: '#navbar-collapse'
+        navigation_branding: '.navbar-branding'
+        highlighted: '.highlighted'
+        content: '#main-content'
+        content_region: ".region-content"
+      drush:
+        root: %paths.base%/docroot
+      text: # changing default so login-etc will work
+        log_in: "Anmelden"
+        password_field: "Passwort"
+        username_field: "Username"
