@@ -1,5 +1,6 @@
 dependencies:
   config:
+    - paragraphs.paragraphs_type.block_reference
     - paragraphs.paragraphs_type.downloads
     - paragraphs.paragraphs_type.iframe
     - paragraphs.paragraphs_type.links
@@ -14,6 +15,7 @@ dependencies:
 settings:
   handler_settings:
     target_bundles:
+      block_reference: block_reference
       downloads: downloads
       iframe: iframe
       links: links
@@ -50,4 +52,7 @@ settings:
         enabled: true
       webformular:
         weight: -13
+        enabled: true
+      block_reference:
+        weight: -12
         enabled: true

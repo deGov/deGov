@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
-    - field.field.paragraph.block_reference.field_block_reference
+    - field.field.paragraph.block_reference.field_block
     - field.field.paragraph.block_reference.field_sub_title
     - field.field.paragraph.block_reference.field_title
     - field.field.paragraph.block_reference.field_title_link
@@ -13,19 +13,19 @@ dependencies:
       - degov_paragraph_block_reference
   module:
     - link
+    - options
 id: paragraph.block_reference.preview
 targetEntityType: paragraph
 bundle: block_reference
 mode: preview
 content:
-  field_block_reference:
+  field_block:
+    type: list_default
     weight: 3
-    label: inline
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
     region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
   field_sub_title:
     weight: 1
     label: inline

@@ -11,3 +11,11 @@ function nrw_view_paragraph_selection_overrides_update_8001() {
   }
   \Drupal::service('config_rewrite.config_rewriter')->rewriteModuleConfig('nrw_view_paragraph_selection_overrides');
 }
+
+/**
+ * Reset the paragraphs bundles for field_content_paragraphs to support blocks in the right sidebar paragraph.
+ */
+function nrw_view_paragraph_selection_overrides_update_8002() {
+  // Check if module paragraph block reference is enabled and add them to the right sidebar.
+  \Drupal::service('config_rewrite.config_rewriter')->rewriteModuleConfig('nrw_view_paragraph_selection_overrides');
+}
