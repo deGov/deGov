@@ -32,6 +32,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Adds opportunity to use separate fields for each view argument in views
   reference widget.
 - Added scripts to execute tests(BeHat, PHPUnit) in a unified fashion, added small tech. documentation for setup
+- Added degov_media_audio module for audio files (mp3, ogg) 
 
 ### Changed
 - Refactoring and styling of the event teaser.

@@ -1,0 +1,25 @@
+langcode: de
+status: true
+dependencies:
+  enforced:
+    module:
+      - degov_media_audio
+  module:
+    - workbench_moderation
+third_party_settings:
+  workbench_moderation:
+    enabled: 0
+    allowed_moderation_states:
+      - published
+      - archived
+      - draft
+      - needs_review
+    default_moderation_state: draft
+id: audio
+label: 'Audio'
+description: 'Mit diesem Bundle können Audio-Dateien hochgeladen werden.'
+type: generic
+queue_thumbnail_downloads: false
+new_revision: false
+type_configuration: {  }
+field_map: {  }

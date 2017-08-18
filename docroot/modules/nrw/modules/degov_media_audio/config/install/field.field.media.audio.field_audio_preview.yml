@@ -1,0 +1,30 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_audio_preview
+    - media_entity.bundle.image
+    - media_entity.bundle.audio
+  enforced:
+    module:
+      - degov_media_audio
+id: media.audio.field_audio_preview
+field_name: field_audio_preview
+entity_type: media
+bundle: audio
+label: Vorschau
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
