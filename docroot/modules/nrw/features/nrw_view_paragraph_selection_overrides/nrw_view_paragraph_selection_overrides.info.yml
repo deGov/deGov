@@ -1,5 +1,6 @@
-name: 'NRW Field Configuration Overrides'
+name: 'NRW - Field Configuration Overrides'
 description: 'Overrides paragraph selection, so only applicable paragraph types can be selected (e.g. Slideshow but not Slide). '
+package: NRW
 type: module
 core: 8.x
 dependencies:

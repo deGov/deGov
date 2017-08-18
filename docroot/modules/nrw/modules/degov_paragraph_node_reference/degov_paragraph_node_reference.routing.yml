@@ -1,0 +1,7 @@
+degov_paragraph_node_reference.settings:
+  path: '/admin/config/degov/paragraph_node_reference'
+  defaults:
+    _form: '\Drupal\degov_paragraph_node_reference\Form\SettingsForm'
+    _title: 'Paragraph Node Reference Settings'
+  requirements:
+    _permission: 'administer degov'

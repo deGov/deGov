@@ -11,3 +11,4 @@ dependencies:
   - node
   - paragraphs
   - workbench_moderation
+configure: degov_paragraph_node_reference.settings

@@ -19,3 +19,10 @@ function degov_paragraph_node_reference_uninstall() {
 function degov_paragraph_node_reference_update_8001() {
   _degov_node_reference_bundle_list();
 }
+
+/**
+ * Import new configuration.
+ */
+function degov_paragraph_node_reference_update_8002() {
+  \Drupal::service('degov_config.updater')->configPartialImport('degov_paragraph_node_reference');
+}
