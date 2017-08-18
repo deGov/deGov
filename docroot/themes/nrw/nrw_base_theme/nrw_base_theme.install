@@ -7,7 +7,7 @@ function nrw_base_theme_install() {
   // Set default settings.
   \Drupal::configFactory()->getEditable('nrw_base_theme.settings')
     ->set('fluid_container', '1')
-    ->set('breadcrumb_home', '0')
-    ->set('breadcrumb_title', '1')
+    ->set('breadcrumb_home', '1')
+    ->set('breadcrumb_title', '0')
     ->save();
 }
