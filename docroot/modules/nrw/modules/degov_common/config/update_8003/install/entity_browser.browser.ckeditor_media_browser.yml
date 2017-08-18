@@ -1,0 +1,83 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - media_entity.bundle.document
+    - media_entity.bundle.image
+    - media_entity.bundle.video_upload
+    - views.view.media
+  module:
+    - dropzonejs_eb_widget
+    - lightning_media
+    - media_entity
+    - views
+name: ckeditor_media_browser
+label: 'CKEditor Media Browser'
+display: iframe
+display_configuration:
+  width: 100%
+  height: '500'
+  link_text: 'Select entities'
+  auto_open: true
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  c44ebb4f-08ee-467b-92cc-9b65449e62bd:
+    settings:
+      view: media
+      view_display: entity_browser_1
+      submit_text: Place
+      auto_select: false
+    uuid: c44ebb4f-08ee-467b-92cc-9b65449e62bd
+    weight: 1
+    label: Library
+    id: view
+  f1ca5869-065b-46a6-8e6a-63780bcce758:
+    settings:
+      form_mode: media_browser
+      media_entity_bundle: image
+      upload_location: 'public://images/[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Drop files here to upload them'
+      max_filesize: 32M
+      extensions: 'jpg jpeg gif png'
+      submit_text: 'Select entities'
+    uuid: f1ca5869-065b-46a6-8e6a-63780bcce758
+    weight: 2
+    label: 'Bilder Hochladen'
+    id: dropzonejs_media_entity_inline_entity_form
+  55651e50-d3f0-402b-bcc5-3a92ed0797b1:
+    settings:
+      form_mode: media_browser
+      media_entity_bundle: document
+      upload_location: 'public://documents/[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Drop files here to upload them'
+      max_filesize: 50M
+      extensions: 'txt doc xls pdf ppt pps odt ods odp'
+      submit_text: 'Select entities'
+    uuid: 55651e50-d3f0-402b-bcc5-3a92ed0797b1
+    weight: 3
+    label: 'Dokumente Hochladen'
+    id: dropzonejs_media_entity_inline_entity_form
+  2d681887-8727-4385-814c-f5962bb52a1f:
+    settings:
+      form_mode: media_browser
+      media_entity_bundle: video_upload
+      upload_location: 'public://[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Drop files here to upload them'
+      max_filesize: 320M
+      extensions: 'mp4 avi mpeg flv mkv webm mov wmv'
+      submit_text: 'Select entities'
+    uuid: 2d681887-8727-4385-814c-f5962bb52a1f
+    weight: 4
+    label: 'Video Hochladen'
+    id: dropzonejs_media_entity_inline_entity_form
+  dc96435a-6d03-4a7b-92b9-9a6e1033683f:
+    settings:
+      submit_text: Place
+      form_mode: media_browser
+    uuid: dc96435a-6d03-4a7b-92b9-9a6e1033683f
+    weight: 5
+    label: 'Create embed'
+    id: embed_code

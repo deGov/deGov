@@ -119,3 +119,9 @@ function degov_common_modules_installed($modules) {
   \Drupal::service('plugin.cache_clearer')->clearCachedDefinitions();
 }
 
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function degov_common_form_entity_browser_ckeditor_media_browser_form_alter(array &$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  $form['#attached']['library'][] = 'lightning_media/browser.styling';
+}
