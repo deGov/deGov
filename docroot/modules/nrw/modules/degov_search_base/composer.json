@@ -1,12 +1,12 @@
 {
-    "name": "degov_search_base",
-    "type": "drupal-module",
-    "description": "Basiseinstellungen für die Suche.",
-    "license": "GPL-2.0+",
-    "homepage": "https://www.nrwgov.org",
-    "require": {
-        "drupal/facets": "^1.0@alpha",
-        "drupal/search_api": "^1.2",
-        "drupal/search_api_sorts": "^1.0@beta"
-    }
+  "name": "degov_search_base",
+  "type": "drupal-module",
+  "description": "Basiseinstellungen für die Suche.",
+  "license": "GPL-2.0+",
+  "homepage": "https://www.nrwgov.org",
+  "require": {
+    "drupal/facets": "^1.0@alpha",
+    "drupal/search_api": "^1.2",
+    "drupal/search_api_sorts": "^1.0@beta"
+  }
 }
