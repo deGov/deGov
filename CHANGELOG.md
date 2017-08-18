@@ -29,7 +29,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   for new blocks and a 'rewrite' folder for configuration updates.
   Updating the 'config/install' folder is still required for fresh installations.
 - Adds opportunity to use separate fields for each view argument in views
-  reference widget. 
+  reference widget.
+- Added degov_media_audio module for audio files (mp3, ogg) 
 
 ### Changed
 - Refactoring and styling of the event teaser.
