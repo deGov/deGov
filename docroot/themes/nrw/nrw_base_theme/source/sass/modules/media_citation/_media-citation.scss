@@ -1,5 +1,6 @@
 .citation {
   color: $brand-primary;
+  margin: 0 -1*($grid-gutter-width/2);
   .row {
     @include smaller-than($screen-xs-max) {
       display: flex;
