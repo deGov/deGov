@@ -31,6 +31,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   Updating the 'config/install' folder is still required for fresh installations.
 - Adds opportunity to use separate fields for each view argument in views
   reference widget.
+- Added scripts to execute tests(BeHat, PHPUnit) in a unified fashion, added small tech. documentation for setup
 
 ### Changed
 - Refactoring and styling of the event teaser.
