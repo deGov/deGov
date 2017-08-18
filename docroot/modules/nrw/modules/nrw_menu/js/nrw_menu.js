@@ -16,41 +16,6 @@
       if ($('.nrw-menu__header', context).length == 0) {
         return;
       }
-      // on click add the class to siblings
-      /*$('.nrw-menu-header__col .nrw-menu__header', context).click(function (e) {
-        e.preventDefault();
-        // remove the class from all the content containers in the menu
-        // add the class only to the sibling of the active menu__header
-        var parent = $(this).closest('.nrw-menu-header__col');
-        if ($(this).siblings('.nrw-menu-header__content').hasClass("is-expanded")) {
-          $(this).parent().removeClass('is-open');
-          $(this).siblings('.nrw-menu-header__content').removeClass("is-expanded");
-        } else {
-          $('.nrw-menu-header__col').removeClass('is-open');
-          $('.nrw-menu-header__content').removeClass("is-expanded");
-          $(this).parent().addClass('is-open');
-          $(this).siblings('.nrw-menu-header__content').addClass("is-expanded");
-        }
-      });
-        */
-      //hover in first level to open menu
-
-      /*
-      $('.nrw-menu-header__icon').hover(function(){
-        var classes = $(this).prop("classList");
-        var lastEl = classes[classes.length-1];
-        
-        $('.nrw-menu-header__col').removeClass('is-active');
-        if($('.nrw-menu-header__col').hasClass(lastEl)){
-          console.log(lastEl);
-          console.log($(this));
-          $('.nrw-menu-header__col.'+lastEl).addClass('is-active')
-        }
-
-      });
-
-      */
-
       //hover in second level to open menu
       $('.nrw-menu-header__col').hover(function(){
         $(this).toggleClass('is-open');
@@ -84,7 +49,6 @@
               }
           }
       });
-
       $('.has-children').doubleTapToGo();
       $('.nrw-menu__header-link-area').doubleTapToGo();
     }
@@ -105,5 +69,4 @@
       });
     }
   };
-
 })(jQuery, Drupal);
