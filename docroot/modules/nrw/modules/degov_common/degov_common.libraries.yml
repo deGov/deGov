@@ -7,3 +7,6 @@ slick:
       /libraries/slick/slick/slick.css: {}
     theme:
       /libraries/slick/slick/slick-theme.css: {}
+doubletap:
+  js:
+    /libraries/DoubleTapToGo/jquery.doubletaptogo.min.js: {}

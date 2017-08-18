@@ -32,6 +32,8 @@ class MenuItems extends SimplifiedMenuItems {
       // load the menu link content entity to get menu_extra valuie
       $menuItem = MenuLinkContent::load($menuDefinition['metadata']['entity_id']);
       $extra = '';
+      $class = '';
+      $classes = $menuItem->getPluginDefinition();
       // check if the value is set
       if (!$menuItem->get('menu_extra')->isEmpty()) {
         // create the proper markup with all the filters applied
@@ -42,7 +44,8 @@ class MenuItems extends SimplifiedMenuItems {
         'url' => $item->link->getUrlObject()->toString(),
         'description' => empty($item->link->getDescription()) ? $item->link->getTitle() : $item->link->getDescription(),
         'external' => $item->link->getUrlObject()->isExternal(),
-        'menu_extra' => $extra,
+        'menu_extra' => $extra, 
+        'class' => $classes
       ];
 
       if ($item->hasChildren) {

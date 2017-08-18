@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * Enable the link attributes module.
+ */
+function nrw_menu_update_8001() {
+  // Check if module link attributes is enabled.
+  if (!\Drupal::moduleHandler()->moduleExists('link_attributes')) {
+    // If not install it.
+    \Drupal::service('module_installer')->install(['link_attributes']);
+  }
+}

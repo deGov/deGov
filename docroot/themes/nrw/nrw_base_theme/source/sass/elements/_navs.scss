@@ -219,6 +219,10 @@
   }
   &__col{
     padding: 10px;
+    display: none;
+    &.is-active{
+      display: block;
+    }
     &.is-open{
       background-color: $brand-primary;
       &:before{

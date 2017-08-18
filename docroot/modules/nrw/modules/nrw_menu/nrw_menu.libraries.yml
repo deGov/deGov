@@ -4,3 +4,4 @@ nrw_menu:
     js/nrw_menu.js: {}
   dependencies:
     - core/jquery
+    - degov_common/doubletap

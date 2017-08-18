@@ -5,6 +5,7 @@
   "license": "GPL-2.0+",
   "homepage": "https://www.nrwgov.org",
   "require": {
-    "drupal/simplify_menu": "1.x-dev"
+    "drupal/simplify_menu": "1.x-dev",
+    "drupal/link_attributes": "^1.1"
   }
 }
