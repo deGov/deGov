@@ -1,6 +1,0 @@
-gallery:
-  version: 1.0
-  js:
-    js/gallery.js: {}
-  dependecies:
-    - degov_common/slick

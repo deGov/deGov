@@ -1,9 +1,0 @@
-dependencies:
-  enforced:
-    - degov_paragraph_node_reference
-enabled_view_modes:
-  long_text: long_text
-  preview: preview
-  slim: slim
-  small_image: small_image
-  teaser: teaser

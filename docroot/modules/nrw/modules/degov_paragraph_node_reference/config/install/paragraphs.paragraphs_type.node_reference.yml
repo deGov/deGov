@@ -1,9 +1,0 @@
-langcode: de
-status: true
-dependencies:
-  enforced:
-    module:
-      - degov_paragraph_node_reference
-id: node_reference
-label: Inhaltsreferenz
-behavior_plugins: {  }

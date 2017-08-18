@@ -39,86 +39,27 @@
         "drupal/ultimate_cron": "^2.0@alpha",
         "drupal/viewsreference": "^1.0@alpha",
         "drupal/webform": "^5.0@beta",
-        "drupal/entity_reference_display": "^1.0"
+        "drupal/entity_reference_display": "^1.0",
+        "degov/nrw_modules": "1.2.0",
+        "degov/nrw_features": "1.2.0",
+        "degov/nrw_theme": "1.2.0"
     },
     "repositories": {
         "drupal": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         },
-        "nrwgovmodules": {
-            "type": "package",
-            "package": {
-                "name": "nrwgov/modules",
-                "version": "8.x-2.x-dev",
-                "source": {
-                    "url": "https://github.com/NRWgov/modules.git",
-                    "type": "git",
-                    "reference": "origin/8.x-2.x-dev"
-                }
-            }
+        "degov-nrw-modules": {
+            "type": "git",
+            "url": "https://bitbucket.org/publicplan/degov_nrw_modules.git"
         },
-        "nrwgovfeatures": {
-            "type": "package",
-            "package": {
-                "name": "nrwgov/features",
-                "version": "8.x-2.x-dev",
-                "source": {
-                    "url": "https://github.com/NRWgov/features.git",
-                    "type": "git",
-                    "reference": "origin/8.x-2.x-dev"
-                }
-            }
+        "degov-nrw-features": {
+            "type": "git",
+            "url": "https://bitbucket.org/publicplan/degov_nrw_features.git"
         },
-        "nrwgovbasetheme": {
-        "type": "package",
-            "package": {
-                "name": "nrwgov/nrw_base_theme",
-                "version": "8.x-2.x-dev",
-                "type": "drupal-theme",
-                "source": {
-                    "url": "https://github.com/NRWgov/nrw_base_theme.git",
-                    "type": "git",
-                    "reference": "origin/8.x-2.x-dev"
-                }
-            }
-        },
-        "nrwmodules": {
-            "type": "package",
-            "package": {
-                "name": "nrw/modules",
-                "version": "master",
-                "source": {
-                    "url": "git@bitbucket.org:publicplan/degov_nrw_modules",
-                    "type": "git",
-                    "reference": "origin/master"
-                }
-            }
-        },
-        "nrwfeatures": {
-            "type": "package",
-            "package": {
-                "name": "nrw/features",
-                "version": "master",
-                "source": {
-                    "url": "git@bitbucket.org:publicplan/degov_nrw_features",
-                    "type": "git",
-                    "reference": "origin/master"
-                }
-            }
-        },
-        "nrwtheme": {
-            "type": "package",
-            "package": {
-                "name": "nrw/nrw_theme",
-                "version": "master",
-                "type": "drupal-theme",
-                "source": {
-                    "url": "git@bitbucket.org:publicplan/degov_nrw_theme",
-                    "type": "git",
-                    "reference": "origin/master"
-                }
-            }
+        "degov-nrw-theme": {
+            "type": "git",
+            "url": "https://bitbucket.org/publicplan/degov_nrw_theme.git"
         }
     },
     "scripts": {
@@ -158,17 +99,14 @@
             "docroot/libraries/{$name}": [
                 "type:drupal-library"
             ],
-            "./docroot/modules/nrwgov/modules/": [
-                "nrwgov/modules"
+            "docroot/modules/nrw/modules": [
+                "degov/nrw_modules"
             ],
-            "./docroot/modules/nrwgov/features/": [
-                "nrwgov/features"
+            "docroot/modules/nrw/features": [
+                "degov/nrw_features"
             ],
-            "./docroot/modules/nrw/modules/": [
-                "nrw/modules"
-            ],
-            "./docroot/modules/nrw/features/": [
-                "nrw/features"
+            "docroot/themes/nrw/nrw_base_theme": [
+                "degov/nrw_theme"
             ]
         },
         "enable-patching": true,

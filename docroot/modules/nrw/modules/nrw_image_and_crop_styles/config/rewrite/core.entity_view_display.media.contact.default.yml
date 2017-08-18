@@ -1,5 +1,0 @@
-content:
-  field_contact_image:
-    type: entity_reference_entity_view
-    settings:
-      view_mode: teaser_landscape_2_1

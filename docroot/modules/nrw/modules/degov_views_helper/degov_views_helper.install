@@ -1,9 +1,0 @@
-<?php
-
-/**
- * Implement hook_uninstall().
- */
-function degov_views_helper_uninstall() {
-  \Drupal::configFactory()->getEditable('degov_views_helper.settings')->delete();
-  \Drupal::configFactory()->getEditable('degov.default_settings')->delete();
-}

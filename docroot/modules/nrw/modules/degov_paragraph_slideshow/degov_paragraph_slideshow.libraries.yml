@@ -1,9 +1,0 @@
-slideshow:
-  version: 1.0
-  js:
-    js/slideshow.js: {}
-  css:
-    theme:
-      css/slideshow.css: {}
-  dependencies:
-    - degov_common/slick

@@ -1,5 +1,0 @@
-content:
-  field_slide_media:
-    type: entity_reference_entity_view
-    settings:
-      view_mode: slider_main_16_9
