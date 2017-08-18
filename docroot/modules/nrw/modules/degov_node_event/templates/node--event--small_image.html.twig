@@ -77,8 +77,8 @@
 %}
 
 {% if content.field_teaser_image %}
-  {% set class_sidebar = 'col-xs-1'  %}
-  {% set class_content = 'col-xs-11' %}
+  {% set class_sidebar = 'col-xs-2' %}
+  {% set class_content = 'col-xs-10' %}
   
 {% else %}
   {%  set class_sidebar = 'invisible' %}
@@ -88,7 +88,7 @@
 <article{{ attributes.addClass(classes) }}>
   {{ title_suffix }}
 
-  <div class="event__teaser-image teaser-image col-xs-1">
+  <div class="event__teaser-image teaser-image {{ class_sidebar }}">
     {% if content.field_teaser_image %}
       <a href="{{ url }}" rel="bookmark">
         {{ content.field_teaser_image|field_value }}
@@ -96,7 +96,7 @@
     {% endif %}
   </div>
 
-  <div class="event__teaser-content teaser-content col-xs-11">
+  <div class="event__teaser-content teaser-content {{ class_content }}">
     {% if content.field_event_date %}
       <div class="event__teaser-date"{{ content.field_event_date|quickedit_attr }}>
         {{ content.field_event_date|field_value }}
