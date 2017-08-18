@@ -13,3 +13,10 @@ function degov_common_update_8001() {
 function degov_common_update_8002() {
   \Drupal::service('degov_config.updater')->configPartialImport('degov_common');
 }
+
+/**
+ * Add CKEditor media browser and set it for media browser embed button instead of standard one.
+ */
+function degov_common_update_8003() {
+  \Drupal::service('degov_config.module_updater')->applyUpdates('degov_common', '8003');
+}
