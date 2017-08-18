@@ -60,8 +60,10 @@ function degov_paragraph_node_reference_field_widget_form_alter(&$element, FormS
 
   // Only allow view modes whose machine names begin with "teaser".
   if ($widget->getPluginId() === 'entity_reference_paragraphs' && !empty($element['subform']['field_node_reference_viewmode'])) {
-    $element['subform']['field_node_reference_viewmode']['widget']['#options'] = array_filter($element['subform']['field_node_reference_viewmode']['widget']['#options'], function ($key) {
-      return strpos($key, 'teaser') === 0;
+    $enabled_view_modes = \Drupal::config('degov_paragraph_node_reference.settings')
+      ->get('enabled_view_modes');
+    $element['subform']['field_node_reference_viewmode']['widget']['#options'] = array_filter($element['subform']['field_node_reference_viewmode']['widget']['#options'], function ($key) use ($enabled_view_modes) {
+      return isset($enabled_view_modes[$key]) && $enabled_view_modes[$key] === $key;
     }, ARRAY_FILTER_USE_KEY);
   }
 }
