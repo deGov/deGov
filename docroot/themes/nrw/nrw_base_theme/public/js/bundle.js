@@ -116,14 +116,12 @@
 	      });
 	      $('.nrw-menu-header__search .fa-search', context).click(function (e) {
 	        var value = $('input.nrw-menu-header__search-text').val();
-	        console.log(value);
-	        window.location.href = "/suche?volltext=" + value;
+	        window.location.href = '/suche?volltext=' + value;
 	      });
 	      $(document).once('press-enter').keypress(function (e) {
 	        if (e.which == 13) {
 	          var value = $('input.nrw-menu-header__search-text').val();
-	          console.log(value);
-	          window.location.href = "/suche?volltext=" + value;
+	          window.location.href = '/suche?volltext=' + value;
 	        }
 	      });
 	    }
