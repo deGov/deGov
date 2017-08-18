@@ -1,0 +1,11 @@
+name: 'deGov - Search Base'
+description: 'Basismodul für alle Module, die eine Suche implementieren.'
+type: module
+core: 8.x
+package: deGov
+dependencies:
+  - facets
+  - search_api
+  - search_api_db
+  - search_api_sorts
+hidden: true
