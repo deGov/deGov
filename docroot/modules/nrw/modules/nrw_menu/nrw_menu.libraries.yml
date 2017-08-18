@@ -2,6 +2,6 @@ nrw_menu:
   version: 1.0
   js:
     js/nrw_menu.js: {}
-    js/doubletap.js: {}
   dependencies:
     - core/jquery
+    - degov_common/doubletap
