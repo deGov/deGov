@@ -9,4 +9,4 @@ slick:
       /libraries/slick/slick/slick-theme.css: {}
 doubletap:
   js:
-    /libraries/doubletap/doubletap.js: {}
+    /libraries/DoubleTapToGo/jquery.doubletaptogo.min.js: {}

@@ -8,7 +8,8 @@
     "drupal/twig_field_value": "^1.1",
     "drupal/field_group": "3.x-dev",
     "drupal/paragraphs_edit": "2.x-dev",
-    "kenwheeler/slick": "1.7.1"
+    "kenwheeler/slick": "1.7.1",
+    "zenopopovici/DoubleTapToGo": "0.3"
   },
   "repositories": {
     "slick": {
@@ -20,6 +21,19 @@
         "source": {
           "type": "git",
           "url": "https://github.com/kenwheeler/slick",
+          "reference": "master"
+        }
+      }
+    },
+    "doubletap": {
+      "type": "package",
+      "package": {
+        "name": "zenopopovici/DoubleTapToGo",
+        "version": "0.3",
+        "type": "drupal-library",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/zenopopovici/DoubleTapToGo",
           "reference": "master"
         }
       }
