@@ -64,6 +64,7 @@ class ViewsReferenceOverridenFieldFormatter extends ViewsReferenceFieldFormatter
       if (!empty($extra_data['view_mode'])) {
         if (!$view->rowPlugin->usesFields() && !empty($view->rowPlugin->options['view_mode'])) {
           $view->rowPlugin->options['view_mode'] = $extra_data['view_mode'];
+          $view->element['#cache']['keys'][] = $extra_data['view_mode'];
         }
       }
       if (!empty($view->result) || !empty($view->empty)) {
