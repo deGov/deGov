@@ -47,7 +47,11 @@
     height: auto;
   }
 }
-
+.header-image{
+  .video,.video-upload {
+    margin: 0;
+  }
+}
 // Add alignment exception per region.
 // @todo: will probably need to be done with javascript based on image size.
 .region-sidebar-second,
