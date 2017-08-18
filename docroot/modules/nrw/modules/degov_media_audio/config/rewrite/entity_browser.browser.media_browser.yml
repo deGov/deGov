@@ -1,0 +1,20 @@
+dependencies:
+  config:
+    - media_entity.bundle.audio
+  module:
+    - dropzonejs_eb_widget
+    - media_entity
+widgets:
+  0858526f-05e0-4b00-b8db-e9283a437a1c:
+    settings:
+      form_mode: media_browser
+      media_entity_bundle: audio
+      upload_location: 'public://media/audio'
+      dropzone_description: 'Drop files here to upload them'
+      max_filesize: 320M
+      extensions: 'ogg mp3'
+      submit_text: 'Select entities'
+    uuid: 0858526f-05e0-4b00-b8db-e9283a437a1c
+    weight: -7
+    label: 'Audio hochladen'
+    id: dropzonejs_media_entity_inline_entity_form

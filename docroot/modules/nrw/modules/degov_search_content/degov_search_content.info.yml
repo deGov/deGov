@@ -6,10 +6,7 @@ package: deGov
 dependencies:
   - block
   - degov_node_normal_page
-  - facets
+  - degov_search_base
   - node
-  - search_api
-  - search_api_db
-  - search_api_sorts
   - system
   - views

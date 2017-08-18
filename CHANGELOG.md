@@ -31,6 +31,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   Updating the 'config/install' folder is still required for fresh installations.
 - Adds opportunity to use separate fields for each view argument in views
   reference widget.
+- Added scripts to execute tests(BeHat, PHPUnit) in a unified fashion, added small tech. documentation for setup
+- Added degov_media_audio module for audio files (mp3, ogg) 
 
 ### Changed
 - Refactoring and styling of the event teaser.
@@ -58,4 +60,3 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Small styling changes in footer for headers.
 - Links in header paragraphs are now white to contrast the background.
 - The tags field is moved to be hidden from display.
-- Module 'degov - Paragraph Inhaltsreferenz' now only allows view modes whose machine names begin with 'teaser'
