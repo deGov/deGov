@@ -51,15 +51,15 @@
         },
         "degov-nrw-modules": {
             "type": "git",
-            "url": "https://bitbucket.org/publicplan/degov_nrw_modules.git"
+            "url": "git@bitbucket.org:publicplan/degov_nrw_modules.git"
         },
         "degov-nrw-features": {
             "type": "git",
-            "url": "https://bitbucket.org/publicplan/degov_nrw_features.git"
+            "url": "git@bitbucket.org:publicplan/degov_nrw_features.git"
         },
         "degov-nrw-theme": {
             "type": "git",
-            "url": "https://bitbucket.org/publicplan/degov_nrw_theme.git"
+            "url": "git@bitbucket.org:publicplan/degov_nrw_theme.git"
         }
     },
     "scripts": {
