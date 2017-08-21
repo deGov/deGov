@@ -4,9 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [1.3.0] - IN DEVELOPMENT
+### Added
+- Added role 'usermanager'.
 
-## [1.2.0] - IN DEVELOPMENT
+### Changed
+- updated permissions for roles editor and manager.
+
+## [1.2.0] - 2017-08-18
 ### Added
 - This changelog file to serve as a track record of all releases.
 - New module to override image styles and view modes.
@@ -31,10 +36,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   Updating the 'config/install' folder is still required for fresh installations.
 - Adds opportunity to use separate fields for each view argument in views
   reference widget.
-- Added scripts to execute tests(BeHat, PHPUnit) in a unified fashion, added small tech. documentation for setup
-- Added degov_media_audio module for audio files (mp3, ogg)
-- Added settings for restricting available view modes for "Inhaltsreferenz"
-- Added role 'usermanager'
+- Added scripts to execute tests(BeHat, PHPUnit) in a unified fashion, added small tech. documentation for setup.
+- Added degov_media_audio module for audio files (mp3, ogg).
+- Added settings for restricting available view modes for "Inhaltsreferenz".
 
 ### Changed
 - Refactoring and styling of the event teaser.
@@ -48,11 +52,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   to an entity reference auto-completion field if applicable.
 - Enable all available node types for paragraph node_reference.
 - Enable all available media bundles for paragraph media_reference.
-- Change "NRW View Paragraph Selection Overrides" module name to "NRW Field Configuration Overrides"
+- Change "NRW View Paragraph Selection Overrides" module name to "NRW Field Configuration Overrides".
 - Base search dependencies are now split in a new module degov_search_base.
 - Change block reference paragraph in the way that it can reference any block,
   not only the ones that were already placed into the layout of the theme.
-- updated permissions for roles editor and manager
 
 ### Fixed
 - Merged duplicate press views in a single latest press view.
