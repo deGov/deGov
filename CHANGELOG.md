@@ -34,6 +34,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added scripts to execute tests(BeHat, PHPUnit) in a unified fashion, added small tech. documentation for setup
 - Added degov_media_audio module for audio files (mp3, ogg)
 - Added settings for restricting available view modes for "Inhaltsreferenz"
+- Added role 'usermanager'
 
 ### Changed
 - Refactoring and styling of the event teaser.
@@ -51,6 +52,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Base search dependencies are now split in a new module degov_search_base.
 - Change block reference paragraph in the way that it can reference any block,
   not only the ones that were already placed into the layout of the theme.
+- updated permissions for roles editor and manager
 
 ### Fixed
 - Merged duplicate press views in a single latest press view.
