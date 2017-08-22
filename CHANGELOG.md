@@ -6,7 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [1.2.0] - IN DEVELOPMENT
+## [1.3.0] - IN DEVELOPMENT
+### Fixed
+- Patched the config rewrite module to allow optional config rewrites.
+
+## [1.2.0] - 2017-08-18
 ### Added
 - This changelog file to serve as a track record of all releases.
 - New module to override image styles and view modes.
