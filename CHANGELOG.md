@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 ## [1.3.0] - IN DEVELOPMENT
+### Added
+- Added view mode 'author' to 'media person', created 'media person author' template and 'view blog author' scss.
+
+### Changed
+- Changed view blog author title to 'autor' and selected view mode 'author'.
+
 ### Fixed
 - Patched the config rewrite module to allow optional config rewrites.
 - Workbench access default settings for simplenews and press content types.
@@ -39,7 +45,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added scripts to execute tests(BeHat, PHPUnit) in a unified fashion, added small tech. documentation for setup
 - Added degov_media_audio module for audio files (mp3, ogg)
 - Added settings for restricting available view modes for "Inhaltsreferenz"
-- Added view mode 'author' to 'media person', created 'media person author' template and 'view blog author' scss.
 
 ### Changed
 - Refactoring and styling of the event teaser.
@@ -57,7 +62,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Base search dependencies are now split in a new module degov_search_base.
 - Change block reference paragraph in the way that it can reference any block,
   not only the ones that were already placed into the layout of the theme.
-- Changed view blog author title to 'autor' and selected view mode 'author'.
 
 ### Fixed
 - Merged duplicate press views in a single latest press view.
