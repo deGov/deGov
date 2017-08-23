@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Fixed
 - Patched the config rewrite module to allow optional config rewrites.
 - Workbench access default settings for simplenews and press content types.
+- Change the media reference paragraph widget to correctly render by view mode.
 
 ## [1.2.0] - 2017-08-18
 ### Added
