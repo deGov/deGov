@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [1.3.0] - IN DEVELOPMENT
 ### Added
 - Added role 'usermanager'.
+- Added print.css for print version
 
 ### Changed
 - updated permissions for roles editor and manager.
