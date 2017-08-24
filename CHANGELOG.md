@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 - updated permissions for roles editor and manager.
+- Image cropping is now required. See patch #17 https://www.drupal.org/node/2871137.
 
 ### Fixed
 - Patched the config rewrite module to allow optional config rewrites.

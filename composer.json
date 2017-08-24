@@ -128,6 +128,8 @@
             }
         },
         "merge-plugin": {
+            "merge-extra": true,
+            "merge-extra-deep": true,
             "include": [
                 "docroot/modules/nrw/*/*/composer.json",
                 "docroot/modules/nrwgov/*/*/composer.json",
