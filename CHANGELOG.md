@@ -19,6 +19,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Padding fixed for CKEDITOR embedded images.
 - Placeholder languages in the language switcher replaced by available site languages.
 
+## [1.2.1] - 2017-08-23
+### Fixes
+- Submenus are separated in to their own section.
+- View reference paragraph filtering options improved.
+- Media reference paragraph view mode of target media is now applied.
+- Border styling for referenced entites.
+
+### Changed
+- Removal of old update hooks and folders.
+
 ## [1.2.0] - 2017-08-18
 ### Added
 - This changelog file to serve as a track record of all releases.
