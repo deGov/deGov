@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [1.3.0] - IN DEVELOPMENT
 ### Added
 - Fake 2-click sharing with shariff
+- Added role 'usermanager'.
+
+### Changed
+- updated permissions for roles editor and manager.
 
 ### Fixed
 - Patched the config rewrite module to allow optional config rewrites.
@@ -39,9 +43,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   Updating the 'config/install' folder is still required for fresh installations.
 - Adds opportunity to use separate fields for each view argument in views
   reference widget.
-- Added scripts to execute tests(BeHat, PHPUnit) in a unified fashion, added small tech. documentation for setup
-- Added degov_media_audio module for audio files (mp3, ogg)
-- Added settings for restricting available view modes for "Inhaltsreferenz"
+- Added scripts to execute tests(BeHat, PHPUnit) in a unified fashion, added small tech. documentation for setup.
+- Added degov_media_audio module for audio files (mp3, ogg).
+- Added settings for restricting available view modes for "Inhaltsreferenz".
 
 ### Changed
 - Refactoring and styling of the event teaser.
@@ -55,7 +59,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   to an entity reference auto-completion field if applicable.
 - Enable all available node types for paragraph node_reference.
 - Enable all available media bundles for paragraph media_reference.
-- Change "NRW View Paragraph Selection Overrides" module name to "NRW Field Configuration Overrides"
+- Change "NRW View Paragraph Selection Overrides" module name to "NRW Field Configuration Overrides".
 - Base search dependencies are now split in a new module degov_search_base.
 - Change block reference paragraph in the way that it can reference any block,
   not only the ones that were already placed into the layout of the theme.
