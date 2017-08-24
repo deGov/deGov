@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 ## [1.3.0] - IN DEVELOPMENT
+### Added
+- Fake 2-click sharing with shariff
+
 ### Fixed
 - Patched the config rewrite module to allow optional config rewrites.
 - Workbench access default settings for simplenews and press content types.
