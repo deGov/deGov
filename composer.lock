@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8804bf6af1adb10a507f2205abe99368",
+    "content-hash": "7914716ed8c37a69689462b126b44636",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -480,15 +480,15 @@
         },
         {
             "name": "degov/nrw_modules",
-            "version": "1.2.1",
+            "version": "1.2.2",
             "source": {
                 "type": "git",
                 "url": "https://bitbucket.org/publicplan/degov_nrw_modules.git",
-                "reference": "36ce9fca934910b7946996dd8767d2924eeabf0d"
+                "reference": "440a8831ebf8b96920f3d1ca6d7176d07147435b"
             },
             "type": "library",
             "description": "deGov - NRW Modules",
-            "time": "2017-08-23T13:55:50+00:00"
+            "time": "2017-08-24T08:12:54+00:00"
         },
         {
             "name": "degov/nrw_theme",
@@ -3715,7 +3715,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/spamspan"
             },
-            "time": "2017-05-27T08:00:15+00:00"
+            "time": "2017-05-27 08:00:15"
         },
         {
             "name": "drupal/token",
@@ -7609,7 +7609,7 @@
                 "source": "http://cgit.drupalcode.org/calendar",
                 "issues": "https://www.drupal.org/project/issues/calendar"
             },
-            "time": "2017-06-02T07:50:40+00:00"
+            "time": "2017-06-02 07:50:40"
         },
         {
             "name": "drupal/calendar_datetime",
@@ -8058,7 +8058,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/entity_reference_integrity-8.x-1.0-rc3.zip",
-                "reference": null,
+                "reference": "8.x-1.0-rc3",
                 "shasum": "9a711d4a63b0a1f81e87d204b2935793d0dd31fd"
             },
             "require": {
@@ -8071,7 +8071,11 @@
                 },
                 "drupal": {
                     "version": "8.x-1.0-rc3",
-                    "datestamp": "1490776083"
+                    "datestamp": "1490776083",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "RC releases are not covered by Drupal security advisories."
+                    }
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -8198,7 +8202,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/field_group"
             },
-            "time": "2017-07-13T22:41:32+00:00"
+            "time": "2017-07-13 22:41:32"
         },
         {
             "name": "drupal/geocoder",
@@ -8585,7 +8589,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/paragraphs_edit"
             },
-            "time": "2017-05-23T02:16:39+00:00"
+            "time": "2017-05-23 02:16:39"
         },
         {
             "name": "drupal/role_delegation",
@@ -8864,7 +8868,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/simplify_menu"
             },
-            "time": "2017-06-16T01:01:50+00:00"
+            "time": "2017-06-16 01:01:50"
         },
         {
             "name": "drupal/styled_google_map",
@@ -9876,7 +9880,7 @@
             ],
             "description": "An abstraction library for Elasticsearch Connector module for Drupal.",
             "homepage": "https://github.com/nodespark/des-connector",
-            "time": "2017-05-23T10:55:47+00:00"
+            "time": "2017-05-23 10:55:47"
         },
         {
             "name": "phayes/geophp",
@@ -9912,7 +9916,7 @@
             ],
             "description": "GeoPHP is a open-source native PHP library for doing geometry operations. It is written entirely in PHP and can therefore run on shared hosts. It can read and write a wide variety of formats: WKT (including EWKT), WKB (including EWKB), GeoJSON, KML, GPX, GeoRSS). It works with all Simple-Feature geometries (Point, LineString, Polygon, GeometryCollection etc.) and can be used to get centroids, bounding-boxes, area, and a wide variety of other useful information.",
             "homepage": "https://github.com/phayes/geoPHP",
-            "time": "2016-03-04T05:42:29+00:00"
+            "time": "2016-03-04 05:42:29"
         },
         {
             "name": "phpdocumentor/reflection-common",

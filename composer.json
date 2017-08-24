@@ -41,8 +41,8 @@
         "drupal/webform": "^5.0@beta",
         "drupal/entity_reference_display": "^1.0",
         "degov/nrw_features": "1.2.0",
-        "degov/nrw_modules": "1.2.1",
-        "degov/nrw_theme": "1.2.1"
+        "degov/nrw_theme": "1.2.1",
+        "degov/nrw_modules": "1.2.2"
     },
     "repositories": {
         "drupal": {

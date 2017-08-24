@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [1.3.0] - IN DEVELOPMENT
 
+## [1.2.2] - 2017-08-24
+### Fixes
+- Installation fixes, that required dependencies.
+- Fix for install hook in node_event set first day of week.
+
 ## [1.2.1] - 2017-08-23
 ### Fixes
 - Submenus are separated in to their own section.
