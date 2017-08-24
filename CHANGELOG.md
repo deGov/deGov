@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Fake 2-click sharing with shariff
 - Added role 'usermanager'.
 - Added print.css for print version
+- Added degov_media_social_media_embed module.
 
 ### Changed
 - updated permissions for roles editor and manager.
