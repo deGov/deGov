@@ -64,7 +64,8 @@
     },
     "scripts": {
       "post-install-cmd": [
-        "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
+        "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+        "git -C docroot/modules/nrw/modules pull; git -C docroot/modules/nrw/features pull; git -C docroot/themes/nrw/nrw_base_theme pull;"
       ],
       "post-update-cmd": [
         "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
