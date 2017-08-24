@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Fixed
 - Patched the config rewrite module to allow optional config rewrites.
 - Workbench access default settings for simplenews and press content types.
+- Padding fixed for CKEDITOR embedded images.
 
 ## [1.2.0] - 2017-08-18
 ### Added
