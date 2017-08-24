@@ -8,17 +8,38 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [1.3.0] - IN DEVELOPMENT
 ### Added
+- Fake 2-click sharing with shariff
+- Added role 'usermanager'.
+- Added print.css for print version
 - Added view mode 'author' to 'media person', created 'media person author' template and 'view blog author' scss.
 
 ### Changed
 - Changed view blog author title to 'autor' and selected view mode 'author'.
 - Added role 'usermanager'.
 - updated permissions for roles editor and manager.
+- Image cropping is now required. See patch #17 https://www.drupal.org/node/2871137.
+- Change the media reference paragraph widget to correctly render by view mode.
 
 ### Fixed
 - Patched the config rewrite module to allow optional config rewrites.
 - Workbench access default settings for simplenews and press content types.
 - Padding fixed for CKEDITOR embedded images.
+- Placeholder languages in the language switcher replaced by available site languages.
+
+## [1.2.2] - 2017-08-24
+### Fixes
+- Installation fixes, that required dependencies.
+- Fix for install hook in node_event set first day of week.
+
+## [1.2.1] - 2017-08-23
+### Fixes
+- Submenus are separated in to their own section.
+- View reference paragraph filtering options improved.
+- Media reference paragraph view mode of target media is now applied.
+- Border styling for referenced entites.
+
+### Changed
+- Removal of old update hooks and folders.
 
 ## [1.2.0] - 2017-08-18
 ### Added
