@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [1.3.0] - IN DEVELOPMENT
 ### Added
+- Fake 2-click sharing with shariff
 - Added role 'usermanager'.
 - Added print.css for print version
 
