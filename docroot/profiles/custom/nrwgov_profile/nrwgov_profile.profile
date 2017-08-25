@@ -182,7 +182,8 @@ function nrwgov_profile_form_install_configure_form_alter(&$form, \Drupal\Core\F
  */
 function nrwgov_optional_modules_submit($form_id, &$form_state) {
   // Sets all optional modules to a Drupal set variable for later installation.
-  $nrwgov_optional_modules = array_filter($form_state->getValue('optional_modules'));
+  //$nrwgov_optional_modules = array_filter($form_state->getValue('optional_modules'));
+  $nrwgov_optional_modules = array();
   \Drupal::state()->set('nrwgov_optional_modules', $nrwgov_optional_modules);
 }
 
