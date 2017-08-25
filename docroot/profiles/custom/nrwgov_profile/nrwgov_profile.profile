@@ -26,7 +26,7 @@ function nrwgov_profile_install_tasks($install_state) {
     ),
   );
 
-  return $tasks;
+  return $tasks;*/
 }
 
 /**
@@ -93,7 +93,13 @@ function nrwgov_module_setup(&$install_state) {
     'degov_tweets' => 'degov_tweets',
     'degov_users_roles' => 'degov_users_roles',
     'degov_views_helper' => 'degov_views_helper',
-    'degov_workbench_access' => 'degov_workbench_access'
+    'degov_workbench_access' => 'degov_workbench_access',
+    'degov_eu_cookie_compliance' => 'degov_eu_cookie_compliance',
+    'degov_metatags' => 'degov_metatags',
+    'degov_password_policy' => 'degov_password_policy',
+    'degov_pathauto' => 'degov_pathauto',
+    'degov_rich_text_format_settings' => 'degov_rich_text_format_settings',
+    'degov_sitemap_settings' => 'degov_sitemap_settings',
   );
 
   // Add a batch operation to install each module.
@@ -153,8 +159,11 @@ function nrwgov_profile_form_install_configure_form_alter(&$form, \Drupal\Core\F
 
   // List all optional nrwGov modules.
   $nrwgov_optional_modules = [
-    'nrw_menu' => 'nrw_menu',
-    'nrw_image_and_crop_styles' => 'nrw_image_and_crop_styles'
+    'degov_eu_cookie_compliance' => t('EU cookie compliance'),
+    'degov_password_policy' => t('Secure password policy'),
+    'degov_blogarticle' => t('Blog'),
+    'degov_sitemap' => t('User sitemap'),
+    'degov_shariff_social_share' => t('Social sharing')
   ];
   $form['nrwgov']['optional_modules'] = [
     '#type' => 'checkboxes',
@@ -162,8 +171,8 @@ function nrwgov_profile_form_install_configure_form_alter(&$form, \Drupal\Core\F
     '#description' => t('Checked features are recommended.'),
     '#options' => $nrwgov_optional_modules,
     '#default_value' => [
-      'nrw_menu',
-      'nrw_image_and_crop_styles'
+      'degov_eu_cookie_compliance',
+      'degov_password_policy'
     ],
   ];
 
