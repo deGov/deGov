@@ -26,7 +26,7 @@ function nrwgov_profile_install_tasks($install_state) {
     ),
   );
 
-  return $tasks;*/
+  return $tasks;
 }
 
 /**
