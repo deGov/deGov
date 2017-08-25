@@ -170,7 +170,6 @@ function nrwgov_profile_form_install_configure_form_alter(&$form, \Drupal\Core\F
     '#description' => t('Checked features are recommended.'),
     '#options' => $nrwgov_optional_modules,
     '#default_value' => [
-      'nrw_view_mode_overrides',
       'nrw_view_paragraph_selection_overrides',
       'nrw_menu',
       'nrw_image_and_crop_styles'
