@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - updated permissions for roles editor and manager.
 - Image cropping is now required. See patch #17 https://www.drupal.org/node/2871137.
 - Change the media reference paragraph widget to correctly render by view mode.
+- updated config and styling for sitemap
 
 ### Fixed
 - Patched the config rewrite module to allow optional config rewrites.
