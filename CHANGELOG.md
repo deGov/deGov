@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added role 'usermanager'.
 - Added print.css for print version
 - Added view mode 'author' to 'media person', created 'media person author' template and 'view blog author' scss.
+- Added menu block for level 4 and deeper 
 
 ### Changed
 - Changed view blog author title to 'autor' and selected view mode 'author'.
