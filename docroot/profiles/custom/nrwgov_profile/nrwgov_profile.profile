@@ -139,7 +139,7 @@ function nrwgov_theme_setup(&$install_state) {
 
   // Set the default theme to be nrwGov.
   $theme = 'nrw_base_theme';
-  \Drupal::service('theme_handler')->install(array($theme));
+  \Drupal::service('theme_installer')->install(array($theme));
   \Drupal::configFactory()
     ->getEditable('system.theme')
     ->set('default', $theme)
