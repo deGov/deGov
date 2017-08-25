@@ -1365,7 +1365,14 @@
                 },
                 "drupal": {
                     "version": "8.x-1.x-dev",
-                    "datestamp": "1496389743"
+                    "datestamp": "1496390043",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                },
+                "patches_applied": {
+                    "2845257 - Undefined index: id in calendar_views_data_alter": "https://www.drupal.org/files/issues/undefined_index-2845257-10.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -1777,6 +1784,9 @@
                 "patches": {
                     "drupal/image_widget_crop": {
                         "2871137 - Required croppings": "https://www.drupal.org/files/issues/required_croppings-2871137-17.patch"
+                    },
+                    "drupal/calendar": {
+                        "2845257 - Undefined index: id in calendar_views_data_alter": "https://www.drupal.org/files/issues/undefined_index-2845257-10.patch"
                     },
                     "drupal/core": {
                         "2893029 - StringTranslationTrait consumers cannot be reliably serialized without DependencySerializationTrait": "https://www.drupal.org/files/issues/2893029-full-fix-test-from-3.patch",
@@ -4220,6 +4230,9 @@
                 "patches": {
                     "drupal/image_widget_crop": {
                         "2871137 - Required croppings": "https://www.drupal.org/files/issues/required_croppings-2871137-17.patch"
+                    },
+                    "drupal/calendar": {
+                        "2845257 - Undefined index: id in calendar_views_data_alter": "https://www.drupal.org/files/issues/undefined_index-2845257-10.patch"
                     },
                     "drupal/core": {
                         "2893029 - StringTranslationTrait consumers cannot be reliably serialized without DependencySerializationTrait": "https://www.drupal.org/files/issues/2893029-full-fix-test-from-3.patch",
