@@ -15,10 +15,10 @@ function nrwgov_profile_install_tasks($install_state) {
       'display_name' => t('Install nrwGov modules'),
       'type' => 'batch'
     ),
-    'nrwgov_theme_setup' => array(
-      'display_name' => t('Install nrwGov theme'),
-      'display' => TRUE,
-    ),
+//    'nrwgov_theme_setup' => array(
+//      'display_name' => t('Install nrwGov theme'),
+//      'display' => TRUE,
+//    ),
     'nrwgov_finalize_setup' => array(
       'display_name' => t('Finalize installation'),
       'type' => 'batch',
