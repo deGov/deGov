@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * Install, update and uninstall hooks for the {{ profile }} subprofile.
+ * Install, update and uninstall hooks for the nrwGov profile.
  */
 
 /**
  * Implements hook_install().
  */
-function degov_profile_install() {
+function nrwgov_profile_install() {
   // Set the deGov theme logo and favicon.
   //$degov_path = drupal_get_path('theme', 'degov_demo_theme');
   //\Drupal::configFactory()
