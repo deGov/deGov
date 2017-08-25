@@ -65,7 +65,7 @@
     "scripts": {
       "post-install-cmd": [
         "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-        "git -C docroot/modules/nrw/modules pull; git -C docroot/modules/nrw/features pull; git -C docroot/themes/nrw/nrw_base_theme pull;"
+        "git --work-tree=docroot/modules/nrw/modules/ --git-dir=docroot/modules/nrw/modules/.git pull origin release-1.3;git --work-tree=docroot/modules/nrw/features/ --git-dir=docroot/modules/nrw/features/.git pull origin release-1.3;git --work-tree=docroot/themes/nrw/nrw_base_theme/ --git-dir=docroot/themes/nrw/nrw_base_theme/.git pull origin release-1.3;"
       ],
       "post-update-cmd": [
         "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
