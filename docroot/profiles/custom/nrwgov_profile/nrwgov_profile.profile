@@ -158,20 +158,24 @@ function nrwgov_profile_form_install_configure_form_alter(&$form, \Drupal\Core\F
   drupal_get_messages('status', TRUE);
 
   // List all optional nrwGov modules.
-//  $nrwgov_optional_modules = [
-//    'nrw_view_mode_overrides' => t('nrw_view_mode_overrides'),
-//    'nrw_view_paragraph_selection_overrides' => t('nrw_view_paragraph_selection_overrides'),
-//  ];
-//  $form['nrwgov']['optional_modules'] = [
-//    '#type' => 'checkboxes',
-//    '#title' => t('ENABLE OPTIONAL FEATURES'),
-//    '#description' => t('Checked features are recommended.'),
-//    '#options' => $nrwgov_optional_modules,
-//    '#default_value' => [
-//      'nrw_view_mode_overrides',
-//      'nrw_view_paragraph_selection_overrides'
-//    ],
-//  ];
+  $nrwgov_optional_modules = [
+    'nrw_view_mode_overrides' => t('nrw_view_mode_overrides'),
+    'nrw_view_paragraph_selection_overrides' => t('nrw_view_paragraph_selection_overrides'),
+    'nrw_menu' => t('nrw_menu'),
+    'nrw_image_and_crop_styles' => t('nrw_image_and_crop_styles'),
+  ];
+  $form['nrwgov']['optional_modules'] = [
+    '#type' => 'checkboxes',
+    '#title' => t('ENABLE OPTIONAL FEATURES'),
+    '#description' => t('Checked features are recommended.'),
+    '#options' => $nrwgov_optional_modules,
+    '#default_value' => [
+      'nrw_view_mode_overrides',
+      'nrw_view_paragraph_selection_overrides',
+      'nrw_menu',
+      'nrw_image_and_crop_styles'
+    ],
+  ];
 
   // Add an additional submit handler for optional modules.
   $form['#submit'][] = 'nrwgov_optional_modules_submit';
@@ -182,8 +186,7 @@ function nrwgov_profile_form_install_configure_form_alter(&$form, \Drupal\Core\F
  */
 function nrwgov_optional_modules_submit($form_id, &$form_state) {
   // Sets all optional modules to a Drupal set variable for later installation.
-  //$nrwgov_optional_modules = array_filter($form_state->getValue('optional_modules'));
-  $nrwgov_optional_modules = array();
+  $nrwgov_optional_modules = array_filter($form_state->getValue('optional_modules'));
   \Drupal::state()->set('nrwgov_optional_modules', $nrwgov_optional_modules);
 }
 
