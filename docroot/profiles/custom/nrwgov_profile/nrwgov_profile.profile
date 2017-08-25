@@ -158,20 +158,20 @@ function nrwgov_profile_form_install_configure_form_alter(&$form, \Drupal\Core\F
   drupal_get_messages('status', TRUE);
 
   // List all optional nrwGov modules.
-  $nrwgov_optional_modules = [
-    'degov_eu_cookie_compliance' => t('EU cookie compliance'),
-    'degov_password_policy' => t('Secure password policy'),
-  ];
-  $form['nrwgov']['optional_modules'] = [
-    '#type' => 'checkboxes',
-    '#title' => t('ENABLE OPTIONAL FEATURES'),
-    '#description' => t('Checked features are recommended.'),
-    '#options' => $nrwgov_optional_modules,
-    '#default_value' => [
-      'degov_eu_cookie_compliance',
-      'degov_password_policy'
-    ],
-  ];
+//  $nrwgov_optional_modules = [
+//    'nrw_view_mode_overrides' => t('nrw_view_mode_overrides'),
+//    'nrw_view_paragraph_selection_overrides' => t('nrw_view_paragraph_selection_overrides'),
+//  ];
+//  $form['nrwgov']['optional_modules'] = [
+//    '#type' => 'checkboxes',
+//    '#title' => t('ENABLE OPTIONAL FEATURES'),
+//    '#description' => t('Checked features are recommended.'),
+//    '#options' => $nrwgov_optional_modules,
+//    '#default_value' => [
+//      'nrw_view_mode_overrides',
+//      'nrw_view_paragraph_selection_overrides'
+//    ],
+//  ];
 
   // Add an additional submit handler for optional modules.
   $form['#submit'][] = 'nrwgov_optional_modules_submit';
