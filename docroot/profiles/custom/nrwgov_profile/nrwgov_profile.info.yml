@@ -1,6 +1,9 @@
-name: 'deGov'
+name: 'nrwGov'
 type: profile
-description: 'deprecated - Drupal 8 for Government (Drupal 8 für die öffentliche Verwaltung)'
+distribution:
+  name: nrwGov
+  langcode: de
+description: 'Drupal 8 for Government (Drupal 8 für die öffentliche Verwaltung)'
 version: 8.x-dev
 core: '8.x'
 dependencies:

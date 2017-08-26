@@ -11,12 +11,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Fake 2-click sharing with shariff
 - Added role 'usermanager'.
 - Added print.css for print version
+- Added view mode 'author' to 'media person', created 'media person author' template and 'view blog author' scss.
 - Added degov_media_social_media_embed module.
 
 ### Changed
+- Changed view blog author title to 'autor' and selected view mode 'author'.
+- Added role 'usermanager'.
 - updated permissions for roles editor and manager.
 - Image cropping is now required. See patch #17 https://www.drupal.org/node/2871137.
 - Change the media reference paragraph widget to correctly render by view mode.
+- updated config and styling for sitemap
+- improved display and styling of latest press releases
 
 ### Fixed
 - Patched the config rewrite module to allow optional config rewrites.
