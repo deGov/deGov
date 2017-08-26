@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "956a585bf998618f2cbce69e86dcf77c",
+    "content-hash": "eff92094a7ec02969756ded11c3177ad",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -621,7 +621,7 @@
             },
             "type": "library",
             "description": "deGov - NRW Features",
-            "time": "2017-08-18T14:58:08+00:00"
+            "time": "2017-08-18 14:58:08"
         },
         {
             "name": "degov/nrw_modules",
@@ -633,7 +633,7 @@
             },
             "type": "library",
             "description": "deGov - NRW Modules",
-            "time": "2017-08-18T14:57:38+00:00"
+            "time": "2017-08-18 14:57:38"
         },
         {
             "name": "degov/nrw_theme",
@@ -648,7 +648,7 @@
             },
             "type": "library",
             "description": "deGov - NRW Theme",
-            "time": "2017-08-18T14:58:45+00:00"
+            "time": "2017-08-18 14:58:45"
         },
         {
             "name": "doctrine/annotations",
@@ -1410,7 +1410,7 @@
                 "source": "http://cgit.drupalcode.org/calendar",
                 "issues": "https://www.drupal.org/project/issues/calendar"
             },
-            "time": "2017-06-02T07:50:40+00:00"
+            "time": "2017-06-02 07:50:40"
         },
         {
             "name": "drupal/calendar_datetime",
@@ -2682,7 +2682,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/entity_reference_integrity-8.x-1.0-rc3.zip",
-                "reference": null,
+                "reference": "8.x-1.0-rc3",
                 "shasum": "9a711d4a63b0a1f81e87d204b2935793d0dd31fd"
             },
             "require": {
@@ -2695,7 +2695,11 @@
                 },
                 "drupal": {
                     "version": "8.x-1.0-rc3",
-                    "datestamp": "1490776083"
+                    "datestamp": "1490776083",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "RC releases are not covered by Drupal security advisories."
+                    }
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3023,7 +3027,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/field_group"
             },
-            "time": "2017-07-13T22:41:32+00:00"
+            "time": "2017-07-13 22:41:32"
         },
         {
             "name": "drupal/geocoder",
@@ -3810,6 +3814,69 @@
             }
         },
         {
+            "name": "drupal/menu_block",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/menu_block",
+                "reference": "8.x-1.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/menu_block-8.x-1.4.zip",
+                "reference": "8.x-1.4",
+                "shasum": "fd8d559452a9e1e07de6fefd9955df6feadc943a"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.4",
+                    "datestamp": "1473063239",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Dave Reid",
+                    "homepage": "https://www.drupal.org/user/53892"
+                },
+                {
+                    "name": "JohnAlbin",
+                    "homepage": "https://www.drupal.org/user/32095"
+                },
+                {
+                    "name": "joelpittet",
+                    "homepage": "https://www.drupal.org/user/160302"
+                },
+                {
+                    "name": "kim.pepper",
+                    "homepage": "https://www.drupal.org/user/370574"
+                },
+                {
+                    "name": "rrrob",
+                    "homepage": "https://www.drupal.org/user/273533"
+                }
+            ],
+            "description": "Provides configurable blocks of menu links.",
+            "homepage": "https://www.drupal.org/project/menu_block",
+            "support": {
+                "source": "http://cgit.drupalcode.org/menu_block"
+            }
+        },
+        {
             "name": "drupal/metatag",
             "version": "1.1.0",
             "source": {
@@ -4356,7 +4423,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/paragraphs_edit"
             },
-            "time": "2017-05-23T02:16:39+00:00"
+            "time": "2017-05-23 02:16:39"
         },
         {
             "name": "drupal/password_policy",
@@ -4960,7 +5027,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/simplify_menu"
             },
-            "time": "2017-06-16T01:01:50+00:00"
+            "time": "2017-06-16 01:01:50"
         },
         {
             "name": "drupal/sitemap",
@@ -5067,7 +5134,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/spamspan"
             },
-            "time": "2017-05-27T08:00:15+00:00"
+            "time": "2017-05-27 08:00:15"
         },
         {
             "name": "drupal/styled_google_map",
@@ -5612,7 +5679,7 @@
                 },
                 "drupal": {
                     "version": "8.x-5.0-beta13",
-                    "datestamp": "1498698843"
+                    "datestamp": "1496266200"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -6690,7 +6757,7 @@
             ],
             "description": "GeoPHP is a open-source native PHP library for doing geometry operations. It is written entirely in PHP and can therefore run on shared hosts. It can read and write a wide variety of formats: WKT (including EWKT), WKB (including EWKB), GeoJSON, KML, GPX, GeoRSS). It works with all Simple-Feature geometries (Point, LineString, Polygon, GeometryCollection etc.) and can be used to get centroids, bounding-boxes, area, and a wide variety of other useful information.",
             "homepage": "https://github.com/phayes/geoPHP",
-            "time": "2016-03-04T05:42:29+00:00"
+            "time": "2016-03-04 05:42:29"
         },
         {
             "name": "psr/http-message",
@@ -9570,7 +9637,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/twig_xdebug-8.x-1.0.zip",
-                "reference": "8.x-1.0",
+                "reference": null,
                 "shasum": "f8a5cfef63b427d6b6b428a2c4bd19b19d082037"
             },
             "require": {
@@ -9853,7 +9920,7 @@
                 {
                     "name": "Anthon Pang",
                     "email": "apang@softwaredevelopment.ca",
-                    "role": "Fork Maintainer"
+                    "role": "Fork maintainer"
                 }
             ],
             "description": "PHP WebDriver for Selenium 2",
@@ -10079,7 +10146,7 @@
             ],
             "description": "An abstraction library for Elasticsearch Connector module for Drupal.",
             "homepage": "https://github.com/nodespark/des-connector",
-            "time": "2017-05-23T10:55:47+00:00"
+            "time": "2017-05-23 10:55:47"
         },
         {
             "name": "phpdocumentor/reflection-common",
