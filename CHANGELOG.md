@@ -6,13 +6,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [1.3.0] - IN DEVELOPMENT
+## [1.4.0] - IN DEVELOPMENT
+### Added
+- Added degov_media_social_media_embed module.
+- Added degov_social_media_settings module.
+
+### Changed
+- Changed templates of media bundle video to support degov_social_media_settings
+- Changed page and header intro theme templates to support degov_social_media_settings
+
+## [1.3.0] - 2017-08-25
 ### Added
 - Fake 2-click sharing with shariff
 - Added role 'usermanager'.
 - Added print.css for print version
 - Added view mode 'author' to 'media person', created 'media person author' template and 'view blog author' scss.
-- Added degov_media_social_media_embed module.
 
 ### Changed
 - Changed view blog author title to 'autor' and selected view mode 'author'.
