@@ -6,7 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [1.3.0] - IN DEVELOPMENT
+## [1.4.0] - IN DEVELOPMENT
+### Fixed
+- Validation for taxonomy term search formatter route name.
+
+## [1.3.0] - 2017-08-25
 ### Added
 - Fake 2-click sharing with shariff
 - Added role 'usermanager'.
