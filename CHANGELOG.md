@@ -12,6 +12,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added press-slider view mode to latest press view and updated styling accordingly.
 
 ### Changed
+- Block reference paragraph block field was changed to a block field type from the
+  block_field module that has a widget configured as a block instance.
 
 ### Fixed
 - Breadcrumbs are now linking to their corresponding page.
@@ -29,8 +31,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - updated permissions for roles editor and manager.
 - Image cropping is now required. See patch #17 https://www.drupal.org/node/2871137.
 - Change the media reference paragraph widget to correctly render by view mode.
-- Block reference paragraph block field was changed to block field type from
-  block_field module that has widget with configured block instance.
 
 ### Fixed
 - Patched the config rewrite module to allow optional config rewrites.
