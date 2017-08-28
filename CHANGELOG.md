@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Change the media reference paragraph widget to correctly render by view mode.
 - updated config and styling for sitemap
 - improved display and styling of latest press releases
+- Changed label in media contact form.
 
 ### Fixed
 - Patched the config rewrite module to allow optional config rewrites.
