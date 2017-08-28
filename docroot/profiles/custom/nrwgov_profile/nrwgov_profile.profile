@@ -59,6 +59,7 @@ function nrwgov_module_setup(&$install_state) {
     'degov_media_image' => 'degov_media_image',
     'degov_media_instagram' => 'degov_media_instagram',
     'degov_media_person' => 'degov_media_person',
+    'degov_media_social_media_embed' => 'degov_media_social_media_embed',
     'degov_media_tweet' => 'degov_media_tweet',
     'degov_media_video' => 'degov_media_video',
     'degov_media_video_upload' => 'degov_media_video_upload',
