@@ -42,8 +42,7 @@
         "drupal/entity_reference_display": "^1.0",
 	"degov/nrw_features": "1.3.0",
         "degov/nrw_theme": "1.3.0",
-        "degov/nrw_modules": "1.3.0",
-        "drupal/menu_block": "^1.4"
+        "degov/nrw_modules": "1.3.0"
     },
     "repositories": {
         "drupal": {
