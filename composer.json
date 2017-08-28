@@ -64,7 +64,7 @@
     },
     "scripts": {
       "pre-install-cmd": [
-        "git --work-tree=$(pwd)/docroot/modules/nrw/modules/ --git-dir=$(pwd)/docroot/modules/nrw/modules/.git pull origin release-1.4;git --work-tree=$(pwd)/docroot/modules/nrw/features/ --git-dir=$(pwd)/docroot/modules/nrw/features/.git pull origin release-1.4;git --work-tree=$(pwd)/docroot/themes/nrw/nrw_base_theme/ --git-dir=$(pwd)/docroot/themes/nrw/nrw_base_theme/.git pull origin release-1.4;",
+        "git --work-tree=$(pwd)/docroot/modules/nrw/modules/ --git-dir=$(pwd)/docroot/modules/nrw/modules/.git pull origin release-1.4;git --work-tree=$(pwd)/docroot/modules/nrw/features/ --git-dir=$(pwd)/docroot/modules/nrw/features/.git pull origin release-1.4;git --work-tree=$(pwd)/docroot/themes/nrw/nrw_base_theme/ --git-dir=$(pwd)/docroot/themes/nrw/nrw_base_theme/.git pull origin release-1.4;"
       ],
       "post-install-cmd": [
         "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
