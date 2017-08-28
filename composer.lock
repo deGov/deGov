@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "af0bb0bf025fcbaefa367698e196093b",
+    "content-hash": "a485add154b024d9d2a8dd769b993974",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -613,19 +613,19 @@
         },
         {
             "name": "degov/nrw_features",
-            "version": "1.3.0",
+            "version": "dev-release-1.4",
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:publicplan/degov_nrw_features.git",
-                "reference": "4995ed3b570bb4414dd765c758e850e3a8f0d311"
+                "reference": "c835c2dd9165f24ac6cc55266743308c4a8c300c"
             },
             "type": "library",
             "description": "deGov - NRW Features",
-            "time": "2017-08-25T14:51:28+00:00"
+            "time": "2017-08-25T16:08:13+00:00"
         },
         {
             "name": "degov/nrw_modules",
-            "version": "1.3.0",
+            "version": "dev-release-1.4",
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:publicplan/degov_nrw_modules.git",
@@ -637,7 +637,7 @@
         },
         {
             "name": "degov/nrw_theme",
-            "version": "1.3.0",
+            "version": "dev-release-1.4",
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:publicplan/degov_nrw_theme.git",
@@ -1370,6 +1370,9 @@
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
                     }
+                },
+                "patches_applied": {
+                    "2845257 - Undefined index: id in calendar_views_data_alter": "https://www.drupal.org/files/issues/undefined_index-2845257-10.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -1407,7 +1410,7 @@
                 "source": "http://cgit.drupalcode.org/calendar",
                 "issues": "https://www.drupal.org/project/issues/calendar"
             },
-            "time": "2017-06-02 07:50:40"
+            "time": "2017-06-02T07:50:40+00:00"
         },
         {
             "name": "drupal/calendar_datetime",
@@ -1778,6 +1781,24 @@
             },
             "type": "drupal-core",
             "extra": {
+                "patches": {
+                    "drupal/image_widget_crop": {
+                        "2871137 - Required croppings": "https://www.drupal.org/files/issues/required_croppings-2871137-17.patch"
+                    },
+                    "drupal/calendar": {
+                        "2845257 - Undefined index: id in calendar_views_data_alter": "https://www.drupal.org/files/issues/undefined_index-2845257-10.patch"
+                    },
+                    "drupal/core": {
+                        "2893029 - StringTranslationTrait consumers cannot be reliably serialized without DependencySerializationTrait": "https://www.drupal.org/files/issues/2893029-full-fix-test-from-3.patch",
+                        "2652542 - Add .install file abilities for Themes": "https://www.drupal.org/files/issues/2652542-add-theme-ability-install-file-and-hook-29-D8.3.patch"
+                    },
+                    "drupal/paragraphs": {
+                        "2788607 - Empty required fields not providing meaningful error messages": "https://www.drupal.org/files/issues/empty_required_fields-2788607-81.patch"
+                    },
+                    "drupal/config_rewrite": {
+                        "2903629 - Allow optional config rewrite": "https://www.drupal.org/files/issues/empty_config.patch"
+                    }
+                },
                 "installer-paths": {
                     "docroot/core": [
                         "type:drupal-core"
@@ -1808,18 +1829,6 @@
                     ]
                 },
                 "enable-patching": true,
-                "patches": {
-                    "drupal/core": {
-                        "2893029 - StringTranslationTrait consumers cannot be reliably serialized without DependencySerializationTrait": "https://www.drupal.org/files/issues/2893029-full-fix-test-from-3.patch",
-                        "2652542 - Add .install file abilities for Themes": "https://www.drupal.org/files/issues/2652542-add-theme-ability-install-file-and-hook-29-D8.3.patch"
-                    },
-                    "drupal/paragraphs": {
-                        "2788607 - Empty required fields not providing meaningful error messages": "https://www.drupal.org/files/issues/empty_required_fields-2788607-81.patch"
-                    },
-                    "drupal/config_rewrite": {
-                        "2903629 - Allow optional config rewrite": "https://www.drupal.org/files/issues/empty_config.patch"
-                    }
-                },
                 "merge-plugin": {
                     "merge-extra": true,
                     "merge-extra-deep": true,
@@ -2673,7 +2682,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/entity_reference_integrity-8.x-1.0-rc3.zip",
-                "reference": "8.x-1.0-rc3",
+                "reference": null,
                 "shasum": "9a711d4a63b0a1f81e87d204b2935793d0dd31fd"
             },
             "require": {
@@ -2686,11 +2695,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.0-rc3",
-                    "datestamp": "1490776083",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "RC releases are not covered by Drupal security advisories."
-                    }
+                    "datestamp": "1490776083"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -2761,85 +2766,6 @@
             "homepage": "https://www.drupal.org/project/entity_reference_revisions",
             "support": {
                 "source": "http://cgit.drupalcode.org/entity_reference_revisions"
-            }
-        },
-        {
-            "name": "drupal/eu_cookie_compliance",
-            "version": "1.0.0-beta7",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/eu-cookie-compliance",
-                "reference": "8.x-1.0-beta7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/eu_cookie_compliance-8.x-1.0-beta7.zip",
-                "reference": "8.x-1.0-beta7",
-                "shasum": "c8859fbeb5f6b1122c0eb6c5df1c4cd4b2961421"
-            },
-            "require": {
-                "drupal/core": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0-beta7",
-                    "datestamp": "1471263146"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Marcin Pajdzik",
-                    "homepage": "https://www.drupal.org/user/160555"
-                },
-                {
-                    "name": "achton",
-                    "homepage": "https://www.drupal.org/user/712454"
-                },
-                {
-                    "name": "blairski",
-                    "homepage": "https://www.drupal.org/user/120835"
-                },
-                {
-                    "name": "dakku",
-                    "homepage": "https://www.drupal.org/user/97634"
-                },
-                {
-                    "name": "grzegorz.bartman",
-                    "homepage": "https://www.drupal.org/user/363120"
-                },
-                {
-                    "name": "id.tornado",
-                    "homepage": "https://www.drupal.org/user/2754049"
-                },
-                {
-                    "name": "killua99",
-                    "homepage": "https://www.drupal.org/user/699418"
-                },
-                {
-                    "name": "mibfire",
-                    "homepage": "https://www.drupal.org/user/155136"
-                },
-                {
-                    "name": "naveenvalecha",
-                    "homepage": "https://www.drupal.org/user/2665733"
-                },
-                {
-                    "name": "svenryen",
-                    "homepage": "https://www.drupal.org/user/667244"
-                }
-            ],
-            "description": "This module aims at making the website compliant with the new EU cookie regulation",
-            "homepage": "https://www.drupal.org/project/eu_cookie_compliance",
-            "support": {
-                "source": "http://cgit.drupalcode.org/eu_cookie_compliance"
             }
         },
         {
@@ -3018,7 +2944,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/field_group"
             },
-            "time": "2017-07-13 22:41:32"
+            "time": "2017-07-13T22:41:32+00:00"
         },
         {
             "name": "drupal/geocoder",
@@ -3228,6 +3154,9 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "2871137 - Required croppings": "https://www.drupal.org/files/issues/required_croppings-2871137-17.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3373,52 +3302,6 @@
             "homepage": "https://www.drupal.org/project/link_attributes",
             "support": {
                 "source": "http://cgit.drupalcode.org/link_attributes"
-            }
-        },
-        {
-            "name": "drupal/linkit",
-            "version": "4.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/linkit",
-                "reference": "8.x-4.3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/linkit-8.x-4.3.zip",
-                "reference": "8.x-4.3",
-                "shasum": "e624ea2f18a6100b76a8337e24f7c08df6e2235e"
-            },
-            "require": {
-                "drupal/core": "~8.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-4.x": "4.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-4.3",
-                    "datestamp": "1490205830"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Emil Stjerneman",
-                    "homepage": "https://stjerneman.com",
-                    "email": "emil@stjerneman.com",
-                    "role": "Maintainer"
-                }
-            ],
-            "description": "Linkit - Enriched linking experience",
-            "homepage": "http://drupal.org/project/linkit",
-            "support": {
-                "source": "http://cgit.drupalcode.org/linkit",
-                "issues": "http://drupal.org/project/linkit"
             }
         },
         {
@@ -4219,6 +4102,24 @@
             },
             "type": "drupal-module",
             "extra": {
+                "patches": {
+                    "drupal/image_widget_crop": {
+                        "2871137 - Required croppings": "https://www.drupal.org/files/issues/required_croppings-2871137-17.patch"
+                    },
+                    "drupal/calendar": {
+                        "2845257 - Undefined index: id in calendar_views_data_alter": "https://www.drupal.org/files/issues/undefined_index-2845257-10.patch"
+                    },
+                    "drupal/core": {
+                        "2893029 - StringTranslationTrait consumers cannot be reliably serialized without DependencySerializationTrait": "https://www.drupal.org/files/issues/2893029-full-fix-test-from-3.patch",
+                        "2652542 - Add .install file abilities for Themes": "https://www.drupal.org/files/issues/2652542-add-theme-ability-install-file-and-hook-29-D8.3.patch"
+                    },
+                    "drupal/paragraphs": {
+                        "2788607 - Empty required fields not providing meaningful error messages": "https://www.drupal.org/files/issues/empty_required_fields-2788607-81.patch"
+                    },
+                    "drupal/config_rewrite": {
+                        "2903629 - Allow optional config rewrite": "https://www.drupal.org/files/issues/empty_config.patch"
+                    }
+                },
                 "installer-paths": {
                     "docroot/core": [
                         "type:drupal-core"
@@ -4249,18 +4150,6 @@
                     ]
                 },
                 "enable-patching": true,
-                "patches": {
-                    "drupal/core": {
-                        "2893029 - StringTranslationTrait consumers cannot be reliably serialized without DependencySerializationTrait": "https://www.drupal.org/files/issues/2893029-full-fix-test-from-3.patch",
-                        "2652542 - Add .install file abilities for Themes": "https://www.drupal.org/files/issues/2652542-add-theme-ability-install-file-and-hook-29-D8.3.patch"
-                    },
-                    "drupal/paragraphs": {
-                        "2788607 - Empty required fields not providing meaningful error messages": "https://www.drupal.org/files/issues/empty_required_fields-2788607-81.patch"
-                    },
-                    "drupal/config_rewrite": {
-                        "2903629 - Allow optional config rewrite": "https://www.drupal.org/files/issues/empty_config.patch"
-                    }
-                },
                 "merge-plugin": {
                     "merge-extra": true,
                     "merge-extra-deep": true,
@@ -4342,71 +4231,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/paragraphs_edit"
             },
-            "time": "2017-05-23 02:16:39"
-        },
-        {
-            "name": "drupal/password_policy",
-            "version": "3.0.0-alpha3",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/password_policy",
-                "reference": "8.x-3.0-alpha3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/password_policy-8.x-3.0-alpha3.zip",
-                "reference": "8.x-3.0-alpha3",
-                "shasum": "efe3ac404276ab2274b29393e55f6a4b7fb58681"
-            },
-            "require": {
-                "drupal/core": "*",
-                "drupal/ctools": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-3.x": "3.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-3.0-alpha3",
-                    "datestamp": "1488135183",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Alpha releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "AohRveTPV",
-                    "homepage": "https://www.drupal.org/user/2760115"
-                },
-                {
-                    "name": "deekayen",
-                    "homepage": "https://www.drupal.org/user/972"
-                },
-                {
-                    "name": "miglius",
-                    "homepage": "https://www.drupal.org/user/18741"
-                },
-                {
-                    "name": "nerdstein",
-                    "homepage": "https://www.drupal.org/user/1557710"
-                },
-                {
-                    "name": "shrop",
-                    "homepage": "https://www.drupal.org/user/14767"
-                }
-            ],
-            "description": "Sets up constraints and expiration of passwords.",
-            "homepage": "https://www.drupal.org/project/password_policy",
-            "support": {
-                "source": "http://cgit.drupalcode.org/password_policy"
-            }
+            "time": "2017-05-23T02:16:39+00:00"
         },
         {
             "name": "drupal/pathauto",
@@ -4946,7 +4771,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/simplify_menu"
             },
-            "time": "2017-06-16 01:01:50"
+            "time": "2017-06-16T01:01:50+00:00"
         },
         {
             "name": "drupal/sitemap",
@@ -5053,7 +4878,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/spamspan"
             },
-            "time": "2017-05-27 08:00:15"
+            "time": "2017-05-27T08:00:15+00:00"
         },
         {
             "name": "drupal/styled_google_map",
@@ -6676,7 +6501,7 @@
             ],
             "description": "GeoPHP is a open-source native PHP library for doing geometry operations. It is written entirely in PHP and can therefore run on shared hosts. It can read and write a wide variety of formats: WKT (including EWKT), WKB (including EWKB), GeoJSON, KML, GPX, GeoRSS). It works with all Simple-Feature geometries (Point, LineString, Polygon, GeometryCollection etc.) and can be used to get centroids, bounding-boxes, area, and a wide variety of other useful information.",
             "homepage": "https://github.com/phayes/geoPHP",
-            "time": "2016-03-04 05:42:29"
+            "time": "2016-03-04T05:42:29+00:00"
         },
         {
             "name": "psr/http-message",
@@ -9546,6 +9371,195 @@
             }
         },
         {
+            "name": "drupal/eu_cookie_compliance",
+            "version": "1.0.0-beta7",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/eu-cookie-compliance",
+                "reference": "8.x-1.0-beta7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/eu_cookie_compliance-8.x-1.0-beta7.zip",
+                "reference": "8.x-1.0-beta7",
+                "shasum": "c8859fbeb5f6b1122c0eb6c5df1c4cd4b2961421"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-beta7",
+                    "datestamp": "1471263146"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Marcin Pajdzik",
+                    "homepage": "https://www.drupal.org/user/160555"
+                },
+                {
+                    "name": "achton",
+                    "homepage": "https://www.drupal.org/user/712454"
+                },
+                {
+                    "name": "blairski",
+                    "homepage": "https://www.drupal.org/user/120835"
+                },
+                {
+                    "name": "dakku",
+                    "homepage": "https://www.drupal.org/user/97634"
+                },
+                {
+                    "name": "grzegorz.bartman",
+                    "homepage": "https://www.drupal.org/user/363120"
+                },
+                {
+                    "name": "id.tornado",
+                    "homepage": "https://www.drupal.org/user/2754049"
+                },
+                {
+                    "name": "killua99",
+                    "homepage": "https://www.drupal.org/user/699418"
+                },
+                {
+                    "name": "mibfire",
+                    "homepage": "https://www.drupal.org/user/155136"
+                },
+                {
+                    "name": "naveenvalecha",
+                    "homepage": "https://www.drupal.org/user/2665733"
+                },
+                {
+                    "name": "svenryen",
+                    "homepage": "https://www.drupal.org/user/667244"
+                }
+            ],
+            "description": "This module aims at making the website compliant with the new EU cookie regulation",
+            "homepage": "https://www.drupal.org/project/eu_cookie_compliance",
+            "support": {
+                "source": "http://cgit.drupalcode.org/eu_cookie_compliance"
+            }
+        },
+        {
+            "name": "drupal/linkit",
+            "version": "4.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/linkit",
+                "reference": "8.x-4.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/linkit-8.x-4.3.zip",
+                "reference": "8.x-4.3",
+                "shasum": "e624ea2f18a6100b76a8337e24f7c08df6e2235e"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-4.x": "4.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-4.3",
+                    "datestamp": "1490205830"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Emil Stjerneman",
+                    "homepage": "https://stjerneman.com",
+                    "email": "emil@stjerneman.com",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Linkit - Enriched linking experience",
+            "homepage": "http://drupal.org/project/linkit",
+            "support": {
+                "source": "http://cgit.drupalcode.org/linkit",
+                "issues": "http://drupal.org/project/linkit"
+            }
+        },
+        {
+            "name": "drupal/password_policy",
+            "version": "3.0.0-alpha3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/password_policy",
+                "reference": "8.x-3.0-alpha3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/password_policy-8.x-3.0-alpha3.zip",
+                "reference": "8.x-3.0-alpha3",
+                "shasum": "efe3ac404276ab2274b29393e55f6a4b7fb58681"
+            },
+            "require": {
+                "drupal/core": "*",
+                "drupal/ctools": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-3.x": "3.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-3.0-alpha3",
+                    "datestamp": "1488135183",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "AohRveTPV",
+                    "homepage": "https://www.drupal.org/user/2760115"
+                },
+                {
+                    "name": "deekayen",
+                    "homepage": "https://www.drupal.org/user/972"
+                },
+                {
+                    "name": "miglius",
+                    "homepage": "https://www.drupal.org/user/18741"
+                },
+                {
+                    "name": "nerdstein",
+                    "homepage": "https://www.drupal.org/user/1557710"
+                },
+                {
+                    "name": "shrop",
+                    "homepage": "https://www.drupal.org/user/14767"
+                }
+            ],
+            "description": "Sets up constraints and expiration of passwords.",
+            "homepage": "https://www.drupal.org/project/password_policy",
+            "support": {
+                "source": "http://cgit.drupalcode.org/password_policy"
+            }
+        },
+        {
             "name": "drupal/twig_xdebug",
             "version": "1.0.0",
             "source": {
@@ -10065,7 +10079,7 @@
             ],
             "description": "An abstraction library for Elasticsearch Connector module for Drupal.",
             "homepage": "https://github.com/nodespark/des-connector",
-            "time": "2017-05-23 10:55:47"
+            "time": "2017-05-23T10:55:47+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -11755,7 +11769,9 @@
         "drupal/ultimate_cron": 15,
         "drupal/viewsreference": 15,
         "drupal/webform": 10,
-        "drupal/eu_cookie_compliance": 10,
+        "degov/nrw_modules": 20,
+        "degov/nrw_theme": 20,
+        "degov/nrw_features": 20,
         "drupal/field_group": 20,
         "drupal/paragraphs_edit": 20,
         "drupal/calendar": 20,
