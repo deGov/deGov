@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [1.4.0] - IN DEVELOPMENT
 ### Added
 - Added menu block for levels 4 and deeper to the second sidebar region.
+- Added press-slider view mode to latest press view and updated styling accordingly.
+
+### Changed
 
 ### Fixed
 - Breadcrumbs are now linking to their corresponding page.
