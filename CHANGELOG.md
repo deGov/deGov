@@ -25,6 +25,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Workbench access default settings for simplenews and press content types.
 - Padding fixed for CKEDITOR embedded images.
 - Placeholder languages in the language switcher replaced by available site languages.
+- Breadcrumbs are now linking to their corresponding page.
 
 ## [1.2.2] - 2017-08-24
 ### Fixes
