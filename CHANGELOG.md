@@ -6,7 +6,26 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [1.3.0] - IN DEVELOPMENT
+## [1.4.0] - IN DEVELOPMENT
+### Added
+- Added menu block for levels 4 and deeper to the second sidebar region.
+- Added press-slider view mode to latest press view and updated styling accordingly.
+- Added degov_media_social_media_embed module.
+- Added degov_social_media_settings module.
+- Changed templates of media bundle video to support degov_social_media_settings.
+- Changed page and header intro theme templates to support degov_social_media_settings.
+- Referenced views now include a class of the rendered view mode selected.
+
+### Changed
+- Block reference paragraph block field was changed to a block field type from the
+  block_field module that has a widget configured as a block instance.
+
+### Fixed
+- Breadcrumbs are now linking to their corresponding page.
+- Gallery pages now have a correct working slider.
+- Changed label in media contact form.
+
+## [1.3.0] - 2017-08-25
 ### Added
 - Fake 2-click sharing with shariff
 - Added role 'usermanager'.
@@ -19,9 +38,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - updated permissions for roles editor and manager.
 - Image cropping is now required. See patch #17 https://www.drupal.org/node/2871137.
 - Change the media reference paragraph widget to correctly render by view mode.
-- updated config and styling for sitemap
-- improved display and styling of latest press releases
-- Changed label in media contact form.
 
 ### Fixed
 - Patched the config rewrite module to allow optional config rewrites.
