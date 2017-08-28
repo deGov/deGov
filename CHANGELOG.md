@@ -6,13 +6,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [1.3.0] - IN DEVELOPMENT
+## [1.4.0] - IN DEVELOPMENT
+### Added
+- Added menu block for levels 4 and deeper
+
+## [1.3.0] - 2017-08-25
 ### Added
 - Fake 2-click sharing with shariff
 - Added role 'usermanager'.
 - Added print.css for print version
 - Added view mode 'author' to 'media person', created 'media person author' template and 'view blog author' scss.
-- Added menu block for level 4 and deeper 
 
 ### Changed
 - Changed view blog author title to 'autor' and selected view mode 'author'.
@@ -20,8 +23,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - updated permissions for roles editor and manager.
 - Image cropping is now required. See patch #17 https://www.drupal.org/node/2871137.
 - Change the media reference paragraph widget to correctly render by view mode.
-- updated config and styling for sitemap
-- improved display and styling of latest press releases
 
 ### Fixed
 - Patched the config rewrite module to allow optional config rewrites.
