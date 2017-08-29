@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Changed templates of media bundle video to support degov_social_media_settings.
 - Changed page and header intro theme templates to support degov_social_media_settings.
 - Referenced views now include a class of the rendered view mode selected.
+- Added new map style IT NRW map.
 
 ### Changed
 - Block reference paragraph block field was changed to a block field type from the
@@ -25,6 +26,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - improved display and styling of latest press releases
 - Update basic media search to use preview view mode
 - Restrict the paragraph map to only include view modes that render out a map.
+- Leaflet library is loaded with composer.
 
 ### Fixed
 - Breadcrumbs are now linking to their corresponding page.
