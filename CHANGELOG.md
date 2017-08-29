@@ -12,11 +12,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added press-slider view mode to latest press view and updated styling accordingly.
 - Added styling for Audio media type and changed the according templates
 - Added link to fontawesome beneath class input in menu items
+- Added degov_media_social_media_embed module.
+- Added degov_social_media_settings module.
+- Changed templates of media bundle video to support degov_social_media_settings.
+- Changed page and header intro theme templates to support degov_social_media_settings.
+- Referenced views now include a class of the rendered view mode selected.
 
 ### Changed
+- Block reference paragraph block field was changed to a block field type from the
+  block_field module that has a widget configured as a block instance.
 
 ### Fixed
 - Breadcrumbs are now linking to their corresponding page.
+- Gallery pages now have a correct working slider.
 
 ## [1.3.0] - 2017-08-25
 ### Added
