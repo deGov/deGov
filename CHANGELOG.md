@@ -26,6 +26,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Update basic media search to use preview view mode.
 - External links open in a new tab and have an extra class in the links paragraph.
 - Restrict the paragraph map to only include view modes that render out a map.
+- Improved UX of the menu by leaving the menu open on hover and closing by outside click.
 
 ### Fixed
 - Breadcrumbs are now linking to their corresponding page.
