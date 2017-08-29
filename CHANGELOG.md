@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Added menu block for levels 4 and deeper to the second sidebar region.
 - Added press-slider view mode to latest press view and updated styling accordingly.
+- Added styling for Audio media type and changed the according templates
+- Added link to fontawesome beneath class input in menu items
 
 ### Changed
 
