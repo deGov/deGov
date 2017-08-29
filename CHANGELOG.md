@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Block reference paragraph block field was changed to a block field type from the
   block_field module that has a widget configured as a block instance.
+- Created a unified settings menu in the degov_common module under the path /admin/config/degov.
 
 ### Fixed
 - Breadcrumbs are now linking to their corresponding page.
