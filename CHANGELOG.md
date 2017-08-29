@@ -24,6 +24,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Created a unified settings menu in the degov_common module under the path /admin/config/degov.
 - improved display and styling of latest press releases
 - Update basic media search to use preview view mode
+- Restrict the paragraph map to only include view modes that render out a map.
 
 ### Fixed
 - Breadcrumbs are now linking to their corresponding page.
