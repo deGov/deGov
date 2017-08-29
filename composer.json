@@ -40,9 +40,9 @@
         "drupal/viewsreference": "^1.0@alpha",
         "drupal/webform": "^5.0@beta",
         "drupal/entity_reference_display": "^1.0",
-        "degov/nrw_modules": "dev-release-1.4",
-        "degov/nrw_theme": "dev-release-1.4",
-        "degov/nrw_features": "dev-release-1.4"
+        "degov/nrw_features": "dev-release-1.4#8793c72fad6f62a96be642ba5bf9399dc7191cd5",
+        "degov/nrw_theme": "dev-release-1.4#52ca8da385305b9fdef5a03b886712962e58c99b",
+        "degov/nrw_modules": "dev-release-1.4#d3d471020560837a71cecb666c71c64f20e77b4c"
     },
     "repositories": {
         "drupal": {
