@@ -17,11 +17,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Changed templates of media bundle video to support degov_social_media_settings.
 - Changed page and header intro theme templates to support degov_social_media_settings.
 - Referenced views now include a class of the rendered view mode selected.
+- View mode preview for the some_embed media bundle
 
 ### Changed
 - Block reference paragraph block field was changed to a block field type from the
   block_field module that has a widget configured as a block instance.
 - Created a unified settings menu in the degov_common module under the path /admin/config/degov.
+- Added support for social media settings in media video bundle preview view mode
 
 ### Fixed
 - Breadcrumbs are now linking to their corresponding page.
