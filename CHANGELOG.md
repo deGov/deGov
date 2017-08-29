@@ -30,6 +30,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Gallery pages now have a correct working slider.
 - Validation for taxonomy term search formatter route name.
 - Corrected the label in media contact form.
+- Corrected views row class on all content views.
 
 ## [1.3.0] - 2017-08-25
 ### Added
