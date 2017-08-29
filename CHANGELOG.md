@@ -22,8 +22,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Block reference paragraph block field was changed to a block field type from the
   block_field module that has a widget configured as a block instance.
 - Created a unified settings menu in the degov_common module under the path /admin/config/degov.
-- improved display and styling of latest press releases
-- Update basic media search to use preview view mode
+- improved display and styling of latest press releases.
+- Update basic media search to use preview view mode.
+- External links open in a new tab and have an extra class in the links paragraph.
 - Restrict the paragraph map to only include view modes that render out a map.
 
 ### Fixed
