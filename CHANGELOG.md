@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Changed templates of media bundle video to support degov_social_media_settings.
 - Changed page and header intro theme templates to support degov_social_media_settings.
 - Referenced views now include a class of the rendered view mode selected.
+- Added degov_scheduled_updates module.
 
 ### Changed
 - Block reference paragraph block field was changed to a block field type from the
@@ -24,6 +25,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Created a unified settings menu in the degov_common module under the path /admin/config/degov.
 - improved display and styling of latest press releases
 - Update basic media search to use preview view mode
+- Scheduled updates drush command now is in degov_scheduled_updates module.
+- Scheduled updates are now handled with the field per content type and can target
+  latest revision.
 
 ### Fixed
 - Breadcrumbs are now linking to their corresponding page.
