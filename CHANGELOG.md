@@ -22,6 +22,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Block reference paragraph block field was changed to a block field type from the
   block_field module that has a widget configured as a block instance.
 - Created a unified settings menu in the degov_common module under the path /admin/config/degov.
+- improved display and styling of latest press releases
+- Update basic media search to use preview view mode
 
 ### Fixed
 - Breadcrumbs are now linking to their corresponding page.
@@ -35,6 +37,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added role 'usermanager'.
 - Added print.css for print version
 - Added view mode 'author' to 'media person', created 'media person author' template and 'view blog author' scss.
+- Added view mode 'preview' to all media bundles
+- Styled view mode preview for media bundles 'audio', 'video', 'image', 'gallery' and 'video_upload'
 
 ### Changed
 - Changed view blog author title to 'autor' and selected view mode 'author'.
