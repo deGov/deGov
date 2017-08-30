@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added degov_scheduled_updates module to support scheduled content publishing.
 - New view mode preview added for the some_embed media bundle.
 - Added field_section to index and facet to search page.
+- Added deGov multilingual module to handle multilingual frontpages and according templates
 
 ### Changed
 - Block reference paragraph block field was changed to a block field type from the
