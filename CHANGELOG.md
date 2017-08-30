@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - New view mode preview added for the some_embed media bundle.
 - Added field_section to index and facet to search page.
 - Added deGov multilingual module to handle multilingual frontpages and according templates
+- Added hoverIntent library to menu as additional UX improvement. 
 
 ### Changed
 - Block reference paragraph block field was changed to a block field type from the
