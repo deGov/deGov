@@ -37,6 +37,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Scheduled updates are now handled with the field per content type and can target latest revision.
 - Added support for social media settings in media video bundle preview view mode
 - Content type field is not processed with tokenizers and transliteration on search index.
+- Allowed script tag for some_embed bundles.
 
 ### Fixed
 - Breadcrumbs are now linking to their corresponding page.
