@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Changed page and header intro theme templates to support degov_social_media_settings.
 - Referenced views now include a class of the rendered view mode selected.
 - Added a new map style IT NRW map to the map paragraph.
+- New feature 'deGov - Restrict IP' added.
 
 ### Changed
 - Block reference paragraph block field was changed to a block field type from the
