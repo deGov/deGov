@@ -91,6 +91,7 @@ function nrwgov_module_setup(&$install_state) {
     'degov_taxonomy_term_copyright' => 'degov_taxonomy_term_copyright',
     'degov_taxonomy_term_section' => 'degov_taxonomy_term_section',
     'degov_taxonomy_term_tags' => 'degov_taxonomy_term_tags',
+    'degov_scheduled_updates' => 'degov_scheduled_updates',
     'degov_simplenews' => 'degov_simplenews',
     'degov_tweets' => 'degov_tweets',
     'degov_users_roles' => 'degov_users_roles',
