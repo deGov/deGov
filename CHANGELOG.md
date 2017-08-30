@@ -32,6 +32,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Leaflet library is now added to composer as a dependency on the media address module.
 - Latest press view now contains a slider block and the default content block.
 - Added support for social media settings in media video bundle preview view mode
+- Allowed script tag for some_embed bundles.
 
 ### Fixed
 - Breadcrumbs are now linking to their corresponding page.
