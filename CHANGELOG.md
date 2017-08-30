@@ -39,6 +39,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added support for social media settings in media video bundle preview view mode
 - Content type field is not processed with tokenizers and transliteration on search index.
 - Allowed script tag for some_embed bundles.
+- Changed 'ALT' field to mandatory for image media bundle.
 
 ### Fixed
 - Breadcrumbs are now linking to their corresponding page.
