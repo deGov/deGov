@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Referenced views now include a class of the rendered view mode selected.
 - Added a new map style IT NRW map to the map paragraph.
 - View mode preview for the some_embed media bundle
+- Added hoverIntent library to menu. 
 
 ### Changed
 - Block reference paragraph block field was changed to a block field type from the
