@@ -6,12 +6,55 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [1.3.0] - IN DEVELOPMENT
+## [1.4.0] - IN DEVELOPMENT
+### Added
+- Added menu block for levels 4 and deeper to the second sidebar region.
+- Added press-slider view mode to latest press view and updated styling accordingly.
+- Added styling for Audio media type and changed the according templates
+- Added link to fontawesome beneath class input in menu items
+- Added degov_media_social_media_embed module.
+- Added degov_social_media_settings module.
+- Changed templates of media bundle video to support degov_social_media_settings.
+- Changed page and header intro theme templates to support degov_social_media_settings.
+- Referenced views now include a class of the rendered view mode selected.
+- Added a new map style IT NRW map to the map paragraph.
+- Added degov_scheduled_updates module to support scheduled content publishing.
+- New view mode preview added for the some_embed media bundle.
+- Added field_section to index and facet to search page.
+
+### Changed
+- Block reference paragraph block field was changed to a block field type from the
+  block_field module that has a widget configured as a block instance.
+- Created a unified settings menu in the degov_common module under the path /admin/config/degov.
+- Improved display and styling of latest press releases.
+- Update basic media search to use preview view mode.
+- External links open in a new tab and have an extra class in the links paragraph.
+- Restrict the paragraph map to only include view modes that render out a map.
+- Improved UX of the menu by leaving the menu open on hover and closing by outside click.
+- Leaflet library is now added to composer as a dependency on the media address module.
+- Latest press view now contains a slider block and the default content block.
+- Scheduled updates drush command is now moved to the degov_scheduled_updates module.
+- Scheduled updates are now handled with the field per content type and can target latest revision.
+- Added support for social media settings in media video bundle preview view mode
+- Content type field is not processed with tokenizers and transliteration on search index.
+- Changed 'ALT' field to mandatory for image media bundle.
+
+### Fixed
+- Breadcrumbs are now linking to their corresponding page.
+- Gallery pages now have a correct working slider.
+- Validation for taxonomy term search formatter route name.
+- Corrected the label in media contact form.
+- Corrected views row class on all content views.
+- Navigation pagers styling are corrected.
+
+## [1.3.0] - 2017-08-25
 ### Added
 - Fake 2-click sharing with shariff
 - Added role 'usermanager'.
 - Added print.css for print version
 - Added view mode 'author' to 'media person', created 'media person author' template and 'view blog author' scss.
+- Added view mode 'preview' to all media bundles
+- Styled view mode preview for media bundles 'audio', 'video', 'image', 'gallery' and 'video_upload'
 
 ### Changed
 - Changed view blog author title to 'autor' and selected view mode 'author'.
@@ -19,9 +62,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - updated permissions for roles editor and manager.
 - Image cropping is now required. See patch #17 https://www.drupal.org/node/2871137.
 - Change the media reference paragraph widget to correctly render by view mode.
-- updated config and styling for sitemap
-- improved display and styling of latest press releases
-- Changed 'ALT' field to mandatory for image media bundle.
 
 ### Fixed
 - Patched the config rewrite module to allow optional config rewrites.
