@@ -17,14 +17,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Changed templates of media bundle video to support degov_social_media_settings.
 - Changed page and header intro theme templates to support degov_social_media_settings.
 - Referenced views now include a class of the rendered view mode selected.
+- Added a new map style IT NRW map to the map paragraph.
 - View mode preview for the some_embed media bundle
 
 ### Changed
 - Block reference paragraph block field was changed to a block field type from the
   block_field module that has a widget configured as a block instance.
 - Created a unified settings menu in the degov_common module under the path /admin/config/degov.
-- improved display and styling of latest press releases
-- Update basic media search to use preview view mode
+- Improved display and styling of latest press releases.
+- Update basic media search to use preview view mode.
+- External links open in a new tab and have an extra class in the links paragraph.
+- Restrict the paragraph map to only include view modes that render out a map.
+- Improved UX of the menu by leaving the menu open on hover and closing by outside click.
+- Leaflet library is now added to composer as a dependency on the media address module.
 - Added support for social media settings in media video bundle preview view mode
 
 ### Fixed
@@ -32,6 +37,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Gallery pages now have a correct working slider.
 - Validation for taxonomy term search formatter route name.
 - Corrected the label in media contact form.
+- Corrected views row class on all content views.
 
 ## [1.3.0] - 2017-08-25
 ### Added
