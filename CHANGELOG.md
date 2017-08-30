@@ -19,6 +19,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Referenced views now include a class of the rendered view mode selected.
 - Added a new map style IT NRW map to the map paragraph.
 - Added degov_scheduled_updates module to support scheduled content publishing.
+- New view mode preview added for the some_embed media bundle.
+- Added field_section to index and facet to search page.
 
 ### Changed
 - Block reference paragraph block field was changed to a block field type from the
@@ -33,6 +35,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Latest press view now contains a slider block and the default content block.
 - Scheduled updates drush command is now moved to the degov_scheduled_updates module.
 - Scheduled updates are now handled with the field per content type and can target latest revision.
+- Added support for social media settings in media video bundle preview view mode
+- Content type field is not processed with tokenizers and transliteration on search index.
 
 ### Fixed
 - Breadcrumbs are now linking to their corresponding page.
