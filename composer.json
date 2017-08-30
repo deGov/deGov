@@ -41,8 +41,8 @@
         "drupal/webform": "^5.0@beta",
         "drupal/entity_reference_display": "^1.0",
         "degov/nrw_features": "dev-release-1.4#8793c72fad6f62a96be642ba5bf9399dc7191cd5",
-        "degov/nrw_theme": "dev-release-1.4#52ca8da385305b9fdef5a03b886712962e58c99b",
-        "degov/nrw_modules": "dev-release-1.4#d3d471020560837a71cecb666c71c64f20e77b4c"
+        "degov/nrw_theme": "dev-release-1.4#424b60f95831b2e1a8cdf6d3367d68c7be3f047b",
+        "degov/nrw_modules": "dev-release-1.4#4e728e61f16205e22eaee60e37188e0d95da406b"
     },
     "repositories": {
         "drupal": {
@@ -64,8 +64,7 @@
     },
     "scripts": {
       "post-install-cmd": [
-        "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-        "git --work-tree=$(pwd)/docroot/modules/nrw/modules/ --git-dir=$(pwd)/docroot/modules/nrw/modules/.git pull origin release-1.4;git --work-tree=$(pwd)/docroot/modules/nrw/features/ --git-dir=$(pwd)/docroot/modules/nrw/features/.git pull origin release-1.4;git --work-tree=$(pwd)/docroot/themes/nrw/nrw_base_theme/ --git-dir=$(pwd)/docroot/themes/nrw/nrw_base_theme/.git pull origin release-1.4;"
+        "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
       ],
       "post-update-cmd": [
         "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
