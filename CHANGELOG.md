@@ -45,6 +45,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Corrected the label in media contact form.
 - Corrected views row class on all content views.
 - Navigation pagers styling are corrected.
+- Main menu styling and hovering effects fixed.
 
 ## [1.3.0] - 2017-08-25
 ### Added
