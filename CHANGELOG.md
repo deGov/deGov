@@ -46,6 +46,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Corrected views row class on all content views.
 - Navigation pagers styling are corrected.
 - Main menu styling and hovering effects fixed.
+- Submenu styling in the sidebar.
 
 ## [1.3.0] - 2017-08-25
 ### Added
