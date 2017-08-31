@@ -69,6 +69,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Styling for image caption and copyright in media image for entity and header slider.
 - Columns in the main menu have been added.
 - Margins and wrapper corrections for media gallery.
+- Default icon added for unknown primary action buttons.
 
 ## [1.3.0] - 2017-08-25
 ### Added
