@@ -57,6 +57,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Moved config for usage view modes of existing media bundles to the correct config/install folder.
 - Accessibility improvements for tabs on webforms.
 - Calendar popup fields have similar styling.
+- Patch scheduled updates contrib module so no mandatory date is required.
 
 ## [1.3.0] - 2017-08-25
 ### Added
