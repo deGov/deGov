@@ -51,6 +51,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Changed 'media--image--default' and 'media--image--usage' templates.
 - Color variables correction.
 - Removed thumbnail navigation from media gallery templates.
+- Audio file fields in the audio media type are now optional.
 
 ### Fixed
 - Breadcrumbs are now linking to their corresponding page.
