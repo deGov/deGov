@@ -63,6 +63,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Calendar popup fields have similar styling.
 - Patch scheduled updates contrib module so no mandatory date is required.
 - Styling for image caption and copyright in media image for entity and header slider.
+- Columns in the main menu have been added.
 
 ## [1.3.0] - 2017-08-25
 ### Added
