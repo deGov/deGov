@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4cccc751fff6b00915060ff78a3f1e1f",
+    "content-hash": "c9174f0ac6351ea0e95ce52440811120",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -1861,7 +1861,7 @@
                         "2652542 - Add .install file abilities for Themes": "https://www.drupal.org/files/issues/2652542-add-theme-ability-install-file-and-hook-29-D8.3.patch"
                     },
                     "drupal/paragraphs": {
-                        "2788607 - Empty required fields not providing meaningful error messages": "https://www.drupal.org/files/issues/empty_required_fields-2788607-81.patch"
+                        "2788607 - Empty required fields not providing meaningful error messages": "patches/paragraphs-2788607-for-1.1.patch"
                     },
                     "drupal/config_rewrite": {
                         "2903629 - Allow optional config rewrite": "https://www.drupal.org/files/issues/empty_config.patch"
@@ -4358,67 +4358,19 @@
             },
             "type": "drupal-module",
             "extra": {
-                "patches": {
-                    "drupal/image_widget_crop": {
-                        "2871137 - Required croppings": "https://www.drupal.org/files/issues/required_croppings-2871137-17.patch"
-                    },
-                    "drupal/scheduled_updates": {
-                        "2858397 - Leave blank to use the time of form submission.": "https://www.drupal.org/files/issues/2636282-remove-set-required-bool.patch"
-                    },
-                    "drupal/calendar": {
-                        "2845257 - Undefined index: id in calendar_views_data_alter": "https://www.drupal.org/files/issues/undefined_index-2845257-10.patch"
-                    },
-                    "drupal/core": {
-                        "2893029 - StringTranslationTrait consumers cannot be reliably serialized without DependencySerializationTrait": "https://www.drupal.org/files/issues/2893029-full-fix-test-from-3.patch",
-                        "2652542 - Add .install file abilities for Themes": "https://www.drupal.org/files/issues/2652542-add-theme-ability-install-file-and-hook-29-D8.3.patch"
-                    },
-                    "drupal/paragraphs": {
-                        "2788607 - Empty required fields not providing meaningful error messages": "https://www.drupal.org/files/issues/empty_required_fields-2788607-81.patch"
-                    },
-                    "drupal/config_rewrite": {
-                        "2903629 - Allow optional config rewrite": "https://www.drupal.org/files/issues/empty_config.patch"
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1487331784",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 },
-                "installer-paths": {
-                    "docroot/core": [
-                        "type:drupal-core"
-                    ],
-                    "docroot/modules/contrib/{$name}": [
-                        "type:drupal-module"
-                    ],
-                    "docroot/profiles/contrib/{$name}": [
-                        "type:drupal-profile"
-                    ],
-                    "docroot/themes/contrib/{$name}": [
-                        "type:drupal-theme"
-                    ],
-                    "drush/contrib/{$name}": [
-                        "type:drupal-drush"
-                    ],
-                    "docroot/libraries/{$name}": [
-                        "type:drupal-library"
-                    ],
-                    "docroot/modules/nrw/modules": [
-                        "degov/nrw_modules"
-                    ],
-                    "docroot/modules/nrw/features": [
-                        "degov/nrw_features"
-                    ],
-                    "docroot/themes/nrw/nrw_base_theme": [
-                        "degov/nrw_theme"
-                    ]
-                },
-                "enable-patching": true,
-                "merge-plugin": {
-                    "merge-extra": true,
-                    "merge-extra-deep": true,
-                    "include": [
-                        "docroot/modules/nrw/*/*/composer.json",
-                        "docroot/modules/nrwgov/*/*/composer.json",
-                        "docroot/modules/custom/*/composer.json",
-                        "docroot/themes/nrw/*/composer.json",
-                        "docroot/themes/nrwgov/*/composer.json"
-                    ]
+                "patches_applied": {
+                    "2788607 - Empty required fields not providing meaningful error messages": "patches/paragraphs-2788607-for-1.1.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
