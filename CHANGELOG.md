@@ -24,6 +24,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added deGov multilingual module to handle multilingual frontpages and according templates
 - Added hoverIntent library to menu as additional UX improvement. 
 - Added new slideshow view mode for Node entity type to display content inside slideshow paragraph.
+- Title attributes on action elements added to improve UX.
 
 ### Changed
 - Block reference paragraph block field was changed to a block field type from the
