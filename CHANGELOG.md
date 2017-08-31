@@ -23,6 +23,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added field_section to index and facet to search page.
 - Added deGov multilingual module to handle multilingual frontpages and according templates
 - Added hoverIntent library to menu as additional UX improvement. 
+- Added if loop in templates for media gallery info.
 
 ### Changed
 - Block reference paragraph block field was changed to a block field type from the
@@ -41,6 +42,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Content type field is not processed with tokenizers and transliteration on search index.
 - Allowed script tag for some_embed bundles.
 - Changed 'ALT' field to mandatory for image media bundle.
+- Removed thumbnail navigation from media gallery templates.
 
 ### Fixed
 - Breadcrumbs are now linking to their corresponding page.
@@ -53,6 +55,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Submenu styling in the sidebar.
 - Moved config for usage view modes of existing media bundles to the correct config/install folder.
 - Accessibility improvements for tabs on webforms.
+- Margins for media gallery.
 
 ## [1.3.0] - 2017-08-25
 ### Added
