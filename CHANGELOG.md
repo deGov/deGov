@@ -23,6 +23,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added field_section to index and facet to search page.
 - Added deGov multilingual module to handle multilingual frontpages and according templates
 - Added hoverIntent library to menu as additional UX improvement. 
+- Added new slideshow view mode for Node entity type to display content inside slideshow paragraph.
 - Added if loop in templates for media gallery info.
 
 ### Changed
@@ -42,6 +43,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Content type field is not processed with tokenizers and transliteration on search index.
 - Allowed script tag for some_embed bundles.
 - Changed 'ALT' field to mandatory for image media bundle.
+- Slideshow paragraph now allows node reference and view reference paragraphs.
 - Removed thumbnail navigation from media gallery templates.
 
 ### Fixed
