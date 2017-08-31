@@ -25,6 +25,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added hoverIntent library to menu as additional UX improvement. 
 - Added new slideshow view mode for Node entity type to display content inside slideshow paragraph.
 - Title attributes on action elements added to improve UX.
+- Added VSM Search integration to regular search page.
 
 ### Changed
 - Block reference paragraph block field was changed to a block field type from the
