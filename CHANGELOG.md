@@ -29,6 +29,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - New template full has been added for the deGov image module.
 - New color variable brand-secondary added.
 - Added VSM Search integration to regular search page.
+- RSS feeds for content types and tags.
 
 ### Changed
 - Block reference paragraph block field was changed to a block field type from the
