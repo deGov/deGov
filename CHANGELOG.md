@@ -52,6 +52,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Main menu styling and hovering effects fixed.
 - Submenu styling in the sidebar.
 - Moved config for usage view modes of existing media bundles to the correct config/install folder.
+- Accessibility improvements for tabs on webforms.
 
 ## [1.3.0] - 2017-08-25
 ### Added
