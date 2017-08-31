@@ -49,6 +49,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Slideshow paragraph now allows node reference and view reference paragraphs.
 - Changed 'media--image--default' and 'media--image--usage' templates.
 - Color variables correction.
+- Removed thumbnail navigation from media gallery templates.
 
 ### Fixed
 - Breadcrumbs are now linking to their corresponding page.
@@ -65,6 +66,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Patch scheduled updates contrib module so no mandatory date is required.
 - Styling for image caption and copyright in media image for entity and header slider.
 - Columns in the main menu have been added.
+- Margins and wrapper corrections for media gallery.
 
 ## [1.3.0] - 2017-08-25
 ### Added
