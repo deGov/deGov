@@ -30,6 +30,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - New color variable brand-secondary added.
 - Added VSM Search integration to regular search page.
 - Added permission to update any media for role editor
+- Added view mode preview for media types, media views and styling
 
 ### Changed
 - Block reference paragraph block field was changed to a block field type from the
