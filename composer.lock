@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7703103e3923c0d81aa6a147f17fa03b",
+    "content-hash": "09a7608503e78ff7bbaf6610682230a6",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -468,7 +468,7 @@
         },
         {
             "name": "degov/nrw_features",
-            "version": "dev-release-1.4",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:publicplan/degov_nrw_features.git",
@@ -476,23 +476,23 @@
             },
             "type": "library",
             "description": "deGov - NRW Features",
-            "time": "2017-08-31 19:41:45"
+            "time": "2017-08-31T19:41:45+00:00"
         },
         {
             "name": "degov/nrw_modules",
-            "version": "dev-release-1.4",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:publicplan/degov_nrw_modules.git",
-                "reference": "31b66dc0f09bca1dfc9a33747e5a53dd0c394156"
+                "reference": "f7eeaf33f6ace348a71a7f1b6184b81950046d2d"
             },
             "type": "library",
             "description": "deGov - NRW Modules",
-            "time": "2017-09-01 00:38:51"
+            "time": "2017-09-01T12:45:03+00:00"
         },
         {
             "name": "degov/nrw_theme",
-            "version": "dev-release-1.4",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:publicplan/degov_nrw_theme.git",
@@ -503,7 +503,7 @@
             },
             "type": "library",
             "description": "deGov - NRW Theme",
-            "time": "2017-09-01 00:32:42"
+            "time": "2017-09-01T00:32:42+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -3628,7 +3628,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/spamspan"
             },
-            "time": "2017-05-27 08:00:15"
+            "time": "2017-05-27T08:00:15+00:00"
         },
         {
             "name": "drupal/token",
@@ -8097,7 +8097,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/entity_reference_integrity-8.x-1.0-rc3.zip",
-                "reference": "8.x-1.0-rc3",
+                "reference": null,
                 "shasum": "9a711d4a63b0a1f81e87d204b2935793d0dd31fd"
             },
             "require": {
@@ -8110,11 +8110,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.0-rc3",
-                    "datestamp": "1490776083",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "RC releases are not covered by Drupal security advisories."
-                    }
+                    "datestamp": "1490776083"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -8320,7 +8316,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/field_group"
             },
-            "time": "2017-07-13 22:41:32"
+            "time": "2017-07-13T22:41:32+00:00"
         },
         {
             "name": "drupal/geocoder",
@@ -8820,7 +8816,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/paragraphs_edit"
             },
-            "time": "2017-05-23 02:16:39"
+            "time": "2017-05-23T02:16:39+00:00"
         },
         {
             "name": "drupal/password_policy",
@@ -9210,7 +9206,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/simplify_menu"
             },
-            "time": "2017-06-16 01:01:50"
+            "time": "2017-06-16T01:01:50+00:00"
         },
         {
             "name": "drupal/styled_google_map",
@@ -9693,7 +9689,7 @@
             "version": "4.2.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/enyo/dropzone.git",
+                "url": "https://github.com/enyo/dropzone",
                 "reference": "origin/master"
             },
             "type": "drupal-library"
@@ -10232,7 +10228,7 @@
             ],
             "description": "An abstraction library for Elasticsearch Connector module for Drupal.",
             "homepage": "https://github.com/nodespark/des-connector",
-            "time": "2017-05-23 10:55:47"
+            "time": "2017-05-23T10:55:47+00:00"
         },
         {
             "name": "phayes/geophp",
@@ -10268,7 +10264,7 @@
             ],
             "description": "GeoPHP is a open-source native PHP library for doing geometry operations. It is written entirely in PHP and can therefore run on shared hosts. It can read and write a wide variety of formats: WKT (including EWKT), WKB (including EWKB), GeoJSON, KML, GPX, GeoRSS). It works with all Simple-Feature geometries (Point, LineString, Polygon, GeometryCollection etc.) and can be used to get centroids, bounding-boxes, area, and a wide variety of other useful information.",
             "homepage": "https://github.com/phayes/geoPHP",
-            "time": "2016-03-04 05:42:29"
+            "time": "2016-03-04T05:42:29+00:00"
         },
         {
             "name": "php-coord/php-coord",
@@ -12138,10 +12134,7 @@
         "drupal/spamspan": 20,
         "drupal/ultimate_cron": 15,
         "drupal/viewsreference": 15,
-        "drupal/webform": 10,
-        "degov/nrw_modules": 20,
-        "degov/nrw_theme": 20,
-        "degov/nrw_features": 20
+        "drupal/webform": 10
     },
     "prefer-stable": true,
     "prefer-lowest": false,
