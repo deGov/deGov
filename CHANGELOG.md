@@ -6,7 +6,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [1.4.0] - IN DEVELOPMENT
+## [1.5.0] - IN DEVELOPMENT
+### Added
+
+### Changed
+
+### Fixed
+
+
+
+## [1.4.0] - 2017-09-01
 ### Added
 - Added menu block for levels 4 and deeper to the second sidebar region.
 - Added press-slider view mode to latest press view and updated styling accordingly.
