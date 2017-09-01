@@ -40,9 +40,10 @@
         "drupal/viewsreference": "^1.0@alpha",
         "drupal/webform": "^5.0@beta",
         "drupal/entity_reference_display": "^1.0",
-        "degov/nrw_features": "dev-release-1.4#8793c72fad6f62a96be642ba5bf9399dc7191cd5",
-        "degov/nrw_theme": "dev-release-1.4#424b60f95831b2e1a8cdf6d3367d68c7be3f047b",
-        "degov/nrw_modules": "dev-release-1.4#4e728e61f16205e22eaee60e37188e0d95da406b"
+        "degov/nrw_modules": "dev-release-1.4#31b66dc0f09bca1dfc9a33747e5a53dd0c394156",
+        "degov/nrw_theme": "dev-release-1.4#389a3303305579dcd42697cdff1eaa8b70acfbaa",
+        "degov/nrw_features": "dev-release-1.4#db4cc1cdad370ee38a0ee96913dad7bcfca24722",
+        "drupal/search_api_solr": "^1.0"
     },
     "repositories": {
         "drupal": {
