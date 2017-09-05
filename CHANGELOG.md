@@ -6,7 +6,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [1.4.0] - IN DEVELOPMENT
+## [1.5.0] - IN DEVELOPMENT
+### Added
+
+### Changed
+
+### Fixed
+
+
+
+## [1.4.0] - 2017-09-01
 ### Added
 - Added menu block for levels 4 and deeper to the second sidebar region.
 - Added press-slider view mode to latest press view and updated styling accordingly.
@@ -25,6 +34,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added hoverIntent library to menu as additional UX improvement. 
 - Added new slideshow view mode for Node entity type to display content inside slideshow paragraph.
 - Title attributes on action elements added to improve UX.
+- New feature 'deGov - Restrict IP' added.
+- New template full has been added for the deGov image module.
+- New color variable brand-secondary added.
+- Added VSM Search integration to regular search page.
+- Added permission to update any media for role editor
+- Added view mode preview for media types, media views and styling
+- RSS feeds for content types and tags.
 
 ### Changed
 - Block reference paragraph block field was changed to a block field type from the
@@ -44,6 +60,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Allowed script tag for some_embed bundles.
 - Changed 'ALT' field to mandatory for image media bundle.
 - Slideshow paragraph now allows node reference and view reference paragraphs.
+- Changed 'media--image--default' and 'media--image--usage' templates.
+- Color variables correction.
+- Removed thumbnail navigation from media gallery templates.
+- Audio file fields in the audio media type are now optional.
 
 ### Fixed
 - Breadcrumbs are now linking to their corresponding page.
@@ -58,6 +78,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Accessibility improvements for tabs on webforms.
 - Calendar popup fields have similar styling.
 - Patch scheduled updates contrib module so no mandatory date is required.
+- Styling for image caption and copyright in media image for entity and header slider.
+- Columns in the main menu have been added.
+- Margins and wrapper corrections for media gallery.
+- Default icon added for unknown primary action buttons.
 
 ## [1.3.0] - 2017-08-25
 ### Added
