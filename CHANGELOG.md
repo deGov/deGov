@@ -12,15 +12,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 
 ### Fixed
-
-
+- RSS feeds are now correctly overwritten to support content types and tag URLs.
 
 ## [1.4.0] - 2017-09-01
 ### Added
 - Added menu block for levels 4 and deeper to the second sidebar region.
 - Added press-slider view mode to latest press view and updated styling accordingly.
-- Added styling for Audio media type and changed the according templates
-- Added link to fontawesome beneath class input in menu items
+- Added styling for Audio media type and changed the according templates.
+- Added link to fontawesome beneath class input in menu items.
 - Added degov_media_social_media_embed module.
 - Added degov_social_media_settings module.
 - Changed templates of media bundle video to support degov_social_media_settings.
@@ -30,7 +29,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added degov_scheduled_updates module to support scheduled content publishing.
 - New view mode preview added for the some_embed media bundle.
 - Added field_section to index and facet to search page.
-- Added deGov multilingual module to handle multilingual frontpages and according templates
+- Added deGov multilingual module to handle multilingual frontpages and according templates.
 - Added hoverIntent library to menu as additional UX improvement. 
 - Added new slideshow view mode for Node entity type to display content inside slideshow paragraph.
 - Title attributes on action elements added to improve UX.
@@ -38,8 +37,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - New template full has been added for the deGov image module.
 - New color variable brand-secondary added.
 - Added VSM Search integration to regular search page.
-- Added permission to update any media for role editor
-- Added view mode preview for media types, media views and styling
+- Added permission to update any media for role editor.
+- Added view mode preview for media types, media views and styling.
 - RSS feeds for content types and tags.
 
 ### Changed
@@ -55,7 +54,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Latest press view now contains a slider block and the default content block.
 - Scheduled updates drush command is now moved to the degov_scheduled_updates module.
 - Scheduled updates are now handled with the field per content type and can target latest revision.
-- Added support for social media settings in media video bundle preview view mode
+- Added support for social media settings in media video bundle preview view mode.
 - Content type field is not processed with tokenizers and transliteration on search index.
 - Allowed script tag for some_embed bundles.
 - Changed 'ALT' field to mandatory for image media bundle.
