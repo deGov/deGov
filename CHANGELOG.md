@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 - Each share button works individually with the double-click sharing functionality.
+- Removed the arrow icon when selected the search button in the menu.
 
 ### Fixed
 - RSS feeds are now correctly overwritten to support content types and tag URLs.
