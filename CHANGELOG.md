@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 
 ### Changed
-- Each share button works individually
+- Each share button works individually with the double-click sharing functionality.
 
 ### Fixed
 
