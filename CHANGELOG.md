@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Each share button works individually with the double-click sharing functionality.
 - Removed the arrow icon when selected the search button in the menu.
 - Preview view mode changes for media elements.
+- Disabled autoplay by default for the video media type.
 
 ### Fixed
 - RSS feeds are now correctly overwritten to support content types and tag URLs.
