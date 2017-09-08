@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [1.5.0] - IN DEVELOPMENT
 ### Added
+- Embedded view modes for media to simplify paragraph display in the node edit form.
 
 ### Changed
 - Each share button works individually with the double-click sharing functionality.
