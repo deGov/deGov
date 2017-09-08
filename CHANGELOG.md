@@ -25,6 +25,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Removed social media source field dependency from degov_media_video.
 - Fixes image responsive styles on media for the search page.
 - Removed title from blog default template.
+- Views helper module filters media view modes based on chosen entity.
 
 ## [1.4.0] - 2017-09-01
 ### Added
