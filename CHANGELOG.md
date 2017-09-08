@@ -23,6 +23,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - RSS feeds are now correctly overwritten to support content types and tag URLs.
 - Display primary actions for the frontpage when degov_multilingual is enabled.
 - Removed social media source field dependency from degov_media_video.
+- Fixes image responsive styles on media for the search page.
 
 ## [1.4.0] - 2017-09-01
 ### Added
