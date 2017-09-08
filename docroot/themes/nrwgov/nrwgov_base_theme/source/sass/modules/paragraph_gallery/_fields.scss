@@ -1,0 +1,24 @@
+// Format gallery
+.field--name-field-gallery-element-images {
+	@include make-row();
+	> .field--item {
+		@include make-xs-column(6);
+		@include make-md-column(4);
+		@include make-md-column(3);
+		padding-bottom: $vertical-gutter-width;
+	}
+}
+
+.content table {
+	width: 100%;
+	td, th {
+		padding: 0.25em;
+	}
+	td {
+		border-bottom: 1px solid $gray-light;
+		vertical-align: baseline;
+	}
+	th {
+		border-bottom: 3px solid $color-gray;
+	}
+}

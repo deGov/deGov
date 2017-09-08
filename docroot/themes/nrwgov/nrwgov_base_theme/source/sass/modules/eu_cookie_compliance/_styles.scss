@@ -1,0 +1,40 @@
+//eu cookie compliance overrides
+#sliding-popup {
+  background-color: $color-gray !important;
+  .popup-content {
+    #popup-text {
+      h2 {
+        font-family: $font-family-base;
+        font-size: $font-size-large;
+        font-weight: normal;
+      }
+      p {
+        font-size: $font-size-small;
+        font-weight: normal;
+      }
+    }
+    #popup-buttons button {
+      display: inline-block;
+      margin-bottom: 0;
+      font-weight: normal;
+      text-align: center;
+      vertical-align: middle;
+      touch-action: manipulation;
+      cursor: pointer;
+      background-image: none;
+      border: 1px solid transparent;
+      white-space: nowrap;
+      padding: 4px 12px;
+      font-size: $font-size-small;
+      line-height: $line-height-base;
+      border-radius: 4px;
+      user-select: none;
+      box-shadow: none;
+      background: none;
+      font-family: $font-family-base;
+      text-shadow: none;
+      margin-top: $vertical-gutter-width/4;
+      @include button-variant($gray-base, $color-white, $color-gray);
+    }
+  }
+}

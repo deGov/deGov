@@ -1,0 +1,27 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall hooks for the nrwGov profile.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function nrwgov_profile_install() {
+  // Set the deGov theme logo and favicon.
+  //$degov_path = drupal_get_path('theme', 'degov_demo_theme');
+  //\Drupal::configFactory()
+  //  ->getEditable('system.theme.global')
+  //  ->set('logo', [
+  //    'path' => $degov_path . '/img/logo-degov.png',
+  //    'url' => '',
+  //    'use_default' => FALSE,
+  //  ])
+  //  ->set('favicon', [
+  //    'mimetype' => 'image/vnd.microsoft.icon',
+  //    'path' => $degov_path . '/img/favicon.ico',
+  //    'url' => '',
+  //    'use_default' => FALSE,
+  //  ])
+  //  ->save(TRUE);
+}

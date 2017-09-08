@@ -1,0 +1,121 @@
+<?php
+/**
+ * @file
+ * Bootstrap sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+
+//@TODO: Remove commented code when all have seen it.
+
+// Add image field as variable to the page template for content type home_page
+/**
+ * hook_preprocess_node (hook for template_preprocess_node in core/modules/node/node.module)
+ *
+ * @param $variables
+ */
+function degov_theme_preprocess_page(&$variables) {
+  if (isset($variables['node'])) {
+    $node = $variables['node'];
+    if ($node->getType() == 'home_page') {
+      $variables['home_page'] = TRUE;
+      $field_home_page_slider = $node->get('field_home_page_slider');
+      $slider = array();
+      if($field_home_page_slider) {
+        foreach ($field_home_page_slider->getIterator() as $item) {
+          $entity = $item->entity;
+          $slider[] = entity_view($entity, 'full');
+        }
+      }
+      $variables['slider'] = $slider;
+    }
+  }
+}
+
+// Commented because fields can be now excluded in templates using the filter without.
+// These actions are not required anymore.
+// @see: https://www.drupal.org/docs/8/theming/twig/filters-modifying-variables-in-twig-templates
+function degov_theme_preprocess_node(&$vars) {
+  if (isset($vars['node'])) {
+    $node = $vars['node'];
+    //Frontpage preprocessing
+    if ($node->getType() == 'home_page') {
+      unset($vars['content']['field_home_page_slider']);
+    } elseif($node->getType() == 'article_page') {
+      if(!empty($node->get('field_article_page_teaser_color')->get(0))) {
+        $color = $node->get('field_article_page_teaser_color')
+          ->get(0)
+          ->getValue()['value'];
+        $vars['attributes']['class'][] = 'article-color-' . $color;
+      }
+    } elseif($node->getType() == 'blogarticle') {
+      if(!empty($node->get('field_blogarticle_teaser_color')->get(0))) {
+        $color = $node->get('field_blogarticle_teaser_color')
+          ->get(0)
+          ->getValue()['value'];
+        $vars['attributes']['class'][] = 'article-color-' . $color;
+      }
+    } elseif($node->getType() == 'event_page') {
+      if(!empty($node->get('field_event_page_teaser_color')->get(0))) {
+        $color = $node->get('field_event_page_teaser_color')
+          ->get(0)
+          ->getValue()['value'];
+        $vars['attributes']['class'][] = 'article-color-' . $color;
+      }
+    } elseif($node->getType() == 'section_page') {
+      if(!empty($node->get('field_section_page_color')->get(0))) {
+        $color = $node->get('field_section_page_color')
+          ->get(0)
+          ->getValue()['value'];
+        $vars['attributes']['class'][] = 'article-color-' . $color;
+      }
+    }
+  }
+}
+
+/**
+ * Add fields to paragraph templates
+ *
+ * @param $variables
+ */
+function degov_theme_preprocess_paragraph(&$variables) {
+  if(isset($variables['paragraph'])) {
+    $paragraph = $variables['paragraph'];
+    if($paragraph->getType() == 'image_text_element') {
+      $alignment = $paragraph->get('field_image_text_element_align')->get(0)->getValue()['value'];
+      $variables['alignment'] = $alignment;
+    } elseif ($paragraph->getType() == 'text_element') {
+      if(!empty($paragraph->get('field_text_element_color')->get(0))) {
+        $color = $paragraph->get('field_text_element_color')
+          ->get(0)
+          ->getValue()['value'];
+        $variables['attributes']['class'][] = 'paragraph-color-' . $color;
+      }
+    }
+    elseif ($paragraph->getType() == 'citation_element') {
+      if(!empty($paragraph->get('field_citation_element_color')->get(0))) {
+        $color = $paragraph->get('field_citation_element_color')
+          ->get(0)
+          ->getValue()['value'];
+        $variables['attributes']['class'][] = 'paragraph-color-' . $color;
+      }
+    }
+    elseif ($paragraph->getType() == 'slider_element') {
+      if(!empty($paragraph->get('field_slider_element_article')->get(0))) {
+        $reference = $paragraph->get('field_slider_element_article')->get(0)->get('entity');
+        $entity = $reference->getTarget()->getValue();
+        $options = ['absolute' => TRUE];
+        $url = \Drupal\Core\Url::fromRoute('entity.node.canonical', ['node' => $entity->id()], $options);
+        $url = $url->toString();
+        $variables['url'] = $url;
+      }
+    }
+  }
+}
+
+/**
+ * Preprocess language switceher block
+ */
+function degov_theme_preprocess_links__language_block(&$variables) {
+  $variables['active_language'] = \Drupal::languageManager()->getCurrentLanguage()->getId();;
+}

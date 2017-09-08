@@ -1,0 +1,145 @@
+{
+    "name": "NRWgov/NRWgov",
+    "description": "Drupal 8 for Government (Drupal 8 für die öffentliche Verwaltung)",
+    "type": "project",
+    "license": "GPL-2.0+",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require-dev": {
+        "drupal/drupal-extension": "^3.2",
+        "behat/mink": "~1.7",
+        "behat/mink-goutte-driver": "~1.2",
+        "jcalderonzumba/gastonjs": "~1.0.2",
+        "drupal/coder": "8.*",
+        "mikey179/vfsStream": "~1.2",
+        "phpunit/phpunit": "~4.8",
+        "symfony/css-selector": "~2.8",
+        "behat/behat": "^3.0",
+        "se/selenium-server-standalone": "^2.53",
+        "composer/composer": "^1.3",
+        "drupal/twig_xdebug": "^1.0",
+        "phpdocumentor/reflection-docblock": "^3.0.0"
+    },
+    "require": {
+        "composer/installers": "^1.0",
+        "drupal-composer/drupal-scaffold": "^2.0.0",
+        "cweagans/composer-patches": "^1.6.0",
+        "mnsami/composer-custom-directory-installer": "^1.0",
+        "wikimedia/composer-merge-plugin": "^1.4",
+        "acquia/lightning": "~2.1.0",
+        "drupal/config_rewrite": "^1.0",
+        "drupal/admin_toolbar": "^1.19",
+        "drupal/entity_reference_revisions": "^1.2",
+        "drupal/open_readspeaker": "^1.3",
+        "drupal/paragraphs": "^1.1",
+        "drupal/piwik": "^1.1",
+        "drupal/simple_sitemap": "^2.9",
+        "drupal/sitemap": "^1.3",
+        "drupal/spamspan": "1.x-dev",
+        "drupal/ultimate_cron": "^2.0@alpha",
+        "drupal/viewsreference": "^1.0@alpha",
+        "drupal/webform": "^5.0@beta",
+        "drupal/entity_reference_display": "^1.0",
+        "drupal/search_api_solr": "^1.0",
+        "degov/nrw_modules": "1.5.0",
+        "degov/nrw_theme": "1.5.0",
+        "degov/nrw_features": "1.5.0"
+    },
+    "repositories": {
+        "drupal": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        "degov-nrw-modules": {
+            "type": "git",
+            "url": "git@bitbucket.org:publicplan/degov_nrw_modules.git"
+        },
+        "degov-nrw-features": {
+            "type": "git",
+            "url": "git@bitbucket.org:publicplan/degov_nrw_features.git"
+        },
+        "degov-nrw-theme": {
+            "type": "git",
+            "url": "git@bitbucket.org:publicplan/degov_nrw_theme.git"
+        }
+    },
+    "scripts": {
+      "post-install-cmd": [
+        "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
+      ],
+      "post-update-cmd": [
+        "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
+      ],
+      "coder-check": [
+        "./bin/phpcs --standard=vendor/drupal/coder/coder_sniffer/Drupal --colors --exclude=Drupal.Files.TxtFileLineLength"
+      ],
+      "coder-fix": [
+        "./bin/phpcbf --standard=vendor/drupal/coder/coder_sniffer/Drupal --exclude=Drupal.Files.TxtFileLineLength"
+      ]
+    },
+    "config": {
+        "bin-dir": "bin/"
+    },
+    "extra": {
+        "installer-paths": {
+            "docroot/core": [
+                "type:drupal-core"
+            ],
+            "docroot/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "docroot/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "docroot/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/contrib/{$name}": [
+                "type:drupal-drush"
+            ],
+            "docroot/libraries/{$name}": [
+                "type:drupal-library"
+            ],
+            "docroot/modules/nrw/modules": [
+                "degov/nrw_modules"
+            ],
+            "docroot/modules/nrw/features": [
+                "degov/nrw_features"
+            ],
+            "docroot/themes/nrw/nrw_base_theme": [
+                "degov/nrw_theme"
+            ]
+        },
+        "enable-patching": true,
+        "patches": {
+            "drupal/core": {
+                "2893029 - StringTranslationTrait consumers cannot be reliably serialized without DependencySerializationTrait":
+                "https://www.drupal.org/files/issues/2893029-full-fix-test-from-3.patch",
+                "2652542 - Add .install file abilities for Themes":
+                "https://www.drupal.org/files/issues/2652542-add-theme-ability-install-file-and-hook-29-D8.3.patch"
+            },
+            "drupal/paragraphs" : {
+                "2788607 - Empty required fields not providing meaningful error messages" :
+                "https://www.drupal.org/files/issues/empty_required_fields-2788607-81.patch"
+            },
+            "drupal/config_rewrite": {
+                "2903629 - Allow optional config rewrite":
+                "https://www.drupal.org/files/issues/empty_config.patch"
+            }
+        },
+        "merge-plugin": {
+            "merge-extra": true,
+            "merge-extra-deep": true,
+            "include": [
+                "docroot/modules/nrw/*/*/composer.json",
+                "docroot/modules/nrwgov/*/*/composer.json",
+                "docroot/modules/custom/*/composer.json",
+                "docroot/themes/nrw/*/composer.json",
+                "docroot/themes/nrwgov/*/composer.json"
+            ]
+        }
+    },
+    "autoload-dev": {
+        "psr-4": { "BeHat\\Feature\\" : "features/src/"}
+    }
+}

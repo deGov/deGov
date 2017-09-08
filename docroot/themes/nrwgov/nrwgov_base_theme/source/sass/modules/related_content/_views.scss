@@ -1,0 +1,17 @@
+.view-related-content {
+	.view-content {
+		@include make-row();
+	}
+	.views-row {
+  	@include make-sm-column(6);
+	}
+	.views-row:nth-child(2n+1) {
+		clear: left;
+	}
+  .block-title {
+    padding-left: $grid-gutter-width / 2;
+  }
+  .views-row > .views-field > .field-content > article {
+    @include content-box($color-gray);
+  }
+}
