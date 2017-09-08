@@ -1,9 +1,0 @@
-langcode: de
-status: true
-dependencies:
-  module:
-    - media_entity
-id: media.blog_article
-label: Blogartikel
-targetEntityType: media
-cache: true

@@ -1,9 +1,0 @@
-name: 'deGov - Paragraphs - Link-Liste'
-description: 'Provides Link-Liste paragraphs type and related configuration.'
-type: module
-core: 8.x
-dependencies:
-  - field
-  - link
-  - paragraphs
-  - workbench_moderation

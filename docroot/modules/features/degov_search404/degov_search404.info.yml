@@ -1,7 +1,0 @@
-name: 'deGov - 404 Suche'
-type: module
-core: 8.x
-dependencies:
-  - node
-  - search
-description: 'Zeigt ähnliche Inhalte an, wenn eine Seite nicht gefunden wurde.'

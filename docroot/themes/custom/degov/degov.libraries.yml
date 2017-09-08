@@ -1,9 +1,0 @@
-theme-assets:
-  css:
-    theme:
-      public/css/bootstrap.css: {}
-      public/css/style.css: {}
-      '//fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&amp;subset=latin-ext': { external: true }
-      '//fonts.googleapis.com/css?family=Noto+Serif:400,400i,700,700i&amp;subset=latin-ext': { external: true }
-  js:
-    public/js/bundle.js: {}

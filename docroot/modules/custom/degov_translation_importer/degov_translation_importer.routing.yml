@@ -1,6 +1,0 @@
-degov_translation_importer.description:
-  path: '/admin/degov_translation_importer'
-  defaults:
-    _title: 'deGov - Translation Importer'
-  requirements:
-    _permission: 'access content'

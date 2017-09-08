@@ -1,8 +1,0 @@
-name: 'deGov - Related content'
-type: module
-core: 8.x
-dependencies:
-  - node
-  - taxonomy
-  - user
-  - views

@@ -1,6 +1,0 @@
-name: 'deGov - Schlagwörter'
-type: module
-core: 8.x
-dependencies:
-  - taxonomy
-description: 'Stellt die Schlagwörter funktionalität für deGov zur Verfügung.'

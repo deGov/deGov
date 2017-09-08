@@ -1,7 +1,0 @@
-langcode: de
-status: true
-dependencies: {  }
-id: draft
-label: Entwurf
-published: false
-default_revision: false

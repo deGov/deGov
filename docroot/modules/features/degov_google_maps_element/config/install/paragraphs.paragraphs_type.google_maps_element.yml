@@ -1,5 +1,0 @@
-langcode: de
-status: true
-dependencies: {  }
-id: google_maps_element
-label: 'Google Maps'

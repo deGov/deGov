@@ -1,5 +1,0 @@
-langcode: de
-status: true
-dependencies: {  }
-id: address_element
-label: Adresse

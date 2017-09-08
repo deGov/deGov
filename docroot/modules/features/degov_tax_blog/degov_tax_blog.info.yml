@@ -1,7 +1,0 @@
-name: 'deGov - Blog Taxonomie'
-type: module
-core: 8.x
-dependencies:
-  - language
-  - taxonomy
-description: 'Stellt Taxonomien für den Blog zur Verfügung.'

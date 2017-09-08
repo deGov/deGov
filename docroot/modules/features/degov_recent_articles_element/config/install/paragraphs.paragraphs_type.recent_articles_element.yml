@@ -1,5 +1,0 @@
-langcode: de
-status: true
-dependencies: {  }
-id: recent_articles_element
-label: 'Aktuelle Artikel'

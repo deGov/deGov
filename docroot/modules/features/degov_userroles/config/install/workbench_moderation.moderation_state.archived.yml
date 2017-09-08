@@ -1,7 +1,0 @@
-langcode: de
-status: true
-dependencies: {  }
-id: archived
-label: Archiviert
-published: false
-default_revision: true

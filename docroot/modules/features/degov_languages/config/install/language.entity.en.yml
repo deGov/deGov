@@ -1,8 +1,0 @@
-langcode: de
-status: true
-dependencies: {  }
-id: en
-label: Englisch
-direction: ltr
-weight: 1
-locked: false

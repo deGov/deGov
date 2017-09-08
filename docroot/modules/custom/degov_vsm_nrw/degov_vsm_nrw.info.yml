@@ -1,8 +1,0 @@
-name: VSM NRW Search API
-type: module
-description: VSM NRW Search API for deGov
-core: 8.x
-package: deGov
-dependencies:
-- node
-- block

@@ -1,3 +1,0 @@
-excluded:
-  - language.content_settings.taxonomy_term.tax_blog
-required: true

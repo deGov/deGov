@@ -1,7 +1,0 @@
-name: 'deGov - Pathauto'
-type: module
-core: 8.x
-dependencies:
-  - node
-  - pathauto
-description: 'Generiert automatisch suchmaschinenoptimierte URLs für Inhalte.'
