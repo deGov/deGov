@@ -11,7 +11,6 @@ Feature: An priviledged user can create a normal page
     And for "Vorschau Titel" I enter "previewTitle"
     And for "Vorschau Text" I enter "previewContent"
     And I should see the button "Downloads hinzufügen"
-    And I should see the button "FAQ hinzufügen"
     And I should see the button "FAQ / Akkordion Liste hinzufügen"
     And I should see the button "Iframe hinzufügen"
     And I should see the button "Image Header hinzufügen"

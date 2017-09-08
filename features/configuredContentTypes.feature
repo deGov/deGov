@@ -79,13 +79,13 @@ Feature: Test presence of content-types
       | mediaRefSettingsAdmin | user@em.ail | administrator |
     And I am logged in as "mediaRefSettingsAdmin"
     And I am on "/admin/structure/paragraphs_type/media_reference/fields/paragraph.media_reference.field_media_reference_media"
-    Then the "Dokument" checkbox should be checked
+    Then the "Datei" checkbox should be checked
     And the "Image" checkbox should be checked
     And the "Instagram" checkbox should be checked
     And the "Kontakt" checkbox should be checked
     And the "Tweet" checkbox should be checked
     And the "Video" checkbox should be checked
-    And the "Adresse" checkbox should not be checked
+    And the "Adresse" checkbox should be checked
     And the "Bildergalerie" checkbox should not be checked
     And the "Citation" checkbox should not be checked
     And the "Person" checkbox should not be checked

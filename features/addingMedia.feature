@@ -9,7 +9,7 @@ Feature: A privileged user can add media
       And I am logged in as "editingUser"
       And I am on "/media/add/document"
       Then for "Media name" I enter "testMedia"
-      When I attach the file "documents/dummy_pdf.pdf" to "Dokument"
+      When I attach the file "documents/dummy_pdf.pdf" to "Datei"
       And I should see the button "Speichern und veröffentlichen"
       Then I click the "input.form-submit[value='Speichern und veröffentlichen']" element
       And I should see "testMedia"
@@ -23,6 +23,7 @@ Feature: A privileged user can add media
     And I am on "/media/add/image"
     Then for "Media name" I enter "testMedia"
     When I attach the file "images/placeholder.png" to "Image"
+    And for "Alternative Bildbeschreibung" I enter "placeholder"
     And for "Bildunterschrift" I enter "placeholder"
     And I should see the button "Speichern und veröffentlichen"
     Then I click the "input.form-submit[value='Speichern und veröffentlichen']" element

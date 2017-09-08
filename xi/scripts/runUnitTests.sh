@@ -2,6 +2,11 @@
 
 testSuiteToRun="--testsuite unit"
 
+# Define a timestamp function
+timestamp() {
+  date +"%Y-%m-%d"
+}
+
 # getting nice path for projectroot
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 projectRoot=$(dirname $DIR)
@@ -29,7 +34,7 @@ while getopts :g:p:xh opt; do
   elif [[ "$opt" == "g" ]]; then
     parameters+=("--group ${OPTARG}")
   elif [[ "$opt" == "x" ]]; then
-    parameters+=("--log-junit ${projectRoot}/testreports")
+    parameters+=("--log-junit ${projectRoot}/testreports/unit-$(timestamp).xml")
   elif [[ "$opt" == "h" ]]; then
     printHelp
     exit 0
