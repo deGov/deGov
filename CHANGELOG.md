@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [1.5.0] - IN DEVELOPMENT
 ### Added
+- Added translations update service degov_locale.updater.
+- Added translation files for degov_social_media_settings module.
 
 ### Changed
 - Each share button works individually with the double-click sharing functionality.
