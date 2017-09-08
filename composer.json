@@ -41,9 +41,8 @@
         "drupal/webform": "^5.0@beta",
         "drupal/entity_reference_display": "^1.0",
         "drupal/search_api_solr": "^1.0",
-        "degov/nrw_modules": "1.5.0",
-        "degov/nrw_theme": "1.5.0",
-        "degov/nrw_features": "1.5.0"
+        "degov/features": "1.5.0",
+        "degov/modules": "1.5.0"
     },
     "repositories": {
         "drupal": {
@@ -52,15 +51,11 @@
         },
         "degov-nrw-modules": {
             "type": "git",
-            "url": "git@bitbucket.org:publicplan/degov_nrw_modules.git"
+            "url": "git@github.com:deGov/modules.git"
         },
         "degov-nrw-features": {
             "type": "git",
-            "url": "git@bitbucket.org:publicplan/degov_nrw_features.git"
-        },
-        "degov-nrw-theme": {
-            "type": "git",
-            "url": "git@bitbucket.org:publicplan/degov_nrw_theme.git"
+            "url": "git@github.com:deGov/features.git"
         }
     },
     "scripts": {
