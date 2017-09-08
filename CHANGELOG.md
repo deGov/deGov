@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Embedded view modes for media to simplify paragraph display in the node edit form.
 - New Relic project support for platform.
+- Added a new translations updater service called degov_locale.updater.
+- Added translation files for the degov_social_media_settings module.
 
 ### Changed
 - Each share button works individually with the double-click sharing functionality.
