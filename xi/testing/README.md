@@ -16,7 +16,7 @@ This leaves a lot of options for configuring and varying coverage.
 
 In order to ensure that all developers and the CI execute the tests as agreed upon by all people tasked with driving this project
 the tests should be run using the provided scripts under
-<project-root>/xi/scripts.
+<project-root>/xi/testing.
 
 This ensures specific parametersettings and a fixed set of tests to be run.
 
