@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [1.5.0] - IN DEVELOPMENT
+## [1.5.0] - 2017-09-08
 ### Added
 - Embedded view modes for media to simplify paragraph display in the node edit form.
 - New Relic project support for platform.
