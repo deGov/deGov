@@ -105,5 +105,33 @@ class DeGovContext  extends RawDrupalContext implements TranslatableContext {
         throw new PendingException();
     }
 
+    /**
+     * @Then I wait for :arg1 seconds
+     */
+    public function iWaitForSeconds($arg1)
+    {
+        sleep(10);
+        return;
+    }
+    /**
+     * Click some text
+     *
+     * @When /^I click on the text "([^"]*)"$/
+     */
+    public function iClickOnTheText($text)
+    {
+        $session = $this->getSession();
+        $element = $session->getPage()->find(
+            'xpath',
+            $session->getSelectorsHandler()->selectorToXpath('xpath', '*//*[text()="'. $text .'"]')
+        );
+        if (null === $element) {
+            throw new \InvalidArgumentException(sprintf('Cannot find text: "%s"', $text));
+        }
+
+        $element->click();
+
+    }
+
 
 }

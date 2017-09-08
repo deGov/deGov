@@ -59,7 +59,7 @@ Feature: Test presence of content-types
     And I should see "Webformular" in the "content_region"
 
   @api
-  Scenario: All the relevant pragraphs are present
+  Scenario: All the relevant pragraphs fields are present for media_reference
     Given users:
       | name          | mail        | roles         |
       | mediaRefAdmin | user@em.ail | administrator |
@@ -73,7 +73,7 @@ Feature: Test presence of content-types
     And I should see "Untertitel" in the "content_region"
 
   @api
-  Scenario: All the relevant pragraphs are present
+  Scenario: All pragraphs fields settings are present
     Given users:
       | name                  | mail        | roles         |
       | mediaRefSettingsAdmin | user@em.ail | administrator |
@@ -86,10 +86,10 @@ Feature: Test presence of content-types
     And the "Tweet" checkbox should be checked
     And the "Video" checkbox should be checked
     And the "Adresse" checkbox should be checked
-    And the "Bildergalerie" checkbox should not be checked
-    And the "Citation" checkbox should not be checked
-    And the "Person" checkbox should not be checked
-    And the "Video Upload" checkbox should not be checked
+    And the "Bildergalerie" checkbox should be checked
+    And the "Citation" checkbox should be checked
+    And the "Person" checkbox should be checked
+    And the "Video Upload" checkbox should be checked
 
   @api
   Scenario: The Cookie-Compliane is configured propperly
@@ -114,23 +114,21 @@ Feature: Test presence of content-types
       | name             | mail        | roles         |
       | searchIndexAdmin | user@em.ail | administrator |
     And I am logged in as "searchIndexAdmin"
-    And I am on "/admin/config/search/search-api/index/content/edit"
-    Then the "Index-Name" field should contain "Inhalt"
-    And the "Inhalt" checkbox should be checked
+    And I am on "/admin/config/search/search-api/index/search_media/edit"
+    Then the "Index name" field should contain "Mediensuche"
+    And the "Medien" checkbox should be checked
     And the "Absatz" checkbox should not be checked
     And the "Benutzerdefinierter Block" checkbox should not be checked
     And the "Benutzerdefinierter Menülink" checkbox should not be checked
     And the "Datei" checkbox should not be checked
-    And the "Medien" checkbox should not be checked
     And the "Scheduled update" checkbox should not be checked
     And the "Search task" checkbox should not be checked
-    And the "Taxonomy term" checkbox should not be checked
-    And the "User" checkbox should not be checked
+    And the "Taxonomie-Begriff" checkbox should not be checked
+    And the "Benutzer" checkbox should not be checked
     And the "Verknüpfungslink" checkbox should not be checked
     And the "Webformulareingabe" checkbox should not be checked
     And the "Zuschneide" checkbox should not be checked
     And the "Aktiviert" checkbox should be checked
     And the "Index items immediately" checkbox should be checked
-    And the "Nur Lesen" checkbox should not be checked
-    And the "Database" radiobutton should not be selected
-    And the "-No server-" radiobutton should not be selected
+    And the "Database" radiobutton should be selected
+    And the "- No server -" radiobutton should not be selected

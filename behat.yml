@@ -30,4 +30,4 @@ default:
       text: # changing default so login-etc will work
         log_in: "Anmelden"
         password_field: "Passwort"
-        username_field: "Username"
+        username_field: "Benutzername"
