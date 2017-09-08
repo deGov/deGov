@@ -7,6 +7,7 @@ tagsToRun=""
 projectRoot="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 projectRoot=$(dirname $projectRoot)
 projectRoot=$(dirname $projectRoot)
+projectRoot=$(dirname $projectRoot)
 
 parameters=()
 

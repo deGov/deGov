@@ -11,6 +11,7 @@ timestamp() {
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 projectRoot=$(dirname $DIR)
 projectRoot=$(dirname $projectRoot)
+projectRoot=$(dirname $projectRoot)
 
 parameters=($testSuiteToRun)
 
@@ -34,7 +35,7 @@ while getopts :g:p:xh opt; do
   elif [[ "$opt" == "g" ]]; then
     parameters+=("--group ${OPTARG}")
   elif [[ "$opt" == "x" ]]; then
-    parameters+=("--log-junit ${projectRoot}/testreports/unit-$(timestamp).xml")
+    parameters+=("--log-junit ${projectRoot}/xi/testing/unit/testreports/unit-$(timestamp).xml")
   elif [[ "$opt" == "h" ]]; then
     printHelp
     exit 0
