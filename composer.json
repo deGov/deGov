@@ -117,7 +117,9 @@
                 "2893029 - StringTranslationTrait consumers cannot be reliably serialized without DependencySerializationTrait":
                 "https://www.drupal.org/files/issues/2893029-full-fix-test-from-3.patch",
                 "2652542 - Add .install file abilities for Themes":
-                "https://www.drupal.org/files/issues/core-add_install_file-2652542-32.patch"
+                "https://www.drupal.org/files/issues/core-add_install_file-2652542-32.patch",
+                "2849674 - Complex job in ViewExecutable::unserialize() causes data corruption":
+                "https://www.drupal.org/files/issues/2849674-88.patch"
             },
             "drupal/paragraphs" : {
                 "2788607 - Empty required fields not providing meaningful error messages" :
