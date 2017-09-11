@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Corrects the redirect unsubscription URL for simplenews with multilingual frontpage enabled.
 - Patches core bug to allow sending newsletters of simplenews with bulk operation - 2849674.
 - Slim view mode images are now rendered as small landscape 2:1.
+- Cleanup and fixes copyright field replacement in views and forms for the image module.
 
 ## [1.5.0] - 2017-09-08
 ### Added
