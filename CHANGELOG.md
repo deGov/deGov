@@ -15,7 +15,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Corrects the redirect unsubscription URL for simplenews with multilingual frontpage enabled.
 - Patches core bug to allow sending newsletters of simplenews with bulk operation - 2849674.
 
-
 ## [1.5.0] - 2017-09-08
 ### Added
 - Embedded view modes for media to simplify paragraph display in the node edit form.
