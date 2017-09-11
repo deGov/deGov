@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [1.6.0] - DEVELOPMENT
 ### Fixed
 - Patches are fixed and updated so no warnings are thrown during installation.
+- Nodes view mode preview when a view is added in the sidebar.
 
 ## [1.5.0] - 2017-09-08
 ### Added
