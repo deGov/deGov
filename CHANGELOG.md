@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Fixed
 - Patches are fixed and updated so no warnings are thrown during installation.
 
+### Added
+- Calendar search view for press
+
 ## [1.5.0] - 2017-09-08
 ### Added
 - Embedded view modes for media to simplify paragraph display in the node edit form.
