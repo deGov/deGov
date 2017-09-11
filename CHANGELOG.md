@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Fixed
 - Patches are fixed and updated so no warnings are thrown during installation.
 - Removes PHP 7 code, to continue support of PHP 5.6.
+- URLs in emails are now absolute as well as image sources and other URI attributes.
 
 ## [1.5.0] - 2017-09-08
 ### Added
