@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [1.6.0] - DEVELOPMENT
 ### Fixed
 - Patches are fixed and updated so no warnings are thrown during installation.
+- Urls in the emails are now absolute as well as image sources and other uri attributes.
 
 ## [1.5.0] - 2017-09-08
 ### Added
