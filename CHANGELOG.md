@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Slim view mode images are now rendered as small landscape 2:1.
 - Cleanup and fixes copyright field replacement in views and forms for the image module.
 - Citations now use the blockquote element to enclose the text.
+- Minor issue fixes in general page styling.
 
 ## [1.5.0] - 2017-09-08
 ### Added
