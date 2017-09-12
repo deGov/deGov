@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [1.6.0] - DEVELOPMENT
 ### Added
 - Drush development dependency potx added for translations extraction.
+- Stage file proxy development dependency added to receive remote resources.
 
 ### Fixed
 - Patches are fixed and updated so no warnings are thrown during installation.
