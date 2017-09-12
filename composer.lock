@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "71e01e9dd30e282aefa6d20c57ff2c87",
+    "content-hash": "82844010495759dcebccfa375bd36bbf",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -10356,6 +10356,40 @@
             "time": "2017-05-16T21:06:09+00:00"
         },
         {
+            "name": "kgaut/potx",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kgaut/drupal-potx.git",
+                "reference": "e3a3e2323f7b2b969b629746a9de7f4a92fa3ce4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kgaut/drupal-potx/zipball/e3a3e2323f7b2b969b629746a9de7f4a92fa3ce4",
+                "reference": "e3a3e2323f7b2b969b629746a9de7f4a92fa3ce4",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "installer-name": "potx"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GNU GPL V2"
+            ],
+            "description": "Translation template extractor port for Drupal 8",
+            "homepage": "https://mespronos.net",
+            "keywords": [
+                "drupal",
+                "drupal8",
+                "l10n"
+            ],
+            "time": "2017-04-05T05:38:54+00:00"
+        },
+        {
             "name": "mikey179/vfsStream",
             "version": "v1.6.4",
             "source": {
@@ -12138,6 +12172,7 @@
         "degov/nrw_theme": 20,
         "degov/nrw_features": 20,
         "drupal/stage_file_proxy": 15,
+        "kgaut/potx": 20,
         "drupal/eu_cookie_compliance": 10,
         "drupal/field_group": 20,
         "drupal/paragraphs_edit": 20,
