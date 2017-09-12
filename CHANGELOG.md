@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Patches core bug to allow sending newsletters of simplenews with bulk operation - 2849674.
 - Slim view mode images are now rendered as small landscape 2:1.
 - Cleanup and fixes copyright field replacement in views and forms for the image module.
+- Citations now use the blockquote element to enclose the text.
 
 ## [1.5.0] - 2017-09-08
 ### Added
