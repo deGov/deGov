@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Drush development dependency potx added for translations extraction.
 - Stage file proxy development dependency added to receive remote resources.
+- New calendar view has been added for press content.
 
 ### Fixed
 - Patches are fixed and updated so no warnings are thrown during installation.
@@ -22,9 +23,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Citations now use the blockquote element to enclose the text.
 - Minor issue fixes in general page styling.
 - Tab accessibility is improved for the search functionality.
-
-### Added
-- Calendar search view for press
 
 ## [1.5.0] - 2017-09-08
 ### Added
