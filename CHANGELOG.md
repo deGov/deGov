@@ -10,7 +10,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Drush development dependency potx added for translations extraction.
 - Stage file proxy development dependency added to receive remote resources.
+- New calendar view has been added for press content.
 - Added author and copyright filter to media overview page.
+
 
 ### Fixed
 - Patches are fixed and updated so no warnings are thrown during installation.
