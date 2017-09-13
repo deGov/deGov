@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - URLs in emails are now absolute as well as image sources and other URI attributes.
 - Corrects the redirect unsubscription URL for simplenews with multilingual frontpage enabled.
 - Patches core bug to allow sending newsletters of simplenews with bulk operation - 2849674.
+- change icons and fix download block when is in the sidebar.
 
 ## [1.5.0] - 2017-09-08
 ### Added
