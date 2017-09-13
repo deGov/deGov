@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Stage file proxy development dependency added to receive remote resources.
 - New calendar view has been added for press content.
 
+### Changed
+- Social media and tags are refactored to be outside of the header paragraph.
+- Specific node content fields are rearranged to be above the common field groups.
+
 ### Fixed
 - Patches are fixed and updated so no warnings are thrown during installation.
 - Removes PHP 7 code, to continue support of PHP 5.6.
