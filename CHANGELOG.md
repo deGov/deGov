@@ -29,6 +29,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Tab accessibility is improved for the search functionality.
 - Patches contrib shariff fixing twitter popups and missing dependencies - 2881126.
 - Moves the shariff2click functionality to the module depending on shariff.
+- Fixes icon display and download block when in the sidebar.
 
 ## [1.5.0] - 2017-09-08
 ### Added
