@@ -1,6 +1,7 @@
 Automatisches Testen von deGov
 ==============================
 
+
 [TOC]
 
 Allgemeines
@@ -60,7 +61,7 @@ Zunächst muss deGov installiert werden. Dazu wird das Repository des Projektes 
 
 Anschliessend kann die Webseite über den Browser installiert werden.
 
-![Installer 1](img/Screenshot_from_2017-09-06 16-30-46.png)
+![Installer 1](img/degov-installer-setup.png)
 ![Installer 2](img/degov-installer.png)
 ![Installer 3](img/Drupal-installed.png)
 
@@ -100,7 +101,7 @@ Die Sourcen von Unit-Tests liegen immer direkt bei den zu testenden Programmteil
 
 Z.B. liegen die Unit-Tests für das Kernmodul Aggregator im Pfad `<project--oot>core/modules/aggregator/tests/src/Unit/...`
 
-![Junit 1](img/Screenshot_from_2017-09-07 13-38-35.png)
+![Junit 1](img/junit-test.png)
 
 Im Detail kann die Konfiguration von Tests in Drupal unter https://www.drupal.org/node/2116043 nachgelesen werden. Weiterhin ist die allgemeine Dokumentation von PHPUnit hilfreich: https://phpunit.de/manual/3.7/en/writing-tests-for-phpunit.html#writing-tests-for-phpunit.data-providers.
 
@@ -141,7 +142,7 @@ Behat-Tests werden in einer Programmiersprache namens Gherkin erstellt. Die Synt
 
 Im Folgenden ist ein Beispieltest dargestellt, in dem ein angemeldeter User einen Begriff zu einer Taxonomie hinzufügt.
 
-![Behat 1](img/screenshot_from_2017-08-15_18-38-18.png)
+![Behat 1](img/behat-output.png)
 
 Im Projekt MIK ist es sinnvoll die in einem Projekt eingesetzte Funktionalität mit Bhat-Tests abzuprüfen.
 Z.B. könnte, sofern die Inhaltstypen 'Einfache Seite', 'Pressemeldung' und 'Veranstaltung' installiert sind, mit Behat geprüft werden, ob alle Felder im 'node/add' oder 'node/edit' vollständig zur Verfügung stehen. Weiterhin könnte geprüft werden, ob neue Inhalte der verschiedenen Typen mit Demoinhalten angelegt werden können.
@@ -186,11 +187,11 @@ Um das Ausführen von Tests zu vereinfachen wurde ein Skript-Ordner im Repositor
 Ohne Parameter führt das Skript alle Tests im Order `<project-root>/features` aus. Um Informationen über die Verwendung des Skripts zu erhalten kann der Parameter -h übergeben werden.
 Der Output eines erfolgreichen Tests sieht so aus:
 
-![Behat 2](img/behat-output.png)
+![Behat 2](img/behat-output-ok.png)
 
 Im Fehlerfall wird die entsprechende Zeile im Test rot angezeigt, nicht ausgeführte Anweisungen werden in blau angezeigt.
 
-![Behat 3](img/Screenshot_from_2017-09-07 17-00-43.png)
+![Behat 3](img/behat-output-error.png)
 
 Im obigen Beispiel ist der Fehler, dass die Option 'FAQ hinzufügen' entfernt wurde.
 
@@ -239,7 +240,7 @@ ausgeführt werden.
 
 Als Ergebnis wird eine Galerie von Bildern angezeigt. Der Output einer solchen Galerie sieht z.B. so aus:
 
-![Wraith 1](img/Screenshot_from_2017-09-07 18-57-33.png)
+![Wraith 1](img/wraith-output.png)
 
 Wraith kann in verschieden Modi ausgeführt werden. Über capture können zwei Webseiten verglichen werden, über history können alte Screenshos mit neuen verglichen werden.
 
