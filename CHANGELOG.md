@@ -7,12 +7,26 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 ## [1.6.0] - DEVELOPMENT
+### Added
+- Drush development dependency potx added for translations extraction.
+- Stage file proxy development dependency added to receive remote resources.
+- New calendar view has been added for press content.
+
+### Changed
+- Social media and tags are refactored to be outside of the header paragraph.
+- Specific node content fields are rearranged to be above the common field groups.
+
 ### Fixed
 - Patches are fixed and updated so no warnings are thrown during installation.
 - Removes PHP 7 code, to continue support of PHP 5.6.
 - URLs in emails are now absolute as well as image sources and other URI attributes.
 - Corrects the redirect unsubscription URL for simplenews with multilingual frontpage enabled.
 - Patches core bug to allow sending newsletters of simplenews with bulk operation - 2849674.
+- Slim view mode images are now rendered as small landscape 2:1.
+- Cleanup and fixes copyright field replacement in views and forms for the image module.
+- Citations now use the blockquote element to enclose the text.
+- Minor issue fixes in general page styling.
+- Tab accessibility is improved for the search functionality.
 - change icons and fix download block when is in the sidebar.
 
 ## [1.5.0] - 2017-09-08
