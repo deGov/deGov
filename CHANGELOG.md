@@ -27,6 +27,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Citations now use the blockquote element to enclose the text.
 - Minor issue fixes in general page styling.
 - Tab accessibility is improved for the search functionality.
+- Patches contrib shariff fixing twitter popups and missing dependencies - 2881126.
+- Moves the shariff2click functionality to the module depending on shariff.
 
 ## [1.5.0] - 2017-09-08
 ### Added

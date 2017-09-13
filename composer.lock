@@ -4928,12 +4928,19 @@
                 },
                 "drupal": {
                     "version": "8.x-1.2",
-                    "datestamp": "1494581885"
+                    "datestamp": "1494581885",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
                 },
                 "installer-paths": {
                     "libraries/{$name}": [
                         "type:drupal-library"
                     ]
+                },
+                "patches_applied": {
+                    "2881126 - two twitter popups: missing js & dependency issue": "https://www.drupal.org/files/issues/two_twitter_popups-2881126-6.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
