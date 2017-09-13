@@ -27,6 +27,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Citations now use the blockquote element to enclose the text.
 - Minor issue fixes in general page styling.
 - Tab accessibility is improved for the search functionality.
+- Thumbnail regeneration on media update.
 
 ## [1.5.0] - 2017-09-08
 ### Added
