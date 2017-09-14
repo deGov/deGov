@@ -32,6 +32,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Moves the shariff2click functionality to the module depending on shariff.
 - Fixes icon display and download block when in the sidebar.
 - Image styles regeneration on media update.
+- Updates the responsive image styles for media video and video upload view modes.
 
 ## [1.5.0] - 2017-09-08
 ### Added
