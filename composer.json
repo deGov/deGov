@@ -43,8 +43,8 @@
         "drupal/webform": "^5.0@beta",
         "drupal/entity_reference_display": "^1.0",
         "drupal/search_api_solr": "^1.0",
-        "degov/nrw_modules": "dev-master",
-        "degov/nrw_theme": "dev-master",
+        "degov/nrw_modules": "dev-master#c4dbfdb2e1174ba7b0d826e613bc93deaf939882",
+        "degov/nrw_theme": "dev-master#b136c6df0c64d732b1fdee27b67d79c0e651e8ee",
         "degov/nrw_features": "dev-release-1.6"
     },
     "repositories": {
