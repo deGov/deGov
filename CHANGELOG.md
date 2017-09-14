@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Stage file proxy development dependency added to receive remote resources.
 - New calendar view has been added for press content.
 - Added author and copyright filter to media overview page.
-
+- Asset fields (accessibility, duration, transcription and language) for video and audio media types.
 
 ### Changed
 - Social media and tags are refactored to be outside of the header paragraph.
