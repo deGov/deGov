@@ -6,15 +6,24 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [1.6.0] - DEVELOPMENT
+## [1.7.0] - IN DEVELOPMENT
+
+## [1.6.0] - 2017-09-15
 ### Added
 - Drush development dependency potx added for translations extraction.
 - Stage file proxy development dependency added to receive remote resources.
 - New calendar view has been added for press content.
+- Added testing documentation.
+- Added author and copyright filter to media overview page.
+- Asset fields (accessibility, duration, transcription and language) for video and audio media types.
+- Added admin_links_access_filter module for admin toolbar restriction by permission.
+- Added getid3 library for retrieving duration of media.
+- Support for additional table properties in ckeditor.
 
 ### Changed
 - Social media and tags are refactored to be outside of the header paragraph.
 - Specific node content fields are rearranged to be above the common field groups.
+- Changed view mode teaser for event and press, used in views and search.
 
 ### Fixed
 - Patches are fixed and updated so no warnings are thrown during installation.
@@ -32,6 +41,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Moves the shariff2click functionality to the module depending on shariff.
 - Fixes icon display and download block when in the sidebar.
 - Image styles regeneration on media update.
+- Updates the responsive image styles for media video and video upload view modes.
+- Header only appears when there is something inside.
+- Node view modes title and text fields have been trimmed.
+- Fixed play/pause functionality for sliders.
+- Add active trail classes for the menu.
+- Removed install config for instagram and tweet, since its already part of lightning.
+- Improved language block tab accessibility. 
 
 ## [1.5.0] - 2017-09-08
 ### Added

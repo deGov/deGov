@@ -24,3 +24,4 @@ Zögern Sie auch nicht, uns bei Fragen auf unserer [Website] (http://www.degov.o
 * [Multilingual](multilingual.md)
 * [Access control](access_control.md)
 * [Manual configuration](manual_configuration.md)
+* [Testing](testing.md)

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e5144bb129d34c5fb1fae415e97a28eb",
+    "content-hash": "5822552cc5f48c04b22f0168e1e26f57",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -468,42 +468,42 @@
         },
         {
             "name": "degov/nrw_features",
-            "version": "dev-release-1.6",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:publicplan/degov_nrw_features.git",
-                "reference": "32d27f3ed5badd160e955207f95b1c8719d84e7a"
+                "reference": "219e0ed79c85652f4727dbfaf84563efaffcf3dd"
             },
             "type": "library",
             "description": "deGov - NRW Features",
-            "time": "2017-09-11 09:19:05"
+            "time": "2017-09-15T16:38:59+00:00"
         },
         {
             "name": "degov/nrw_modules",
-            "version": "dev-master",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:publicplan/degov_nrw_modules.git",
-                "reference": "c4dbfdb2e1174ba7b0d826e613bc93deaf939882"
+                "reference": "bedf99c110533046e4eb83df1d53e62e1d9ddbca"
             },
             "type": "library",
             "description": "deGov - NRW Modules",
-            "time": "2017-09-13 16:18:05"
+            "time": "2017-09-15T16:42:40+00:00"
         },
         {
             "name": "degov/nrw_theme",
-            "version": "dev-master",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:publicplan/degov_nrw_theme.git",
-                "reference": "b136c6df0c64d732b1fdee27b67d79c0e651e8ee"
+                "reference": "1fe9c804faed4eb30adbcaa652b12b9f641a4246"
             },
             "require": {
                 "drupal/bootstrap": "^3.3"
             },
             "type": "library",
             "description": "deGov - NRW Theme",
-            "time": "2017-09-13 16:18:38"
+            "time": "2017-09-15T16:44:55+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -1029,6 +1029,53 @@
             "homepage": "https://www.drupal.org/project/acquia_connector",
             "support": {
                 "source": "http://cgit.drupalcode.org/acquia_connector"
+            }
+        },
+        {
+            "name": "drupal/admin_links_access_filter",
+            "version": "1.0.0-alpha3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/admin_links_access_filter",
+                "reference": "8.x-1.0-alpha3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/admin_links_access_filter-8.x-1.0-alpha3.zip",
+                "reference": "8.x-1.0-alpha3",
+                "shasum": "410543c4b14d5c88fa53d7256717756cab522e65"
+            },
+            "require": {
+                "drupal/core": "~8.1"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha3",
+                    "datestamp": "1481822103",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "agoradesign",
+                    "homepage": "https://www.drupal.org/user/1183886"
+                }
+            ],
+            "description": "Administration links access filter provides a workaround for the common problem that users with 'Use the administration pages and help' permission see menu links they don't have access permission for.",
+            "homepage": "http://drupal.org/project/admin_links_access_filter",
+            "support": {
+                "source": "http://cgit.drupalcode.org/admin_links_access_filter"
             }
         },
         {
@@ -7557,7 +7604,8 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/calendar",
                 "issues": "https://www.drupal.org/project/issues/calendar"
-            }
+            },
+            "time": "2017-09-13 12:29:50"
         },
         {
             "name": "drupal/calendar_datetime",
@@ -10257,6 +10305,68 @@
             "time": "2017-05-23 10:55:47"
         },
         {
+            "name": "phansys/getid3",
+            "version": "2.1.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phansys/GetId3.git",
+                "reference": "25fb540dd9bf5cc3d1501f4bc3d4c759e13ead89"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phansys/GetId3/zipball/25fb540dd9bf5cc3d1501f4bc3d4c759e13ead89",
+                "reference": "25fb540dd9bf5cc3d1501f4bc3d4c759e13ead89",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "conflict": {
+                "james-heinrich/getid3": "*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": ">=4.8,<5.4.3"
+            },
+            "suggest": {
+                "ext-dba": "DBA extension is required in order to use DBA database as cache storage.",
+                "ext-exif": "EXIF extension is required for graphic modules.",
+                "ext-mysqli": "MySQLi extension is required in order to use MySQL database as cache storage.",
+                "ext-rar": "RAR extension is required for RAR archive module.",
+                "ext-sqlite": "SQLite extension is required in order to use SQLite database as cache storage."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GetId3\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL"
+            ],
+            "authors": [
+                {
+                    "name": "James Heinrich",
+                    "email": "info@getid3.org",
+                    "homepage": "http://www.getid3.org"
+                }
+            ],
+            "description": "This fork of GetId3 library updates to PSR-2 / PSR-4 CS, adds namespaces and makes it installable by composer.",
+            "homepage": "http://www.getid3.org",
+            "keywords": [
+                "getid3",
+                "metadata",
+                "tags"
+            ],
+            "abandoned": "james-heinrich/getid3",
+            "time": "2017-05-26 00:05:10"
+        },
+        {
             "name": "phayes/geophp",
             "version": "dev-master",
             "source": {
@@ -12157,13 +12267,11 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "drupal/admin_links_access_filter": 15,
         "drupal/spamspan": 20,
         "drupal/ultimate_cron": 15,
         "drupal/viewsreference": 15,
         "drupal/webform": 10,
-        "degov/nrw_modules": 20,
-        "degov/nrw_theme": 20,
-        "degov/nrw_features": 20,
         "drupal/stage_file_proxy": 15,
         "kgaut/potx": 20
     },
