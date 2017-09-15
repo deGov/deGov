@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added testing documentation.
 - Added author and copyright filter to media overview page.
 - Asset fields (accessibility, duration, transcription and language) for video and audio media types.
+- Added admin_links_access_filter module for admin toolbar restriction by permission.
 
 ### Changed
 - Social media and tags are refactored to be outside of the header paragraph.

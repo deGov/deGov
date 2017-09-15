@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "82844010495759dcebccfa375bd36bbf",
+    "content-hash": "1a399567d14bed43cbd8367df10147e7",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -631,7 +631,7 @@
             },
             "type": "library",
             "description": "deGov - NRW Features",
-            "time": "2017-08-31T19:41:45+00:00"
+            "time": "2017-08-31 19:41:45"
         },
         {
             "name": "degov/nrw_modules",
@@ -643,7 +643,7 @@
             },
             "type": "library",
             "description": "deGov - NRW Modules",
-            "time": "2017-09-08T15:20:43+00:00"
+            "time": "2017-09-08 15:20:43"
         },
         {
             "name": "degov/nrw_theme",
@@ -658,7 +658,7 @@
             },
             "type": "library",
             "description": "deGov - NRW Theme",
-            "time": "2017-09-08T15:01:37+00:00"
+            "time": "2017-09-08 15:01:37"
         },
         {
             "name": "doctrine/annotations",
@@ -1240,6 +1240,53 @@
             }
         },
         {
+            "name": "drupal/admin_links_access_filter",
+            "version": "1.0.0-alpha3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/admin_links_access_filter",
+                "reference": "8.x-1.0-alpha3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/admin_links_access_filter-8.x-1.0-alpha3.zip",
+                "reference": "8.x-1.0-alpha3",
+                "shasum": "410543c4b14d5c88fa53d7256717756cab522e65"
+            },
+            "require": {
+                "drupal/core": "~8.1"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha3",
+                    "datestamp": "1481822103",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "agoradesign",
+                    "homepage": "https://www.drupal.org/user/1183886"
+                }
+            ],
+            "description": "Administration links access filter provides a workaround for the common problem that users with 'Use the administration pages and help' permission see menu links they don't have access permission for.",
+            "homepage": "http://drupal.org/project/admin_links_access_filter",
+            "support": {
+                "source": "http://cgit.drupalcode.org/admin_links_access_filter"
+            }
+        },
+        {
             "name": "drupal/admin_toolbar",
             "version": "1.19.0",
             "source": {
@@ -1475,7 +1522,7 @@
                 "source": "http://cgit.drupalcode.org/calendar",
                 "issues": "https://www.drupal.org/project/issues/calendar"
             },
-            "time": "2017-06-02T07:50:40+00:00"
+            "time": "2017-06-02 07:50:40"
         },
         {
             "name": "drupal/calendar_datetime",
@@ -2691,7 +2738,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/entity_reference_integrity-8.x-1.0-rc3.zip",
-                "reference": null,
+                "reference": "8.x-1.0-rc3",
                 "shasum": "9a711d4a63b0a1f81e87d204b2935793d0dd31fd"
             },
             "require": {
@@ -2704,7 +2751,11 @@
                 },
                 "drupal": {
                     "version": "8.x-1.0-rc3",
-                    "datestamp": "1490776083"
+                    "datestamp": "1490776083",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "RC releases are not covered by Drupal security advisories."
+                    }
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3032,7 +3083,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/field_group"
             },
-            "time": "2017-07-13T22:41:32+00:00"
+            "time": "2017-07-13 22:41:32"
         },
         {
             "name": "drupal/geocoder",
@@ -4383,7 +4434,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/paragraphs_edit"
             },
-            "time": "2017-05-23T02:16:39+00:00"
+            "time": "2017-05-23 02:16:39"
         },
         {
             "name": "drupal/password_policy",
@@ -5132,7 +5183,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/simplify_menu"
             },
-            "time": "2017-06-16T01:01:50+00:00"
+            "time": "2017-06-16 01:01:50"
         },
         {
             "name": "drupal/sitemap",
@@ -5239,7 +5290,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/spamspan"
             },
-            "time": "2017-05-27T08:00:15+00:00"
+            "time": "2017-05-27 08:00:15"
         },
         {
             "name": "drupal/styled_google_map",
@@ -6872,7 +6923,7 @@
             ],
             "description": "GeoPHP is a open-source native PHP library for doing geometry operations. It is written entirely in PHP and can therefore run on shared hosts. It can read and write a wide variety of formats: WKT (including EWKT), WKB (including EWKB), GeoJSON, KML, GPX, GeoRSS). It works with all Simple-Feature geometries (Point, LineString, Polygon, GeometryCollection etc.) and can be used to get centroids, bounding-boxes, area, and a wide variety of other useful information.",
             "homepage": "https://github.com/phayes/geoPHP",
-            "time": "2016-03-04T05:42:29+00:00"
+            "time": "2016-03-04 05:42:29"
         },
         {
             "name": "php-coord/php-coord",
@@ -10394,7 +10445,7 @@
                 "drupal8",
                 "l10n"
             ],
-            "time": "2017-04-05T05:38:54+00:00"
+            "time": "2017-04-05 05:38:54"
         },
         {
             "name": "mikey179/vfsStream",
@@ -10485,7 +10536,7 @@
             ],
             "description": "An abstraction library for Elasticsearch Connector module for Drupal.",
             "homepage": "https://github.com/nodespark/des-connector",
-            "time": "2017-05-23T10:55:47+00:00"
+            "time": "2017-05-23 10:55:47"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -12178,6 +12229,7 @@
         "degov/nrw_modules": 20,
         "degov/nrw_theme": 20,
         "degov/nrw_features": 20,
+        "drupal/admin_links_access_filter": 15,
         "drupal/stage_file_proxy": 15,
         "kgaut/potx": 20,
         "drupal/eu_cookie_compliance": 10,
