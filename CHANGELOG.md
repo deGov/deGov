@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [1.7.0] - IN DEVELOPMENT
 
+## [1.6.1] - 2017-09-15
+### Added
+- Added missing media templates to nrw theme.
+
 ## [1.6.0] - 2017-09-15
 ### Added
 - Drush development dependency potx added for translations extraction.
