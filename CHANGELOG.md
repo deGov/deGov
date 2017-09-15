@@ -12,6 +12,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Stage file proxy development dependency added to receive remote resources.
 - New calendar view has been added for press content.
 - Added testing documentation.
+- Added author and copyright filter to media overview page.
+- Asset fields (accessibility, duration, transcription and language) for video and audio media types.
 
 ### Changed
 - Social media and tags are refactored to be outside of the header paragraph.
@@ -19,6 +21,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 - Patches are fixed and updated so no warnings are thrown during installation.
+- Nodes view mode preview when a view is added in the sidebar.
 - Removes PHP 7 code, to continue support of PHP 5.6.
 - URLs in emails are now absolute as well as image sources and other URI attributes.
 - Corrects the redirect unsubscription URL for simplenews with multilingual frontpage enabled.
@@ -32,6 +35,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Moves the shariff2click functionality to the module depending on shariff.
 - Fixes icon display and download block when in the sidebar.
 - Image styles regeneration on media update.
+- Updates the responsive image styles for media video and video upload view modes.
+- Node view modes title and text fields have been trimmed.
 
 ## [1.5.0] - 2017-09-08
 ### Added
