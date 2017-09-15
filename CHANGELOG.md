@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Social media and tags are refactored to be outside of the header paragraph.
 - Specific node content fields are rearranged to be above the common field groups.
+- Changed view mode teaser for event and press, used in views and search.
 
 ### Fixed
 - Patches are fixed and updated so no warnings are thrown during installation.
