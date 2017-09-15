@@ -39,6 +39,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Node view modes title and text fields have been trimmed.
 - Fixed play/pause functionality for sliders.
 - Removed install config for instagram and tweet, since its already part of lightning.
+- Improved language block tab accessibility. 
 
 ## [1.5.0] - 2017-09-08
 ### Added
