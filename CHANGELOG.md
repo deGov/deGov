@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Drush development dependency potx added for translations extraction.
 - Stage file proxy development dependency added to receive remote resources.
 - New calendar view has been added for press content.
+- Added testing documentation.
 
 ### Changed
 - Social media and tags are refactored to be outside of the header paragraph.
