@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Asset fields (accessibility, duration, transcription and language) for video and audio media types.
 - Added admin_links_access_filter module for admin toolbar restriction by permission.
 - Added getid3 library for retrieving duration of media.
+- Support for additional table properties in ckeditor.
 
 ### Changed
 - Social media and tags are refactored to be outside of the header paragraph.
