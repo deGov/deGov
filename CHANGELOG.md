@@ -38,6 +38,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Header only appears when there is something inside.
 - Node view modes title and text fields have been trimmed.
 - Fixed play/pause functionality for sliders.
+- Add active trail classes for the menu.
 
 ## [1.5.0] - 2017-09-08
 ### Added
