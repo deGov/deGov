@@ -49,11 +49,11 @@
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         },
-        "degov-nrw-modules": {
+        "degov/modules": {
             "type": "git",
             "url": "git@github.com:deGov/modules.git"
         },
-        "degov-nrw-features": {
+        "degov/features": {
             "type": "git",
             "url": "git@github.com:deGov/features.git"
         }
@@ -95,11 +95,11 @@
             "docroot/libraries/{$name}": [
                 "type:drupal-library"
             ],
-            "docroot/modules/nrw/modules": [
-                "degov/nrw_modules"
+            "docroot/modules/degov/modules": [
+                "degov/modules"
             ],
-            "docroot/modules/nrw/features": [
-                "degov/nrw_features"
+            "docroot/modules/degov/features": [
+                "degov/features"
             ],
             "docroot/themes/nrw/nrw_base_theme": [
                 "degov/nrw_theme"
