@@ -12,6 +12,9 @@ What actually happened?
 
 ### System configuration
 
-* Operating System
-* PHP Version
-* Database
+| System          | Version |
+|-----------------|---------|
+|Operating System |?        |
+|PHP Version      |?        |
+|Database Version |?        |
+|Drupal Version   |?        |
