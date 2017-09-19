@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a2abfc2f0b316cfae4a081c99d4f38f9",
+    "content-hash": "f778a6e86ad93b13585f16d7a363ee26",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -4004,8 +4004,7 @@
                 "shasum": "8f1e27ed42675e8a1aaabe0fa28ee592fed80051"
             },
             "require": {
-                "drupal/core": "^8.0.5",
-                "drupal/ctools": "~3"
+                "drupal/core": "~8.0"
             },
             "type": "drupal-module",
             "extra": {
@@ -4192,7 +4191,7 @@
             "require-dev": {
                 "drupal/page_manager": "*"
             },
-            "type": "metapackage",
+            "type": "drupal-module",
             "extra": {
                 "branch-alias": {
                     "dev-4.x": "4.x-dev"
@@ -4351,7 +4350,7 @@
             "type": "drupal-module",
             "extra": {
                 "branch-alias": {
-                    "dev-2.x": "2.x-dev"
+                    "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
                     "version": "8.x-1.1",
@@ -6457,7 +6456,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GNU Public License"
+                "MIT"
             ],
             "authors": [
                 {
@@ -6560,7 +6559,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GNU General Public License V2"
+                "MIT"
             ],
             "authors": [
                 {
@@ -6643,7 +6642,6 @@
                     "dev-master": "1.0-dev"
                 }
             },
-            "type": "library",
             "autoload": {
                 "classmap": [
                     "TwitterAPIExchange.php"
@@ -7312,11 +7310,7 @@
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.9",
-                "psr/log": "~1.0"
-            },
-            "conflict": {
-                "symfony/http-kernel": ">=2.3,<2.3.24|~2.4.0|>=2.5,<2.5.9|>=2.6,<2.6.2"
+                "php": ">=5.3.3"
             },
             "require-dev": {
                 "mockery/mockery": "~0.9.1",
@@ -7562,14 +7556,6 @@
             "autoload": {
                 "psr-4": {
                     "Symfony\\Component\\Debug\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\HttpKernel\\": ""
                 },
                 "exclude-from-classmap": [
                     "/Tests/"
