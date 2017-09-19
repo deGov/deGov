@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added 
 - Provided additional info to composer patches to prevent the 'no interaction error' on composer
   deployments with flags '--no-progress --prefer-dist --optimize-autoloader --no-interaction --no-ansi'.
+- Adds a tags filter field to the media content overview page.
 
 ### Fixed
 - Patches entity browser views that do not have use_ajax explicitly enabled - 2902831.
