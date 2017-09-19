@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1a399567d14bed43cbd8367df10147e7",
+    "content-hash": "a2abfc2f0b316cfae4a081c99d4f38f9",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -631,7 +631,7 @@
             },
             "type": "library",
             "description": "deGov - NRW Features",
-            "time": "2017-08-31 19:41:45"
+            "time": "2017-08-31T19:41:45+00:00"
         },
         {
             "name": "degov/nrw_modules",
@@ -643,7 +643,7 @@
             },
             "type": "library",
             "description": "deGov - NRW Modules",
-            "time": "2017-09-08 15:20:43"
+            "time": "2017-09-08T15:20:43+00:00"
         },
         {
             "name": "degov/nrw_theme",
@@ -658,7 +658,7 @@
             },
             "type": "library",
             "description": "deGov - NRW Theme",
-            "time": "2017-09-08 15:01:37"
+            "time": "2017-09-08T15:01:37+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -1461,14 +1461,12 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/calendar",
-                "reference": "916eeb8cc6186d38718584d263ba2ea6db165e5f"
+                "reference": "02abcfd9c7702301c3f3b9a9a4da8f943fbf333e"
             },
             "require": {
                 "drupal/calendar_datetime": "*",
                 "drupal/core": "*",
-                "drupal/datetime": "*",
-                "drupal/views": "*",
-                "drupal/views_templates": "*"
+                "drupal/views_templates": "1.*"
             },
             "type": "drupal-module",
             "extra": {
@@ -1522,7 +1520,7 @@
                 "source": "http://cgit.drupalcode.org/calendar",
                 "issues": "https://www.drupal.org/project/issues/calendar"
             },
-            "time": "2017-06-02 07:50:40"
+            "time": "2017-09-13T12:29:50+00:00"
         },
         {
             "name": "drupal/calendar_datetime",
@@ -2292,11 +2290,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.0-alpha7",
-                    "datestamp": "1495200183",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
-                    }
+                    "datestamp": "1495200183"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -2560,7 +2554,11 @@
                 },
                 "drupal": {
                     "version": "8.x-1.0",
-                    "datestamp": "1492678144"
+                    "datestamp": "1502200443",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
                 },
                 "patches_applied": {
                     "2865928 - The View widget should filter based on field settings": "https://www.drupal.org/files/issues/entity-browser-view-context-2865928-8.patch",
@@ -2742,7 +2740,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/entity_reference_integrity-8.x-1.0-rc3.zip",
-                "reference": "8.x-1.0-rc3",
+                "reference": null,
                 "shasum": "9a711d4a63b0a1f81e87d204b2935793d0dd31fd"
             },
             "require": {
@@ -2755,11 +2753,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.0-rc3",
-                    "datestamp": "1490776083",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "RC releases are not covered by Drupal security advisories."
-                    }
+                    "datestamp": "1490776083"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -2938,11 +2932,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.0-alpha10",
-                    "datestamp": "1500888543",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
-                    }
+                    "datestamp": "1500888543"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3091,7 +3081,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/field_group"
             },
-            "time": "2017-07-13 22:41:32"
+            "time": "2017-07-13T22:41:32+00:00"
         },
         {
             "name": "drupal/geocoder",
@@ -3969,11 +3959,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.1",
-                    "datestamp": "1501553646",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
+                    "datestamp": "1496428672"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -4446,7 +4432,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/paragraphs_edit"
             },
-            "time": "2017-05-23 02:16:39"
+            "time": "2017-05-23T02:16:39+00:00"
         },
         {
             "name": "drupal/password_policy",
@@ -4800,11 +4786,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.2",
-                    "datestamp": "1500483242",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
+                    "datestamp": "1498403342"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -5120,11 +5102,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.0-alpha3",
-                    "datestamp": "1487059683",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Alpha releases are not covered by Drupal security advisories."
-                    }
+                    "datestamp": "1487059683"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -5203,7 +5181,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/simplify_menu"
             },
-            "time": "2017-06-16 01:01:50"
+            "time": "2017-06-16T01:01:50+00:00"
         },
         {
             "name": "drupal/sitemap",
@@ -5310,7 +5288,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/spamspan"
             },
-            "time": "2017-05-27 08:00:15"
+            "time": "2017-05-27T08:00:15+00:00"
         },
         {
             "name": "drupal/styled_google_map",
@@ -5804,11 +5782,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.0-beta1",
-                    "datestamp": "1500074043",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
-                    }
+                    "datestamp": "1497764942"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -5823,10 +5797,6 @@
                 {
                     "name": "joekers",
                     "homepage": "https://www.drupal.org/user/2229066"
-                },
-                {
-                    "name": "seanB",
-                    "homepage": "https://www.drupal.org/user/545912"
                 }
             ],
             "description": "Views Reference",
@@ -5863,11 +5833,7 @@
                 },
                 "drupal": {
                     "version": "8.x-5.0-beta13",
-                    "datestamp": "1498698843",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
-                    }
+                    "datestamp": "1498698843"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -7017,7 +6983,7 @@
             ],
             "description": "GeoPHP is a open-source native PHP library for doing geometry operations. It is written entirely in PHP and can therefore run on shared hosts. It can read and write a wide variety of formats: WKT (including EWKT), WKB (including EWKB), GeoJSON, KML, GPX, GeoRSS). It works with all Simple-Feature geometries (Point, LineString, Polygon, GeometryCollection etc.) and can be used to get centroids, bounding-boxes, area, and a wide variety of other useful information.",
             "homepage": "https://github.com/phayes/geoPHP",
-            "time": "2016-03-04 05:42:29"
+            "time": "2016-03-04T05:42:29+00:00"
         },
         {
             "name": "php-coord/php-coord",
@@ -9974,11 +9940,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.6",
-                    "datestamp": "1487359983",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
+                    "datestamp": "1487359983"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -9991,16 +9953,12 @@
                     "homepage": "https://www.drupal.org/user/153069"
                 },
                 {
-                    "name": "RenatoG",
-                    "homepage": "https://www.drupal.org/user/3326031"
+                    "name": "rakesh.gectcr",
+                    "homepage": "https://www.drupal.org/user/1177822"
                 },
                 {
                     "name": "sonemonu",
                     "homepage": "https://www.drupal.org/user/1667988"
-                },
-                {
-                    "name": "tatarbj",
-                    "homepage": "https://www.drupal.org/user/649590"
                 }
             ],
             "description": "Adds configuration to the system breadcrumbs.",
@@ -10547,7 +10505,7 @@
                 "drupal8",
                 "l10n"
             ],
-            "time": "2017-04-05 05:38:54"
+            "time": "2017-04-05T05:38:54+00:00"
         },
         {
             "name": "mikey179/vfsStream",
@@ -10638,7 +10596,7 @@
             ],
             "description": "An abstraction library for Elasticsearch Connector module for Drupal.",
             "homepage": "https://github.com/nodespark/des-connector",
-            "time": "2017-05-23 10:55:47"
+            "time": "2017-05-23T10:55:47+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -12324,6 +12282,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "drupal/admin_links_access_filter": 15,
         "drupal/spamspan": 20,
         "drupal/ultimate_cron": 15,
         "drupal/viewsreference": 15,
@@ -12331,7 +12290,6 @@
         "degov/nrw_modules": 20,
         "degov/nrw_theme": 20,
         "degov/nrw_features": 20,
-        "drupal/admin_links_access_filter": 15,
         "drupal/stage_file_proxy": 15,
         "kgaut/potx": 20,
         "drupal/eu_cookie_compliance": 10,
