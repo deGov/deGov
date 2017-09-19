@@ -7,9 +7,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 ## [1.7.0] - IN DEVELOPMENT
+### Fixed
+- Starterkit theme has been updated to reflect latest stable theme.
+- Set an ative trail class for header menu items.
 
-## [1.6.2] - 2017-09-19
-### Added 
+## [1.6.4] - IN DEVELOPMENT
+### Added
+- Multilingual menu support added.
+
+## [1.6.3] - 2017-09-19
+### Added
 - Provided additional info to composer patches to prevent the 'no interaction error' on composer
   deployments with flags '--no-progress --prefer-dist --optimize-autoloader --no-interaction --no-ansi'.
 - Adds a tags filter field to the media content overview page.
@@ -17,6 +24,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Fixed
 - Patches entity browser views that do not have use_ajax explicitly enabled - 2902831.
 - Fixed problem with bad requests to youtube API.
+
+## [1.6.2] - 2017-09-15
+### Added
+- Added forgotten missing media templates to nrw theme.
  
 ## [1.6.1] - 2017-09-15
 ### Added
