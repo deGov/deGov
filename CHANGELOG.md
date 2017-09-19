@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 - Patches entity browser views that do not have use_ajax explicitly enabled - 2902831.
+- Fixed problem with bad requests to youtube API.
  
 ## [1.6.1] - 2017-09-15
 ### Added
