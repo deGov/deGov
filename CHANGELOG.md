@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [1.6.2] - 2017-09-19
 ### Added 
 - Provided additional info to composer patches to prevent the 'no interaction error' on composer
-  deployments with flags '--no-progress --p refer-dist --optimize-autoloader --no-interaction --no-ansi'.
+  deployments with flags '--no-progress --prefer-dist --optimize-autoloader --no-interaction --no-ansi'.
 
 ### Fixed
 - Patches entity browser views that do not have use_ajax explicitly enabled - 2902831.
