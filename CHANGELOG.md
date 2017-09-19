@@ -6,7 +6,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [1.6.0] - DEVELOPMENT
+## [1.7.0] - IN DEVELOPMENT
+
+## [1.6.2] - 2017-09-19
+### Added 
+- Provided additional info to composer patches to prevent the 'no interaction error' on composer
+  deployments with flags '--no-progress --p refer-dist --optimize-autoloader --no-interaction --no-ansi'. 
+ 
+## [1.6.1] - 2017-09-15
+### Added
+- Added missing media templates to nrw theme.
+
+## [1.6.0] - 2017-09-15
 ### Added
 - Drush development dependency potx added for translations extraction.
 - Stage file proxy development dependency added to receive remote resources.
