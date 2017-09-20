@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8b329299a2a5fb019cef9cc8137d2aeb",
+    "content-hash": "9da1b4979cc4d73b00ad498950d5ec0c",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -468,7 +468,7 @@
         },
         {
             "name": "degov/nrw_features",
-            "version": "1.6.3",
+            "version": "1.6.4",
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:publicplan/degov_nrw_features.git",
@@ -480,19 +480,19 @@
         },
         {
             "name": "degov/nrw_modules",
-            "version": "1.6.3",
+            "version": "1.6.4",
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:publicplan/degov_nrw_modules.git",
-                "reference": "166eafbe426890ffe57ced948009fde1353b0c99"
+                "reference": "3de4110b58ee2f625acf66ab27460dc29a575971"
             },
             "type": "library",
             "description": "deGov - NRW Modules",
-            "time": "2017-09-19T09:39:04+00:00"
+            "time": "2017-09-19T13:17:57+00:00"
         },
         {
             "name": "degov/nrw_theme",
-            "version": "1.6.3",
+            "version": "1.6.4",
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:publicplan/degov_nrw_theme.git",
@@ -9733,7 +9733,7 @@
             "version": "4.2.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/enyo/dropzone",
+                "url": "https://github.com/enyo/dropzone.git",
                 "reference": "origin/master"
             },
             "type": "drupal-library"

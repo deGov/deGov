@@ -7,9 +7,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 ## [1.7.0] - IN DEVELOPMENT
+### Fixed
+- Starterkit theme has been updated to reflect latest stable theme.
+- Set an ative trail class for header menu items.
+
+## [1.6.4] - 2017-09-20
+### Added
+- Multilingual menu support added.
 
 ## [1.6.3] - 2017-09-19
-### Added 
+### Added
 - Provided additional info to composer patches to prevent the 'no interaction error' on composer
   deployments with flags '--no-progress --prefer-dist --optimize-autoloader --no-interaction --no-ansi'.
 - Adds a tags filter field to the media content overview page.
