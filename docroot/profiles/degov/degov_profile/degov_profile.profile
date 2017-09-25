@@ -99,7 +99,6 @@ function degov_media_setup(&$install_state) {
 
   // Define all required base deGov modules and features.
   $modules = array(
-    'degov_social_media_settings' => 'degov_social_media_settings',
     'degov_media_address' => 'degov_media_address',
     'degov_media_audio' => 'degov_media_audio',
     'degov_media_caption_helper' => 'degov_media_caption_helper',
