@@ -303,7 +303,6 @@ function degov_profile_form_install_configure_form_alter(&$form, \Drupal\Core\Fo
     'degov_eu_cookie_compliance' => 'degov_eu_cookie_compliance',
     'degov_password_policy' => 'degov_password_policy',
     'degov_sitemap_settings' => 'degov_sitemap_settings',
-    'degov_multilingual' => 'degov_multilingual',
     'degov_restrict_ip' => 'degov_restrict_ip',
     'degov_taxonomy_media_accessibility' => 'degov_taxonomy_media_accessibility',
     'degov_taxonomy_media_language' => 'degov_taxonomy_media_language'
