@@ -7,13 +7,13 @@ default:
         - '\Drupal\DrupalExtension\Context\MessageContext'
         - '\Drupal\DrupalExtension\Context\DrushContext'
         - '\BeHat\Feature\Context\DeGovContext'
-      paths: [ %paths.base%/features ]
+      paths: [ %paths.base%/testing/features ]
   extensions:
     Behat\MinkExtension:
       goutte: ~
       selenium2: ~
       base_url: http://degov.local.com/  # Replace with your site's URL
-      files_path: %paths.base%/media/dummy/
+      files_path: %paths.base%/testing/media/dummy/
     Drupal\DrupalExtension:
       blackbox: ~
       api_driver: 'drush'
