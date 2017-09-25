@@ -1,0 +1,10 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall hooks for the deGov profile.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function degov_profile_install() { }
