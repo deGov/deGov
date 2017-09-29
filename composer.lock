@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e397cc5c4200b8eeeab5e8a605bb945a",
+    "content-hash": "4cbb788f18b9902df6613b1b0ec3211a",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -465,6 +465,30 @@
             ],
             "description": "Provides a way to patch Composer packages.",
             "time": "2017-03-19T18:18:52+00:00"
+        },
+        {
+            "name": "degov/features",
+            "version": "1.6.4",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:deGov/features.git",
+                "reference": "219e0ed79c85652f4727dbfaf84563efaffcf3dd"
+            },
+            "type": "library",
+            "description": "deGov - NRW Features",
+            "time": "2017-09-15T16:38:59+00:00"
+        },
+        {
+            "name": "degov/modules",
+            "version": "1.6.4",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:deGov/modules.git",
+                "reference": "3de4110b58ee2f625acf66ab27460dc29a575971"
+            },
+            "type": "library",
+            "description": "deGov - NRW Modules",
+            "time": "2017-09-19T13:17:57+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -7570,7 +7594,8 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/calendar",
                 "issues": "https://www.drupal.org/project/issues/calendar"
-            }
+            },
+            "time": "2017-09-13T12:29:50+00:00"
         },
         {
             "name": "drupal/calendar_datetime",
@@ -9694,7 +9719,7 @@
             "version": "4.2.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/enyo/dropzone",
+                "url": "https://github.com/enyo/dropzone.git",
                 "reference": "origin/master"
             },
             "type": "drupal-library"

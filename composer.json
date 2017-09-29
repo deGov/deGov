@@ -43,7 +43,9 @@
         "drupal/viewsreference": "^1.0@alpha",
         "drupal/webform": "^5.0@beta",
         "drupal/entity_reference_display": "^1.0",
-        "drupal/search_api_solr": "^1.0"
+        "drupal/search_api_solr": "^1.0",
+        "degov/modules": "1.6.4",
+        "degov/features": "1.6.4"
     },
     "repositories": {
         "drupal": {
