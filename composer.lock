@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "9da1b4979cc4d73b00ad498950d5ec0c",
+    "content-hash": "e397cc5c4200b8eeeab5e8a605bb945a",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -465,45 +465,6 @@
             ],
             "description": "Provides a way to patch Composer packages.",
             "time": "2017-03-19T18:18:52+00:00"
-        },
-        {
-            "name": "degov/nrw_features",
-            "version": "1.6.4",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:publicplan/degov_nrw_features.git",
-                "reference": "219e0ed79c85652f4727dbfaf84563efaffcf3dd"
-            },
-            "type": "library",
-            "description": "deGov - NRW Features",
-            "time": "2017-09-15T16:38:59+00:00"
-        },
-        {
-            "name": "degov/nrw_modules",
-            "version": "1.6.4",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:publicplan/degov_nrw_modules.git",
-                "reference": "3de4110b58ee2f625acf66ab27460dc29a575971"
-            },
-            "type": "library",
-            "description": "deGov - NRW Modules",
-            "time": "2017-09-19T13:17:57+00:00"
-        },
-        {
-            "name": "degov/nrw_theme",
-            "version": "1.6.4",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:publicplan/degov_nrw_theme.git",
-                "reference": "0219145829fa564f0e6a3ce19fea82086d2f00c8"
-            },
-            "require": {
-                "drupal/bootstrap": "^3.3"
-            },
-            "type": "library",
-            "description": "deGov - NRW Theme",
-            "time": "2017-09-15T17:48:30+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -3591,7 +3552,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/spamspan"
             },
-            "time": "2017-05-27 08:00:15"
+            "time": "2017-05-27T08:00:15+00:00"
         },
         {
             "name": "drupal/token",
@@ -8281,7 +8242,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/field_group"
             },
-            "time": "2017-07-13 22:41:32"
+            "time": "2017-07-13T22:41:32+00:00"
         },
         {
             "name": "drupal/geocoder",
@@ -8781,7 +8742,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/paragraphs_edit"
             },
-            "time": "2017-05-23 02:16:39"
+            "time": "2017-05-23T02:16:39+00:00"
         },
         {
             "name": "drupal/password_policy",
@@ -9175,7 +9136,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/simplify_menu"
             },
-            "time": "2017-06-16 01:01:50"
+            "time": "2017-06-16T01:01:50+00:00"
         },
         {
             "name": "drupal/stage_file_proxy",
@@ -9733,7 +9694,7 @@
             "version": "4.2.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/enyo/dropzone.git",
+                "url": "https://github.com/enyo/dropzone",
                 "reference": "origin/master"
             },
             "type": "drupal-library"
@@ -10306,7 +10267,7 @@
             ],
             "description": "An abstraction library for Elasticsearch Connector module for Drupal.",
             "homepage": "https://github.com/nodespark/des-connector",
-            "time": "2017-05-23 10:55:47"
+            "time": "2017-05-23T10:55:47+00:00"
         },
         {
             "name": "phansys/getid3",
@@ -10368,7 +10329,7 @@
                 "tags"
             ],
             "abandoned": "james-heinrich/getid3",
-            "time": "2017-05-26 00:05:10"
+            "time": "2017-05-26T00:05:10+00:00"
         },
         {
             "name": "phayes/geophp",
@@ -10404,7 +10365,7 @@
             ],
             "description": "GeoPHP is a open-source native PHP library for doing geometry operations. It is written entirely in PHP and can therefore run on shared hosts. It can read and write a wide variety of formats: WKT (including EWKT), WKB (including EWKB), GeoJSON, KML, GPX, GeoRSS). It works with all Simple-Feature geometries (Point, LineString, Polygon, GeometryCollection etc.) and can be used to get centroids, bounding-boxes, area, and a wide variety of other useful information.",
             "homepage": "https://github.com/phayes/geoPHP",
-            "time": "2016-03-04 05:42:29"
+            "time": "2016-03-04T05:42:29+00:00"
         },
         {
             "name": "php-coord/php-coord",
