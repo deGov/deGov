@@ -1,30 +1,28 @@
+
 name: 'deGov'
 type: profile
 distribution:
   name: deGov
   langcode: de
 description: 'Drupal 8 for Government (Drupal 8 für die öffentliche Verwaltung)'
-version: 8.x-dev
+version: master
 core: '8.x'
 dependencies:
   - admin_toolbar
   - admin_toolbar_tools
-  - automated_cron
-  - config_rewrite
-  - entity_browser
+  - content_access
   - entity_reference_revisions
+  - entity_browser
   - features
   - filter
-  - open_readspeaker
-  - pathauto
   - paragraphs
-  - piwik
-  - scheduled_updates
-  - sitemap
-  - simple_sitemap
   - spamspan
-  - ultimate_cron
   - viewsreference
+  - pathauto
+  - simple_sitemap
+  - automated_cron
+  - ultimate_cron
+  - scheduled_updates
   - webform
 
 themes:
@@ -33,10 +31,3 @@ themes:
 
 base profile:
   name: lightning
-  excluded_dependencies:
-    - lightning_landing_page
-    - lightning_layout
-    - lightning_page
-    - lightning_contact_form
-    - lightning_roles
-    - lightning_search

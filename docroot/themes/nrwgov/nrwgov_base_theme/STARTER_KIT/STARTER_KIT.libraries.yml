@@ -1,7 +1,0 @@
-theme-assets:
-  css:
-    theme:
-      public/css/bootstrap.css: {}
-      public/css/style.css: {}
-  js:
-    public/js/bundle.js: {}

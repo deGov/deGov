@@ -1,32 +1,17 @@
 {
-    "name": "NRWgov/NRWgov",
+    "name": "deGov/deGov",
     "description": "Drupal 8 for Government (Drupal 8 für die öffentliche Verwaltung)",
     "type": "project",
     "license": "GPL-2.0+",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require-dev": {
-        "drupal/drupal-extension": "^3.2",
-        "behat/mink": "~1.7",
-        "behat/mink-goutte-driver": "~1.2",
-        "jcalderonzumba/gastonjs": "~1.0.2",
-        "drupal/coder": "8.*",
-        "mikey179/vfsStream": "~1.2",
-        "phpunit/phpunit": "~4.8",
-        "symfony/css-selector": "~2.8",
-        "behat/behat": "^3.0",
-        "se/selenium-server-standalone": "^2.53",
-        "composer/composer": "^1.3",
-        "drupal/twig_xdebug": "^1.0",
-        "phpdocumentor/reflection-docblock": "^3.0.0"
+        "drupal/twig_xdebug": "^1.0"
     },
     "require": {
-        "composer/installers": "^1.0",
-        "drupal-composer/drupal-scaffold": "^2.0.0",
-        "cweagans/composer-patches": "^1.6.0",
         "mnsami/composer-custom-directory-installer": "^1.0",
-        "wikimedia/composer-merge-plugin": "^1.4",
-        "acquia/lightning": "~2.1.0",
+        "wikimedia/composer-merge-plugin": "dev-master",
+        "acquia/lightning": "~2.2.0",
         "drupal/config_rewrite": "^1.0",
         "drupal/admin_toolbar": "^1.19",
         "drupal/entity_reference_revisions": "^1.2",
@@ -41,8 +26,9 @@
         "drupal/webform": "^5.0@beta",
         "drupal/entity_reference_display": "^1.0",
         "drupal/search_api_solr": "^1.0",
-        "degov/features": "1.5.0",
-        "degov/modules": "1.5.0"
+        "degov/features": "1.6.4",
+        "degov/modules": "1.6.4",
+        "drupal/easy_breadcrumb": "^1.6"
     },
     "repositories": {
         "drupal": {
@@ -56,6 +42,10 @@
         "degov/features": {
             "type": "git",
             "url": "git@github.com:deGov/features.git"
+        },
+        "bower-assets": {
+          "type": "composer",
+          "url": "https://asset-packagist.org"
         }
     },
     "scripts": {
@@ -76,6 +66,10 @@
         "bin-dir": "bin/"
     },
     "extra": {
+        "installer-types": [
+          "bower-asset",
+          "npm-asset"
+        ],
         "installer-paths": {
             "docroot/core": [
                 "type:drupal-core"
@@ -93,48 +87,31 @@
                 "type:drupal-drush"
             ],
             "docroot/libraries/{$name}": [
-                "type:drupal-library"
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
             ],
             "docroot/modules/degov/modules": [
                 "degov/modules"
             ],
             "docroot/modules/degov/features": [
                 "degov/features"
-            ],
-            "docroot/themes/nrw/nrw_base_theme": [
-                "degov/nrw_theme"
             ]
-        },
-        "enable-patching": true,
-        "patches": {
-            "drupal/core": {
-                "2893029 - StringTranslationTrait consumers cannot be reliably serialized without DependencySerializationTrait":
-                "https://www.drupal.org/files/issues/2893029-full-fix-test-from-3.patch",
-                "2652542 - Add .install file abilities for Themes":
-                "https://www.drupal.org/files/issues/2652542-add-theme-ability-install-file-and-hook-29-D8.3.patch"
-            },
-            "drupal/paragraphs" : {
-                "2788607 - Empty required fields not providing meaningful error messages" :
-                "https://www.drupal.org/files/issues/empty_required_fields-2788607-81.patch"
-            },
-            "drupal/config_rewrite": {
-                "2903629 - Allow optional config rewrite":
-                "https://www.drupal.org/files/issues/empty_config.patch"
-            }
         },
         "merge-plugin": {
             "merge-extra": true,
-            "merge-extra-deep": true,
+            "merge-extra-deep": false,
             "include": [
-                "docroot/modules/nrw/*/*/composer.json",
-                "docroot/modules/nrwgov/*/*/composer.json",
-                "docroot/modules/custom/*/composer.json",
-                "docroot/themes/nrw/*/composer.json",
-                "docroot/themes/nrwgov/*/composer.json"
+              "docroot/modules/degov/*/*/composer.json",
+              "docroot/modules/custom/*/composer.json",
+              "docroot/themes/degov/*/composer.json",
+              "docroot/profiles/contrib/*/composer.json",
+              "docroot/profiles/custom/*/composer.json"
             ]
         }
     },
     "autoload-dev": {
         "psr-4": { "BeHat\\Feature\\" : "features/src/"}
     }
+
 }
