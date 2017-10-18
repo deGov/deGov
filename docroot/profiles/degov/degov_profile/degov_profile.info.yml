@@ -26,10 +26,6 @@ dependencies:
   - ultimate_cron
   - viewsreference
   - webform
-# Simplenews and image_widget_crop is set as a dependency, because
-# the configuration is else incomplete during profile installation.
-  - simplenews
-  - image_widget_crop
 
 themes:
   - seven
