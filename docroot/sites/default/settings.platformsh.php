@@ -34,6 +34,20 @@ if (isset($_ENV['PLATFORM_RELATIONSHIPS'])) {
           $databases[$drupal_key]['replica'][] = $database;
         }
       }
+      if ($drupal_key == 'cache') {
+        foreach ($relationship as $instance) {
+          if (empty($instance['scheme']) && $instance['scheme'] == 'memcached' && empty($settings['memcache_storage'])) {
+            $settings['memcache_storage']['key_prefix'] = 'nrw';
+            $settings['memcache_storage']['extension'] = 'Memcached';
+            $settings['memcache_storage']['memcached_servers'] = [
+              $instance['host'] . ':' . $instance['port'] => 'default',
+            ];
+            if (!drupal_installation_attempted()) {
+              $settings['cache']['default'] = 'cache.backend.degov_common';
+            }
+          }
+        }
+      }
     }
   }
 }
