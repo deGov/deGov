@@ -6,9 +6,37 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.8.0] - 2017-10-17 
+### Added
+- Patched Geocoder to support an API key - 2699861.
+- Menu breadcrumb module so breadcrumbs are based on menu path.
+- Teaser subtitle has been added to the slim view modes.
+
+### Changed
+- degov_views_helper functionality was transfered to degov_common module.
+- Added API key support for Geocoder. Patch is applied.
+- Added control field for optional media download.
+- Added the special char button to the editor toolbar.
+- Date format in press from medium to short.
+- Added Workbench module and granted permission 'access workbench' to the editor role.
+- Revoked the 'access content overview' permission from the editor role.
+- Patched Entity Embed module to support linking and added autocompletion.
+- "Save to my media library" checkbox in media was removed from the form.
+- Include in search field was renamed to "Mediathek".
+
+### Fixed
+- Template suggestions now can be set from different modules for the same bundle of entity type.
+- The image preview in Media reference paragraph preview mode is now not overlapping the edit buttons.
+- Completely seperated NRW and deGov code the degov_media_address and nrw_media_address module.
+- Added !important to header title in print css for print preview in chrome.
+- Timezone corrected in twig templates for events.
+- If media duration is empty (NULL, '' or 0) it is now not displayed in frontend.
+- If the duration field already has value, it is not updated. It helps to reduce hits to Youtube and Vimeo APIs.
+- Media view mode selector doesn't break anymore if more than one media reference in content.
+
 ## [1.7.0] - 2017-09-22
 ### IMPORTANT: UPGRADE PATH - To-do's before upgrading
-- Disable module degov_vsm_search before updating to 1.7.0 code. 
+- Disable module degov_vsm_search before updating to 1.7.0 code.
   The module can be re-enabled after upgrade, only the machine name has changed.
 
 ### Added
@@ -25,9 +53,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Starterkit theme has been updated to reflect latest stable theme.
 - Set an active trail class for header menu items.
 - Enable the second level menu to be always visible in the main navigation.
-- Adds maximum width for images to prevent overscan of container. 
+- Adds maximum width for images to prevent overscan of container.
 
-## [1.6.5] - IN DEVELOPMENT
+## [1.6.5] - 2017-09-22
 ### Added
 - Memcached support and new service 'cache.backend.degov_common' for database fallback.
 - Media reference view mode added for video, video upload and audio
@@ -96,7 +124,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Fixed play/pause functionality for sliders.
 - Add active trail classes for the menu.
 - Removed install config for instagram and tweet, since its already part of lightning.
-- Improved language block tab accessibility. 
+- Improved language block tab accessibility.
 
 ## [1.5.0] - 2017-09-08
 ### Added
@@ -136,7 +164,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - New view mode preview added for the some_embed media bundle.
 - Added field_section to index and facet to search page.
 - Added deGov multilingual module to handle multilingual frontpages and according templates.
-- Added hoverIntent library to menu as additional UX improvement. 
+- Added hoverIntent library to menu as additional UX improvement.
 - Added new slideshow view mode for Node entity type to display content inside slideshow paragraph.
 - Title attributes on action elements added to improve UX.
 - New feature 'deGov - Restrict IP' added.
@@ -237,9 +265,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Default block configuration for 'deGov - Inhaltssuche'.
 - Block reference paragraph.
 - View mode selection for media reference.
-- Media entities search. Two different views were added for media management 
-  (special permission added), the other for all users to search media elements. 
-  Only the elements that have field_include_search checkbox enabled are allowed 
+- Media entities search. Two different views were added for media management
+  (special permission added), the other for all users to search media elements.
+  Only the elements that have field_include_search checkbox enabled are allowed
   to be searchable for all.
 - New field to support ogg video files in the video_upload media entity.
 - New service "degov_config.module_updater" for config updates from an update hook.
