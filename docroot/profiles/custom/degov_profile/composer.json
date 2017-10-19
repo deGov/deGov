@@ -8,11 +8,11 @@
     "require": {
         "drupal/admin_toolbar": ">=1.0",
         "drupal/admin_toolbar_tools": ">=1.0",
-        "drupal/content_access": ">=1.0",
         "drupal/entity_reference_revisions": ">=1.0",
+        "drupal/entity_reference_integrity_enforce": ">=1.0",
+        "drupal/entity_reference_integrity": ">=1.0",
         "drupal/filter": ">=1.0",
         "drupal/paragraphs": ">=1.0",
-        "drupal/spamspan": ">=1.0",
         "drupal/viewsreference": ">=1.0",
         "drupal/simple_sitemap": ">=1.0",
         "drupal/automated_cron": ">=1.0",
