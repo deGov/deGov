@@ -6,6 +6,126 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.8.0] - 2017-10-17 
+### Added
+- Patched Geocoder to support an API key - 2699861.
+- Menu breadcrumb module so breadcrumbs are based on menu path.
+- Teaser subtitle has been added to the slim view modes.
+
+### Changed
+- degov_views_helper functionality was transfered to degov_common module.
+- Added API key support for Geocoder. Patch is applied.
+- Added control field for optional media download.
+- Added the special char button to the editor toolbar.
+- Date format in press from medium to short.
+- Added Workbench module and granted permission 'access workbench' to the editor role.
+- Revoked the 'access content overview' permission from the editor role.
+- Patched Entity Embed module to support linking and added autocompletion.
+- "Save to my media library" checkbox in media was removed from the form.
+- Include in search field was renamed to "Mediathek".
+
+### Fixed
+- Template suggestions now can be set from different modules for the same bundle of entity type.
+- The image preview in Media reference paragraph preview mode is now not overlapping the edit buttons.
+- Completely seperated NRW and deGov code the degov_media_address and nrw_media_address module.
+- Added !important to header title in print css for print preview in chrome.
+- Timezone corrected in twig templates for events.
+- If media duration is empty (NULL, '' or 0) it is now not displayed in frontend.
+- If the duration field already has value, it is not updated. It helps to reduce hits to Youtube and Vimeo APIs.
+- Media view mode selector doesn't break anymore if more than one media reference in content.
+
+## [1.7.0] - 2017-09-22
+### IMPORTANT: UPGRADE PATH - To-do's before upgrading
+- Disable module degov_vsm_search before updating to 1.7.0 code.
+  The module can be re-enabled after upgrade, only the machine name has changed.
+
+### Added
+- Styling for having a visually visible menu active trail.
+- Enables platform support for imagick toolkit and adds contrib module.
+- Added aria to social media settings for accessibility.
+
+### Changed
+- Split functionality for specific maps into a seperate module.
+- New view mode templates are moved to the theme layer.
+- Video subtitle paragraph module is now a submodule of video upload.
+
+### Fixed
+- Starterkit theme has been updated to reflect latest stable theme.
+- Set an active trail class for header menu items.
+- Enable the second level menu to be always visible in the main navigation.
+- Adds maximum width for images to prevent overscan of container.
+
+## [1.6.5] - 2017-09-22
+### Added
+- Memcached support and new service 'cache.backend.degov_common' for database fallback.
+- Media reference view mode added for video, video upload and audio
+
+### Fixed
+- Make mail field in user profile mandatory if degov_simplenews module is enabled, because it is required for subscriptions.
+
+## [1.6.4] - 2017-09-20
+### Added
+- Multilingual menu support added.
+
+## [1.6.3] - 2017-09-19
+### Added
+- Provided additional info to composer patches to prevent the 'no interaction error' on composer
+  deployments with flags '--no-progress --prefer-dist --optimize-autoloader --no-interaction --no-ansi'.
+- Adds a tags filter field to the media content overview page.
+
+### Fixed
+- Patches entity browser views that do not have use_ajax explicitly enabled - 2902831.
+- Fixed problem with bad requests to youtube API.
+
+## [1.6.2] - 2017-09-15
+### Added
+- Added forgotten missing media templates to nrw theme.
+
+## [1.6.1] - 2017-09-15
+### Added
+- Added missing media templates to nrw theme.
+
+## [1.6.0] - 2017-09-15
+### Added
+- Drush development dependency potx added for translations extraction.
+- Stage file proxy development dependency added to receive remote resources.
+- New calendar view has been added for press content.
+- Added testing documentation.
+- Added author and copyright filter to media overview page.
+- Asset fields (accessibility, duration, transcription and language) for video and audio media types.
+- Added admin_links_access_filter module for admin toolbar restriction by permission.
+- Added getid3 library for retrieving duration of media.
+- Support for additional table properties in ckeditor.
+
+### Changed
+- Social media and tags are refactored to be outside of the header paragraph.
+- Specific node content fields are rearranged to be above the common field groups.
+- Changed view mode teaser for event and press, used in views and search.
+
+### Fixed
+- Patches are fixed and updated so no warnings are thrown during installation.
+- Nodes view mode preview when a view is added in the sidebar.
+- Removes PHP 7 code, to continue support of PHP 5.6.
+- URLs in emails are now absolute as well as image sources and other URI attributes.
+- Corrects the redirect unsubscription URL for simplenews with multilingual frontpage enabled.
+- Patches core bug to allow sending newsletters of simplenews with bulk operation - 2849674.
+- Slim view mode images are now rendered as small landscape 2:1.
+- Cleanup and fixes copyright field replacement in views and forms for the image module.
+- Citations now use the blockquote element to enclose the text.
+- Minor issue fixes in general page styling.
+- Tab accessibility is improved for the search functionality.
+- Patches contrib shariff fixing twitter popups and missing dependencies - 2881126.
+- Moves the shariff2click functionality to the module depending on shariff.
+- Fixes icon display and download block when in the sidebar.
+- Image styles regeneration on media update.
+- Updates the responsive image styles for media video and video upload view modes.
+- Header only appears when there is something inside.
+- Node view modes title and text fields have been trimmed.
+- Fixed play/pause functionality for sliders.
+- Add active trail classes for the menu.
+- Removed install config for instagram and tweet, since its already part of lightning.
+- Improved language block tab accessibility.
+
 ## [1.5.0] - 2017-09-08
 ### Added
 - Embedded view modes for media to simplify paragraph display in the node edit form.
@@ -44,7 +164,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - New view mode preview added for the some_embed media bundle.
 - Added field_section to index and facet to search page.
 - Added deGov multilingual module to handle multilingual frontpages and according templates.
-- Added hoverIntent library to menu as additional UX improvement. 
+- Added hoverIntent library to menu as additional UX improvement.
 - Added new slideshow view mode for Node entity type to display content inside slideshow paragraph.
 - Title attributes on action elements added to improve UX.
 - New feature 'deGov - Restrict IP' added.
@@ -145,9 +265,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Default block configuration for 'deGov - Inhaltssuche'.
 - Block reference paragraph.
 - View mode selection for media reference.
-- Media entities search. Two different views were added for media management 
-  (special permission added), the other for all users to search media elements. 
-  Only the elements that have field_include_search checkbox enabled are allowed 
+- Media entities search. Two different views were added for media management
+  (special permission added), the other for all users to search media elements.
+  Only the elements that have field_include_search checkbox enabled are allowed
   to be searchable for all.
 - New field to support ogg video files in the video_upload media entity.
 - New service "degov_config.module_updater" for config updates from an update hook.

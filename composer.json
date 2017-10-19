@@ -14,7 +14,10 @@
         "acquia/lightning": "~2.2.0",
         "drupal/config_rewrite": "^1.0",
         "drupal/admin_toolbar": "^1.19",
+        "drupal/admin_links_access_filter": "^1.0@alpha",
         "drupal/entity_reference_revisions": "^1.2",
+        "drupal/imagick": "^1.0",
+        "drupal/memcache_storage": "^1.0@beta",
         "drupal/open_readspeaker": "^1.3",
         "drupal/paragraphs": "^1.1",
         "drupal/piwik": "^1.1",
@@ -26,22 +29,16 @@
         "drupal/webform": "^5.0@beta",
         "drupal/entity_reference_display": "^1.0",
         "drupal/search_api_solr": "^1.0",
-        "degov/features": "1.6.4",
-        "degov/modules": "1.6.4",
-        "drupal/easy_breadcrumb": "^1.6"
+        "degov/modules": "1.8.0"
     },
     "repositories": {
         "drupal": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         },
-        "degov/modules": {
+        "degov-modules": {
             "type": "git",
-            "url": "git@github.com:deGov/modules.git"
-        },
-        "degov/features": {
-            "type": "git",
-            "url": "git@github.com:deGov/features.git"
+            "url": "https://github.com/deGov/modules.git"
         },
         "bower-assets": {
           "type": "composer",
@@ -49,9 +46,6 @@
         }
     },
     "scripts": {
-      "post-install-cmd": [
-        "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
-      ],
       "post-update-cmd": [
         "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
       ],
@@ -91,27 +85,21 @@
                 "type:bower-asset",
                 "type:npm-asset"
             ],
-            "docroot/modules/degov/modules": [
+            "docroot/modules/degov": [
                 "degov/modules"
-            ],
-            "docroot/modules/degov/features": [
-                "degov/features"
             ]
         },
         "merge-plugin": {
             "merge-extra": true,
-            "merge-extra-deep": false,
+            "merge-extra-deep": true,
             "include": [
-              "docroot/modules/degov/*/*/composer.json",
+              "docroot/modules/degov/*/composer.json",
               "docroot/modules/custom/*/composer.json",
-              "docroot/themes/degov/*/composer.json",
-              "docroot/profiles/contrib/*/composer.json",
-              "docroot/profiles/custom/*/composer.json"
+              "docroot/profiles/*/composer.json"
             ]
         }
     },
     "autoload-dev": {
         "psr-4": { "BeHat\\Feature\\" : "features/src/"}
     }
-
 }

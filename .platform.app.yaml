@@ -22,6 +22,8 @@ dependencies:
 runtime:
     extensions:
         - newrelic
+        - memcached
+        - imagick
 
 # The relationships of the application with services or other applications.
 #
@@ -30,6 +32,7 @@ runtime:
 # side is in the form `<service name>:<endpoint name>`.
 relationships:
     database: 'mysqldb:mysql'
+    cache: "memcached:memcached"
 #    solr: 'solrsearch:solr'
 #    redis: 'rediscache:redis'
 
@@ -102,6 +105,7 @@ hooks:
     # The deploy hook runs after your application has been deployed and started.
     deploy: |
       cd docroot
+      drush ev "drupal_flush_all_caches();"
       drush -y cache-rebuild
       drush -y updatedb
       drush -y config-import

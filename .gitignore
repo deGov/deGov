@@ -9,6 +9,7 @@
 /docroot/themes/contrib
 /docroot/themes/degov
 /docroot/sites/default/files
+/docroot/modules/degov
 
 # Ignore Composer-managed dependencies.
 vendor/
