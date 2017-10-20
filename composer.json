@@ -46,7 +46,7 @@
         "drupal/webform": "^5.0@beta",
         "drupal/entity_reference_display": "^1.0",
         "drupal/search_api_solr": "^1.0",
-        "degov/modules": "dev-hotfix/fix-composer",
+        "degov/modules": "dev-hotfix/fix-composer"
     },
     "repositories": {
         "drupal": {
