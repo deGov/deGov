@@ -109,10 +109,6 @@
                 "2849674 - Complex job in ViewExecutable::unserialize() causes data corruption":
                 "https://www.drupal.org/files/issues/2849674-88.patch"
             },
-            "drupal/paragraphs" : {
-                "2788607 - Empty required fields not providing meaningful error messages" :
-                "patches/paragraphs-2788607-for-1.1.patch"
-            },
             "drupal/config_rewrite": {
                 "2903629 - Allow optional config rewrite":
                 "https://www.drupal.org/files/issues/empty_config.patch"
