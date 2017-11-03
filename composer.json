@@ -46,7 +46,7 @@
         "drupal/webform": "^5.0@beta",
         "drupal/entity_reference_display": "^1.0",
         "drupal/search_api_solr": "^1.0",
-        "degov/modules": "1.9.0"
+        "degov/modules": "^1.9.0"
     },
     "repositories": {
         "drupal": {
@@ -108,10 +108,6 @@
                 "https://www.drupal.org/files/issues/core-add_install_file-2652542-32.patch",
                 "2849674 - Complex job in ViewExecutable::unserialize() causes data corruption":
                 "https://www.drupal.org/files/issues/2849674-88.patch"
-            },
-            "drupal/paragraphs" : {
-                "2788607 - Empty required fields not providing meaningful error messages" :
-                "patches/paragraphs-2788607-for-1.1.patch"
             },
             "drupal/config_rewrite": {
                 "2903629 - Allow optional config rewrite":
