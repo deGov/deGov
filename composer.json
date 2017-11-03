@@ -101,7 +101,7 @@
             "docroot/modules/degov": [
                 "degov/modules"
             ],
-            "docroot/themes/degov": [
+            "docroot/themes/degov/degov_base_theme": [
                 "degov/degov_base_theme"
             ]
         },
