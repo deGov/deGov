@@ -1,0 +1,257 @@
+// Styles for intro, header, and top bar regions
+.header-wrapper{
+	@include larger-than($screen-tablet) {
+		// Right align navigation
+		.navbar-header {
+			width: 100%;
+			#block-degov-main-menu {
+				float: right;
+				font-size: $font-size-large;
+				font-weight: 600;
+			}
+		}
+	}
+}
+
+.navbar-collapse {
+	clear: both;
+	.navbar-nav {
+		margin: 0;
+	}
+	// anything larger than mobile menu breakpoint
+	// in effect the same as screen-sm-min –
+	// but could be something else
+	@include larger-than($grid-float-breakpoint) {
+		clear: none;
+	}
+}
+
+// larger than mobile
+@include larger-than($screen-sm-min) {
+	body {
+		margin-top: 0;
+	}
+	.header-wrapper {
+		left: 0;
+		right: 0;
+		top: 0;
+		background: $background-grey;
+	}
+	.header-wrapper .container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.navbar-branding .logo img {
+		margin-top: floor($navbar-height*0.75);
+		max-width: inherit;
+		max-height: $navbar-height;
+		transition: max-height 200ms ease-in-out, margin-top 200ms ease-in-out;
+	}
+	.navbar-header {
+		display: none;
+	}
+	.navbar-secondary {
+		max-height: 5em;
+		transition: max-height 200ms ease-in-out, margin 200ms ease-in-out;
+	}
+	.navbar-collapse {
+		float: right;
+		clear: right;
+	}
+
+	// scrolling
+	.is-scrolling.is-scrolling-past-navbar .navbar-secondary {
+		max-height: 0;
+	}
+	.is-scrolling {
+		.navbar-secondary {
+			margin-top: 0;
+			margin-bottom: 0;
+			overflow: hidden;
+		}
+		.navbar-branding .logo img {
+			max-height: floor($navbar-height*0.75);
+			margin-top: floor($navbar-height*0.125);
+		}
+	}
+}
+
+.header{
+	&__upper-menu{
+		min-height: 42px;
+		background-color: $brand-secondary;
+		font-size: $font-size-small - 2;
+		color: $color-white;
+		font-weight: bold;
+		text-transform: uppercase;
+		position: relative;
+
+		> div{
+			display: flex;
+			flex-direction: row ;
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			align-items: center;
+			.menu{
+				.right{
+					float: right;
+				}
+			}
+			@media(max-width: $screen-sm-min){
+				flex-direction: column;
+				align-items: flex-start;
+				font-size: $font-size-h6;
+				.menu{
+					display: inline-block;
+					width: 100%;
+					float: left;
+					min-height: auto;
+					padding: 0 $grid-gutter-width/2;
+					#service-menu li:first-child {
+						border-top: 1px solid $deGOV-light;
+					}
+					.right{
+						float: left;
+						ul{
+							float: left;
+						}
+					}
+					ul{
+						float: left;
+						width: 100%;
+						li{
+							width: 100%;
+							border-bottom: 1px solid $deGOV-light;
+							a,
+							a.gebaerdensprache,
+							a.leichtesprache,
+							a.login,
+							a.kontakt,
+							a.social-media-settings--menu-item {
+								padding: $grid-gutter-width/4 0;
+								background: none;
+								font-weight: normal;
+								display: block;
+							}
+							a.social-media-settings--menu-item i {
+								display: none;
+							}
+						}
+					}
+					li{
+						width: 100%;
+					}
+				}
+			}
+		}
+		&	> &--elements{
+			.links{
+				float: right;
+			}
+			@media(max-width: $screen-sm-min){
+				z-index: 11;
+				background: $color-white;
+				box-shadow: 0 5px 5px $gray-base;
+				display: none;
+				label{
+					color: $brand-secondary;
+					font-weight: normal;
+				}
+			}
+			.right{
+				padding: 0;
+				margin-right: $grid-gutter-width/2.66;
+			}
+		}
+		&	>  &--title{
+			background: $brand-secondary;
+			display: none;
+			position: relative;
+			text-align: center;
+  		padding: $grid-gutter-width/2;
+  		position: relative;
+			width: 100%;
+			font-size: $font-size-small;
+			i{
+				margin-left: $grid-gutter-width/4;
+				font-size: $font-size-h6;
+				font-weight: bold;
+			}
+			@media(max-width: $screen-sm-min){
+				display: block ;
+			}
+		}
+		select{
+			border: 0;
+			color: $color-white;
+			background: transparent;
+		}
+		@media(max-width: $screen-sm-min){
+			> div{
+				height: auto;
+			}
+		}
+		&.is-open{
+			background-color: $color-white;
+			i{
+				transform: rotate(180deg);
+			}
+			.header__upper-menu--elements{
+				display: block;
+			}
+		}
+	}
+	&__branding{
+		background-color: $color-white;
+		min-height: 88px;
+		position: relative;
+
+
+		}
+	&__logo{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		position: absolute;
+		height: 100%;
+		right: 0;
+		.image {
+			padding: 0 0 0 $grid-gutter-width/2;
+		}
+		.image img{
+			float: right;
+			max-height: 100%;
+			width: auto;
+		}
+	}
+	&__title{
+		font-size: $font-size-h2;
+		line-height: $font-size-h2;
+		color: $brand-secondary;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		position: absolute;
+		height: 100%;
+		a{
+			color: $brand-secondary;
+		}
+		span{
+			font-weight: bold;
+			display: inline-block;
+			width: 100%;
+		}
+		&:hover{
+				text-decoration: underline;
+		}
+	}
+	@media(max-width: $screen-sm-min){
+		&  &__title{
+			display: none;
+		}
+		&__logo .image {
+			padding-right: 0;
+		}
+	}
+}

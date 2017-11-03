@@ -1,0 +1,91 @@
+<?php
+/**
+ * @file
+ * Bootstrap sub-theme for deGov.
+ */
+
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_theme_suggestion_input_alter().
+ */
+function degov_base_theme_theme_suggestions_input_alter(&$suggestions, &$vars, $hook) {
+  // Add addition template suggestion for input fields.
+  $element = $vars['element'];
+  if (isset($element['#attributes']['data-twig-suggestion'])) {
+    $suggestions[] = 'input__' . $element['#type'] . '__' . $element['#attributes']['data-twig-suggestion'];
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function _form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  // Add additional attributes to the search page elements.
+  if ($form['#id'] == 'views-exposed-form-search-content-page-1' || $form['#id'] == 'views-exposed-form-search-media-manager-page' || $form['#id'] == 'views-exposed-form-search-media-page') {
+    $form['actions']['submit']['#attributes']['data-twig-suggestion'] = 'search_results_submit';
+    $form['actions']['submit']['#attributes']['class'][] = 'search-box__button';
+  }
+}
+
+/**
+ * Implements hook_preprocess_links__HOOK().
+ */
+function degov_base_theme_preprocess_links__language_block(&$variables) {
+  $variables['current_language'] = \Drupal::languageManager()->getCurrentLanguage()->getId();
+
+  foreach ($variables['links'] as $key => $item) {
+    $variables['links'][$key]['link']['#title'] = $key;
+    $variables['links'][$key]['link']['#options']['attributes']['rel'] = $key;
+
+    if ($key !== $variables['current_language']) {
+      $variables['links'][$key]['link']['#url'] = Url::fromRoute('<front>', [], ['language' => $key]);
+    }
+  }
+}
+
+/**
+* Implements hook_preprocess_html()
+* @param $vars
+*/
+function degov_base_theme_preprocess_html(&$vars) {
+  if (isset($_GET['print'])) {
+    //echo $_GET['print'];
+    $vars['print'] = "print";
+  }
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function degov_base_theme_preprocess_page(&$variables) {
+  // Check how many languages are used.
+  $languages = \Drupal::languageManager()->getLanguages();
+  if (count($languages) <= 1) {
+    return;
+  }
+  // Provide the language switcher block.
+  $variables['language_block'] = \Drupal::service('plugin.manager.block')
+    ->createInstance('language_block:language_interface')
+    ->build();
+  // Add alt tag to logo
+  $variables['logo_alt'] = 'Logo: Die Landesregierung Nordrhein-Westfalen';
+}
+
+/**
+ * Preprocess swiftmailer.
+ *
+ * @param $variables
+ */
+function degov_base_theme_preprocess_swiftmailer(&$variables) {
+  $variables['mail_date'] = time();
+}
+
+/**
+ * Implements hook_preprocess_menu_local_task().
+ */
+function degov_base_theme_preprocess_menu_local_task(&$variables) {
+  if (empty($variables['link']['#options']['attributes']['title'])) {
+    $variables['link']['#options']['attributes']['title'] = $variables['element']['#link']['title'];
+  }
+}

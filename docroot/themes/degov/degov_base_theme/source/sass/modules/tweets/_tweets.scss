@@ -1,0 +1,105 @@
+.tweets-slideshow {
+  margin-top: -$padding-base-vertical;
+  position: relative;
+}
+.tweets.slick-slider {
+  margin-bottom: 0;
+}
+.tweet {
+  @include make-sm-column(6);
+  padding-top: $vertical-gutter-width/2;
+  padding-bottom: $padding-base-vertical*3;
+  margin-top: $padding-base-vertical;
+  font-size: $font-size-small;
+  line-height: 1.4;
+  @include larger-than($screen-md-min) {
+    max-height: 98px;
+  }
+  &.odd {
+    border-right: 1px solid $deGOV-light;
+  }
+  &.even {
+    border-left: 1px solid $deGOV-light;
+    margin-left: -1px;
+  }
+  &__follow {
+    float: right;
+    margin: $padding-base-vertical*-5 0 $padding-base-vertical $padding-small-horizontal*2;
+    a {
+      @include icon-before($fa-var-twitter);
+      display: block;
+      background: $gray-lighter;
+      padding: $padding-base-vertical;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: $gray-base;
+      border-radius: $border-radius-small;
+      &:before {
+        color: $degov-twitter-blue;
+        font-size: $font-size-h3;
+        vertical-align: sub;
+      }
+    }
+  }
+  &__avatar {
+    float: left;
+    img {
+      border-radius: $border-radius-small;
+    }
+  }
+  &__timestamp {
+    float: right;
+  }
+  &__timestamp,
+  &__handle {
+    font-size: $font-size-extra-small;
+    &,
+    a {
+      color: $color-gray;
+    }
+  }
+  &__name-handle,
+  &__text {
+    margin-left: $grid-gutter-width*1.5;
+    a{
+      font-weight: normal;
+    }
+  }
+  &__name,
+  &__handle {
+    display: inline;
+  }
+  &__name {
+    a {
+      font-weight: bold;
+      margin-right: $padding-xs-horizontal;
+    }
+  }
+  &__actions {
+    font-size: $font-size-extra-small;
+    text-align: right;
+    list-style-type: none;
+    margin-bottom: 0;
+    li {
+      display: inline-block;
+      margin-left: $padding-small-horizontal;
+    }
+    li a {
+      color: $color-white;
+      @include smaller-than($screen-sm-max) {
+        color: $color-gray;
+        padding: $padding-base-vertical;
+        display: block;
+      }
+    }
+  }
+  &:hover,
+  &:focus {
+    .tweet__actions li a {
+      color: $color-gray;
+    }
+  }
+  .tweet__actions li a:focus {
+    color: $color-gray;
+  }
+}

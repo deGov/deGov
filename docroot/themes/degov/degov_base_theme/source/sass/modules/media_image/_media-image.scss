@@ -1,0 +1,168 @@
+.image {
+  //@include make-row();
+  position: relative;
+  color: $color-white;
+  &__info {
+    @include clearfix;
+    padding: $padding-base-vertical*3;
+    font-size: $font-size-h6;
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    & > div {
+      display: inline;
+    }
+  }
+  &__caption,
+  &__copyright {
+    * {
+      display: inline-block;
+    }
+  }
+  &__copyright {
+    &:before {
+      content: "/";
+      padding-left: $padding-xs-horizontal;
+    }
+    @include larger-than($screen-sm-min) {
+      text-align: right;
+    }
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+// Add alignment exception per region.
+// @todo: will probably need to be done with javascript based on image size.
+.region-sidebar-second,
+.region-sidebar-first {
+  .image__info {
+    text-align: left;
+  }
+}
+
+// For teaser mode hide info
+
+.view-mode-teaser-squared-1-1,
+.view-mode-teaser-landscape-small-8-3{
+  .image__info {
+    display: none;
+  }
+}
+
+// For view mode default
+.image--full {
+  margin-top: 0;
+  margin-left: -$vertical-gutter-width/2;
+  margin-right: -$vertical-gutter-width/2;
+
+  .image__wrapper {
+    position: relative;
+  }
+
+  .image__info {
+    text-align: right;
+  }
+
+  .image__caption {
+    float: none;
+    box-decoration-break: clone;
+    background: rgba($gray-dark, 0.7);
+  }
+
+  .image__copyright {
+    box-decoration-break: clone;
+    background: rgba($gray-dark, 0.7);
+
+    &:before {
+      padding-left: 0;
+      padding-right: $padding-xs-horizontal;
+    }
+  }
+  .image__extra-info {
+    background: $deGOV-secondary;
+    padding: $grid-gutter-width/2;
+    font-size: $font-size-h4;
+    .file {
+      float: right;
+      background: $color-white;
+      padding: $padding-large-horizontal/2;
+      &,
+      a {
+        color: $deGOV-secondary;
+      }
+    }
+  }
+  .image__date {
+    display: inline-block;
+    margin: $padding-base-vertical*3 0;
+  }
+  .image__description {
+    clear: both;
+  }
+  .tags {
+    padding-top: $padding-xs-horizontal;
+    padding-right: $padding-xs-horizontal;
+    padding-bottom: $padding-xs-horizontal;
+    margin-top: $padding-large-vertical;
+    &:before {
+      padding-top: $padding-xs-horizontal;
+      padding-left: $padding-xs-horizontal;
+    }
+  }
+}
+
+// For view-mode-slider-main-16-9
+.view-mode-slider-main-16-9 {
+  .image__caption {
+    float: none;
+    box-decoration-break: clone;
+    background: rgba($gray-dark, 0.7);
+  }
+
+  .image__copyright {
+    box-decoration-break: clone;
+    background: rgba($gray-dark, 0.7);
+
+    &:before {
+      padding-left: 0;
+      padding-right: $padding-xs-horizontal;
+    }
+  }
+}
+
+// For view mode preview
+
+.media--preview {
+  .image__image {
+    position: relative;
+  }
+  .image__date {
+    padding-right: $padding-base-vertical;
+    &:after {
+      content: "/";
+      padding-left: $padding-xs-horizontal;
+    }
+  }
+}
+
+// For view mode search
+.media--search {
+  .image__date {
+    display: block;
+    font-size: $font-size-small;
+    font-weight: bold;
+  }
+}
+
+.slideshow__slides{
+  .image{
+    max-width: 100%;
+    margin: 0;
+  }
+}

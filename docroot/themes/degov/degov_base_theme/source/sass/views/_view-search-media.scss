@@ -1,0 +1,25 @@
+// SCSS for view search media
+.view-search-media {
+  margin-top: $grid-gutter-width/2;
+  margin-right: -$grid-gutter-width/2;
+  margin-left: -$grid-gutter-width/2;
+
+  img {
+    width: 100%;
+  }
+
+  .view-content {
+    @media (min-width: $screen-md-min) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  .views-row {
+    padding-bottom: $grid-gutter-width*2;
+  }
+}
+
+.pager {
+  margin-left: $grid-gutter-width/2;
+  margin-right: $grid-gutter-width/2;
+}

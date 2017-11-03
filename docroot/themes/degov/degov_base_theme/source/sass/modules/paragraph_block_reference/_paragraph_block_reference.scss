@@ -1,0 +1,14 @@
+.block-reference {
+  padding-bottom: 0;
+  .paragraph__content{
+    padding: 0;
+  }
+}
+
+.region-sidebar-second .block-reference {
+  .paragraph__content{
+    padding-top: $grid-gutter-width/2;
+  }
+}
+
+//slideshow styling for tweets block in ../tweets/_tweets.scss

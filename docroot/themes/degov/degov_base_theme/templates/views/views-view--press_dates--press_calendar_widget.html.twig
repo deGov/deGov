@@ -1,0 +1,16 @@
+<div class="calendar--widget">
+  <div class="calendar__title">
+      <i class="fa fa-calendar" aria-hidden="true"></i>
+      <h2>{% trans %}TERMINE{% endtrans %}
+      <span class="sub-title">{% trans %}KALENDER{% endtrans %}</span>
+      </h2>
+    </div>
+  {% if header %}
+    <div class="calendar--header">
+      {{ header }}
+    </div>
+  {% endif %}
+  <div class="calendar--rows">
+    {{ rows }}
+  </div>
+</div>

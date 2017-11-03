@@ -1,0 +1,205 @@
+// Add spacing for footer
+
+/*
+.region-page-outro {
+  padding-top: $vertical-gutter-width / 2;
+  padding-bottom: $vertical-gutter-width / 2;
+  // @TODO replace ids with block classes
+  #block-degov-footer,
+  #block-degov-account-menu {
+    @include larger-than($screen-phone) {
+      float: right;
+      margin-right: $grid-gutter-width / 2;
+    }
+  }
+}
+
+.region-footer .menu,
+.region-page-outro .menu {
+  margin-left: -15px; // from $nav-link-padding
+}
+.region-footer .menu li,
+.region-page-outro .menu li {
+  display: inline-block;
+  a:hover,
+  a:active,
+  a:focus {
+    text-decoration: underline;
+  }
+}
+*/
+.footer-wrapper {
+  background-color: $background-grey;
+}
+
+.footer{
+  color: $color-white;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+  border-top: none;
+  a{
+    color: $color-white;
+  }
+  &__upper{
+    background-color: $brand-primary;
+    padding: $padding-base-vertical*4 $padding-base-horizontal $padding-base-vertical*3;
+    @include icon-before('\f00b');
+    &:before{
+      font-size: $font-size-h3 + 2;
+      height: 40px;
+      width: 40px;
+      background: $color-white;
+      color: $brand-primary;
+      line-height: $font-size-h3 + 20;
+      text-align: center;
+      position: relative;
+      top: -7px;
+      margin-right: $padding-base-horizontal + 5;
+    }
+    width: 100%;
+    h3{
+      margin: 0;
+      display: inline-block;
+      line-height: $font-size-h3;
+    }
+    span{
+      width: 100%;
+      display: inline-block;
+      font-weight: bold;
+    }
+  }
+  &__footer_menu{
+    @media (max-width: $screen-sm){
+      float: left;
+      padding: 0;
+      margin-top: $grid-gutter-width/4;
+    }
+  }
+  &__menu{
+    background: $brand-secondary;
+    padding: $padding-base-vertical*4 $padding-base-horizontal $padding-base-vertical*3;
+    
+    .nrw-menu-footer{
+      padding-left: 4em;
+      display: flex;
+      flex-direction: row;
+      -webkit-flex-flow: row wrap;
+      justify-content: flex-start;
+      i{
+        display: none;
+      }
+      &__col{
+        flex-grow: 1;
+        max-width: 25%;
+      }
+      &__header{
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+      &__content{
+        ul{
+          list-style: none;
+          padding:0;
+          a{
+              @include icon-before('\f061');
+              font-size: $font-size-base - 4;
+              text-transform: initial;
+          }
+        }
+      }
+    }
+    ul.footer-menu{
+      list-style: none;
+      padding-left: 4em;
+      >li{
+          text-transform: uppercase;
+        > ul{
+          padding: 0;
+          list-style: none; 
+          > li{
+            a{
+              @include icon-before('\f061');
+              font-size: $font-size-base - 4;
+              text-transform: initial;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__bottom-menu{
+    display: inline-block;
+    width: 100%;
+    background-color: $brand-primary;
+    padding: $padding-base-vertical*4 $padding-base-horizontal $padding-base-vertical*4;
+    font-size: $font-size-base - 4;
+    font-weight: bold;
+    .menu{
+      list-style: none;
+      text-align: right;
+      float: right;
+      margin: 0;
+      li{
+        display: inline-block;
+        float: left;
+        &:after{
+          content: '|';
+          padding: 0 $padding-base-horizontal/2;
+        }
+        &:last-child{
+          &:after{
+            content: '';
+          }    
+        }
+      }
+
+    }
+  }
+}
+
+@media(max-width: $screen-md-min){
+  .footer__menu{
+    .nrw-menu-footer{
+       flex-direction: column;
+       padding: 0;
+       &__col{
+         max-width: 100%;
+       }
+       &__col{
+         &.is-open{
+          .nrw-menu-footer__content{
+            display: block;
+            a{
+              font-weight: bold;
+            }
+          }
+          i{
+            transform: rotate(180deg);
+            border-left: 0px solid $color-white;
+            border-right: 1px solid $color-white;
+          }
+        }
+       }
+       &__header{
+        padding-bottom: $padding-large-vertical;
+        margin-bottom: $padding-large-vertical;
+        border-bottom: 1px solid $color-white;
+        line-height: $font-size-h1;
+        font-weight: bold;
+       }
+       &__content{
+         display: none;
+       }
+       i{
+         display: block;
+         float: right;
+         padding: $padding-base-vertical*2 $padding-base-horizontal;
+         border-left: 1px solid $color-white;
+         cursor: pointer;
+       }
+    }
+  }
+}

@@ -1,0 +1,88 @@
+.sharing {
+  position: relative;
+  li {
+    position: relative;
+  }
+}
+
+.sharing-overlay {
+  position: relative;
+  top: -30px;
+  left: 0;
+  cursor: pointer;
+  height: 35px;
+  width: 100%;
+}
+
+.shariff  ul.theme-grey .qzone.theme-colored a {
+  background-color: #2B82D9
+}
+
+.shariff  ul.theme-grey .tencent-weibo.theme-colored a {
+  background-color: #26ACE0
+}
+
+.shariff  ul.theme-grey .weibo.theme-colored a {
+  background-color: #F56770
+}
+
+.shariff  ul.theme-grey .tumblr.theme-colored a {
+  background-color: #36465D
+}
+
+.shariff  ul.theme-grey .xing.theme-colored a {
+  background-color: #126567
+}
+
+.shariff  ul.theme-grey .whatsapp.theme-colored a {
+  background-color: #5cbe4a
+}
+
+.shariff  ul.theme-grey .twitter.theme-colored a {
+  background-color: #55acee
+}
+
+.shariff  ul.theme-grey .stumbleupon.theme-colored a {
+  background-color: #eb4924
+}
+
+.shariff  ul.theme-grey .reddit.theme-colored a {
+  background-color: #ff4500
+}
+
+.shariff  ul.theme-grey .pinterest.theme-colored a {
+  background-color: #bd081c
+}
+
+.shariff  ul.theme-grey .mail.theme-colored a {
+  background-color: #999
+}
+
+.shariff  ul.theme-grey .linkedin.theme-colored a {
+  background-color: #0077b5
+}
+
+.shariff  ul.theme-grey .googleplus.theme-colored a {
+  background-color: #d34836
+}
+
+.shariff  ul.theme-grey  .flattr.theme-colored a {
+  background-color: #7ea352
+}
+
+.shariff  ul.theme-grey  .facebook.theme-colored a {
+  background-color: #3b5998
+}
+
+.shariff  ul.theme-grey  .diaspora.theme-colored a {
+  background-color: #999
+}
+
+.shariff  ul.theme-grey  .addthis.theme-colored a {
+  background-color: #f8694d
+}
+
+.shariff .fa {
+  padding-left: $grid-gutter-width/4;
+  margin-right: $grid-gutter-width/4;
+}

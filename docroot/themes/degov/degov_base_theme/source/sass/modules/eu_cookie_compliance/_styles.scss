@@ -1,0 +1,64 @@
+//eu cookie compliance overrides
+#sliding-popup {
+  background-color: rgba($color-gray,0.95) !important;
+  .popup-content {
+    @include clearfix;
+    max-width: 95%;
+    display: table;
+    @include larger-than($screen-lg-min) {
+      max-width: $container-lg;
+      width: 80%;
+    }
+    #popup-text {
+      margin: $padding-base-horizontal 0;
+      max-width: 90%;
+      @include larger-than($screen-xs-min) {
+        display: table-cell;
+      }
+      h3 {
+        font-family: $font-family-base;
+        font-size: $font-size-large;
+        font-weight: normal;
+        margin-top: 0;
+      }
+      p {
+        font-size: $font-size-small;
+        font-weight: normal;
+      }
+    }
+    #popup-buttons {
+      vertical-align: middle;
+      float: none;
+      @include larger-than($screen-xs-min) {
+        display: table-cell;
+      }
+      @include larger-than($screen-md-min) {
+        text-align: right;
+      }
+    }
+    #popup-buttons button {
+      display: inline-block;
+      margin: $padding-small-vertical $padding-xs-horizontal;
+      padding: $padding-large-vertical $padding-base-horizontal;
+      font-family: $font-family-base;
+      font-size: $font-size-small;
+      line-height: $line-height-base;
+      font-weight: normal;
+      white-space: nowrap;
+      border-radius: 0;
+      background: none;
+      box-shadow: none;
+      text-shadow: none;
+      user-select: none;
+      touch-action: manipulation;
+      @include button-variant($color-white, $deGOV-secondary, transparent);
+      &:last-child {
+        margin-right: 0;
+      }
+      &:hover,
+      &:focus {
+        background: $brand-primary;
+      }
+    }
+  }
+}

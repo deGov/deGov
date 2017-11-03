@@ -1,0 +1,124 @@
+// Give some space to paragraph fields
+.paragraph{
+  a{
+    font-weight: bold;
+    color: $brand-secondary;
+  }
+}
+
+// Change link color on blue background from blue to white
+div[class*="__header-paragraphs"] .paragraph a {
+  color: $color-white;
+}
+
+.paragraph__header{
+  font-size: $font-size-h3;
+  color: $brand-secondary;
+  display: flex;
+  margin: 0 -20px;
+  padding: 20px;
+  background: $deGOV-light;
+
+  &.paragraph__header-right {
+    display: inline-block;
+    width: 100%;
+    i {
+      float: right;
+      margin-right: 0;
+      margin-left: 20px;
+    }
+    h2 {
+      float: right;
+    }
+  }
+  i{
+    color: $color-white;
+    background-color: $brand-secondary;
+    min-width: 45px; // To always keep width - responsive
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    margin-right: $padding-base-horizontal + 5;
+  }
+  h2{
+    margin: 0;
+    line-height: 1;
+    font-size: inherit;
+    line-height: 1.15;
+  }
+  .sub-title{
+    font-weight: bold;
+    display: block;
+  }
+}
+.paragraph__content{
+  padding-top: $padding-large-vertical*2;
+  padding-bottom: $padding-large-vertical*2;
+}
+
+.paragraph.header-image{
+  .media-video{
+    margin: 0 -1*($grid-gutter-width/2);
+  }
+}
+
+.content-header {
+  //padding-bottom: $padding-base-vertical*3;
+  &__media {
+    //margin: 0 $grid-gutter-width/-2;
+  }
+
+  &__text {
+    background: $brand-primary;
+    color: $color-white;
+    padding: $grid-gutter-width/2;
+    margin: 0 $grid-gutter-width/-2;
+    position: relative;
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 0;
+    }
+    h2 {
+      font-weight: bold;
+      font-size: $font-size-h1;
+      line-height: 1;
+    }
+    p {
+      font-size: $font-size-h4;
+      margin-bottom: 0;
+    }
+
+    .tags{
+      margin-top: $grid-gutter-width/3;
+    }
+    .sharing{
+      margin-top: $grid-gutter-width/3;
+    }
+  }
+}
+
+.region-sidebar-second {
+  .downloads {
+    .paragraph__content {
+      padding-top: 0;
+    }
+  }
+}
+
+@media(max-width: 720px){
+  .node-reference{
+    .small-image{
+      .teaser-image {
+        display: none;
+      }
+    }
+  }
+}
+
+.not-header{
+  article{
+    padding-top: 0;
+  }
+}

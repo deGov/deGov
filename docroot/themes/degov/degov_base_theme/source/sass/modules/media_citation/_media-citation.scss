@@ -1,0 +1,103 @@
+.citation {
+  color: $brand-secondary;
+  @include smaller-than($screen-xs-max) {
+    display: flex;
+    flex-direction: column;
+  }
+  blockquote{
+    border: 0;
+    margin:   0;
+  }
+
+  &__left {
+    &.no-title{
+      padding-bottom: 0;
+    }
+    padding: $vertical-gutter-width/4*3 $padding-small-horizontal*5;
+    &:after {
+      @include triangle-right($color: $color-white);
+      right: -15px;
+      top: $grid-gutter-width/2;
+    }
+    @include smaller-than($screen-xs-max) {
+      order: 1;
+      padding: $padding-large-vertical*5 $grid-gutter-width/2 $padding-large-vertical $grid-gutter-width/2;
+      &:after {
+        @include triangle-up($color: $color-white);
+        right: auto;
+        left: 20px;
+        top: -30px;
+      }
+    }
+  }
+  &__right {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  &__text {
+    font-size: $font-size-h3;
+    font-family: $font-family-serif;
+    font-style: italic;
+    line-height: 1.5;
+    padding-bottom: $padding-base-vertical;
+    @include smaller-than($screen-xs-max) {
+      font-size: $font-size-h4;
+    }
+    &:before,
+    &:after {
+      font-size: 124px;
+      margin: 0;
+      line-height: 0;
+      @include smaller-than($screen-xs-max) {
+        font-size: 100px;
+      }
+    }
+    &:before {
+      content: "\201C";
+      vertical-align: -.4em;
+      margin-right: 15px;
+    }
+    &:after {
+      content: "\201D";
+      vertical-align: -.61em;
+    }
+  }
+  &__title,
+  &__date {
+    font-size: $font-size-small;
+    font-weight: bold;
+    text-align: center;
+  }
+  .image {
+    margin-left: 0;
+    margin-right: 0;
+    &__info {
+      background: transparent;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+}
+
+.region-sidebar-second .citation {
+  display: flex;
+  flex-direction: column;
+  .citation__left,
+  .citation__right {
+    @include make-sm-column(12);
+  }
+  .citation__right {
+    padding: 0;
+    order: -1;
+  }
+  .citation__left:after {
+    @include triangle-up($color: $color-white);
+    right: auto;
+    right: 20px;
+    top: -30px;
+  }
+
+
+}

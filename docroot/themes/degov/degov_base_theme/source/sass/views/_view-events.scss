@@ -1,0 +1,110 @@
+.view-events {
+  &__sidebar-left {
+    border-right: 1px solid $brand-info;
+    background: $deGOV-secondary;
+    color: $color-white;
+    padding-top: $vertical-gutter-width/2;
+    padding-bottom: $vertical-gutter-width/2;
+    .form-item {
+      margin-bottom: $vertical-gutter-width/2;
+      display: block;
+    }
+    label {
+      display: block;
+      font-size: $font-size-small;
+      margin-bottom: $padding-base-vertical;
+    }
+    input.form-control {
+      width: 100%;
+      border-radius: 0;
+      box-shadow: none;
+    }
+    input.form-control,
+    .form--inline i.fa {
+      border: 2px solid $color-white;
+      line-height: $font-size-h3;
+      height: $vertical-gutter-width;
+    }
+    .form-type-date {
+      @include clearfix;
+      display: block;
+      input.form-date {
+        float: left;
+        width: 90%;
+      }
+      i.fa {
+        width: 10%;
+        float: left;
+        padding: 7.5px;
+        padding-left: 0;
+        color: $deGOV-secondary;
+        font-size: $font-size-h3;
+        background: $color-white;
+      }
+    }
+    .form-actions {
+      float: right;
+    }
+    button.form-submit {
+      padding: 0;
+      padding-left: $padding-xs-horizontal;
+      margin: 0;
+      &,
+      &:active,
+      &:hover,
+      &:focus {
+        background: transparent;
+        border: none;
+      }
+      font-size: $font-size-small;
+      font-weight: bold;
+      @include icon-after($fa-var-search, $padding-large-vertical);
+      &:after {
+        background: $degov-green;
+        font-size: $font-size-h6;
+        margin-left: $grid-gutter-width/6;
+        padding: $grid-gutter-width/8 $grid-gutter-width/6.66;
+      }
+    }
+  }
+  .view-footer {
+    padding: $grid-gutter-width/2 0;
+  }
+  .event__teaser {
+    margin-bottom: $padding-base-horizontal;
+  }
+}
+.view-calendar__header{
+	font-size: $font-size-h3;
+  color: $brand-secondary;
+	display: flex;
+	padding: 20px;
+	background: $deGOV-light;
+	margin: 0 $grid-gutter-width/-2;
+	@include smaller-than($screen-xs-max){
+		word-break: break-all;
+	}
+	i{
+		color: $color-white;
+		background-color: $brand-secondary;
+		min-width: 45px; // To always keep width - responsive
+		width: 45px;
+		height: 45px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		float: left;
+		margin-right: $padding-base-horizontal + 5;
+    .fa{
+      border: 0;
+    }
+	}
+	h2{
+		margin: 0;
+		line-height: 1;
+	}
+	.sub-title{
+		font-weight: bold;
+		display: block;
+	}
+}

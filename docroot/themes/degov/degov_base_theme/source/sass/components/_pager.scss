@@ -1,0 +1,94 @@
+.pagination{
+  & > li > a, & > li > span{
+    border: 0;
+    font-size: $font-size-h2;
+    line-height: $font-size-h2;
+    font-weight: bold;
+    &:hover,
+    &:focus{
+      background: initial;
+      text-decoration: underline;
+      color: $brand-primary;
+    }
+  }
+  .pager__item{
+    &--first{
+      a{
+        &:before{
+          content: '<<';
+        }
+      }
+    }
+    &--previous{
+      a{
+        &:before{
+          content: '<';
+        }
+      }
+    }
+    &--next{
+      a{
+        &:before{
+          content: '>';
+        }
+      }
+    }
+    &--last{
+      a{
+        &:before{
+          content: '>>';
+        }
+      }
+    }
+    &--first, &--previous, &--next, &--last{
+      a{
+        span{
+          display: none;
+        }
+        background: rgba(27, 66, 101, 0.2);
+        margin-right: $grid-gutter-width/8;
+        &:hover,
+        &:focus{
+          background: rgba(27, 66, 101, 0.2);
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+nav .pager{
+  a{
+    span{
+      display: none;
+    }
+    background: rgba(27, 66, 101, 0.2);
+    margin-right: $grid-gutter-width/8;
+    border-radius: 0;
+    border: 0;
+    padding: $grid-gutter-width/8;
+    font-size: $font-size-h2;
+    line-height: $font-size-h2;
+    font-weight: bold;
+    &:hover,
+    &:focus{
+      background: rgba(27, 66, 101, 0.2);
+      text-decoration: underline;
+      color: $brand-primary;
+    }
+  }
+  .previous{
+    a{
+      &:before{
+          content: '<';
+        }
+      }
+  }
+  .next{
+    a{
+      &:before{
+        content: '>';
+      }
+    }
+  }
+}

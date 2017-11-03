@@ -1,0 +1,141 @@
+// Styling for media in view mode preview
+.media--preview {
+  overflow: hidden;
+}
+
+.media--preview__text-block {
+  background-color: $deGOV-secondary;
+  .tags {
+    a {
+      color: $color-white;
+    }
+    &:before{
+      color: $color-white;
+    }
+  }
+}
+
+.media--preview__type-text {
+  position: absolute;
+  left: $grid-gutter-width/2;
+  top: $vertical-gutter-width/2;
+  z-index: 1;
+  font-size: $font-size-small;
+  line-height: $font-size-small;
+  font-weight: bold;
+  color: $color-white;
+  background: $brand-primary;
+  padding: $padding-xs-vertical*3 $padding-small-horizontal;
+}
+
+.media--preview__info {
+  position: absolute;
+  bottom: 0;
+  color: $brand-primary;
+  padding: $padding-xs-horizontal $padding-xs-horizontal 0 $padding-xs-horizontal;
+  text-align: left;
+  font-size: $font-size-base;
+  font-weight: normal;
+}
+
+.media--preview__caption {
+  float: none;
+  padding: 0;
+  font-size: $font-size-base;
+}
+
+.media--preview__copyright {
+  font-size: $font-size-base;
+  &:before {
+    content: "/";
+    padding-left: 0;
+  }
+}
+
+.media--preview__dummy {
+  position: relative;
+  background-color: $background-grey;
+
+  $media-dummy-icon-size: 50px;
+
+  &:before {
+    content: '\f01d';
+    position: absolute;
+    bottom: $grid-gutter-width/2;
+    right: $grid-gutter-width/2;
+    font-family: FontAwesome;
+    font-size: $media-dummy-icon-size;
+    line-height: $media-dummy-icon-size;
+    color: $brand-primary;
+  }
+}
+
+// Provide alternating display for certain views, that use view mode preview
+.view-latest-media {
+  .views-row {
+    &:nth-child(4n-2),&:nth-child(4n-3){
+      .teaser-image{
+        &:after{
+          @include triangle-left($deGOV-secondary);
+          top: 15px;
+          right: 0;
+          @media(max-width: $screen-sm-max){
+            top: auto;
+            bottom: -9px;
+            transform: rotate(90deg);
+            left: 16px;
+          }
+        }
+      }
+    }
+    &:nth-child(4n-1),&:nth-child(4n){
+      .media--preview__image-block {
+        float: right;
+      }
+      .teaser-image{
+        &:after{
+          @include triangle-right($deGOV-secondary);
+          top: 15px;
+          @media(max-width: $screen-sm-max){
+            top: auto;
+            bottom: -9px;
+            transform: rotate(270deg);
+            left: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.media--preview {
+  background-color: $deGOV-secondary;
+  h2 {
+    margin:: 0;
+    font-weight:bold;
+    margin-bottom: 10px;
+    color: $color-white;
+  }
+  img {
+    background: $color-white;
+  }
+  .image__date {
+    &:after {
+      content: '';
+    }
+  }
+  a {
+    color: $color-white;
+    font-weight: normal;
+  }
+  div[class*="description"]{
+    font-size: $font-size-h6;
+  }
+  .image__date, .audio__date, .gallery__date, .video__date {
+    padding-top: $grid-gutter-width/2;
+    font-size: $font-size-small;
+    line-height: 1.5;
+    font-weight: bold;
+    color: $color-white;
+  }
+}

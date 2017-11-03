@@ -1,0 +1,240 @@
+form .form-inline  .form-control{
+  border-radius: 0;
+  width: 100%;
+}
+.selectric-hover{
+  border: 1px solid;
+}
+.form-inline .control-label{
+  margin-bottom: $grid-gutter-width/8;
+}
+form.webform-submission-form{
+  float: none;
+  max-width: 50%;
+  margin: 0 auto;
+  @media(max-width: 720px){
+    max-width: 100%;
+  }
+  .form-actions{
+    display: flex;
+    float: right;
+  }
+  label{
+    color: $brand-secondary;
+    font-size: $font-size-small;
+    font-weight: bold;
+    &:after{
+      content: '*';
+      color: $brand-secondary;
+      background-image: none;
+    }
+  }
+  .panel{
+    border: 0;
+    .panel-heading{
+      background: transparent;
+      padding: 0;
+      color: $brand-secondary;
+      font-weight: bold;
+      border-bottom: 0;
+    }
+    .panel-body{
+      padding: 0;
+    }
+  }
+  .select-wrapper{
+    &:after{
+      content: ' ';
+    }
+  }
+  input, textarea, select{
+    background-color: rgba($deGOV-secondary, 0.1);
+    border-radius: 0;
+    border: 0;
+    &:hover,
+    &:focus{
+      border: 0;
+    }
+  }
+  .selectric{
+    background-color: rgba($deGOV-secondary, 0.1);
+    &:hover,
+    &:focus{
+      border: 0;
+    }
+    .label{
+      text-align: left;
+    }
+    .button{
+      @include icon-after($fa-var-angle-down);
+      &:after{
+        border:0;
+        font-size: $font-size-h2;
+        color: $brand-secondary;
+        width: auto;
+        height: auto;
+        position: relative;
+        top: $grid-gutter-width/7.7;
+      }
+    }
+    &-open{
+      .button{
+
+        &:after{
+          transform: rotate(180deg);
+        }
+      }
+    }
+    &-items{
+
+      li{
+        color: $color-white;
+        background-color: rgba($deGOV-secondary, 1);
+        &:hover,
+        &:focus{
+          background-color: rgba($deGOV-secondary, 0.1);
+          color: $text-color;
+        }
+        &.selected{
+          background-color: rgba($deGOV-secondary, 0.1);
+          color: $text-color;
+        }
+      }
+    }
+  }
+  .btn {
+    &-primary{
+      background: transparent;
+      border: 0px solid $brand-secondary;
+      color: $brand-secondary;
+      float: right;
+      margin-right: 0;
+      padding-right: 0;
+      font-size: $font-size-small;
+      font-weight: bold;
+      @include icon-after($fa-var-paper-plane);
+      &:focus{
+        border: 1px dotted $brand-secondary;
+      }
+      &:after{
+        color: white;
+        padding: $grid-gutter-width/4;
+        background-color: $degov-green;
+        font-size: $font-size-base;
+      }
+    }
+  }
+}
+.block-simplenews{
+  .btn {
+    &[data-drupal-selector="edit-subscribe"]{
+      @include icon-after($fa-var-paper-plane);
+      &:after{
+        color: white;
+        padding: $grid-gutter-width/4;
+        background-color: $degov-green;
+        font-size: $font-size-base;
+      }
+    }
+    &[data-drupal-selector="edit-unsubscribe"]{
+      @include icon-after($fa-var-times);
+      &:after{
+        color: white;
+        padding: $grid-gutter-width/4;
+        background-color: $brand-primary;
+        font-size: $font-size-base;
+      }
+    }
+    &-default{
+      background: transparent;
+      border: 0px solid $brand-secondary;
+      color: $brand-secondary;
+      float: right;
+      margin-right: 0;
+      padding-right: 0;
+      font-size: $font-size-small;
+      font-weight: bold;
+      &:focus{
+        border: 1px dotted $brand-secondary;
+      }
+
+    }
+  }
+}
+.reset-form{
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  cursor: pointer;
+  span{
+    margin: 0 auto;
+    color: $brand-secondary;
+    float: right;
+    margin-right: 0;
+    font-size: $font-size-small;
+    font-weight: bold;
+    padding: $grid-gutter-width/2 - 5;
+  }
+  a{
+    display: inline-block;
+  }
+  i{
+    margin-left: $grid-gutter-width/8;
+    &:before{
+      color: $color-white;
+      background-color: $brand-secondary;
+      font-size: $font-size-base;
+      padding: 9px 12px;
+      width: 36px;
+      height: 36px;
+      display: inline-block;
+    }
+  }
+}
+.selectric-wrapper{
+  .selectric{
+    background-color: rgba($deGOV-secondary, 0);
+    &:hover,
+    &:focus{
+      border: 0;
+    }
+    .label{
+      text-align: left;
+    }
+    .button{
+      @include icon-after($fa-var-angle-down);
+      &:after{
+        border:0;
+        font-size: $font-size-h2;
+        color: $brand-secondary;
+        width: auto;
+        height: auto;
+        position: relative;
+        top: $grid-gutter-width/7.7;
+      }
+    }
+    &-open{
+      .button{
+
+        &:after{
+          transform: rotate(180deg);
+        }
+      }
+    }
+    &-items{
+      li{
+        color: $color-white;
+        background-color: rgba($deGOV-secondary, 1);
+        &:hover,
+        &:focus{
+          background-color: rgba($deGOV-secondary, 0.1);
+          color: $text-color;
+        }
+        &.selected{
+          background-color: rgba($deGOV-secondary, 0.1);
+          color: $text-color;
+        }
+      }
+    }
+  }
+}

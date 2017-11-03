@@ -1,0 +1,65 @@
+.simplenews-issue.full {
+  padding-top: $grid-gutter-width/2;
+  padding-bottom: $grid-gutter-width/2;
+}
+
+.block-simplenews {
+  .form-item-message {
+    margin-bottom: $padding-large-vertical;
+  }
+  input {
+    max-width: 25em;
+    background: $deGOV-light;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    &:focus {
+      box-shadow: none;
+      outline: $brand-secondary auto 5px;
+    }
+  }
+  #edit-subscribe {
+    @include icon-after($fa-var-paper-plane, $padding-small-horizontal);
+    &:after {
+      background: $brand-success;
+    }
+  }
+  #edit-unsubscribe {
+    @include icon-after($fa-var-times, $padding-small-horizontal);
+    &:after {
+      background: $brand-secondary;
+    }
+  }
+  #edit-subscribe,
+  #edit-unsubscribe {
+    &:after {
+      font-size: $font-size-h2;
+      vertical-align: middle;
+    }
+  }
+  .form-submit {
+    color: $brand-secondary;
+    font-size: $font-size-small;
+    font-weight: bold;
+    border: none;
+    padding-right: $padding-xs-horizontal;
+    padding-left: 0;
+    &:after {
+      color: $color-white;
+      padding: $padding-large-horizontal/2;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      background: transparent;
+      box-shadow: none;
+      text-decoration: underline;
+    }
+  }
+}
+
+.region-sidebar-second .block-simplenews {
+  .form-actions {
+    text-align: right;
+  }
+}
