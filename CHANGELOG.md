@@ -6,6 +6,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.10.0] - 2017-10-27
+### Added
+- Added logo upload field for content type organization.
+
+### Fixed
+- Fixed handler settings for header and sidebar right paragraphs for content type
+  organization.
+
+### Changed
+- Remove dependency on views_reference to degov modules. Update views_reference to stable.
+- Removed dependency on paragraphs in root composer and move it to degov modules.
+- Removed patch to paragraphs 1.1 because paragraphs were updated to version 1.2.
+
 ## [1.9.0] - 2017-10-23
 ### Added
 - Cron task configuration for running scheduled updates every 5 minutes on platform.
