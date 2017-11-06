@@ -28,6 +28,7 @@ dependencies:
   - webform
 
 themes:
+  - degov_base_theme
   - seven
 
 base profile:

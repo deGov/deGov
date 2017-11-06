@@ -44,7 +44,8 @@
         "drupal/webform": "^5.0@beta",
         "drupal/entity_reference_display": "^1.0",
         "drupal/search_api_solr": "^1.0",
-        "degov/modules": "^1.10.0"
+        "degov/modules": "^1.11.0",
+        "degov/degov_base_theme": "^1.11.0"
     },
     "repositories": {
         "drupal": {
@@ -54,6 +55,10 @@
         "degov-modules": {
             "type": "git",
             "url": "https://github.com/deGov/modules.git"
+        },
+        "degov-theme": {
+            "type": "git",
+            "url": "https://github.com/deGov/degov_base_theme.git"
         }
     },
     "scripts": {
@@ -95,6 +100,9 @@
             ],
             "docroot/modules/degov": [
                 "degov/modules"
+            ],
+            "docroot/themes/degov/degov_base_theme": [
+                "degov/degov_base_theme"
             ]
         },
         "enable-patching": true,
@@ -121,7 +129,8 @@
             "merge-extra-deep": true,
             "include": [
                 "docroot/modules/degov/*/composer.json",
-                "docroot/modules/custom/*/composer.json"
+                "docroot/modules/custom/*/composer.json",
+                "docroot/themes/degov/*/composer.json"
             ]
         }
     },
