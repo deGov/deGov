@@ -123,10 +123,6 @@
             "drupal/config_rewrite": {
                 "2903629 - Allow optional config rewrite":
                 "https://www.drupal.org/files/issues/empty_config.patch"
-            },
-            "drupal/entity_browser": {
-                "2902831 - Entity browser views that do not have use_ajax explicitly enabled are broken with 8.3.7":
-                "https://www.drupal.org/files/issues/d8_entity_browser-2902831.patch"
             }
         },
         "merge-plugin": {
