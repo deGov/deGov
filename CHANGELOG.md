@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [1.11.1] - 2017-11-16
+### Fixed
+- Fixed Behat namespaces and PSR-4 Autoload path.
+- Added composer resources to .gitignore
+
+### Changed
+- Updated Drupal to 8.4.x
+
 ## [1.11.0] - 2017-11-06
 ### Fixed
 - Updated degov/modules to 1.11.1 - hotfix version.
