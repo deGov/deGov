@@ -135,6 +135,6 @@
         }
     },
     "autoload-dev": {
-        "psr-4": { "BeHat\\Feature\\" : "features/src/"}
+        "psr-4": { "Behat\\Features\\" : "testing/features/src/"}
     }
 }

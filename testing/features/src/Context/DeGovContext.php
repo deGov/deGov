@@ -1,6 +1,6 @@
 <?php
 
-namespace Behat\Feature\Context;
+namespace Behat\Features\Context;
 
 
 use Behat\Behat\Context\TranslatableContext;
