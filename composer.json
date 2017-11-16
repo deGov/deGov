@@ -133,9 +133,9 @@
             "merge-extra": true,
             "merge-extra-deep": true,
             "include": [
-              "docroot/modules/degov/*/composer.json",
-              "docroot/modules/custom/*/composer.json",
-              "docroot/themes/degov/*/composer.json"
+                "docroot/modules/degov/*/composer.json",
+                "docroot/modules/custom/*/composer.json",
+                "docroot/themes/degov/*/composer.json"
             ]
         }
     },
