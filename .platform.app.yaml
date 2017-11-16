@@ -36,6 +36,12 @@ relationships:
 #    solr: 'solrsearch:solr'
 #    redis: 'rediscache:redis'
 
+variables:
+    php:
+        memory_limit: 1024M
+        upload_max_filesize: 512M
+        post_max_size: 512M
+
 # The configuration of app when it is exposed to the web.
 web:
     # Specific parameters for different URL prefixes.
@@ -106,6 +112,8 @@ hooks:
     deploy: |
       cd docroot
       drush ev "drupal_flush_all_caches();"
+      drush locale-check
+      drush locale-update
       drush -y cache-rebuild
       drush -y updatedb
       drush -y config-import
@@ -116,3 +124,7 @@ crons:
     drupal:
         spec: '*/20 * * * *'
         cmd: 'cd docroot ; drush core-cron'
+    # comment out the command below if you don't use scheduled updates module.
+    scheduled-updates:
+        spec: '*/5 * * * *'
+        cmd: 'cd docroot ; drush sch-updates'
