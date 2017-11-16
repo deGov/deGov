@@ -6,7 +6,7 @@ default:
         - '\Drupal\DrupalExtension\Context\MinkContext'
         - '\Drupal\DrupalExtension\Context\MessageContext'
         - '\Drupal\DrupalExtension\Context\DrushContext'
-        - '\BeHat\Feature\Context\DeGovContext'
+        - '\Behat\Features\Context\DeGovContext'
       paths: [ %paths.base%/testing/features ]
   extensions:
     Behat\MinkExtension:
