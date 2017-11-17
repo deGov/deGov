@@ -27,8 +27,8 @@
         "drupal-composer/drupal-scaffold": "^2.0.0",
         "cweagans/composer-patches": "^1.6.0",
         "mnsami/composer-custom-directory-installer": "^1.0",
-        "wikimedia/composer-merge-plugin": "^1.4",
-        "acquia/lightning": "~2.1.0",
+        "wikimedia/composer-merge-plugin": "dev-master",
+        "acquia/lightning": "~2.2.0",
         "drupal/config_rewrite": "^1.0",
         "drupal/admin_toolbar": "^1.19",
         "drupal/admin_links_access_filter": "^1.0@alpha",
@@ -41,6 +41,7 @@
         "drupal/sitemap": "^1.3",
         "drupal/spamspan": "1.x-dev",
         "drupal/ultimate_cron": "^2.0@alpha",
+        "drupal/viewsreference": "^1.0@alpha",
         "drupal/webform": "^5.0@beta",
         "drupal/entity_reference_display": "^1.0",
         "drupal/search_api_solr": "^1.0",
@@ -55,6 +56,10 @@
         "degov-modules": {
             "type": "git",
             "url": "https://github.com/deGov/modules.git"
+        },
+        "bowser-assets": {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
         },
         "degov-theme": {
             "type": "git",
@@ -118,10 +123,6 @@
             "drupal/config_rewrite": {
                 "2903629 - Allow optional config rewrite":
                 "https://www.drupal.org/files/issues/empty_config.patch"
-            },
-            "drupal/entity_browser": {
-                "2902831 - Entity browser views that do not have use_ajax explicitly enabled are broken with 8.3.7":
-                "https://www.drupal.org/files/issues/d8_entity_browser-2902831.patch"
             }
         },
         "merge-plugin": {
