@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+## [1.12.0] - 2017-11-27
+### Changed
+- Updated degov/modules to version 1.12.3.
+
 ## [1.11.1] - 2017-11-16
 ### Fixed
 - Fixed Behat namespaces and PSR-4 Autoload path.
@@ -36,7 +42,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   is the minimum interval possible.
 - Redirect module has been added to the composer.lock file.
 - Translations update is now part of deployment procedure.
-- Added mik_node_organization module.
 - Added configuration for platform: memory_ limit, post_ and upload_max sizes
 
 ### Changed
