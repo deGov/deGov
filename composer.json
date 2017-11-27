@@ -1,5 +1,5 @@
 {
-    "name": "deGov/deGov",
+    "name": "degov/degov",
     "description": "Drupal 8 for Government (Drupal 8 für die öffentliche Verwaltung)",
     "type": "project",
     "license": "GPL-2.0+",
@@ -44,7 +44,7 @@
         "drupal/webform": "^5.0@beta",
         "drupal/entity_reference_display": "^1.0",
         "drupal/search_api_solr": "^1.0",
-        "degov/modules": "^1.11.0",
+        "degov/modules": "^1.12.3",
         "degov/degov_base_theme": "^1.11.0"
     },
     "repositories": {
@@ -122,6 +122,9 @@
             "drupal/entity_browser": {
                 "2902831 - Entity browser views that do not have use_ajax explicitly enabled are broken with 8.3.7":
                 "https://www.drupal.org/files/issues/d8_entity_browser-2902831.patch"
+            },
+            "drupal/paragraphs": {
+                "2868155 - Add new hooks to allow easier editing of paragraph forms": "https://www.drupal.org/files/issues/2868155-16.patch"
             }
         },
         "merge-plugin": {
