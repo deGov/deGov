@@ -4,10 +4,14 @@
 # Ignore non-custom parts of Drupal.
 /docroot/core
 /docroot/modules/contrib
+/docroot/modules/degov
 /docroot/profiles/contrib
 /docroot/themes/contrib
+/docroot/themes/degov
 /docroot/sites/default/files
 /docroot/modules/degov
+/docroot/themes/degov
+/docroot/libraries
 
 # Ignore Composer-managed dependencies.
 vendor/

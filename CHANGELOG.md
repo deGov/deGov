@@ -10,6 +10,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Updated degov/modules to version 1.12.3.
 
+## [1.11.1] - 2017-11-16
+### Fixed
+- Fixed Behat namespaces and PSR-4 Autoload path.
+- Added composer resources to .gitignore
+
+### Changed
+- Updated Drupal to 8.4.x
+
 ## [1.11.0] - 2017-11-06
 ### Fixed
 - Updated degov/modules to 1.11.1 - hotfix version.
